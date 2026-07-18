@@ -2,6 +2,98 @@
   "version": 1,
   "fonts": [
     {
+      "slug": "literata",
+      "displayName": "Literata",
+      "familyName": "Literata",
+      "languages": [
+        "Latn"
+      ],
+      "style": "serif",
+      "zipBytes": 1017477,
+      "installedBytes": 1857860,
+      "files": [
+        "Literata-Italic[opsz,wght].ttf",
+        "Literata[opsz,wght].ttf"
+      ],
+      "license": "OFL",
+      "sourceURL": "https://github.com/google/fonts/tree/main/ofl/literata",
+      "version": "3.103"
+    },
+    {
+      "slug": "inter",
+      "displayName": "Inter",
+      "familyName": "Inter",
+      "languages": [
+        "Latn"
+      ],
+      "style": "sans",
+      "zipBytes": 961365,
+      "installedBytes": 1783172,
+      "files": [
+        "Inter-Italic[opsz,wght].ttf",
+        "Inter[opsz,wght].ttf"
+      ],
+      "license": "OFL",
+      "sourceURL": "https://github.com/google/fonts/tree/main/ofl/inter",
+      "version": "4.001"
+    },
+    {
+      "slug": "eb-garamond",
+      "displayName": "EB Garamond",
+      "familyName": "EB Garamond",
+      "languages": [
+        "Latn"
+      ],
+      "style": "serif",
+      "zipBytes": 789295,
+      "installedBytes": 1605644,
+      "files": [
+        "EBGaramond-Italic[wght].ttf",
+        "EBGaramond[wght].ttf"
+      ],
+      "license": "OFL",
+      "sourceURL": "https://github.com/google/fonts/tree/main/ofl/ebgaramond",
+      "version": "1.003"
+    },
+    {
+      "slug": "merriweather",
+      "displayName": "Merriweather",
+      "familyName": "Merriweather",
+      "languages": [
+        "Latn"
+      ],
+      "style": "serif",
+      "zipBytes": 324382,
+      "installedBytes": 605108,
+      "files": [
+        "Merriweather-Bold.ttf",
+        "Merriweather-BoldItalic.ttf",
+        "Merriweather-Italic.ttf",
+        "Merriweather-Regular.ttf"
+      ],
+      "license": "OFL",
+      "sourceURL": "https://github.com/google/fonts/tree/main/ofl/merriweather",
+      "version": "2.002"
+    },
+    {
+      "slug": "lora",
+      "displayName": "Lora",
+      "familyName": "Lora",
+      "languages": [
+        "Latn"
+      ],
+      "style": "serif",
+      "zipBytes": 224587,
+      "installedBytes": 433428,
+      "files": [
+        "Lora-Italic[wght].ttf",
+        "Lora[wght].ttf"
+      ],
+      "license": "OFL",
+      "sourceURL": "https://github.com/google/fonts/tree/main/ofl/lora",
+      "version": "3.008"
+    },
+    {
       "slug": "lxgw-wenkai",
       "displayName": "霞鹜文楷 LXGW WenKai",
       "familyName": "LXGW WenKai",
