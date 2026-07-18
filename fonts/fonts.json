@@ -1,0 +1,146 @@
+{
+  "version": 1,
+  "fonts": [
+    {
+      "slug": "lxgw-wenkai",
+      "displayName": "霞鹜文楷 LXGW WenKai",
+      "familyName": "LXGW WenKai",
+      "languages": [
+        "zh-Hans"
+      ],
+      "style": "kai",
+      "zipBytes": 12751866,
+      "installedBytes": 25575676,
+      "files": [
+        "LXGWWenKai-Regular.ttf"
+      ],
+      "license": "OFL",
+      "sourceURL": "https://github.com/lxgw/LxgwWenKai",
+      "version": "v1.522"
+    },
+    {
+      "slug": "source-han-serif-sc",
+      "displayName": "思源宋体 SC — Source Han Serif SC",
+      "familyName": "Source Han Serif SC",
+      "languages": [
+        "zh-Hans"
+      ],
+      "style": "serif",
+      "zipBytes": 41128626,
+      "installedBytes": 50065064,
+      "files": [
+        "SourceHanSerifSC-Regular.otf",
+        "SourceHanSerifSC-Bold.otf"
+      ],
+      "license": "OFL",
+      "sourceURL": "https://github.com/adobe-fonts/source-han-serif",
+      "version": "2.003R"
+    },
+    {
+      "slug": "source-han-serif-tc",
+      "displayName": "思源宋體 TC — Source Han Serif TC",
+      "familyName": "Source Han Serif TC",
+      "languages": [
+        "zh-Hant"
+      ],
+      "style": "serif",
+      "zipBytes": 41174425,
+      "installedBytes": 50062696,
+      "files": [
+        "SourceHanSerifTC-Regular.otf",
+        "SourceHanSerifTC-Bold.otf"
+      ],
+      "license": "OFL",
+      "sourceURL": "https://github.com/adobe-fonts/source-han-serif",
+      "version": "2.003R"
+    },
+    {
+      "slug": "source-han-serif-jp",
+      "displayName": "源ノ明朝 — Source Han Serif JP",
+      "familyName": "Source Han Serif JP",
+      "languages": [
+        "ja"
+      ],
+      "style": "serif",
+      "zipBytes": 10789369,
+      "installedBytes": 12690312,
+      "files": [
+        "SourceHanSerifJP-Regular.otf",
+        "SourceHanSerifJP-Bold.otf"
+      ],
+      "license": "OFL",
+      "sourceURL": "https://github.com/adobe-fonts/source-han-serif",
+      "version": "2.003R"
+    },
+    {
+      "slug": "source-han-serif-kr",
+      "displayName": "본고딕 세리프 — Source Han Serif KR",
+      "familyName": "Source Han Serif KR",
+      "languages": [
+        "ko"
+      ],
+      "style": "serif",
+      "zipBytes": 12039672,
+      "installedBytes": 15579904,
+      "files": [
+        "SourceHanSerifKR-Regular.otf",
+        "SourceHanSerifKR-Bold.otf"
+      ],
+      "license": "OFL",
+      "sourceURL": "https://github.com/adobe-fonts/source-han-serif",
+      "version": "2.003R"
+    },
+    {
+      "slug": "amiri",
+      "displayName": "أميري — Amiri",
+      "familyName": "Amiri",
+      "languages": [
+        "ar"
+      ],
+      "style": "naskh",
+      "zipBytes": 412129,
+      "installedBytes": 844596,
+      "files": [
+        "Amiri-Regular.ttf",
+        "Amiri-Bold.ttf"
+      ],
+      "license": "OFL",
+      "sourceURL": "https://github.com/google/fonts/tree/main/ofl/amiri",
+      "version": "1.002"
+    },
+    {
+      "slug": "noto-serif-devanagari",
+      "displayName": "Noto Serif Devanagari",
+      "familyName": "Noto Serif Devanagari",
+      "languages": [
+        "hi"
+      ],
+      "style": "serif",
+      "zipBytes": 398893,
+      "installedBytes": 757692,
+      "files": [
+        "NotoSerifDevanagari-VF.ttf"
+      ],
+      "license": "OFL",
+      "sourceURL": "https://github.com/google/fonts/tree/main/ofl/notoserifdevanagari",
+      "version": "2.006"
+    },
+    {
+      "slug": "noto-serif-thai",
+      "displayName": "Noto Serif Thai",
+      "familyName": "Noto Serif Thai",
+      "languages": [
+        "th"
+      ],
+      "style": "serif",
+      "zipBytes": 163567,
+      "installedBytes": 292188,
+      "files": [
+        "NotoSerifThai-VF.ttf"
+      ],
+      "license": "OFL",
+      "sourceURL": "https://github.com/google/fonts/tree/main/ofl/notoserifthai",
+      "version": "2.002"
+    }
+  ]
+}
