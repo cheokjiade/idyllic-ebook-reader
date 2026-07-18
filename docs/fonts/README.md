@@ -1,10 +1,23 @@
 # Downloadable Font Catalog
 
 This directory hosts the downloadable font catalog for the eBook Reader app. The
-app fetches [`fonts.json`](fonts.json) to list fonts users can download in-app for
-reading languages that need dedicated typefaces (CJK, Arabic, Devanagari, Thai).
+app fetches [`fonts.json`](fonts.json) to list fonts users can download in-app.
 Each catalog entry points at a `<slug>.zip` in this directory containing the font
 file(s) plus that font's license text.
+
+The catalog holds two kinds of font:
+
+- **Latin reading faces** (`"languages": ["Latn"]`) — general-purpose reading
+  typefaces. These ship as downloads rather than inside the app so the app
+  binary stays small; the app's default reader font is the system font, so none
+  of them is required for a usable first run.
+- **Script coverage** — typefaces for writing systems the system fonts serve
+  poorly (CJK, Arabic, Devanagari, Thai), tagged with their language.
+
+The app additionally *bundles* OpenDyslexic and Atkinson Hyperlegible. Those two
+are accessibility affordances and are deliberately **not** download-only — a
+reader who needs them should never have to wait on a network to read
+comfortably. They are not listed here.
 
 ## Manifest
 
@@ -28,6 +41,11 @@ version listed in `fonts.json`.
 
 | Font | Language | Upstream |
 |---|---|---|
+| Literata | Latin (serif) | [google/fonts — ofl/literata](https://github.com/google/fonts/tree/main/ofl/literata) |
+| Inter | Latin (sans) | [google/fonts — ofl/inter](https://github.com/google/fonts/tree/main/ofl/inter) |
+| EB Garamond | Latin (serif) | [google/fonts — ofl/ebgaramond](https://github.com/google/fonts/tree/main/ofl/ebgaramond) |
+| Merriweather | Latin (serif) | [google/fonts — ofl/merriweather](https://github.com/google/fonts/tree/main/ofl/merriweather) |
+| Lora | Latin (serif) | [google/fonts — ofl/lora](https://github.com/google/fonts/tree/main/ofl/lora) |
 | LXGW WenKai 霞鹜文楷 | Simplified Chinese (kai style) | [lxgw/LxgwWenKai](https://github.com/lxgw/LxgwWenKai) |
 | Source Han Serif SC | Simplified Chinese | [adobe-fonts/source-han-serif](https://github.com/adobe-fonts/source-han-serif) |
 | Source Han Serif TC | Traditional Chinese | [adobe-fonts/source-han-serif](https://github.com/adobe-fonts/source-han-serif) |
@@ -36,6 +54,10 @@ version listed in `fonts.json`.
 | Amiri | Arabic | [google/fonts — ofl/amiri](https://github.com/google/fonts/tree/main/ofl/amiri) (upstream: [aliftype/amiri](https://github.com/aliftype/amiri)) |
 | Noto Serif Devanagari | Hindi | [google/fonts — ofl/notoserifdevanagari](https://github.com/google/fonts/tree/main/ofl/notoserifdevanagari) |
 | Noto Serif Thai | Thai | [google/fonts — ofl/notoserifthai](https://github.com/google/fonts/tree/main/ofl/notoserifthai) |
+
+The Latin packages ship upright + italic. Literata, Inter, EB Garamond and Lora
+are variable fonts covering the full weight range in two files; Merriweather is
+static and ships Regular/Italic/Bold/BoldItalic.
 
 Source Han Serif and Amiri packages include both Regular and Bold weights
 (bundled at no extra download cost from the same upstream release/repo). The
