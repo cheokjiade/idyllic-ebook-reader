@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>사용자 가이드</title>
+<link rel="stylesheet" href="UserGuideStyle.css">
+<!-- USER-GUIDE-NAV-STYLE:START -->
+<style>
+.guide-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 14px;
+  padding: 10px 14px;
+  margin: 0 0 16px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  font-size: 13px;
+}
+.guide-nav-home {
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.guide-nav-arrow {
+  display: inline-block;
+}
+[dir="rtl"] .guide-nav-arrow {
+  transform: scaleX(-1);
+}
+.guide-nav-langs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 10px;
+  color: var(--secondary);
+}
+.guide-nav-globe {
+  font-size: 13px;
+}
+.guide-nav-langs a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.guide-nav-langs a:hover,
+.guide-nav-langs a:focus-visible {
+  text-decoration: underline;
+}
+.guide-nav-current {
+  font-weight: 700;
+  color: var(--text);
+}
+</style>
+<!-- USER-GUIDE-NAV-STYLE:END -->
+</head>
+<body id="top">
+<!-- USER-GUIDE-NAV:START -->
+<nav class="guide-nav" aria-label="User Guide language switcher">
+  <a class="guide-nav-home" href="../index.html"><span class="guide-nav-arrow" aria-hidden="true">&larr;</span> Idyllic</a>
+  <span class="guide-nav-langs">
+    <span class="guide-nav-globe" aria-hidden="true">&#x1F310;</span>
+      <a href="index.html">English</a>
+      <a href="ar.html">العربية</a>
+      <a href="cs.html">Čeština</a>
+      <a href="da.html">Dansk</a>
+      <a href="de.html">Deutsch</a>
+      <a href="es.html">Español</a>
+      <a href="fi.html">Suomi</a>
+      <a href="fr.html">Français</a>
+      <a href="he.html">עברית</a>
+      <a href="hi.html">हिन्दी</a>
+      <a href="id.html">Indonesia</a>
+      <a href="it.html">Italiano</a>
+      <a href="ja.html">日本語</a>
+      <span class="guide-nav-current">한국어</span>
+      <a href="ms.html">Bahasa Melayu</a>
+      <a href="nb.html">Norsk bokmål</a>
+      <a href="nl.html">Nederlands</a>
+      <a href="pl.html">Polski</a>
+      <a href="pt-BR.html">Português (Brasil)</a>
+      <a href="ru.html">Русский</a>
+      <a href="sv.html">Svenska</a>
+      <a href="th.html">ไทย</a>
+      <a href="tr.html">Türkçe</a>
+      <a href="uk.html">Українська</a>
+      <a href="vi.html">Tiếng Việt</a>
+      <a href="zh-Hans.html">简体中文</a>
+      <a href="zh-Hant.html">繁體中文</a>
+  </span>
+</nav>
+<!-- USER-GUIDE-NAV:END -->
+
+<h1>사용자 가이드</h1>
+<p class="subtitle">독서 경험을 최대한 활용하는 데 필요한 모든 것.</p>
+
+<!-- TABLE OF CONTENTS -->
+<div class="card toc">
+  <a href="#importing">책 가져오기</a>
+  <a href="#wifi">WiFi 전송</a>
+  <a href="#library">라이브러리 및 정리</a>
+  <a href="#shelves">서가 및 폴더</a>
+  <a href="#reading-books">책 읽기</a>
+  <a href="#fixed-layout">고정 레이아웃 책</a>
+  <a href="#in-book-search">책 내 검색</a>
+  <a href="#image-gallery">이미지 갤러리</a>
+  <a href="#fonts">읽기 글꼴</a>
+  <a href="#reading-direction">읽기 방향</a>
+  <a href="#vertical-writing">세로쓰기</a>
+  <a href="#reading-comics">만화 읽기</a>
+  <a href="#comic-zoom">만화 페이지 확대</a>
+  <a href="#tts">텍스트 음성 변환 및 CarPlay</a>
+  <a href="#upscaling">AI 만화 업스케일링</a>
+  <a href="#hidden">숨겨진 책</a>
+  <a href="#bookmarks">북마크, 하이라이트 및 태그</a>
+  <a href="#history">읽기 기록</a>
+  <a href="#search">저자 및 태그별 찾아보기</a>
+  <a href="#metadata">메타데이터 및 ComicInfo.xml</a>
+  <a href="#icloud">iCloud 동기화</a>
+  <a href="#stats">독서 통계</a>
+  <a href="#webdav">WebDAV 및 OPDS</a>
+  <a href="#resume">실행 시 이어 읽기</a>
+  <a href="#formats">지원 형식</a>
+</div>
+
+<!-- IMPORTING -->
+<h2 id="importing">책 가져오기</h2>
+<p class="section-desc">라이브러리에 책을 추가하는 여러 가지 방법.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4C1;</span> 파일 앱에서</h3>
+  <p><kbd>설정</kbd> &rarr; <kbd>책 가져오기</kbd>를 탭한 다음, 기기, iCloud Drive 또는 연결된 클라우드 서비스에서 파일을 선택하세요. iPad에서는 드래그 앤 드롭도 사용할 수 있습니다.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F310;</span> WiFi 전송</h3>
+  <p>WiFi 네트워크의 모든 컴퓨터나 휴대폰에서 책을 업로드하세요. 자세한 내용은 아래 전용 섹션을 참조하세요.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F5C2;</span> WebDAV 및 OPDS</h3>
+  <p>NAS, Calibre 서버 또는 공개 도서 카탈로그에 연결하여 직접 탐색하고 다운로드하세요. 아래를 참조하세요.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; 맨 위로</a>
+
+<!-- WIFI TRANSFER -->
+<h2 id="wifi">WiFi 전송</h2>
+<p class="section-desc">로컬 네트워크의 모든 기기에서 책을 업로드하세요.</p>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F4F6;</span> 작동 방식</h3>
+  <p>앱이 기기에서 소형 웹 서버를 실행합니다. 같은 WiFi 네트워크의 모든 컴퓨터나 휴대폰이 브라우저에서 업로드 페이지를 열 수 있습니다.</p>
+  <ol class="steps">
+    <li><kbd>설정</kbd> &rarr; <kbd>책 가져오기</kbd> &rarr; <kbd>WiFi 전송</kbd>으로 이동합니다.</li>
+    <li><kbd>서버 시작</kbd>을 탭합니다. <kbd>http://192.168.1.42:8080</kbd>과 같은 주소가 나타납니다.</li>
+    <li>같은 네트워크의 웹 브라우저에서 해당 주소를 엽니다.</li>
+    <li>파일을 페이지에 드래그하거나 클릭하여 선택합니다 &mdash; 원하는 경우 대상 폴더를 선택하세요.</li>
+    <li>가져온 책이 즉시 라이브러리에 나타납니다.</li>
+    <li>완료되면 <kbd>서버 중지</kbd>를 탭합니다.</li>
+  </ol>
+  <div class="tip"><strong>팁:</strong> 서버가 실행되는 동안 기기가 절전 모드로 전환되지 않아 전송이 중단되지 않습니다.</div>
+  <div class="tip"><strong>업로드 실패?</strong> 실패한 각 파일은 해당 행에 사유가 표시됩니다. WiFi 연결이 끊긴 경우, 해당 행의 <kbd>&#x21BB; 재시도</kbd>를 탭하여 다시 전송하세요. 지원되지 않는 파일 형식과 같은 영구적인 문제에는 재시도 버튼이 표시되지 않습니다.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; 맨 위로</a>
+
+<!-- LIBRARY -->
+<h2 id="library">라이브러리 및 정리</h2>
+<p class="section-desc">책을 검색하고, 정렬하고, 정리하세요.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F50D;</span> 검색</h3>
+  <p>라이브러리 하단의 <kbd>Search</kbd> 필을 탭하여 검색 필드를 펼친 다음, <kbd>완료</kbd>를 탭하여 닫습니다. 제목, 저자, 태그, 시리즈, 출판사, 설명을 통해 검색합니다. 책의 컨텍스트 메뉴에서 저자나 태그로 검색하면(<a href="#search">저자 및 태그별 찾아보기</a> 참조) 동일한 검색이 채워집니다.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x2195;</span> 정렬 및 필터</h3>
+  <p>보기 옵션 버튼(오른쪽 상단)을 탭하여 선택하세요:</p>
+  <ul>
+    <li><strong>레이아웃</strong> &mdash; 그리드, 상세, 컴팩트, 미니멀, 테이블 또는 매거진</li>
+    <li><strong>정렬</strong> &mdash; 제목, 저자, 마지막 읽은 날짜, 추가 날짜, 진행률, 파일 크기, 시리즈</li>
+    <li><strong>표시</strong> &mdash; 읽고 있는 책을 먼저, 완독한 책을 마지막에 배치</li>
+    <li><strong>필터</strong> &mdash; 형식, 태그 또는 저자별</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x2714;</span> 선택 모드</h3>
+  <p>책을 길게 누르거나 <kbd>선택</kbd>을 탭하여 선택 모드로 진입합니다. 여러 책을 한 번에 이동, 삭제, 숨기기 또는 숨기기 해제할 수 있습니다.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4CB;</span> 중복 항목 정리</h3>
+  <p>제목, 저자, 형식이 같은 책을 찾으려면 <strong>설정 &gt; 라이브러리 &gt; 라이브러리 유지 관리 &gt; 중복 항목 정리</strong>로 이동하세요. 각 중복 그룹에 대해:</p>
+  <ul>
+    <li><strong>최신 버전</strong>에는 녹색 KEEP 배지가 표시됩니다</li>
+    <li>체크박스로 이전 사본을 선택하세요 (또는 <strong>모두 선택</strong>)</li>
+    <li><strong>삭제</strong> &mdash; 선택한 이전 사본을 제거합니다</li>
+    <li><strong>데이터 복사 후 삭제</strong> &mdash; 삭제하기 전에 책갈피, 하이라이트, 태그, 읽기 진행도, 책장 배정을 최신 버전으로 옮깁니다</li>
+    <li><strong>"새 책을 옛 책의 책장 및 숨김 상태로 이동"</strong>을 활성화하면 새 버전을 라이브러리의 동일한 위치에 유지할 수 있습니다</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; 맨 위로</a>
+
+<!-- SHELVES -->
+<h2 id="shelves">서가 및 폴더</h2>
+<p class="section-desc">중첩 폴더로 책을 정리하세요.</p>
+
+<div class="card">
+  <h3><span class="icon icon-indigo">&#x1F4C2;</span> 서가 만들기</h3>
+  <ol class="steps">
+    <li>라이브러리 상단에서 <kbd>새 서가</kbd>를 탭합니다.</li>
+    <li>이름을 입력하고 아이콘과 색상을 선택합니다.</li>
+    <li>하위 폴더를 만들려면 상위 서가를 선택합니다(선택 사항).</li>
+  </ol>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x21C4;</span> 책 이동</h3>
+  <p>책의 상세 페이지에서 메뉴(&hellip;)를 탭하고 <kbd>서가로 이동</kbd>을 선택합니다. 선택 모드에서는 여러 책을 한 번에 이동할 수 있습니다.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; 맨 위로</a>
+
+<!-- READING BOOKS -->
+<h2 id="reading-books">책 읽기</h2>
+<p class="section-desc">EPUB, PDF, TXT, RTF 읽기 모드.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4D6;</span> EPUB</h3>
+  <p>EPUB은 Readium 기반의 완전한 기능을 갖춘 리더에서 열립니다. 왼쪽 또는 오른쪽 가장자리를 탭하거나 스와이프하여 페이지를 넘기세요.</p>
+  <ul>
+    <li><strong>페이지 넘기기</strong> &mdash; 전통적인 한 페이지씩 읽기.</li>
+    <li><strong>연속 스크롤</strong><span class="badge badge-premium">Premium</span> &mdash; 페이지 구분 없이 자연스럽게 스크롤.</li>
+    <li><strong>읽기 방향</strong> &mdash; 책을 자동으로 따르거나, 왼쪽에서 오른쪽 또는 오른쪽에서 왼쪽으로 직접 설정하세요. 자세한 내용은 <a href="#reading-direction">읽기 방향</a>을 참고하세요.</li>
+    <li><strong>고정 레이아웃</strong> &mdash; 만화, 그림책 등 페이지 단위로 구성된 EPUB은 전용으로 만들어진 리더에서 열립니다. 자세한 내용은 <a href="#fixed-layout">고정 레이아웃 책</a>을 참고하세요.</li>
+    <li><strong>책 내 검색</strong><span class="badge badge-premium">Premium</span> &mdash; 책 전체에서 원하는 단어나 문구를 검색하세요. 자세한 내용은 <a href="#in-book-search">책 내 검색</a>을 참고하세요.</li>
+    <li><strong>이미지 갤러리</strong><span class="badge badge-premium">Premium</span> &mdash; 책의 상세 페이지에서 EPUB의 모든 이미지를 둘러보세요. 자세한 내용은 <a href="#image-gallery">이미지 갤러리</a>를 참고하세요.</li>
+  </ul>
+  <div class="tip"><strong>팁:</strong> <kbd>설정</kbd> &rarr; <kbd>읽기 환경설정</kbd> &rarr; <kbd>책</kbd>에서 글꼴 크기, 줄 간격, 테마 색상을 조정하세요.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F4C4;</span> PDF</h3>
+  <p>PDF는 기본적으로 렌더링됩니다. 핀치하여 확대/축소하고 스와이프하여 페이지를 넘기세요. 앱이 보호된 PDF의 비밀번호를 기억할 수 있습니다.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x1F4DD;</span> TXT 및 RTF</h3>
+  <p>일반 텍스트 및 RTF 파일은 서식을 조정할 수 있는 간단한 텍스트 리더에서 열립니다.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; 맨 위로</a>
+
+<!-- FIXED LAYOUT -->
+<h2 id="fixed-layout">고정 레이아웃 책</h2>
+<p class="section-desc">페이지가 고정된 디자인으로 이루어진 EPUB &mdash; 만화, 그림책, 삽화가 많은 도서.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4D0;</span> 무엇인가요</h3>
+  <p>일부 EPUB은 흐르는 텍스트가 아니라 페이지 단위로 구성되어 있습니다. 모든 페이지가 글과 그림이 고정된 배치로 이루어져 있는 것입니다. 앱은 이런 책을 자동으로 인식하여 전용으로 만들어진 리더에서 엽니다 &mdash; 각 페이지는 화면에 맞게 크기가 조정되어 가운데 정렬되며, 주변 여백은 읽기 테마의 배경색으로 채워집니다.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F44B;</span> 읽기 및 확대</h3>
+  <ul>
+    <li>화면의 왼쪽 또는 오른쪽을 탭하거나 스와이프하여 페이지를 넘기세요. 가운데를 탭하면 도구 모음이 표시되거나 숨겨집니다.</li>
+    <li>핀치하여 확대하세요 &mdash; 맞춤 크기의 최대 3배까지 &mdash; 그리고 드래그하여 페이지를 이동하세요.</li>
+    <li>두 번 탭하면 해당 위치가 확대되고, 다시 두 번 탭하면 페이지가 화면에 맞게 축소됩니다.</li>
+    <li>오른쪽에서 왼쪽으로 읽도록 출판된 책은 자동으로 그 방향으로 페이지가 넘어갑니다.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4D6;</span> 두 페이지 스프레드</h3>
+  <p>기기를 가로 방향으로 돌리면 마주보는 페이지가 나란히 표시됩니다. 앱은 책 안에 포함된 스프레드 힌트를 따르므로, 표지나 전면 삽화는 여전히 한 페이지를 단독으로 차지합니다. 세로 방향으로 되돌리면 한 번에 한 페이지씩 표시됩니다.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x2139;</span> 사용 가능한 기능</h3>
+  <p>목차, 북마크, 진행률 슬라이더, 읽기 기록, 이어서 읽기는 모두 평소처럼 작동합니다.</p>
+  <p>각 페이지가 앱이 재배치할 수 있는 텍스트가 아니라 고정된 디자인이기 때문에, 이런 책에서는 일부 기능이 나타나지 않습니다: 연속 스크롤 및 자동 스크롤, 글꼴 및 화면 설정, 텍스트 음성 변환, 책 내 검색, 텍스트 선택 및 하이라이트.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; 맨 위로</a>
+
+<!-- IN-BOOK SEARCH -->
+<h2 id="in-book-search">책 내 검색</h2>
+<p class="section-desc">읽고 있는 책 안에서 원하는 단어나 문구를 찾으세요.<span class="badge badge-premium">Premium</span></p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F50D;</span> 검색 시작하기</h3>
+  <ol class="steps">
+    <li>페이지 중앙을 탭하여 도구 모음을 표시하세요.</li>
+    <li>하단 바의 오른쪽 끝에 있는 돋보기를 탭하세요.</li>
+    <li>두 글자 이상 입력한 다음 키보드에서 <kbd>검색</kbd>을 누르세요.</li>
+  </ol>
+  <p>화면에 보이는 챕터만이 아니라 책 전체 &mdash; 모든 챕터 &mdash; 가 검색되며, 대소문자는 구분하지 않습니다. 검색은 EPUB 및 TXT/RTF 리더에서 사용할 수 있습니다.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4C4;</span> 결과 살펴보기</h3>
+  <p>결과는 검색 바 아래에 챕터별로 묶여 표시됩니다. 각 행에는 주변 텍스트의 일부와 함께 일치 항목이 굵게 표시됩니다. 결과를 탭하면 해당 위치로 바로 이동합니다 &mdash; 책 안의 모든 일치 항목이 노란색으로 하이라이트되고, 현재 항목은 더 진한 호박색으로 표시됩니다.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x2195;</span> 일치 항목 간 이동</h3>
+  <p>결과를 하나 선택하면 검색 바가 간결한 스트립으로 접히고, 전체 일치 항목 중 현재 위치를 보여주는 카운터가 표시됩니다.</p>
+  <ul>
+    <li>위/아래 화살표로 이전 또는 다음 일치 항목으로 이동하세요.</li>
+    <li>목록 버튼을 탭하면 전체 결과 목록이 다시 열립니다.</li>
+    <li><kbd>&times;</kbd>를 탭하면 검색이 종료되고 모든 하이라이트가 제거됩니다.</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; 맨 위로</a>
+
+<!-- IMAGE GALLERY -->
+<h2 id="image-gallery">이미지 갤러리</h2>
+<p class="section-desc">EPUB의 모든 삽화를 스와이프 가능한 갤러리로 둘러보세요.<span class="badge badge-premium">Premium</span></p>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F5BC;</span> 갤러리 열기</h3>
+  <p>EPUB 책의 상세 페이지를 열고 오른쪽 위 도구 모음의 사진 스택 버튼 <span class="icon">&#x1F5BC;</span>을 탭하세요. 앱이 책에서 모든 이미지를 추출하며, 작업하는 동안 진행률 바가 표시됩니다 &mdash; 왼쪽 위의 <kbd>&times;</kbd> 버튼을 탭하면 언제든지 빠져나올 수 있습니다. 갤러리는 EPUB 책에서만 사용할 수 있습니다.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4DA;</span> 표시되는 내용</h3>
+  <p>이미지는 표지를 포함하여 읽기 순서 &mdash; 책의 챕터에 등장하는 순서 &mdash; 대로 한 페이지에 하나씩 표시됩니다. 아이콘이나 장식 같은 아주 작은 이미지는 건너뜁니다. 최소 크기(기본값 100&nbsp;px)보다 작은 것은 제외됩니다. 임계값은 <kbd>설정</kbd> &rarr; <kbd>읽기 환경설정</kbd> &rarr; <kbd>책</kbd> &rarr; <kbd>EPUB 갤러리</kbd>에서 조정하세요. 조건에 맞는 이미지가 없으면, 찾은 이미지가 없다고 갤러리에 표시됩니다.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F446;</span> 이미지 보기 및 저장</h3>
+  <ul>
+    <li>스와이프하여 이미지 간을 이동하거나, 하단의 페이지 슬라이더로 빠르게 이동하세요.</li>
+    <li>핀치하거나 두 번 탭하여 확대한 다음, 드래그하여 이동하세요 &mdash; 갤러리는 만화 리더를 사용하므로 확대 방식도 완전히 동일합니다. 자세한 내용은 <a href="#comic-zoom">만화 페이지 확대</a>를 참고하세요.</li>
+    <li>화면 중앙을 탭하면 컨트롤이 표시되거나 숨겨집니다.</li>
+    <li>이미지를 길게 누르면 <kbd>전체 해상도 보기</kbd> &mdash; 더 자세히 보기 위해 원본 크기로 여는 기능 &mdash; 를 사용하거나, <kbd>사진 앱에 저장</kbd>, <kbd>파일 앱에 저장</kbd>, <kbd>이미지 복사</kbd>를 사용할 수 있습니다.</li>
+    <li>갤러리는 만화 읽기 방향을 따릅니다 &mdash; Webtoon 스타일의 세로 스크롤도 포함됩니다.</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; 맨 위로</a>
+
+<!-- READING FONTS -->
+<h2 id="fonts">읽기 글꼴</h2>
+<p class="section-desc">읽기 글꼴을 선택하고, 직접 추가하거나, 언어 팩을 다운로드하세요.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F524;</span> 글꼴 선택</h3>
+  <p><kbd>설정</kbd> &rarr; <kbd>읽기 환경설정</kbd> &rarr; <kbd>책</kbd> &rarr; <kbd>사용자 지정 글꼴</kbd>을 열면 <strong>글꼴</strong> 화면으로 이동합니다. 여러 읽기 글꼴이 기본 제공되며, <strong>Literata</strong>가 기본값입니다. 선택한 글꼴은 EPUB 및 텍스트 리더에 적용됩니다.</p>
+  <div class="tip"><strong>팁:</strong> <kbd>설정</kbd> &rarr; <kbd>읽기 환경설정</kbd> &rarr; <kbd>책</kbd>에서 글꼴 크기와 줄 간격을 조정하세요.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F453;</span> 접근성 글꼴</h3>
+  <p>더 쉬운 읽기를 위해 설계된 두 가지 글꼴이 기본 포함되어 항상 사용할 수 있습니다. 비슷한 글자 간의 차이를 뚜렷하게 하는 <strong>Atkinson Hyperlegible</strong>과, 글자 혼동을 줄이도록 아래쪽에 무게를 둔 <strong>OpenDyslexic</strong>입니다.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F4C2;</span> 사용자 지정 글꼴</h3>
+  <p>글꼴 화면에서 직접 준비한 <kbd>.ttf</kbd> 또는 <kbd>.otf</kbd> 글꼴 파일을 가져와 EPUB 리더에서 사용하세요. 가져온 글꼴은 기기에 저장됩니다.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F4E5;</span> 글꼴 및 언어 팩 다운로드</h3>
+  <p><strong>글꼴 다운로드</strong>에서는 앱에 기본 포함되지 않은 문자 체계를 위한 추가 읽기 글꼴과 언어 팩을 필요할 때 받을 수 있습니다 &mdash; 중국어, 일본어 및 한국어(CJK), 아랍어, 데바나가리, 태국어. 팩은 용량이 크므로(각각 약 41&nbsp;MB) 다운로드 전에 크기가 표시됩니다. 설치하면 가져온 글꼴과 똑같이 작동합니다.</p>
+  <div class="tip"><strong>팁:</strong> 책의 문자가 빈 네모로 표시되면, 해당 언어 팩을 다운로드하여 표시하세요.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x1F4DC;</span> 글꼴 라이선스</h3>
+  <p>기본 포함 및 다운로드 가능한 글꼴은 <strong>SIL Open Font License</strong>에 따라 제공됩니다. 글꼴 화면의 각 행에서 해당 글꼴의 전체 라이선스를 읽을 수 있습니다.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; 맨 위로</a>
+
+<!-- READING DIRECTION -->
+<h2 id="reading-direction">읽기 방향</h2>
+<p class="section-desc">왼쪽에서 오른쪽, 오른쪽에서 왼쪽, 또는 책이 출판된 방향 그대로.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x21C4;</span> 방향 선택하기</h3>
+  <p><kbd>설정</kbd> &rarr; <kbd>읽기 환경설정</kbd> &rarr; <kbd>책</kbd>을 열고 <strong>읽기 모드</strong> 아래의 <strong>읽기 방향</strong> 컨트롤을 사용하세요:</p>
+  <ul>
+    <li><strong>자동</strong>(기본값) &mdash; 책 자체가 지정한 방향을 따릅니다. 만화와 오른쪽에서 왼쪽으로 읽도록 출판된 책은 별도 설정 없이 올바른 방향으로 열립니다.</li>
+    <li><strong>왼쪽에서 오른쪽으로</strong> &mdash; 대부분의 서양 도서에 대한 표준입니다.</li>
+    <li><strong>오른쪽에서 왼쪽으로</strong> &mdash; 모든 책에 오른쪽에서 왼쪽 방향을 사용합니다.</li>
+  </ul>
+  <p>책을 나가지 않고도 변경할 수 있습니다: 페이지 중앙을 탭하여 도구 모음을 표시한 다음, 하단 바의 <kbd>Aa</kbd> 버튼을 탭하세요. 변경 사항은 현재 읽고 있는 페이지에 즉시 적용됩니다.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F44B;</span> 방향을 따르는 요소</h3>
+  <ul>
+    <li>다음 페이지로 넘어가는 방향 &mdash; 오른쪽에서 왼쪽으로 읽는 책에서는 왼쪽으로 탭하거나 스와이프하면 다음 페이지로 넘어갑니다.</li>
+    <li>올바른 쪽에서 넘어가는 페이지 넘김 애니메이션.</li>
+    <li>페이지 안 텍스트의 배치.</li>
+  </ul>
+  <div class="tip"><strong>참고:</strong> 진행률 슬라이더는 항상 왼쪽부터 채워집니다. 화면상의 페이지 위치가 아니라 책을 얼마나 읽었는지를 보여주기 때문입니다.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x2139;</span> 적용 범위</h3>
+  <p>이 설정은 페이지 넘김 모드의 EPUB에 적용됩니다 &mdash; 연속 스크롤이 켜져 있으면 숨겨집니다. 만화는 자체적인 읽기 순서 설정을 사용하며(<a href="#reading-comics">만화 읽기</a> 참고), <a href="#fixed-layout">고정 레이아웃 책</a>은 항상 책에 지정된 방향을 따릅니다.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; 맨 위로</a>
+
+<!-- VERTICAL WRITING -->
+<h2 id="vertical-writing">세로쓰기</h2>
+<p class="section-desc">세로 단으로 조판된 일본어 및 중국어 도서.</p>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x2B07;</span> 세로쓰기 책</h3>
+  <p>세로로 조판된 책 &mdash; 일본어 다테가키(&#x7E26;&#x66F8;&#x304D;)와 중국어 정체 세로쓰기(&#x76F4;&#x6392;) &mdash; 는 원래 조판된 방식 그대로 표시됩니다. 텍스트는 위에서 아래로 흐르는 단이 오른쪽에서 왼쪽으로 채워지며, 만화와 마찬가지로 페이지는 왼쪽으로 넘어갑니다.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x2699;</span> 쓰기 방향</h3>
+  <p><kbd>설정</kbd> &rarr; <kbd>읽기 환경설정</kbd> &rarr; <kbd>책</kbd>을 열고 <strong>쓰기 방향</strong> 컨트롤을 사용하세요:</p>
+  <ul>
+    <li><strong>자동</strong>(기본값) &mdash; 각 책의 고유한 레이아웃을 따릅니다. 세로로 조판된 책은 세로로 표시되며, 다른 모든 책은 영향을 받지 않습니다.</li>
+    <li><strong>가로쓰기</strong> &mdash; 세로로 조판된 책을 포함해 모든 책을 가로로 배치합니다.</li>
+    <li><strong>세로쓰기</strong> &mdash; 모든 책을 세로 단으로 배치합니다.</li>
+  </ul>
+  <p>같은 컨트롤은 리더 내 설정의 <kbd>Aa</kbd> 버튼 아래에도 있습니다.</p>
+  <div class="tip"><strong>참고:</strong> 변경 사항은 다음에 책을 열 때 적용됩니다 &mdash; 현재 화면에 열려 있는 책은 열렸을 때의 레이아웃을 유지합니다.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x2139;</span> 알아두면 좋은 점</h3>
+  <ul>
+    <li>세로쓰기 책은 항상 페이지 넘김 모드를 사용하므로 연속 스크롤과 자동 스크롤을 사용할 수 없습니다.</li>
+    <li>세로쓰기 책에는 슬라이드 페이지 애니메이션이 사용되지 않습니다 &mdash; 대신 플립 애니메이션으로 넘어갑니다.</li>
+    <li>북마크, 하이라이트, 목차, 책 내 검색, 텍스트 음성 변환은 모두 평소처럼 작동합니다.</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; 맨 위로</a>
+
+<!-- READING COMICS -->
+<h2 id="reading-comics">만화 읽기</h2>
+<p class="section-desc">CBZ, CBR, CB7 만화 읽기.</p>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4F1;</span> 읽기 모드</h3>
+  <ul>
+    <li><strong>왼쪽에서 오른쪽</strong> &mdash; 표준 서양 만화 페이지 순서.</li>
+    <li><strong>오른쪽에서 왼쪽</strong> &mdash; 만화(망가) 읽기 순서.</li>
+    <li><strong>Webtoon / 세로 스크롤</strong> &mdash; 긴 스트립 만화를 위한 부드러운 세로 스크롤.</li>
+  </ul>
+  <p><kbd>설정</kbd> &rarr; <kbd>읽기 환경설정</kbd> &rarr; <kbd>만화</kbd>에서 전역 기본값을 설정하거나, 각 책의 상세 페이지에서 개별 설정할 수 있습니다.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F50E;</span> 페이지 크기 조절</h3>
+  <ul>
+    <li><strong>화면에 맞추기</strong> &mdash; 전체 페이지가 보입니다.</li>
+    <li><strong>너비에 맞추기</strong> &mdash; 너비를 채우고, 필요 시 세로로 스크롤합니다.</li>
+    <li><strong>높이에 맞추기</strong> &mdash; 높이를 채웁니다.</li>
+    <li><strong>원본 크기</strong> &mdash; 1:1 픽셀 표시.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F44B;</span> 제스처</h3>
+  <ul>
+    <li>좌우로 스와이프하여 페이지를 넘깁니다(페이지 넘기기 모드).</li>
+    <li>핀치하거나 두 번 탭하여 확대한 다음, 드래그하여 이동하세요. 자세한 내용은 <a href="#comic-zoom">만화 페이지 확대</a>를 참고하세요.</li>
+    <li>페이지 중앙을 탭하여 도구 모음을 표시하거나 숨깁니다.</li>
+    <li>하단의 페이지 슬라이더를 사용하여 빠르게 이동합니다.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x26A0;</span> 의심스러운 아카이브 경고</h3>
+  <p>만화 아카이브(CBZ, CBR 또는 CB7)를 열었을 때 그 내용이 비정상적으로 크거나 과도하게 압축되어 있다면 &mdash; 메모리를 과부하시키도록 설계된 &ldquo;zip bomb&rdquo; 파일에서 사용되는 패턴 &mdash; 앱은 압축을 해제하기 전에 <strong>의심스러운 아카이브</strong> 경고를 표시합니다.</p>
+  <ul>
+    <li>파일을 열지 않으려면 <kbd>취소</kbd>를 탭하세요. 출처를 알 수 없는 아카이브에는 이 옵션이 안전한 선택입니다.</li>
+    <li>파일을 신뢰한다면 <kbd>그대로 열기</kbd>를 탭하세요 &mdash; 앱은 안전 검사를 건너뛰고 페이지를 로드합니다.</li>
+  </ul>
+  <p>EPUB 파일도 가져오기 시 동일한 보호 기능을 자동으로 사용합니다.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; 맨 위로</a>
+
+<!-- COMIC ZOOM -->
+<h2 id="comic-zoom">만화 페이지 확대</h2>
+<p class="section-desc">페이지 모드와 웹툰 스크롤 모두에서 그림을 더 가까이 보세요.</p>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F50D;</span> 페이지 모드</h3>
+  <ul>
+    <li>핀치하여 확대하세요, 맞춤 크기의 최대 3배까지. 핀치하는 동안 그림이 손가락 아래 그대로 머뭅니다.</li>
+    <li>두 번 탭하면 해당 위치가 2배 크기로 확대되고, 다시 두 번 탭하면 페이지가 화면에 맞게 축소됩니다.</li>
+    <li>확대된 상태에서 한 손가락으로 드래그하면 이동할 수 있습니다.</li>
+    <li>거의 원래 크기까지 핀치로 축소하면 페이지가 자동으로 맞춤 크기에 맞춰집니다.</li>
+  </ul>
+  <p>확대는 <strong>화면에 맞추기</strong> 및 <strong>높이에 맞추기</strong> 크기 조절 옵션과 두 페이지 스프레드에서 작동합니다. <strong>너비에 맞추기</strong>와 <strong>원본 크기</strong>는 이미 화면보다 크게 페이지를 표시하고 대신 스크롤하므로, 더 자세히 보려면 아래의 <strong>전체 해상도 보기</strong>를 사용하세요.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4F1;</span> Webtoon 스크롤</h3>
+  <ul>
+    <li>핀치하거나 두 번 탭하면 전체 스트립이 최대 3배까지 확대됩니다.</li>
+    <li>확대된 상태에서도 스크롤은 계속 작동합니다 &mdash; 평소처럼 위아래로 드래그하면 됩니다.</li>
+    <li>좌우로 드래그하면 확대된 페이지 안에서 이동할 수 있습니다.</li>
+    <li>스크롤을 계속해도 확대 수준이 유지되므로 챕터 전체를 확대된 상태로 읽을 수 있습니다. 기기를 회전하면 원래 크기로 돌아갑니다.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x2728;</span> 전체 해상도 보기</h3>
+  <p>확대는 화면에 맞게 준비된 크기의 페이지를 크게 보여줍니다. 한 페이지를 최대한 선명하게 보려면 길게 눌러 <kbd>전체 해상도 보기</kbd>를 선택하세요 &mdash; 해당 페이지가 아카이브의 원본 해상도로 디코딩되어 훨씬 더 확대할 수 있습니다. 두 번 탭하면 화면 맞춤과 2배 크기 사이를 전환하며, 아래로 스와이프하거나 닫기 버튼을 탭하면 돌아갑니다.</p>
+  <div class="tip"><strong>참고:</strong> 확대 상태는 저장되지 않습니다. 책을 닫으면 항상 일반 맞춤 크기로 돌아갑니다.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; 맨 위로</a>
+
+<!-- TTS -->
+<h2 id="tts">텍스트 음성 변환 및 CarPlay</h2>
+<p class="section-desc">책을 소리 내어 읽어주는 기능을 사용하세요.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F50A;</span> 텍스트 음성 변환 사용</h3>
+  <p>EPUB, PDF 또는 TXT 책을 열고 도구 모음의 재생 버튼을 탭하세요. TTS는 한 문장씩 읽으며 현재 단어를 하이라이트합니다.</p>
+  <ul>
+    <li><strong>속도</strong> &mdash; TTS 컨트롤에서 0.5배속에서 2배속까지.</li>
+    <li><strong>음성</strong> &mdash; <kbd>설정</kbd> &rarr; <kbd>읽기 환경설정</kbd> &rarr; <kbd>텍스트 음성 변환</kbd>에서 100개 이상의 시스템 음성 중 선택.</li>
+    <li><strong>건너뛰기</strong> &mdash; 다음/이전을 탭하여 문장 또는 챕터 단위로 이동.</li>
+  </ul>
+  <div class="tip"><strong>참고:</strong> <a href="#fixed-layout">고정 레이아웃 책</a> &mdash; 페이지가 고정된 디자인으로 이루어진 만화와 그림책 &mdash; 은 앱이 소리 내어 읽을 텍스트가 없으므로 재생 버튼이 표시되지 않습니다.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F697;</span> CarPlay</h3>
+  <p>CarPlay 호환 차량에 연결하면 간소화된 재생 컨트롤과 함께 자동차 디스플레이에 앱이 나타납니다. TTS가 백그라운드에서 계속 재생되므로 화면을 켜 둘 필요가 없습니다.</p>
+  <div class="tip"><strong>팁:</strong> TTS 설정에서 <kbd>백그라운드 오디오</kbd><span class="badge badge-premium">Premium</span>를 활성화하면 CarPlay 없이도 앱이 백그라운드에 있을 때 재생을 계속할 수 있습니다.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; 맨 위로</a>
+
+<!-- AI UPSCALING -->
+<h2 id="upscaling">AI 만화 업스케일링</h2>
+<p class="section-desc">기기에서 저해상도 만화 페이지를 향상시킵니다.<span class="badge badge-premium">Premium</span></p>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x2728;</span> 기능 설명</h3>
+  <p>기기의 머신 러닝 모델을 사용하여 해상도 기준치 이하인 만화 페이지를 업스케일합니다. 더 선명한 선과 줄어든 압축 아티팩트를 얻을 수 있으며, 오래되거나 저품질 스캔에 특히 유용합니다.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x2699;</span> 설정</h3>
+  <ol class="steps">
+    <li><kbd>설정</kbd> &rarr; <kbd>읽기 환경설정</kbd> &rarr; <kbd>만화</kbd> &rarr; <kbd>AI 업스케일링</kbd>으로 이동합니다.</li>
+    <li>켜기를 합니다.</li>
+    <li><strong>해상도 기준치</strong>를 조정합니다 &mdash; 이 픽셀 너비 이하의 페이지가 업스케일됩니다(기본값: 1500 px).</li>
+    <li><strong>프리페치 창</strong>을 설정하여 백그라운드에서 미리 처리할 다음 페이지 수를 제어합니다.</li>
+    <li><strong>노이즈 제거 수준</strong>을 선택합니다(자동이 보통 가장 좋습니다).</li>
+  </ol>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4BE;</span> 캐시 및 저장소</h3>
+  <p>업스케일된 이미지는 캐시되어 재처리할 필요가 없습니다. 캐시 보관 기간을 선택하고(7~90일 또는 만료 없음) 설정에서 언제든지 삭제하세요.</p>
+  <div class="tip"><strong>팁:</strong> 업스케일된 페이지에 작은 표시 배지가 나타납니다. 원하지 않으면 설정에서 끌 수 있습니다.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; 맨 위로</a>
+
+<!-- HIDDEN MODE -->
+<h2 id="hidden">숨겨진 책</h2>
+<p class="section-desc">특정 책을 비공개로 유지하세요.<span class="badge badge-premium">Premium</span></p>
+
+<div class="card">
+  <h3><span class="icon icon-indigo">&#x1F441;</span> 책 숨기기</h3>
+  <ol class="steps">
+    <li>책의 상세 페이지를 열고 메뉴(&hellip;)를 탭합니다.</li>
+    <li><kbd>책 숨기기</kbd>를 선택합니다.</li>
+    <li>책이 일반 라이브러리 보기에서 사라집니다.</li>
+  </ol>
+  <p>여러 책을 한 번에 숨기려면 선택 모드를 사용하세요.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F513;</span> 숨겨진 책 보기</h3>
+  <p>라이브러리를 아래로 당기면 <strong>숨김 모드</strong>가 활성화됩니다. 숨겨진 책과 보이는 책 모두가 이제 표시됩니다. 다시 당기거나 앱을 나가면 숨김 모드가 종료됩니다.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F512;</span> 개인정보 보호 옵션</h3>
+  <p>숨김 모드가 활성화된 상태에서 <kbd>설정</kbd> &rarr; <kbd>숨김 모드</kbd>로 이동하여 앱을 나갈 때 동작을 선택하세요:</p>
+  <ul>
+    <li><strong>자동 종료</strong>(기본값) &mdash; 숨김 모드가 자동으로 꺼집니다. 빠르고 간편합니다.</li>
+    <li><strong>Face ID / Touch ID 필요</strong> &mdash; 숨김 모드가 유지되지만 돌아올 때 생체 인증이 필요합니다. 더 안전합니다.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x21A9;</span> 책 숨기기 해제</h3>
+  <p>숨김 모드에서 숨겨진 책의 상세 페이지를 열고 <kbd>책 숨기기 해제</kbd>를 선택하거나, 선택 모드를 사용하여 대량으로 숨기기 해제하세요.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x2601;</span> 숨겨진 책 동기화</h3>
+  <p>숨김 모드에서 <kbd>설정</kbd> &rarr; <kbd>숨김 모드</kbd>로 이동하여 <kbd>숨겨진 책을 iCloud와 동기화</kbd>를 켜세요:</p>
+  <ul>
+    <li><strong>끔</strong>(기본값) &mdash; 숨겨진 책은 이 기기에만 유지됩니다. 책을 숨기면 iCloud에서도 제거됩니다.</li>
+    <li><strong>켬</strong> &mdash; 숨겨진 책이 iCloud를 통해 동기화되지만 로그인한 모든 기기에서 계속 숨겨져 있습니다.</li>
+  </ul>
+  <p>이미 iCloud에 숨겨진 책이 있는 상태에서 토글을 끄면 처리 방법을 묻습니다:</p>
+  <ul>
+    <li><strong>모든 기기에 유지</strong> &mdash; 다른 기기는 동기화된 사본을 유지하고, 이 기기는 로컬 전용 개인 사본을 유지합니다.</li>
+    <li><strong>iCloud에서 완전히 삭제</strong> &mdash; iCloud에서 책을 제거하며, 다른 각 기기는 숨겨진 라이브러리에 자체 개인 사본을 유지합니다.</li>
+  </ul>
+  <div class="tip"><strong>참고:</strong> 다른 기기 중 하나가 iCloud에서 숨겨진 책을 제거하면, 이 기기는 책 파일이 이미 다운로드되어 있었던 경우 숨겨진 라이브러리에 자체 개인 사본을 자동으로 유지합니다.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F5D1;</span> 숨겨진 책 영구 삭제</h3>
+  <p>숨김 모드에서 <kbd>설정</kbd> &rarr; <kbd>숨김 모드</kbd>로 이동하여 <kbd>숨겨진 책 영구 삭제</kbd>를 선택하면 이 기기, iCloud, 다른 기기에서 모든 숨겨진 책이 제거됩니다. 확인하려면 <kbd>DELETE</kbd>를 입력하세요.</p>
+  <div class="tip"><strong>경고:</strong> 이 작업은 되돌릴 수 없습니다. 그 시점에 오프라인 상태인 기기는 다음 동기화 전까지 로컬 사본을 유지합니다.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; 맨 위로</a>
+
+<!-- BOOKMARKS, HIGHLIGHTS, TAGS -->
+<h2 id="bookmarks">북마크, 하이라이트 및 태그</h2>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F516;</span> 북마크</h3>
+  <p>리더 도구 모음의 북마크 아이콘을 탭하여 현재 페이지를 북마크합니다. 선택적으로 메모를 추가하세요. 책의 모든 북마크는 상세 페이지에서 확인할 수 있습니다.</p>
+  <div class="tip"><strong>참고:</strong> 여기에는 직접 만든 북마크만 표시됩니다. 책을 닫을 때 앱이 자동으로 저장하는 위치는 사용자가 의도적으로 추가한 북마크를 가리지 않도록 <a href="#history">읽기 기록</a>에 별도로 보관됩니다.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F58D;</span> 하이라이트<span class="badge badge-premium">Premium</span></h3>
+  <p>EPUB에서 텍스트를 선택하여 하이라이트합니다. 5가지 색상(노랑, 분홍, 초록, 파랑, 주황) 중 선택하고 메모를 추가하세요. 모든 하이라이트는 책의 상세 페이지에 나열됩니다.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F3F7;</span> 태그</h3>
+  <p>책의 상세 페이지에서 태그를 추가하세요. 태그는 검색 가능하며 라이브러리 필터로 사용할 수 있습니다. 모든 태그는 <kbd>설정</kbd> &rarr; <kbd>태그</kbd>에서 관리하세요.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; 맨 위로</a>
+
+<!-- READING HISTORY -->
+<h2 id="history">읽기 기록</h2>
+<p class="section-desc">최근에 머물렀던 위치로 바로 돌아가세요.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F552;</span> 자동 저장</h3>
+  <p>책을 닫거나 앱을 백그라운드로 보낼 때마다 현재 위치가 기록 항목으로 저장됩니다 &mdash; 북마크를 잊지 않아도 됩니다. EPUB, PDF, TXT/RTF, 만화 등 모든 리더에서 작동합니다.</p>
+  <ul>
+    <li>책마다 최대 <strong>50</strong>개의 최근 위치가 보관됩니다. 새 항목이 추가되면 오래된 항목은 자동으로 삭제됩니다.</li>
+    <li>몇 분 안에 같은 위치에서 책을 다시 닫으면 중복을 만들지 않고 기존 항목이 업데이트됩니다.</li>
+    <li>자동으로 저장된 위치는 의도적으로 추가한 북마크와 섞이지 않도록 수동 북마크 목록과 별도로 보관됩니다.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4D6;</span> 책 안의 기록</h3>
+  <p>책을 읽는 중 오른쪽 상단의 더보기 메뉴(&hellip;)를 탭하고 <kbd>읽기 기록</kbd>을 선택하세요. 해당 책의 최근 위치 목록이 최신 순으로 표시되며, 챕터 또는 페이지 이름과 각 항목이 기록된 시점이 함께 나옵니다.</p>
+  <ul>
+    <li>항목을 탭하면 해당 위치로 바로 이동합니다.</li>
+    <li>항목을 왼쪽으로 스와이프하면 삭제됩니다.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F4DA;</span> 라이브러리 전체 기록</h3>
+  <p>라이브러리 상단 도구 모음의 더보기 메뉴(&hellip;)를 탭하고 <kbd>읽기 기록</kbd>을 선택하면 최근에 연 모든 책을 날짜별로 묶어서 볼 수 있습니다. 행을 탭하면 멈췄던 위치에서 책이 바로 열립니다.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; 맨 위로</a>
+
+<!-- AUTHOR & TAG BROWSING -->
+<h2 id="search">저자 및 태그별 찾아보기</h2>
+<p class="section-desc">앱 어디에서나 저자나 태그로 책을 찾아보세요.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F464;</span> 저자</h3>
+  <p><kbd>설정</kbd> &rarr; <kbd>저자</kbd>로 이동하면 라이브러리에 있는 모든 저자를 책 수와 함께 볼 수 있습니다. 저자를 탭하면 해당 저자의 모든 책을 라이브러리에서 검색합니다.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F3F7;</span> 태그 검색</h3>
+  <p><kbd>설정</kbd> &rarr; <kbd>태그</kbd>에서 태그를 탭하면 그 태그가 붙은 책을 라이브러리에서 검색합니다. 길게 누르면 이름을 바꾸거나 삭제할 수 있습니다.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F50D;</span> 상황에 맞는 빠른 검색</h3>
+  <ul>
+    <li>라이브러리에서 책을 길게 누르기 &rarr; <kbd>[저자]의 책 찾기</kbd></li>
+    <li>책의 상세 페이지에서 저자 이름이나 태그를 길게 누르면 검색됩니다</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; 맨 위로</a>
+
+<!-- METADATA -->
+<h2 id="metadata">메타데이터 및 ComicInfo.xml</h2>
+<p class="section-desc">책의 메타데이터를 보고 편집하세요.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x270F;</span> 메타데이터 편집기</h3>
+  <p>책의 상세 페이지에서 메뉴(&hellip;)를 탭하고 <kbd>메타데이터 편집</kbd>을 선택하면 제목, 저자, 시리즈, 설명 등의 항목을 변경할 수 있습니다. 원본 파일에서 메타데이터를 다시 추출할 수도 있습니다.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4CB;</span> ComicInfo.xml</h3>
+  <p><code>ComicInfo.xml</code> 파일이 들어 있는 만화 아카이브(CBZ, CBR, CB7)는 가져올 때 메타데이터가 자동으로 추출됩니다 &mdash; 제목, 작가, 시리즈, 화 번호, 줄거리, 출판사, 장르, 태그가 포함됩니다.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; 맨 위로</a>
+
+<!-- ICLOUD -->
+<h2 id="icloud">iCloud 동기화</h2>
+<p class="section-desc">기기 간에 라이브러리를 동기화하세요.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x2601;</span> 동기화 활성화</h3>
+  <ol class="steps">
+    <li><kbd>설정</kbd> &rarr; <kbd>iCloud 동기화</kbd>로 이동합니다.</li>
+    <li><kbd>라이브러리를 iCloud와 동기화</kbd>를 켭니다.</li>
+    <li>동기화는 다음 앱 실행 시 적용됩니다.</li>
+  </ol>
+  <p>메타데이터, 읽기 진행률, 북마크, 하이라이트, 서가가 같은 iCloud 계정에 로그인된 모든 기기에서 동기화됩니다.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F4CA;</span> 동기화 상태</h3>
+  <p><kbd>설정</kbd> &rarr; <kbd>iCloud 동기화</kbd>에서 책 파일에 대한 상태 카드를 확인할 수 있습니다:</p>
+  <ul>
+    <li>헤드라인 &mdash; <strong>최신 상태</strong>, <strong>동기화 중&hellip;</strong>(개수 포함), 또는 <strong>로그인되지 않음</strong>.</li>
+    <li>라이브러리 파일 중 얼마나 많은 부분이 iCloud에 있는지 보여주는 막대.</li>
+    <li>세부 정보 &mdash; <strong>동기화됨</strong>(전체 크기 포함), <strong>iCloud에만 있음</strong>(아직 이 기기에 다운로드되지 않음), <strong>진행 중</strong>.</li>
+  </ul>
+  <div class="tip"><strong>참고:</strong> 이 카드는 책 <em>파일</em>만 추적합니다. 읽기 진행률, 북마크, 하이라이트, 서가는 파일 상태와 관계없이 별도로 자동 동기화됩니다.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x2601;</span> 표지 배지</h3>
+  <p>책 표지 오른쪽 아래 모서리에 파일 동기화 상태를 나타내는 작은 구름 아이콘이 표시됩니다:</p>
+  <ul>
+    <li><strong>구름 아이콘</strong> &mdash; 파일이 iCloud에만 있습니다. 책 페이지를 열어 다운로드하세요.</li>
+    <li><strong>위/아래 화살표</strong> &mdash; 파일이 현재 업로드 또는 다운로드 중입니다.</li>
+    <li><strong>아이콘 없음</strong> &mdash; 파일이 이미 이 기기에 있습니다.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4E5;</span> 자동 다운로드</h3>
+  <p>자동 다운로드의 최대 파일 크기를 선택하세요. 더 큰 책은 열 때까지 클라우드에 유지됩니다. iCloud 설정에서 제한을 조정하세요.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; 맨 위로</a>
+
+<!-- STATS -->
+<h2 id="stats">독서 통계</h2>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F4CA;</span> 독서 활동</h3>
+  <p><kbd>설정</kbd> &rarr; <kbd>라이브러리 통계</kbd>를 열어 확인하세요:</p>
+  <ul>
+    <li>총 책 수, 읽은 페이지 수, 독서 시간.</li>
+    <li>일별 독서 활동 차트.</li>
+    <li>형식별, 읽기 상태별 책.</li>
+    <li>책별 활동 내역.</li>
+  </ul>
+  <div class="tip"><strong>참고:</strong> 통계는 숨김 모드를 따릅니다 &mdash; 숨김 모드가 꺼져 있으면 숨겨진 책의 통계는 포함되지 않습니다.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; 맨 위로</a>
+
+<!-- WEBDAV & OPDS -->
+<h2 id="webdav">WebDAV 및 OPDS</h2>
+<p class="section-desc">원격 서버와 카탈로그에서 탐색하고 다운로드하세요.</p>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F5C4;</span> WebDAV</h3>
+  <p>NAS, Nextcloud 또는 Calibre 서버에 연결하여 폴더를 탐색하고 책을 다운로드하세요.</p>
+  <ol class="steps">
+    <li><kbd>설정</kbd> &rarr; <kbd>책 가져오기</kbd> &rarr; <kbd>WebDAV</kbd>로 이동합니다.</li>
+    <li><kbd>서버 추가</kbd>를 탭하고 URL을 입력합니다.</li>
+    <li>필요한 경우 사용자 이름과 비밀번호를 추가합니다.</li>
+    <li><kbd>연결 테스트</kbd>를 탭한 다음 저장합니다.</li>
+  </ol>
+  <div class="tip"><strong>자체 서명 인증서:</strong> 서버가 자체 서명 인증서를 사용하는 경우 <kbd>신뢰할 수 없는 인증서 허용</kbd>을 켤 수 있습니다. 앱이 먼저 확인을 요청합니다 &mdash; 이 옵션은 TLS 검증을 비활성화하므로 같은 네트워크에 있는 누군가가 서버를 사칭할 수 있습니다. 직접 관리하는 서버에서만 켜세요.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4DA;</span> OPDS 카탈로그</h3>
+  <p>OPDS는 도서 카탈로그를 위한 개방형 표준입니다. 공개 카탈로그(Project Gutenberg, Standard Ebooks 등) 또는 자체 개인 서버를 추가하세요.</p>
+  <ol class="steps">
+    <li><kbd>설정</kbd> &rarr; <kbd>책 가져오기</kbd> &rarr; <kbd>OPDS</kbd>로 이동합니다.</li>
+    <li><kbd>카탈로그 추가</kbd>를 탭하고 피드 URL을 입력합니다.</li>
+    <li>카테고리를 탐색하고 라이브러리에 책을 다운로드합니다.</li>
+  </ol>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; 맨 위로</a>
+
+<!-- RESUME -->
+<h2 id="resume">실행 시 이어 읽기</h2>
+<p class="section-desc">마지막으로 읽던 곳에서 자동으로 계속하세요.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x25B6;</span> 설정</h3>
+  <p><kbd>설정</kbd> &rarr; <kbd>일반</kbd>로 이동하여 <kbd>실행 시 마지막 도서 재개</kbd>를 켭니다. 다음에 앱을 열면 마지막으로 읽던 책과 페이지로 바로 이동합니다.</p>
+  <div class="tip"><strong>숨겨진 책:</strong> 마지막으로 읽은 책이 숨겨져 있으면, 앱이 재개하기 전에 Face ID / Touch ID를 요청합니다. 숨김 모드 설정에서 <kbd>인증 후 숨겨진 책 재개</kbd>를 활성화하여 이를 허용하세요.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; 맨 위로</a>
+
+<!-- FORMATS -->
+<h2 id="formats">지원 형식</h2>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4D6;</span> 책</h3>
+  <div class="formats-grid">
+    <div class="format-tag">EPUB</div>
+    <div class="format-tag">PDF</div>
+    <div class="format-tag">TXT</div>
+    <div class="format-tag">RTF</div>
+  </div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4F1;</span> 만화</h3>
+  <div class="formats-grid">
+    <div class="format-tag">CBZ</div>
+    <div class="format-tag">CBR</div>
+    <div class="format-tag">CB7</div>
+  </div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; 맨 위로</a>
+
+</body>
+</html>

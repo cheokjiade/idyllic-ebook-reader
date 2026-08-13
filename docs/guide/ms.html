@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Panduan Pengguna</title>
+<link rel="stylesheet" href="UserGuideStyle.css">
+<!-- USER-GUIDE-NAV-STYLE:START -->
+<style>
+.guide-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 14px;
+  padding: 10px 14px;
+  margin: 0 0 16px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  font-size: 13px;
+}
+.guide-nav-home {
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.guide-nav-arrow {
+  display: inline-block;
+}
+[dir="rtl"] .guide-nav-arrow {
+  transform: scaleX(-1);
+}
+.guide-nav-langs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 10px;
+  color: var(--secondary);
+}
+.guide-nav-globe {
+  font-size: 13px;
+}
+.guide-nav-langs a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.guide-nav-langs a:hover,
+.guide-nav-langs a:focus-visible {
+  text-decoration: underline;
+}
+.guide-nav-current {
+  font-weight: 700;
+  color: var(--text);
+}
+</style>
+<!-- USER-GUIDE-NAV-STYLE:END -->
+</head>
+<body id="top">
+<!-- USER-GUIDE-NAV:START -->
+<nav class="guide-nav" aria-label="User Guide language switcher">
+  <a class="guide-nav-home" href="../index.html"><span class="guide-nav-arrow" aria-hidden="true">&larr;</span> Idyllic</a>
+  <span class="guide-nav-langs">
+    <span class="guide-nav-globe" aria-hidden="true">&#x1F310;</span>
+      <a href="index.html">English</a>
+      <a href="ar.html">العربية</a>
+      <a href="cs.html">Čeština</a>
+      <a href="da.html">Dansk</a>
+      <a href="de.html">Deutsch</a>
+      <a href="es.html">Español</a>
+      <a href="fi.html">Suomi</a>
+      <a href="fr.html">Français</a>
+      <a href="he.html">עברית</a>
+      <a href="hi.html">हिन्दी</a>
+      <a href="id.html">Indonesia</a>
+      <a href="it.html">Italiano</a>
+      <a href="ja.html">日本語</a>
+      <a href="ko.html">한국어</a>
+      <span class="guide-nav-current">Bahasa Melayu</span>
+      <a href="nb.html">Norsk bokmål</a>
+      <a href="nl.html">Nederlands</a>
+      <a href="pl.html">Polski</a>
+      <a href="pt-BR.html">Português (Brasil)</a>
+      <a href="ru.html">Русский</a>
+      <a href="sv.html">Svenska</a>
+      <a href="th.html">ไทย</a>
+      <a href="tr.html">Türkçe</a>
+      <a href="uk.html">Українська</a>
+      <a href="vi.html">Tiếng Việt</a>
+      <a href="zh-Hans.html">简体中文</a>
+      <a href="zh-Hant.html">繁體中文</a>
+  </span>
+</nav>
+<!-- USER-GUIDE-NAV:END -->
+
+<h1>Panduan Pengguna</h1>
+<p class="subtitle">Semua yang anda perlukan untuk memanfaatkan pengalaman membaca anda sepenuhnya.</p>
+
+<!-- TABLE OF CONTENTS -->
+<div class="card toc">
+  <a href="#importing">Mengimport Buku</a>
+  <a href="#wifi">Pemindahan WiFi</a>
+  <a href="#library">Pustaka &amp; Organisasi</a>
+  <a href="#shelves">Rak &amp; Folder</a>
+  <a href="#reading-books">Membaca Buku</a>
+  <a href="#fixed-layout">Buku Susun Atur Tetap</a>
+  <a href="#in-book-search">Carian Dalam Buku</a>
+  <a href="#image-gallery">Galeri Imej</a>
+  <a href="#fonts">Fon Bacaan</a>
+  <a href="#reading-direction">Arah Bacaan</a>
+  <a href="#vertical-writing">Penulisan Menegak</a>
+  <a href="#reading-comics">Membaca Komik</a>
+  <a href="#comic-zoom">Mengezum Halaman Komik</a>
+  <a href="#tts">Teks-ke-Ucapan &amp; CarPlay</a>
+  <a href="#upscaling">Peningkatan Resolusi Komik AI</a>
+  <a href="#hidden">Buku Tersembunyi</a>
+  <a href="#bookmarks">Penanda Buku, Sorotan &amp; Tag</a>
+  <a href="#history">Sejarah Bacaan</a>
+  <a href="#search">Melayari Pengarang &amp; Tag</a>
+  <a href="#metadata">Metadata &amp; ComicInfo.xml</a>
+  <a href="#icloud">Penyegerakan iCloud</a>
+  <a href="#stats">Statistik Bacaan</a>
+  <a href="#webdav">WebDAV &amp; OPDS</a>
+  <a href="#resume">Sambung Semula Semasa Pelancaran</a>
+  <a href="#formats">Format yang Disokong</a>
+</div>
+
+<!-- IMPORTING -->
+<h2 id="importing">Mengimport Buku</h2>
+<p class="section-desc">Beberapa cara untuk menambah buku ke pustaka anda.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4C1;</span> Dari Aplikasi Fail</h3>
+  <p>Ketik <kbd>Tetapan</kbd> &rarr; <kbd>Import Buku</kbd>, kemudian pilih fail dari peranti anda, iCloud Drive, atau mana-mana perkhidmatan awan yang disambungkan. Anda juga boleh menggunakan seret-dan-lepas pada iPad.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F310;</span> Pemindahan WiFi</h3>
+  <p>Muat naik buku dari mana-mana komputer atau telefon di rangkaian WiFi anda. Lihat bahagian khusus di bawah untuk butiran lanjut.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F5C2;</span> WebDAV &amp; OPDS</h3>
+  <p>Sambung ke NAS, pelayan Calibre, atau katalog buku awam untuk melayari dan memuat turun buku secara terus. Lihat di bawah.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Kembali ke atas</a>
+
+<!-- WIFI TRANSFER -->
+<h2 id="wifi">Pemindahan WiFi</h2>
+<p class="section-desc">Muat naik buku dari mana-mana peranti di rangkaian tempatan anda.</p>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F4F6;</span> Cara Ia Berfungsi</h3>
+  <p>Aplikasi ini menjalankan pelayan web kecil di peranti anda. Mana-mana komputer atau telefon di rangkaian WiFi yang sama boleh membuka halaman muat naik dalam pelayar.</p>
+  <ol class="steps">
+    <li>Pergi ke <kbd>Tetapan</kbd> &rarr; <kbd>Import Buku</kbd> &rarr; <kbd>Pemindahan WiFi</kbd>.</li>
+    <li>Ketik <kbd>Mulakan Pelayan</kbd>. Alamat seperti <kbd>http://192.168.1.42:8080</kbd> akan dipaparkan.</li>
+    <li>Buka alamat tersebut dalam mana-mana pelayar web di rangkaian yang sama.</li>
+    <li>Seret fail ke halaman atau klik untuk melayari &mdash; pilih folder destinasi jika mahu.</li>
+    <li>Buku yang diimport akan muncul dalam pustaka anda dengan serta-merta.</li>
+    <li>Ketik <kbd>Hentikan Pelayan</kbd> apabila selesai.</li>
+  </ol>
+  <div class="tip"><strong>Petua:</strong> Peranti anda akan kekal terjaga semasa pelayan berjalan supaya pemindahan tidak terganggu.</div>
+  <div class="tip"><strong>Muat naik gagal?</strong> Setiap fail yang gagal akan memaparkan sebabnya pada barisnya. Jika sambungan WiFi terputus, ketik <kbd>&#x21BB; Cuba Semula</kbd> pada baris tersebut untuk menghantarnya sekali lagi. Masalah kekal (seperti format fail yang tidak disokong) tidak akan memaparkan butang Cuba Semula.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Kembali ke atas</a>
+
+<!-- LIBRARY -->
+<h2 id="library">Pustaka &amp; Organisasi</h2>
+<p class="section-desc">Cari, susun, dan organisasikan buku anda.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F50D;</span> Carian</h3>
+  <p>Ketik pil <kbd>Carian</kbd> di bahagian bawah pustaka untuk mengembangkan medan carian, kemudian ketik <kbd>Selesai</kbd> untuk menutupnya. Ia mencari merentasi tajuk, pengarang, tag, siri, penerbit, dan penerangan. Mencari mengikut pengarang atau tag dari menu konteks buku (lihat <a href="#search">Melayari Pengarang &amp; Tag</a>) mengisi carian yang sama.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x2195;</span> Susun &amp; Tapis</h3>
+  <p>Ketik butang pilihan paparan (kanan atas) untuk memilih:</p>
+  <ul>
+    <li><strong>Susun Atur</strong> &mdash; Grid, Terperinci, Padat, Minimalis, Jadual, atau Majalah</li>
+    <li><strong>Susun</strong> &mdash; Tajuk, Pengarang, Terakhir Dibaca, Tarikh Ditambah, Kemajuan, Saiz Fail, Siri</li>
+    <li><strong>Paparan</strong> &mdash; Letakkan buku Sedang Dibaca dahulu dan buku Selesai di akhir</li>
+    <li><strong>Tapis</strong> &mdash; Mengikut format, tag, atau pengarang</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x2714;</span> Mod Pilihan</h3>
+  <p>Tekan lama pada buku atau ketik <kbd>Pilih</kbd> untuk memasuki mod pilihan. Anda kemudian boleh memindah, memadam, menyembunyikan, atau menyahsembunyi beberapa buku sekaligus.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4CB;</span> Bersihkan Pendua</h3>
+  <p>Pergi ke <strong>Tetapan &gt; Pustaka &gt; Penyelenggaraan Pustaka &gt; Bersihkan Pendua</strong> untuk mencari buku dengan tajuk, pengarang dan format yang sama. Untuk setiap kumpulan pendua:</p>
+  <ul>
+    <li><strong>Versi terbaru</strong> ditanda dengan lencana hijau KEEP</li>
+    <li>Pilih salinan lama menggunakan kotak semak (atau <strong>Pilih Semua</strong>)</li>
+    <li><strong>Padam</strong> &mdash; membuang salinan lama yang dipilih</li>
+    <li><strong>Salin Data &amp; Padam</strong> &mdash; memindahkan penanda buku, sorotan, tag, kemajuan bacaan, dan penetapan rak ke versi terbaru sebelum dipadam</li>
+    <li>Dayakan <strong>"Pindahkan buku baharu ke rak &amp; status tersembunyi buku lama"</strong> untuk mengekalkan versi baharu di lokasi pustaka yang sama</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Kembali ke atas</a>
+
+<!-- SHELVES -->
+<h2 id="shelves">Rak &amp; Folder</h2>
+<p class="section-desc">Susun buku ke dalam folder bersarang.</p>
+
+<div class="card">
+  <h3><span class="icon icon-indigo">&#x1F4C2;</span> Mencipta Rak</h3>
+  <ol class="steps">
+    <li>Ketik <kbd>Rak Baharu</kbd> di bahagian atas pustaka anda.</li>
+    <li>Masukkan nama, kemudian pilih ikon dan warna.</li>
+    <li>Pilih rak induk secara pilihan untuk mencipta subfolder.</li>
+  </ol>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x21C4;</span> Memindahkan Buku</h3>
+  <p>Dari halaman butiran buku, ketik menu (&hellip;) dan pilih <kbd>Pindah ke Rak</kbd>. Dalam mod pilihan anda boleh memindahkan banyak buku sekaligus.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Kembali ke atas</a>
+
+<!-- READING BOOKS -->
+<h2 id="reading-books">Membaca Buku</h2>
+<p class="section-desc">Mod membaca EPUB, PDF, TXT, dan RTF.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4D6;</span> EPUB</h3>
+  <p>EPUB dibuka dalam pembaca berkemampuan penuh yang dikuasakan oleh Readium. Ketik tepi kiri atau kanan untuk menukar halaman, atau leret.</p>
+  <ul>
+    <li><strong>Berhalaman</strong> &mdash; pembacaan halaman demi halaman tradisional.</li>
+    <li><strong>Tatal Berterusan</strong><span class="badge badge-premium">Premium</span> &mdash; tatal secara semula jadi melalui teks, tanpa pemisah halaman.</li>
+    <li><strong>Arah Bacaan</strong> &mdash; ikut buku secara automatik, atau tetapkan sendiri kiri-ke-kanan atau kanan-ke-kiri. Lihat <a href="#reading-direction">Arah Bacaan</a>.</li>
+    <li><strong>Susun Atur Tetap</strong> &mdash; komik, buku bergambar, dan EPUB halaman demi halaman lain dibuka dalam pembaca yang dibina khusus untuknya. Lihat <a href="#fixed-layout">Buku Susun Atur Tetap</a>.</li>
+    <li><strong>Carian Dalam Buku</strong><span class="badge badge-premium">Premium</span> &mdash; cari mana-mana perkataan atau frasa dalam keseluruhan buku. Lihat <a href="#in-book-search">Carian Dalam Buku</a>.</li>
+    <li><strong>Galeri Imej</strong><span class="badge badge-premium">Premium</span> &mdash; lihat semua imej dalam EPUB dari halaman butirannya. Lihat <a href="#image-gallery">Galeri Imej</a>.</li>
+  </ul>
+  <div class="tip"><strong>Petua:</strong> Laraskan saiz fon, jarak baris, dan warna tema dalam <kbd>Tetapan</kbd> &rarr; <kbd>Keutamaan Bacaan</kbd> &rarr; <kbd>Buku</kbd>.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F4C4;</span> PDF</h3>
+  <p>PDF dipaparkan secara natif. Cubit untuk zum, leret untuk menukar halaman. Aplikasi ini boleh mengingati kata laluan untuk PDF yang dilindungi.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x1F4DD;</span> TXT &amp; RTF</h3>
+  <p>Fail teks biasa dan RTF dibuka dalam pembaca teks ringkas dengan pemformatan yang boleh dilaras.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Kembali ke atas</a>
+
+<!-- FIXED LAYOUT -->
+<h2 id="fixed-layout">Buku Susun Atur Tetap</h2>
+<p class="section-desc">EPUB yang halamannya mempunyai reka bentuk tetap &mdash; komik, buku bergambar, dan tajuk yang banyak diilustrasikan.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4D0;</span> Apakah Ia</h3>
+  <p>Sesetengah EPUB disusun atur halaman demi halaman dan bukannya sebagai teks yang mengalir: setiap halaman ialah susunan tetap perkataan dan karya seni. Aplikasi ini mengenali buku sedemikian dengan sendirinya dan membukanya dalam pembaca yang dibina khusus untuknya &mdash; setiap halaman diskalakan agar muat pada skrin anda dan diletakkan di tengah, dengan ruang di sekelilingnya diisi dengan warna latar belakang tema bacaan anda.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F44B;</span> Membaca &amp; Mengezum</h3>
+  <ul>
+    <li>Ketik bahagian kiri atau kanan skrin untuk menukar halaman, atau leret. Ketik bahagian tengah untuk menunjukkan atau menyembunyikan bar alat.</li>
+    <li>Cubit untuk zum masuk &mdash; sehingga tiga kali ganda saiz yang dimuatkan &mdash; dan seret untuk bergerak di sekitar halaman.</li>
+    <li>Ketik dua kali untuk zum masuk pada titik tersebut; ketik dua kali lagi untuk memuatkan semula halaman ke skrin.</li>
+    <li>Buku yang diterbitkan untuk dibaca kanan-ke-kiri menukar halaman mengikut arah itu secara automatik.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4D6;</span> Rentangan Dua Halaman</h3>
+  <p>Pusingkan peranti ke mod landskap dan halaman bersebelahan akan dipaparkan bersebelahan antara satu sama lain. Aplikasi mengikut petunjuk rentangan di dalam buku itu sendiri, jadi kulit buku atau ilustrasi sehalaman penuh tetap mendapat halamannya sendiri. Pusing semula ke mod potret untuk satu halaman pada satu masa.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x2139;</span> Apa Yang Tersedia</h3>
+  <p>Kandungan buku, penanda buku, peluncur kemajuan, sejarah bacaan, dan menyambung semula dari tempat anda berhenti semuanya berfungsi seperti biasa.</p>
+  <p>Oleh sebab setiap halaman ialah reka bentuk tetap dan bukannya teks yang boleh disusun semula oleh aplikasi, beberapa kawalan tidak dipaparkan untuk buku ini: Tatal Berterusan dan tatal automatik, tetapan fon dan penampilan, teks-ke-ucapan, carian dalam buku, serta pemilihan atau penyerlahan teks.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Kembali ke atas</a>
+
+<!-- IN-BOOK SEARCH -->
+<h2 id="in-book-search">Carian Dalam Buku</h2>
+<p class="section-desc">Cari mana-mana perkataan atau frasa dalam buku yang sedang anda baca.<span class="badge badge-premium">Premium</span></p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F50D;</span> Memulakan Carian</h3>
+  <ol class="steps">
+    <li>Ketik bahagian tengah halaman untuk memaparkan bar alat.</li>
+    <li>Ketik kaca pembesar di hujung kanan bar bawah.</li>
+    <li>Taip sekurang-kurangnya dua aksara dan tekan <kbd>Cari</kbd> pada papan kekunci.</li>
+  </ol>
+  <p>Keseluruhan buku akan dicari &mdash; setiap bab, bukan hanya bab yang ada pada skrin &mdash; dan padanan mengabaikan huruf besar/kecil. Carian tersedia dalam pembaca EPUB dan TXT/RTF.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4C4;</span> Melihat Hasil</h3>
+  <p>Hasil dipaparkan di bawah bar carian, dikumpulkan mengikut bab. Setiap baris menunjukkan padanan dalam huruf tebal di dalam petikan teks sekelilingnya. Ketik hasil untuk terus melompat ke tempat itu &mdash; setiap padanan diserlahkan dengan warna kuning dalam buku, dengan padanan semasa dalam warna ambar yang lebih kuat.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x2195;</span> Berpindah Antara Padanan</h3>
+  <p>Setelah anda memilih hasil, bar carian mengecil menjadi jalur padat dengan pembilang yang menunjukkan kedudukan anda dalam kalangan padanan.</p>
+  <ul>
+    <li>Gunakan anak panah atas/bawah untuk pergi ke padanan sebelumnya atau seterusnya.</li>
+    <li>Ketik butang senarai untuk membuka semula senarai hasil penuh.</li>
+    <li>Ketik <kbd>&times;</kbd> untuk menamatkan carian &mdash; semua serlahan dialih keluar.</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Kembali ke atas</a>
+
+<!-- IMAGE GALLERY -->
+<h2 id="image-gallery">Galeri Imej</h2>
+<p class="section-desc">Lihat semua ilustrasi dalam EPUB sebagai galeri yang boleh dileret.<span class="badge badge-premium">Premium</span></p>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F5BC;</span> Membuka Galeri</h3>
+  <p>Buka halaman butiran buku EPUB dan ketik butang timbunan foto <span class="icon">&#x1F5BC;</span> dalam bar alat di bahagian atas kanan. Aplikasi mengekstrak setiap imej daripada buku, sambil memaparkan bar kemajuan semasa ia berfungsi &mdash; ketik butang <kbd>&times;</kbd> di bahagian atas kiri untuk keluar pada bila-bila masa. Galeri hanya tersedia untuk buku EPUB.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4DA;</span> Apa Yang Akan Anda Lihat</h3>
+  <p>Imej dipaparkan satu setiap halaman mengikut urutan bacaan &mdash; urutan ia muncul dalam bab buku &mdash; termasuk kulit buku. Imej kecil seperti ikon dan hiasan dilangkau: apa-apa yang lebih kecil daripada saiz minimum (100&nbsp;px secara lalai) tidak disertakan. Laraskan ambang ini dalam <kbd>Tetapan</kbd> &rarr; <kbd>Keutamaan Bacaan</kbd> &rarr; <kbd>Buku</kbd> &rarr; <kbd>Galeri EPUB</kbd>. Jika tiada imej yang layak, galeri akan memberitahu bahawa tiada imej ditemui.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F446;</span> Melihat &amp; Menyimpan Imej</h3>
+  <ul>
+    <li>Leret untuk berpindah antara imej, atau gunakan gelangsar halaman di bahagian bawah untuk melompat dengan pantas.</li>
+    <li>Cubit atau ketik dua kali untuk zum, kemudian seret untuk bergerak &mdash; galeri menggunakan pembaca komik, jadi ia zum dengan cara yang sama persis. Lihat <a href="#comic-zoom">Mengezum Halaman Komik</a>.</li>
+    <li>Ketik bahagian tengah skrin untuk menunjukkan atau menyembunyikan kawalan.</li>
+    <li>Tekan lama pada imej untuk <kbd>Lihat Resolusi Penuh</kbd> &mdash; yang membukanya pada saiz asal untuk pandangan lebih dekat &mdash; atau untuk <kbd>Simpan ke Foto</kbd>, <kbd>Simpan ke Fail</kbd>, atau <kbd>Salin Imej</kbd>.</li>
+    <li>Galeri mengikut arah bacaan komik anda &mdash; termasuk tatal menegak gaya webtoon.</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Kembali ke atas</a>
+
+<!-- READING FONTS -->
+<h2 id="fonts">Fon Bacaan</h2>
+<p class="section-desc">Pilih fon bacaan, tambah fon anda sendiri, atau muat turun pek bahasa.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F524;</span> Memilih Fon</h3>
+  <p>Buka <kbd>Tetapan</kbd> &rarr; <kbd>Keutamaan Bacaan</kbd> &rarr; <kbd>Buku</kbd> &rarr; <kbd>Fon Tersuai</kbd> untuk sampai ke skrin <strong>Fon</strong>. Beberapa fon bacaan disertakan secara terbina dalam, dengan <strong>Literata</strong> sebagai lalai. Fon yang anda pilih digunakan pada pembaca EPUB dan teks.</p>
+  <div class="tip"><strong>Petua:</strong> Laraskan saiz fon dan jarak baris dalam <kbd>Tetapan</kbd> &rarr; <kbd>Keutamaan Bacaan</kbd> &rarr; <kbd>Buku</kbd>.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F453;</span> Fon Kebolehcapaian</h3>
+  <p>Dua fon yang direka untuk memudahkan bacaan disertakan dan sentiasa tersedia: <strong>Atkinson Hyperlegible</strong>, yang menajamkan perbezaan antara huruf yang serupa, dan <strong>OpenDyslexic</strong>, yang diberati untuk mengurangkan pertukaran huruf.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F4C2;</span> Fon Tersuai</h3>
+  <p>Import fail fon <kbd>.ttf</kbd> atau <kbd>.otf</kbd> anda sendiri dari skrin Fon dan gunakannya dalam pembaca EPUB. Fon yang diimport kekal pada peranti anda.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F4E5;</span> Muat Turun Fon &amp; Pek Bahasa</h3>
+  <p>Di bawah <strong>Muat Turun Fon</strong>, fon bacaan tambahan dan pek bahasa tersedia atas permintaan untuk skrip yang tidak disertakan aplikasi &mdash; Cina, Jepun &amp; Korea (CJK), Arab, Devanagari, dan Thai. Pek adalah besar (sekitar 41&nbsp;MB setiap satu), jadi saiznya dipaparkan sebelum anda memuat turun. Setelah dipasang, ia berfungsi sama seperti fon yang diimport.</p>
+  <div class="tip"><strong>Petua:</strong> Jika aksara dalam sesebuah buku dipaparkan sebagai kotak kosong, muat turun pek bahasa yang sepadan untuk memaparkannya.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x1F4DC;</span> Lesen Fon</h3>
+  <p>Fon terbina dalam dan yang boleh dimuat turun disediakan di bawah <strong>SIL Open Font License</strong>. Anda boleh membaca lesen penuh bagi mana-mana daripadanya dari barisnya di skrin Fon.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Kembali ke atas</a>
+
+<!-- READING DIRECTION -->
+<h2 id="reading-direction">Arah Bacaan</h2>
+<p class="section-desc">Kiri-ke-kanan, kanan-ke-kiri, atau mengikut cara buku itu diterbitkan.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x21C4;</span> Memilih Arah</h3>
+  <p>Buka <kbd>Tetapan</kbd> &rarr; <kbd>Keutamaan Bacaan</kbd> &rarr; <kbd>Buku</kbd> dan gunakan kawalan <strong>Arah Bacaan</strong> di bawah <strong>Mod Bacaan</strong>:</p>
+  <ul>
+    <li><strong>Automatik</strong> (lalai) &mdash; mengikut arah yang dinyatakan oleh buku itu sendiri. Manga dan buku yang diterbitkan untuk dibaca kanan-ke-kiri terbuka dengan betul tanpa apa-apa persediaan.</li>
+    <li><strong>Kiri ke Kanan</strong> &mdash; piawai untuk kebanyakan buku Barat.</li>
+    <li><strong>Kanan ke Kiri</strong> &mdash; gunakan kanan-ke-kiri untuk setiap buku.</li>
+  </ul>
+  <p>Anda juga boleh menukarnya tanpa meninggalkan buku: ketik bahagian tengah halaman untuk memaparkan bar alat, kemudian ketik butang <kbd>Aa</kbd> pada bar bawah. Perubahan itu berkuat kuasa serta-merta pada halaman yang sedang anda baca.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F44B;</span> Apa Yang Mengikut Arah Ini</h3>
+  <ul>
+    <li>Bahagian mana yang membawa anda ke hadapan &mdash; dalam buku kanan-ke-kiri, mengetik atau meleret ke kiri menukar ke halaman seterusnya.</li>
+    <li>Animasi pusingan halaman, yang berpusing dari bahagian yang betul.</li>
+    <li>Susun atur teks pada halaman.</li>
+  </ul>
+  <div class="tip"><strong>Nota:</strong> Peluncur kemajuan sentiasa terisi dari kiri, kerana ia menunjukkan sejauh mana anda telah membaca buku itu dan bukannya kedudukan halaman pada skrin.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x2139;</span> Tempat Ia Digunakan</h3>
+  <p>Tetapan ini adalah untuk EPUB dalam mod berhalaman &mdash; ia disembunyikan semasa Tatal Berterusan diaktifkan. Komik mempunyai tetapan urutan bacaan tersendiri (lihat <a href="#reading-comics">Membaca Komik</a>), dan <a href="#fixed-layout">buku susun atur tetap</a> sentiasa mengikut arah yang dinyatakan dalam buku.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Kembali ke atas</a>
+
+<!-- VERTICAL WRITING -->
+<h2 id="vertical-writing">Penulisan Menegak</h2>
+<p class="section-desc">Buku Jepun dan Cina yang ditaip atur dalam lajur menegak.</p>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x2B07;</span> Buku Menegak</h3>
+  <p>Buku yang ditaip atur secara menegak &mdash; tategaki Jepun (&#x7E26;&#x66F8;&#x304D;) dan Cina tradisional (&#x76F4;&#x6392;) &mdash; dipaparkan mengikut cara ia ditaip atur: teks mengalir dari atas ke bawah dalam lajur yang terisi dari kanan ke kiri, dan halaman bertukar ke kiri, sama seperti cara manga dibaca.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x2699;</span> Arah Penulisan</h3>
+  <p>Buka <kbd>Tetapan</kbd> &rarr; <kbd>Keutamaan Bacaan</kbd> &rarr; <kbd>Buku</kbd> dan gunakan kawalan <strong>Arah Penulisan</strong>:</p>
+  <ul>
+    <li><strong>Automatik</strong> (lalai) &mdash; mengikut susun atur tersendiri setiap buku. Buku yang ditaip atur secara menegak dipaparkan secara menegak; semua buku lain tidak terjejas.</li>
+    <li><strong>Mendatar</strong> &mdash; susun atur setiap buku secara mendatar, termasuk buku yang ditaip atur secara menegak.</li>
+    <li><strong>Menegak</strong> &mdash; susun atur setiap buku dalam lajur menegak.</li>
+  </ul>
+  <p>Kawalan yang sama terdapat dalam tetapan dalam pembaca, di bawah butang <kbd>Aa</kbd>.</p>
+  <div class="tip"><strong>Nota:</strong> Perubahan hanya berkuat kuasa pada kali seterusnya anda membuka buku &mdash; buku yang sudah terbuka pada skrin mengekalkan susun atur ia dibuka dengannya.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x2139;</span> Perkara Yang Perlu Diketahui</h3>
+  <ul>
+    <li>Buku menegak sentiasa menggunakan mod berhalaman, jadi Tatal Berterusan dan tatal automatik tidak tersedia untuknya.</li>
+    <li>Animasi halaman <strong>Gelongsor</strong> tidak digunakan untuk buku menegak &mdash; ia bertukar halaman dengan animasi <strong>Balik</strong> sebaliknya.</li>
+    <li>Penanda buku, sorotan, kandungan buku, carian dalam buku, dan teks-ke-ucapan semuanya berfungsi seperti biasa.</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Kembali ke atas</a>
+
+<!-- READING COMICS -->
+<h2 id="reading-comics">Membaca Komik</h2>
+<p class="section-desc">Pembacaan komik CBZ, CBR, dan CB7.</p>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4F1;</span> Mod Pembacaan</h3>
+  <ul>
+    <li><strong>Kiri-ke-Kanan</strong> &mdash; Susunan halaman komik Barat standard.</li>
+    <li><strong>Kanan-ke-Kiri</strong> &mdash; Susunan bacaan manga.</li>
+    <li><strong>Webtoon / Tatal Menegak</strong> &mdash; Tatalan menegak lancar untuk komik jalur panjang.</li>
+  </ul>
+  <p>Tetapkan lalai global dalam <kbd>Tetapan</kbd> &rarr; <kbd>Keutamaan Bacaan</kbd> &rarr; <kbd>Komik</kbd>, atau tukar bagi setiap buku dari halaman butirannya.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F50E;</span> Penskalaan Halaman</h3>
+  <ul>
+    <li><strong>Muat ke Skrin</strong> &mdash; Halaman penuh kelihatan.</li>
+    <li><strong>Muat ke Lebar</strong> &mdash; Memenuhi lebar, tatal secara menegak jika perlu.</li>
+    <li><strong>Muat ke Tinggi</strong> &mdash; Memenuhi tinggi.</li>
+    <li><strong>Saiz Asal</strong> &mdash; Paparan piksel 1:1.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F44B;</span> Gerak Isyarat</h3>
+  <ul>
+    <li>Leret kiri/kanan untuk menukar halaman (mod berhalaman).</li>
+    <li>Cubit atau ketik dua kali untuk zum, kemudian seret untuk bergerak. Lihat <a href="#comic-zoom">Mengezum Halaman Komik</a>.</li>
+    <li>Ketik tengah halaman untuk menunjukkan atau menyembunyikan bar alat.</li>
+    <li>Gunakan peluncur halaman di bahagian bawah untuk melompat dengan cepat.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x26A0;</span> Amaran Arkib Mencurigakan</h3>
+  <p>Apabila anda membuka arkib komik (CBZ, CBR atau CB7) yang kandungannya kelihatan luar biasa besar atau dimampatkan secara agresif &mdash; corak yang digunakan oleh fail &ldquo;zip bomb&rdquo; yang direka untuk membebankan memori &mdash; aplikasi akan memaparkan amaran <strong>Arkib Mencurigakan</strong> sebelum mengekstrak apa-apa.</p>
+  <ul>
+    <li>Ketik <kbd>Batal</kbd> untuk tidak membuka fail. Ini pilihan selamat untuk arkib daripada sumber yang tidak diketahui.</li>
+    <li>Ketik <kbd>Buka Juga</kbd> jika anda mempercayai fail tersebut &mdash; aplikasi akan melangkau pemeriksaan keselamatan dan memuatkan halaman.</li>
+  </ul>
+  <p>Fail EPUB menggunakan perlindungan yang sama secara senyap semasa import.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Kembali ke atas</a>
+
+<!-- COMIC ZOOM -->
+<h2 id="comic-zoom">Mengezum Halaman Komik</h2>
+<p class="section-desc">Lihat karya seni dengan lebih dekat &mdash; dalam mod halaman dan tatalan webtoon.</p>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F50D;</span> Mod Halaman</h3>
+  <ul>
+    <li>Cubit untuk zum masuk, sehingga tiga kali ganda saiz yang dimuatkan. Karya seni kekal di bawah jari anda semasa anda mencubit.</li>
+    <li>Ketik dua kali untuk melompat ke dua kali saiz pada titik tersebut; ketik dua kali lagi untuk memuatkan semula halaman ke skrin.</li>
+    <li>Seret dengan satu jari untuk bergerak di sekitar semasa dizum masuk.</li>
+    <li>Mencubit hampir sepenuhnya ke belakang akan menyesuaikan halaman kembali dengan kemas.</li>
+  </ul>
+  <p>Zum berfungsi dengan pilihan penskalaan <strong>Muat ke Skrin</strong> dan <strong>Muat ke Tinggi</strong>, serta dengan rentangan dua halaman. <strong>Muat ke Lebar</strong> dan <strong>Saiz Asal</strong> sudah memaparkan halaman lebih besar daripada skrin dan menatal sebaliknya &mdash; gunakan <kbd>Lihat Resolusi Penuh</kbd> di bawah untuk melihat dengan lebih dekat di situ.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4F1;</span> Tatalan Webtoon</h3>
+  <ul>
+    <li>Cubit atau ketik dua kali untuk zum keseluruhan jalur, sehingga tiga kali ganda saiz normalnya.</li>
+    <li>Tatalan terus berfungsi semasa anda dizum masuk &mdash; hanya seret ke atas dan ke bawah seperti biasa.</li>
+    <li>Seret ke sisi untuk bergerak merentasi halaman yang dizum.</li>
+    <li>Tahap zum kekal sama semasa anda terus menatal, jadi anda boleh membaca keseluruhan bab dalam keadaan diperbesar. Memusingkan peranti mengembalikannya ke saiz normal.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x2728;</span> Lihat Resolusi Penuh</h3>
+  <p>Zum memperbesar halaman pada saiz yang telah disediakan untuk skrin anda. Untuk pandangan paling tajam pada satu halaman, tekan lama padanya dan pilih <kbd>Lihat Resolusi Penuh</kbd> &mdash; halaman itu dinyahkod pada resolusi asal arkib, dan anda boleh mencubit masuk dengan lebih jauh lagi. Ketik dua kali untuk bertukar antara memuatkan skrin dan dua kali saiz; leret ke bawah atau ketik butang tutup untuk kembali.</p>
+  <div class="tip"><strong>Nota:</strong> Zum tidak disimpan. Menutup buku sentiasa kembali ke muatan normal.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Kembali ke atas</a>
+
+<!-- TTS -->
+<h2 id="tts">Teks-ke-Ucapan &amp; CarPlay</h2>
+<p class="section-desc">Dengar buku anda dibacakan dengan kuat.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F50A;</span> Menggunakan Teks-ke-Ucapan</h3>
+  <p>Buka mana-mana buku EPUB, PDF, atau TXT dan ketik butang main dalam bar alat. TTS membaca satu ayat pada satu masa dan menyorot perkataan semasa.</p>
+  <ul>
+    <li><strong>Kelajuan</strong> &mdash; 0.5&times; hingga 2&times; dalam kawalan TTS.</li>
+    <li><strong>Suara</strong> &mdash; Pilih daripada 100+ suara sistem dalam <kbd>Tetapan</kbd> &rarr; <kbd>Keutamaan Bacaan</kbd> &rarr; <kbd>Teks-ke-Ucapan</kbd>.</li>
+    <li><strong>Langkau</strong> &mdash; Ketik seterusnya/sebelumnya untuk melompat mengikut ayat, atau mengikut bab.</li>
+  </ul>
+  <div class="tip"><strong>Nota:</strong> <a href="#fixed-layout">Buku susun atur tetap</a> &mdash; komik dan buku bergambar yang halamannya mempunyai reka bentuk tetap &mdash; tiada teks untuk dibacakan oleh aplikasi, jadi butang main tidak dipaparkan untuknya.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F697;</span> CarPlay</h3>
+  <p>Apabila disambungkan ke kenderaan yang serasi dengan CarPlay, aplikasi muncul pada paparan kereta anda dengan kawalan main balik yang dipermudahkan. TTS terus dimainkan di latar belakang &mdash; tidak perlu mengekalkan skrin terbuka.</p>
+  <div class="tip"><strong>Petua:</strong> Dayakan <kbd>Audio Latar Belakang</kbd><span class="badge badge-premium">Premium</span> dalam tetapan TTS untuk mengekalkan main balik ketika aplikasi berada di latar belakang, walaupun tanpa CarPlay.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Kembali ke atas</a>
+
+<!-- AI UPSCALING -->
+<h2 id="upscaling">Peningkatan Resolusi Komik AI</h2>
+<p class="section-desc">Tingkatkan halaman komik resolusi rendah pada peranti.<span class="badge badge-premium">Premium</span></p>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x2728;</span> Apa yang Dilakukannya</h3>
+  <p>Menggunakan model pembelajaran mesin pada peranti untuk meningkatkan resolusi halaman komik yang berada di bawah ambang resolusi. Hasilnya ialah garisan lebih tajam dan artifak mampatan yang kurang kelihatan &mdash; terutamanya berguna untuk imbasan lama atau berkualiti rendah.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x2699;</span> Persediaan</h3>
+  <ol class="steps">
+    <li>Pergi ke <kbd>Tetapan</kbd> &rarr; <kbd>Keutamaan Bacaan</kbd> &rarr; <kbd>Komik</kbd> &rarr; <kbd>Peningkatan Resolusi AI</kbd>.</li>
+    <li>Togol untuk menghidupkannya.</li>
+    <li>Laraskan <strong>Ambang Resolusi</strong> &mdash; halaman di bawah lebar piksel ini akan ditingkatkan resolusinya (lalai: 1500 px).</li>
+    <li>Tetapkan <strong>Tetingkap Pra-muat</strong> untuk mengawal berapa banyak halaman akan datang yang diproses terlebih dahulu di latar belakang.</li>
+    <li>Pilih <strong>Tahap Penyahbisingan</strong> (Auto biasanya terbaik).</li>
+  </ol>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4BE;</span> Cache &amp; Storan</h3>
+  <p>Imej yang ditingkatkan resolusinya disimpan dalam cache supaya tidak perlu diproses semula. Pilih berapa lama untuk menyimpan cache (7&ndash;90 hari atau jangan luput), dan kosongkannya pada bila-bila masa dari tetapan.</p>
+  <div class="tip"><strong>Petua:</strong> Lencana penunjuk kecil muncul pada halaman yang ditingkatkan resolusinya. Anda boleh mematikan ini dalam tetapan jika anda mahu.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Kembali ke atas</a>
+
+<!-- HIDDEN MODE -->
+<h2 id="hidden">Buku Tersembunyi</h2>
+<p class="section-desc">Simpan buku tertentu secara peribadi.<span class="badge badge-premium">Premium</span></p>
+
+<div class="card">
+  <h3><span class="icon icon-indigo">&#x1F441;</span> Menyembunyikan Buku</h3>
+  <ol class="steps">
+    <li>Buka halaman butiran buku dan ketik menu (&hellip;).</li>
+    <li>Pilih <kbd>Sembunyikan Buku</kbd>.</li>
+    <li>Buku tersebut hilang dari paparan pustaka biasa.</li>
+  </ol>
+  <p>Untuk menyembunyikan banyak buku sekaligus, gunakan Mod Pilihan.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F513;</span> Melihat Buku Tersembunyi</h3>
+  <p>Tarik ke bawah pada pustaka untuk mengaktifkan <strong>Mod Tersembunyi</strong>. Semua buku anda &mdash; yang tersembunyi dan yang kelihatan &mdash; kini dipaparkan. Tarik lagi atau tinggalkan aplikasi untuk keluar dari mod tersembunyi.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F512;</span> Pilihan Privasi</h3>
+  <p>Apabila mod tersembunyi aktif, pergi ke <kbd>Tetapan</kbd> &rarr; <kbd>Mod Tersembunyi</kbd> untuk memilih apa yang berlaku apabila anda meninggalkan aplikasi:</p>
+  <ul>
+    <li><strong>Keluar automatik</strong> (lalai) &mdash; Mod tersembunyi dimatikan secara automatik. Cepat dan mudah.</li>
+    <li><strong>Memerlukan Face ID / Touch ID</strong> &mdash; Mod tersembunyi kekal aktif, tetapi memerlukan pengesahan biometrik apabila anda kembali. Lebih selamat.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x21A9;</span> Menyahsembunyi Buku</h3>
+  <p>Semasa dalam mod tersembunyi, buka butiran buku tersembunyi dan pilih <kbd>Nyahsembunyi Buku</kbd>, atau gunakan Mod Pilihan untuk menyahsembunyi secara pukal.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x2601;</span> Menyegerakkan Buku Tersembunyi</h3>
+  <p>Dalam mod tersembunyi, pergi ke <kbd>Tetapan</kbd> &rarr; <kbd>Mod Tersembunyi</kbd> dan togol <kbd>Segerakkan buku tersembunyi ke iCloud</kbd>:</p>
+  <ul>
+    <li><strong>Mati</strong> (lalai) &mdash; buku tersembunyi kekal hanya pada peranti ini. Menyembunyikan buku turut mengalih keluarnya dari iCloud.</li>
+    <li><strong>Hidup</strong> &mdash; buku tersembunyi disegerakkan melalui iCloud tetapi kekal tersembunyi pada setiap peranti yang anda log masuk.</li>
+  </ul>
+  <p>Mematikan togol semasa anda mempunyai buku tersembunyi yang sudah berada dalam iCloud akan bertanya apa yang perlu dilakukan dengannya:</p>
+  <ul>
+    <li><strong>Kekalkan pada semua peranti</strong> &mdash; peranti lain anda mengekalkan salinan segerak mereka; peranti ini mengekalkan salinan peribadi tempatan sahaja.</li>
+    <li><strong>Alih keluar dari iCloud sepenuhnya</strong> &mdash; mengalih keluar buku daripada iCloud; setiap peranti lain mengekalkan salinan peribadinya sendiri dalam pustaka tersembunyinya.</li>
+  </ul>
+  <div class="tip"><strong>Nota:</strong> Jika salah satu peranti lain anda mengalih keluar buku tersembunyi daripada iCloud, peranti ini secara automatik mengekalkan salinan peribadinya sendiri dalam pustaka tersembunyi &mdash; selagi fail buku tersebut sudah dimuat turun di situ.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F5D1;</span> Padam Buku Tersembunyi Secara Kekal</h3>
+  <p>Dalam mod tersembunyi, pergi ke <kbd>Tetapan</kbd> &rarr; <kbd>Mod Tersembunyi</kbd> dan pilih <kbd>Padam Buku Tersembunyi Secara Kekal</kbd> untuk mengalih keluar setiap buku tersembunyi daripada peranti ini, daripada iCloud, dan daripada peranti lain anda. Taip <kbd>DELETE</kbd> untuk mengesahkan.</p>
+  <div class="tip"><strong>Amaran:</strong> Tindakan ini tidak boleh dibatalkan. Peranti yang luar talian pada masa itu akan mengekalkan salinan tempatan mereka sehingga penyegerakan seterusnya.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Kembali ke atas</a>
+
+<!-- BOOKMARKS, HIGHLIGHTS, TAGS -->
+<h2 id="bookmarks">Penanda Buku, Sorotan &amp; Tag</h2>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F516;</span> Penanda Buku</h3>
+  <p>Ketik ikon penanda buku dalam bar alat pembaca untuk menanda halaman semasa. Tambah nota pilihan. Lihat semua penanda buku untuk sesebuah buku dari halaman butirannya.</p>
+  <div class="tip"><strong>Nota:</strong> Hanya penanda buku yang anda cipta secara manual muncul di sini. Kedudukan yang disimpan oleh aplikasi secara automatik apabila anda menutup buku disimpan secara berasingan dalam <a href="#history">Sejarah Bacaan</a> supaya tidak menggantikan penanda buku anda sendiri.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F58D;</span> Sorotan<span class="badge badge-premium">Premium</span></h3>
+  <p>Dalam EPUB, pilih teks untuk menyorotnya. Pilih daripada lima warna (kuning, merah jambu, hijau, biru, oren) dan tambah nota. Semua sorotan disenaraikan di halaman butiran buku.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F3F7;</span> Tag</h3>
+  <p>Tambah tag pada mana-mana buku dari halaman butirannya. Tag boleh dicari dan boleh digunakan sebagai penapis pustaka. Urus semua tag dari <kbd>Tetapan</kbd> &rarr; <kbd>Tag</kbd>.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Kembali ke atas</a>
+
+<!-- READING HISTORY -->
+<h2 id="history">Sejarah Bacaan</h2>
+<p class="section-desc">Lompat kembali ke mana-mana kedudukan yang baru-baru ini anda lawati.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F552;</span> Simpanan Automatik</h3>
+  <p>Setiap kali anda menutup buku atau menghantar aplikasi ke latar belakang, kedudukan semasa anda disimpan sebagai entri sejarah &mdash; tidak perlu ingat untuk menanda buku. Ini berfungsi dalam setiap pembaca: EPUB, PDF, TXT/RTF, dan komik.</p>
+  <ul>
+    <li>Sehingga <strong>50</strong> kedudukan terkini disimpan setiap buku. Entri lama dialih keluar secara automatik apabila yang baharu masuk.</li>
+    <li>Menutup buku sekali lagi di tempat yang sama dalam beberapa minit akan mengemas kini entri sedia ada dan bukannya mencipta duplikat.</li>
+    <li>Kedudukan yang disimpan secara automatik dikekalkan berasingan daripada senarai penanda buku manual anda supaya tidak bercampur dengan yang anda tetapkan dengan sengaja.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4D6;</span> Sejarah Dalam Buku</h3>
+  <p>Semasa membaca, ketik menu lebih (&hellip;) di bahagian atas kanan dan pilih <kbd>Sejarah Bacaan</kbd>. Anda akan melihat senarai kedudukan terkini anda dalam buku itu, terbaru dahulu, dengan nama bab atau halaman dan berapa lama setiap entri direkodkan.</p>
+  <ul>
+    <li>Ketik mana-mana entri untuk melompat terus ke tempat itu.</li>
+    <li>Leret entri ke kiri untuk mengalih keluarnya.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F4DA;</span> Sejarah Merentas Pustaka Anda</h3>
+  <p>Dari pustaka, ketik menu lebih (&hellip;) dalam bar alat atas dan pilih <kbd>Sejarah Bacaan</kbd> untuk melihat setiap buku yang baru-baru ini anda buka, dikumpulkan mengikut hari. Ketik baris untuk membuka buku tepat di tempat anda berhenti.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Kembali ke atas</a>
+
+<!-- AUTHOR & TAG BROWSING -->
+<h2 id="search">Melayari Pengarang &amp; Tag</h2>
+<p class="section-desc">Cari buku mengikut pengarang atau tag dari mana-mana sahaja dalam aplikasi.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F464;</span> Pengarang</h3>
+  <p>Pergi ke <kbd>Tetapan</kbd> &rarr; <kbd>Pengarang</kbd> untuk melihat semua pengarang dalam pustaka anda berserta bilangan buku. Ketik pengarang untuk mencari semua bukunya dalam pustaka.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F3F7;</span> Carian Tag</h3>
+  <p>Dalam <kbd>Tetapan</kbd> &rarr; <kbd>Tag</kbd>, ketik mana-mana tag untuk mencari buku dengan tag tersebut dalam pustaka. Tekan lama untuk menamakan semula atau memadamnya.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F50D;</span> Carian Pantas daripada Menu Konteks</h3>
+  <ul>
+    <li>Tekan lama sebuah buku dalam pustaka &rarr; <kbd>Cari Buku oleh [Pengarang]</kbd></li>
+    <li>Pada halaman butiran buku, tekan lama nama pengarang atau mana-mana tag untuk mencari</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Kembali ke atas</a>
+
+<!-- METADATA -->
+<h2 id="metadata">Metadata &amp; ComicInfo.xml</h2>
+<p class="section-desc">Lihat dan edit metadata buku.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x270F;</span> Editor Metadata</h3>
+  <p>Dari halaman butiran buku, ketik menu (&hellip;) dan pilih <kbd>Edit Metadata</kbd> untuk menukar tajuk, pengarang, siri, penerangan dan medan lain. Anda juga boleh mengekstrak semula metadata daripada fail asal.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4CB;</span> ComicInfo.xml</h3>
+  <p>Metadata arkib komik (CBZ, CBR, CB7) yang mengandungi fail <code>ComicInfo.xml</code> akan diekstrak secara automatik semasa import &mdash; termasuk tajuk, penulis, siri, nombor isu, ringkasan, penerbit, genre dan tag.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Kembali ke atas</a>
+
+<!-- ICLOUD -->
+<h2 id="icloud">Penyegerakan iCloud</h2>
+<p class="section-desc">Kekalkan pustaka anda segerak merentas peranti.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x2601;</span> Mendayakan Penyegerakan</h3>
+  <ol class="steps">
+    <li>Pergi ke <kbd>Tetapan</kbd> &rarr; <kbd>Penyegerakan iCloud</kbd>.</li>
+    <li>Togol <kbd>Segerakkan Pustaka dengan iCloud</kbd> untuk menghidupkannya.</li>
+    <li>Penyegerakan berkuat kuasa pada pelancaran aplikasi seterusnya.</li>
+  </ol>
+  <p>Metadata, kemajuan bacaan, penanda buku, sorotan, dan rak anda disegerakkan merentas semua peranti yang log masuk ke akaun iCloud yang sama.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F4CA;</span> Status Penyegerakan</h3>
+  <p><kbd>Tetapan</kbd> &rarr; <kbd>Penyegerakan iCloud</kbd> memaparkan kad status untuk fail buku anda:</p>
+  <ul>
+    <li>Tajuk utama &mdash; <strong>Terkini</strong>, <strong>Menyegerak&hellip;</strong> (dengan kiraan), atau <strong>Tidak log masuk</strong>.</li>
+    <li>Bar yang menunjukkan berapa banyak fail pustaka anda berada dalam iCloud.</li>
+    <li>Pecahan &mdash; <strong>Disegerakkan</strong> (dengan jumlah saiz), <strong>Hanya dalam iCloud</strong> (belum dimuat turun ke peranti ini), dan <strong>Sedang berjalan</strong>.</li>
+  </ul>
+  <div class="tip"><strong>Nota:</strong> Kad ini menjejaki <em>fail</em> buku sahaja. Kemajuan bacaan, penanda buku, sorotan, dan rak disegerakkan secara berasingan dan automatik, tanpa mengira status fail.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x2601;</span> Lencana Kulit Buku</h3>
+  <p>Kulit buku memaparkan glif awan kecil di sudut kanan bawah untuk menunjukkan status penyegerakan fail:</p>
+  <ul>
+    <li><strong>Ikon awan</strong> &mdash; fail hanya berada dalam iCloud. Buka halaman buku untuk memuat turunnya.</li>
+    <li><strong>Anak panah atas/bawah</strong> &mdash; fail sedang dimuat naik atau dimuat turun.</li>
+    <li><strong>Tiada glif</strong> &mdash; fail sudah berada pada peranti ini.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4E5;</span> Muat Turun Automatik</h3>
+  <p>Pilih saiz fail maksimum untuk muat turun automatik. Buku yang lebih besar kekal di awan sehingga anda membukanya. Laraskan had dalam tetapan iCloud.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Kembali ke atas</a>
+
+<!-- STATS -->
+<h2 id="stats">Statistik Bacaan</h2>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F4CA;</span> Aktiviti Bacaan Anda</h3>
+  <p>Buka <kbd>Tetapan</kbd> &rarr; <kbd>Statistik Pustaka</kbd> untuk melihat:</p>
+  <ul>
+    <li>Jumlah buku, halaman dibaca, dan masa membaca.</li>
+    <li>Carta aktiviti bacaan harian.</li>
+    <li>Buku mengikut format dan status bacaan.</li>
+    <li>Pecahan aktiviti setiap buku.</li>
+  </ul>
+  <div class="tip"><strong>Nota:</strong> Statistik menghormati mod tersembunyi &mdash; apabila mod tersembunyi dimatikan, statistik untuk buku tersembunyi dikecualikan.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Kembali ke atas</a>
+
+<!-- WEBDAV & OPDS -->
+<h2 id="webdav">WebDAV &amp; OPDS</h2>
+<p class="section-desc">Layari dan muat turun dari pelayan jauh dan katalog.</p>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F5C4;</span> WebDAV</h3>
+  <p>Sambung ke NAS, Nextcloud, atau pelayan Calibre untuk melayari folder dan memuat turun buku.</p>
+  <ol class="steps">
+    <li>Pergi ke <kbd>Tetapan</kbd> &rarr; <kbd>Import Buku</kbd> &rarr; <kbd>WebDAV</kbd>.</li>
+    <li>Ketik <kbd>Tambah Pelayan</kbd> dan masukkan URL.</li>
+    <li>Tambah nama pengguna dan kata laluan jika diperlukan.</li>
+    <li>Ketik <kbd>Uji Sambungan</kbd>, kemudian simpan.</li>
+  </ol>
+  <div class="tip"><strong>Sijil ditandatangani sendiri:</strong> Jika pelayan anda menggunakan sijil yang ditandatangani sendiri, anda boleh menghidupkan <kbd>Benarkan Sijil Tidak Dipercayai</kbd>. Aplikasi akan meminta anda mengesahkan dahulu &mdash; ini melumpuhkan pengesahan TLS, jadi sesiapa sahaja dalam rangkaian anda boleh menyamar sebagai pelayan. Hidupkan hanya untuk pelayan yang anda kawal.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4DA;</span> Katalog OPDS</h3>
+  <p>OPDS ialah standard terbuka untuk katalog buku. Tambah katalog awam (Project Gutenberg, Standard Ebooks, dll.) atau pelayan peribadi anda sendiri.</p>
+  <ol class="steps">
+    <li>Pergi ke <kbd>Tetapan</kbd> &rarr; <kbd>Import Buku</kbd> &rarr; <kbd>OPDS</kbd>.</li>
+    <li>Ketik <kbd>Tambah Katalog</kbd> dan masukkan URL suapan.</li>
+    <li>Layari kategori dan muat turun buku ke pustaka anda.</li>
+  </ol>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Kembali ke atas</a>
+
+<!-- RESUME -->
+<h2 id="resume">Sambung Semula Semasa Pelancaran</h2>
+<p class="section-desc">Sambung dari tempat anda berhenti secara automatik.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x25B6;</span> Persediaan</h3>
+  <p>Pergi ke <kbd>Tetapan</kbd> &rarr; <kbd>Umum</kbd> dan hidupkan <kbd>Sambung Buku Terakhir Semasa Pelancaran</kbd>. Pada kali seterusnya anda membuka aplikasi, ia akan terus melompat ke buku dan halaman yang anda terakhir baca.</p>
+  <div class="tip"><strong>Buku tersembunyi:</strong> Jika buku terakhir yang anda baca tersembunyi, aplikasi akan meminta Face ID / Touch ID sebelum menyambung. Dayakan <kbd>Sambung buku tersembunyi selepas pengesahan</kbd> dalam tetapan Mod Tersembunyi untuk membenarkan ini.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Kembali ke atas</a>
+
+<!-- FORMATS -->
+<h2 id="formats">Format yang Disokong</h2>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4D6;</span> Buku</h3>
+  <div class="formats-grid">
+    <div class="format-tag">EPUB</div>
+    <div class="format-tag">PDF</div>
+    <div class="format-tag">TXT</div>
+    <div class="format-tag">RTF</div>
+  </div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4F1;</span> Komik</h3>
+  <div class="formats-grid">
+    <div class="format-tag">CBZ</div>
+    <div class="format-tag">CBR</div>
+    <div class="format-tag">CB7</div>
+  </div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Kembali ke atas</a>
+
+</body>
+</html>

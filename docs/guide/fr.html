@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Guide de l'utilisateur</title>
+<link rel="stylesheet" href="UserGuideStyle.css">
+<!-- USER-GUIDE-NAV-STYLE:START -->
+<style>
+.guide-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 14px;
+  padding: 10px 14px;
+  margin: 0 0 16px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  font-size: 13px;
+}
+.guide-nav-home {
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.guide-nav-arrow {
+  display: inline-block;
+}
+[dir="rtl"] .guide-nav-arrow {
+  transform: scaleX(-1);
+}
+.guide-nav-langs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 10px;
+  color: var(--secondary);
+}
+.guide-nav-globe {
+  font-size: 13px;
+}
+.guide-nav-langs a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.guide-nav-langs a:hover,
+.guide-nav-langs a:focus-visible {
+  text-decoration: underline;
+}
+.guide-nav-current {
+  font-weight: 700;
+  color: var(--text);
+}
+</style>
+<!-- USER-GUIDE-NAV-STYLE:END -->
+</head>
+<body id="top">
+<!-- USER-GUIDE-NAV:START -->
+<nav class="guide-nav" aria-label="User Guide language switcher">
+  <a class="guide-nav-home" href="../index.html"><span class="guide-nav-arrow" aria-hidden="true">&larr;</span> Idyllic</a>
+  <span class="guide-nav-langs">
+    <span class="guide-nav-globe" aria-hidden="true">&#x1F310;</span>
+      <a href="index.html">English</a>
+      <a href="ar.html">العربية</a>
+      <a href="cs.html">Čeština</a>
+      <a href="da.html">Dansk</a>
+      <a href="de.html">Deutsch</a>
+      <a href="es.html">Español</a>
+      <a href="fi.html">Suomi</a>
+      <span class="guide-nav-current">Français</span>
+      <a href="he.html">עברית</a>
+      <a href="hi.html">हिन्दी</a>
+      <a href="id.html">Indonesia</a>
+      <a href="it.html">Italiano</a>
+      <a href="ja.html">日本語</a>
+      <a href="ko.html">한국어</a>
+      <a href="ms.html">Bahasa Melayu</a>
+      <a href="nb.html">Norsk bokmål</a>
+      <a href="nl.html">Nederlands</a>
+      <a href="pl.html">Polski</a>
+      <a href="pt-BR.html">Português (Brasil)</a>
+      <a href="ru.html">Русский</a>
+      <a href="sv.html">Svenska</a>
+      <a href="th.html">ไทย</a>
+      <a href="tr.html">Türkçe</a>
+      <a href="uk.html">Українська</a>
+      <a href="vi.html">Tiếng Việt</a>
+      <a href="zh-Hans.html">简体中文</a>
+      <a href="zh-Hant.html">繁體中文</a>
+  </span>
+</nav>
+<!-- USER-GUIDE-NAV:END -->
+
+<h1>Guide de l'utilisateur</h1>
+<p class="subtitle">Tout ce qu'il faut pour profiter pleinement de votre expérience de lecture.</p>
+
+<!-- TABLE OF CONTENTS -->
+<div class="card toc">
+  <a href="#importing">Importer des livres</a>
+  <a href="#wifi">Transfert WiFi</a>
+  <a href="#library">Bibliothèque et organisation</a>
+  <a href="#shelves">Étagères et dossiers</a>
+  <a href="#reading-books">Lire des livres</a>
+  <a href="#fixed-layout">Livres à mise en page fixe</a>
+  <a href="#in-book-search">Recherche dans le livre</a>
+  <a href="#image-gallery">Galerie d&rsquo;images</a>
+  <a href="#fonts">Polices de lecture</a>
+  <a href="#reading-direction">Sens de lecture</a>
+  <a href="#vertical-writing">Écriture verticale</a>
+  <a href="#reading-comics">Lire des bandes dessinées</a>
+  <a href="#comic-zoom">Zoomer sur les pages de BD</a>
+  <a href="#tts">Synthèse vocale et CarPlay</a>
+  <a href="#upscaling">Mise à l'échelle IA des BD</a>
+  <a href="#hidden">Livres masqués</a>
+  <a href="#bookmarks">Signets, surlignages et étiquettes</a>
+  <a href="#history">Historique de lecture</a>
+  <a href="#search">Parcourir par auteur et étiquette</a>
+  <a href="#metadata">Métadonnées et ComicInfo.xml</a>
+  <a href="#icloud">Synchronisation iCloud</a>
+  <a href="#stats">Statistiques de lecture</a>
+  <a href="#webdav">WebDAV et OPDS</a>
+  <a href="#resume">Reprendre au lancement</a>
+  <a href="#formats">Formats pris en charge</a>
+</div>
+
+<!-- IMPORTING -->
+<h2 id="importing">Importer des livres</h2>
+<p class="section-desc">Plusieurs façons d'ajouter des livres à votre bibliothèque.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4C1;</span> Depuis l'app Fichiers</h3>
+  <p>Touchez <kbd>Réglages</kbd> &rarr; <kbd>Importer des livres</kbd>, puis sélectionnez des fichiers depuis votre appareil, iCloud Drive ou tout service cloud connecté. Vous pouvez aussi utiliser le glisser-déposer sur iPad.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F310;</span> Transfert WiFi</h3>
+  <p>Envoyez des livres depuis n'importe quel ordinateur ou téléphone sur votre réseau WiFi. Consultez la section dédiée ci-dessous pour plus de détails.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F5C2;</span> WebDAV et OPDS</h3>
+  <p>Connectez-vous à un NAS, un serveur Calibre ou un catalogue de livres public pour parcourir et télécharger des livres directement. Voir ci-dessous.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Retour en haut</a>
+
+<!-- WIFI TRANSFER -->
+<h2 id="wifi">Transfert WiFi</h2>
+<p class="section-desc">Envoyez des livres depuis n'importe quel appareil sur votre réseau local.</p>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F4F6;</span> Comment ça marche</h3>
+  <p>L'app lance un petit serveur web sur votre appareil. Tout ordinateur ou téléphone sur le même réseau WiFi peut ouvrir la page d'envoi dans un navigateur.</p>
+  <ol class="steps">
+    <li>Allez dans <kbd>Réglages</kbd> &rarr; <kbd>Importer des livres</kbd> &rarr; <kbd>Transfert WiFi</kbd>.</li>
+    <li>Touchez <kbd>Démarrer le serveur</kbd>. Une adresse comme <kbd>http://192.168.1.42:8080</kbd> apparaîtra.</li>
+    <li>Ouvrez cette adresse dans n'importe quel navigateur web sur le même réseau.</li>
+    <li>Glissez des fichiers sur la page ou cliquez pour parcourir &mdash; sélectionnez un dossier de destination si vous le souhaitez.</li>
+    <li>Les livres importés apparaissent immédiatement dans votre bibliothèque.</li>
+    <li>Touchez <kbd>Arrêter le serveur</kbd> quand vous avez terminé.</li>
+  </ol>
+  <div class="tip"><strong>Astuce :</strong> Votre appareil restera éveillé tant que le serveur est actif afin que les transferts ne soient pas interrompus.</div>
+  <div class="tip"><strong>Échec de l&rsquo;envoi&nbsp;?</strong> Chaque fichier en échec affiche la raison directement sur sa ligne. Si la connexion WiFi est interrompue, touchez <kbd>&#x21BB; Réessayer</kbd> sur la ligne pour le renvoyer. Les problèmes permanents (comme un format de fichier non pris en charge) n&rsquo;affichent pas de bouton Réessayer.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Retour en haut</a>
+
+<!-- LIBRARY -->
+<h2 id="library">Bibliothèque et organisation</h2>
+<p class="section-desc">Trouvez, triez et organisez vos livres.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F50D;</span> Recherche</h3>
+  <p>Touchez la pastille <kbd>Search</kbd> en bas de la bibliothèque pour déployer un champ de recherche, puis touchez <kbd>Terminé</kbd> pour le fermer. Elle cherche dans le titre, l'auteur, les étiquettes, la série, l'éditeur et la description. Rechercher par auteur ou étiquette depuis le menu contextuel d'un livre (voir <a href="#search">Parcourir par auteur et étiquette</a>) remplit la même recherche.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x2195;</span> Tri et filtrage</h3>
+  <p>Touchez le bouton d'options d'affichage (en haut à droite) pour choisir :</p>
+  <ul>
+    <li><strong>Disposition</strong> &mdash; Grille, Détaillé, Compact, Minimaliste, Tableau ou Magazine</li>
+    <li><strong>Tri</strong> &mdash; Titre, Auteur, Dernière lecture, Date d'ajout, Progression, Taille du fichier, Série</li>
+    <li><strong>Affichage</strong> &mdash; Livres en cours en premier et terminés en dernier</li>
+    <li><strong>Filtre</strong> &mdash; Par format, étiquette ou auteur</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x2714;</span> Mode sélection</h3>
+  <p>Appuyez longuement sur un livre ou touchez <kbd>Sélectionner</kbd> pour entrer en mode sélection. Vous pouvez ensuite déplacer, supprimer, masquer ou afficher plusieurs livres à la fois.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4CB;</span> Nettoyer les doublons</h3>
+  <p>Allez dans <strong>Réglages &gt; Bibliothèque &gt; Maintenance de la bibliothèque &gt; Nettoyer les doublons</strong> pour trouver les livres ayant le même titre, auteur et format. Pour chaque groupe de doublons&nbsp;:</p>
+  <ul>
+    <li>La <strong>version la plus récente</strong> est signalée par un badge vert KEEP</li>
+    <li>Sélectionnez les copies plus anciennes à l&rsquo;aide des cases à cocher (ou <strong>Tout sélectionner</strong>)</li>
+    <li><strong>Supprimer</strong> &mdash; retire les copies plus anciennes sélectionnées</li>
+    <li><strong>Copier les données et supprimer</strong> &mdash; transfère les signets, surlignages, étiquettes, progression de lecture et étagère vers la version la plus récente avant suppression</li>
+    <li>Activez <strong>«&nbsp;Déplacer le nouveau livre vers l&rsquo;étagère et le statut caché de l&rsquo;ancien livre&nbsp;»</strong> pour conserver la nouvelle version au même emplacement dans la bibliothèque</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Retour en haut</a>
+
+<!-- SHELVES -->
+<h2 id="shelves">Étagères et dossiers</h2>
+<p class="section-desc">Organisez vos livres dans des dossiers imbriqués.</p>
+
+<div class="card">
+  <h3><span class="icon icon-indigo">&#x1F4C2;</span> Créer des étagères</h3>
+  <ol class="steps">
+    <li>Touchez <kbd>Nouvelle étagère</kbd> en haut de votre bibliothèque.</li>
+    <li>Entrez un nom, puis choisissez une icône et une couleur.</li>
+    <li>Optionnellement, choisissez une étagère parente pour créer un sous-dossier.</li>
+  </ol>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x21C4;</span> Déplacer des livres</h3>
+  <p>Depuis la page de détails d'un livre, touchez le menu (&hellip;) et choisissez <kbd>Déplacer vers l'étagère</kbd>. En mode sélection, vous pouvez déplacer plusieurs livres à la fois.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Retour en haut</a>
+
+<!-- READING BOOKS -->
+<h2 id="reading-books">Lire des livres</h2>
+<p class="section-desc">Modes de lecture EPUB, PDF, TXT et RTF.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4D6;</span> EPUB</h3>
+  <p>Les fichiers EPUB s'ouvrent dans un lecteur complet propulsé par Readium. Touchez les bords gauche ou droit pour tourner les pages, ou balayez.</p>
+  <ul>
+    <li><strong>Paginé</strong> &mdash; lecture traditionnelle page par page.</li>
+    <li><strong>Défilement continu</strong><span class="badge badge-premium">Premium</span> &mdash; faites défiler naturellement le texte, sans saut de page.</li>
+    <li><strong>Sens de lecture</strong> &mdash; suivez automatiquement le livre, ou choisissez vous-même gauche-à-droite ou droite-à-gauche. Voir <a href="#reading-direction">Sens de lecture</a>.</li>
+    <li><strong>Mise en page fixe</strong> &mdash; les bandes dessinées, livres illustrés et autres EPUB page par page s&rsquo;ouvrent dans un lecteur conçu pour eux. Voir <a href="#fixed-layout">Livres à mise en page fixe</a>.</li>
+    <li><strong>Recherche dans le livre</strong><span class="badge badge-premium">Premium</span> &mdash; recherchez n&rsquo;importe quel mot ou expression dans tout le livre. Voir <a href="#in-book-search">Recherche dans le livre</a>.</li>
+    <li><strong>Galerie d&rsquo;images</strong><span class="badge badge-premium">Premium</span> &mdash; parcourez toutes les images de l&rsquo;EPUB depuis sa page de détails. Voir <a href="#image-gallery">Galerie d&rsquo;images</a>.</li>
+  </ul>
+  <div class="tip"><strong>Astuce :</strong> Ajustez la taille de police, l'interligne et les couleurs du thème dans <kbd>Réglages</kbd> &rarr; <kbd>Préférences de lecture</kbd> &rarr; <kbd>Livres</kbd>.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F4C4;</span> PDF</h3>
+  <p>Les PDF sont affichés nativement. Pincez pour zoomer, balayez pour tourner les pages. L'app peut mémoriser les mots de passe des PDF protégés.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x1F4DD;</span> TXT et RTF</h3>
+  <p>Les fichiers texte brut et RTF s'ouvrent dans un lecteur de texte simple avec un formatage ajustable.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Retour en haut</a>
+
+<!-- FIXED LAYOUT -->
+<h2 id="fixed-layout">Livres à mise en page fixe</h2>
+<p class="section-desc">Des EPUB dont les pages sont des mises en page fixes &mdash; bandes dessinées, livres illustrés et titres fortement illustrés.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4D0;</span> Ce que c&rsquo;est</h3>
+  <p>Certains EPUB sont mis en page page par page plutôt qu&rsquo;en texte continu&nbsp;: chaque page est un agencement fixe de texte et d&rsquo;illustrations. L&rsquo;app reconnaît ces livres d&rsquo;elle-même et les ouvre dans un lecteur conçu pour eux &mdash; chaque page est mise à l&rsquo;échelle pour s&rsquo;adapter à votre écran et centrée, l&rsquo;espace autour étant rempli avec la couleur de fond de votre thème de lecture.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F44B;</span> Lecture et zoom</h3>
+  <ul>
+    <li>Touchez le côté gauche ou droit de l&rsquo;écran pour tourner les pages, ou balayez. Touchez le milieu pour afficher ou masquer les barres d&rsquo;outils.</li>
+    <li>Pincez pour zoomer &mdash; jusqu&rsquo;à trois fois la taille ajustée &mdash; et faites glisser pour vous déplacer sur la page.</li>
+    <li>Touchez deux fois pour zoomer sur cet endroit&nbsp;; touchez deux fois à nouveau pour réajuster la page à l&rsquo;écran.</li>
+    <li>Les livres publiés pour se lire de droite à gauche tournent les pages dans ce sens automatiquement.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4D6;</span> Pages en vis-à-vis</h3>
+  <p>Tournez l&rsquo;appareil en mode paysage pour voir les pages en vis-à-vis côte à côte. L&rsquo;app suit les indications de double page présentes dans le livre lui-même, de sorte qu&rsquo;une couverture ou une illustration pleine page conserve sa propre page. Repassez en mode portrait pour revenir à une page à la fois.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x2139;</span> Ce qui est disponible</h3>
+  <p>La table des matières, les signets, le curseur de progression, l&rsquo;historique de lecture et la reprise là où vous vous étiez arrêté fonctionnent tous normalement.</p>
+  <p>Comme chaque page est une mise en page fixe plutôt qu&rsquo;un texte que l&rsquo;app peut remettre en forme, certaines commandes n&rsquo;apparaissent pas pour ces livres&nbsp;: le défilement continu et le défilement automatique, les réglages de police et d&rsquo;apparence, la synthèse vocale, la recherche dans le livre, ainsi que la sélection ou le surlignage de texte.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Retour en haut</a>
+
+<!-- IN-BOOK SEARCH -->
+<h2 id="in-book-search">Recherche dans le livre</h2>
+<p class="section-desc">Trouvez n&rsquo;importe quel mot ou expression dans le livre que vous lisez.<span class="badge badge-premium">Premium</span></p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F50D;</span> Lancer une recherche</h3>
+  <ol class="steps">
+    <li>Touchez le centre de la page pour afficher les barres d&rsquo;outils.</li>
+    <li>Touchez la loupe à l&rsquo;extrémité droite de la barre inférieure.</li>
+    <li>Saisissez au moins deux caractères et appuyez sur <kbd>Rechercher</kbd> sur le clavier.</li>
+  </ol>
+  <p>La recherche porte sur tout le livre &mdash; tous les chapitres, pas seulement celui à l&rsquo;écran &mdash; et ne tient pas compte des majuscules et minuscules. Elle est disponible dans les lecteurs EPUB et TXT/RTF.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4C4;</span> Parcourir les résultats</h3>
+  <p>Les résultats apparaissent sous la barre de recherche, regroupés par chapitre. Chaque ligne affiche l&rsquo;occurrence en gras dans un extrait du texte environnant. Touchez un résultat pour accéder directement à ce passage &mdash; chaque occurrence est surlignée en jaune dans le livre, l&rsquo;occurrence courante dans un ambre plus soutenu.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x2195;</span> Passer d&rsquo;une occurrence à l&rsquo;autre</h3>
+  <p>Dès que vous choisissez un résultat, la barre de recherche se replie en une bande compacte avec un compteur indiquant votre position parmi les occurrences.</p>
+  <ul>
+    <li>Utilisez les flèches haut/bas pour passer à l&rsquo;occurrence précédente ou suivante.</li>
+    <li>Touchez le bouton de liste pour rouvrir la liste complète des résultats.</li>
+    <li>Touchez <kbd>&times;</kbd> pour terminer la recherche &mdash; tous les surlignages sont supprimés.</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Retour en haut</a>
+
+<!-- IMAGE GALLERY -->
+<h2 id="image-gallery">Galerie d&rsquo;images</h2>
+<p class="section-desc">Parcourez toutes les illustrations d&rsquo;un EPUB dans une galerie à balayer.<span class="badge badge-premium">Premium</span></p>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F5BC;</span> Ouvrir la galerie</h3>
+  <p>Ouvrez la page de détails d&rsquo;un livre EPUB et touchez le bouton de pile de photos <span class="icon">&#x1F5BC;</span> dans la barre d&rsquo;outils en haut à droite. L&rsquo;app extrait toutes les images du livre en affichant une barre de progression &mdash; touchez le bouton <kbd>&times;</kbd> en haut à gauche pour revenir en arrière à tout moment. La galerie est disponible uniquement pour les livres EPUB.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4DA;</span> Ce que vous verrez</h3>
+  <p>Les images apparaissent une par page, dans l&rsquo;ordre de lecture &mdash; l&rsquo;ordre où elles figurent dans les chapitres du livre &mdash; couverture comprise. Les images minuscules comme les icônes et les ornements sont ignorées : tout ce qui est plus petit que la taille minimale (100&nbsp;px par défaut) est laissé de côté. Ajustez ce seuil dans <kbd>Réglages</kbd> &rarr; <kbd>Préférences de lecture</kbd> &rarr; <kbd>Livres</kbd> &rarr; <kbd>Galerie EPUB</kbd>. Si aucune image ne convient, la galerie vous indique qu&rsquo;elle n&rsquo;en a trouvé aucune.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F446;</span> Afficher et enregistrer les images</h3>
+  <ul>
+    <li>Balayez pour passer d&rsquo;une image à l&rsquo;autre, ou utilisez le curseur de pages en bas pour naviguer rapidement.</li>
+    <li>Pincez ou touchez deux fois pour zoomer, puis faites glisser pour vous déplacer &mdash; la galerie utilise le lecteur de bandes dessinées, elle zoome donc exactement de la même façon. Voir <a href="#comic-zoom">Zoomer sur les pages de BD</a>.</li>
+    <li>Touchez le centre de l&rsquo;écran pour afficher ou masquer les commandes.</li>
+    <li>Maintenez le doigt sur une image pour <kbd>Afficher en pleine résolution</kbd> &mdash; qui l&rsquo;ouvre à sa taille d&rsquo;origine pour l&rsquo;examiner de plus près &mdash; ou pour <kbd>Enregistrer dans Photos</kbd>, <kbd>Enregistrer dans Fichiers</kbd> ou <kbd>Copier l&rsquo;image</kbd>.</li>
+    <li>La galerie suit votre sens de lecture des bandes dessinées &mdash; y compris le défilement vertical de style webtoon.</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Retour en haut</a>
+
+<!-- READING FONTS -->
+<h2 id="fonts">Polices de lecture</h2>
+<p class="section-desc">Choisissez une police de lecture, ajoutez les vôtres ou téléchargez des packs de langue.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F524;</span> Choisir une police</h3>
+  <p>Ouvrez <kbd>Réglages</kbd> &rarr; <kbd>Préférences de lecture</kbd> &rarr; <kbd>Livres</kbd> &rarr; <kbd>Polices personnalisées</kbd> pour accéder à l&rsquo;écran <strong>Polices</strong>. Plusieurs polices de lecture sont intégrées, avec <strong>Literata</strong> par défaut. La police choisie s&rsquo;applique aux lecteurs EPUB et texte.</p>
+  <div class="tip"><strong>Astuce :</strong> Ajustez la taille de police et l&rsquo;interligne dans <kbd>Réglages</kbd> &rarr; <kbd>Préférences de lecture</kbd> &rarr; <kbd>Livres</kbd>.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F453;</span> Polices d&rsquo;accessibilité</h3>
+  <p>Deux polices conçues pour une lecture plus facile sont incluses et toujours disponibles : <strong>Atkinson Hyperlegible</strong>, qui accentue les différences entre les lettres semblables, et <strong>OpenDyslexic</strong>, dont la graisse réduit l&rsquo;inversion des lettres.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F4C2;</span> Polices personnalisées</h3>
+  <p>Importez vos propres fichiers de police <kbd>.ttf</kbd> ou <kbd>.otf</kbd> depuis l&rsquo;écran Polices et utilisez-les dans le lecteur EPUB. Les polices importées restent sur votre appareil.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F4E5;</span> Télécharger des polices et des packs de langue</h3>
+  <p>Sous <strong>Télécharger des polices</strong>, des polices de lecture supplémentaires et des packs de langue sont disponibles à la demande pour les écritures que l&rsquo;app ne fournit pas &mdash; chinois, japonais &amp; coréen (CJK), arabe, devanagari et thaï. Les packs sont volumineux (environ 41&nbsp;MB chacun), la taille est donc indiquée avant le téléchargement. Une fois installés, ils fonctionnent exactement comme des polices importées.</p>
+  <div class="tip"><strong>Astuce :</strong> Si les caractères d&rsquo;un livre s&rsquo;affichent sous forme de cases vides, téléchargez le pack de langue correspondant pour les afficher.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x1F4DC;</span> Licences des polices</h3>
+  <p>Les polices incluses et téléchargeables sont fournies sous la <strong>SIL Open Font License</strong>. Vous pouvez lire la licence complète de chacune depuis sa ligne sur l&rsquo;écran Polices.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Retour en haut</a>
+
+<!-- READING DIRECTION -->
+<h2 id="reading-direction">Sens de lecture</h2>
+<p class="section-desc">De gauche à droite, de droite à gauche, ou selon le sens de publication du livre.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x21C4;</span> Choisir un sens</h3>
+  <p>Ouvrez <kbd>Réglages</kbd> &rarr; <kbd>Préférences de lecture</kbd> &rarr; <kbd>Livres</kbd> et utilisez le réglage <strong>Sens de lecture</strong> sous <strong>Mode de lecture</strong>&nbsp;:</p>
+  <ul>
+    <li><strong>Automatique</strong> (par défaut) &mdash; suit le sens déclaré par le livre lui-même. Les mangas et les livres publiés pour se lire de droite à gauche s&rsquo;ouvrent dans le bon sens sans rien à configurer.</li>
+    <li><strong>De gauche à droite</strong> &mdash; standard pour la plupart des livres occidentaux.</li>
+    <li><strong>De droite à gauche</strong> &mdash; utilise le sens droite-à-gauche pour tous les livres.</li>
+  </ul>
+  <p>Vous pouvez aussi le changer sans quitter le livre&nbsp;: touchez le centre de la page pour afficher les barres d&rsquo;outils, puis touchez le bouton <kbd>Aa</kbd> dans la barre inférieure. Le changement s&rsquo;applique immédiatement sur la page que vous lisez.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F44B;</span> Ce que le sens détermine</h3>
+  <ul>
+    <li>Le côté qui vous fait avancer &mdash; dans un livre droite-à-gauche, toucher ou balayer vers la gauche tourne à la page suivante.</li>
+    <li>L&rsquo;animation de tournage de page, qui se tourne du bon côté.</li>
+    <li>La disposition du texte sur la page.</li>
+  </ul>
+  <div class="tip"><strong>Remarque&nbsp;:</strong> Le curseur de progression se remplit toujours depuis la gauche, car il indique votre avancée dans le livre plutôt que la position de la page à l&rsquo;écran.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x2139;</span> Où ce réglage s&rsquo;applique</h3>
+  <p>Ce réglage concerne les EPUB en mode paginé &mdash; il est masqué lorsque le défilement continu est activé. Les bandes dessinées ont leur propre réglage de sens de lecture (voir <a href="#reading-comics">Lire des bandes dessinées</a>), et les <a href="#fixed-layout">livres à mise en page fixe</a> suivent toujours le sens déclaré dans le livre.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Retour en haut</a>
+
+<!-- VERTICAL WRITING -->
+<h2 id="vertical-writing">Écriture verticale</h2>
+<p class="section-desc">Livres japonais et chinois composés en colonnes verticales.</p>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x2B07;</span> Livres verticaux</h3>
+  <p>Les livres composés verticalement &mdash; le tategaki japonais (&#x7E26;&#x66F8;&#x304D;) et le chinois traditionnel en colonnes (&#x76F4;&#x6392;) &mdash; s&rsquo;affichent tels qu&rsquo;ils ont été composés&nbsp;: le texte se lit de haut en bas, en colonnes qui se remplissent de droite à gauche, et les pages se tournent vers la gauche, comme dans un manga.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x2699;</span> Sens d&rsquo;écriture</h3>
+  <p>Ouvrez <kbd>Réglages</kbd> &rarr; <kbd>Préférences de lecture</kbd> &rarr; <kbd>Livres</kbd> et utilisez le réglage <strong>Sens d&rsquo;écriture</strong>&nbsp;:</p>
+  <ul>
+    <li><strong>Automatique</strong> (par défaut) &mdash; suit la mise en page propre à chaque livre. Un livre composé verticalement s&rsquo;affiche verticalement&nbsp;; tous les autres livres ne sont pas concernés.</li>
+    <li><strong>Horizontal</strong> &mdash; affiche tous les livres horizontalement, y compris ceux composés verticalement.</li>
+    <li><strong>Vertical</strong> &mdash; affiche tous les livres en colonnes verticales.</li>
+  </ul>
+  <p>Le même réglage se trouve dans les préférences du lecteur, sous le bouton <kbd>Aa</kbd>.</p>
+  <div class="tip"><strong>Remarque&nbsp;:</strong> Les changements s&rsquo;appliquent à la prochaine ouverture d&rsquo;un livre &mdash; le livre déjà à l&rsquo;écran conserve la mise en page avec laquelle il s&rsquo;est ouvert.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x2139;</span> Bon à savoir</h3>
+  <ul>
+    <li>Les livres verticaux utilisent toujours le mode paginé&nbsp;: le défilement continu et le défilement automatique ne sont pas disponibles pour eux.</li>
+    <li>L&rsquo;animation de page glissante n&rsquo;est pas utilisée pour les livres verticaux &mdash; ils se tournent avec l&rsquo;animation de feuilletage à la place.</li>
+    <li>Les signets, les surlignages, la table des matières, la recherche dans le livre et la synthèse vocale fonctionnent tous normalement.</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Retour en haut</a>
+
+<!-- READING COMICS -->
+<h2 id="reading-comics">Lire des bandes dessinées</h2>
+<p class="section-desc">Lecture de BD au format CBZ, CBR et CB7.</p>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4F1;</span> Modes de lecture</h3>
+  <ul>
+    <li><strong>Gauche-à-droite</strong> &mdash; Ordre des pages occidental standard.</li>
+    <li><strong>Droite-à-gauche</strong> &mdash; Ordre de lecture manga.</li>
+    <li><strong>Webtoon / Défilement vertical</strong> &mdash; Défilement vertical fluide pour les BD en format bandeau.</li>
+  </ul>
+  <p>Définissez le mode par défaut dans <kbd>Réglages</kbd> &rarr; <kbd>Préférences de lecture</kbd> &rarr; <kbd>BD</kbd>, ou modifiez-le par livre depuis sa page de détails.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F50E;</span> Mise à l'échelle de la page</h3>
+  <ul>
+    <li><strong>Adapter à l'écran</strong> &mdash; Page entière visible.</li>
+    <li><strong>Adapter à la largeur</strong> &mdash; Remplit la largeur, défilement vertical si nécessaire.</li>
+    <li><strong>Adapter à la hauteur</strong> &mdash; Remplit la hauteur.</li>
+    <li><strong>Taille originale</strong> &mdash; Affichage pixel 1:1.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F44B;</span> Gestes</h3>
+  <ul>
+    <li>Balayez vers la gauche/droite pour tourner les pages (modes paginés).</li>
+    <li>Pincez ou touchez deux fois pour zoomer, puis faites glisser pour vous déplacer. Voir <a href="#comic-zoom">Zoomer sur les pages de BD</a>.</li>
+    <li>Touchez le centre de la page pour afficher ou masquer la barre d'outils.</li>
+    <li>Utilisez le curseur de pages en bas pour naviguer rapidement.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x26A0;</span> Archive suspecte</h3>
+  <p>Lorsque vous ouvrez une archive de BD (CBZ, CBR ou CB7) dont le contenu paraît anormalement volumineux ou compressé de façon agressive &mdash; un motif typique des fichiers «&nbsp;zip bomb&nbsp;» conçus pour saturer la mémoire &mdash; l&rsquo;app affiche une alerte <strong>Archive suspecte</strong> avant toute extraction.</p>
+  <ul>
+    <li>Touchez <kbd>Annuler</kbd> pour ne pas ouvrir le fichier. C&rsquo;est le choix sûr pour les archives provenant de sources inconnues.</li>
+    <li>Touchez <kbd>Ouvrir quand même</kbd> si vous faites confiance au fichier &mdash; l&rsquo;app ignorera alors la vérification de sécurité et chargera les pages.</li>
+  </ul>
+  <p>Les fichiers EPUB utilisent la même protection en silence lors de l&rsquo;import.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Retour en haut</a>
+
+<!-- COMIC ZOOM -->
+<h2 id="comic-zoom">Zoomer sur les pages de BD</h2>
+<p class="section-desc">Rapprochez-vous du dessin &mdash; en mode page comme en défilement webtoon.</p>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F50D;</span> Modes page</h3>
+  <ul>
+    <li>Pincez pour zoomer, jusqu&rsquo;à trois fois la taille ajustée. Le dessin reste sous vos doigts pendant le pincement.</li>
+    <li>Touchez deux fois pour passer au double de la taille à cet endroit&nbsp;; touchez deux fois à nouveau pour réajuster la page à l&rsquo;écran.</li>
+    <li>Faites glisser un doigt pour vous déplacer une fois zoomé.</li>
+    <li>Pincer presque entièrement vers l&rsquo;intérieur réajuste proprement la page à l&rsquo;écran.</li>
+  </ul>
+  <p>Le zoom fonctionne avec les options d&rsquo;échelle <strong>Adapter à l&rsquo;écran</strong> et <strong>Adapter à la hauteur</strong>, ainsi qu&rsquo;avec les doubles pages. <strong>Adapter à la largeur</strong> et <strong>Taille originale</strong> affichent déjà la page plus grande que l&rsquo;écran et proposent un défilement à la place &mdash; utilisez <strong>Afficher en pleine résolution</strong> ci-dessous pour y voir de plus près.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4F1;</span> Défilement webtoon</h3>
+  <ul>
+    <li>Pincez ou touchez deux fois pour zoomer sur toute la bande, jusqu&rsquo;à trois fois sa taille normale.</li>
+    <li>Le défilement continue de fonctionner même une fois zoomé &mdash; faites simplement glisser vers le haut ou le bas comme d&rsquo;habitude.</li>
+    <li>Faites glisser latéralement pour vous déplacer sur une page zoomée.</li>
+    <li>Le niveau de zoom reste appliqué pendant que vous continuez de défiler, ce qui permet de lire tout un chapitre agrandi. Faire pivoter l&rsquo;appareil réajuste la taille normale.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x2728;</span> Afficher en pleine résolution</h3>
+  <p>Le zoom agrandit la page à la taille préparée pour votre écran. Pour voir une page le plus nettement possible, maintenez le doigt dessus et choisissez <kbd>Afficher en pleine résolution</kbd> &mdash; cette page est décodée à la résolution d&rsquo;origine de l&rsquo;archive, et vous pouvez pincer beaucoup plus loin. Toucher deux fois bascule entre l&rsquo;ajustement à l&rsquo;écran et le double de la taille&nbsp;; balayez vers le bas ou touchez le bouton de fermeture pour revenir en arrière.</p>
+  <div class="tip"><strong>Remarque&nbsp;:</strong> Le zoom n&rsquo;est pas enregistré. Fermer le livre revient toujours à l&rsquo;ajustement normal.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Retour en haut</a>
+
+<!-- TTS -->
+<h2 id="tts">Synthèse vocale et CarPlay</h2>
+<p class="section-desc">Écoutez vos livres lus à haute voix.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F50A;</span> Utiliser la synthèse vocale</h3>
+  <p>Ouvrez n'importe quel livre EPUB, PDF ou TXT et touchez le bouton de lecture dans la barre d'outils. Le système lit une phrase à la fois et met en évidence le mot en cours.</p>
+  <ul>
+    <li><strong>Vitesse</strong> &mdash; de 0,5&times; à 2&times; dans les commandes.</li>
+    <li><strong>Voix</strong> &mdash; Choisissez parmi plus de 100 voix système dans <kbd>Réglages</kbd> &rarr; <kbd>Préférences de lecture</kbd> &rarr; <kbd>Synthèse vocale</kbd>.</li>
+    <li><strong>Avancer</strong> &mdash; Touchez suivant/précédent pour passer d'une phrase ou d'un chapitre à l'autre.</li>
+  </ul>
+  <div class="tip"><strong>Remarque&nbsp;:</strong> Les <a href="#fixed-layout">livres à mise en page fixe</a> &mdash; bandes dessinées et livres illustrés dont les pages sont des mises en page fixes &mdash; n&rsquo;ont pas de texte que l&rsquo;app puisse lire à voix haute, le bouton de lecture n&rsquo;apparaît donc pas pour eux.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F697;</span> CarPlay</h3>
+  <p>Lorsque vous êtes connecté à un véhicule compatible CarPlay, l'app apparaît sur l'écran de votre voiture avec des commandes de lecture simplifiées. La lecture continue en arrière-plan &mdash; pas besoin de garder l'écran allumé.</p>
+  <div class="tip"><strong>Astuce :</strong> Activez <kbd>Audio en arrière-plan</kbd><span class="badge badge-premium">Premium</span> dans les réglages de synthèse vocale pour maintenir la lecture lorsque l'app est en arrière-plan, même sans CarPlay.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Retour en haut</a>
+
+<!-- AI UPSCALING -->
+<h2 id="upscaling">Mise à l'échelle IA des BD</h2>
+<p class="section-desc">Améliorez les pages de BD en basse résolution directement sur l'appareil.<span class="badge badge-premium">Premium</span></p>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x2728;</span> Ce que ça fait</h3>
+  <p>Utilise un modèle d'apprentissage automatique sur l'appareil pour agrandir les pages de BD dont la résolution est inférieure à un seuil. Le résultat : des lignes plus nettes et moins d'artefacts de compression visibles &mdash; particulièrement utile pour les scans anciens ou de mauvaise qualité.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x2699;</span> Configuration</h3>
+  <ol class="steps">
+    <li>Allez dans <kbd>Réglages</kbd> &rarr; <kbd>Préférences de lecture</kbd> &rarr; <kbd>BD</kbd> &rarr; <kbd>Mise à l'échelle IA</kbd>.</li>
+    <li>Activez la fonction.</li>
+    <li>Ajustez le <strong>Seuil de résolution</strong> &mdash; les pages en dessous de cette largeur en pixels sont agrandies (par défaut : 1500 px).</li>
+    <li>Définissez la <strong>Fenêtre de préchargement</strong> pour contrôler le nombre de pages à venir traitées en arrière-plan.</li>
+    <li>Choisissez un <strong>Niveau de réduction du bruit</strong> (Automatique est généralement le meilleur).</li>
+  </ol>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4BE;</span> Cache et stockage</h3>
+  <p>Les images agrandies sont mises en cache pour ne pas avoir à être retraitées. Choisissez la durée de conservation du cache (7&ndash;90 jours ou sans expiration) et videz-le à tout moment depuis les réglages.</p>
+  <div class="tip"><strong>Astuce :</strong> Un petit indicateur apparaît sur les pages agrandies. Vous pouvez le désactiver dans les réglages si vous préférez.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Retour en haut</a>
+
+<!-- HIDDEN MODE -->
+<h2 id="hidden">Livres masqués</h2>
+<p class="section-desc">Gardez certains livres privés.<span class="badge badge-premium">Premium</span></p>
+
+<div class="card">
+  <h3><span class="icon icon-indigo">&#x1F441;</span> Masquer des livres</h3>
+  <ol class="steps">
+    <li>Ouvrez la page de détails d'un livre et touchez le menu (&hellip;).</li>
+    <li>Choisissez <kbd>Masquer le livre</kbd>.</li>
+    <li>Le livre disparaît de la vue normale de la bibliothèque.</li>
+  </ol>
+  <p>Pour masquer plusieurs livres à la fois, utilisez le mode sélection.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F513;</span> Afficher les livres masqués</h3>
+  <p>Tirez vers le bas dans la bibliothèque pour activer le <strong>Mode masqué</strong>. Tous vos livres &mdash; masqués et visibles &mdash; s'affichent désormais. Tirez à nouveau ou quittez l'app pour sortir du mode masqué.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F512;</span> Options de confidentialité</h3>
+  <p>Lorsque le mode masqué est actif, allez dans <kbd>Réglages</kbd> &rarr; <kbd>Mode masqué</kbd> pour choisir ce qui se passe quand vous quittez l'app :</p>
+  <ul>
+    <li><strong>Sortie automatique</strong> (par défaut) &mdash; Le mode masqué se désactive automatiquement. Rapide et simple.</li>
+    <li><strong>Exiger Face ID / Touch ID</strong> &mdash; Le mode masqué reste actif, mais nécessite une authentification biométrique au retour. Plus sécurisé.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x21A9;</span> Afficher des livres masqués</h3>
+  <p>En mode masqué, ouvrez les détails d'un livre masqué et choisissez <kbd>Afficher le livre</kbd>, ou utilisez le mode sélection pour en afficher plusieurs à la fois.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x2601;</span> Synchronisation des livres masqués</h3>
+  <p>En mode masqué, allez dans <kbd>Réglages</kbd> &rarr; <kbd>Mode masqué</kbd> et activez <kbd>Synchroniser les livres masqués avec iCloud</kbd> :</p>
+  <ul>
+    <li><strong>Désactivé</strong> (par défaut) &mdash; les livres masqués restent uniquement sur cet appareil. Masquer un livre le supprime aussi d'iCloud.</li>
+    <li><strong>Activé</strong> &mdash; les livres masqués se synchronisent via iCloud mais restent masqués sur chaque appareil où vous êtes connecté.</li>
+  </ul>
+  <p>Désactiver ce réglage alors que vous avez déjà des livres masqués dans iCloud vous demande ce qu'il faut en faire :</p>
+  <ul>
+    <li><strong>Conserver sur tous les appareils</strong> &mdash; vos autres appareils conservent leurs copies synchronisées ; cet appareil conserve une copie privée, locale uniquement.</li>
+    <li><strong>Supprimer entièrement d'iCloud</strong> &mdash; supprime les livres d'iCloud ; chaque autre appareil conserve sa propre copie privée dans sa bibliothèque masquée.</li>
+  </ul>
+  <div class="tip"><strong>Remarque :</strong> Si l'un de vos autres appareils supprime un livre masqué d'iCloud, cet appareil conserve automatiquement sa propre copie privée dans la bibliothèque masquée &mdash; tant que le fichier du livre y avait déjà été téléchargé.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F5D1;</span> Supprimer définitivement les livres masqués</h3>
+  <p>En mode masqué, allez dans <kbd>Réglages</kbd> &rarr; <kbd>Mode masqué</kbd> et choisissez <kbd>Supprimer définitivement les livres masqués</kbd> pour retirer chaque livre masqué de cet appareil, d'iCloud et de vos autres appareils. Tapez <kbd>DELETE</kbd> pour confirmer.</p>
+  <div class="tip"><strong>Attention :</strong> Cette action est irréversible. Les appareils hors ligne à ce moment-là conservent leurs copies locales jusqu'à leur prochaine synchronisation.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Retour en haut</a>
+
+<!-- BOOKMARKS, HIGHLIGHTS, TAGS -->
+<h2 id="bookmarks">Signets, surlignages et étiquettes</h2>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F516;</span> Signets</h3>
+  <p>Touchez l'icône de signet dans la barre d'outils du lecteur pour marquer la page en cours. Ajoutez une note optionnelle. Consultez tous les signets d'un livre depuis sa page de détails.</p>
+  <div class="tip"><strong>Remarque&nbsp;:</strong> Seuls les signets que vous créez manuellement apparaissent ici. Les positions enregistrées automatiquement par l&rsquo;app lorsque vous fermez un livre sont conservées séparément dans l&rsquo;<a href="#history">Historique de lecture</a> afin de ne pas encombrer vos propres signets.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F58D;</span> Surlignages<span class="badge badge-premium">Premium</span></h3>
+  <p>Dans les EPUB, sélectionnez du texte pour le surligner. Choisissez parmi cinq couleurs (jaune, rose, vert, bleu, orange) et ajoutez des notes. Tous les surlignages sont listés sur la page de détails du livre.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F3F7;</span> Étiquettes</h3>
+  <p>Ajoutez des étiquettes à n'importe quel livre depuis sa page de détails. Les étiquettes sont recherchables et peuvent servir de filtres dans la bibliothèque. Gérez toutes les étiquettes depuis <kbd>Réglages</kbd> &rarr; <kbd>Étiquettes</kbd>.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Retour en haut</a>
+
+<!-- READING HISTORY -->
+<h2 id="history">Historique de lecture</h2>
+<p class="section-desc">Revenez à n&rsquo;importe quelle position que vous avez consultée récemment.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F552;</span> Enregistrements automatiques</h3>
+  <p>Chaque fois que vous fermez un livre ou que vous mettez l&rsquo;app en arrière-plan, votre position actuelle est enregistrée comme entrée d&rsquo;historique &mdash; inutile de penser à mettre un signet. Cela fonctionne dans tous les lecteurs&nbsp;: EPUB, PDF, TXT/RTF et BD.</p>
+  <ul>
+    <li>Jusqu&rsquo;à <strong>50</strong> positions récentes sont conservées par livre. Les entrées plus anciennes sont supprimées automatiquement à mesure que de nouvelles arrivent.</li>
+    <li>Refermer le livre au même endroit quelques minutes plus tard met à jour l&rsquo;entrée existante au lieu d&rsquo;en créer un doublon.</li>
+    <li>Les positions enregistrées automatiquement sont séparées de votre liste de signets manuels pour ne pas se mélanger avec ceux que vous avez créés exprès.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4D6;</span> Historique dans un livre</h3>
+  <p>Pendant la lecture, touchez le menu (&hellip;) en haut à droite et choisissez <kbd>Historique de lecture</kbd>. Vous verrez la liste de vos positions récentes dans ce livre, des plus récentes aux plus anciennes, avec le nom du chapitre ou de la page et le temps écoulé depuis chaque enregistrement.</p>
+  <ul>
+    <li>Touchez une entrée pour y accéder directement.</li>
+    <li>Balayez une entrée vers la gauche pour la supprimer.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F4DA;</span> Historique dans toute votre bibliothèque</h3>
+  <p>Depuis la bibliothèque, touchez le menu (&hellip;) dans la barre d&rsquo;outils en haut et choisissez <kbd>Historique de lecture</kbd> pour voir tous les livres que vous avez ouverts récemment, regroupés par jour. Touchez une ligne pour ouvrir le livre exactement là où vous vous étiez arrêté.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Retour en haut</a>
+
+<!-- AUTHOR & TAG BROWSING -->
+<h2 id="search">Parcourir par auteur et étiquette</h2>
+<p class="section-desc">Trouvez des livres par auteur ou par étiquette depuis n&rsquo;importe où dans l&rsquo;app.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F464;</span> Auteurs</h3>
+  <p>Allez dans <kbd>Réglages</kbd> &rarr; <kbd>Auteurs</kbd> pour voir tous les auteurs de votre bibliothèque avec leur nombre de livres. Touchez un auteur pour rechercher tous ses livres dans la bibliothèque.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F3F7;</span> Recherche par étiquette</h3>
+  <p>Dans <kbd>Réglages</kbd> &rarr; <kbd>Étiquettes</kbd>, touchez une étiquette pour rechercher dans la bibliothèque les livres qui la portent. Appuyez longuement pour la renommer ou la supprimer.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F50D;</span> Recherche rapide depuis le contexte</h3>
+  <ul>
+    <li>Appuyez longuement sur un livre dans la bibliothèque &rarr; <kbd>Trouver les livres de [Auteur]</kbd></li>
+    <li>Sur la page de détails d&rsquo;un livre, appuyez longuement sur le nom de l&rsquo;auteur ou sur une étiquette pour lancer une recherche</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Retour en haut</a>
+
+<!-- METADATA -->
+<h2 id="metadata">Métadonnées et ComicInfo.xml</h2>
+<p class="section-desc">Consultez et modifiez les métadonnées d&rsquo;un livre.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x270F;</span> Éditeur de métadonnées</h3>
+  <p>Depuis la page de détails d&rsquo;un livre, touchez le menu (&hellip;) et choisissez <kbd>Modifier les métadonnées</kbd> pour changer le titre, l&rsquo;auteur, la série, la description et d&rsquo;autres champs. Vous pouvez aussi réextraire les métadonnées depuis le fichier d&rsquo;origine.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4CB;</span> ComicInfo.xml</h3>
+  <p>Les archives de BD (CBZ, CBR, CB7) qui contiennent un fichier <code>ComicInfo.xml</code> voient leurs métadonnées extraites automatiquement à l&rsquo;import &mdash; titre, scénariste, série, numéro, résumé, éditeur, genre et étiquettes.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Retour en haut</a>
+
+<!-- ICLOUD -->
+<h2 id="icloud">Synchronisation iCloud</h2>
+<p class="section-desc">Gardez votre bibliothèque synchronisée sur tous vos appareils.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x2601;</span> Activer la synchronisation</h3>
+  <ol class="steps">
+    <li>Allez dans <kbd>Réglages</kbd> &rarr; <kbd>Synchronisation iCloud</kbd>.</li>
+    <li>Activez <kbd>Synchroniser la bibliothèque avec iCloud</kbd>.</li>
+    <li>La synchronisation prend effet au prochain lancement de l'app.</li>
+  </ol>
+  <p>Vos métadonnées, votre progression de lecture, vos signets, surlignages et étagères se synchronisent sur tous les appareils connectés au même compte iCloud.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F4CA;</span> État de la synchronisation</h3>
+  <p><kbd>Réglages</kbd> &rarr; <kbd>Synchronisation iCloud</kbd> affiche une carte d'état pour les fichiers de vos livres :</p>
+  <ul>
+    <li>Un titre &mdash; <strong>À jour</strong>, <strong>Synchronisation&hellip;</strong> (avec un nombre) ou <strong>Non connecté</strong>.</li>
+    <li>Une barre indiquant la proportion des fichiers de votre bibliothèque présents dans iCloud.</li>
+    <li>Une répartition &mdash; <strong>Synchronisé</strong> (avec la taille totale), <strong>Sur iCloud uniquement</strong> (pas encore téléchargé sur cet appareil) et <strong>En cours</strong>.</li>
+  </ul>
+  <div class="tip"><strong>Remarque :</strong> Cette carte ne suit que les <em>fichiers</em> des livres. La progression de lecture, les signets, les surlignages et les étagères se synchronisent séparément et automatiquement, indépendamment de l'état du fichier.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x2601;</span> Badges de couverture</h3>
+  <p>Les couvertures des livres affichent une petite icône de nuage dans le coin inférieur droit pour indiquer l'état de synchronisation du fichier :</p>
+  <ul>
+    <li><strong>Icône de nuage</strong> &mdash; le fichier n'est que dans iCloud. Ouvrez la page du livre pour le télécharger.</li>
+    <li><strong>Flèches haut/bas</strong> &mdash; le fichier est en cours de téléversement ou de téléchargement.</li>
+    <li><strong>Aucune icône</strong> &mdash; le fichier est déjà sur cet appareil.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4E5;</span> Téléchargement automatique</h3>
+  <p>Choisissez la taille maximale de fichier pour les téléchargements automatiques. Les livres plus volumineux restent dans le cloud jusqu'à ce que vous les ouvriez. Ajustez la limite dans les réglages iCloud.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Retour en haut</a>
+
+<!-- STATS -->
+<h2 id="stats">Statistiques de lecture</h2>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F4CA;</span> Votre activité de lecture</h3>
+  <p>Ouvrez <kbd>Réglages</kbd> &rarr; <kbd>Statistiques de la bibliothèque</kbd> pour voir :</p>
+  <ul>
+    <li>Total des livres, pages lues et temps de lecture.</li>
+    <li>Graphique d'activité de lecture quotidienne.</li>
+    <li>Livres par format et état de lecture.</li>
+    <li>Détail de l'activité par livre.</li>
+  </ul>
+  <div class="tip"><strong>Remarque :</strong> Les statistiques respectent le mode masqué &mdash; lorsque le mode masqué est désactivé, les statistiques des livres masqués sont exclues.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Retour en haut</a>
+
+<!-- WEBDAV & OPDS -->
+<h2 id="webdav">WebDAV et OPDS</h2>
+<p class="section-desc">Parcourez et téléchargez depuis des serveurs et catalogues distants.</p>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F5C4;</span> WebDAV</h3>
+  <p>Connectez-vous à un NAS, Nextcloud ou serveur Calibre pour parcourir les dossiers et télécharger des livres.</p>
+  <ol class="steps">
+    <li>Allez dans <kbd>Réglages</kbd> &rarr; <kbd>Importer des livres</kbd> &rarr; <kbd>WebDAV</kbd>.</li>
+    <li>Touchez <kbd>Ajouter un serveur</kbd> et entrez l'URL.</li>
+    <li>Ajoutez un nom d'utilisateur et un mot de passe si nécessaire.</li>
+    <li>Touchez <kbd>Tester la connexion</kbd>, puis enregistrez.</li>
+  </ol>
+  <div class="tip"><strong>Certificats auto-signés :</strong> Si votre serveur utilise un certificat auto-signé, vous pouvez activer <kbd>Autoriser les certificats non fiables</kbd>. L'app vous demande d'abord de confirmer &mdash; cela désactive la validation TLS, de sorte que n'importe qui sur votre réseau pourrait usurper l'identité du serveur. Ne l'activez que pour un serveur que vous contrôlez.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4DA;</span> Catalogues OPDS</h3>
+  <p>OPDS est un standard ouvert pour les catalogues de livres. Ajoutez des catalogues publics (Project Gutenberg, Standard Ebooks, etc.) ou votre propre serveur privé.</p>
+  <ol class="steps">
+    <li>Allez dans <kbd>Réglages</kbd> &rarr; <kbd>Importer des livres</kbd> &rarr; <kbd>OPDS</kbd>.</li>
+    <li>Touchez <kbd>Ajouter un catalogue</kbd> et entrez l'URL du flux.</li>
+    <li>Parcourez les catégories et téléchargez des livres dans votre bibliothèque.</li>
+  </ol>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Retour en haut</a>
+
+<!-- RESUME -->
+<h2 id="resume">Reprendre au lancement</h2>
+<p class="section-desc">Reprenez automatiquement là où vous vous étiez arrêté.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x25B6;</span> Configuration</h3>
+  <p>Allez dans <kbd>Réglages</kbd> &rarr; <kbd>Général</kbd> et activez <kbd>Reprendre le dernier livre au lancement</kbd>. Au prochain lancement de l'app, elle ira directement au livre et à la page que vous lisiez en dernier.</p>
+  <div class="tip"><strong>Livres masqués :</strong> Si le dernier livre lu est masqué, l'app demandera Face ID / Touch ID avant de reprendre. Activez <kbd>Reprendre le livre masqué après authentification</kbd> dans les réglages du mode masqué pour autoriser cela.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Retour en haut</a>
+
+<!-- FORMATS -->
+<h2 id="formats">Formats pris en charge</h2>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4D6;</span> Livres</h3>
+  <div class="formats-grid">
+    <div class="format-tag">EPUB</div>
+    <div class="format-tag">PDF</div>
+    <div class="format-tag">TXT</div>
+    <div class="format-tag">RTF</div>
+  </div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4F1;</span> Bandes dessinées</h3>
+  <div class="formats-grid">
+    <div class="format-tag">CBZ</div>
+    <div class="format-tag">CBR</div>
+    <div class="format-tag">CB7</div>
+  </div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Retour en haut</a>
+
+</body>
+</html>

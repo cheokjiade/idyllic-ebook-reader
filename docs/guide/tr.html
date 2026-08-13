@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Kullan&#305;m K&#305;lavuzu</title>
+<link rel="stylesheet" href="UserGuideStyle.css">
+<!-- USER-GUIDE-NAV-STYLE:START -->
+<style>
+.guide-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 14px;
+  padding: 10px 14px;
+  margin: 0 0 16px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  font-size: 13px;
+}
+.guide-nav-home {
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.guide-nav-arrow {
+  display: inline-block;
+}
+[dir="rtl"] .guide-nav-arrow {
+  transform: scaleX(-1);
+}
+.guide-nav-langs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 10px;
+  color: var(--secondary);
+}
+.guide-nav-globe {
+  font-size: 13px;
+}
+.guide-nav-langs a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.guide-nav-langs a:hover,
+.guide-nav-langs a:focus-visible {
+  text-decoration: underline;
+}
+.guide-nav-current {
+  font-weight: 700;
+  color: var(--text);
+}
+</style>
+<!-- USER-GUIDE-NAV-STYLE:END -->
+</head>
+<body id="top">
+<!-- USER-GUIDE-NAV:START -->
+<nav class="guide-nav" aria-label="User Guide language switcher">
+  <a class="guide-nav-home" href="../index.html"><span class="guide-nav-arrow" aria-hidden="true">&larr;</span> Idyllic</a>
+  <span class="guide-nav-langs">
+    <span class="guide-nav-globe" aria-hidden="true">&#x1F310;</span>
+      <a href="index.html">English</a>
+      <a href="ar.html">العربية</a>
+      <a href="cs.html">Čeština</a>
+      <a href="da.html">Dansk</a>
+      <a href="de.html">Deutsch</a>
+      <a href="es.html">Español</a>
+      <a href="fi.html">Suomi</a>
+      <a href="fr.html">Français</a>
+      <a href="he.html">עברית</a>
+      <a href="hi.html">हिन्दी</a>
+      <a href="id.html">Indonesia</a>
+      <a href="it.html">Italiano</a>
+      <a href="ja.html">日本語</a>
+      <a href="ko.html">한국어</a>
+      <a href="ms.html">Bahasa Melayu</a>
+      <a href="nb.html">Norsk bokmål</a>
+      <a href="nl.html">Nederlands</a>
+      <a href="pl.html">Polski</a>
+      <a href="pt-BR.html">Português (Brasil)</a>
+      <a href="ru.html">Русский</a>
+      <a href="sv.html">Svenska</a>
+      <a href="th.html">ไทย</a>
+      <span class="guide-nav-current">Türkçe</span>
+      <a href="uk.html">Українська</a>
+      <a href="vi.html">Tiếng Việt</a>
+      <a href="zh-Hans.html">简体中文</a>
+      <a href="zh-Hant.html">繁體中文</a>
+  </span>
+</nav>
+<!-- USER-GUIDE-NAV:END -->
+
+<h1>Kullan&#305;m K&#305;lavuzu</h1>
+<p class="subtitle">Okuma deneyiminizden en iyi &#351;ekilde yararlanmak i&#231;in ihtiyac&#305;n&#305;z olan her &#351;ey.</p>
+
+<!-- TABLE OF CONTENTS -->
+<div class="card toc">
+  <a href="#importing">Kitap &#304;&#231;e Aktarma</a>
+  <a href="#wifi">WiFi Aktar&#305;m&#305;</a>
+  <a href="#library">K&#252;t&#252;phane &amp; D&#252;zenleme</a>
+  <a href="#shelves">Raflar &amp; Klas&#246;rler</a>
+  <a href="#reading-books">Kitap Okuma</a>
+  <a href="#fixed-layout">Sabit D&#252;zenli Kitaplar</a>
+  <a href="#in-book-search">Kitap &#304;&#231;i Arama</a>
+  <a href="#image-gallery">G&#246;rsel Galeri</a>
+  <a href="#fonts">Okuma Yaz&#305; Tipleri</a>
+  <a href="#reading-direction">Okuma Y&#246;n&#252;</a>
+  <a href="#vertical-writing">Dikey Yaz&#305;</a>
+  <a href="#reading-comics">&#199;izgi Roman Okuma</a>
+  <a href="#comic-zoom">&#199;izgi Roman Sayfalar&#305;n&#305; Yak&#305;nla&#351;t&#305;rma</a>
+  <a href="#tts">Sesli Okuma &amp; CarPlay</a>
+  <a href="#upscaling">AI &#199;izgi Roman Y&#252;kseltme</a>
+  <a href="#hidden">Gizli Kitaplar</a>
+  <a href="#bookmarks">Yer &#304;mleri, Vurgular &amp; Etiketler</a>
+  <a href="#history">Okuma Ge&#231;mi&#351;i</a>
+  <a href="#search">Yazar ve Etiket G&#246;z Atma</a>
+  <a href="#metadata">Meta Veriler &amp; ComicInfo.xml</a>
+  <a href="#icloud">iCloud Senkronizasyonu</a>
+  <a href="#stats">Okuma &#304;statistikleri</a>
+  <a href="#webdav">WebDAV &amp; OPDS</a>
+  <a href="#resume">Ba&#351;latmada Devam Et</a>
+  <a href="#formats">Desteklenen Formatlar</a>
+</div>
+
+<!-- IMPORTING -->
+<h2 id="importing">Kitap &#304;&#231;e Aktarma</h2>
+<p class="section-desc">K&#252;t&#252;phanenize kitap eklemenin birka&#231; yolu.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4C1;</span> Dosyalar Uygulamas&#305;ndan</h3>
+  <p><kbd>Ayarlar</kbd> &rarr; <kbd>Kitap &#304;&#231;e Aktar</kbd> &#246;&#287;esine dokunun, ard&#305;ndan cihaz&#305;n&#305;zdan, iCloud Drive&rsquo;dan veya ba&#287;l&#305; herhangi bir bulut hizmetinden dosya se&#231;in. iPad&rsquo;de s&#252;r&#252;kle ve b&#305;rak da kullanabilirsiniz.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F310;</span> WiFi Aktar&#305;m&#305;</h3>
+  <p>WiFi a&#287;&#305;n&#305;zdaki herhangi bir bilgisayar veya telefondan kitap y&#252;kleyin. Ayr&#305;nt&#305;lar i&#231;in a&#351;a&#287;&#305;daki &#246;zel b&#246;l&#252;me bak&#305;n.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F5C2;</span> WebDAV &amp; OPDS</h3>
+  <p>Kitaplar&#305; do&#287;rudan g&#246;z atmak ve indirmek i&#231;in bir NAS, Calibre sunucusu veya herkese a&#231;&#305;k kitap katalo&#287;una ba&#287;lan&#305;n. A&#351;a&#287;&#305;ya bak&#305;n.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Ba&#351;a d&#246;n</a>
+
+<!-- WIFI TRANSFER -->
+<h2 id="wifi">WiFi Aktar&#305;m&#305;</h2>
+<p class="section-desc">Yerel a&#287;&#305;n&#305;zdaki herhangi bir cihazdan kitap y&#252;kleyin.</p>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F4F6;</span> Nas&#305;l &#199;al&#305;&#351;&#305;r</h3>
+  <p>Uygulama, cihaz&#305;n&#305;zda k&#252;&#231;&#252;k bir web sunucusu &#231;al&#305;&#351;t&#305;r&#305;r. Ayn&#305; WiFi a&#287;&#305;ndaki herhangi bir bilgisayar veya telefon, bir taray&#305;c&#305;da y&#252;kleme sayfas&#305;n&#305; a&#231;abilir.</p>
+  <ol class="steps">
+    <li><kbd>Ayarlar</kbd> &rarr; <kbd>Kitap &#304;&#231;e Aktar</kbd> &rarr; <kbd>WiFi Aktar&#305;m&#305;</kbd> b&#246;l&#252;m&#252;ne gidin.</li>
+    <li><kbd>Sunucuyu Ba&#351;lat</kbd> &#246;&#287;esine dokunun. <kbd>http://192.168.1.42:8080</kbd> gibi bir adres g&#246;r&#252;necektir.</li>
+    <li>Bu adresi ayn&#305; a&#287;daki herhangi bir web taray&#305;c&#305;s&#305;nda a&#231;&#305;n.</li>
+    <li>Dosyalar&#305; sayfaya s&#252;r&#252;kleyin veya g&#246;z atmak i&#231;in t&#305;klay&#305;n &mdash; isterseniz bir hedef klas&#246;r se&#231;in.</li>
+    <li>&#304;&#231;e aktar&#305;lan kitaplar k&#252;t&#252;phanenizde hemen g&#246;r&#252;n&#252;r.</li>
+    <li>&#304;&#351;iniz bitti&#287;inde <kbd>Sunucuyu Durdur</kbd> &#246;&#287;esine dokunun.</li>
+  </ol>
+  <div class="tip"><strong>&#304;pucu:</strong> Sunucu &#231;al&#305;&#351;&#305;rken aktarımlar&#305;n kesilmemesi i&#231;in cihaz&#305;n&#305;z uyan&#305;k kal&#305;r.</div>
+  <div class="tip"><strong>Y&#252;kleme ba&#351;ar&#305;s&#305;z m&#305;?</strong> Ba&#351;ar&#305;s&#305;z olan her dosyan&#305;n nedeni kendi sat&#305;r&#305;nda g&#246;sterilir. WiFi ba&#287;lant&#305;s&#305; koparsa, dosyay&#305; tekrar g&#246;ndermek i&#231;in sat&#305;rdaki <kbd>&#x21BB; Yeniden Dene</kbd> &#246;&#287;esine dokunun. Kal&#305;c&#305; sorunlarda (&#246;rne&#287;in desteklenmeyen bir dosya bi&#231;imi) Yeniden Dene d&#252;&#287;mesi g&#246;sterilmez.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Ba&#351;a d&#246;n</a>
+
+<!-- LIBRARY -->
+<h2 id="library">K&#252;t&#252;phane &amp; D&#252;zenleme</h2>
+<p class="section-desc">Kitaplar&#305;n&#305;z&#305; bulun, s&#305;ralay&#305;n ve d&#252;zenleyin.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F50D;</span> Arama</h3>
+  <p>Bir arama alan&#305; a&#231;mak i&#231;in k&#252;t&#252;phanenin altındaki <kbd>Ara</kbd> ibaresine dokunun, ard&#305;ndan kapatmak i&#231;in <kbd>Bitti</kbd>&rsquo;ye dokunun. Ba&#351;l&#305;k, yazar, etiketler, seri, yay&#305;nc&#305; ve a&#231;&#305;klama genelinde arama yapar. Bir kitab&#305;n ba&#287;lam men&#252;s&#252;nden yazar veya etikete g&#246;re arama yapmak (bkz. <a href="#search">Yazar ve Etiket G&#246;z Atma</a>) ayn&#305; aramay&#305; doldurur.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x2195;</span> S&#305;rala &amp; Filtrele</h3>
+  <p>Se&#231;mek i&#231;in g&#246;r&#252;n&#252;m se&#231;enekleri d&#252;&#287;mesine (sa&#287; &#252;stte) dokunun:</p>
+  <ul>
+    <li><strong>D&#252;zen</strong> &mdash; Izgara, Ayr&#305;nt&#305;l&#305;, Kompakt, Minimalist, Tablo veya Dergi</li>
+    <li><strong>S&#305;ralama</strong> &mdash; Ba&#351;l&#305;k, Yazar, Son Okunan, Eklenme Tarihi, &#304;lerleme, Dosya Boyutu, Seri</li>
+    <li><strong>G&#246;r&#252;n&#252;m</strong> &mdash; Devam eden kitaplar&#305; &#246;ne, tamamlananlar&#305; sona koy</li>
+    <li><strong>Filtre</strong> &mdash; Formata, etikete veya yazara g&#246;re</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x2714;</span> Se&#231;im Modu</h3>
+  <p>Bir kitaba uzun bas&#305;n veya se&#231;im moduna girmek i&#231;in <kbd>Se&#231;</kbd> &#246;&#287;esine dokunun. Ard&#305;ndan birden fazla kitab&#305; ayn&#305; anda ta&#351;&#305;yabilir, silebilir, gizleyebilir veya g&#246;sterebilirsiniz.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4CB;</span> Kopyalar&#305; Temizle</h3>
+  <p>Ayn&#305; ba&#351;l&#305;k, yazar ve bi&#231;ime sahip kitaplar&#305; bulmak i&#231;in <strong>Ayarlar &gt; K&#252;t&#252;phane &gt; Kitapl&#305;k Bak&#305;m&#305; &gt; Kopyalar&#305; Temizle</strong> b&#246;l&#252;m&#252;ne gidin. Her yineleme grubu i&#231;in:</p>
+  <ul>
+    <li><strong>En yeni s&#252;r&#252;m</strong> ye&#351;il KEEP rozetiyle i&#351;aretlenir</li>
+    <li>Onay kutular&#305;n&#305; kullanarak eski kopyalar&#305; se&#231;in (veya <strong>T&#252;m&#252;n&#252; Se&#231;</strong>)</li>
+    <li><strong>Sil</strong> &mdash; se&#231;ilen eski kopyalar&#305; kald&#305;r&#305;r</li>
+    <li><strong>Verileri Kopyala ve Sil</strong> &mdash; silmeden &#246;nce yer imlerini, vurgular&#305;, etiketleri, okuma ilerlemesini ve raf atamas&#305;n&#305; en yeni s&#252;r&#252;me aktar&#305;r</li>
+    <li>Yeni s&#252;r&#252;m&#252; k&#252;t&#252;phanedeki ayn&#305; konumda tutmak i&#231;in <strong>"Yeni kitab&#305; eski kitab&#305;n raf&#305; ve gizli durumuna ta&#351;&#305;"</strong> se&#231;ene&#287;ini etkinle&#351;tirin</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Ba&#351;a d&#246;n</a>
+
+<!-- SHELVES -->
+<h2 id="shelves">Raflar &amp; Klas&#246;rler</h2>
+<p class="section-desc">Kitaplar&#305; i&#231; i&#231;e klas&#246;rlerde d&#252;zenleyin.</p>
+
+<div class="card">
+  <h3><span class="icon icon-indigo">&#x1F4C2;</span> Raf Olu&#351;turma</h3>
+  <ol class="steps">
+    <li>K&#252;t&#252;phanenizin &#252;st&#252;ndeki <kbd>Yeni Raf</kbd> &#246;&#287;esine dokunun.</li>
+    <li>Bir ad girin, ard&#305;ndan bir simge ve renk se&#231;in.</li>
+    <li>&#304;ste&#287;e ba&#287;l&#305; olarak bir alt klas&#246;r olu&#351;turmak i&#231;in &#252;st raf se&#231;in.</li>
+  </ol>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x21C4;</span> Kitaplar&#305; Ta&#351;&#305;ma</h3>
+  <p>Bir kitab&#305;n ayr&#305;nt&#305; sayfas&#305;ndan men&#252;ye (&hellip;) dokunun ve <kbd>Rafa Ta&#351;&#305;</kbd> se&#231;ene&#287;ini se&#231;in. Se&#231;im modunda birden fazla kitab&#305; ayn&#305; anda ta&#351;&#305;yabilirsiniz.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Ba&#351;a d&#246;n</a>
+
+<!-- READING BOOKS -->
+<h2 id="reading-books">Kitap Okuma</h2>
+<p class="section-desc">EPUB, PDF, TXT ve RTF okuma modlar&#305;.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4D6;</span> EPUB</h3>
+  <p>EPUB dosyalar&#305;, Readium tabanl&#305; tam donan&#305;ml&#305; bir okuyucuda a&#231;&#305;l&#305;r. Sayfa &#231;evirmek i&#231;in sol veya sa&#287; kenarlara dokunun ya da kayd&#305;r&#305;n.</p>
+  <ul>
+    <li><strong>Sayfalanm&#305;&#351;</strong> &mdash; geleneksel sayfa sayfa okuma.</li>
+    <li><strong>S&#252;rekli Kayd&#305;rma</strong><span class="badge badge-premium">Premium</span> &mdash; metin boyunca do&#287;al olarak kayd&#305;r&#305;n, sayfa sonlar&#305; yok.</li>
+    <li><strong>Okuma Y&#246;n&#252;</strong> &mdash; kitab&#305; otomatik olarak takip edin ya da soldan sa&#287;a veya sa&#287;dan sola olarak kendiniz ayarlay&#305;n. Bkz. <a href="#reading-direction">Okuma Y&#246;n&#252;</a>.</li>
+    <li><strong>Sabit D&#252;zen</strong> &mdash; &#231;izgi romanlar, resimli kitaplar ve sayfa sayfa d&#252;zenlenmi&#351; di&#287;er EPUB&rsquo;lar, onlar i&#231;in tasarlanm&#305;&#351; bir okuyucuda a&#231;&#305;l&#305;r. Bkz. <a href="#fixed-layout">Sabit D&#252;zenli Kitaplar</a>.</li>
+    <li><strong>Kitap &#304;&#231;i Arama</strong><span class="badge badge-premium">Premium</span> &mdash; herhangi bir kelime veya ifadeyi t&#252;m kitapta aray&#305;n. Bkz. <a href="#in-book-search">Kitap &#304;&#231;i Arama</a>.</li>
+    <li><strong>G&#246;rsel Galeri</strong><span class="badge badge-premium">Premium</span> &mdash; EPUB i&#231;indeki t&#252;m g&#246;rselleri kitab&#305;n ayr&#305;nt&#305; sayfas&#305;ndan inceleyin. Bkz. <a href="#image-gallery">G&#246;rsel Galeri</a>.</li>
+  </ul>
+  <div class="tip"><strong>&#304;pucu:</strong> Yaz&#305; tipi boyutu, sat&#305;r aral&#305;&#287;&#305; ve tema renklerini <kbd>Ayarlar</kbd> &rarr; <kbd>Okuma Tercihleri</kbd> &rarr; <kbd>Kitaplar</kbd> b&#246;l&#252;m&#252;nden ayarlay&#305;n.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F4C4;</span> PDF</h3>
+  <p>PDF dosyalar&#305; yerel olarak i&#351;lenir. Yak&#305;nla&#351;t&#305;rmak i&#231;in parmaklar&#305;n&#305;z&#305; s&#305;k&#305;&#351;t&#305;r&#305;n, sayfa &#231;evirmek i&#231;in kayd&#305;r&#305;n. Uygulama, korumal&#305; PDF&rsquo;ler i&#231;in parolalar&#305; hat&#305;rlayabilir.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x1F4DD;</span> TXT &amp; RTF</h3>
+  <p>D&#252;z metin ve RTF dosyalar&#305;, ayarlanabilir bi&#231;imlendirmeli basit bir metin okuyucuda a&#231;&#305;l&#305;r.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Ba&#351;a d&#246;n</a>
+
+<!-- FIXED LAYOUT -->
+<h2 id="fixed-layout">Sabit D&#252;zenli Kitaplar</h2>
+<p class="section-desc">Sayfalar&#305; sabit tasar&#305;mlar olan EPUB&rsquo;lar &mdash; &#231;izgi romanlar, resimli kitaplar ve yo&#287;un g&#246;rsel i&#231;erikli ba&#351;l&#305;klar.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4D0;</span> Sabit D&#252;zen Nedir</h3>
+  <p>Baz&#305; EPUB&rsquo;lar, ak&#305;c&#305; metin yerine sayfa sayfa d&#252;zenlenir: her sayfa, kelimelerin ve g&#246;rsellerin sabit bir d&#252;zenlemesidir. Uygulama bu kitaplar&#305; kendili&#287;inden tan&#305;r ve onlar i&#231;in tasarlanm&#305;&#351; bir okuyucuda a&#231;ar &mdash; her sayfa ekran&#305;n&#305;za s&#305;&#287;acak &#351;ekilde &#246;l&#231;eklenir ve ortalan&#305;r, &#231;evresindeki alan okuma teman&#305;z&#305;n arka plan rengiyle doldurulur.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F44B;</span> Okuma ve Yak&#305;nla&#351;t&#305;rma</h3>
+  <ul>
+    <li>Sayfa &#231;evirmek i&#231;in ekran&#305;n sol veya sa&#287; taraf&#305;na dokunun ya da kayd&#305;r&#305;n. Ara&#231; &#231;ubuklar&#305;n&#305; g&#246;stermek veya gizlemek i&#231;in ortaya dokunun.</li>
+    <li>Yak&#305;nla&#351;t&#305;rmak i&#231;in parmaklar&#305;n&#305;z&#305; s&#305;k&#305;&#351;t&#305;r&#305;n &mdash; s&#305;&#287;d&#305;r&#305;lm&#305;&#351; boyutun &#252;&#231; kat&#305;na kadar &mdash; ve sayfada gezinmek i&#231;in s&#252;r&#252;kleyin.</li>
+    <li>O noktaya yak&#305;nla&#351;mak i&#231;in &#231;ift dokunun; sayfay&#305; tekrar ekrana s&#305;&#287;d&#305;rmak i&#231;in tekrar &#231;ift dokunun.</li>
+    <li>Sa&#287;dan sola okunacak &#351;ekilde yay&#305;mlanan kitaplar sayfalar&#305; otomatik olarak o y&#246;nde &#231;evirir.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4D6;</span> &#199;ift Sayfa G&#246;r&#252;n&#252;m&#252;</h3>
+  <p>Cihaz&#305; yatay konuma &#231;evirdi&#287;inizde kar&#351;&#305;l&#305;kl&#305; sayfalar yan yana g&#246;r&#252;n&#252;r. Uygulama, kitab&#305;n i&#231;indeki &#231;ift sayfa ipu&#231;lar&#305;n&#305; takip eder, bu y&#252;zden bir kapak veya tam sayfal&#305;k bir ill&#252;strasyon yine de kendi sayfas&#305;n&#305; al&#305;r. Tek seferde bir sayfa g&#246;rmek i&#231;in dikey konuma geri d&#246;n&#252;n.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x2139;</span> Neler Kullan&#305;labilir</h3>
+  <p>&#304;&#231;indekiler tablosu, yer imleri, ilerleme kayd&#305;r&#305;c&#305;s&#305;, okuma ge&#231;mi&#351;i ve kald&#305;&#287;&#305;n&#305;z yerden devam etme hepsi her zamanki gibi &#231;al&#305;&#351;&#305;r.</p>
+  <p>Her sayfa, uygulaman&#305;n yeniden ak&#305;tabilece&#287;i bir metin yerine sabit bir tasar&#305;m oldu&#287;undan, bu kitaplar i&#231;in birka&#231; kontrol g&#246;r&#252;nmez: S&#252;rekli Kayd&#305;rma ve otomatik kayd&#305;rma, yaz&#305; tipi ve g&#246;r&#252;n&#252;m ayarlar&#305;, sesli okuma, kitap i&#231;i arama ve metin se&#231;imi veya vurgulama.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Ba&#351;a d&#246;n</a>
+
+<!-- IN-BOOK SEARCH -->
+<h2 id="in-book-search">Kitap &#304;&#231;i Arama</h2>
+<p class="section-desc">Okudu&#287;unuz kitab&#305;n i&#231;inde herhangi bir kelime veya ifadeyi bulun.<span class="badge badge-premium">Premium</span></p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F50D;</span> Arama Ba&#351;latma</h3>
+  <ol class="steps">
+    <li>Ara&#231; &#231;ubuklar&#305;n&#305; g&#246;stermek i&#231;in sayfan&#305;n ortas&#305;na dokunun.</li>
+    <li>Alt &#231;ubu&#287;un sa&#287; ucundaki b&#252;y&#252;te&#231;e dokunun.</li>
+    <li>En az iki karakter yaz&#305;n ve klavyede <kbd>Ara</kbd> tu&#351;una bas&#305;n.</li>
+  </ol>
+  <p>T&#252;m kitap aran&#305;r &mdash; yaln&#305;zca ekrandaki de&#287;il, her b&#246;l&#252;m &mdash; ve e&#351;le&#351;tirmede b&#252;y&#252;k/k&#252;&#231;&#252;k harf ayr&#305;m&#305; yap&#305;lmaz. Arama, EPUB ve TXT/RTF okuyucular&#305;nda kullan&#305;labilir.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4C4;</span> Sonu&#231;lara G&#246;z Atma</h3>
+  <p>Sonu&#231;lar, arama &#231;ubu&#287;unun alt&#305;nda b&#246;l&#252;mlere g&#246;re grupland&#305;r&#305;lm&#305;&#351; olarak g&#246;r&#252;n&#252;r. Her sat&#305;r, e&#351;le&#351;meyi &#231;evresindeki metinden bir al&#305;nt&#305; i&#231;inde kal&#305;n olarak g&#246;sterir. Bir sonuca dokunarak do&#287;rudan o noktaya atlay&#305;n &mdash; her e&#351;le&#351;me kitapta sar&#305; ile vurgulan&#305;r; ge&#231;erli olan daha koyu bir kehribar rengiyle g&#246;sterilir.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x2195;</span> E&#351;le&#351;meler Aras&#305;nda Gezinme</h3>
+  <p>Bir sonu&#231; se&#231;ti&#287;inizde arama &#231;ubu&#287;u, e&#351;le&#351;meler aras&#305;nda nerede oldu&#287;unuzu g&#246;steren bir saya&#231; i&#231;eren kompakt bir &#351;eride k&#252;&#231;&#252;l&#252;r.</p>
+  <ul>
+    <li>&#214;nceki veya sonraki e&#351;le&#351;meye ge&#231;mek i&#231;in yukar&#305;/a&#351;a&#287;&#305; oklar&#305;n&#305; kullan&#305;n.</li>
+    <li>Tam sonu&#231; listesini yeniden a&#231;mak i&#231;in liste d&#252;&#287;mesine dokunun.</li>
+    <li>Aramay&#305; bitirmek i&#231;in <kbd>&times;</kbd> d&#252;&#287;mesine dokunun &mdash; t&#252;m vurgular kald&#305;r&#305;l&#305;r.</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Ba&#351;a d&#246;n</a>
+
+<!-- IMAGE GALLERY -->
+<h2 id="image-gallery">G&#246;rsel Galeri</h2>
+<p class="section-desc">Bir EPUB&rsquo;daki t&#252;m ill&#252;strasyonlar&#305; kayd&#305;r&#305;labilir bir galeri olarak inceleyin.<span class="badge badge-premium">Premium</span></p>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F5BC;</span> Galeriyi A&#231;ma</h3>
+  <p>Bir EPUB kitab&#305;n&#305;n ayr&#305;nt&#305; sayfas&#305;n&#305; a&#231;&#305;n ve sa&#287; &#252;stteki ara&#231; &#231;ubu&#287;unda bulunan foto&#287;raf y&#305;&#287;&#305;n&#305; d&#252;&#287;mesine <span class="icon">&#x1F5BC;</span> dokunun. Uygulama kitaptaki t&#252;m g&#246;rselleri &#231;&#305;kar&#305;r ve bu s&#305;rada bir ilerleme &#231;ubu&#287;u g&#246;sterir &mdash; her an geri d&#246;nmek i&#231;in sol &#252;stteki <kbd>&times;</kbd> d&#252;&#287;mesine dokunun. Galeri yaln&#305;zca EPUB kitaplar i&#231;in kullan&#305;labilir.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4DA;</span> Neler G&#246;receksiniz</h3>
+  <p>G&#246;rseller, okuma s&#305;ras&#305;yla &mdash; kitab&#305;n b&#246;l&#252;mlerinde ge&#231;tikleri s&#305;rayla &mdash; sayfa ba&#351;&#305;na bir tane olacak &#351;ekilde ve kapak dahil g&#246;r&#252;n&#252;r. Simgeler ve s&#252;slemeler gibi k&#252;&#231;&#252;c&#252;k g&#246;rseller atlan&#305;r: en k&#252;&#231;&#252;k boyuttan (varsay&#305;lan 100&nbsp;px) k&#252;&#231;&#252;k olan her &#351;ey d&#305;&#351;ar&#305;da b&#305;rak&#305;l&#305;r. E&#351;i&#287;i <kbd>Ayarlar</kbd> &rarr; <kbd>Okuma Tercihleri</kbd> &rarr; <kbd>Kitaplar</kbd> &rarr; <kbd>EPUB Galerisi</kbd> b&#246;l&#252;m&#252;nden ayarlay&#305;n. Uygun g&#246;rsel yoksa galeri hi&#231;bir &#351;ey bulamad&#305;&#287;&#305;n&#305; bildirir.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F446;</span> G&#246;rselleri G&#246;r&#252;nt&#252;leme ve Kaydetme</h3>
+  <ul>
+    <li>G&#246;rseller aras&#305;nda ge&#231;mek i&#231;in kayd&#305;r&#305;n veya h&#305;zl&#305;ca atlamak i&#231;in alttaki sayfa kayd&#305;r&#305;c&#305;s&#305;n&#305; kullan&#305;n.</li>
+    <li>Yak&#305;nla&#351;t&#305;rmak i&#231;in parmaklar&#305;n&#305;z&#305; s&#305;k&#305;&#351;t&#305;r&#305;n veya &#231;ift dokunun, ard&#305;ndan s&#252;r&#252;kleyerek gezinin &mdash; galeri &#231;izgi roman okuyucusunu kullan&#305;r, bu y&#252;zden tam olarak ayn&#305; &#351;ekilde yak&#305;nla&#351;t&#305;r&#305;r. Bkz. <a href="#comic-zoom">&#199;izgi Roman Sayfalar&#305;n&#305; Yak&#305;nla&#351;t&#305;rma</a>.</li>
+    <li>Kontrolleri g&#246;stermek veya gizlemek i&#231;in ekran&#305;n ortas&#305;na dokunun.</li>
+    <li>Bir g&#246;rsele bas&#305;l&#305; tutun: <kbd>Tam &#199;&#246;z&#252;n&#252;rl&#252;kte G&#246;r&#252;nt&#252;le</kbd> &mdash; g&#246;rseli daha yak&#305;ndan incelemek i&#231;in orijinal boyutunda a&#231;ar &mdash; ya da <kbd>Foto&#287;raflar&rsquo;a Kaydet</kbd>, <kbd>Dosyalar&rsquo;a Kaydet</kbd> veya <kbd>G&#246;r&#252;nt&#252;y&#252; Kopyala</kbd> se&#231;eneklerini kullan&#305;n.</li>
+    <li>Galeri, &#231;izgi roman okuma y&#246;n&#252;n&#252;z&#252; izler &mdash; Webtoon tarz&#305; dikey kayd&#305;rma dahil.</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Ba&#351;a d&#246;n</a>
+
+<!-- READING FONTS -->
+<h2 id="fonts">Okuma Yaz&#305; Tipleri</h2>
+<p class="section-desc">Bir okuma yaz&#305; tipi se&#231;in, kendi yaz&#305; tipinizi ekleyin veya dil paketleri indirin.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F524;</span> Yaz&#305; Tipi Se&#231;me</h3>
+  <p><strong>Yaz&#305; Tipleri</strong> ekran&#305;na ula&#351;mak i&#231;in <kbd>Ayarlar</kbd> &rarr; <kbd>Okuma Tercihleri</kbd> &rarr; <kbd>Kitaplar</kbd> &rarr; <kbd>&#214;zel Yaz&#305; Tipleri</kbd> &#246;&#287;esini a&#231;&#305;n. Birka&#231; okuma yaz&#305; tipi yerle&#351;iktir; varsay&#305;lan olarak <strong>Literata</strong> kullan&#305;l&#305;r. Se&#231;ti&#287;iniz yaz&#305; tipi EPUB ve metin okuyucular&#305;na uygulan&#305;r.</p>
+  <div class="tip"><strong>&#304;pucu:</strong> Yaz&#305; tipi boyutu ve sat&#305;r aral&#305;&#287;&#305;n&#305; <kbd>Ayarlar</kbd> &rarr; <kbd>Okuma Tercihleri</kbd> &rarr; <kbd>Kitaplar</kbd> b&#246;l&#252;m&#252;nden ayarlay&#305;n.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F453;</span> Eri&#351;ilebilirlik Yaz&#305; Tipleri</h3>
+  <p>Daha kolay okuma i&#231;in tasarlanm&#305;&#351; iki yaz&#305; tipi paketle birlikte gelir ve her zaman kullan&#305;labilir: benzer harfler aras&#305;ndaki farklar&#305; belirginle&#351;tiren <strong>Atkinson Hyperlegible</strong> ve harflerin kar&#305;&#351;mas&#305;n&#305; azaltmak i&#231;in a&#287;&#305;rl&#305;kland&#305;r&#305;lan <strong>OpenDyslexic</strong>.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F4C2;</span> &#214;zel Yaz&#305; Tipleri</h3>
+  <p>Kendi <kbd>.ttf</kbd> veya <kbd>.otf</kbd> yaz&#305; tipi dosyalar&#305;n&#305;z&#305; Yaz&#305; Tipleri ekran&#305;ndan i&#231;e aktar&#305;n ve EPUB okuyucuda kullan&#305;n. &#304;&#231;e aktar&#305;lan yaz&#305; tipleri cihaz&#305;n&#305;zda kal&#305;r.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F4E5;</span> Yaz&#305; Tipleri &amp; Dil Paketleri &#304;ndir</h3>
+  <p><strong>Yaz&#305; Tipleri &#304;ndir</strong> alt&#305;nda, uygulaman&#305;n birlikte gelmedi&#287;i yaz&#305; sistemleri i&#231;in ek okuma yaz&#305; tipleri ve dil paketleri istek &#252;zerine kullan&#305;labilir &mdash; &#199;ince, Japonca &amp; Korece (CJK), Arap&#231;a, Devanagari ve Tayca. Paketler b&#252;y&#252;kt&#252;r (her biri yakla&#351;&#305;k 41&nbsp;MB), bu y&#252;zden indirmeden &#246;nce boyut g&#246;sterilir. Kurulduktan sonra tam olarak i&#231;e aktar&#305;lan yaz&#305; tipleri gibi &#231;al&#305;&#351;&#305;rlar.</p>
+  <div class="tip"><strong>&#304;pucu:</strong> Bir kitab&#305;n karakterleri bo&#351; kutular olarak g&#246;r&#252;n&#252;yorsa, bunlar&#305; g&#246;stermek i&#231;in e&#351;le&#351;en dil paketini indirin.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x1F4DC;</span> Yaz&#305; Tipi Lisanslar&#305;</h3>
+  <p>Paketle gelen ve indirilebilir yaz&#305; tipleri <strong>SIL Open Font License</strong> alt&#305;nda sa&#287;lan&#305;r. Herhangi birinin tam lisans&#305;n&#305; Yaz&#305; Tipleri ekran&#305;ndaki sat&#305;r&#305;ndan okuyabilirsiniz.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Ba&#351;a d&#246;n</a>
+
+<!-- READING DIRECTION -->
+<h2 id="reading-direction">Okuma Y&#246;n&#252;</h2>
+<p class="section-desc">Soldan sa&#287;a, sa&#287;dan sola veya kitab&#305;n yay&#305;mland&#305;&#287;&#305; y&#246;n her neyse.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x21C4;</span> Y&#246;n Se&#231;me</h3>
+  <p><kbd>Ayarlar</kbd> &rarr; <kbd>Okuma Tercihleri</kbd> &rarr; <kbd>Kitaplar</kbd> b&#246;l&#252;m&#252;n&#252; a&#231;&#305;n ve <strong>Okuma Modu</strong> alt&#305;ndaki <strong>Okuma Y&#246;n&#252;</strong> kontrol&#252;n&#252; kullan&#305;n:</p>
+  <ul>
+    <li><strong>Otomatik</strong> (varsay&#305;lan) &mdash; kitab&#305;n kendi belirtti&#287;i y&#246;n&#252; takip eder. Manga ve sa&#287;dan sola okunacak &#351;ekilde yay&#305;mlanan kitaplar herhangi bir ayar yapmadan do&#287;ru y&#246;nde a&#231;&#305;l&#305;r.</li>
+    <li><strong>Soldan Sa&#287;a</strong> &mdash; &#231;o&#287;u Bat&#305; kitab&#305; i&#231;in standartt&#305;r.</li>
+    <li><strong>Sa&#287;dan Sola</strong> &mdash; her kitap i&#231;in sa&#287;dan sola kullan&#305;n.</li>
+  </ul>
+  <p>Kitaptan &#231;&#305;kmadan da de&#287;i&#351;tirebilirsiniz: ara&#231; &#231;ubuklar&#305;n&#305; g&#246;stermek i&#231;in sayfan&#305;n ortas&#305;na dokunun, ard&#305;ndan alt &#231;ubuktaki <kbd>Aa</kbd> d&#252;&#287;mesine dokunun. De&#287;i&#351;iklik, o an okudu&#287;unuz sayfada hemen etkili olur.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F44B;</span> Y&#246;n&#252; Takip Eden &#214;&#287;eler</h3>
+  <ul>
+    <li>Sizi ileri g&#246;t&#252;ren taraf &mdash; sa&#287;dan sola bir kitapta, sola dokunmak veya kayd&#305;rmak sonraki sayfaya ge&#231;er.</li>
+    <li>Do&#287;ru taraftan &#231;evrilen sayfa &#231;evirme animasyonu.</li>
+    <li>Sayfadaki metnin d&#252;zeni.</li>
+  </ul>
+  <div class="tip"><strong>Not:</strong> &#304;lerleme kayd&#305;r&#305;c&#305;s&#305; her zaman soldan dolar, &#231;&#252;nk&#252; sayfan&#305;n ekranda nerede oldu&#287;unu de&#287;il, kitapta ne kadar ilerledi&#287;inizi g&#246;sterir.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x2139;</span> Nerede Ge&#231;erli</h3>
+  <p>Bu ayar, sayfal&#305; moddaki EPUB&rsquo;lar i&#231;indir &mdash; S&#252;rekli Kayd&#305;rma a&#231;&#305;kken gizlenir. &#199;izgi romanlar&#305;n kendi okuma s&#305;ras&#305; ayar&#305; vard&#305;r (bkz. <a href="#reading-comics">&#199;izgi Roman Okuma</a>) ve <a href="#fixed-layout">sabit d&#252;zenli kitaplar</a> her zaman kitapta belirtilen y&#246;n&#252; takip eder.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Ba&#351;a d&#246;n</a>
+
+<!-- VERTICAL WRITING -->
+<h2 id="vertical-writing">Dikey Yaz&#305;</h2>
+<p class="section-desc">Dikey s&#252;tunlarda dizilmi&#351; Japonca ve &#199;ince kitaplar.</p>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x2B07;</span> Dikey Kitaplar</h3>
+  <p>Dikey olarak dizilen kitaplar &mdash; Japonca tategaki (&#x7E26;&#x66F8;&#x304D;) ve geleneksel &#199;ince (&#x76F4;&#x6392;) &mdash; dizildikleri &#351;ekilde g&#246;sterilir: metin, sa&#287;dan sola dolan s&#252;tunlar halinde yukar&#305;dan a&#351;a&#287;&#305;ya akar ve sayfalar mangadaki gibi sola do&#287;ru &#231;evrilir.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x2699;</span> Yazma Y&#246;n&#252;</h3>
+  <p><kbd>Ayarlar</kbd> &rarr; <kbd>Okuma Tercihleri</kbd> &rarr; <kbd>Kitaplar</kbd> b&#246;l&#252;m&#252;n&#252; a&#231;&#305;n ve <strong>Yazma Y&#246;n&#252;</strong> kontrol&#252;n&#252; kullan&#305;n:</p>
+  <ul>
+    <li><strong>Otomatik</strong> (varsay&#305;lan) &mdash; her kitab&#305;n kendi d&#252;zenini takip eder. Dikey olarak dizilmi&#351; bir kitap dikey g&#246;sterilir; di&#287;er t&#252;m kitaplar etkilenmez.</li>
+    <li><strong>Yatay</strong> &mdash; dikey dizilmi&#351; olanlar dahil, her kitab&#305; yatay d&#252;zenler.</li>
+    <li><strong>Dikey</strong> &mdash; her kitab&#305; dikey s&#252;tunlarda d&#252;zenler.</li>
+  </ul>
+  <p>Ayn&#305; kontrol, okuyucu i&#231;i ayarlarda <kbd>Aa</kbd> d&#252;&#287;mesinin alt&#305;nda da bulunur.</p>
+  <div class="tip"><strong>Not:</strong> De&#287;i&#351;iklikler, kitab&#305;n bir sonraki a&#231;&#305;l&#305;&#351;&#305;nda uygulan&#305;r &mdash; ekrandaki kitap a&#231;&#305;ld&#305;&#287;&#305; d&#252;zeni korur.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x2139;</span> Bilmekte Fayda Var</h3>
+  <ul>
+    <li>Dikey kitaplar her zaman sayfal&#305; modu kullan&#305;r, bu y&#252;zden S&#252;rekli Kayd&#305;rma ve otomatik kayd&#305;rma bunlar i&#231;in kullan&#305;lamaz.</li>
+    <li>Kayd&#305;rma sayfa animasyonu dikey kitaplar i&#231;in kullan&#305;lmaz &mdash; bunlar yerine &#231;evirme animasyonuyla &#231;evrilir.</li>
+    <li>Yer imleri, vurgular, i&#231;indekiler tablosu, kitap i&#231;i arama ve sesli okuma hepsi her zamanki gibi &#231;al&#305;&#351;&#305;r.</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Ba&#351;a d&#246;n</a>
+
+<!-- READING COMICS -->
+<h2 id="reading-comics">&#199;izgi Roman Okuma</h2>
+<p class="section-desc">CBZ, CBR ve CB7 &#231;izgi roman okuma.</p>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4F1;</span> Okuma Modlar&#305;</h3>
+  <ul>
+    <li><strong>Soldan Sa&#287;a</strong> &mdash; Standart Bat&#305; tarz&#305; sayfa s&#305;ras&#305;.</li>
+    <li><strong>Sa&#287;dan Sola</strong> &mdash; Manga okuma s&#305;ras&#305;.</li>
+    <li><strong>Webtoon / Dikey Kayd&#305;rma</strong> &mdash; Uzun &#351;erit &#231;izgi romanlar i&#231;in ak&#305;c&#305; dikey kayd&#305;rma.</li>
+  </ul>
+  <p>Genel varsay&#305;lan&#305; <kbd>Ayarlar</kbd> &rarr; <kbd>Okuma Tercihleri</kbd> &rarr; <kbd>&#199;izgi Romanlar</kbd> b&#246;l&#252;m&#252;nden ayarlay&#305;n veya ayr&#305;nt&#305; sayfas&#305;ndan kitap bazl&#305; de&#287;i&#351;tirin.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F50E;</span> Sayfa &#214;l&#231;ekleme</h3>
+  <ul>
+    <li><strong>Ekrana S&#305;&#287;d&#305;r</strong> &mdash; Tam sayfa g&#246;r&#252;n&#252;r.</li>
+    <li><strong>Geni&#351;li&#287;e S&#305;&#287;d&#305;r</strong> &mdash; Geni&#351;li&#287;i doldurur, gerekirse dikey kayd&#305;rma.</li>
+    <li><strong>Y&#252;ksekli&#287;e S&#305;&#287;d&#305;r</strong> &mdash; Y&#252;ksekli&#287;i doldurur.</li>
+    <li><strong>Orijinal Boyut</strong> &mdash; 1:1 piksel g&#246;r&#252;nt&#252;leme.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F44B;</span> Hareketler</h3>
+  <ul>
+    <li>Sayfa &#231;evirmek i&#231;in sola/sa&#287;a kayd&#305;r&#305;n (sayfalanm&#305;&#351; modlar).</li>
+    <li>Yak&#305;nla&#351;t&#305;rmak i&#231;in parmaklar&#305;n&#305;z&#305; s&#305;k&#305;&#351;t&#305;r&#305;n veya &#231;ift dokunun, ard&#305;ndan s&#252;r&#252;kleyerek gezinin. Bkz. <a href="#comic-zoom">&#199;izgi Roman Sayfalar&#305;n&#305; Yak&#305;nla&#351;t&#305;rma</a>.</li>
+    <li>Ara&#231; &#231;ubu&#287;unu g&#246;stermek veya gizlemek i&#231;in sayfan&#305;n ortas&#305;na dokunun.</li>
+    <li>H&#305;zl&#305;ca atlamak i&#231;in alttaki sayfa kayd&#305;r&#305;c&#305;s&#305;n&#305; kullan&#305;n.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x26A0;</span> &#350;&#252;pheli Ar&#351;iv Uyar&#305;s&#305;</h3>
+  <p>&#304;&#231;eri&#287;i al&#305;&#351;&#305;lmad&#305;k derecede b&#252;y&#252;k veya a&#351;&#305;r&#305; s&#305;k&#305;&#351;t&#305;r&#305;lm&#305;&#351; g&#246;r&#252;nen bir &#231;izgi roman ar&#351;ivi (CBZ, CBR veya CB7) a&#231;t&#305;&#287;&#305;n&#305;zda &mdash; belle&#287;i a&#351;&#305;r&#305; y&#252;klemek i&#231;in tasarlanm&#305;&#351; &ldquo;zip bomb&rdquo; dosyalar&#305;n&#305;n kulland&#305;&#287;&#305; bir kal&#305;p &mdash; uygulama, herhangi bir &#231;&#305;karma i&#351;leminden &#246;nce <strong>&#350;&#252;pheli Ar&#351;iv</strong> uyar&#305;s&#305; g&#246;sterir.</p>
+  <ul>
+    <li>Dosyay&#305; a&#231;mamak i&#231;in <kbd>&#304;ptal</kbd>&rsquo;e dokunun. Bilinmeyen kaynaklardan gelen ar&#351;ivler i&#231;in g&#252;venli se&#231;im budur.</li>
+    <li>Dosyaya g&#252;veniyorsan&#305;z <kbd>Yine de A&#231;</kbd>&rsquo;a dokunun &mdash; uygulama g&#252;venlik kontrol&#252;n&#252; atlayarak sayfalar&#305; y&#252;kler.</li>
+  </ul>
+  <p>EPUB dosyalar&#305; i&#231;e aktar&#305;m s&#305;ras&#305;nda ayn&#305; korumay&#305; sessizce kullan&#305;r.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Ba&#351;a d&#246;n</a>
+
+<!-- COMIC ZOOM -->
+<h2 id="comic-zoom">&#199;izgi Roman Sayfalar&#305;n&#305; Yak&#305;nla&#351;t&#305;rma</h2>
+<p class="section-desc">&#199;izime daha da yakla&#351;&#305;n &mdash; hem sayfa modlar&#305;nda hem de webtoon kayd&#305;rmada.</p>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F50D;</span> Sayfa Modlar&#305;</h3>
+  <ul>
+    <li>Yak&#305;nla&#351;t&#305;rmak i&#231;in parmaklar&#305;n&#305;z&#305; s&#305;k&#305;&#351;t&#305;r&#305;n, s&#305;&#287;d&#305;r&#305;lm&#305;&#351; boyutun &#252;&#231; kat&#305;na kadar. Parmaklar&#305;n&#305;z&#305; s&#305;k&#305;&#351;t&#305;r&#305;rken &#231;izim parmaklar&#305;n&#305;z&#305;n alt&#305;nda kal&#305;r.</li>
+    <li>O noktada iki kat&#305;na atlamak i&#231;in &#231;ift dokunun; sayfay&#305; tekrar ekrana s&#305;&#287;d&#305;rmak i&#231;in tekrar &#231;ift dokunun.</li>
+    <li>Yak&#305;nla&#351;t&#305;r&#305;lm&#305;&#351;ken gezinmek i&#231;in tek parmakla s&#252;r&#252;kleyin.</li>
+    <li>Parmaklar&#305;n&#305;z&#305; neredeyse tamamen geri a&#231;mak sayfay&#305; d&#252;zg&#252;nce s&#305;&#287;d&#305;r&#305;lm&#305;&#351; hale getirir.</li>
+  </ul>
+  <p>Yak&#305;nla&#351;t&#305;rma, <strong>Ekrana S&#305;&#287;d&#305;r</strong> ve <strong>Y&#252;ksekli&#287;e S&#305;&#287;d&#305;r</strong> &#246;l&#231;ekleme se&#231;enekleriyle ve &#231;ift sayfa g&#246;r&#252;n&#252;m&#252;yle &#231;al&#305;&#351;&#305;r. <strong>Geni&#351;li&#287;e S&#305;&#287;d&#305;r</strong> ve <strong>Orijinal Boyut</strong> sayfay&#305; zaten ekrandan daha b&#252;y&#252;k g&#246;sterip bunun yerine kayd&#305;rma yapt&#305;r&#305;r &mdash; orada daha yak&#305;ndan bakmak i&#231;in a&#351;a&#287;&#305;daki <strong>Tam &#199;&#246;z&#252;n&#252;rl&#252;kte G&#246;r&#252;nt&#252;le</strong> &#246;zelli&#287;ini kullan&#305;n.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4F1;</span> Webtoon Kayd&#305;rma</h3>
+  <ul>
+    <li>T&#252;m &#351;eridi yak&#305;nla&#351;t&#305;rmak i&#231;in parmaklar&#305;n&#305;z&#305; s&#305;k&#305;&#351;t&#305;r&#305;n veya &#231;ift dokunun, normal boyutunun &#252;&#231; kat&#305;na kadar.</li>
+    <li>Yak&#305;nla&#351;t&#305;r&#305;lm&#305;&#351;ken kayd&#305;rma &#231;al&#305;&#351;maya devam eder &mdash; her zamanki gibi yukar&#305; ve a&#351;a&#287;&#305; s&#252;r&#252;kleyin yeter.</li>
+    <li>Yak&#305;nla&#351;t&#305;r&#305;lm&#305;&#351; bir sayfada yana do&#287;ru gezinmek i&#231;in yana s&#252;r&#252;kleyin.</li>
+    <li>Kayd&#305;rmaya devam ettik&#231;e yak&#305;nla&#351;t&#305;rma seviyesi sabit kal&#305;r, b&#246;ylece bir b&#246;l&#252;m&#252;n tamam&#305;n&#305; b&#252;y&#252;t&#252;lm&#252;&#351; halde okuyabilirsiniz. Cihaz&#305; d&#246;nd&#252;rmek normal boyuta geri d&#246;nd&#252;r&#252;r.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x2728;</span> Tam &#199;&#246;z&#252;n&#252;rl&#252;kte G&#246;r&#252;nt&#252;le</h3>
+  <p>Yak&#305;nla&#351;t&#305;rma, sayfay&#305; ekran&#305;n&#305;z i&#231;in haz&#305;rland&#305;&#287;&#305; boyutta b&#252;y&#252;t&#252;r. Bir sayfaya m&#252;mk&#252;n olan en keskin bak&#305;&#351; i&#231;in, sayfaya bas&#305;l&#305; tutun ve <kbd>Tam &#199;&#246;z&#252;n&#252;rl&#252;kte G&#246;r&#252;nt&#252;le</kbd> se&#231;ene&#287;ini se&#231;in &mdash; o sayfa ar&#351;ivin orijinal &#231;&#246;z&#252;n&#252;rl&#252;&#287;&#252;nde kodu &#231;&#246;z&#252;lerek g&#246;sterilir ve &#231;ok daha fazla yak&#305;nla&#351;t&#305;rabilirsiniz. &#199;ift dokunma, ekrana s&#305;&#287;d&#305;rma ile iki kat boyut aras&#305;nda ge&#231;i&#351; yapar; geri d&#246;nmek i&#231;in a&#351;a&#287;&#305; kayd&#305;r&#305;n veya kapatma d&#252;&#287;mesine dokunun.</p>
+  <div class="tip"><strong>Not:</strong> Yak&#305;nla&#351;t&#305;rma kaydedilmez. Kitab&#305; kapatmak her zaman normal s&#305;&#287;d&#305;rmaya d&#246;ner.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Ba&#351;a d&#246;n</a>
+
+<!-- TTS -->
+<h2 id="tts">Sesli Okuma &amp; CarPlay</h2>
+<p class="section-desc">Kitaplar&#305;n&#305;z&#305; sesli olarak dinleyin.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F50A;</span> Sesli Okumay&#305; Kullanma</h3>
+  <p>Herhangi bir EPUB, PDF veya TXT kitab&#305;n&#305; a&#231;&#305;n ve ara&#231; &#231;ubu&#287;undaki oynat d&#252;&#287;mesine dokunun. Sesli okuma her seferinde bir c&#252;mle okur ve o anki kelimeyi vurgular.</p>
+  <ul>
+    <li><strong>H&#305;z</strong> &mdash; TTS kontollerinde 0,5&times; ile 2&times; aras&#305;.</li>
+    <li><strong>Ses</strong> &mdash; <kbd>Ayarlar</kbd> &rarr; <kbd>Okuma Tercihleri</kbd> &rarr; <kbd>Sesli Okuma</kbd> b&#246;l&#252;m&#252;nden 100&rsquo;den fazla sistem sesi aras&#305;ndan se&#231;in.</li>
+    <li><strong>Atla</strong> &mdash; C&#252;mle veya b&#246;l&#252;m atlama i&#231;in ileri/geri d&#252;&#287;mesine dokunun.</li>
+  </ul>
+  <div class="tip"><strong>Not:</strong> <a href="#fixed-layout">Sabit d&#252;zenli kitaplar&#305;n</a> &mdash; sayfalar&#305; sabit tasar&#305;mlar olan &#231;izgi romanlar ve resimli kitaplar&#305;n &mdash; uygulaman&#305;n sesli okuyabilece&#287;i bir metni yoktur, bu y&#252;zden bunlar i&#231;in oynat d&#252;&#287;mesi g&#246;sterilmez.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F697;</span> CarPlay</h3>
+  <p>CarPlay uyumlu bir araca ba&#287;land&#305;&#287;&#305;nda, uygulama basitle&#351;tirilmi&#351; oynatma kontrolleriyle araban&#305;z&#305;n ekran&#305;nda g&#246;r&#252;n&#252;r. Sesli okuma arka planda &#231;almaya devam eder &mdash; ekran&#305; a&#231;&#305;k tutman&#305;za gerek yok.</p>
+  <div class="tip"><strong>&#304;pucu:</strong> CarPlay olmadan bile uygulama arka plandayken oynatmay&#305; s&#252;rd&#252;rmek i&#231;in TTS ayarlar&#305;nda <kbd>Arka Plan Sesi</kbd><span class="badge badge-premium">Premium</span> &#246;zelli&#287;ini etkinle&#351;tirin.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Ba&#351;a d&#246;n</a>
+
+<!-- AI UPSCALING -->
+<h2 id="upscaling">AI &#199;izgi Roman Y&#252;kseltme</h2>
+<p class="section-desc">D&#252;&#351;&#252;k &#231;&#246;z&#252;n&#252;rl&#252;kl&#252; &#231;izgi roman sayfalar&#305;n&#305; cihaz &#252;zerinde iyile&#351;tirin.<span class="badge badge-premium">Premium</span></p>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x2728;</span> Ne Yapar</h3>
+  <p>&#199;&#246;z&#252;n&#252;rl&#252;k e&#351;i&#287;inin alt&#305;ndaki &#231;izgi roman sayfalar&#305;n&#305; y&#252;kseltmek i&#231;in cihaz &#252;zerinde bir makine &#246;&#287;renimi modeli kullan&#305;r. Sonu&#231; daha keskin &#231;izgiler ve daha az g&#246;r&#252;n&#252;r s&#305;k&#305;&#351;t&#305;rma kusurlar&#305;d&#305;r &mdash; &#246;zellikle eski veya d&#252;&#351;&#252;k kaliteli taramalar i&#231;in faydal&#305;d&#305;r.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x2699;</span> Kurulum</h3>
+  <ol class="steps">
+    <li><kbd>Ayarlar</kbd> &rarr; <kbd>Okuma Tercihleri</kbd> &rarr; <kbd>&#199;izgi Romanlar</kbd> &rarr; <kbd>AI Y&#252;kseltme</kbd> b&#246;l&#252;m&#252;ne gidin.</li>
+    <li>Etkinle&#351;tirin.</li>
+    <li><strong>&#199;&#246;z&#252;n&#252;rl&#252;k E&#351;i&#287;i</strong>&rsquo;ni ayarlay&#305;n &mdash; bu piksel geni&#351;li&#287;inin alt&#305;ndaki sayfalar y&#252;kseltilir (varsay&#305;lan: 1500 px).</li>
+    <li>Arka planda ka&#231; sonraki sayfan&#305;n &#246;nceden i&#351;lenece&#287;ini kontrol etmek i&#231;in <strong>&#214;n Getirme Penceresi</strong>&rsquo;ni ayarlay&#305;n.</li>
+    <li>Bir <strong>G&#252;r&#252;lt&#252; Azaltma Seviyesi</strong> se&#231;in (Otomatik genellikle en iyisidir).</li>
+  </ol>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4BE;</span> &#214;nbellek &amp; Depolama</h3>
+  <p>Y&#252;kseltilmi&#351; g&#246;r&#252;nt&#252;ler, yeniden i&#351;lenmemesi i&#231;in &#246;nbelleklenir. &#214;nbelle&#287;in ne kadar s&#252;re tutulaca&#287;&#305;n&#305; se&#231;in (7&ndash;90 g&#252;n veya s&#252;resiz) ve istedi&#287;iniz zaman ayarlardan temizleyin.</p>
+  <div class="tip"><strong>&#304;pucu:</strong> Y&#252;kseltilmi&#351; sayfalarda k&#252;&#231;&#252;k bir g&#246;sterge rozeti g&#246;r&#252;n&#252;r. Tercih ederseniz bunu ayarlardan kapatabilirsiniz.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Ba&#351;a d&#246;n</a>
+
+<!-- HIDDEN MODE -->
+<h2 id="hidden">Gizli Kitaplar</h2>
+<p class="section-desc">Belirli kitaplar&#305; gizli tutun.<span class="badge badge-premium">Premium</span></p>
+
+<div class="card">
+  <h3><span class="icon icon-indigo">&#x1F441;</span> Kitaplar&#305; Gizleme</h3>
+  <ol class="steps">
+    <li>Bir kitab&#305;n ayr&#305;nt&#305; sayfas&#305;n&#305; a&#231;&#305;n ve men&#252;ye (&hellip;) dokunun.</li>
+    <li><kbd>Kitab&#305; Gizle</kbd> se&#231;ene&#287;ini se&#231;in.</li>
+    <li>Kitap normal k&#252;t&#252;phane g&#246;r&#252;n&#252;m&#252;nden kaybolur.</li>
+  </ol>
+  <p>Birden fazla kitab&#305; ayn&#305; anda gizlemek i&#231;in Se&#231;im Modunu kullan&#305;n.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F513;</span> Gizli Kitaplar&#305; G&#246;r&#252;nt&#252;leme</h3>
+  <p>K&#252;t&#252;phanede a&#351;a&#287;&#305; &#231;ekerek <strong>Gizli Mod</strong>&rsquo;u etkinle&#351;tirin. T&#252;m kitaplar&#305;n&#305;z &mdash; hem gizli hem de g&#246;r&#252;n&#252;r olanlar &mdash; art&#305;k g&#246;sterilir. Gizli moddan &#231;&#305;kmak i&#231;in tekrar &#231;ekin veya uygulamadan ayr&#305;l&#305;n.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F512;</span> Gizlilik Se&#231;enekleri</h3>
+  <p>Gizli mod etkinken, uygulamadan ayr&#305;ld&#305;&#287;&#305;n&#305;zda ne olaca&#287;&#305;n&#305; se&#231;mek i&#231;in <kbd>Ayarlar</kbd> &rarr; <kbd>Gizli Mod</kbd> b&#246;l&#252;m&#252;ne gidin:</p>
+  <ul>
+    <li><strong>Otomatik &#231;&#305;k&#305;&#351;</strong> (varsay&#305;lan) &mdash; Gizli mod otomatik olarak kapan&#305;r. H&#305;zl&#305; ve basit.</li>
+    <li><strong>Face ID / Touch ID Gerektir</strong> &mdash; Gizli mod a&#231;&#305;k kal&#305;r, ancak d&#246;nd&#252;&#287;&#252;n&#252;zde biyometrik kimlik do&#287;rulama gerektirir. Daha g&#252;venli.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x21A9;</span> Kitaplar&#305; G&#246;sterme</h3>
+  <p>Gizli moddayken, gizli bir kitab&#305;n ayr&#305;nt&#305;lar&#305;n&#305; a&#231;&#305;n ve <kbd>Kitab&#305; G&#246;ster</kbd> se&#231;ene&#287;ini se&#231;in veya toplu g&#246;sterme i&#231;in Se&#231;im Modunu kullan&#305;n.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x2601;</span> Gizli Kitaplar&#305; Senkronize Etme</h3>
+  <p>Gizli modda, <kbd>Ayarlar</kbd> &rarr; <kbd>Gizli Mod</kbd> b&#246;l&#252;m&#252;ne gidin ve <kbd>Gizli kitaplar&#305; iCloud ile senkronize et</kbd> se&#231;ene&#287;ini a&#231;&#305;n:</p>
+  <ul>
+    <li><strong>Kapal&#305;</strong> (varsay&#305;lan) &mdash; gizli kitaplar yaln&#305;zca bu cihazda kal&#305;r. Bir kitab&#305; gizlemek onu iCloud&rsquo;dan da kald&#305;r&#305;r.</li>
+    <li><strong>A&#231;&#305;k</strong> &mdash; gizli kitaplar iCloud &#252;zerinden senkronize edilir, ancak oturum a&#231;t&#305;&#287;&#305;n&#305;z her cihazda gizli kal&#305;r.</li>
+  </ul>
+  <p>iCloud&rsquo;da zaten gizli kitaplar&#305;n&#305;z varken bu se&#231;ene&#287;i kapatmak, onlarla ne yap&#305;laca&#287;&#305;n&#305; sorar:</p>
+  <ul>
+    <li><strong>T&#252;m cihazlarda tut</strong> &mdash; di&#287;er cihazlar&#305;n&#305;z senkronize edilmi&#351; kopyalar&#305;n&#305; korur; bu cihaz yaln&#305;zca yerel, &#246;zel bir kopya tutar.</li>
+    <li><strong>iCloud&rsquo;dan tamamen kald&#305;r</strong> &mdash; kitaplar&#305; iCloud&rsquo;dan kald&#305;r&#305;r; di&#287;er her cihaz kendi gizli kitapl&#305;&#287;&#305;nda kendi &#246;zel kopyas&#305;n&#305; tutar.</li>
+  </ul>
+  <div class="tip"><strong>Not:</strong> Di&#287;er cihazlar&#305;n&#305;zdan biri gizli bir kitab&#305; iCloud&rsquo;dan kald&#305;r&#305;rsa, bu cihaz &mdash; kitab&#305;n dosyas&#305; daha &#246;nce oraya indirilmi&#351; olmak kayd&#305;yla &mdash; kendi &#246;zel kopyas&#305;n&#305; gizli kitapl&#305;kta otomatik olarak tutar.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F5D1;</span> Gizli Kitaplar&#305; Kal&#305;c&#305; Olarak Silme</h3>
+  <p>Gizli modda, <kbd>Ayarlar</kbd> &rarr; <kbd>Gizli Mod</kbd> b&#246;l&#252;m&#252;ne gidin ve t&#252;m gizli kitaplar&#305; bu cihazdan, iCloud&rsquo;dan ve di&#287;er cihazlar&#305;n&#305;zdan kald&#305;rmak i&#231;in <kbd>Gizli Kitaplar&#305; Kal&#305;c&#305; Olarak Sil</kbd> se&#231;ene&#287;ini se&#231;in. Onaylamak i&#231;in <kbd>DELETE</kbd> yaz&#305;n.</p>
+  <div class="tip"><strong>Uyar&#305;:</strong> Bu i&#351;lem geri al&#305;namaz. O s&#305;rada &#231;evrimd&#305;&#351;&#305; olan cihazlar, bir sonraki senkronizasyona kadar yerel kopyalar&#305;n&#305; korur.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Ba&#351;a d&#246;n</a>
+
+<!-- BOOKMARKS, HIGHLIGHTS, TAGS -->
+<h2 id="bookmarks">Yer &#304;mleri, Vurgular &amp; Etiketler</h2>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F516;</span> Yer &#304;mleri</h3>
+  <p>Ge&#231;erli sayfay&#305; yer imlerine eklemek i&#231;in okuyucu ara&#231; &#231;ubu&#287;undaki yer imi simgesine dokunun. &#304;ste&#287;e ba&#287;l&#305; not ekleyin. Bir kitab&#305;n t&#252;m yer imlerini ayr&#305;nt&#305; sayfas&#305;ndan g&#246;r&#252;nt&#252;leyin.</p>
+  <div class="tip"><strong>Not:</strong> Burada yaln&#305;zca elle olu&#351;turdu&#287;unuz yer imleri g&#246;r&#252;n&#252;r. Uygulaman&#305;n bir kitab&#305; kapatt&#305;&#287;&#305;n&#305;zda otomatik olarak kaydetti&#287;i konumlar, kendi yer imlerinizin &#252;zerine binmemesi i&#231;in <a href="#history">Okuma Ge&#231;mi&#351;i</a>&rsquo;nde ayr&#305; tutulur.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F58D;</span> Vurgular<span class="badge badge-premium">Premium</span></h3>
+  <p>EPUB dosyalar&#305;nda vurgulamak i&#231;in metin se&#231;in. Be&#351; renk aras&#305;ndan se&#231;in (sar&#305;, pembe, ye&#351;il, mavi, turuncu) ve notlar ekleyin. T&#252;m vurgular kitab&#305;n ayr&#305;nt&#305; sayfas&#305;nda listelenir.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F3F7;</span> Etiketler</h3>
+  <p>Ayr&#305;nt&#305; sayfas&#305;ndan herhangi bir kitaba etiket ekleyin. Etiketler aranabilir ve k&#252;t&#252;phane filtresi olarak kullan&#305;labilir. T&#252;m etiketleri <kbd>Ayarlar</kbd> &rarr; <kbd>Etiketler</kbd> b&#246;l&#252;m&#252;nden y&#246;netin.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Ba&#351;a d&#246;n</a>
+
+<!-- READING HISTORY -->
+<h2 id="history">Okuma Ge&#231;mi&#351;i</h2>
+<p class="section-desc">Yak&#305;n zamanda bulundu&#287;unuz herhangi bir konuma geri d&#246;n&#252;n.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F552;</span> Otomatik Kay&#305;tlar</h3>
+  <p>Bir kitab&#305; kapatt&#305;&#287;&#305;n&#305;zda veya uygulamay&#305; arka plana ald&#305;&#287;&#305;n&#305;zda, mevcut konumunuz bir ge&#231;mi&#351; girdisi olarak kaydedilir &mdash; yer imi eklemeyi hat&#305;rlaman&#305;za gerek yoktur. Bu, her okuyucuda &#231;al&#305;&#351;&#305;r: EPUB, PDF, TXT/RTF ve &#231;izgi romanlar.</p>
+  <ul>
+    <li>Her kitap i&#231;in en fazla <strong>50</strong> son konum saklan&#305;r. Yeniler eklendik&#231;e eski girdiler otomatik olarak silinir.</li>
+    <li>Birka&#231; dakika i&#231;inde kitab&#305; ayn&#305; yerde tekrar kapatmak, kopya olu&#351;turmak yerine mevcut girdiyi g&#252;nceller.</li>
+    <li>Otomatik olarak kaydedilen konumlar, bilin&#231;li olarak ekledi&#287;iniz yer imlerinizle kar&#305;&#351;mamas&#305; i&#231;in elle olu&#351;turulan yer imleri listenizden ayr&#305; tutulur.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4D6;</span> Kitap &#304;&#231;indeki Ge&#231;mi&#351;</h3>
+  <p>Okurken sa&#287; &#252;stteki ta&#351;ma men&#252;s&#252;ne (&hellip;) dokunun ve <kbd>Okuma Ge&#231;mi&#351;i</kbd>&rsquo;ni se&#231;in. O kitaptaki son konumlar&#305;n&#305;z&#305;n listesini, en yeniler &#252;stte olacak &#351;ekilde, b&#246;l&#252;m veya sayfa ad&#305; ile birlikte ve her bir girdinin ne kadar &#246;nce kaydedildi&#287;ini g&#246;sterecek &#351;ekilde g&#246;r&#252;rs&#252;n&#252;z.</p>
+  <ul>
+    <li>Bir girdiye dokunarak do&#287;rudan o konuma atlay&#305;n.</li>
+    <li>Bir girdiyi silmek i&#231;in sola kayd&#305;r&#305;n.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F4DA;</span> K&#252;t&#252;phanenizdeki Ge&#231;mi&#351;</h3>
+  <p>K&#252;t&#252;phaneden, &#252;st ara&#231; &#231;ubu&#287;undaki ta&#351;ma men&#252;s&#252;ne (&hellip;) dokunun ve son zamanlarda a&#231;t&#305;&#287;&#305;n&#305;z her kitab&#305; g&#252;ne g&#246;re grupland&#305;r&#305;lm&#305;&#351; olarak g&#246;rmek i&#231;in <kbd>Okuma Ge&#231;mi&#351;i</kbd>&rsquo;ni se&#231;in. Bir sat&#305;ra dokunarak kitab&#305; kald&#305;&#287;&#305;n&#305;z yerden a&#231;&#305;n.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Ba&#351;a d&#246;n</a>
+
+<!-- AUTHOR & TAG BROWSING -->
+<h2 id="search">Yazar ve Etiket G&#246;z Atma</h2>
+<p class="section-desc">Uygulaman&#305;n herhangi bir yerinden kitaplar&#305; yazara veya etikete g&#246;re bulun.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F464;</span> Yazarlar</h3>
+  <p>K&#252;t&#252;phanenizdeki t&#252;m yazarlar&#305; kitap say&#305;lar&#305;yla birlikte g&#246;rmek i&#231;in <kbd>Ayarlar</kbd> &rarr; <kbd>Yazarlar</kbd> b&#246;l&#252;m&#252;ne gidin. Bir yazara dokunarak k&#252;t&#252;phanede o yazar&#305;n t&#252;m kitaplar&#305;n&#305; aray&#305;n.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F3F7;</span> Etiket Aramas&#305;</h3>
+  <p><kbd>Ayarlar</kbd> &rarr; <kbd>Etiketler</kbd> b&#246;l&#252;m&#252;nde, o etikete sahip kitaplar&#305; k&#252;t&#252;phanede aramak i&#231;in herhangi bir etikete dokunun. Yeniden adland&#305;rmak veya silmek i&#231;in uzun bas&#305;n.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F50D;</span> Ba&#287;lam Men&#252;s&#252;nden H&#305;zl&#305; Arama</h3>
+  <ul>
+    <li>K&#252;t&#252;phanede bir kitaba uzun bas&#305;n &rarr; <kbd>[Yazar] Yazar&#305;n&#305;n Kitaplar&#305;n&#305; Bul</kbd></li>
+    <li>Bir kitab&#305;n ayr&#305;nt&#305; sayfas&#305;nda, arama yapmak i&#231;in yazar ad&#305;na veya herhangi bir etikete uzun bas&#305;n</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Ba&#351;a d&#246;n</a>
+
+<!-- METADATA -->
+<h2 id="metadata">Meta Veriler &amp; ComicInfo.xml</h2>
+<p class="section-desc">Kitap meta verilerini g&#246;r&#252;nt&#252;leyin ve d&#252;zenleyin.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x270F;</span> Meta Veri D&#252;zenleyici</h3>
+  <p>Bir kitab&#305;n ayr&#305;nt&#305; sayfas&#305;ndan ta&#351;ma men&#252;s&#252;ne (&hellip;) dokunun ve ba&#351;l&#305;k, yazar, seri, a&#231;&#305;klama ve di&#287;er alanlar&#305; de&#287;i&#351;tirmek i&#231;in <kbd>Meta Verileri D&#252;zenle</kbd>&rsquo;yi se&#231;in. Ayr&#305;ca meta verileri orijinal dosyadan yeniden &#231;&#305;karabilirsiniz.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4CB;</span> ComicInfo.xml</h3>
+  <p><code>ComicInfo.xml</code> dosyas&#305; i&#231;eren &#231;izgi roman ar&#351;ivlerinin (CBZ, CBR, CB7) meta verileri, i&#231;e aktar&#305;m s&#305;ras&#305;nda otomatik olarak &#231;&#305;kar&#305;l&#305;r &mdash; ba&#351;l&#305;k, yazar, seri, say&#305; numaras&#305;, &#246;zet, yay&#305;nc&#305;, t&#252;r ve etiketler dahil.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Ba&#351;a d&#246;n</a>
+
+<!-- ICLOUD -->
+<h2 id="icloud">iCloud Senkronizasyonu</h2>
+<p class="section-desc">K&#252;t&#252;phanenizi cihazlar aras&#305;nda senkronize tutun.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x2601;</span> Senkronizasyonu Etkinle&#351;tirme</h3>
+  <ol class="steps">
+    <li><kbd>Ayarlar</kbd> &rarr; <kbd>iCloud Senkronizasyonu</kbd> b&#246;l&#252;m&#252;ne gidin.</li>
+    <li><kbd>K&#252;t&#252;phaneyi iCloud ile Senkronize Et</kbd> se&#231;ene&#287;ini a&#231;&#305;n.</li>
+    <li>Senkronizasyon bir sonraki uygulama a&#231;&#305;l&#305;&#351;&#305;nda ger&#231;ekle&#351;ir.</li>
+  </ol>
+  <p>Meta verileriniz, okuma ilerlemeniz, yer imleriniz, vurgular&#305;n&#305;z ve raflar&#305;n&#305;z ayn&#305; iCloud hesab&#305;na giri&#351; yapm&#305;&#351; t&#252;m cihazlarda senkronize edilir.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F4CA;</span> Senkronizasyon Durumu</h3>
+  <p><kbd>Ayarlar</kbd> &rarr; <kbd>iCloud Senkronizasyonu</kbd> kitap dosyalar&#305;n&#305;z i&#231;in bir durum kart&#305; g&#246;sterir:</p>
+  <ul>
+    <li>Bir ba&#351;l&#305;k &mdash; <strong>G&#252;ncel</strong>, <strong>Senkronize ediliyor&hellip;</strong> (bir say&#305; ile), veya <strong>Oturum a&#231;&#305;lmam&#305;&#351;</strong>.</li>
+    <li>K&#252;t&#252;phanenizin dosyalar&#305;n&#305;n ne kadar&#305;n&#305;n iCloud&rsquo;da oldu&#287;unu g&#246;steren bir &#231;ubuk.</li>
+    <li>Bir d&#246;k&#252;m &mdash; <strong>Senkronize edildi</strong> (toplam boyutla birlikte), <strong>Yaln&#305;zca iCloud&rsquo;da</strong> (bu cihaza hen&#252;z indirilmedi) ve <strong>Devam ediyor</strong>.</li>
+  </ul>
+  <div class="tip"><strong>Not:</strong> Bu kart yaln&#305;zca kitap <em>dosyalar&#305;n&#305;</em> izler. Okuma ilerlemeniz, yer imleriniz, vurgular&#305;n&#305;z ve raflar&#305;n&#305;z, dosya durumundan ba&#287;&#305;ms&#305;z olarak ayr&#305; ve otomatik olarak senkronize edilir.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x2601;</span> Kapak Rozetleri</h3>
+  <p>Kitap kapaklar&#305;, dosya senkronizasyon durumunu belirtmek i&#231;in sa&#287; alt k&#246;&#351;ede k&#252;&#231;&#252;k bir bulut simgesi g&#246;sterir:</p>
+  <ul>
+    <li><strong>Bulut simgesi</strong> &mdash; dosya yaln&#305;zca iCloud&rsquo;da. &#304;ndirmek i&#231;in kitab&#305;n sayfas&#305;n&#305; a&#231;&#305;n.</li>
+    <li><strong>Yukar&#305;/a&#351;a&#287;&#305; oklar</strong> &mdash; dosya &#351;u anda y&#252;kleniyor veya indiriliyor.</li>
+    <li><strong>Simge yok</strong> &mdash; dosya zaten bu cihazda.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4E5;</span> Otomatik &#304;ndirme</h3>
+  <p>Otomatik indirmeler i&#231;in maksimum dosya boyutunu se&#231;in. Daha b&#252;y&#252;k kitaplar siz a&#231;ana kadar bulutta kal&#305;r. Limiti iCloud ayarlar&#305;ndan d&#252;zenleyin.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Ba&#351;a d&#246;n</a>
+
+<!-- STATS -->
+<h2 id="stats">Okuma &#304;statistikleri</h2>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F4CA;</span> Okuma Etkinli&#287;iniz</h3>
+  <p>G&#246;rmek i&#231;in <kbd>Ayarlar</kbd> &rarr; <kbd>K&#252;t&#252;phane &#304;statistikleri</kbd> b&#246;l&#252;m&#252;n&#252; a&#231;&#305;n:</p>
+  <ul>
+    <li>Toplam kitap, okunan sayfa ve okuma s&#252;resi.</li>
+    <li>G&#252;nl&#252;k okuma etkinli&#287;i grafi&#287;i.</li>
+    <li>Formata ve okuma durumuna g&#246;re kitaplar.</li>
+    <li>Kitap baz&#305;nda etkinlik d&#246;k&#252;m&#252;.</li>
+  </ul>
+  <div class="tip"><strong>Not:</strong> &#304;statistikler gizli moda sayg&#305; g&#246;sterir &mdash; gizli mod kapal&#305;yken gizli kitaplar&#305;n istatistikleri hari&#231; tutulur.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Ba&#351;a d&#246;n</a>
+
+<!-- WEBDAV & OPDS -->
+<h2 id="webdav">WebDAV &amp; OPDS</h2>
+<p class="section-desc">Uzak sunuculardan ve kataloglardan g&#246;z at&#305;n ve indirin.</p>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F5C4;</span> WebDAV</h3>
+  <p>Klas&#246;rlere g&#246;z atmak ve kitap indirmek i&#231;in bir NAS, Nextcloud veya Calibre sunucusuna ba&#287;lan&#305;n.</p>
+  <ol class="steps">
+    <li><kbd>Ayarlar</kbd> &rarr; <kbd>Kitap &#304;&#231;e Aktar</kbd> &rarr; <kbd>WebDAV</kbd> b&#246;l&#252;m&#252;ne gidin.</li>
+    <li><kbd>Sunucu Ekle</kbd> &#246;&#287;esine dokunun ve URL&rsquo;yi girin.</li>
+    <li>Gerekirse kullan&#305;c&#305; ad&#305; ve parola ekleyin.</li>
+    <li><kbd>Ba&#287;lant&#305;y&#305; Test Et</kbd> &#246;&#287;esine dokunun, ard&#305;ndan kaydedin.</li>
+  </ol>
+  <div class="tip"><strong>Kendinden imzal&#305; sertifikalar:</strong> Sunucunuz kendinden imzal&#305; bir sertifika kullan&#305;yorsa <kbd>G&#252;venilmeyen Sertifikalara &#304;zin Ver</kbd> se&#231;ene&#287;ini a&#231;abilirsiniz. Uygulama &#246;nce onay ister &mdash; bu, TLS do&#287;rulamas&#305;n&#305; devre d&#305;&#351;&#305; b&#305;rak&#305;r, b&#246;ylece a&#287;&#305;n&#305;zdaki herkes sunucu gibi davranabilir. Bunu yaln&#305;zca kendi kontrol&#252;n&#252;zdeki bir sunucu i&#231;in etkinle&#351;tirin.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4DA;</span> OPDS Kataloglar&#305;</h3>
+  <p>OPDS, kitap kataloglar&#305; i&#231;in a&#231;&#305;k bir standartt&#305;r. Herkese a&#231;&#305;k kataloglar (Project Gutenberg, Standard Ebooks vb.) veya kendi &#246;zel sunucunuzu ekleyin.</p>
+  <ol class="steps">
+    <li><kbd>Ayarlar</kbd> &rarr; <kbd>Kitap &#304;&#231;e Aktar</kbd> &rarr; <kbd>OPDS</kbd> b&#246;l&#252;m&#252;ne gidin.</li>
+    <li><kbd>Katalog Ekle</kbd> &#246;&#287;esine dokunun ve besleme URL&rsquo;sini girin.</li>
+    <li>Kategorilere g&#246;z at&#305;n ve kitaplar&#305; k&#252;t&#252;phanenize indirin.</li>
+  </ol>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Ba&#351;a d&#246;n</a>
+
+<!-- RESUME -->
+<h2 id="resume">Ba&#351;latmada Devam Et</h2>
+<p class="section-desc">Kald&#305;&#287;&#305;n&#305;z yerden otomatik olarak devam edin.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x25B6;</span> Kurulum</h3>
+  <p><kbd>Ayarlar</kbd> &rarr; <kbd>Genel</kbd> b&#246;l&#252;m&#252;ne gidin ve <kbd>Ba&#351;lat&#305;ld&#305;&#287;&#305;nda Son Kitaba Devam Et</kbd> se&#231;ene&#287;ini a&#231;&#305;n. Uygulamay&#305; bir sonraki a&#231;&#305;&#351;&#305;n&#305;zda, en son okudu&#287;unuz kitap ve sayfaya do&#287;rudan atlayacakt&#305;r.</p>
+  <div class="tip"><strong>Gizli kitaplar:</strong> En son okudu&#287;unuz kitap gizliyse, uygulama devam etmeden &#246;nce Face ID / Touch ID isteyecektir. Buna izin vermek i&#231;in Gizli Mod ayarlar&#305;nda <kbd>Kimlik do&#287;rulamadan sonra gizli kitaba devam et</kbd> se&#231;ene&#287;ini etkinle&#351;tirin.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Ba&#351;a d&#246;n</a>
+
+<!-- FORMATS -->
+<h2 id="formats">Desteklenen Formatlar</h2>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4D6;</span> Kitaplar</h3>
+  <div class="formats-grid">
+    <div class="format-tag">EPUB</div>
+    <div class="format-tag">PDF</div>
+    <div class="format-tag">TXT</div>
+    <div class="format-tag">RTF</div>
+  </div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4F1;</span> &#199;izgi Romanlar</h3>
+  <div class="formats-grid">
+    <div class="format-tag">CBZ</div>
+    <div class="format-tag">CBR</div>
+    <div class="format-tag">CB7</div>
+  </div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Ba&#351;a d&#246;n</a>
+
+</body>
+</html>

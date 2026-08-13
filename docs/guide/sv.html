@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Anv&#228;ndarhandbok</title>
+<link rel="stylesheet" href="UserGuideStyle.css">
+<!-- USER-GUIDE-NAV-STYLE:START -->
+<style>
+.guide-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 14px;
+  padding: 10px 14px;
+  margin: 0 0 16px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  font-size: 13px;
+}
+.guide-nav-home {
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.guide-nav-arrow {
+  display: inline-block;
+}
+[dir="rtl"] .guide-nav-arrow {
+  transform: scaleX(-1);
+}
+.guide-nav-langs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 10px;
+  color: var(--secondary);
+}
+.guide-nav-globe {
+  font-size: 13px;
+}
+.guide-nav-langs a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.guide-nav-langs a:hover,
+.guide-nav-langs a:focus-visible {
+  text-decoration: underline;
+}
+.guide-nav-current {
+  font-weight: 700;
+  color: var(--text);
+}
+</style>
+<!-- USER-GUIDE-NAV-STYLE:END -->
+</head>
+<body id="top">
+<!-- USER-GUIDE-NAV:START -->
+<nav class="guide-nav" aria-label="User Guide language switcher">
+  <a class="guide-nav-home" href="../index.html"><span class="guide-nav-arrow" aria-hidden="true">&larr;</span> Idyllic</a>
+  <span class="guide-nav-langs">
+    <span class="guide-nav-globe" aria-hidden="true">&#x1F310;</span>
+      <a href="index.html">English</a>
+      <a href="ar.html">العربية</a>
+      <a href="cs.html">Čeština</a>
+      <a href="da.html">Dansk</a>
+      <a href="de.html">Deutsch</a>
+      <a href="es.html">Español</a>
+      <a href="fi.html">Suomi</a>
+      <a href="fr.html">Français</a>
+      <a href="he.html">עברית</a>
+      <a href="hi.html">हिन्दी</a>
+      <a href="id.html">Indonesia</a>
+      <a href="it.html">Italiano</a>
+      <a href="ja.html">日本語</a>
+      <a href="ko.html">한국어</a>
+      <a href="ms.html">Bahasa Melayu</a>
+      <a href="nb.html">Norsk bokmål</a>
+      <a href="nl.html">Nederlands</a>
+      <a href="pl.html">Polski</a>
+      <a href="pt-BR.html">Português (Brasil)</a>
+      <a href="ru.html">Русский</a>
+      <span class="guide-nav-current">Svenska</span>
+      <a href="th.html">ไทย</a>
+      <a href="tr.html">Türkçe</a>
+      <a href="uk.html">Українська</a>
+      <a href="vi.html">Tiếng Việt</a>
+      <a href="zh-Hans.html">简体中文</a>
+      <a href="zh-Hant.html">繁體中文</a>
+  </span>
+</nav>
+<!-- USER-GUIDE-NAV:END -->
+
+<h1>Anv&#228;ndarhandbok</h1>
+<p class="subtitle">Allt du beh&#246;ver f&#246;r att f&#229; ut det mesta av din l&#228;supplevelse.</p>
+
+<!-- TABLE OF CONTENTS -->
+<div class="card toc">
+  <a href="#importing">Importera b&#246;cker</a>
+  <a href="#wifi">WiFi-&#246;verf&#246;ring</a>
+  <a href="#library">Bibliotek &amp; organisering</a>
+  <a href="#shelves">Hyllor &amp; mappar</a>
+  <a href="#reading-books">L&#228;sa b&#246;cker</a>
+  <a href="#fixed-layout">B&#246;cker med fast layout</a>
+  <a href="#in-book-search">S&#246;k i bok</a>
+  <a href="#image-gallery">Bildgalleri</a>
+  <a href="#fonts">L&#228;stypsnitt</a>
+  <a href="#reading-direction">L&#228;sriktning</a>
+  <a href="#vertical-writing">Vertikal skrift</a>
+  <a href="#reading-comics">L&#228;sa serier</a>
+  <a href="#comic-zoom">Zooma seriesidor</a>
+  <a href="#tts">Text-till-tal &amp; CarPlay</a>
+  <a href="#upscaling">AI-upps&#246;kaling av serier</a>
+  <a href="#hidden">Dolda b&#246;cker</a>
+  <a href="#bookmarks">Bokm&#228;rken, markeringar &amp; taggar</a>
+  <a href="#history">L&#228;shistorik</a>
+  <a href="#search">Bl&#228;ddra bland f&#246;rfattare &amp; taggar</a>
+  <a href="#metadata">Metadata &amp; ComicInfo.xml</a>
+  <a href="#icloud">iCloud-synk</a>
+  <a href="#stats">L&#228;sstatistik</a>
+  <a href="#webdav">WebDAV &amp; OPDS</a>
+  <a href="#resume">Forts&#228;tt vid start</a>
+  <a href="#formats">Format som st&#246;ds</a>
+</div>
+
+<!-- IMPORTING -->
+<h2 id="importing">Importera b&#246;cker</h2>
+<p class="section-desc">Flera s&#228;tt att l&#228;gga till b&#246;cker i ditt bibliotek.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4C1;</span> Fr&#229;n appen Filer</h3>
+  <p>Tryck p&#229; <kbd>Inst&#228;llningar</kbd> &rarr; <kbd>Importera b&#246;cker</kbd> och v&#228;lj filer fr&#229;n din enhet, iCloud Drive eller n&#229;gon ansluten molntj&#228;nst. P&#229; iPad kan du ocks&#229; anv&#228;nda dra-och-sl&#228;pp.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F310;</span> WiFi-&#246;verf&#246;ring</h3>
+  <p>Ladda upp b&#246;cker fr&#229;n valfri dator eller telefon p&#229; ditt WiFi-n&#228;tverk. Se det dedikerade avsnittet nedan f&#246;r detaljer.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F5C2;</span> WebDAV &amp; OPDS</h3>
+  <p>Anslut till en NAS, Calibre-server eller offentlig bokkatalog f&#246;r att bl&#228;ddra och ladda ner b&#246;cker direkt. Se nedan.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Tillbaka till toppen</a>
+
+<!-- WIFI TRANSFER -->
+<h2 id="wifi">WiFi-&#246;verf&#246;ring</h2>
+<p class="section-desc">Ladda upp b&#246;cker fr&#229;n valfri enhet p&#229; ditt lokala n&#228;tverk.</p>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F4F6;</span> S&#229; fungerar det</h3>
+  <p>Appen k&#246;r en liten webbserver p&#229; din enhet. Vilken dator eller telefon som helst p&#229; samma WiFi-n&#228;tverk kan &#246;ppna uppladdningssidan i en webbl&#228;sare.</p>
+  <ol class="steps">
+    <li>G&#229; till <kbd>Inst&#228;llningar</kbd> &rarr; <kbd>Importera b&#246;cker</kbd> &rarr; <kbd>WiFi-&#246;verf&#246;ring</kbd>.</li>
+    <li>Tryck p&#229; <kbd>Starta server</kbd>. En adress som <kbd>http://192.168.1.42:8080</kbd> visas.</li>
+    <li>&#214;ppna adressen i valfri webbl&#228;sare p&#229; samma n&#228;tverk.</li>
+    <li>Dra filer till sidan eller klicka f&#246;r att bl&#228;ddra &mdash; v&#228;lj en m&#229;lmapp om du vill.</li>
+    <li>Importerade b&#246;cker visas direkt i ditt bibliotek.</li>
+    <li>Tryck p&#229; <kbd>Stoppa server</kbd> n&#228;r du &#228;r klar.</li>
+  </ol>
+  <div class="tip"><strong>Tips:</strong> Din enhet h&#229;lls vaken medan servern k&#246;rs s&#229; att &#246;verf&#246;ringar inte avbryts.</div>
+  <div class="tip"><strong>Uppladdning misslyckades?</strong> F&#246;r varje fil som misslyckats visas orsaken direkt p&#229; raden. Om WiFi-anslutningen bryts, tryck p&#229; <kbd>&#x21BB; F&#246;rs&#246;k igen</kbd> p&#229; raden f&#246;r att skicka filen igen. Permanenta problem (till exempel ett filformat som inte st&#246;ds) visar ingen F&#246;rs&#246;k igen-knapp.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Tillbaka till toppen</a>
+
+<!-- LIBRARY -->
+<h2 id="library">Bibliotek &amp; organisering</h2>
+<p class="section-desc">Hitta, sortera och organisera dina b&#246;cker.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F50D;</span> S&#246;k</h3>
+  <p>Tryck p&#229; knappen <kbd>S&#246;k</kbd> l&#228;ngst ner i biblioteket f&#246;r att expandera ett s&#246;kf&#228;lt, tryck sedan p&#229; <kbd>Klar</kbd> f&#246;r att st&#228;nga det. Det s&#246;ker i titel, f&#246;rfattare, taggar, serie, f&#246;rlag och beskrivning. Att s&#246;ka p&#229; f&#246;rfattare eller tagg fr&#229;n en boks snabbmeny (se <a href="#search">Bl&#228;ddra bland f&#246;rfattare &amp; taggar</a>) fyller i samma s&#246;kning.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x2195;</span> Sortera &amp; filtrera</h3>
+  <p>Tryck p&#229; visningsalternativ-knappen (uppe till h&#246;ger) f&#246;r att v&#228;lja:</p>
+  <ul>
+    <li><strong>Layout</strong> &mdash; Rutn&#228;t, Detaljerad, Kompakt, Minimalistisk, Tabell eller Magasin</li>
+    <li><strong>Sortering</strong> &mdash; Titel, F&#246;rfattare, Senast l&#228;st, Datum tillagd, Framsteg, Filstorlek, Serie</li>
+    <li><strong>Visning</strong> &mdash; Visa p&#229;g&#229;ende b&#246;cker f&#246;rst och avslutade sist</li>
+    <li><strong>Filter</strong> &mdash; Efter format, tagg eller f&#246;rfattare</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x2714;</span> Markeringsl&#228;ge</h3>
+  <p>L&#229;ngtryck p&#229; en bok eller tryck p&#229; <kbd>V&#228;lj</kbd> f&#246;r att aktivera markeringsl&#228;ge. D&#228;refter kan du flytta, radera, d&#246;lja eller visa flera b&#246;cker samtidigt.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4CB;</span> Rensa dubbletter</h3>
+  <p>G&#229; till <strong>Inst&#228;llningar &gt; Bibliotek &gt; Biblioteksunderh&aring;ll &gt; Rensa dubbletter</strong> f&#246;r att hitta b&#246;cker med samma titel, f&#246;rfattare och format. F&#246;r varje dubblettgrupp:</p>
+  <ul>
+    <li>Den <strong>nyaste versionen</strong> markeras med en gr&#246;n KEEP-bricka</li>
+    <li>V&#228;lj &#228;ldre kopior med kryssrutorna (eller <strong>V&#228;lj alla</strong>)</li>
+    <li><strong>Radera</strong> &mdash; tar bort de valda &#228;ldre kopiorna</li>
+    <li><strong>Kopiera data och radera</strong> &mdash; flyttar bokm&#228;rken, markeringar, taggar, l&#228;sframsteg och hyllplacering till den nyaste versionen innan den raderas</li>
+    <li>Aktivera <strong>"Flytta ny bok till den gamla bokens hylla &amp; dolda status"</strong> f&#246;r att beh&#229;lla den nya versionen p&#229; samma plats i biblioteket</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Tillbaka till toppen</a>
+
+<!-- SHELVES -->
+<h2 id="shelves">Hyllor &amp; mappar</h2>
+<p class="section-desc">Organisera b&#246;cker i kapslade mappar.</p>
+
+<div class="card">
+  <h3><span class="icon icon-indigo">&#x1F4C2;</span> Skapa hyllor</h3>
+  <ol class="steps">
+    <li>Tryck p&#229; <kbd>Ny hylla</kbd> l&#228;ngst upp i ditt bibliotek.</li>
+    <li>Ange ett namn och v&#228;lj en ikon och f&#228;rg.</li>
+    <li>V&#228;lj valfritt en &#246;verordnad hylla f&#246;r att skapa en undermapp.</li>
+  </ol>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x21C4;</span> Flytta b&#246;cker</h3>
+  <p>Fr&#229;n en boks detaljsida, tryck p&#229; menyn (&hellip;) och v&#228;lj <kbd>Flytta till hylla</kbd>. I markeringsl&#228;ge kan du flytta m&#229;nga b&#246;cker samtidigt.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Tillbaka till toppen</a>
+
+<!-- READING BOOKS -->
+<h2 id="reading-books">L&#228;sa b&#246;cker</h2>
+<p class="section-desc">L&#228;sl&#228;gen f&#246;r EPUB, PDF, TXT och RTF.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4D6;</span> EPUB</h3>
+  <p>EPUB-filer &#246;ppnas i en fullfjädrad läsare som drivs av Readium. Tryck p&#229; v&#228;nster eller h&#246;ger kant f&#246;r att byta sida, eller svep.</p>
+  <ul>
+    <li><strong>Sidindelad</strong> &mdash; traditionell l&#228;sning sida f&#246;r sida.</li>
+    <li><strong>Kontinuerlig rullning</strong><span class="badge badge-premium">Premium</span> &mdash; scrolla naturligt genom texten, inga sidbrytningar.</li>
+    <li><strong>L&#228;sriktning</strong> &mdash; f&#246;lj boken automatiskt, eller st&#228;ll in v&#228;nster till h&#246;ger eller h&#246;ger till v&#228;nster sj&#228;lv. Se <a href="#reading-direction">L&#228;sriktning</a>.</li>
+    <li><strong>Fast layout</strong> &mdash; serier, bilderb&#246;cker och andra sidindelade EPUB:er &#246;ppnas i en l&#228;sare byggd f&#246;r dem. Se <a href="#fixed-layout">B&#246;cker med fast layout</a>.</li>
+    <li><strong>S&#246;k i bok</strong><span class="badge badge-premium">Premium</span> &mdash; s&#246;k i hela boken efter valfritt ord eller uttryck. Se <a href="#in-book-search">S&#246;k i bok</a>.</li>
+    <li><strong>Bildgalleri</strong><span class="badge badge-premium">Premium</span> &mdash; bl&#228;ddra bland alla bilder i EPUB:en fr&#229;n dess detaljsida. Se <a href="#image-gallery">Bildgalleri</a>.</li>
+  </ul>
+  <div class="tip"><strong>Tips:</strong> Justera textstorlek, radavst&#229;nd och temaf&#228;rger under <kbd>Inst&#228;llningar</kbd> &rarr; <kbd>L&#228;sinst&#228;llningar</kbd> &rarr; <kbd>B&#246;cker</kbd>.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F4C4;</span> PDF</h3>
+  <p>PDF-filer renderas inbyggt. Nyp f&#246;r att zooma, svep f&#246;r att byta sida. Appen kan komma ih&#229;g l&#246;senord f&#246;r skyddade PDF-filer.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x1F4DD;</span> TXT &amp; RTF</h3>
+  <p>Ren text och RTF-filer &#246;ppnas i en enkel textl&#228;sare med justerbar formatering.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Tillbaka till toppen</a>
+
+<!-- FIXED LAYOUT -->
+<h2 id="fixed-layout">B&#246;cker med fast layout</h2>
+<p class="section-desc">EPUB:er vars sidor &#228;r fast utformade &mdash; serier, bilderb&#246;cker och rikt illustrerade titlar.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4D0;</span> Vad de &#228;r</h3>
+  <p>Vissa EPUB:er &#228;r utformade sida f&#246;r sida i st&#228;llet f&#246;r som l&#246;pande text: varje sida &#228;r en fast sammans&#228;ttning av text och illustrationer. Appen k&#228;nner igen dessa b&#246;cker automatiskt och &#246;ppnar dem i en l&#228;sare byggd f&#246;r dem &mdash; varje sida skalas f&#246;r att passa din sk&#228;rm och centreras, med utrymmet runt om fyllt med ditt l&#228;stemas bakgrundsf&#228;rg.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F44B;</span> L&#228;sning &amp; zoomning</h3>
+  <ul>
+    <li>Tryck p&#229; v&#228;nster eller h&#246;ger sida av sk&#228;rmen f&#246;r att byta sida, eller svep. Tryck i mitten f&#246;r att visa eller d&#246;lja verktygsf&#228;lten.</li>
+    <li>Nyp f&#246;r att zooma in &mdash; upp till tre g&#229;nger den anpassade storleken &mdash; och dra f&#246;r att flytta dig runt p&#229; sidan.</li>
+    <li>Dubbeltryck f&#246;r att zooma in p&#229; den punkten; dubbeltryck igen f&#246;r att anpassa sidan till sk&#228;rmen igen.</li>
+    <li>B&#246;cker publicerade f&#246;r l&#228;sning h&#246;ger till v&#228;nster byter sida &#229;t det h&#229;llet automatiskt.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4D6;</span> Uppslag med tv&#229; sidor</h3>
+  <p>Vrid enheten till liggande l&#228;ge s&#229; visas motst&#229;ende sidor sida vid sida. Appen f&#246;ljer uppslagsinformationen i boken sj&#228;lv, s&#229; ett omslag eller en helsidesillustration &#228;nd&#229; f&#229;r en egen sida. Vrid tillbaka till st&#229;ende l&#228;ge f&#246;r en sida i taget.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x2139;</span> Vad som &#228;r tillg&#228;ngligt</h3>
+  <p>Inneh&#229;llsf&#246;rteckningen, bokm&#228;rken, f&#246;rloppsreglaget, l&#228;shistoriken och att forts&#228;tta d&#228;r du slutade fungerar alla som vanligt.</p>
+  <p>Eftersom varje sida &#228;r en fast layout snarare &#228;n text som appen kan fl&#246;da om, visas inte n&#229;gra kontroller f&#246;r de h&#228;r b&#246;ckerna: Kontinuerlig rullning och autorullning, typsnitts- och utseendeinst&#228;llningarna, text-till-tal, s&#246;k i bok samt textmarkering eller &#246;verstrykning.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Tillbaka till toppen</a>
+
+<!-- IN-BOOK SEARCH -->
+<h2 id="in-book-search">S&#246;k i bok</h2>
+<p class="section-desc">Hitta valfritt ord eller uttryck i boken du l&#228;ser.<span class="badge badge-premium">Premium</span></p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F50D;</span> Starta en s&#246;kning</h3>
+  <ol class="steps">
+    <li>Tryck mitt p&#229; sidan f&#246;r att visa verktygsf&#228;lten.</li>
+    <li>Tryck p&#229; f&#246;rstoringsglaset l&#228;ngst till h&#246;ger i det nedre f&#228;ltet.</li>
+    <li>Skriv minst tv&#229; tecken och tryck p&#229; <kbd>S&#246;k</kbd> p&#229; tangentbordet.</li>
+  </ol>
+  <p>Hela boken genoms&#246;ks &mdash; varje kapitel, inte bara det p&#229; sk&#228;rmen &mdash; och s&#246;kningen skiljer inte p&#229; stora och sm&#229; bokst&#228;ver. S&#246;k finns i EPUB- och TXT/RTF-l&#228;sarna.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4C4;</span> Bl&#228;ddra bland resultat</h3>
+  <p>Resultaten visas under s&#246;kf&#228;ltet, grupperade efter kapitel. Varje rad visar tr&#228;ffen i fetstil i ett utdrag av den omgivande texten. Tryck p&#229; ett resultat f&#246;r att hoppa direkt till st&#228;llet &mdash; varje tr&#228;ff markeras med gult i boken, och den aktuella med en starkare b&#228;rnstensf&#228;rg.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x2195;</span> Hoppa mellan tr&#228;ffar</h3>
+  <p>N&#228;r du v&#228;ljer ett resultat f&#228;lls s&#246;kf&#228;ltet ihop till en kompakt remsa med en r&#228;knare som visar var du &#228;r bland tr&#228;ffarna.</p>
+  <ul>
+    <li>Anv&#228;nd upp-/nedpilarna f&#246;r att g&#229; till f&#246;reg&#229;ende eller n&#228;sta tr&#228;ff.</li>
+    <li>Tryck p&#229; listknappen f&#246;r att &#246;ppna hela resultatlistan igen.</li>
+    <li>Tryck p&#229; <kbd>&times;</kbd> f&#246;r att avsluta s&#246;kningen &mdash; alla markeringar tas bort.</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Tillbaka till toppen</a>
+
+<!-- IMAGE GALLERY -->
+<h2 id="image-gallery">Bildgalleri</h2>
+<p class="section-desc">Bl&#228;ddra bland alla illustrationer i en EPUB som ett svepbart galleri.<span class="badge badge-premium">Premium</span></p>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F5BC;</span> &#214;ppna galleriet</h3>
+  <p>&#214;ppna detaljsidan f&#246;r en EPUB-bok och tryck p&#229; <span class="icon">&#x1F5BC;</span>-fotostapelknappen i verktygsf&#228;ltet uppe till h&#246;ger. Appen extraherar alla bilder ur boken och visar en f&#246;rloppsindikator under tiden &mdash; tryck p&#229; <kbd>&times;</kbd>-knappen uppe till v&#228;nster f&#246;r att backa ut n&#228;r som helst. Galleriet &#228;r endast tillg&#228;ngligt f&#246;r EPUB-b&#246;cker.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4DA;</span> Vad du f&#229;r se</h3>
+  <p>Bilderna visas en per sida i l&#228;sordning &mdash; den ordning de f&#246;rekommer i bokens kapitel &mdash; inklusive omslaget. Sm&#229; bilder som ikoner och dekorationer hoppas &#246;ver: allt som &#228;r mindre &#228;n minimistorleken (100&nbsp;px som standard) utel&#228;mnas. Justera tr&#246;skeln under <kbd>Inst&#228;llningar</kbd> &rarr; <kbd>L&#228;sinst&#228;llningar</kbd> &rarr; <kbd>B&#246;cker</kbd> &rarr; <kbd>EPUB-galleri</kbd>. Om ingen bild kvalificerar sig ber&#228;ttar galleriet att det inte hittade n&#229;gra.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F446;</span> Visa och spara bilder</h3>
+  <ul>
+    <li>Svep f&#246;r att flytta mellan bilder, eller anv&#228;nd sidreglaget l&#228;ngst ner f&#246;r att hoppa snabbt.</li>
+    <li>Nyp eller dubbeltryck f&#246;r att zooma, dra sedan f&#246;r att flytta dig runt &mdash; galleriet anv&#228;nder seriel&#228;saren, s&#229; det zoomar p&#229; precis samma s&#228;tt. Se <a href="#comic-zoom">Zooma seriesidor</a>.</li>
+    <li>Tryck mitt p&#229; sk&#228;rmen f&#246;r att visa eller d&#246;lja kontrollerna.</li>
+    <li>H&#229;ll fingret p&#229; en bild f&#246;r <kbd>Visa i full uppl&#246;sning</kbd> &mdash; som &#246;ppnar den i originalstorlek f&#246;r en n&#228;rmare titt &mdash; eller f&#246;r att v&#228;lja <kbd>Spara i Foton</kbd>, <kbd>Spara i Filer</kbd> eller <kbd>Kopiera bild</kbd>.</li>
+    <li>Galleriet f&#246;ljer din l&#228;sriktning f&#246;r serier &mdash; &#228;ven vertikal rullning i webtoon-stil.</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Tillbaka till toppen</a>
+
+<!-- READING FONTS -->
+<h2 id="fonts">L&#228;stypsnitt</h2>
+<p class="section-desc">V&#228;lj ett l&#228;stypsnitt, l&#228;gg till egna eller ladda ner spr&#229;kpaket.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F524;</span> V&#228;lja ett typsnitt</h3>
+  <p>&#214;ppna <kbd>Inst&#228;llningar</kbd> &rarr; <kbd>L&#228;sinst&#228;llningar</kbd> &rarr; <kbd>B&#246;cker</kbd> &rarr; <kbd>Egna typsnitt</kbd> f&#246;r att komma till sk&#228;rmen <strong>Typsnitt</strong>. Flera l&#228;stypsnitt finns inbyggda, med <strong>Literata</strong> som standard. Typsnittet du v&#228;ljer till&#228;mpas p&#229; EPUB- och textl&#228;saren.</p>
+  <div class="tip"><strong>Tips:</strong> Justera textstorlek och radavst&#229;nd under <kbd>Inst&#228;llningar</kbd> &rarr; <kbd>L&#228;sinst&#228;llningar</kbd> &rarr; <kbd>B&#246;cker</kbd>.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F453;</span> Tillg&#228;nglighetstypsnitt</h3>
+  <p>Tv&#229; typsnitt som &#228;r utformade f&#246;r l&#228;ttare l&#228;sning medf&#246;ljer och &#228;r alltid tillg&#228;ngliga: <strong>Atkinson Hyperlegible</strong>, som f&#246;rtydligar skillnaderna mellan liknande bokst&#228;ver, och <strong>OpenDyslexic</strong>, som &#228;r tyngre f&#246;r att minska bokstavsf&#246;rv&#228;xling.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F4C2;</span> Egna typsnitt</h3>
+  <p>Importera dina egna <kbd>.ttf</kbd>- eller <kbd>.otf</kbd>-typsnittsfiler fr&#229;n sk&#228;rmen Typsnitt och anv&#228;nd dem i EPUB-l&#228;saren. Importerade typsnitt stannar p&#229; din enhet.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F4E5;</span> Ladda ner typsnitt &amp; spr&#229;kpaket</h3>
+  <p>Under <strong>Ladda ner typsnitt</strong> finns extra l&#228;stypsnitt och spr&#229;kpaket tillg&#228;ngliga vid behov f&#246;r skriftsystem som appen inte levereras med &mdash; kinesiska, japanska &amp; koreanska (CJK), arabiska, devanagari och thail&#228;ndska. Paketen &#228;r stora (omkring 41&nbsp;MB styck), s&#229; storleken visas innan du laddar ner. N&#228;r de v&#228;l &#228;r installerade fungerar de precis som importerade typsnitt.</p>
+  <div class="tip"><strong>Tips:</strong> Om en boks tecken visas som tomma rutor kan du ladda ner motsvarande spr&#229;kpaket f&#246;r att visa dem.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x1F4DC;</span> Typsnittslicenser</h3>
+  <p>De medf&#246;ljande och nedladdningsbara typsnitten tillhandah&#229;lls under <strong>SIL Open Font License</strong>. Du kan l&#228;sa hela licensen f&#246;r vart och ett av dem fr&#229;n dess rad p&#229; sk&#228;rmen Typsnitt.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Tillbaka till toppen</a>
+
+<!-- READING DIRECTION -->
+<h2 id="reading-direction">L&#228;sriktning</h2>
+<p class="section-desc">V&#228;nster till h&#246;ger, h&#246;ger till v&#228;nster, eller den riktning boken publicerades i.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x21C4;</span> V&#228;lja en riktning</h3>
+  <p>&#214;ppna <kbd>Inst&#228;llningar</kbd> &rarr; <kbd>L&#228;sinst&#228;llningar</kbd> &rarr; <kbd>B&#246;cker</kbd> och anv&#228;nd kontrollen <strong>L&#228;sriktning</strong> under <strong>L&#228;sl&#228;ge</strong>:</p>
+  <ul>
+    <li><strong>Automatisk</strong> (standard) &mdash; f&#246;ljer den riktning som boken sj&#228;lv anger. Manga och b&#246;cker publicerade f&#246;r l&#228;sning h&#246;ger till v&#228;nster &#246;ppnas &#229;t r&#228;tt h&#229;ll utan att du beh&#246;ver st&#228;lla in n&#229;got.</li>
+    <li><strong>V&#228;nster till h&#246;ger</strong> &mdash; standard f&#246;r de flesta v&#228;sterl&#228;ndska b&#246;cker.</li>
+    <li><strong>H&#246;ger till v&#228;nster</strong> &mdash; anv&#228;nd h&#246;ger till v&#228;nster f&#246;r alla b&#246;cker.</li>
+  </ul>
+  <p>Du kan ocks&#229; &#228;ndra det utan att l&#228;mna boken: tryck i mitten av sidan f&#246;r att visa verktygsf&#228;lten, tryck sedan p&#229; knappen <kbd>Aa</kbd> i det nedre f&#228;ltet. &#196;ndringen tr&#228;der i kraft direkt p&#229; sidan du l&#228;ser.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F44B;</span> Vad som f&#246;ljer riktningen</h3>
+  <ul>
+    <li>Vilken sida som f&#246;r dig fram&#229;t &mdash; i en bok med h&#246;ger-till-v&#228;nster-riktning byter ett tryck eller svep &#229;t v&#228;nster till n&#228;sta sida.</li>
+    <li>Sidv&#228;ndningsanimationen, som v&#228;nder fr&#229;n r&#228;tt sida.</li>
+    <li>Textens layout p&#229; sidan.</li>
+  </ul>
+  <div class="tip"><strong>Obs:</strong> F&#246;rloppsreglaget fylls alltid fr&#229;n v&#228;nster, eftersom det visar hur l&#229;ngt du kommit i boken snarare &#228;n var sidan befinner sig p&#229; sk&#228;rmen.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x2139;</span> Var det g&#228;ller</h3>
+  <p>Den h&#228;r inst&#228;llningen g&#228;ller EPUB:er i sidindelat l&#228;ge &mdash; den d&#246;ljs medan Kontinuerlig rullning &#228;r p&#229;. Serier har en egen inst&#228;llning f&#246;r l&#228;sordning (se <a href="#reading-comics">L&#228;sa serier</a>), och <a href="#fixed-layout">b&#246;cker med fast layout</a> f&#246;ljer alltid den riktning som anges i boken.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Tillbaka till toppen</a>
+
+<!-- VERTICAL WRITING -->
+<h2 id="vertical-writing">Vertikal skrift</h2>
+<p class="section-desc">Japanska och kinesiska b&#246;cker satta i vertikala kolumner.</p>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x2B07;</span> Vertikala b&#246;cker</h3>
+  <p>B&#246;cker satta vertikalt &mdash; japansk tategaki (&#x7E26;&#x66F8;&#x304D;) och traditionell kinesiska (&#x76F4;&#x6392;) &mdash; visas p&#229; det s&#228;tt de sattes: texten l&#246;per uppifr&#229;n och ner i kolumner som fylls fr&#229;n h&#246;ger till v&#228;nster, och sidorna byts &#229;t v&#228;nster, p&#229; samma s&#228;tt som i manga.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x2699;</span> Skrivriktning</h3>
+  <p>&#214;ppna <kbd>Inst&#228;llningar</kbd> &rarr; <kbd>L&#228;sinst&#228;llningar</kbd> &rarr; <kbd>B&#246;cker</kbd> och anv&#228;nd kontrollen <strong>Skrivriktning</strong>:</p>
+  <ul>
+    <li><strong>Automatisk</strong> (standard) &mdash; f&#246;ljer varje boks egen layout. En bok som sattes vertikalt visas vertikalt; alla andra b&#246;cker p&#229;verkas inte.</li>
+    <li><strong>Horisontell</strong> &mdash; visa alla b&#246;cker horisontellt, &#228;ven en som sattes vertikalt.</li>
+    <li><strong>Vertikal</strong> &mdash; visa alla b&#246;cker i vertikala kolumner.</li>
+  </ul>
+  <p>Samma kontroll finns i l&#228;sarens inst&#228;llningar, under knappen <kbd>Aa</kbd>.</p>
+  <div class="tip"><strong>Obs:</strong> &#196;ndringar tr&#228;der i kraft n&#228;sta g&#229;ng du &#246;ppnar en bok &mdash; boken som redan &#228;r &#246;ppen beh&#229;ller layouten den &#246;ppnades med.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x2139;</span> Bra att veta</h3>
+  <ul>
+    <li>Vertikala b&#246;cker anv&#228;nder alltid sidindelat l&#228;ge, s&#229; Kontinuerlig rullning och autorullning &#228;r inte tillg&#228;ngliga f&#246;r dem.</li>
+    <li>Sidanimationen Glid anv&#228;nds inte f&#246;r vertikala b&#246;cker &mdash; de v&#228;nder i st&#228;llet med animationen Bl&#228;ddra.</li>
+    <li>Bokm&#228;rken, markeringar, inneh&#229;llsf&#246;rteckningen, s&#246;k i bok och text-till-tal fungerar alla som vanligt.</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Tillbaka till toppen</a>
+
+<!-- READING COMICS -->
+<h2 id="reading-comics">L&#228;sa serier</h2>
+<p class="section-desc">L&#228;sning av CBZ, CBR och CB7-serier.</p>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4F1;</span> L&#228;sl&#228;gen</h3>
+  <ul>
+    <li><strong>V&#228;nster till h&#246;ger</strong> &mdash; Standard v&#228;sterl&#228;ndsk sidordning.</li>
+    <li><strong>H&#246;ger till v&#228;nster</strong> &mdash; Manga-l&#228;sordning.</li>
+    <li><strong>Webtoon / Vertikal rullning</strong> &mdash; Smidig vertikal rullning f&#246;r l&#229;ngstrips-serier.</li>
+  </ul>
+  <p>St&#228;ll in globalt standardl&#228;ge under <kbd>Inst&#228;llningar</kbd> &rarr; <kbd>L&#228;sinst&#228;llningar</kbd> &rarr; <kbd>Serier</kbd>, eller &#228;ndra per bok fr&#229;n dess detaljsida.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F50E;</span> Sidskalning</h3>
+  <ul>
+    <li><strong>Anpassa till sk&#228;rm</strong> &mdash; Hela sidan synlig.</li>
+    <li><strong>Anpassa till bredd</strong> &mdash; Fyller bredden, scrolla vertikalt vid behov.</li>
+    <li><strong>Anpassa till h&#246;jd</strong> &mdash; Fyller h&#246;jden.</li>
+    <li><strong>Originalstorlek</strong> &mdash; 1:1 pixelvisning.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F44B;</span> Gester</h3>
+  <ul>
+    <li>Svep v&#228;nster/h&#246;ger f&#246;r att byta sida (sidindelade l&#228;gen).</li>
+    <li>Nyp eller dubbeltryck f&#246;r att zooma, dra sedan f&#246;r att flytta dig runt. Se <a href="#comic-zoom">Zooma seriesidor</a>.</li>
+    <li>Tryck i mitten av sidan f&#246;r att visa eller d&#246;lja verktygsf&#228;ltet.</li>
+    <li>Anv&#228;nd sidreglaget l&#228;ngst ner f&#246;r att snabbt hoppa.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x26A0;</span> Varning f&#246;r misst&#228;nkt arkiv</h3>
+  <p>N&#228;r du &#246;ppnar ett seriearkiv (CBZ, CBR eller CB7) vars inneh&#229;ll ser ovanligt stort eller aggressivt komprimerat ut &mdash; m&#246;nstret som anv&#228;nds av &ldquo;zip bomb&rdquo;-filer som ska &#246;verbelasta minnet &mdash; visar appen en varning om <strong>misst&#228;nkt arkiv</strong> innan n&#229;got packas upp.</p>
+  <ul>
+    <li>Tryck p&#229; <kbd>Avbryt</kbd> f&#246;r att l&#228;mna filen o&#246;ppnad. Det &#228;r det s&#228;kra valet f&#246;r arkiv fr&#229;n ok&#228;nda k&#228;llor.</li>
+    <li>Tryck p&#229; <kbd>&#214;ppna &#228;nd&#229;</kbd> om du litar p&#229; filen &mdash; appen hoppar &#246;ver s&#228;kerhetskontrollen och laddar sidorna.</li>
+  </ul>
+  <p>EPUB-filer skyddas tyst p&#229; samma s&#228;tt under import.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Tillbaka till toppen</a>
+
+<!-- COMIC ZOOM -->
+<h2 id="comic-zoom">Zooma seriesidor</h2>
+<p class="section-desc">Kom n&#228;rmare bilderna &mdash; b&#229;de i sidl&#228;gen och vid webtoon-rullning.</p>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F50D;</span> Sidl&#228;gen</h3>
+  <ul>
+    <li>Nyp f&#246;r att zooma in, upp till tre g&#229;nger den anpassade storleken. Bilden stannar under fingrarna medan du nyper.</li>
+    <li>Dubbeltryck f&#246;r att hoppa till dubbel storlek p&#229; den punkten; dubbeltryck igen f&#246;r att anpassa sidan till sk&#228;rmen igen.</li>
+    <li>Dra med ett finger f&#246;r att flytta dig runt medan du &#228;r inzoomad.</li>
+    <li>Om du nyper n&#228;stan hela v&#228;gen tillbaka ut sm&#228;ller sidan snyggt tillbaka till anpassad storlek.</li>
+  </ul>
+  <p>Zoomning fungerar med skalningsalternativen <strong>Anpassa till sk&#228;rm</strong> och <strong>Anpassa till h&#246;jd</strong>, och med uppslag med tv&#229; sidor. <strong>Anpassa till bredd</strong> och <strong>Originalstorlek</strong> visar redan sidan st&#246;rre &#228;n sk&#228;rmen och scrollar i st&#228;llet &mdash; anv&#228;nd <kbd>Visa i full uppl&#246;sning</kbd> nedan f&#246;r att komma n&#228;rmare d&#228;r.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4F1;</span> Webtoon-rullning</h3>
+  <ul>
+    <li>Nyp eller dubbeltryck f&#246;r att zooma hela remsan, upp till tre g&#229;nger normal storlek.</li>
+    <li>Rullningen fungerar fortfarande medan du &#228;r inzoomad &mdash; dra bara upp och ner som vanligt.</li>
+    <li>Dra i sidled f&#246;r att flytta dig &#246;ver en inzoomad sida.</li>
+    <li>Zoomniv&#229;n ligger kvar medan du forts&#228;tter rulla, s&#229; du kan l&#228;sa ett helt kapitel f&#246;rstorat. Att vrida enheten &#229;terst&#228;ller den till normal storlek.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x2728;</span> Visa i full uppl&#246;sning</h3>
+  <p>Zoomning f&#246;rstorar sidan i den storlek den f&#246;rbereddes f&#246;r din sk&#228;rm. F&#246;r b&#228;sta m&#246;jliga sk&#228;rpa p&#229; en enskild sida, h&#229;ll fingret p&#229; den och v&#228;lj <kbd>Visa i full uppl&#246;sning</kbd> &mdash; den sidan avkodas d&#229; i arkivets ursprungliga uppl&#246;sning, och du kan nypa in mycket l&#228;ngre. Dubbeltryck v&#228;xlar mellan att anpassa till sk&#228;rmen och dubbel storlek; svep ned&#229;t eller tryck p&#229; st&#228;ngningsknappen f&#246;r att g&#229; tillbaka.</p>
+  <div class="tip"><strong>Obs:</strong> Zoomningen sparas inte. Om du st&#228;nger boken &#229;terg&#229;r den alltid till normal anpassning.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Tillbaka till toppen</a>
+
+<!-- TTS -->
+<h2 id="tts">Text-till-tal &amp; CarPlay</h2>
+<p class="section-desc">Lyssna p&#229; dina b&#246;cker uppl&#228;sta.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F50A;</span> Anv&#228;nda text-till-tal</h3>
+  <p>&#214;ppna valfri EPUB, PDF eller TXT-bok och tryck p&#229; uppspelningsknappen i verktygsf&#228;ltet. TTS l&#228;ser en mening i taget och markerar det aktuella ordet.</p>
+  <ul>
+    <li><strong>Hastighet</strong> &mdash; 0,5&times; till 2&times; i TTS-kontrollerna.</li>
+    <li><strong>R&#246;st</strong> &mdash; V&#228;lj bland 100+ systemr&#246;ster under <kbd>Inst&#228;llningar</kbd> &rarr; <kbd>L&#228;sinst&#228;llningar</kbd> &rarr; <kbd>Text-till-tal</kbd>.</li>
+    <li><strong>Hoppa</strong> &mdash; Tryck p&#229; n&#228;sta/f&#246;reg&#229;ende f&#246;r att hoppa per mening eller per kapitel.</li>
+  </ul>
+  <div class="tip"><strong>Obs:</strong> <a href="#fixed-layout">B&#246;cker med fast layout</a> &mdash; serier och bilderb&#246;cker vars sidor &#228;r fast utformade &mdash; har ingen text f&#246;r appen att l&#228;sa upp, s&#229; uppspelningsknappen visas inte f&#246;r dem.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F697;</span> CarPlay</h3>
+  <p>N&#228;r du &#228;r ansluten till ett CarPlay-kompatibelt fordon visas appen p&#229; bilens display med f&#246;renklade uppspelningskontroller. TTS forts&#228;tter spela i bakgrunden &mdash; du beh&#246;ver inte h&#229;lla sk&#228;rmen p&#229;.</p>
+  <div class="tip"><strong>Tips:</strong> Aktivera <kbd>Bakgrundsljud</kbd><span class="badge badge-premium">Premium</span> i TTS-inst&#228;llningarna f&#246;r att h&#229;lla uppspelningen ig&#229;ng n&#228;r appen &#228;r i bakgrunden, &#228;ven utan CarPlay.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Tillbaka till toppen</a>
+
+<!-- AI UPSCALING -->
+<h2 id="upscaling">AI-uppskalning av serier</h2>
+<p class="section-desc">F&#246;rb&#228;ttra l&#229;guppl&#246;sta seriesidor p&#229; enheten.<span class="badge badge-premium">Premium</span></p>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x2728;</span> Vad det g&#246;r</h3>
+  <p>Anv&#228;nder en maskininl&#228;rningsmodell p&#229; enheten f&#246;r att uppskala seriesidor som &#228;r under ett uppl&#246;sningstr&#246;skelv&#228;rde. Resultatet &#228;r skarpare linjer och mindre synliga komprimeringsartefakter &mdash; s&#228;rskilt anv&#228;ndbart f&#246;r &#228;ldre eller l&#229;gkvalitativa skanningar.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x2699;</span> Inst&#228;llning</h3>
+  <ol class="steps">
+    <li>G&#229; till <kbd>Inst&#228;llningar</kbd> &rarr; <kbd>L&#228;sinst&#228;llningar</kbd> &rarr; <kbd>Serier</kbd> &rarr; <kbd>AI-uppskalning</kbd>.</li>
+    <li>Aktivera funktionen.</li>
+    <li>Justera <strong>Uppl&#246;sningstr&#246;skel</strong> &mdash; sidor under denna pixelbredd uppskalas (standard: 1500 px).</li>
+    <li>St&#228;ll in <strong>F&#246;rh&#228;mtningsf&#246;nster</strong> f&#246;r att styra hur m&#229;nga kommande sidor som f&#246;rbearbetas i bakgrunden.</li>
+    <li>V&#228;lj en <strong>Brusreduceringsniv&#229;</strong> (Auto &#228;r vanligtvis b&#228;st).</li>
+  </ol>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4BE;</span> Cache &amp; lagring</h3>
+  <p>Uppskalade bilder cachas s&#229; att de inte beh&#246;ver bearbetas igen. V&#228;lj hur l&#228;nge cachen ska beh&#229;llas (7&ndash;90 dagar eller aldrig upph&#246;r), och rensa den n&#228;r som helst fr&#229;n inst&#228;llningarna.</p>
+  <div class="tip"><strong>Tips:</strong> En liten indikator visas p&#229; uppskalade sidor. Du kan st&#228;nga av detta i inst&#228;llningarna om du f&#246;redrar det.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Tillbaka till toppen</a>
+
+<!-- HIDDEN MODE -->
+<h2 id="hidden">Dolda b&#246;cker</h2>
+<p class="section-desc">H&#229;ll vissa b&#246;cker privata.<span class="badge badge-premium">Premium</span></p>
+
+<div class="card">
+  <h3><span class="icon icon-indigo">&#x1F441;</span> D&#246;lja b&#246;cker</h3>
+  <ol class="steps">
+    <li>&#214;ppna en boks detaljsida och tryck p&#229; menyn (&hellip;).</li>
+    <li>V&#228;lj <kbd>D&#246;lj bok</kbd>.</li>
+    <li>Boken f&#246;rsvinner fr&#229;n den normala biblioteksvyn.</li>
+  </ol>
+  <p>F&#246;r att d&#246;lja m&#229;nga b&#246;cker samtidigt, anv&#228;nd markeringsl&#228;ge.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F513;</span> Visa dolda b&#246;cker</h3>
+  <p>Dra ner&#229;t i biblioteket f&#246;r att aktivera <strong>Dolt l&#228;ge</strong>. Alla dina b&#246;cker &mdash; b&#229;de dolda och synliga &mdash; visas nu. Dra igen eller l&#228;mna appen f&#246;r att avsluta dolt l&#228;ge.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F512;</span> Sekretessalternativ</h3>
+  <p>N&#228;r dolt l&#228;ge &#228;r aktivt, g&#229; till <kbd>Inst&#228;llningar</kbd> &rarr; <kbd>Dolt l&#228;ge</kbd> f&#246;r att v&#228;lja vad som h&#228;nder n&#228;r du l&#228;mnar appen:</p>
+  <ul>
+    <li><strong>Avsluta automatiskt</strong> (standard) &mdash; Dolt l&#228;ge st&#228;ngs av automatiskt. Snabbt och enkelt.</li>
+    <li><strong>Kr&#228;v Face ID / Touch ID</strong> &mdash; Dolt l&#228;ge f&#246;rblir p&#229;, men kr&#228;ver biometrisk autentisering n&#228;r du &#229;terv&#228;nder. S&#228;krare.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x21A9;</span> Visa b&#246;cker igen</h3>
+  <p>I dolt l&#228;ge, &#246;ppna en dold boks detaljer och v&#228;lj <kbd>Visa bok</kbd>, eller anv&#228;nd markeringsl&#228;ge f&#246;r att visa flera samtidigt.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x2601;</span> Synkronisera dolda b&#246;cker</h3>
+  <p>I dolt l&#228;ge, g&#229; till <kbd>Inst&#228;llningar</kbd> &rarr; <kbd>Dolt l&#228;ge</kbd> och sl&#229; p&#229; <kbd>Synka dolda b&#246;cker med iCloud</kbd>:</p>
+  <ul>
+    <li><strong>Av</strong> (standard) &mdash; dolda b&#246;cker stannar bara p&#229; den h&#228;r enheten. Att d&#246;lja en bok tar ocks&#229; bort den fr&#229;n iCloud.</li>
+    <li><strong>P&#229;</strong> &mdash; dolda b&#246;cker synkas via iCloud men f&#246;rblir dolda p&#229; varje enhet du &#228;r inloggad p&#229;.</li>
+  </ul>
+  <p>Om du st&#228;nger av reglaget medan du redan har dolda b&#246;cker i iCloud fr&#229;gar appen vad som ska h&#228;nda med dem:</p>
+  <ul>
+    <li><strong>Beh&#229;ll p&#229; alla enheter</strong> &mdash; dina andra enheter beh&#229;ller sina synkade kopior; den h&#228;r enheten beh&#229;ller en privat, endast lokal kopia.</li>
+    <li><strong>Ta bort helt fr&#229;n iCloud</strong> &mdash; tar bort b&#246;ckerna fr&#229;n iCloud; varje annan enhet beh&#229;ller sin egen privata kopia i sitt dolda bibliotek.</li>
+  </ul>
+  <div class="tip"><strong>Obs:</strong> Om en av dina andra enheter tar bort en dold bok fr&#229;n iCloud beh&#229;ller den h&#228;r enheten automatiskt sin egen privata kopia i det dolda biblioteket &mdash; s&#229; l&#228;nge bokens fil redan hade laddats ner d&#228;r.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F5D1;</span> Radera dolda b&#246;cker permanent</h3>
+  <p>I dolt l&#228;ge, g&#229; till <kbd>Inst&#228;llningar</kbd> &rarr; <kbd>Dolt l&#228;ge</kbd> och v&#228;lj <kbd>Radera dolda b&#246;cker permanent</kbd> f&#246;r att ta bort varje dold bok fr&#229;n den h&#228;r enheten, fr&#229;n iCloud och fr&#229;n dina andra enheter. Skriv <kbd>DELETE</kbd> f&#246;r att bekr&#228;fta.</p>
+  <div class="tip"><strong>Varning:</strong> Detta kan inte &#229;ngras. Enheter som &#228;r offline vid tillf&#228;llet beh&#229;ller sina lokala kopior tills de synkar n&#228;sta g&#229;ng.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Tillbaka till toppen</a>
+
+<!-- BOOKMARKS, HIGHLIGHTS, TAGS -->
+<h2 id="bookmarks">Bokm&#228;rken, markeringar &amp; taggar</h2>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F516;</span> Bokm&#228;rken</h3>
+  <p>Tryck p&#229; bokm&#228;rkesikonen i l&#228;sarens verktygsf&#228;lt f&#246;r att bokm&#228;rka aktuell sida. L&#228;gg till en valfri anteckning. Visa alla bokm&#228;rken f&#246;r en bok fr&#229;n dess detaljsida.</p>
+  <div class="tip"><strong>Obs:</strong> Endast bokm&#228;rken som du skapar manuellt visas h&#228;r. Positioner som appen sparar automatiskt n&#228;r du st&#228;nger en bok h&#229;lls separat i <a href="#history">L&#228;shistorik</a> s&#229; att de inte tr&#228;nger undan dina egna bokm&#228;rken.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F58D;</span> Markeringar<span class="badge badge-premium">Premium</span></h3>
+  <p>I EPUB-filer, markera text f&#246;r att str&#228;ckmarkera den. V&#228;lj bland fem f&#228;rger (gul, rosa, gr&#246;n, bl&#229;, orange) och l&#228;gg till anteckningar. Alla markeringar listas p&#229; bokens detaljsida.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F3F7;</span> Taggar</h3>
+  <p>L&#228;gg till taggar p&#229; valfri bok fr&#229;n dess detaljsida. Taggar &#228;r s&#246;kbara och kan anv&#228;ndas som biblioteksfilter. Hantera alla taggar fr&#229;n <kbd>Inst&#228;llningar</kbd> &rarr; <kbd>Taggar</kbd>.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Tillbaka till toppen</a>
+
+<!-- READING HISTORY -->
+<h2 id="history">L&#228;shistorik</h2>
+<p class="section-desc">Hoppa tillbaka till valfri position du nyligen varit p&#229;.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F552;</span> Automatiska sparningar</h3>
+  <p>Varje g&#229;ng du st&#228;nger en bok eller skickar appen till bakgrunden sparas din aktuella position som en historikpost &mdash; ingen anledning att komma ih&#229;g att bokm&#228;rka. Det h&#228;r fungerar i varje l&#228;sare: EPUB, PDF, TXT/RTF och serier.</p>
+  <ul>
+    <li>Upp till <strong>50</strong> senaste positioner sparas per bok. &#196;ldre poster tas bort automatiskt n&#228;r nya kommer in.</li>
+    <li>Om du st&#228;nger boken igen p&#229; samma st&#228;lle inom n&#229;gra minuter uppdateras den befintliga posten i st&#228;llet f&#246;r att en dubblett skapas.</li>
+    <li>Automatiskt sparade positioner h&#229;lls separat fr&#229;n din lista med manuella bokm&#228;rken s&#229; att de inte blandas med dem du satt med avsikt.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4D6;</span> Historik i en bok</h3>
+  <p>Medan du l&#228;ser, tryck p&#229; menyn (&hellip;) uppe till h&#246;ger och v&#228;lj <kbd>L&#228;shistorik</kbd>. Du ser en lista &#246;ver dina senaste positioner i den boken, nyaste f&#246;rst, med kapitel- eller sidnamn och hur l&#228;nge sedan varje post sparades.</p>
+  <ul>
+    <li>Tryck p&#229; valfri post f&#246;r att hoppa direkt till det st&#228;llet.</li>
+    <li>Svep v&#228;nster p&#229; en post f&#246;r att ta bort den.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F4DA;</span> Historik &#246;ver hela biblioteket</h3>
+  <p>Fr&#229;n biblioteket, tryck p&#229; menyn (&hellip;) i det &#246;vre verktygsf&#228;ltet och v&#228;lj <kbd>L&#228;shistorik</kbd> f&#246;r att se varje bok du nyligen &#246;ppnat, grupperade per dag. Tryck p&#229; en rad f&#246;r att &#246;ppna boken precis d&#228;r du slutade.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Tillbaka till toppen</a>
+
+<!-- AUTHOR & TAG BROWSING -->
+<h2 id="search">Bl&#228;ddra bland f&#246;rfattare &amp; taggar</h2>
+<p class="section-desc">Hitta b&#246;cker efter f&#246;rfattare eller tagg var som helst i appen.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F464;</span> F&#246;rfattare</h3>
+  <p>G&#229; till <kbd>Inst&#228;llningar</kbd> &rarr; <kbd>F&#246;rfattare</kbd> f&#246;r att se alla f&#246;rfattare i ditt bibliotek med antal b&#246;cker. Tryck p&#229; en f&#246;rfattare f&#246;r att s&#246;ka i biblioteket efter alla deras b&#246;cker.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F3F7;</span> Taggs&#246;kning</h3>
+  <p>I <kbd>Inst&#228;llningar</kbd> &rarr; <kbd>Taggar</kbd>, tryck p&#229; valfri tagg f&#246;r att s&#246;ka i biblioteket efter b&#246;cker med den taggen. L&#229;ngtryck f&#246;r att byta namn eller radera.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F50D;</span> Snabbs&#246;kning fr&#229;n sammanhanget</h3>
+  <ul>
+    <li>L&#229;ngtryck p&#229; en bok i biblioteket &rarr; <kbd>Hitta b&#246;cker av [F&#246;rfattare]</kbd></li>
+    <li>P&#229; en boks detaljsida, l&#229;ngtryck p&#229; f&#246;rfattarnamnet eller valfri tagg f&#246;r att s&#246;ka</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Tillbaka till toppen</a>
+
+<!-- METADATA -->
+<h2 id="metadata">Metadata &amp; ComicInfo.xml</h2>
+<p class="section-desc">Visa och redigera metadata f&#246;r b&#246;cker.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x270F;</span> Metadataredigerare</h3>
+  <p>Fr&#229;n en boks detaljsida, tryck p&#229; menyn (&hellip;) och v&#228;lj <kbd>Redigera metadata</kbd> f&#246;r att &#228;ndra titel, f&#246;rfattare, serie, beskrivning och andra f&#228;lt. Du kan ocks&#229; extrahera metadata fr&#229;n originalfilen p&#229; nytt.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4CB;</span> ComicInfo.xml</h3>
+  <p>Seriearkiv (CBZ, CBR, CB7) som inneh&#229;ller en <code>ComicInfo.xml</code>-fil f&#229;r sin metadata automatiskt extraherad vid import &mdash; inklusive titel, f&#246;rfattare, serie, nummer, sammanfattning, f&#246;rlag, genre och taggar.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Tillbaka till toppen</a>
+
+<!-- ICLOUD -->
+<h2 id="icloud">iCloud-synk</h2>
+<p class="section-desc">H&#229;ll ditt bibliotek synkroniserat mellan enheter.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x2601;</span> Aktivera synkronisering</h3>
+  <ol class="steps">
+    <li>G&#229; till <kbd>Inst&#228;llningar</kbd> &rarr; <kbd>iCloud-synk</kbd>.</li>
+    <li>Aktivera <kbd>Synka bibliotek med iCloud</kbd>.</li>
+    <li>Synkroniseringen aktiveras vid n&#228;sta appstart.</li>
+  </ol>
+  <p>Din metadata, l&#228;sframsteg, bokm&#228;rken, markeringar och hyllor synkas mellan alla enheter som &#228;r inloggade p&#229; samma iCloud-konto.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F4CA;</span> Synkstatus</h3>
+  <p><kbd>Inst&#228;llningar</kbd> &rarr; <kbd>iCloud-synk</kbd> visar ett statuskort f&#246;r dina bokfiler:</p>
+  <ul>
+    <li>En rubrik &mdash; <strong>Uppdaterad</strong>, <strong>Synkar&hellip;</strong> (med ett antal), eller <strong>Inte inloggad</strong>.</li>
+    <li>En rad som visar hur stor del av bibliotekets filer som finns i iCloud.</li>
+    <li>En uppdelning &mdash; <strong>Synkad</strong> (med total storlek), <strong>Endast i iCloud</strong> (inte nedladdad till den h&#228;r enheten &#228;n), och <strong>P&#229;g&#229;r</strong>.</li>
+  </ul>
+  <div class="tip"><strong>Obs:</strong> Det h&#228;r kortet sp&#229;rar bara bok<em>filer</em>. L&#228;sframsteg, bokm&#228;rken, markeringar och hyllor synkas separat och automatiskt, oavsett filstatus.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x2601;</span> Molnm&#228;rken p&#229; omslag</h3>
+  <p>Bokomslag visar en liten molnsymbol i nedre h&#246;gra h&#246;rnet f&#246;r att visa filens synkstatus:</p>
+  <ul>
+    <li><strong>Molnikon</strong> &mdash; filen finns bara i iCloud. &#214;ppna bokens sida f&#246;r att ladda ner den.</li>
+    <li><strong>Pilar upp/ner</strong> &mdash; filen laddas just nu upp eller ner.</li>
+    <li><strong>Ingen symbol</strong> &mdash; filen finns redan p&#229; den h&#228;r enheten.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4E5;</span> Automatisk nedladdning</h3>
+  <p>V&#228;lj maximal filstorlek f&#246;r automatiska nedladdningar. St&#246;rre b&#246;cker stannar i molnet tills du &#246;ppnar dem. Justera gr&#228;nsen i iCloud-inst&#228;llningarna.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Tillbaka till toppen</a>
+
+<!-- STATS -->
+<h2 id="stats">L&#228;sstatistik</h2>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F4CA;</span> Din l&#228;saktivitet</h3>
+  <p>&#214;ppna <kbd>Inst&#228;llningar</kbd> &rarr; <kbd>Biblioteksstatistik</kbd> f&#246;r att se:</p>
+  <ul>
+    <li>Totalt antal b&#246;cker, l&#228;sta sidor och l&#228;stid.</li>
+    <li>Daglig l&#228;saktivitet i diagramform.</li>
+    <li>B&#246;cker efter format och l&#228;sstatus.</li>
+    <li>Aktivitetsf&#246;rdelning per bok.</li>
+  </ul>
+  <div class="tip"><strong>Obs:</strong> Statistiken respekterar dolt l&#228;ge &mdash; n&#228;r dolt l&#228;ge &#228;r avst&#228;ngt exkluderas statistik f&#246;r dolda b&#246;cker.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Tillbaka till toppen</a>
+
+<!-- WEBDAV & OPDS -->
+<h2 id="webdav">WebDAV &amp; OPDS</h2>
+<p class="section-desc">Bl&#228;ddra och ladda ner fr&#229;n fj&#228;rrservrar och kataloger.</p>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F5C4;</span> WebDAV</h3>
+  <p>Anslut till en NAS, Nextcloud eller Calibre-server f&#246;r att bl&#228;ddra i mappar och ladda ner b&#246;cker.</p>
+  <ol class="steps">
+    <li>G&#229; till <kbd>Inst&#228;llningar</kbd> &rarr; <kbd>Importera b&#246;cker</kbd> &rarr; <kbd>WebDAV</kbd>.</li>
+    <li>Tryck p&#229; <kbd>L&#228;gg till server</kbd> och ange URL:en.</li>
+    <li>L&#228;gg till anv&#228;ndarnamn och l&#246;senord vid behov.</li>
+    <li>Tryck p&#229; <kbd>Testa anslutning</kbd> och spara sedan.</li>
+  </ol>
+  <div class="tip"><strong>Sj&#228;lvsignerade certifikat:</strong> Om din server anv&#228;nder ett sj&#228;lvsignerat certifikat kan du aktivera <kbd>Till&#229;t ej betrodda certifikat</kbd>. Appen ber dig bekr&#228;fta f&#246;rst &mdash; detta inaktiverar TLS-validering, s&#229; vem som helst p&#229; ditt n&#228;tverk kan utge sig f&#246;r att vara servern. Aktivera det bara f&#246;r en server som du sj&#228;lv kontrollerar.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4DA;</span> OPDS-kataloger</h3>
+  <p>OPDS &#228;r en &#246;ppen standard f&#246;r bokkataloger. L&#228;gg till offentliga kataloger (Project Gutenberg, Standard Ebooks, etc.) eller din egen privata server.</p>
+  <ol class="steps">
+    <li>G&#229; till <kbd>Inst&#228;llningar</kbd> &rarr; <kbd>Importera b&#246;cker</kbd> &rarr; <kbd>OPDS</kbd>.</li>
+    <li>Tryck p&#229; <kbd>L&#228;gg till katalog</kbd> och ange fl&#246;dets URL.</li>
+    <li>Bl&#228;ddra i kategorier och ladda ner b&#246;cker till ditt bibliotek.</li>
+  </ol>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Tillbaka till toppen</a>
+
+<!-- RESUME -->
+<h2 id="resume">Forts&#228;tt vid start</h2>
+<p class="section-desc">Forts&#228;tt automatiskt d&#228;r du slutade.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x25B6;</span> Inst&#228;llning</h3>
+  <p>G&#229; till <kbd>Inst&#228;llningar</kbd> &rarr; <kbd>Allm&auml;nt</kbd> och aktivera <kbd>&Aring;teruppta senaste bok vid start</kbd>. N&#228;sta g&#229;ng du &#246;ppnar appen hoppar den direkt till boken och sidan du senast l&#228;ste.</p>
+  <div class="tip"><strong>Dolda b&#246;cker:</strong> Om den senaste boken du l&#228;ste &#228;r dold beh&#246;ver appen Face ID / Touch ID innan den forts&#228;tter. Aktivera <kbd>Forts&#228;tt dold bok efter autentisering</kbd> i inst&#228;llningarna f&#246;r dolt l&#228;ge f&#246;r att till&#229;ta detta.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Tillbaka till toppen</a>
+
+<!-- FORMATS -->
+<h2 id="formats">Format som st&#246;ds</h2>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4D6;</span> B&#246;cker</h3>
+  <div class="formats-grid">
+    <div class="format-tag">EPUB</div>
+    <div class="format-tag">PDF</div>
+    <div class="format-tag">TXT</div>
+    <div class="format-tag">RTF</div>
+  </div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4F1;</span> Serier</h3>
+  <div class="formats-grid">
+    <div class="format-tag">CBZ</div>
+    <div class="format-tag">CBR</div>
+    <div class="format-tag">CB7</div>
+  </div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Tillbaka till toppen</a>
+
+</body>
+</html>

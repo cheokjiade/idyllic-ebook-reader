@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Hướng dẫn sử dụng</title>
+<link rel="stylesheet" href="UserGuideStyle.css">
+<!-- USER-GUIDE-NAV-STYLE:START -->
+<style>
+.guide-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 14px;
+  padding: 10px 14px;
+  margin: 0 0 16px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  font-size: 13px;
+}
+.guide-nav-home {
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.guide-nav-arrow {
+  display: inline-block;
+}
+[dir="rtl"] .guide-nav-arrow {
+  transform: scaleX(-1);
+}
+.guide-nav-langs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 10px;
+  color: var(--secondary);
+}
+.guide-nav-globe {
+  font-size: 13px;
+}
+.guide-nav-langs a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.guide-nav-langs a:hover,
+.guide-nav-langs a:focus-visible {
+  text-decoration: underline;
+}
+.guide-nav-current {
+  font-weight: 700;
+  color: var(--text);
+}
+</style>
+<!-- USER-GUIDE-NAV-STYLE:END -->
+</head>
+<body id="top">
+<!-- USER-GUIDE-NAV:START -->
+<nav class="guide-nav" aria-label="User Guide language switcher">
+  <a class="guide-nav-home" href="../index.html"><span class="guide-nav-arrow" aria-hidden="true">&larr;</span> Idyllic</a>
+  <span class="guide-nav-langs">
+    <span class="guide-nav-globe" aria-hidden="true">&#x1F310;</span>
+      <a href="index.html">English</a>
+      <a href="ar.html">العربية</a>
+      <a href="cs.html">Čeština</a>
+      <a href="da.html">Dansk</a>
+      <a href="de.html">Deutsch</a>
+      <a href="es.html">Español</a>
+      <a href="fi.html">Suomi</a>
+      <a href="fr.html">Français</a>
+      <a href="he.html">עברית</a>
+      <a href="hi.html">हिन्दी</a>
+      <a href="id.html">Indonesia</a>
+      <a href="it.html">Italiano</a>
+      <a href="ja.html">日本語</a>
+      <a href="ko.html">한국어</a>
+      <a href="ms.html">Bahasa Melayu</a>
+      <a href="nb.html">Norsk bokmål</a>
+      <a href="nl.html">Nederlands</a>
+      <a href="pl.html">Polski</a>
+      <a href="pt-BR.html">Português (Brasil)</a>
+      <a href="ru.html">Русский</a>
+      <a href="sv.html">Svenska</a>
+      <a href="th.html">ไทย</a>
+      <a href="tr.html">Türkçe</a>
+      <a href="uk.html">Українська</a>
+      <span class="guide-nav-current">Tiếng Việt</span>
+      <a href="zh-Hans.html">简体中文</a>
+      <a href="zh-Hant.html">繁體中文</a>
+  </span>
+</nav>
+<!-- USER-GUIDE-NAV:END -->
+
+<h1>Hướng dẫn sử dụng</h1>
+<p class="subtitle">Tất cả những gì bạn cần để tận dụng tối đa trải nghiệm đọc sách.</p>
+
+<!-- TABLE OF CONTENTS -->
+<div class="card toc">
+  <a href="#importing">Nhập sách</a>
+  <a href="#wifi">Truyền qua WiFi</a>
+  <a href="#library">Thư viện &amp; tổ chức</a>
+  <a href="#shelves">Kệ sách &amp; thư mục</a>
+  <a href="#reading-books">Đọc sách</a>
+  <a href="#fixed-layout">Sách bố cục cố định</a>
+  <a href="#in-book-search">Tìm kiếm trong sách</a>
+  <a href="#image-gallery">Thư viện hình ảnh</a>
+  <a href="#fonts">Phông chữ đọc</a>
+  <a href="#reading-direction">Hướng đọc</a>
+  <a href="#vertical-writing">Chữ viết dọc</a>
+  <a href="#reading-comics">Đọc truyện tranh</a>
+  <a href="#comic-zoom">Thu phóng trang truyện tranh</a>
+  <a href="#tts">Đọc thành tiếng &amp; CarPlay</a>
+  <a href="#upscaling">AI nâng cấp truyện tranh</a>
+  <a href="#hidden">Sách ẩn</a>
+  <a href="#bookmarks">Đánh dấu, tô sáng &amp; thẻ</a>
+  <a href="#history">Lịch sử đọc</a>
+  <a href="#search">Duyệt theo Tác giả &amp; Thẻ</a>
+  <a href="#metadata">Siêu dữ liệu &amp; ComicInfo.xml</a>
+  <a href="#icloud">Đồng bộ iCloud</a>
+  <a href="#stats">Thống kê đọc sách</a>
+  <a href="#webdav">WebDAV &amp; OPDS</a>
+  <a href="#resume">Tiếp tục khi mở ứng dụng</a>
+  <a href="#formats">Định dạng được hỗ trợ</a>
+</div>
+
+<!-- IMPORTING -->
+<h2 id="importing">Nhập sách</h2>
+<p class="section-desc">Nhiều cách để thêm sách vào thư viện của bạn.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4C1;</span> Từ ứng dụng Tệp</h3>
+  <p>Chạm <kbd>Cài đặt</kbd> &rarr; <kbd>Nhập sách</kbd>, sau đó chọn tệp từ thiết bị, iCloud Drive hoặc bất kỳ dịch vụ đám mây nào đã kết nối. Bạn cũng có thể sử dụng kéo và thả trên iPad.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F310;</span> Truyền qua WiFi</h3>
+  <p>Tải sách lên từ bất kỳ máy tính hoặc điện thoại nào trên mạng WiFi của bạn. Xem phần chuyên dụng bên dưới để biết chi tiết.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F5C2;</span> WebDAV &amp; OPDS</h3>
+  <p>Kết nối với NAS, máy chủ Calibre hoặc danh mục sách công cộng để duyệt và tải sách trực tiếp. Xem bên dưới.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Về đầu trang</a>
+
+<!-- WIFI TRANSFER -->
+<h2 id="wifi">Truyền qua WiFi</h2>
+<p class="section-desc">Tải sách lên từ bất kỳ thiết bị nào trên mạng nội bộ của bạn.</p>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F4F6;</span> Cách hoạt động</h3>
+  <p>Ứng dụng chạy một máy chủ web nhỏ trên thiết bị của bạn. Bất kỳ máy tính hoặc điện thoại nào trên cùng mạng WiFi đều có thể mở trang tải lên trong trình duyệt.</p>
+  <ol class="steps">
+    <li>Vào <kbd>Cài đặt</kbd> &rarr; <kbd>Nhập sách</kbd> &rarr; <kbd>Truyền qua WiFi</kbd>.</li>
+    <li>Chạm <kbd>Khởi động máy chủ</kbd>. Một địa chỉ như <kbd>http://192.168.1.42:8080</kbd> sẽ xuất hiện.</li>
+    <li>Mở địa chỉ đó trong trình duyệt web bất kỳ trên cùng mạng.</li>
+    <li>Kéo tệp vào trang hoặc nhấp để duyệt &mdash; chọn thư mục đích nếu muốn.</li>
+    <li>Sách đã nhập xuất hiện ngay trong thư viện của bạn.</li>
+    <li>Chạm <kbd>Dừng máy chủ</kbd> khi hoàn tất.</li>
+  </ol>
+  <div class="tip"><strong>Mẹo:</strong> Thiết bị của bạn sẽ không tắt màn hình khi máy chủ đang chạy để việc truyền không bị gián đoạn.</div>
+  <div class="tip"><strong>Tải lên thất bại?</strong> Mỗi tệp bị lỗi sẽ hiển thị lý do ngay trên hàng của nó. Nếu kết nối WiFi bị ngắt, hãy chạm <kbd>&#x21BB; Thử lại</kbd> trên hàng để gửi tệp lại. Các sự cố cố định (chẳng hạn như định dạng tệp không được hỗ trợ) sẽ không hiển thị nút Thử lại.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Về đầu trang</a>
+
+<!-- LIBRARY -->
+<h2 id="library">Thư viện &amp; tổ chức</h2>
+<p class="section-desc">Tìm kiếm, sắp xếp và tổ chức sách của bạn.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F50D;</span> Tìm kiếm</h3>
+  <p>Chạm vào nút <kbd>Tìm kiếm</kbd> ở cuối thư viện để mở rộng ô tìm kiếm, sau đó chạm <kbd>Xong</kbd> để đóng lại. Tìm kiếm theo tên sách, tác giả, thẻ, bộ sách, nhà xuất bản và mô tả. Tìm theo tác giả hoặc thẻ từ menu ngữ cảnh của một quyển sách (xem <a href="#search">Duyệt theo Tác giả &amp; Thẻ</a>) sẽ điền vào cùng ô tìm kiếm đó.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x2195;</span> Sắp xếp &amp; lọc</h3>
+  <p>Chạm nút tùy chọn hiển thị (góc trên bên phải) để chọn:</p>
+  <ul>
+    <li><strong>Bố cục</strong> &mdash; Lưới, Chi tiết, Thu gọn, Tối giản, Bảng hoặc Tạp chí</li>
+    <li><strong>Sắp xếp</strong> &mdash; Tên sách, Tác giả, Đọc gần nhất, Ngày thêm, Tiến độ, Kích thước tệp, Bộ sách</li>
+    <li><strong>Hiển thị</strong> &mdash; Đưa sách đang đọc lên đầu, sách đã hoàn thành xuống cuối</li>
+    <li><strong>Lọc</strong> &mdash; Theo định dạng, thẻ hoặc tác giả</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x2714;</span> Chế độ chọn</h3>
+  <p>Nhấn giữ vào một cuốn sách hoặc chạm <kbd>Chọn</kbd> để vào chế độ chọn. Sau đó bạn có thể di chuyển, xóa, ẩn hoặc bỏ ẩn nhiều sách cùng lúc.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4CB;</span> Dọn Dẹp Bản Trùng</h3>
+  <p>Vào <strong>Cài đặt &gt; Thư viện &gt; Bảo Trì Thư Viện &gt; Dọn Dẹp Bản Trùng</strong> để tìm các sách có cùng tiêu đề, tác giả và định dạng. Với mỗi nhóm trùng lặp:</p>
+  <ul>
+    <li><strong>Phiên bản mới nhất</strong> được đánh dấu bằng huy hiệu KEEP màu xanh lá</li>
+    <li>Chọn các bản sao cũ bằng các ô đánh dấu (hoặc <strong>Chọn tất cả</strong>)</li>
+    <li><strong>Xóa</strong> &mdash; loại bỏ các bản sao cũ đã chọn</li>
+    <li><strong>Sao chép dữ liệu &amp; Xóa</strong> &mdash; chuyển dấu trang, làm nổi bật, thẻ, tiến độ đọc và phân bổ kệ sang phiên bản mới nhất trước khi xóa</li>
+    <li>Bật <strong>"Chuyển sách mới sang kệ &amp; trạng thái ẩn của sách cũ"</strong> để giữ phiên bản mới ở cùng vị trí trong thư viện</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Về đầu trang</a>
+
+<!-- SHELVES -->
+<h2 id="shelves">Kệ sách &amp; thư mục</h2>
+<p class="section-desc">Tổ chức sách vào các thư mục lồng nhau.</p>
+
+<div class="card">
+  <h3><span class="icon icon-indigo">&#x1F4C2;</span> Tạo kệ sách</h3>
+  <ol class="steps">
+    <li>Chạm <kbd>Kệ mới</kbd> ở đầu thư viện.</li>
+    <li>Nhập tên, sau đó chọn biểu tượng và màu sắc.</li>
+    <li>Tùy chọn chọn kệ cha để tạo thư mục con.</li>
+  </ol>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x21C4;</span> Di chuyển sách</h3>
+  <p>Từ trang chi tiết sách, chạm menu (&hellip;) và chọn <kbd>Di chuyển đến kệ</kbd>. Trong chế độ chọn, bạn có thể di chuyển nhiều sách cùng lúc.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Về đầu trang</a>
+
+<!-- READING BOOKS -->
+<h2 id="reading-books">Đọc sách</h2>
+<p class="section-desc">Các chế độ đọc EPUB, PDF, TXT và RTF.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4D6;</span> EPUB</h3>
+  <p>Tệp EPUB mở trong trình đọc đầy đủ tính năng được hỗ trợ bởi Readium. Chạm cạnh trái hoặc phải để lật trang, hoặc vuốt.</p>
+  <ul>
+    <li><strong>Phân trang</strong> &mdash; đọc truyền thống từng trang một.</li>
+    <li><strong>Cuộn liên tục</strong><span class="badge badge-premium">Premium</span> &mdash; cuộn tự nhiên qua văn bản, không có ngắt trang.</li>
+    <li><strong>Hướng đọc</strong> &mdash; theo tự động theo cuốn sách, hoặc tự đặt trái sang phải hay phải sang trái. Xem <a href="#reading-direction">Hướng đọc</a>.</li>
+    <li><strong>Bố cục cố định</strong> &mdash; truyện tranh, sách tranh và các EPUB dạng từng trang khác mở trong một trình đọc được thiết kế riêng cho chúng. Xem <a href="#fixed-layout">Sách bố cục cố định</a>.</li>
+    <li><strong>Tìm kiếm trong sách</strong><span class="badge badge-premium">Premium</span> &mdash; tìm kiếm bất kỳ từ hoặc cụm từ nào trong toàn bộ cuốn sách. Xem <a href="#in-book-search">Tìm kiếm trong sách</a>.</li>
+    <li><strong>Thư viện hình ảnh</strong><span class="badge badge-premium">Premium</span> &mdash; duyệt mọi hình ảnh trong EPUB từ trang chi tiết sách. Xem <a href="#image-gallery">Thư viện hình ảnh</a>.</li>
+  </ul>
+  <div class="tip"><strong>Mẹo:</strong> Điều chỉnh cỡ chữ, khoảng cách dòng và màu chủ đề trong <kbd>Cài đặt</kbd> &rarr; <kbd>Tùy chọn đọc</kbd> &rarr; <kbd>Sách</kbd>.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F4C4;</span> PDF</h3>
+  <p>PDF hiển thị nguyên bản. Chụm để phóng to, vuốt để lật trang. Ứng dụng có thể nhớ mật khẩu cho các tệp PDF được bảo vệ.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x1F4DD;</span> TXT &amp; RTF</h3>
+  <p>Tệp văn bản thuần và RTF mở trong trình đọc văn bản đơn giản với định dạng có thể điều chỉnh.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Về đầu trang</a>
+
+<!-- FIXED LAYOUT -->
+<h2 id="fixed-layout">Sách bố cục cố định</h2>
+<p class="section-desc">Các EPUB có trang là thiết kế cố định &mdash; truyện tranh, sách tranh và các tựa sách minh họa nhiều.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4D0;</span> Đó là gì</h3>
+  <p>Một số EPUB được dàn trang theo từng trang thay vì văn bản chảy liên tục: mỗi trang là một bố cục cố định gồm chữ và hình minh họa. Ứng dụng tự nhận diện những cuốn sách này và mở chúng trong một trình đọc được thiết kế riêng cho chúng &mdash; mỗi trang được co giãn vừa màn hình của bạn và căn giữa, phần không gian xung quanh được lấp đầy bằng màu nền của chủ đề đọc của bạn.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F44B;</span> Đọc &amp; thu phóng</h3>
+  <ul>
+    <li>Chạm cạnh trái hoặc phải màn hình để lật trang, hoặc vuốt. Chạm vào giữa để hiện hoặc ẩn thanh công cụ.</li>
+    <li>Chụm để phóng to &mdash; lên đến ba lần kích thước vừa khít &mdash; và kéo để di chuyển quanh trang.</li>
+    <li>Chạm hai lần để phóng to tại điểm đó; chạm hai lần lần nữa để đưa trang về vừa khít màn hình.</li>
+    <li>Sách xuất bản để đọc từ phải sang trái sẽ tự động lật trang theo hướng đó.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4D6;</span> Trang đôi</h3>
+  <p>Xoay thiết bị sang ngang để các trang đối diện hiện cạnh nhau. Ứng dụng tuân theo gợi ý dàn trang đôi có sẵn trong chính cuốn sách, vì vậy một trang bìa hoặc minh họa toàn trang vẫn giữ trang riêng của nó. Xoay lại dọc để quay về từng trang một.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x2139;</span> Những gì khả dụng</h3>
+  <p>Mục lục, đánh dấu, thanh trượt tiến độ, lịch sử đọc và việc tiếp tục từ nơi bạn dừng lại đều hoạt động như bình thường.</p>
+  <p>Vì mỗi trang là một thiết kế cố định thay vì văn bản mà ứng dụng có thể dàn lại, một số điều khiển sẽ không xuất hiện với những cuốn sách này: Cuộn liên tục và tự động cuộn, cài đặt phông chữ và giao diện, đọc thành tiếng, tìm kiếm trong sách, và việc chọn hoặc tô sáng văn bản.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Về đầu trang</a>
+
+<!-- IN-BOOK SEARCH -->
+<h2 id="in-book-search">Tìm kiếm trong sách</h2>
+<p class="section-desc">Tìm bất kỳ từ hoặc cụm từ nào bên trong cuốn sách bạn đang đọc.<span class="badge badge-premium">Premium</span></p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F50D;</span> Bắt đầu tìm kiếm</h3>
+  <ol class="steps">
+    <li>Chạm vào giữa trang để hiển thị các thanh công cụ.</li>
+    <li>Chạm vào kính lúp ở đầu bên phải của thanh dưới cùng.</li>
+    <li>Nhập ít nhất hai ký tự và nhấn <kbd>Tìm kiếm</kbd> trên bàn phím.</li>
+  </ol>
+  <p>Toàn bộ cuốn sách được tìm kiếm &mdash; mọi chương, không chỉ chương đang hiển thị trên màn hình &mdash; và việc so khớp không phân biệt chữ hoa/chữ thường. Tìm kiếm có sẵn trong trình đọc EPUB và TXT/RTF.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4C4;</span> Duyệt kết quả</h3>
+  <p>Kết quả xuất hiện bên dưới thanh tìm kiếm, được nhóm theo chương. Mỗi hàng hiển thị kết quả khớp in đậm bên trong một đoạn trích văn bản xung quanh. Chạm vào một kết quả để nhảy thẳng đến vị trí đó &mdash; mọi kết quả khớp đều được tô sáng màu vàng trong sách, kết quả hiện tại có màu hổ phách đậm hơn.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x2195;</span> Nhảy giữa các kết quả khớp</h3>
+  <p>Khi bạn chọn một kết quả, thanh tìm kiếm thu gọn thành một dải nhỏ gọn với bộ đếm cho biết bạn đang ở vị trí nào trong số các kết quả khớp.</p>
+  <ul>
+    <li>Dùng mũi tên lên/xuống để chuyển đến kết quả khớp trước hoặc sau.</li>
+    <li>Chạm nút danh sách để mở lại danh sách kết quả đầy đủ.</li>
+    <li>Chạm <kbd>&times;</kbd> để kết thúc tìm kiếm &mdash; mọi phần tô sáng sẽ được gỡ bỏ.</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Về đầu trang</a>
+
+<!-- IMAGE GALLERY -->
+<h2 id="image-gallery">Thư viện hình ảnh</h2>
+<p class="section-desc">Duyệt mọi hình minh họa trong EPUB dưới dạng thư viện có thể vuốt.<span class="badge badge-premium">Premium</span></p>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F5BC;</span> Mở thư viện</h3>
+  <p>Mở trang chi tiết của một cuốn sách EPUB và chạm nút chồng ảnh <span class="icon">&#x1F5BC;</span> trên thanh công cụ ở góc trên bên phải. Ứng dụng trích xuất mọi hình ảnh từ cuốn sách, hiển thị thanh tiến trình trong khi xử lý &mdash; chạm nút <kbd>&times;</kbd> ở góc trên bên trái để thoát ra bất cứ lúc nào. Thư viện chỉ có sẵn cho sách EPUB.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4DA;</span> Những gì bạn sẽ thấy</h3>
+  <p>Hình ảnh xuất hiện mỗi trang một hình theo thứ tự đọc &mdash; thứ tự chúng xuất hiện trong các chương của sách &mdash; bao gồm cả bìa. Các hình ảnh nhỏ như biểu tượng và họa tiết trang trí sẽ bị bỏ qua: bất kỳ hình nào nhỏ hơn kích thước tối thiểu (mặc định 100&nbsp;px) đều không được đưa vào. Điều chỉnh ngưỡng này trong <kbd>Cài đặt</kbd> &rarr; <kbd>Tùy chọn đọc</kbd> &rarr; <kbd>Sách</kbd> &rarr; <kbd>Thư viện ảnh EPUB</kbd>. Nếu không có hình ảnh nào đạt yêu cầu, thư viện sẽ cho bạn biết không tìm thấy hình nào.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F446;</span> Xem &amp; lưu hình ảnh</h3>
+  <ul>
+    <li>Vuốt để chuyển giữa các hình ảnh, hoặc dùng thanh trượt trang ở dưới cùng để nhảy nhanh.</li>
+    <li>Chụm hoặc chạm hai lần để phóng to, sau đó kéo để di chuyển &mdash; thư viện dùng trình đọc truyện tranh, nên nó phóng to đúng theo cách tương tự. Xem <a href="#comic-zoom">Thu phóng trang truyện tranh</a>.</li>
+    <li>Chạm vào giữa màn hình để hiển thị hoặc ẩn các nút điều khiển.</li>
+    <li>Nhấn giữ một hình ảnh để <kbd>Xem Độ Phân Giải Đầy Đủ</kbd> &mdash; mở nó ở kích thước gốc để xem gần hơn &mdash; hoặc để <kbd>Lưu vào Ảnh</kbd>, <kbd>Lưu vào Tệp</kbd>, hoặc <kbd>Sao Chép Hình Ảnh</kbd>.</li>
+    <li>Thư viện tuân theo hướng đọc truyện tranh của bạn &mdash; bao gồm cả cuộn dọc kiểu webtoon.</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Về đầu trang</a>
+
+<!-- READING FONTS -->
+<h2 id="fonts">Phông chữ đọc</h2>
+<p class="section-desc">Chọn một phông chữ đọc, thêm phông chữ của riêng bạn, hoặc tải xuống các gói ngôn ngữ.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F524;</span> Chọn phông chữ</h3>
+  <p>Mở <kbd>Cài đặt</kbd> &rarr; <kbd>Tùy chọn đọc</kbd> &rarr; <kbd>Sách</kbd> &rarr; <kbd>Phông chữ tùy chỉnh</kbd> để đến màn hình <strong>Phông chữ</strong>. Một số phông chữ đọc được tích hợp sẵn, với <strong>Literata</strong> là mặc định. Phông chữ bạn chọn áp dụng cho trình đọc EPUB và văn bản.</p>
+  <div class="tip"><strong>Mẹo:</strong> Điều chỉnh cỡ chữ và khoảng cách dòng trong <kbd>Cài đặt</kbd> &rarr; <kbd>Tùy chọn đọc</kbd> &rarr; <kbd>Sách</kbd>.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F453;</span> Phông chữ trợ năng</h3>
+  <p>Hai phông chữ được thiết kế để đọc dễ hơn được đóng gói sẵn và luôn có sẵn: <strong>Atkinson Hyperlegible</strong>, giúp làm rõ sự khác biệt giữa các chữ cái tương tự nhau, và <strong>OpenDyslexic</strong>, được tạo trọng lượng để giảm việc nhầm lẫn chữ cái.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F4C2;</span> Phông chữ tùy chỉnh</h3>
+  <p>Nhập các tệp phông chữ <kbd>.ttf</kbd> hoặc <kbd>.otf</kbd> của riêng bạn từ màn hình Phông chữ và sử dụng chúng trong trình đọc EPUB. Các phông chữ đã nhập vẫn nằm trên thiết bị của bạn.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F4E5;</span> Tải phông chữ &amp; gói ngôn ngữ</h3>
+  <p>Trong mục <strong>Tải phông chữ</strong>, các phông chữ đọc bổ sung và gói ngôn ngữ có sẵn theo yêu cầu cho những hệ chữ mà ứng dụng không đi kèm &mdash; tiếng Trung, tiếng Nhật &amp; tiếng Hàn (CJK), tiếng Ả Rập, chữ Devanagari, và tiếng Thái. Các gói khá lớn (khoảng 41&nbsp;MB mỗi gói), vì vậy kích thước được hiển thị trước khi bạn tải xuống. Sau khi cài đặt, chúng hoạt động y hệt như các phông chữ đã nhập.</p>
+  <div class="tip"><strong>Mẹo:</strong> Nếu các ký tự trong một cuốn sách hiển thị dưới dạng ô trống, hãy tải xuống gói ngôn ngữ phù hợp để hiển thị chúng.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x1F4DC;</span> Giấy phép phông chữ</h3>
+  <p>Các phông chữ đi kèm và có thể tải xuống được cung cấp theo <strong>SIL Open Font License</strong>. Bạn có thể đọc giấy phép đầy đủ của bất kỳ phông chữ nào từ hàng của nó trên màn hình Phông chữ.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Về đầu trang</a>
+
+<!-- READING DIRECTION -->
+<h2 id="reading-direction">Hướng đọc</h2>
+<p class="section-desc">Trái sang phải, phải sang trái, hoặc theo đúng hướng cuốn sách được xuất bản.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x21C4;</span> Chọn hướng</h3>
+  <p>Mở <kbd>Cài đặt</kbd> &rarr; <kbd>Tùy chọn đọc</kbd> &rarr; <kbd>Sách</kbd> và dùng tùy chỉnh <strong>Hướng Đọc</strong> trong mục <strong>Chế độ đọc</strong>:</p>
+  <ul>
+    <li><strong>Tự Động</strong> (mặc định) &mdash; theo hướng mà chính cuốn sách công bố. Manga và sách xuất bản để đọc từ phải sang trái sẽ mở đúng chiều mà không cần thiết lập gì.</li>
+    <li><strong>Trái sang Phải</strong> &mdash; tiêu chuẩn cho hầu hết sách phương Tây.</li>
+    <li><strong>Phải Sang Trái</strong> &mdash; dùng phải sang trái cho mọi cuốn sách.</li>
+  </ul>
+  <p>Bạn cũng có thể thay đổi mà không cần rời khỏi sách: chạm vào giữa trang để hiện thanh công cụ, sau đó chạm nút <kbd>Aa</kbd> trên thanh dưới cùng. Thay đổi có hiệu lực ngay trên trang bạn đang đọc.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F44B;</span> Những gì theo hướng đọc</h3>
+  <ul>
+    <li>Bên nào đưa bạn tiến lên &mdash; trong sách phải-sang-trái, chạm hoặc vuốt sang trái sẽ lật sang trang tiếp theo.</li>
+    <li>Hiệu ứng lật trang, lật từ đúng phía.</li>
+    <li>Bố cục văn bản trên trang.</li>
+  </ul>
+  <div class="tip"><strong>Lưu ý:</strong> Thanh trượt tiến độ luôn lấp đầy từ bên trái, vì nó cho biết bạn đã đọc được bao xa trong sách chứ không phải vị trí trang trên màn hình.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x2139;</span> Áp dụng ở đâu</h3>
+  <p>Tùy chỉnh này dành cho EPUB ở chế độ phân trang &mdash; nó bị ẩn khi Cuộn liên tục đang bật. Truyện tranh có tùy chỉnh hướng đọc riêng (xem <a href="#reading-comics">Đọc truyện tranh</a>), và <a href="#fixed-layout">sách bố cục cố định</a> luôn theo hướng được công bố trong sách.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Về đầu trang</a>
+
+<!-- VERTICAL WRITING -->
+<h2 id="vertical-writing">Chữ viết dọc</h2>
+<p class="section-desc">Sách tiếng Nhật và tiếng Trung được dàn trang theo cột dọc.</p>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x2B07;</span> Sách viết dọc</h3>
+  <p>Những cuốn sách được dàn trang theo chiều dọc &mdash; tategaki tiếng Nhật (&#x7E26;&#x66F8;&#x304D;) và chữ Hán truyền thống (&#x76F4;&#x6392;) &mdash; được hiển thị đúng như cách chúng được dàn trang: văn bản chạy từ trên xuống dưới theo các cột lấp đầy từ phải sang trái, và trang lật sang trái, giống như cách đọc manga.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x2699;</span> Hướng viết</h3>
+  <p>Mở <kbd>Cài đặt</kbd> &rarr; <kbd>Tùy chọn đọc</kbd> &rarr; <kbd>Sách</kbd> và dùng tùy chỉnh <strong>Hướng Viết</strong>:</p>
+  <ul>
+    <li><strong>Tự Động</strong> (mặc định) &mdash; theo đúng bố cục riêng của từng cuốn sách. Một cuốn sách được dàn trang theo chiều dọc sẽ hiển thị theo chiều dọc; mọi cuốn sách khác không bị ảnh hưởng.</li>
+    <li><strong>Nằm Ngang</strong> &mdash; hiển thị mọi cuốn sách theo chiều ngang, kể cả sách được dàn trang theo chiều dọc.</li>
+    <li><strong>Thẳng Đứng</strong> &mdash; hiển thị mọi cuốn sách theo cột dọc.</li>
+  </ul>
+  <p>Tùy chỉnh tương tự cũng có trong cài đặt ngay trong trình đọc, dưới nút <kbd>Aa</kbd>.</p>
+  <div class="tip"><strong>Lưu ý:</strong> Thay đổi sẽ áp dụng vào lần tiếp theo bạn mở một cuốn sách &mdash; cuốn sách đang mở trên màn hình vẫn giữ nguyên bố cục mà nó đã mở.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x2139;</span> Điều cần biết</h3>
+  <ul>
+    <li>Sách viết dọc luôn dùng chế độ phân trang, vì vậy Cuộn liên tục và tự động cuộn không khả dụng cho chúng.</li>
+    <li>Hiệu ứng lật trang kiểu trượt không được dùng cho sách viết dọc &mdash; chúng lật bằng hiệu ứng lật trang thay vào đó.</li>
+    <li>Đánh dấu, tô sáng, mục lục, tìm kiếm trong sách và đọc thành tiếng đều hoạt động như bình thường.</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Về đầu trang</a>
+
+<!-- READING COMICS -->
+<h2 id="reading-comics">Đọc truyện tranh</h2>
+<p class="section-desc">Đọc truyện tranh CBZ, CBR và CB7.</p>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4F1;</span> Chế độ đọc</h3>
+  <ul>
+    <li><strong>Trái sang phải</strong> &mdash; Thứ tự trang truyện tranh phương Tây tiêu chuẩn.</li>
+    <li><strong>Phải sang trái</strong> &mdash; Thứ tự đọc manga.</li>
+    <li><strong>Webtoon / Cuộn dọc</strong> &mdash; Cuộn dọc mượt mà cho truyện tranh dạng dải dài.</li>
+  </ul>
+  <p>Đặt mặc định chung trong <kbd>Cài đặt</kbd> &rarr; <kbd>Tùy chọn đọc</kbd> &rarr; <kbd>Truyện tranh</kbd>, hoặc thay đổi riêng cho từng cuốn từ trang chi tiết.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F50E;</span> Thu phóng trang</h3>
+  <ul>
+    <li><strong>Vừa màn hình</strong> &mdash; Hiển thị toàn bộ trang.</li>
+    <li><strong>Vừa chiều rộng</strong> &mdash; Lấp đầy chiều rộng, cuộn dọc nếu cần.</li>
+    <li><strong>Vừa chiều cao</strong> &mdash; Lấp đầy chiều cao.</li>
+    <li><strong>Kích thước gốc</strong> &mdash; Hiển thị pixel 1:1.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F44B;</span> Cử chỉ</h3>
+  <ul>
+    <li>Vuốt trái/phải để lật trang (chế độ phân trang).</li>
+    <li>Chụm hoặc chạm hai lần để phóng to, sau đó kéo để di chuyển. Xem <a href="#comic-zoom">Thu phóng trang truyện tranh</a>.</li>
+    <li>Chạm vào giữa trang để hiện hoặc ẩn thanh công cụ.</li>
+    <li>Sử dụng thanh trượt trang ở dưới để nhảy nhanh.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x26A0;</span> Cảnh báo kho lưu trữ đáng ngờ</h3>
+  <p>Khi bạn mở một kho lưu trữ truyện tranh (CBZ, CBR hoặc CB7) có nội dung trông lớn bất thường hoặc nén mạnh &mdash; kiểu mẫu được dùng bởi các tệp &ldquo;bom zip&rdquo; thiết kế để làm tràn bộ nhớ &mdash; ứng dụng sẽ hiển thị cảnh báo <strong>Kho lưu trữ đáng ngờ</strong> trước khi giải nén bất cứ thứ gì.</p>
+  <ul>
+    <li>Chạm <kbd>Hủy</kbd> để không mở tệp. Đây là lựa chọn an toàn cho các kho lưu trữ từ nguồn không rõ.</li>
+    <li>Chạm <kbd>Vẫn mở</kbd> nếu bạn tin tưởng tệp &mdash; ứng dụng sẽ bỏ qua kiểm tra an toàn và tải các trang.</li>
+  </ul>
+  <p>Các tệp EPUB sử dụng bảo vệ tương tự trong khi nhập một cách âm thầm.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Về đầu trang</a>
+
+<!-- COMIC ZOOM -->
+<h2 id="comic-zoom">Thu phóng trang truyện tranh</h2>
+<p class="section-desc">Nhìn gần hơn vào tranh vẽ &mdash; trong cả chế độ trang lẫn cuộn webtoon.</p>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F50D;</span> Chế độ trang</h3>
+  <ul>
+    <li>Chụm để phóng to, lên đến ba lần kích thước vừa khít. Tranh vẽ vẫn nằm dưới ngón tay bạn khi chụm.</li>
+    <li>Chạm hai lần để nhảy đến kích thước gấp đôi tại điểm đó; chạm hai lần lần nữa để đưa trang về vừa khít màn hình.</li>
+    <li>Kéo bằng một ngón tay để di chuyển quanh trang khi đang phóng to.</li>
+    <li>Chụm gần như hết cỡ vào trong sẽ đưa trang về vừa khít gọn gàng.</li>
+  </ul>
+  <p>Thu phóng hoạt động với các tùy chọn co giãn <strong>Vừa màn hình</strong> và <strong>Vừa chiều cao</strong>, và với trang đôi. <strong>Vừa chiều rộng</strong> và <strong>Kích thước gốc</strong> đã hiển thị trang lớn hơn màn hình và cuộn thay vào đó &mdash; dùng <strong>Xem Độ Phân Giải Đầy Đủ</strong> bên dưới để nhìn gần hơn ở đó.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4F1;</span> Cuộn webtoon</h3>
+  <ul>
+    <li>Chụm hoặc chạm hai lần để phóng to toàn bộ dải truyện, lên đến ba lần kích thước bình thường.</li>
+    <li>Cuộn vẫn hoạt động khi bạn đang phóng to &mdash; chỉ cần kéo lên xuống như bình thường.</li>
+    <li>Kéo sang ngang để di chuyển trên một trang đã phóng to.</li>
+    <li>Mức thu phóng được giữ nguyên khi bạn tiếp tục cuộn, vì vậy bạn có thể đọc cả một chương ở kích thước phóng to. Xoay thiết bị sẽ đưa về kích thước bình thường.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x2728;</span> Xem độ phân giải đầy đủ</h3>
+  <p>Thu phóng phóng to trang ở kích thước đã chuẩn bị cho màn hình của bạn. Để có cái nhìn sắc nét nhất về một trang, nhấn giữ trang đó và chọn <kbd>Xem Độ Phân Giải Đầy Đủ</kbd> &mdash; trang đó được giải mã ở độ phân giải gốc của kho lưu trữ, và bạn có thể chụm để phóng to hơn nhiều. Chạm hai lần để chuyển đổi giữa vừa khít màn hình và kích thước gấp đôi; vuốt xuống hoặc chạm nút đóng để quay lại.</p>
+  <div class="tip"><strong>Lưu ý:</strong> Mức thu phóng không được lưu lại. Đóng sách luôn đưa về mức vừa khít bình thường.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Về đầu trang</a>
+
+<!-- TTS -->
+<h2 id="tts">Đọc thành tiếng &amp; CarPlay</h2>
+<p class="section-desc">Nghe sách của bạn được đọc to.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F50A;</span> Sử dụng đọc thành tiếng</h3>
+  <p>Mở bất kỳ sách EPUB, PDF hoặc TXT nào và chạm nút phát trên thanh công cụ. Chức năng đọc thành tiếng đọc từng câu một và tô sáng từ hiện tại.</p>
+  <ul>
+    <li><strong>Tốc độ</strong> &mdash; 0,5&times; đến 2&times; trong bộ điều khiển TTS.</li>
+    <li><strong>Giọng đọc</strong> &mdash; Chọn từ hơn 100 giọng hệ thống trong <kbd>Cài đặt</kbd> &rarr; <kbd>Tùy chọn đọc</kbd> &rarr; <kbd>Đọc thành tiếng</kbd>.</li>
+    <li><strong>Bỏ qua</strong> &mdash; Chạm tiếp theo/trước để nhảy theo câu hoặc theo chương.</li>
+  </ul>
+  <div class="tip"><strong>Lưu ý:</strong> <a href="#fixed-layout">Sách bố cục cố định</a> &mdash; truyện tranh và sách tranh có các trang là thiết kế cố định &mdash; không có văn bản để ứng dụng đọc to, vì vậy nút phát không hiển thị cho những cuốn sách này.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F697;</span> CarPlay</h3>
+  <p>Khi kết nối với xe hỗ trợ CarPlay, ứng dụng xuất hiện trên màn hình xe với các nút điều khiển phát đơn giản. Đọc thành tiếng tiếp tục phát ở chế độ nền &mdash; không cần giữ màn hình bật.</p>
+  <div class="tip"><strong>Mẹo:</strong> Bật <kbd>Âm thanh nền</kbd><span class="badge badge-premium">Premium</span> trong cài đặt TTS để tiếp tục phát khi ứng dụng ở chế độ nền, ngay cả khi không dùng CarPlay.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Về đầu trang</a>
+
+<!-- AI UPSCALING -->
+<h2 id="upscaling">AI nâng cấp truyện tranh</h2>
+<p class="section-desc">Nâng cao chất lượng trang truyện tranh độ phân giải thấp ngay trên thiết bị.<span class="badge badge-premium">Premium</span></p>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x2728;</span> Chức năng</h3>
+  <p>Sử dụng mô hình học máy trên thiết bị để nâng cấp các trang truyện tranh dưới ngưỡng độ phân giải. Kết quả là đường nét sắc hơn và ít hiện tượng nén hơn &mdash; đặc biệt hữu ích cho bản quét cũ hoặc chất lượng thấp.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x2699;</span> Thiết lập</h3>
+  <ol class="steps">
+    <li>Vào <kbd>Cài đặt</kbd> &rarr; <kbd>Tùy chọn đọc</kbd> &rarr; <kbd>Truyện tranh</kbd> &rarr; <kbd>AI nâng cấp</kbd>.</li>
+    <li>Bật tính năng.</li>
+    <li>Điều chỉnh <strong>Ngưỡng độ phân giải</strong> &mdash; các trang dưới chiều rộng pixel này sẽ được nâng cấp (mặc định: 1500 px).</li>
+    <li>Đặt <strong>Cửa sổ tải trước</strong> để kiểm soát số trang tiếp theo được xử lý trước ở chế độ nền.</li>
+    <li>Chọn <strong>Mức khử nhiễu</strong> (Tự động thường là tốt nhất).</li>
+  </ol>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4BE;</span> Bộ nhớ đệm &amp; lưu trữ</h3>
+  <p>Hình ảnh đã nâng cấp được lưu vào bộ nhớ đệm để không cần xử lý lại. Chọn thời gian giữ bộ nhớ đệm (7&ndash;90 ngày hoặc không hết hạn) và xóa bất cứ lúc nào từ cài đặt.</p>
+  <div class="tip"><strong>Mẹo:</strong> Một huy hiệu chỉ báo nhỏ xuất hiện trên các trang đã nâng cấp. Bạn có thể tắt điều này trong cài đặt nếu muốn.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Về đầu trang</a>
+
+<!-- HIDDEN MODE -->
+<h2 id="hidden">Sách ẩn</h2>
+<p class="section-desc">Giữ một số sách ở chế độ riêng tư.<span class="badge badge-premium">Premium</span></p>
+
+<div class="card">
+  <h3><span class="icon icon-indigo">&#x1F441;</span> Ẩn sách</h3>
+  <ol class="steps">
+    <li>Mở trang chi tiết sách và chạm menu (&hellip;).</li>
+    <li>Chọn <kbd>Ẩn sách</kbd>.</li>
+    <li>Sách sẽ biến mất khỏi giao diện thư viện bình thường.</li>
+  </ol>
+  <p>Để ẩn nhiều sách cùng lúc, sử dụng Chế độ chọn.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F513;</span> Xem sách ẩn</h3>
+  <p>Kéo xuống trong thư viện để kích hoạt <strong>Chế độ ẩn</strong>. Tất cả sách của bạn &mdash; cả ẩn lẫn hiển thị &mdash; đều được hiện. Kéo lại hoặc rời ứng dụng để thoát chế độ ẩn.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F512;</span> Tùy chọn riêng tư</h3>
+  <p>Khi chế độ ẩn đang bật, vào <kbd>Cài đặt</kbd> &rarr; <kbd>Chế độ ẩn</kbd> để chọn điều gì xảy ra khi bạn rời ứng dụng:</p>
+  <ul>
+    <li><strong>Tự động thoát</strong> (mặc định) &mdash; Chế độ ẩn tự động tắt. Nhanh và đơn giản.</li>
+    <li><strong>Yêu cầu Face ID / Touch ID</strong> &mdash; Chế độ ẩn vẫn bật nhưng yêu cầu xác thực sinh trắc học khi bạn quay lại. An toàn hơn.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x21A9;</span> Bỏ ẩn sách</h3>
+  <p>Trong chế độ ẩn, mở chi tiết sách ẩn và chọn <kbd>Bỏ ẩn sách</kbd>, hoặc sử dụng Chế độ chọn để bỏ ẩn hàng loạt.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x2601;</span> Đồng bộ sách ẩn</h3>
+  <p>Trong chế độ ẩn, vào <kbd>Cài đặt</kbd> &rarr; <kbd>Chế độ ẩn</kbd> và bật <kbd>Đồng bộ sách ẩn với iCloud</kbd>:</p>
+  <ul>
+    <li><strong>Tắt</strong> (mặc định) &mdash; sách ẩn chỉ lưu trên thiết bị này. Ẩn một quyển sách cũng sẽ xóa nó khỏi iCloud.</li>
+    <li><strong>Bật</strong> &mdash; sách ẩn đồng bộ qua iCloud nhưng vẫn ẩn trên mọi thiết bị bạn đã đăng nhập.</li>
+  </ul>
+  <p>Tắt công tắc này khi bạn đã có sách ẩn trên iCloud sẽ hỏi bạn muốn làm gì với chúng:</p>
+  <ul>
+    <li><strong>Giữ trên mọi thiết bị</strong> &mdash; các thiết bị khác của bạn giữ bản sao đã đồng bộ; thiết bị này giữ một bản sao riêng chỉ lưu cục bộ.</li>
+    <li><strong>Xóa hoàn toàn khỏi iCloud</strong> &mdash; xóa sách khỏi iCloud; mỗi thiết bị khác giữ bản sao riêng của mình trong thư viện ẩn của thiết bị đó.</li>
+  </ul>
+  <div class="tip"><strong>Lưu ý:</strong> Nếu một trong các thiết bị khác của bạn xóa một quyển sách ẩn khỏi iCloud, thiết bị này sẽ tự động giữ lại bản sao riêng trong thư viện ẩn &mdash; miễn là tệp của quyển sách đó đã được tải xuống ở đó từ trước.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F5D1;</span> Xóa vĩnh viễn sách ẩn</h3>
+  <p>Trong chế độ ẩn, vào <kbd>Cài đặt</kbd> &rarr; <kbd>Chế độ ẩn</kbd> và chọn <kbd>Xóa vĩnh viễn sách ẩn</kbd> để xóa mọi quyển sách ẩn khỏi thiết bị này, khỏi iCloud và khỏi các thiết bị khác của bạn. Gõ <kbd>DELETE</kbd> để xác nhận.</p>
+  <div class="tip"><strong>Cảnh báo:</strong> Hành động này không thể hoàn tác. Các thiết bị đang ngoại tuyến tại thời điểm đó sẽ giữ bản sao cục bộ cho đến lần đồng bộ tiếp theo.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Về đầu trang</a>
+
+<!-- BOOKMARKS, HIGHLIGHTS, TAGS -->
+<h2 id="bookmarks">Đánh dấu, tô sáng &amp; thẻ</h2>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F516;</span> Đánh dấu trang</h3>
+  <p>Chạm biểu tượng đánh dấu trên thanh công cụ trình đọc để đánh dấu trang hiện tại. Thêm ghi chú tùy chọn. Xem tất cả đánh dấu của sách từ trang chi tiết.</p>
+  <div class="tip"><strong>Lưu ý:</strong> Chỉ những đánh dấu bạn tạo thủ công mới xuất hiện ở đây. Các vị trí mà ứng dụng tự động lưu khi bạn đóng sách được giữ riêng trong <a href="#history">Lịch sử đọc</a> để không lấn át các đánh dấu của bạn.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F58D;</span> Tô sáng<span class="badge badge-premium">Premium</span></h3>
+  <p>Trong tệp EPUB, chọn văn bản để tô sáng. Chọn từ năm màu (vàng, hồng, xanh lá, xanh dương, cam) và thêm ghi chú. Tất cả phần tô sáng được liệt kê trên trang chi tiết sách.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F3F7;</span> Thẻ</h3>
+  <p>Thêm thẻ cho bất kỳ sách nào từ trang chi tiết. Thẻ có thể tìm kiếm được và dùng làm bộ lọc thư viện. Quản lý tất cả thẻ từ <kbd>Cài đặt</kbd> &rarr; <kbd>Thẻ</kbd>.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Về đầu trang</a>
+
+<!-- READING HISTORY -->
+<h2 id="history">Lịch sử đọc</h2>
+<p class="section-desc">Quay lại bất kỳ vị trí nào bạn đã đọc gần đây.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F552;</span> Tự động lưu</h3>
+  <p>Mỗi khi bạn đóng một quyển sách hoặc đưa ứng dụng xuống nền, vị trí hiện tại của bạn được lưu thành một mục lịch sử &mdash; không cần phải nhớ đánh dấu. Việc này hoạt động trong mọi trình đọc: EPUB, PDF, TXT/RTF và truyện tranh.</p>
+  <ul>
+    <li>Có thể giữ tới <strong>50</strong> vị trí gần đây cho mỗi quyển sách. Các mục cũ sẽ tự động bị xóa khi có mục mới.</li>
+    <li>Nếu bạn đóng sách lại ở cùng vị trí trong vòng vài phút, mục hiện có sẽ được cập nhật thay vì tạo bản sao.</li>
+    <li>Các vị trí tự động lưu được tách riêng khỏi danh sách đánh dấu thủ công để không lẫn với những đánh dấu bạn đặt có chủ đích.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4D6;</span> Lịch sử trong một quyển sách</h3>
+  <p>Khi đang đọc, chạm menu (&hellip;) ở góc trên bên phải và chọn <kbd>Lịch sử đọc</kbd>. Bạn sẽ thấy danh sách các vị trí gần đây trong quyển sách đó, mới nhất trước, kèm tên chương hoặc trang và thời gian từ khi mỗi mục được ghi lại.</p>
+  <ul>
+    <li>Chạm vào một mục để chuyển thẳng đến vị trí đó.</li>
+    <li>Vuốt sang trái trên một mục để xóa nó.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F4DA;</span> Lịch sử trên toàn thư viện</h3>
+  <p>Từ thư viện, chạm menu (&hellip;) trên thanh công cụ trên cùng và chọn <kbd>Lịch sử đọc</kbd> để xem mọi quyển sách bạn đã mở gần đây, nhóm theo ngày. Chạm một dòng để mở sách ngay tại nơi bạn đã dừng.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Về đầu trang</a>
+
+<!-- AUTHOR & TAG BROWSING -->
+<h2 id="search">Duyệt theo Tác giả &amp; Thẻ</h2>
+<p class="section-desc">Tìm sách theo tác giả hoặc thẻ từ bất kỳ đâu trong ứng dụng.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F464;</span> Tác giả</h3>
+  <p>Vào <kbd>Cài đặt</kbd> &rarr; <kbd>Tác Giả</kbd> để xem mọi tác giả trong thư viện kèm số lượng sách. Chạm vào một tác giả để tìm trong thư viện tất cả sách của họ.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F3F7;</span> Tìm kiếm theo thẻ</h3>
+  <p>Trong <kbd>Cài đặt</kbd> &rarr; <kbd>Thẻ</kbd>, chạm vào bất kỳ thẻ nào để tìm trong thư viện những quyển sách mang thẻ đó. Nhấn giữ để đổi tên hoặc xóa.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F50D;</span> Tìm nhanh theo ngữ cảnh</h3>
+  <ul>
+    <li>Nhấn giữ một quyển sách trong thư viện &rarr; <kbd>Tìm sách của [Tác giả]</kbd></li>
+    <li>Trên trang chi tiết của một quyển sách, nhấn giữ tên tác giả hoặc bất kỳ thẻ nào để tìm kiếm</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Về đầu trang</a>
+
+<!-- METADATA -->
+<h2 id="metadata">Siêu dữ liệu &amp; ComicInfo.xml</h2>
+<p class="section-desc">Xem và chỉnh sửa siêu dữ liệu của sách.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x270F;</span> Trình chỉnh sửa siêu dữ liệu</h3>
+  <p>Từ trang chi tiết của một quyển sách, chạm menu (&hellip;) và chọn <kbd>Chỉnh sửa Siêu dữ liệu</kbd> để thay đổi tên sách, tác giả, bộ sách, mô tả và các trường khác. Bạn cũng có thể trích xuất lại siêu dữ liệu từ tệp gốc.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4CB;</span> ComicInfo.xml</h3>
+  <p>Các kho lưu trữ truyện tranh (CBZ, CBR, CB7) có chứa tệp <code>ComicInfo.xml</code> sẽ được tự động trích xuất siêu dữ liệu khi nhập &mdash; bao gồm tên sách, tác giả, bộ sách, số kỳ, tóm tắt, nhà xuất bản, thể loại và thẻ.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Về đầu trang</a>
+
+<!-- ICLOUD -->
+<h2 id="icloud">Đồng bộ iCloud</h2>
+<p class="section-desc">Đồng bộ thư viện giữa các thiết bị.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x2601;</span> Bật đồng bộ</h3>
+  <ol class="steps">
+    <li>Vào <kbd>Cài đặt</kbd> &rarr; <kbd>Đồng bộ iCloud</kbd>.</li>
+    <li>Bật <kbd>Đồng bộ thư viện với iCloud</kbd>.</li>
+    <li>Đồng bộ sẽ có hiệu lực vào lần mở ứng dụng tiếp theo.</li>
+  </ol>
+  <p>Siêu dữ liệu, tiến độ đọc, đánh dấu, tô sáng và kệ sách đồng bộ trên tất cả thiết bị đăng nhập cùng tài khoản iCloud.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F4CA;</span> Trạng thái đồng bộ</h3>
+  <p><kbd>Cài đặt</kbd> &rarr; <kbd>Đồng bộ iCloud</kbd> hiển thị thẻ trạng thái cho các tệp sách của bạn:</p>
+  <ul>
+    <li>Tiêu đề chính &mdash; <strong>Đã cập nhật</strong>, <strong>Đang đồng bộ&hellip;</strong> (kèm số lượng), hoặc <strong>Chưa đăng nhập</strong>.</li>
+    <li>Một thanh cho biết bao nhiêu phần tệp trong thư viện của bạn đang ở trên iCloud.</li>
+    <li>Chi tiết &mdash; <strong>Đã đồng bộ</strong> (kèm tổng dung lượng), <strong>Chỉ trên iCloud</strong> (chưa tải xuống thiết bị này), và <strong>Đang xử lý</strong>.</li>
+  </ul>
+  <div class="tip"><strong>Lưu ý:</strong> Thẻ này chỉ theo dõi <em>tệp</em> sách. Tiến độ đọc, đánh dấu, tô sáng và kệ sách đồng bộ riêng và tự động, bất kể trạng thái tệp.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x2601;</span> Huy hiệu trên bìa sách</h3>
+  <p>Bìa sách hiển thị một biểu tượng đám mây nhỏ ở góc dưới bên phải để cho biết trạng thái đồng bộ tệp:</p>
+  <ul>
+    <li><strong>Biểu tượng đám mây</strong> &mdash; tệp chỉ có trên iCloud. Mở trang sách để tải xuống.</li>
+    <li><strong>Mũi tên lên/xuống</strong> &mdash; tệp đang được tải lên hoặc tải xuống.</li>
+    <li><strong>Không có biểu tượng</strong> &mdash; tệp đã có sẵn trên thiết bị này.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4E5;</span> Tải tự động</h3>
+  <p>Chọn kích thước tệp tối đa cho tải tự động. Sách lớn hơn sẽ ở trên đám mây cho đến khi bạn mở. Điều chỉnh giới hạn trong cài đặt iCloud.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Về đầu trang</a>
+
+<!-- STATS -->
+<h2 id="stats">Thống kê đọc sách</h2>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F4CA;</span> Hoạt động đọc của bạn</h3>
+  <p>Mở <kbd>Cài đặt</kbd> &rarr; <kbd>Thống kê thư viện</kbd> để xem:</p>
+  <ul>
+    <li>Tổng số sách, trang đã đọc và thời gian đọc.</li>
+    <li>Biểu đồ hoạt động đọc hàng ngày.</li>
+    <li>Sách theo định dạng và trạng thái đọc.</li>
+    <li>Chi tiết hoạt động từng cuốn sách.</li>
+  </ul>
+  <div class="tip"><strong>Lưu ý:</strong> Thống kê tuân thủ chế độ ẩn &mdash; khi chế độ ẩn tắt, thống kê sách ẩn sẽ bị loại trừ.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Về đầu trang</a>
+
+<!-- WEBDAV & OPDS -->
+<h2 id="webdav">WebDAV &amp; OPDS</h2>
+<p class="section-desc">Duyệt và tải xuống từ máy chủ và danh mục từ xa.</p>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F5C4;</span> WebDAV</h3>
+  <p>Kết nối với NAS, Nextcloud hoặc máy chủ Calibre để duyệt thư mục và tải sách.</p>
+  <ol class="steps">
+    <li>Vào <kbd>Cài đặt</kbd> &rarr; <kbd>Nhập sách</kbd> &rarr; <kbd>WebDAV</kbd>.</li>
+    <li>Chạm <kbd>Thêm máy chủ</kbd> và nhập URL.</li>
+    <li>Thêm tên người dùng và mật khẩu nếu cần.</li>
+    <li>Chạm <kbd>Kiểm tra kết nối</kbd>, sau đó lưu.</li>
+  </ol>
+  <div class="tip"><strong>Chứng chỉ tự ký:</strong> Nếu máy chủ của bạn dùng chứng chỉ tự ký, bạn có thể bật <kbd>Cho phép chứng chỉ không đáng tin cậy</kbd>. Ứng dụng sẽ yêu cầu bạn xác nhận trước &mdash; thao tác này tắt xác thực TLS, nên bất kỳ ai trong mạng của bạn đều có thể giả mạo máy chủ. Chỉ bật cho máy chủ do chính bạn kiểm soát.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4DA;</span> Danh mục OPDS</h3>
+  <p>OPDS là tiêu chuẩn mở cho danh mục sách. Thêm danh mục công cộng (Project Gutenberg, Standard Ebooks, v.v.) hoặc máy chủ riêng của bạn.</p>
+  <ol class="steps">
+    <li>Vào <kbd>Cài đặt</kbd> &rarr; <kbd>Nhập sách</kbd> &rarr; <kbd>OPDS</kbd>.</li>
+    <li>Chạm <kbd>Thêm danh mục</kbd> và nhập URL nguồn cấp.</li>
+    <li>Duyệt danh mục và tải sách về thư viện.</li>
+  </ol>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Về đầu trang</a>
+
+<!-- RESUME -->
+<h2 id="resume">Tiếp tục khi mở ứng dụng</h2>
+<p class="section-desc">Tự động tiếp tục nơi bạn đã dừng lại.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x25B6;</span> Thiết lập</h3>
+  <p>Vào <kbd>Cài đặt</kbd> &rarr; <kbd>Chung</kbd> và bật <kbd>Tiếp Tục Sách Cuối Khi Khởi Chạy</kbd>. Lần tiếp theo bạn mở ứng dụng, nó sẽ nhảy thẳng đến cuốn sách và trang bạn đọc gần nhất.</p>
+  <div class="tip"><strong>Sách ẩn:</strong> Nếu cuốn sách cuối bạn đọc đang bị ẩn, ứng dụng sẽ yêu cầu Face ID / Touch ID trước khi tiếp tục. Bật <kbd>Tiếp tục sách ẩn sau xác thực</kbd> trong cài đặt Chế độ ẩn để cho phép.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Về đầu trang</a>
+
+<!-- FORMATS -->
+<h2 id="formats">Định dạng được hỗ trợ</h2>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4D6;</span> Sách</h3>
+  <div class="formats-grid">
+    <div class="format-tag">EPUB</div>
+    <div class="format-tag">PDF</div>
+    <div class="format-tag">TXT</div>
+    <div class="format-tag">RTF</div>
+  </div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4F1;</span> Truyện tranh</h3>
+  <div class="formats-grid">
+    <div class="format-tag">CBZ</div>
+    <div class="format-tag">CBR</div>
+    <div class="format-tag">CB7</div>
+  </div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Về đầu trang</a>
+
+</body>
+</html>

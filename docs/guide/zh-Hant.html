@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>使用指南</title>
+<link rel="stylesheet" href="UserGuideStyle.css">
+<!-- USER-GUIDE-NAV-STYLE:START -->
+<style>
+.guide-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 14px;
+  padding: 10px 14px;
+  margin: 0 0 16px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  font-size: 13px;
+}
+.guide-nav-home {
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.guide-nav-arrow {
+  display: inline-block;
+}
+[dir="rtl"] .guide-nav-arrow {
+  transform: scaleX(-1);
+}
+.guide-nav-langs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 10px;
+  color: var(--secondary);
+}
+.guide-nav-globe {
+  font-size: 13px;
+}
+.guide-nav-langs a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.guide-nav-langs a:hover,
+.guide-nav-langs a:focus-visible {
+  text-decoration: underline;
+}
+.guide-nav-current {
+  font-weight: 700;
+  color: var(--text);
+}
+</style>
+<!-- USER-GUIDE-NAV-STYLE:END -->
+</head>
+<body id="top">
+<!-- USER-GUIDE-NAV:START -->
+<nav class="guide-nav" aria-label="User Guide language switcher">
+  <a class="guide-nav-home" href="../index.html"><span class="guide-nav-arrow" aria-hidden="true">&larr;</span> Idyllic</a>
+  <span class="guide-nav-langs">
+    <span class="guide-nav-globe" aria-hidden="true">&#x1F310;</span>
+      <a href="index.html">English</a>
+      <a href="ar.html">العربية</a>
+      <a href="cs.html">Čeština</a>
+      <a href="da.html">Dansk</a>
+      <a href="de.html">Deutsch</a>
+      <a href="es.html">Español</a>
+      <a href="fi.html">Suomi</a>
+      <a href="fr.html">Français</a>
+      <a href="he.html">עברית</a>
+      <a href="hi.html">हिन्दी</a>
+      <a href="id.html">Indonesia</a>
+      <a href="it.html">Italiano</a>
+      <a href="ja.html">日本語</a>
+      <a href="ko.html">한국어</a>
+      <a href="ms.html">Bahasa Melayu</a>
+      <a href="nb.html">Norsk bokmål</a>
+      <a href="nl.html">Nederlands</a>
+      <a href="pl.html">Polski</a>
+      <a href="pt-BR.html">Português (Brasil)</a>
+      <a href="ru.html">Русский</a>
+      <a href="sv.html">Svenska</a>
+      <a href="th.html">ไทย</a>
+      <a href="tr.html">Türkçe</a>
+      <a href="uk.html">Українська</a>
+      <a href="vi.html">Tiếng Việt</a>
+      <a href="zh-Hans.html">简体中文</a>
+      <span class="guide-nav-current">繁體中文</span>
+  </span>
+</nav>
+<!-- USER-GUIDE-NAV:END -->
+
+<h1>使用指南</h1>
+<p class="subtitle">充分利用閱讀體驗所需的一切。</p>
+
+<!-- TABLE OF CONTENTS -->
+<div class="card toc">
+  <a href="#importing">匯入書籍</a>
+  <a href="#wifi">WiFi 傳輸</a>
+  <a href="#library">書庫 &amp; 整理</a>
+  <a href="#shelves">書架 &amp; 資料夾</a>
+  <a href="#reading-books">閱讀書籍</a>
+  <a href="#fixed-layout">固定版面書籍</a>
+  <a href="#in-book-search">書內搜尋</a>
+  <a href="#image-gallery">圖片庫</a>
+  <a href="#fonts">閱讀字型</a>
+  <a href="#reading-direction">閱讀方向</a>
+  <a href="#vertical-writing">直排書寫</a>
+  <a href="#reading-comics">閱讀漫畫</a>
+  <a href="#comic-zoom">漫畫頁面縮放</a>
+  <a href="#tts">文字轉語音 &amp; CarPlay</a>
+  <a href="#upscaling">AI 漫畫增強</a>
+  <a href="#hidden">隱藏書籍</a>
+  <a href="#bookmarks">書籤、標註 &amp; 標籤</a>
+  <a href="#history">閱讀歷史</a>
+  <a href="#search">依作者與標籤瀏覽</a>
+  <a href="#metadata">中繼資料與 ComicInfo.xml</a>
+  <a href="#icloud">iCloud 同步</a>
+  <a href="#stats">閱讀統計</a>
+  <a href="#webdav">WebDAV &amp; OPDS</a>
+  <a href="#resume">啟動時繼續閱讀</a>
+  <a href="#formats">支援的格式</a>
+</div>
+
+<!-- IMPORTING -->
+<h2 id="importing">匯入書籍</h2>
+<p class="section-desc">多種方式將書籍加入您的書庫。</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4C1;</span> 從「檔案」App</h3>
+  <p>點選 <kbd>設定</kbd> &rarr; <kbd>匯入書籍</kbd>，然後從裝置、iCloud Drive 或任何已連接的雲端服務中選擇檔案。在 iPad 上還可以使用拖放操作。</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F310;</span> WiFi 傳輸</h3>
+  <p>從 WiFi 網路上的任何電腦或手機上傳書籍。詳情請參閱下方的專屬章節。</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F5C2;</span> WebDAV &amp; OPDS</h3>
+  <p>連接到 NAS、Calibre 伺服器或公共書籍目錄，直接瀏覽和下載書籍。請參閱下方。</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; 返回頂端</a>
+
+<!-- WIFI TRANSFER -->
+<h2 id="wifi">WiFi 傳輸</h2>
+<p class="section-desc">從本機網路上的任何裝置上傳書籍。</p>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F4F6;</span> 運作方式</h3>
+  <p>App 會在您的裝置上執行一個小型網頁伺服器。同一 WiFi 網路上的任何電腦或手機都可以在瀏覽器中開啟上傳頁面。</p>
+  <ol class="steps">
+    <li>前往 <kbd>設定</kbd> &rarr; <kbd>匯入書籍</kbd> &rarr; <kbd>WiFi 傳輸</kbd>。</li>
+    <li>點選 <kbd>啟動伺服器</kbd>，將顯示類似 <kbd>http://192.168.1.42:8080</kbd> 的位址。</li>
+    <li>在同一網路的任何瀏覽器中開啟該位址。</li>
+    <li>將檔案拖曳到頁面上或點擊瀏覽 &mdash; 按需選擇目標資料夾。</li>
+    <li>匯入的書籍會立即出現在您的書庫中。</li>
+    <li>完成後點選 <kbd>停止伺服器</kbd>。</li>
+  </ol>
+  <div class="tip"><strong>提示：</strong>伺服器執行期間裝置將保持喚醒狀態，以免傳輸中斷。</div>
+  <div class="tip"><strong>上傳失敗？</strong>每個失敗的檔案會在所在列直接顯示原因。如果 WiFi 連線中斷，請點選該列中的 <kbd>&#x21BB; 重試</kbd> 再次傳送。對於無法解決的問題（例如不支援的檔案格式），不會顯示重試按鈕。</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; 返回頂端</a>
+
+<!-- LIBRARY -->
+<h2 id="library">書庫 &amp; 整理</h2>
+<p class="section-desc">尋找、排序和整理您的書籍。</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F50D;</span> 搜尋</h3>
+  <p>點選書庫底部的<kbd>搜尋</kbd>膠囊按鈕以展開搜尋欄位，然後點選<kbd>完成</kbd>將其關閉。可按書名、作者、標籤、系列、出版社和描述進行搜尋。從書籍的操作選單依作者或標籤搜尋（參見<a href="#search">依作者與標籤瀏覽</a>）會帶入相同的搜尋內容。</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x2195;</span> 排序 &amp; 篩選</h3>
+  <p>點選檢視選項按鈕（右上角）進行選擇：</p>
+  <ul>
+    <li><strong>佈局</strong> &mdash; 格狀、詳細、精簡、極簡、表格或雜誌</li>
+    <li><strong>排序</strong> &mdash; 書名、作者、最近閱讀、加入日期、進度、檔案大小、系列</li>
+    <li><strong>顯示</strong> &mdash; 將正在閱讀的書排在前面，已完成的排在最後</li>
+    <li><strong>篩選</strong> &mdash; 按格式、標籤或作者</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x2714;</span> 選擇模式</h3>
+  <p>長按一本書或點選 <kbd>選擇</kbd> 進入選擇模式。然後可以一次移動、刪除、隱藏或取消隱藏多本書。</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4CB;</span> 清理重複項目</h3>
+  <p>前往 <strong>設定 &gt; 書庫 &gt; 書庫維護 &gt; 清理重複項目</strong>，尋找標題、作者和格式相同的書籍。對於每個重複群組：</p>
+  <ul>
+    <li><strong>最新版本</strong>會標示綠色的 KEEP 徽章</li>
+    <li>使用核取方塊選擇較舊的副本（或 <strong>全選</strong>）</li>
+    <li><strong>刪除</strong> &mdash; 移除所選的較舊副本</li>
+    <li><strong>複製資料並刪除</strong> &mdash; 在刪除之前將書籤、標示、標籤、閱讀進度和書架歸屬轉移到最新版本</li>
+    <li>啟用 <strong>「將新書移動到舊書的書架與隱藏狀態」</strong>，以將新版本保留在書庫中的同一位置</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; 返回頂端</a>
+
+<!-- SHELVES -->
+<h2 id="shelves">書架 &amp; 資料夾</h2>
+<p class="section-desc">將書籍整理到巢狀資料夾中。</p>
+
+<div class="card">
+  <h3><span class="icon icon-indigo">&#x1F4C2;</span> 建立書架</h3>
+  <ol class="steps">
+    <li>點選書庫頂端的 <kbd>新建書架</kbd>。</li>
+    <li>輸入名稱，然後選擇圖示和顏色。</li>
+    <li>可選擇上層書架來建立子資料夾。</li>
+  </ol>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x21C4;</span> 移動書籍</h3>
+  <p>在書籍詳情頁，點選選單（&hellip;）並選擇 <kbd>移到書架</kbd>。在選擇模式下可以一次移動多本書。</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; 返回頂端</a>
+
+<!-- READING BOOKS -->
+<h2 id="reading-books">閱讀書籍</h2>
+<p class="section-desc">EPUB、PDF、TXT 和 RTF 閱讀模式。</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4D6;</span> EPUB</h3>
+  <p>EPUB 檔案在基於 Readium 的全功能閱讀器中開啟。點選左右邊緣翻頁，或者滑動。</p>
+  <ul>
+    <li><strong>分頁模式</strong> &mdash; 傳統的逐頁閱讀。</li>
+    <li><strong>連續捲動</strong><span class="badge badge-premium">Premium</span> &mdash; 自然捲動閱讀文字，無分頁。</li>
+    <li><strong>閱讀方向</strong> &mdash; 自動跟隨書籍設定，或自行設定為從左到右或從右到左。詳見<a href="#reading-direction">閱讀方向</a>。</li>
+    <li><strong>固定版面</strong> &mdash; 漫畫、繪本及其他逐頁排版的 EPUB，會以專為其打造的閱讀器開啟。詳見<a href="#fixed-layout">固定版面書籍</a>。</li>
+    <li><strong>書內搜尋</strong><span class="badge badge-premium">Premium</span> &mdash; 在整本書中搜尋任何字詞或片語。詳見<a href="#in-book-search">書內搜尋</a>。</li>
+    <li><strong>圖片庫</strong><span class="badge badge-premium">Premium</span> &mdash; 在書籍詳情頁瀏覽 EPUB 中的所有圖片。詳見<a href="#image-gallery">圖片庫</a>。</li>
+  </ul>
+  <div class="tip"><strong>提示：</strong>在 <kbd>設定</kbd> &rarr; <kbd>閱讀偏好</kbd> &rarr; <kbd>書籍</kbd> 中調整字型大小、行距和主題顏色。</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F4C4;</span> PDF</h3>
+  <p>PDF 檔案原生算繪。雙指縮放，滑動翻頁。App 可以記住受保護 PDF 的密碼。</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x1F4DD;</span> TXT &amp; RTF</h3>
+  <p>純文字和 RTF 檔案在簡單的文字閱讀器中開啟，可調整格式。</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; 返回頂端</a>
+
+<!-- FIXED LAYOUT -->
+<h2 id="fixed-layout">固定版面書籍</h2>
+<p class="section-desc">頁面採固定設計的 EPUB &mdash; 漫畫、繪本以及大量插圖的書籍。</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4D0;</span> 這是什麼</h3>
+  <p>有些 EPUB 是逐頁排版，而非可重排的流動文字：每一頁都是文字與插圖的固定配置。App 會自動辨識這類書籍，並以專為其打造的閱讀器開啟 &mdash; 每一頁會縮放至符合螢幕並置中，周圍空間則以您的閱讀主題背景色填滿。</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F44B;</span> 閱讀與縮放</h3>
+  <ul>
+    <li>點選螢幕左側或右側翻頁，或者滑動。點選中央可顯示或隱藏工具列。</li>
+    <li>雙指縮放放大 &mdash; 最高可達符合大小的三倍 &mdash; 並拖曳以移動頁面。</li>
+    <li>點兩下可放大該處；再點兩下則將頁面還原為符合螢幕大小。</li>
+    <li>依從右到左方向出版的書籍會自動以該方向翻頁。</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4D6;</span> 雙頁跨頁</h3>
+  <p>將裝置轉為橫向，對開頁會並排顯示。App 會遵循書籍內建的跨頁提示，因此封面或全頁插圖仍會單獨佔一頁。轉回直向即可恢復單頁顯示。</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x2139;</span> 可用功能</h3>
+  <p>目錄、書籤、頁面滑桿、閱讀歷史，以及從上次停下之處繼續閱讀，這些功能都照常運作。</p>
+  <p>由於每一頁都是固定設計，而非 App 可重排的文字，這類書籍不會顯示部分控制項：連續捲動與自動捲動、字型與外觀設定、文字轉語音、書內搜尋，以及文字選取或標註。</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; 返回頂端</a>
+
+<!-- IN-BOOK SEARCH -->
+<h2 id="in-book-search">書內搜尋</h2>
+<p class="section-desc">在正在閱讀的書中尋找任何字詞或片語。<span class="badge badge-premium">Premium</span></p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F50D;</span> 開始搜尋</h3>
+  <ol class="steps">
+    <li>點選頁面中央以顯示工具列。</li>
+    <li>點選底部工具列右端的放大鏡。</li>
+    <li>輸入至少兩個字元，然後按鍵盤上的 <kbd>搜尋</kbd>。</li>
+  </ol>
+  <p>搜尋範圍是整本書 &mdash; 所有章節，而不只是螢幕上顯示的章節 &mdash; 且比對不區分大小寫。搜尋功能可在 EPUB 和 TXT/RTF 閱讀器中使用。</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4C4;</span> 瀏覽結果</h3>
+  <p>結果會顯示在搜尋列下方，並依章節分組。每一列都會在一段前後文摘錄中以粗體顯示符合的內容。點選某個結果即可直接跳到該處 &mdash; 書中所有符合項目都會以黃色標示，目前的項目則以較深的琥珀色顯示。</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x2195;</span> 在符合項目之間跳轉</h3>
+  <p>選擇某個結果後，搜尋列會摺疊為精簡的長條，並附有計數器，顯示您目前位於第幾個符合項目。</p>
+  <ul>
+    <li>使用上下箭頭移至上一個或下一個符合項目。</li>
+    <li>點選清單按鈕可重新開啟完整的結果清單。</li>
+    <li>點選 <kbd>&times;</kbd> 結束搜尋 &mdash; 所有標示都會移除。</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; 返回頂端</a>
+
+<!-- IMAGE GALLERY -->
+<h2 id="image-gallery">圖片庫</h2>
+<p class="section-desc">以可滑動的圖庫形式瀏覽 EPUB 中的每一幅插圖。<span class="badge badge-premium">Premium</span></p>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F5BC;</span> 開啟圖片庫</h3>
+  <p>開啟某本 EPUB 書籍的詳情頁，點選右上角工具列中的照片堆疊按鈕 <span class="icon">&#x1F5BC;</span>。App 會從書中擷取所有圖片，處理期間會顯示進度列 &mdash; 點選左上角的 <kbd>&times;</kbd> 按鈕可隨時退出。圖片庫僅適用於 EPUB 書籍。</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4DA;</span> 您會看到的內容</h3>
+  <p>圖片會依閱讀順序 &mdash; 即它們在書中各章節出現的順序 &mdash; 每頁顯示一張，並包含封面。圖示和裝飾等細小圖片會被略過：小於最小尺寸（預設為 100&nbsp;px）的圖片不會顯示。可在 <kbd>設定</kbd> &rarr; <kbd>閱讀偏好</kbd> &rarr; <kbd>書籍</kbd> &rarr; <kbd>EPUB 圖庫</kbd> 中調整此門檻。如果沒有符合條件的圖片，圖庫會告訴您未找到任何圖片。</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F446;</span> 檢視與儲存圖片</h3>
+  <ul>
+    <li>滑動即可在圖片之間切換，或使用底部的頁面滑桿快速跳轉。</li>
+    <li>雙指縮放或點兩下即可放大，然後拖曳可四處移動 &mdash; 圖片庫使用與漫畫閱讀器相同的縮放方式。詳見<a href="#comic-zoom">漫畫頁面縮放</a>。</li>
+    <li>點選螢幕中央可顯示或隱藏控制項目。</li>
+    <li>長按圖片可選擇 <kbd>檢視完整解析度</kbd> &mdash; 以原始大小開啟該圖片以便仔細檢視 &mdash; 或選擇 <kbd>儲存到「照片」</kbd>、<kbd>儲存到「檔案」</kbd>或<kbd>複製圖片</kbd>。</li>
+    <li>圖片庫會遵循您的漫畫閱讀方向 &mdash; 包括 Webtoon 式垂直捲動。</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; 返回頂端</a>
+
+<!-- READING FONTS -->
+<h2 id="fonts">閱讀字型</h2>
+<p class="section-desc">選擇閱讀字型、加入自己的字型，或下載語言包。</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F524;</span> 選擇字型</h3>
+  <p>開啟 <kbd>設定</kbd> &rarr; <kbd>閱讀偏好</kbd> &rarr; <kbd>書籍</kbd> &rarr; <kbd>自訂字型</kbd> 進入<strong>字型</strong>畫面。App 內建了多款閱讀字型，預設字型為 <strong>Literata</strong>。所選字型會套用至 EPUB 和文字閱讀器。</p>
+  <div class="tip"><strong>提示：</strong>在 <kbd>設定</kbd> &rarr; <kbd>閱讀偏好</kbd> &rarr; <kbd>書籍</kbd> 中調整字型大小和行距。</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F453;</span> 無障礙字型</h3>
+  <p>內建了兩款專為便於閱讀而設計、隨時可用的字型：<strong>Atkinson Hyperlegible</strong> 強化了相似字母之間的差異，<strong>OpenDyslexic</strong> 則加重了字母底部，以減少字母混淆。</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F4C2;</span> 自訂字型</h3>
+  <p>在字型畫面匯入您自己的 <kbd>.ttf</kbd> 或 <kbd>.otf</kbd> 字型檔案，即可在 EPUB 閱讀器中使用。匯入的字型僅保留在您的裝置上。</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F4E5;</span> 下載字型和語言包</h3>
+  <p>在<strong>下載字型</strong>中，可視需要取得 App 未隨附的文字系統所需的額外閱讀字型和語言包 &mdash; 中文、日文和韓文（CJK）、阿拉伯文、天城文和泰文。語言包體積較大（每個約 41&nbsp;MB），因此下載前會顯示大小。安裝後，它們的使用方式與匯入的字型完全相同。</p>
+  <div class="tip"><strong>提示：</strong>如果書中的字元顯示為空白方框，請下載對應的語言包以顯示它們。</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x1F4DC;</span> 字型授權</h3>
+  <p>內建和可下載的字型均依據 <strong>SIL Open Font License</strong> 提供。您可以在字型畫面的每一列中閱讀相應字型的完整授權條款。</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; 返回頂端</a>
+
+<!-- READING DIRECTION -->
+<h2 id="reading-direction">閱讀方向</h2>
+<p class="section-desc">從左到右、從右到左，或書籍出版時聲明的方向。</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x21C4;</span> 選擇方向</h3>
+  <p>開啟 <kbd>設定</kbd> &rarr; <kbd>閱讀偏好</kbd> &rarr; <kbd>書籍</kbd>，在<strong>閱讀模式</strong>下使用<strong>閱讀方向</strong>控制項：</p>
+  <ul>
+    <li><strong>自動</strong>（預設）&mdash; 依書籍本身聲明的方向。漫畫及以從右到左方式出版的書籍，會自動以正確方向開啟，無需任何設定。</li>
+    <li><strong>從左到右</strong> &mdash; 大多數西方書籍的標準方向。</li>
+    <li><strong>從右到左</strong> &mdash; 讓所有書籍一律採用從右到左方向。</li>
+  </ul>
+  <p>您也可以不離開書籍即可變更：點選頁面中央顯示工具列，然後點選底部工具列中的 <kbd>Aa</kbd> 按鈕。變更會立即套用到您目前正在閱讀的頁面。</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F44B;</span> 會隨方向改變的項目</h3>
+  <ul>
+    <li>哪一側能讓您前進 &mdash; 在從右到左的書籍中，點選或向左滑動會翻到下一頁。</li>
+    <li>翻頁動畫，會從正確的一側翻起。</li>
+    <li>頁面上文字的排列方式。</li>
+  </ul>
+  <div class="tip"><strong>注意：</strong>頁面滑桿一律從左側開始填滿，因為它顯示的是您在全書中的進度，而非頁面在螢幕上的位置。</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x2139;</span> 適用範圍</h3>
+  <p>此設定僅適用於分頁模式的 EPUB &mdash; 開啟連續捲動時會隱藏此設定。漫畫有自己的閱讀順序設定（參見<a href="#reading-comics">閱讀漫畫</a>），而<a href="#fixed-layout">固定版面書籍</a>一律遵循書籍聲明的方向。</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; 返回頂端</a>
+
+<!-- VERTICAL WRITING -->
+<h2 id="vertical-writing">直排書寫</h2>
+<p class="section-desc">以直排（縱式）排版的日文與中文書籍。</p>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x2B07;</span> 直排書籍</h3>
+  <p>以直排方式排版的書籍 &mdash; 日文稱為「縦書き」（たてがき），中文則稱為「直排」 &mdash; 會依照原始版面顯示：文字由上至下直書，欄位由右至左排列，翻頁方向與漫畫相同，同樣向左翻。</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x2699;</span> 書寫方向</h3>
+  <p>開啟 <kbd>設定</kbd> &rarr; <kbd>閱讀偏好</kbd> &rarr; <kbd>書籍</kbd>，使用<strong>書寫方向</strong>控制項：</p>
+  <ul>
+    <li><strong>自動</strong>（預設）&mdash; 依照每本書各自的版面配置。採直排編排的書籍會以直排顯示；其他書籍則不受影響。</li>
+    <li><strong>橫排</strong> &mdash; 讓所有書籍都以橫排顯示，包括原本採直排編排的書籍。</li>
+    <li><strong>直排</strong> &mdash; 讓所有書籍都以直排欄位顯示。</li>
+  </ul>
+  <p>同樣的控制項也位於閱讀器內的設定中，在 <kbd>Aa</kbd> 按鈕底下。</p>
+  <div class="tip"><strong>注意：</strong>變更會在您下次開啟書籍時生效 &mdash; 目前畫面上的書籍會維持開啟時的版面配置。</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x2139;</span> 須知事項</h3>
+  <ul>
+    <li>直排書籍一律使用分頁模式，因此無法使用連續捲動與自動捲動。</li>
+    <li>直排書籍不會使用滑動效果換頁 &mdash; 而是改用翻頁效果。</li>
+    <li>書籤、標註、目錄、書內搜尋和文字轉語音均可正常使用。</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; 返回頂端</a>
+
+<!-- READING COMICS -->
+<h2 id="reading-comics">閱讀漫畫</h2>
+<p class="section-desc">CBZ、CBR 和 CB7 漫畫閱讀。</p>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4F1;</span> 閱讀模式</h3>
+  <ul>
+    <li><strong>由左至右</strong> &mdash; 標準西方漫畫頁序。</li>
+    <li><strong>由右至左</strong> &mdash; 日式漫畫閱讀順序。</li>
+    <li><strong>Webtoon / 垂直捲動</strong> &mdash; 適合長條漫畫的流暢垂直捲動。</li>
+  </ul>
+  <p>在 <kbd>設定</kbd> &rarr; <kbd>閱讀偏好</kbd> &rarr; <kbd>漫畫</kbd> 中設定全域預設值，或在書籍詳情頁為單本書更改。</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F50E;</span> 頁面縮放</h3>
+  <ul>
+    <li><strong>符合螢幕</strong> &mdash; 顯示完整頁面。</li>
+    <li><strong>符合寬度</strong> &mdash; 填滿寬度，需要時垂直捲動。</li>
+    <li><strong>符合高度</strong> &mdash; 填滿高度。</li>
+    <li><strong>原始大小</strong> &mdash; 1:1 像素顯示。</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F44B;</span> 手勢</h3>
+  <ul>
+    <li>左右滑動翻頁（分頁模式）。</li>
+    <li>雙指縮放或點兩下即可放大，然後拖曳可四處移動。詳見<a href="#comic-zoom">漫畫頁面縮放</a>。</li>
+    <li>點選頁面中央顯示或隱藏工具列。</li>
+    <li>使用底部的頁面滑桿快速跳轉。</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x26A0;</span> 可疑壓縮檔提示</h3>
+  <p>當您開啟一個漫畫壓縮檔（CBZ、CBR 或 CB7），其內容看起來異常龐大或被過度壓縮 &mdash; 這正是&ldquo;壓縮炸彈&rdquo;檔案用來撐爆記憶體的典型特徵 &mdash; 應用程式會在解壓任何內容之前顯示<strong>可疑壓縮檔</strong>提示。</p>
+  <ul>
+    <li>點選 <kbd>取消</kbd>，不開啟該檔案。對於來源不明的壓縮檔，這是安全的選擇。</li>
+    <li>如果您信任該檔案，可點選 <kbd>仍然開啟</kbd> &mdash; 應用程式會略過安全檢查並載入頁面。</li>
+  </ul>
+  <p>EPUB 檔案在匯入時會以相同方式默默使用該保護機制。</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; 返回頂端</a>
+
+<!-- COMIC ZOOM -->
+<h2 id="comic-zoom">漫畫頁面縮放</h2>
+<p class="section-desc">不論是分頁模式或 Webtoon 捲動，都能讓您更貼近欣賞畫面細節。</p>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F50D;</span> 分頁模式</h3>
+  <ul>
+    <li>雙指縮放放大，最高可達符合大小的三倍；縮放時，畫面會跟隨您的手指移動。</li>
+    <li>點兩下可將該處放大為兩倍大小；再點兩下可將頁面還原為符合螢幕大小。</li>
+    <li>放大後可用單指拖曳，四處移動畫面。</li>
+    <li>將手指幾乎完全捏合縮小時，頁面會自動貼齊符合螢幕的大小。</li>
+  </ul>
+  <p>縮放適用於<strong>符合螢幕</strong>與<strong>符合高度</strong>縮放選項，也適用於雙頁跨頁畫面。<strong>符合寬度</strong>與<strong>原始大小</strong>本身就會以大於螢幕的尺寸顯示頁面並改用捲動方式瀏覽 &mdash; 這兩種模式請改用下方的<strong>檢視完整解析度</strong>來看得更清楚。</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4F1;</span> Webtoon 捲動</h3>
+  <ul>
+    <li>雙指縮放或點兩下可放大整條長圖，最高可達原始大小的三倍。</li>
+    <li>放大時仍可正常捲動 &mdash; 只需照常上下拖曳即可。</li>
+    <li>放大後左右拖曳即可橫向移動畫面。</li>
+    <li>持續捲動時縮放比例會保持不變，讓您可以放大閱讀整個章節。旋轉裝置會將其還原為正常大小。</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x2728;</span> 檢視完整解析度</h3>
+  <p>縮放功能是以針對您螢幕準備好的尺寸來放大頁面。若想以最清晰的畫質檢視單一頁面，請長按該頁並選擇 <kbd>檢視完整解析度</kbd> &mdash; 該頁會以壓縮檔中的原始解析度重新解碼，讓您可以再進一步放大更多。點兩下可在符合螢幕與兩倍大小之間切換；向下滑動或點選關閉按鈕即可返回。</p>
+  <div class="tip"><strong>注意：</strong>縮放不會被儲存。關閉書籍後一律會還原為正常的符合大小。</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; 返回頂端</a>
+
+<!-- TTS -->
+<h2 id="tts">文字轉語音 &amp; CarPlay</h2>
+<p class="section-desc">聆聽書籍朗讀。</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F50A;</span> 使用文字轉語音</h3>
+  <p>開啟任意 EPUB、PDF 或 TXT 書籍，點選工具列中的播放按鈕。文字轉語音逐句朗讀並標註目前的單字。</p>
+  <ul>
+    <li><strong>速度</strong> &mdash; 在 TTS 控制項中選擇 0.5&times; 到 2&times;。</li>
+    <li><strong>語音</strong> &mdash; 在 <kbd>設定</kbd> &rarr; <kbd>閱讀偏好</kbd> &rarr; <kbd>文字轉語音</kbd> 中從 100 多種系統語音中選擇。</li>
+    <li><strong>跳過</strong> &mdash; 點選下一句/上一句按鈕按句或按章跳轉。</li>
+  </ul>
+  <div class="tip"><strong>注意：</strong><a href="#fixed-layout">固定版面書籍</a> &mdash; 也就是頁面採固定設計的漫畫與繪本 &mdash; 沒有可供 App 朗讀的文字，因此不會顯示播放按鈕。</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F697;</span> CarPlay</h3>
+  <p>連接到支援 CarPlay 的車輛後，App 會在車載螢幕上顯示簡化的播放控制項。文字轉語音在背景繼續播放 &mdash; 無需保持螢幕常亮。</p>
+  <div class="tip"><strong>提示：</strong>在 TTS 設定中啟用 <kbd>背景音訊</kbd><span class="badge badge-premium">Premium</span>，即使不使用 CarPlay 也能在 App 進入背景時繼續播放。</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; 返回頂端</a>
+
+<!-- AI UPSCALING -->
+<h2 id="upscaling">AI 漫畫增強</h2>
+<p class="section-desc">在裝置上增強低解析度漫畫頁面。<span class="badge badge-premium">Premium</span></p>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x2728;</span> 功能介紹</h3>
+  <p>使用裝置上的機器學習模型來放大低於解析度閾值的漫畫頁面。效果是線條更清晰，壓縮偽影更少 &mdash; 對於舊的或低品質的掃描件特別有幫助。</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x2699;</span> 設定</h3>
+  <ol class="steps">
+    <li>前往 <kbd>設定</kbd> &rarr; <kbd>閱讀偏好</kbd> &rarr; <kbd>漫畫</kbd> &rarr; <kbd>AI 增強</kbd>。</li>
+    <li>開啟開關。</li>
+    <li>調整 <strong>解析度閾值</strong> &mdash; 寬度低於此像素值的頁面將被增強（預設：1500 px）。</li>
+    <li>設定 <strong>預取視窗</strong> 來控制在背景中預先處理多少即將到來的頁面。</li>
+    <li>選擇 <strong>降噪等級</strong>（自動通常最佳）。</li>
+  </ol>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4BE;</span> 快取 &amp; 儲存空間</h3>
+  <p>增強後的圖片會被快取，無需重新處理。選擇快取保留時間（7&ndash;90 天或永不過期），並可隨時在設定中清除。</p>
+  <div class="tip"><strong>提示：</strong>增強後的頁面上會顯示一個小標記。如果您不需要，可以在設定中關閉。</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; 返回頂端</a>
+
+<!-- HIDDEN MODE -->
+<h2 id="hidden">隱藏書籍</h2>
+<p class="section-desc">將某些書籍保持私密。<span class="badge badge-premium">Premium</span></p>
+
+<div class="card">
+  <h3><span class="icon icon-indigo">&#x1F441;</span> 隱藏書籍</h3>
+  <ol class="steps">
+    <li>開啟書籍詳情頁並點選選單（&hellip;）。</li>
+    <li>選擇 <kbd>隱藏書籍</kbd>。</li>
+    <li>書籍將從正常的書庫檢視中消失。</li>
+  </ol>
+  <p>要一次隱藏多本書，請使用選擇模式。</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F513;</span> 檢視隱藏書籍</h3>
+  <p>在書庫中向下拉即可啟用 <strong>隱藏模式</strong>。您的所有書籍 &mdash; 隱藏和可見的 &mdash; 現在都會顯示。再次向下拉或離開 App 即可退出隱藏模式。</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F512;</span> 隱私選項</h3>
+  <p>當隱藏模式啟用時，前往 <kbd>設定</kbd> &rarr; <kbd>隱藏模式</kbd> 選擇離開 App 時的行為：</p>
+  <ul>
+    <li><strong>自動退出</strong>（預設）&mdash; 隱藏模式自動關閉。快速簡單。</li>
+    <li><strong>需要 Face ID / Touch ID</strong> &mdash; 隱藏模式保持開啟，但返回時需要生物辨識驗證。更安全。</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x21A9;</span> 取消隱藏書籍</h3>
+  <p>在隱藏模式下，開啟隱藏書籍的詳情並選擇 <kbd>取消隱藏</kbd>，或使用選擇模式批次取消隱藏。</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x2601;</span> 同步隱藏書籍</h3>
+  <p>在隱藏模式下，前往 <kbd>設定</kbd> &rarr; <kbd>隱藏模式</kbd>，開啟 <kbd>將隱藏書籍同步到 iCloud</kbd>：</p>
+  <ul>
+    <li><strong>關閉</strong>（預設）&mdash; 隱藏書籍僅保留在此裝置上。隱藏一本書也會將其從 iCloud 中移除。</li>
+    <li><strong>開啟</strong> &mdash; 隱藏書籍會透過 iCloud 同步，但在您登入的每台裝置上都會保持隱藏。</li>
+  </ul>
+  <p>當您在 iCloud 中已有隱藏書籍時關閉此開關，系統會詢問要如何處理這些書籍：</p>
+  <ul>
+    <li><strong>在所有裝置上保留</strong> &mdash; 您的其他裝置會保留其同步副本；此裝置會保留一份僅限本機的私密副本。</li>
+    <li><strong>從 iCloud 完全移除</strong> &mdash; 從 iCloud 中移除這些書籍；其他每台裝置都會在其隱藏書庫中保留自己的私密副本。</li>
+  </ul>
+  <div class="tip"><strong>注意：</strong>如果您的其他某台裝置從 iCloud 移除了一本隱藏書籍，只要該書的檔案先前已在此裝置下載，此裝置就會自動在隱藏書庫中保留自己的私密副本。</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F5D1;</span> 永久刪除隱藏書籍</h3>
+  <p>在隱藏模式下，前往 <kbd>設定</kbd> &rarr; <kbd>隱藏模式</kbd>，選擇 <kbd>永久刪除隱藏書籍</kbd>，即可從此裝置、iCloud 以及您的其他裝置中移除所有隱藏書籍。輸入 <kbd>DELETE</kbd> 以確認。</p>
+  <div class="tip"><strong>警告：</strong>此操作無法復原。當下處於離線狀態的裝置會保留其本機副本，直到下次同步。</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; 返回頂端</a>
+
+<!-- BOOKMARKS, HIGHLIGHTS, TAGS -->
+<h2 id="bookmarks">書籤、標註 &amp; 標籤</h2>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F516;</span> 書籤</h3>
+  <p>點選閱讀器工具列中的書籤圖示，為目前頁面加入書籤。可新增備註。在書籍詳情頁檢視所有書籤。</p>
+  <div class="tip"><strong>注意：</strong>這裡只會顯示您手動建立的書籤。應用程式在您關閉書籍時自動儲存的位置會另外保存在<a href="#history">閱讀歷史</a>中，以免擠掉您自己的書籤。</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F58D;</span> 標註<span class="badge badge-premium">Premium</span></h3>
+  <p>在 EPUB 中選取文字即可標註。從五種顏色中選擇（黃色、粉紅色、綠色、藍色、橙色）並新增筆記。所有標註都列在書籍詳情頁上。</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F3F7;</span> 標籤</h3>
+  <p>從詳情頁為任何書籍新增標籤。標籤可搜尋，並可用作書庫篩選條件。在 <kbd>設定</kbd> &rarr; <kbd>標籤</kbd> 中管理所有標籤。</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; 返回頂端</a>
+
+<!-- READING HISTORY -->
+<h2 id="history">閱讀歷史</h2>
+<p class="section-desc">快速回到您最近停留過的任意位置。</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F552;</span> 自動儲存</h3>
+  <p>每當您關閉一本書或將應用程式切換到背景，目前位置都會被儲存為一筆歷史紀錄 &mdash; 無需記得手動加入書籤。所有閱讀器均支援：EPUB、PDF、TXT/RTF 和漫畫。</p>
+  <ul>
+    <li>每本書最多保留 <strong>50</strong> 筆最近的位置。新的位置加入時，較舊的紀錄會自動被移除。</li>
+    <li>如果您在幾分鐘內在同一位置再次關閉這本書，現有紀錄會被更新，而不會建立重複項目。</li>
+    <li>自動儲存的位置與您手動設定的書籤清單分開保存，以免與您有意加入的書籤混在一起。</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4D6;</span> 單本書內的歷史</h3>
+  <p>閱讀時，點選右上角的更多選單（&hellip;）並選擇 <kbd>閱讀歷史</kbd>。您會看到該書中最近的位置清單，最新優先排序，並顯示對應的章節或頁面名稱以及每筆紀錄的時間。</p>
+  <ul>
+    <li>點選任一項目即可直接跳到該位置。</li>
+    <li>向左滑動項目即可將其刪除。</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F4DA;</span> 整個書庫的歷史</h3>
+  <p>在書庫中，點選頂端工具列的更多選單（&hellip;）並選擇 <kbd>閱讀歷史</kbd>，即可依日期分組檢視您最近開啟過的所有書籍。點選某一列即可從上次停下的位置開啟該書。</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; 返回頂端</a>
+
+<!-- AUTHOR & TAG BROWSING -->
+<h2 id="search">依作者與標籤瀏覽</h2>
+<p class="section-desc">在應用程式的任何位置依作者或標籤尋找書籍。</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F464;</span> 作者</h3>
+  <p>前往 <kbd>設定</kbd> &rarr; <kbd>作者</kbd>，即可檢視書庫中的所有作者及其書籍數量。點選某位作者，即可在書庫中搜尋其全部作品。</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F3F7;</span> 標籤搜尋</h3>
+  <p>在 <kbd>設定</kbd> &rarr; <kbd>標籤</kbd> 中，點選任一標籤即可在書庫中搜尋帶有該標籤的書籍。長按可重新命名或刪除。</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F50D;</span> 從操作選單快速搜尋</h3>
+  <ul>
+    <li>在書庫中長按一本書 &rarr; <kbd>尋找 [作者] 的書籍</kbd></li>
+    <li>在書籍詳細資料頁中，長按作者姓名或任一標籤即可搜尋</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; 返回頂端</a>
+
+<!-- METADATA -->
+<h2 id="metadata">中繼資料與 ComicInfo.xml</h2>
+<p class="section-desc">檢視和編輯書籍中繼資料。</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x270F;</span> 中繼資料編輯器</h3>
+  <p>在書籍詳細資料頁中，點選更多選單（&hellip;）並選擇 <kbd>編輯中繼資料</kbd>，即可修改書名、作者、系列、描述等欄位。您也可以從原始檔案重新擷取中繼資料。</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4CB;</span> ComicInfo.xml</h3>
+  <p>包含 <code>ComicInfo.xml</code> 檔案的漫畫壓縮檔（CBZ、CBR、CB7）在匯入時會自動擷取中繼資料 &mdash; 包括書名、作者、系列、期號、簡介、出版社、類型和標籤。</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; 返回頂端</a>
+
+<!-- ICLOUD -->
+<h2 id="icloud">iCloud 同步</h2>
+<p class="section-desc">在裝置間保持書庫同步。</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x2601;</span> 啟用同步</h3>
+  <ol class="steps">
+    <li>前往 <kbd>設定</kbd> &rarr; <kbd>iCloud 同步</kbd>。</li>
+    <li>開啟 <kbd>將書庫與 iCloud 同步</kbd>。</li>
+    <li>同步將在下次啟動 App 時生效。</li>
+  </ol>
+  <p>您的中繼資料、閱讀進度、書籤、標註和書架會在登入同一 iCloud 帳號的所有裝置間同步。</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F4CA;</span> 同步狀態</h3>
+  <p><kbd>設定</kbd> &rarr; <kbd>iCloud 同步</kbd> 會顯示您書籍檔案的狀態卡片：</p>
+  <ul>
+    <li>標題 &mdash; <strong>已是最新</strong>、<strong>同步中&hellip;</strong>（附帶數量）或 <strong>未登入</strong>。</li>
+    <li>一條進度列，顯示您書庫中有多少檔案已在 iCloud 中。</li>
+    <li>明細 &mdash; <strong>已同步</strong>（附帶總大小）、<strong>僅在 iCloud</strong>（尚未下載到此裝置）和 <strong>進行中</strong>。</li>
+  </ul>
+  <div class="tip"><strong>注意：</strong>此卡片僅追蹤書籍<em>檔案</em>。閱讀進度、書籤、標註和書架會單獨自動同步，與檔案狀態無關。</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x2601;</span> 封面角標</h3>
+  <p>書籍封面右下角會顯示一個小雲朵圖示，用於表示檔案同步狀態：</p>
+  <ul>
+    <li><strong>雲朵圖示</strong> &mdash; 檔案僅存在於 iCloud。開啟書籍頁面即可下載。</li>
+    <li><strong>上/下箭頭</strong> &mdash; 檔案正在上傳或下載。</li>
+    <li><strong>無圖示</strong> &mdash; 檔案已在此裝置上。</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4E5;</span> 自動下載</h3>
+  <p>選擇自動下載的最大檔案大小。較大的書籍將保留在雲端，直到您開啟它們。在 iCloud 設定中調整限制。</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; 返回頂端</a>
+
+<!-- STATS -->
+<h2 id="stats">閱讀統計</h2>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F4CA;</span> 您的閱讀活動</h3>
+  <p>開啟 <kbd>設定</kbd> &rarr; <kbd>書庫統計</kbd> 檢視：</p>
+  <ul>
+    <li>書籍總數、已讀頁數和閱讀時間。</li>
+    <li>每日閱讀活動圖表。</li>
+    <li>按格式和閱讀狀態分類的書籍。</li>
+    <li>每本書的活動詳情。</li>
+  </ul>
+  <div class="tip"><strong>注意：</strong>統計資料遵守隱藏模式 &mdash; 當隱藏模式關閉時，隱藏書籍的統計資料不會被包含。</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; 返回頂端</a>
+
+<!-- WEBDAV & OPDS -->
+<h2 id="webdav">WebDAV &amp; OPDS</h2>
+<p class="section-desc">從遠端伺服器和目錄瀏覽並下載。</p>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F5C4;</span> WebDAV</h3>
+  <p>連接到 NAS、Nextcloud 或 Calibre 伺服器來瀏覽資料夾並下載書籍。</p>
+  <ol class="steps">
+    <li>前往 <kbd>設定</kbd> &rarr; <kbd>匯入書籍</kbd> &rarr; <kbd>WebDAV</kbd>。</li>
+    <li>點選 <kbd>新增伺服器</kbd> 並輸入 URL。</li>
+    <li>根據需要新增使用者名稱和密碼。</li>
+    <li>點選 <kbd>測試連線</kbd>，然後儲存。</li>
+  </ol>
+  <div class="tip"><strong>自簽憑證：</strong>如果您的伺服器使用自簽憑證，可以開啟 <kbd>允許不受信任的憑證</kbd>。App 會先要求您確認 &mdash; 此操作會關閉 TLS 驗證，因此同一網路上的任何人都可能冒充該伺服器。請僅對您自己掌控的伺服器啟用。</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4DA;</span> OPDS 目錄</h3>
+  <p>OPDS 是書籍目錄的開放標準。新增公共目錄（Project Gutenberg、Standard Ebooks 等）或您自己的私有伺服器。</p>
+  <ol class="steps">
+    <li>前往 <kbd>設定</kbd> &rarr; <kbd>匯入書籍</kbd> &rarr; <kbd>OPDS</kbd>。</li>
+    <li>點選 <kbd>新增目錄</kbd> 並輸入訂閱來源 URL。</li>
+    <li>瀏覽分類並將書籍下載到書庫。</li>
+  </ol>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; 返回頂端</a>
+
+<!-- RESUME -->
+<h2 id="resume">啟動時繼續閱讀</h2>
+<p class="section-desc">自動從上次停下的地方繼續。</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x25B6;</span> 設定</h3>
+  <p>前往 <kbd>設定</kbd> &rarr; <kbd>通用</kbd>，開啟 <kbd>啟動時繼續上次閱讀的書籍</kbd>。下次開啟 App 時，將直接跳轉到您上次閱讀的書籍和頁面。</p>
+  <div class="tip"><strong>隱藏書籍：</strong>如果您上次閱讀的書是隱藏的，App 將在繼續之前要求 Face ID / Touch ID 驗證。在隱藏模式設定中啟用 <kbd>驗證後繼續隱藏書籍</kbd> 以允許此操作。</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; 返回頂端</a>
+
+<!-- FORMATS -->
+<h2 id="formats">支援的格式</h2>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4D6;</span> 書籍</h3>
+  <div class="formats-grid">
+    <div class="format-tag">EPUB</div>
+    <div class="format-tag">PDF</div>
+    <div class="format-tag">TXT</div>
+    <div class="format-tag">RTF</div>
+  </div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4F1;</span> 漫畫</h3>
+  <div class="formats-grid">
+    <div class="format-tag">CBZ</div>
+    <div class="format-tag">CBR</div>
+    <div class="format-tag">CB7</div>
+  </div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; 返回頂端</a>
+
+</body>
+</html>

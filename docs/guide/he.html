@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>מדריך למשתמש</title>
+<link rel="stylesheet" href="UserGuideStyle.css">
+<style>
+.steps li { padding-left: 0; padding-right: 32px; }
+.steps li::before { left: auto; right: 0; }
+.tip { border-left: none; border-right: 3px solid var(--accent); border-radius: 8px 0 0 8px; }
+</style>
+<!-- USER-GUIDE-NAV-STYLE:START -->
+<style>
+.guide-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 14px;
+  padding: 10px 14px;
+  margin: 0 0 16px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  font-size: 13px;
+}
+.guide-nav-home {
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.guide-nav-arrow {
+  display: inline-block;
+}
+[dir="rtl"] .guide-nav-arrow {
+  transform: scaleX(-1);
+}
+.guide-nav-langs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 10px;
+  color: var(--secondary);
+}
+.guide-nav-globe {
+  font-size: 13px;
+}
+.guide-nav-langs a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.guide-nav-langs a:hover,
+.guide-nav-langs a:focus-visible {
+  text-decoration: underline;
+}
+.guide-nav-current {
+  font-weight: 700;
+  color: var(--text);
+}
+</style>
+<!-- USER-GUIDE-NAV-STYLE:END -->
+</head>
+<body id="top">
+<!-- USER-GUIDE-NAV:START -->
+<nav class="guide-nav" aria-label="User Guide language switcher">
+  <a class="guide-nav-home" href="../index.html"><span class="guide-nav-arrow" aria-hidden="true">&larr;</span> Idyllic</a>
+  <span class="guide-nav-langs">
+    <span class="guide-nav-globe" aria-hidden="true">&#x1F310;</span>
+      <a href="index.html">English</a>
+      <a href="ar.html">العربية</a>
+      <a href="cs.html">Čeština</a>
+      <a href="da.html">Dansk</a>
+      <a href="de.html">Deutsch</a>
+      <a href="es.html">Español</a>
+      <a href="fi.html">Suomi</a>
+      <a href="fr.html">Français</a>
+      <span class="guide-nav-current">עברית</span>
+      <a href="hi.html">हिन्दी</a>
+      <a href="id.html">Indonesia</a>
+      <a href="it.html">Italiano</a>
+      <a href="ja.html">日本語</a>
+      <a href="ko.html">한국어</a>
+      <a href="ms.html">Bahasa Melayu</a>
+      <a href="nb.html">Norsk bokmål</a>
+      <a href="nl.html">Nederlands</a>
+      <a href="pl.html">Polski</a>
+      <a href="pt-BR.html">Português (Brasil)</a>
+      <a href="ru.html">Русский</a>
+      <a href="sv.html">Svenska</a>
+      <a href="th.html">ไทย</a>
+      <a href="tr.html">Türkçe</a>
+      <a href="uk.html">Українська</a>
+      <a href="vi.html">Tiếng Việt</a>
+      <a href="zh-Hans.html">简体中文</a>
+      <a href="zh-Hant.html">繁體中文</a>
+  </span>
+</nav>
+<!-- USER-GUIDE-NAV:END -->
+
+<h1>מדריך למשתמש</h1>
+<p class="subtitle">כל מה שצריך כדי להפיק את המרב מחוויית הקריאה שלך.</p>
+
+<!-- TABLE OF CONTENTS -->
+<div class="card toc">
+  <a href="#importing">ייבוא ספרים</a>
+  <a href="#wifi">העברה דרך WiFi</a>
+  <a href="#library">ספרייה וארגון</a>
+  <a href="#shelves">מדפים ותיקיות</a>
+  <a href="#reading-books">קריאת ספרים</a>
+  <a href="#fixed-layout">ספרים בפריסה קבועה</a>
+  <a href="#in-book-search">חיפוש בתוך הספר</a>
+  <a href="#image-gallery">גלריית תמונות</a>
+  <a href="#fonts">גופני קריאה</a>
+  <a href="#reading-direction">כיוון קריאה</a>
+  <a href="#vertical-writing">כתיבה אנכית</a>
+  <a href="#reading-comics">קריאת קומיקס</a>
+  <a href="#comic-zoom">הגדלת עמודי קומיקס</a>
+  <a href="#tts">הקראה וCarPlay</a>
+  <a href="#upscaling">שיפור קומיקס באמצעות AI</a>
+  <a href="#hidden">ספרים מוסתרים</a>
+  <a href="#bookmarks">סימניות, הדגשות ותגיות</a>
+  <a href="#history">היסטוריית קריאה</a>
+  <a href="#search">עיון לפי מחבר ותגית</a>
+  <a href="#metadata">מטא-נתונים ו-ComicInfo.xml</a>
+  <a href="#icloud">סנכרון iCloud</a>
+  <a href="#stats">סטטיסטיקות קריאה</a>
+  <a href="#webdav">WebDAV ו-OPDS</a>
+  <a href="#resume">המשך בעת הפעלה</a>
+  <a href="#formats">פורמטים נתמכים</a>
+</div>
+
+<!-- IMPORTING -->
+<h2 id="importing">ייבוא ספרים</h2>
+<p class="section-desc">מספר דרכים להוסיף ספרים לספרייה שלך.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4C1;</span> מאפליקציית קבצים</h3>
+  <p>הקש על <kbd>הגדרות</kbd> &rarr; <kbd>ייבוא ספרים</kbd>, ואז בחר קבצים מהמכשיר שלך, iCloud Drive, או כל שירות ענן מחובר. ב-iPad אפשר גם לגרור ולשחרר.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F310;</span> העברה דרך WiFi</h3>
+  <p>העלה ספרים מכל מחשב או טלפון ברשת ה-WiFi שלך. ראה את הסעיף המפורט למטה.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F5C2;</span> WebDAV ו-OPDS</h3>
+  <p>התחבר ל-NAS, שרת Calibre, או קטלוג ספרים ציבורי כדי לעיין ולהוריד ספרים ישירות. ראה למטה.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; חזרה למעלה</a>
+
+<!-- WIFI TRANSFER -->
+<h2 id="wifi">העברה דרך WiFi</h2>
+<p class="section-desc">העלה ספרים מכל מכשיר ברשת המקומית שלך.</p>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F4F6;</span> איך זה עובד</h3>
+  <p>האפליקציה מפעילה שרת אינטרנט קטן במכשיר שלך. כל מחשב או טלפון באותה רשת WiFi יכול לפתוח את דף ההעלאה בדפדפן.</p>
+  <ol class="steps">
+    <li>עבור אל <kbd>הגדרות</kbd> &rarr; <kbd>ייבוא ספרים</kbd> &rarr; <kbd>העברה דרך WiFi</kbd>.</li>
+    <li>הקש על <kbd>הפעל שרת</kbd>. תופיע כתובת כמו <kbd>http://192.168.1.42:8080</kbd>.</li>
+    <li>פתח את הכתובת הזו בכל דפדפן אינטרנט באותה רשת.</li>
+    <li>גרור קבצים לדף או לחץ כדי לעיין &mdash; בחר תיקיית יעד אם תרצה.</li>
+    <li>הספרים המיובאים מופיעים בספרייה שלך מיד.</li>
+    <li>הקש על <kbd>עצור שרת</kbd> כשסיימת.</li>
+  </ol>
+  <div class="tip"><strong>טיפ:</strong> המכשיר שלך יישאר ער כל עוד השרת פועל, כדי שההעברות לא ייקטעו.</div>
+  <div class="tip"><strong>ההעלאה נכשלה?</strong> כל קובץ שנכשל מציג את הסיבה ישירות בשורה שלו. אם חיבור ה-WiFi מתנתק, הקש על <kbd>&#x21BB; נסה שוב</kbd> בשורה כדי לשלוח אותו שוב. בעיות קבועות (כגון פורמט קובץ שאינו נתמך) לא יציגו לחצן נסה שוב.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; חזרה למעלה</a>
+
+<!-- LIBRARY -->
+<h2 id="library">ספרייה וארגון</h2>
+<p class="section-desc">חפש, מיין וארגן את הספרים שלך.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F50D;</span> חיפוש</h3>
+  <p>הקש על הכפתור <kbd>Search</kbd> בתחתית הספרייה כדי לפתוח שדה חיפוש, ואז הקש על <kbd>סיום</kbd> כדי לסגור אותו. החיפוש מתבצע לפי כותרת, מחבר, תגיות, סדרה, מוציא לאור ותיאור. חיפוש לפי מחבר או תגית מתפריט ההקשר של ספר (ראה <a href="#search">עיון לפי מחבר ותגית</a>) ממלא את אותו חיפוש.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x2195;</span> מיון וסינון</h3>
+  <p>הקש על כפתור אפשרויות התצוגה (למעלה מימין) כדי לבחור:</p>
+  <ul>
+    <li><strong>פריסה</strong> &mdash; רשת, מפורט, קומפקטי, מינימליסטי, טבלה או מגזין</li>
+    <li><strong>מיון</strong> &mdash; כותרת, מחבר, נקרא לאחרונה, תאריך הוספה, התקדמות, גודל קובץ, סדרה</li>
+    <li><strong>תצוגה</strong> &mdash; הצג ספרים בקריאה ראשונים וספרים שהושלמו אחרונים</li>
+    <li><strong>סינון</strong> &mdash; לפי פורמט, תגית או מחבר</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x2714;</span> מצב בחירה</h3>
+  <p>לחץ לחיצה ארוכה על ספר או הקש על <kbd>בחר</kbd> כדי להיכנס למצב בחירה. לאחר מכן תוכל להעביר, למחוק, להסתיר או לבטל הסתרה של מספר ספרים בבת אחת.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4CB;</span> ניקוי כפילויות</h3>
+  <p>עבור אל <strong>הגדרות &gt; ספרייה &gt; תחזוקת הספרייה &gt; ניקוי כפילויות</strong> כדי לאתר ספרים בעלי אותו שם, מחבר ופורמט. עבור כל קבוצת כפילויות:</p>
+  <ul>
+    <li><strong>הגרסה החדשה ביותר</strong> מסומנת בתג ירוק KEEP</li>
+    <li>בחר עותקים ישנים באמצעות תיבות סימון (או <strong>בחר הכל</strong>)</li>
+    <li><strong>מחק</strong> &mdash; מסיר את העותקים הישנים שנבחרו</li>
+    <li><strong>העתק נתונים ומחק</strong> &mdash; מעביר סימניות, הדגשות, תגים, התקדמות קריאה ושיוך מדף לגרסה החדשה ביותר לפני המחיקה</li>
+    <li>הפעל את <strong>"העבר את הספר החדש למדף ולמצב ההסתרה של הספר הישן"</strong> כדי לשמור את הגרסה החדשה באותו מיקום בספרייה</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; חזרה למעלה</a>
+
+<!-- SHELVES -->
+<h2 id="shelves">מדפים ותיקיות</h2>
+<p class="section-desc">ארגן ספרים בתיקיות מקוננות.</p>
+
+<div class="card">
+  <h3><span class="icon icon-indigo">&#x1F4C2;</span> יצירת מדפים</h3>
+  <ol class="steps">
+    <li>הקש על <kbd>מדף חדש</kbd> בחלק העליון של הספרייה.</li>
+    <li>הזן שם, ואז בחר סמל וצבע.</li>
+    <li>ניתן לבחור מדף הורה כדי ליצור תת-תיקייה.</li>
+  </ol>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x21C4;</span> העברת ספרים</h3>
+  <p>מדף הפרטים של ספר, הקש על התפריט (&hellip;) ובחר <kbd>העבר למדף</kbd>. במצב בחירה אפשר להעביר ספרים רבים בבת אחת.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; חזרה למעלה</a>
+
+<!-- READING BOOKS -->
+<h2 id="reading-books">קריאת ספרים</h2>
+<p class="section-desc">מצבי קריאה של EPUB, PDF, TXT ו-RTF.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4D6;</span> EPUB</h3>
+  <p>קבצי EPUB נפתחים בקורא מלא תכונות המבוסס על Readium. הקש על הקצוות השמאלי או הימני כדי לדפדף, או החלק.</p>
+  <ul>
+    <li><strong>עמוד-עמוד</strong> &mdash; קריאה מסורתית עמוד אחרי עמוד.</li>
+    <li><strong>גלילה רציפה</strong><span class="badge badge-premium">Premium</span> &mdash; גלילה טבעית בטקסט, ללא מעברי עמוד.</li>
+    <li><strong>כיוון קריאה</strong> &mdash; עקוב אחר הספר אוטומטית, או קבע בעצמך משמאל לימין או מימין לשמאל. ראה <a href="#reading-direction">כיוון קריאה</a>.</li>
+    <li><strong>פריסה קבועה</strong> &mdash; קומיקס, ספרי תמונות וקבצי EPUB אחרים המסודרים עמוד אחר עמוד נפתחים בקורא שנבנה במיוחד עבורם. ראה <a href="#fixed-layout">ספרים בפריסה קבועה</a>.</li>
+    <li><strong>חיפוש בתוך הספר</strong><span class="badge badge-premium">Premium</span> &mdash; חפש בכל הספר כל מילה או ביטוי. ראה <a href="#in-book-search">חיפוש בתוך הספר</a>.</li>
+    <li><strong>גלריית תמונות</strong><span class="badge badge-premium">Premium</span> &mdash; עיין בכל התמונות שב-EPUB מדף הפרטים שלו. ראה <a href="#image-gallery">גלריית תמונות</a>.</li>
+  </ul>
+  <div class="tip"><strong>טיפ:</strong> התאם גודל גופן, מרווח שורות וצבעי ערכת נושא ב-<kbd>הגדרות</kbd> &rarr; <kbd>העדפות קריאה</kbd> &rarr; <kbd>ספרים</kbd>.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F4C4;</span> PDF</h3>
+  <p>קבצי PDF מוצגים באופן מקורי. צבוט כדי לשנות תצוגה, החלק כדי לדפדף. האפליקציה יכולה לזכור סיסמאות עבור קבצי PDF מוגנים.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x1F4DD;</span> TXT ו-RTF</h3>
+  <p>קבצי טקסט רגיל ו-RTF נפתחים בקורא טקסט פשוט עם עיצוב מותאם אישית.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; חזרה למעלה</a>
+
+<!-- FIXED LAYOUT -->
+<h2 id="fixed-layout">ספרים בפריסה קבועה</h2>
+<p class="section-desc">קבצי EPUB שבהם כל עמוד הוא עיצוב קבוע &mdash; קומיקס, ספרי תמונות וכותרים עתירי איורים.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4D0;</span> מהם ספרים אלה</h3>
+  <p>חלק מקבצי ה-EPUB בנויים עמוד אחר עמוד ולא כטקסט זורם: כל עמוד הוא סידור קבוע של מילים ואיורים. האפליקציה מזהה ספרים כאלה בעצמה ופותחת אותם בקורא שנבנה במיוחד עבורם &mdash; כל עמוד מותאם לגודל המסך וממורכז, כשהשטח סביבו מתמלא בצבע הרקע של ערכת הנושא שלך.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F44B;</span> קריאה והגדלה</h3>
+  <ul>
+    <li>הקש על הצד השמאלי או הימני של המסך כדי לדפדף, או החלק. הקש במרכז כדי להציג או להסתיר את סרגלי הכלים.</li>
+    <li>צבוט כדי להתקרב &mdash; עד פי שלושה מהגודל המותאם &mdash; וגרור כדי לנוע בעמוד.</li>
+    <li>הקש הקשה כפולה כדי להתקרב לאותה נקודה; הקשה כפולה נוספת מתאימה את העמוד בחזרה למסך.</li>
+    <li>ספרים שפורסמו לקריאה מימין לשמאל מדפדפים בכיוון הזה אוטומטית.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4D6;</span> כפולות עמודים</h3>
+  <p>סובב את המכשיר לרוחב ועמודים נגדיים יופיעו זה לצד זה. האפליקציה פועלת לפי רמזי הכפולות שבתוך הספר עצמו, כך שכריכה או איור בעמוד שלם עדיין מקבלים עמוד משלהם. סובב בחזרה לאורך לעמוד אחד בכל פעם.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x2139;</span> מה זמין</h3>
+  <p>תוכן העניינים, הסימניות, מחוון ההתקדמות, היסטוריית הקריאה, וההמשך מהמקום שבו הפסקת &mdash; כל אלה פועלים כרגיל.</p>
+  <p>מכיוון שכל עמוד הוא עיצוב קבוע שהאפליקציה לא יכולה לזרום מחדש, כמה פקדים אינם מופיעים בספרים אלה: גלילה רציפה וגלילה אוטומטית, הגדרות הגופן והמראה, הקראה, חיפוש בתוך הספר, ובחירת טקסט או הדגשה.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; חזרה למעלה</a>
+
+<!-- IN-BOOK SEARCH -->
+<h2 id="in-book-search">חיפוש בתוך הספר</h2>
+<p class="section-desc">מצא כל מילה או ביטוי בתוך הספר שאתה קורא.<span class="badge badge-premium">Premium</span></p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F50D;</span> התחלת חיפוש</h3>
+  <ol class="steps">
+    <li>הקש על מרכז העמוד כדי להציג את סרגלי הכלים.</li>
+    <li>הקש על זכוכית המגדלת בקצה הימני של הסרגל התחתון.</li>
+    <li>הקלד לפחות שני תווים והקש <kbd>חיפוש</kbd> במקלדת.</li>
+  </ol>
+  <p>החיפוש נערך בכל הספר &mdash; בכל הפרקים, לא רק בפרק שעל המסך &mdash; וההתאמה מתעלמת מהבדלי אותיות רישיות/קטנות. החיפוש זמין בקוראי EPUB ו-TXT/RTF.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4C4;</span> עיון בתוצאות</h3>
+  <p>התוצאות מופיעות מתחת לשורת החיפוש, מקובצות לפי פרק. כל שורה מציגה את ההתאמה בהדגשה בתוך קטע מהטקסט שסביבה. הקש על תוצאה כדי לקפוץ ישירות לאותו מקום &mdash; כל התאמה מודגשת בצהוב בספר, וההתאמה הנוכחית בגוון ענבר חזק יותר.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x2195;</span> דילוג בין התאמות</h3>
+  <p>לאחר שבחרת תוצאה, שורת החיפוש מתכווצת לרצועה קומפקטית עם מונה שמראה היכן אתה נמצא בין ההתאמות.</p>
+  <ul>
+    <li>השתמש בחיצי מעלה/מטה כדי לעבור להתאמה הקודמת או הבאה.</li>
+    <li>הקש על כפתור הרשימה כדי לפתוח שוב את רשימת התוצאות המלאה.</li>
+    <li>הקש על <kbd>&times;</kbd> כדי לסיים את החיפוש &mdash; כל ההדגשות מוסרות.</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; חזרה למעלה</a>
+
+<!-- IMAGE GALLERY -->
+<h2 id="image-gallery">גלריית תמונות</h2>
+<p class="section-desc">עיין בכל האיורים שב-EPUB כגלריה שאפשר להחליק בה.<span class="badge badge-premium">Premium</span></p>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F5BC;</span> פתיחת הגלריה</h3>
+  <p>פתח את דף הפרטים של ספר EPUB והקש על כפתור ערימת התמונות <span class="icon">&#x1F5BC;</span> בסרגל הכלים בפינה הימנית-עליונה. האפליקציה מחלצת כל תמונה מהספר ומציגה סרגל התקדמות בזמן העבודה &mdash; הקש על כפתור <kbd>&times;</kbd> בפינה השמאלית-עליונה כדי לצאת בכל עת. הגלריה זמינה לספרי EPUB בלבד.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4DA;</span> מה תראה</h3>
+  <p>התמונות מופיעות אחת בכל עמוד לפי סדר הקריאה &mdash; הסדר שבו הן מופיעות בפרקי הספר &mdash; כולל הכריכה. תמונות זעירות כמו סמלים וקישוטים מדולגות: כל מה שקטן מהגודל המינימלי (100&nbsp;px כברירת מחדל) נשאר בחוץ. התאם את הסף ב-<kbd>הגדרות</kbd> &rarr; <kbd>העדפות קריאה</kbd> &rarr; <kbd>ספרים</kbd> &rarr; <kbd>גלריית EPUB</kbd>. אם אף תמונה לא עומדת בתנאים, הגלריה תודיע שלא נמצאו תמונות.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F446;</span> צפייה בתמונות ושמירתן</h3>
+  <ul>
+    <li>החלק כדי לעבור בין תמונות, או השתמש במחוון העמודים בתחתית כדי לדלג במהירות.</li>
+    <li>צבוט או הקש הקשה כפולה כדי להתקרב, ואז גרור כדי לנוע בתמונה &mdash; הגלריה משתמשת בקורא הקומיקס, כך שההתקרבות פועלת באותו האופן בדיוק. ראה <a href="#comic-zoom">הגדלת עמודי קומיקס</a>.</li>
+    <li>הקש על מרכז המסך כדי להציג או להסתיר את הפקדים.</li>
+    <li>לחץ לחיצה ארוכה על תמונה עבור <kbd>הצג ברזולוציה מלאה</kbd> &mdash; שפותח אותה בגודלה המקורי לצפייה מקרוב &mdash; או כדי <kbd>שמור בתמונות</kbd>, <kbd>שמור בקבצים</kbd> או <kbd>העתקת תמונה</kbd>.</li>
+    <li>הגלריה עוקבת אחר כיוון קריאת הקומיקס שלך &mdash; כולל גלילה אנכית בסגנון Webtoon.</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; חזרה למעלה</a>
+
+<!-- READING FONTS -->
+<h2 id="fonts">גופני קריאה</h2>
+<p class="section-desc">בחר גופן קריאה, הוסף גופן משלך, או הורד חבילות שפה.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F524;</span> בחירת גופן</h3>
+  <p>פתח <kbd>הגדרות</kbd> &rarr; <kbd>העדפות קריאה</kbd> &rarr; <kbd>ספרים</kbd> &rarr; <kbd>גופנים מותאמים אישית</kbd> כדי להגיע למסך <strong>גופנים</strong>. כמה גופני קריאה מובנים באפליקציה, כאשר <strong>Literata</strong> הוא ברירת המחדל. הגופן שתבחר חל על קורא EPUB וקורא הטקסט.</p>
+  <div class="tip"><strong>טיפ:</strong> התאם גודל גופן ומרווח שורות ב-<kbd>הגדרות</kbd> &rarr; <kbd>העדפות קריאה</kbd> &rarr; <kbd>ספרים</kbd>.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F453;</span> גופני נגישות</h3>
+  <p>שני גופנים שתוכננו לקריאה קלה יותר מצורפים וזמינים תמיד: <strong>Atkinson Hyperlegible</strong>, המחדד את ההבדלים בין אותיות דומות, ו-<strong>OpenDyslexic</strong>, בעל משקל המפחית החלפת אותיות.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F4C2;</span> גופנים מותאמים אישית</h3>
+  <p>ייבא קובצי גופן <kbd>.ttf</kbd> או <kbd>.otf</kbd> משלך ממסך הגופנים והשתמש בהם בקורא EPUB. גופנים מיובאים נשארים במכשיר שלך.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F4E5;</span> הורדת גופנים &amp; חבילות שפה</h3>
+  <p>תחת <strong>הורדת גופנים</strong>, גופני קריאה נוספים וחבילות שפה זמינים לפי דרישה עבור כתבים שהאפליקציה אינה כוללת &mdash; סינית, יפנית &amp; קוריאנית (CJK), ערבית, דוואנגרי ותאית. החבילות גדולות (כ-41&nbsp;MB כל אחת), ולכן הגודל מוצג לפני ההורדה. לאחר ההתקנה, הן פועלות בדיוק כמו גופנים מיובאים.</p>
+  <div class="tip"><strong>טיפ:</strong> אם התווים של ספר מוצגים כריבועים ריקים, הורד את חבילת השפה המתאימה כדי להציג אותם.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x1F4DC;</span> רישיונות גופנים</h3>
+  <p>הגופנים המצורפים והניתנים להורדה מסופקים תחת <strong>SIL Open Font License</strong>. תוכל לקרוא את הרישיון המלא של כל אחד מהם מהשורה שלו במסך הגופנים.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; חזרה למעלה</a>
+
+<!-- READING DIRECTION -->
+<h2 id="reading-direction">כיוון קריאה</h2>
+<p class="section-desc">משמאל לימין, מימין לשמאל, או הכיוון שבו הספר פורסם.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x21C4;</span> בחירת כיוון</h3>
+  <p>פתח <kbd>הגדרות</kbd> &rarr; <kbd>העדפות קריאה</kbd> &rarr; <kbd>ספרים</kbd> והשתמש בפקד <strong>כיוון קריאה</strong> תחת <strong>מצב קריאה</strong>:</p>
+  <ul>
+    <li><strong>אוטומטי</strong> (ברירת מחדל) &mdash; פועל לפי הכיוון שהספר עצמו מצהיר עליו. מנגה וספרים שפורסמו לקריאה מימין לשמאל נפתחים בכיוון הנכון בלי צורך בהגדרה.</li>
+    <li><strong>משמאל לימין</strong> &mdash; הכיוון הרגיל לרוב הספרים המערביים.</li>
+    <li><strong>מימין לשמאל</strong> &mdash; השתמש בכיוון מימין לשמאל עבור כל ספר.</li>
+  </ul>
+  <p>אפשר גם לשנות זאת מבלי לצאת מהספר: הקש על מרכז העמוד כדי להציג את סרגלי הכלים, ואז הקש על כפתור <kbd>Aa</kbd> בסרגל התחתון. השינוי נכנס לתוקף מיד בעמוד שאתה קורא.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F44B;</span> מה פועל לפי הכיוון</h3>
+  <ul>
+    <li>איזה צד מקדם אותך &mdash; בספר מימין לשמאל, הקשה או החלקה שמאלה מדפדפת לעמוד הבא.</li>
+    <li>אנימציית הדפדוף, שמתחילה מהצד הנכון.</li>
+    <li>פריסת הטקסט בעמוד.</li>
+  </ul>
+  <div class="tip"><strong>הערה:</strong> מחוון ההתקדמות תמיד מתמלא משמאל, מכיוון שהוא מציג עד כמה התקדמת בספר ולא את מיקום העמוד על המסך.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x2139;</span> היכן זה חל</h3>
+  <p>הגדרה זו מיועדת ל-EPUB במצב עמוד-עמוד &mdash; היא מוסתרת כשגלילה רציפה פעילה. לקומיקס יש הגדרת סדר קריאה משלו (ראה <a href="#reading-comics">קריאת קומיקס</a>), <a href="#fixed-layout">וספרים בפריסה קבועה</a> תמיד פועלים לפי הכיוון המוצהר בספר.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; חזרה למעלה</a>
+
+<!-- VERTICAL WRITING -->
+<h2 id="vertical-writing">כתיבה אנכית</h2>
+<p class="section-desc">ספרים יפניים וסיניים המסודרים בטורים אנכיים.</p>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x2B07;</span> ספרים אנכיים</h3>
+  <p>ספרים המסודרים אנכית &mdash; טאטגאקי יפני (&#x7E26;&#x66F8;&#x304D;) וסינית מסורתית מסודרת אנכית (&#x76F4;&#x6392;) &mdash; מוצגים בדיוק כפי שסודרו: הטקסט זורם מלמעלה למטה בטורים שמתמלאים מימין לשמאל, והעמודים מתהפכים שמאלה, באותו האופן שבו קוראים מנגה.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x2699;</span> כיוון כתיבה</h3>
+  <p>פתח <kbd>הגדרות</kbd> &rarr; <kbd>העדפות קריאה</kbd> &rarr; <kbd>ספרים</kbd> והשתמש בפקד <strong>כיוון כתיבה</strong>:</p>
+  <ul>
+    <li><strong>אוטומטי</strong> (ברירת מחדל) &mdash; פועל לפי הפריסה של כל ספר בנפרד. ספר שסודר אנכית מוצג אנכית; כל ספר אחר אינו מושפע.</li>
+    <li><strong>אופקי</strong> &mdash; הצג כל ספר אופקית, כולל ספר שסודר אנכית.</li>
+    <li><strong>אנכי</strong> &mdash; הצג כל ספר בטורים אנכיים.</li>
+  </ul>
+  <p>אותו פקד נמצא גם בהגדרות שבתוך הקורא, תחת כפתור <kbd>Aa</kbd>.</p>
+  <div class="tip"><strong>הערה:</strong> השינויים ייכנסו לתוקף בפעם הבאה שתפתח ספר &mdash; הספר שכבר פתוח על המסך שומר על הפריסה שבה נפתח.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x2139;</span> חשוב לדעת</h3>
+  <ul>
+    <li>ספרים אנכיים תמיד משתמשים במצב עמוד-עמוד, כך שגלילה רציפה וגלילה אוטומטית אינן זמינות עבורם.</li>
+    <li>אנימציית ההחלקה אינה בשימוש בספרים אנכיים &mdash; הם מתהפכים באנימציית הדפדוף במקום זאת.</li>
+    <li>סימניות, הדגשות, תוכן העניינים, חיפוש בתוך הספר, והקראה &mdash; כולם פועלים כרגיל.</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; חזרה למעלה</a>
+
+<!-- READING COMICS -->
+<h2 id="reading-comics">קריאת קומיקס</h2>
+<p class="section-desc">קריאת קומיקס בפורמט CBZ, CBR ו-CB7.</p>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4F1;</span> מצבי קריאה</h3>
+  <ul>
+    <li><strong>שמאל-לימין</strong> &mdash; סדר עמודים סטנדרטי של קומיקס מערבי.</li>
+    <li><strong>ימין-לשמאל</strong> &mdash; סדר קריאת מנגה.</li>
+    <li><strong>Webtoon / גלילה אנכית</strong> &mdash; גלילה אנכית חלקה לקומיקס בפורמט רצועה ארוכה.</li>
+  </ul>
+  <p>הגדר ברירת מחדל גלובלית ב-<kbd>הגדרות</kbd> &rarr; <kbd>העדפות קריאה</kbd> &rarr; <kbd>קומיקס</kbd>, או עקוף עבור ספר מסוים מדף הפרטים שלו.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F50E;</span> קנה מידה של עמוד</h3>
+  <ul>
+    <li><strong>התאם למסך</strong> &mdash; העמוד המלא נראה.</li>
+    <li><strong>התאם לרוחב</strong> &mdash; ממלא את הרוחב, גלול אנכית במידת הצורך.</li>
+    <li><strong>התאם לגובה</strong> &mdash; ממלא את הגובה.</li>
+    <li><strong>גודל מקורי</strong> &mdash; תצוגת פיקסל 1:1.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F44B;</span> מחוות</h3>
+  <ul>
+    <li>החלק שמאלה/ימינה כדי לדפדף (במצבי עמוד).</li>
+    <li>צבוט או הקש הקשה כפולה כדי להתקרב, ואז גרור כדי לנוע בעמוד. ראה <a href="#comic-zoom">הגדלת עמודי קומיקס</a>.</li>
+    <li>הקש על מרכז העמוד כדי להציג או להסתיר את סרגל הכלים.</li>
+    <li>השתמש במחוון העמודים בתחתית כדי לדלג במהירות.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x26A0;</span> התראת ארכיון חשוד</h3>
+  <p>כאשר אתה פותח ארכיון קומיקס (CBZ, CBR או CB7) שתוכנו נראה גדול בצורה חריגה או דחוס בצורה אגרסיבית &mdash; הסוג של דפוס שמשמש קבצי &ldquo;פצצת zip&rdquo; שנועדו להעמיס על הזיכרון &mdash; האפליקציה מציגה התראת <strong>ארכיון חשוד</strong> לפני פתיחה.</p>
+  <ul>
+    <li>הקש על <kbd>בטל</kbd> כדי להשאיר את הקובץ סגור. זו הבחירה הבטוחה לארכיונים ממקורות לא ידועים.</li>
+    <li>הקש על <kbd>פתח בכל זאת</kbd> אם אתה סומך על הקובץ &mdash; האפליקציה תדלג על בדיקת האבטחה ותטען את העמודים.</li>
+  </ul>
+  <p>קבצי EPUB משתמשים באותה הגנה בשקט במהלך הייבוא.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; חזרה למעלה</a>
+
+<!-- COMIC ZOOM -->
+<h2 id="comic-zoom">הגדלת עמודי קומיקס</h2>
+<p class="section-desc">התקרב יותר לאיור &mdash; גם במצבי עמוד וגם בגלילת Webtoon.</p>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F50D;</span> מצבי עמוד</h3>
+  <ul>
+    <li>צבוט כדי להתקרב, עד פי שלושה מהגודל המותאם. האיור נשאר מתחת לאצבעותיך תוך כדי הצביטה.</li>
+    <li>הקש הקשה כפולה כדי לקפוץ לגודל כפול באותה נקודה; הקשה כפולה נוספת מתאימה את העמוד בחזרה למסך.</li>
+    <li>גרור באצבע אחת כדי לנוע בעמוד תוך כדי התקרבות.</li>
+    <li>צביטה כמעט עד הסוף להתרחקות מתאימה את העמוד בחזרה למסך בצורה מסודרת.</li>
+  </ul>
+  <p>ההתקרבות פועלת עם אפשרויות קנה המידה <strong>התאם למסך</strong> ו<strong>התאם לגובה</strong>, וגם עם כפולות עמודים. <strong>התאם לרוחב</strong> ו<strong>גודל מקורי</strong> כבר מציגים את העמוד גדול מהמסך וגוללים במקום זאת &mdash; השתמש ב<kbd>הצג ברזולוציה מלאה</kbd> למטה כדי להתקרב יותר שם.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4F1;</span> גלילת Webtoon</h3>
+  <ul>
+    <li>צבוט או הקש הקשה כפולה כדי להגדיל את כל הרצועה, עד פי שלושה מגודלה הרגיל.</li>
+    <li>הגלילה ממשיכה לפעול גם כשאתה מוגדל &mdash; פשוט גרור למעלה ולמטה כרגיל.</li>
+    <li>גרור לצדדים כדי לנוע לרוחב עמוד מוגדל.</li>
+    <li>רמת ההגדלה נשארת קבועה תוך כדי הגלילה, כך שאפשר לקרוא פרק שלם מוגדל. סיבוב המכשיר מחזיר אותו לגודל הרגיל.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x2728;</span> הצג ברזולוציה מלאה</h3>
+  <p>ההתקרבות מגדילה את העמוד בגודל שבו הוכן עבור המסך שלך. לצפייה החדה ביותר האפשרית בעמוד בודד, לחץ עליו לחיצה ארוכה ובחר <kbd>הצג ברזולוציה מלאה</kbd> &mdash; אותו עמוד מפוענח ברזולוציית המקור של הארכיון, ואפשר לצבוט ולהתקרב הרבה יותר. הקשה כפולה עוברת בין התאמה למסך לגודל כפול; החלק למטה או הקש על כפתור הסגירה כדי לחזור.</p>
+  <div class="tip"><strong>הערה:</strong> ההתקרבות אינה נשמרת. סגירת הספר תמיד חוזרת להתאמה הרגילה.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; חזרה למעלה</a>
+
+<!-- TTS -->
+<h2 id="tts">הקראה ו-CarPlay</h2>
+<p class="section-desc">האזן לספרים שלך בקול רם.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F50A;</span> שימוש בהקראה</h3>
+  <p>פתח כל ספר EPUB, PDF או TXT והקש על כפתור ההפעלה בסרגל הכלים. ההקראה קוראת משפט אחד בכל פעם ומדגישה את המילה הנוכחית.</p>
+  <ul>
+    <li><strong>מהירות</strong> &mdash; 0.5&times; עד 2&times; בפקדי ההקראה.</li>
+    <li><strong>קול</strong> &mdash; בחר מתוך 100+ קולות מערכת ב-<kbd>הגדרות</kbd> &rarr; <kbd>העדפות קריאה</kbd> &rarr; <kbd>הקראה</kbd>.</li>
+    <li><strong>דילוג</strong> &mdash; הקש הבא/הקודם כדי לדלג לפי משפט, או לפי פרק.</li>
+  </ul>
+  <div class="tip"><strong>הערה:</strong> <a href="#fixed-layout">לספרים בפריסה קבועה</a> &mdash; קומיקס וספרי תמונות שעמודיהם הם עיצובים קבועים &mdash; אין טקסט שהאפליקציה יכולה להקריא, ולכן כפתור ההפעלה אינו מוצג עבורם.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F697;</span> CarPlay</h3>
+  <p>כשמחוברים לרכב התומך ב-CarPlay, האפליקציה מופיעה על צג הרכב עם פקדי הפעלה פשוטים. ההקראה ממשיכה ברקע &mdash; אין צורך להשאיר את המסך דלוק.</p>
+  <div class="tip"><strong>טיפ:</strong> הפעל <kbd>אודיו ברקע</kbd><span class="badge badge-premium">Premium</span> בהגדרות ההקראה כדי להמשיך בהפעלה כשהאפליקציה ברקע, גם ללא CarPlay.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; חזרה למעלה</a>
+
+<!-- AI UPSCALING -->
+<h2 id="upscaling">שיפור קומיקס באמצעות AI</h2>
+<p class="section-desc">שפר עמודי קומיקס ברזולוציה נמוכה על המכשיר.<span class="badge badge-premium">Premium</span></p>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x2728;</span> מה זה עושה</h3>
+  <p>משתמש במודל למידת מכונה על המכשיר כדי לשפר עמודי קומיקס שמתחת לסף רזולוציה מסוים. התוצאה היא קווים חדים יותר ופחות עיוותי דחיסה גלויים &mdash; שימושי במיוחד לסריקות ישנות או באיכות נמוכה.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x2699;</span> הגדרה</h3>
+  <ol class="steps">
+    <li>עבור אל <kbd>הגדרות</kbd> &rarr; <kbd>העדפות קריאה</kbd> &rarr; <kbd>קומיקס</kbd> &rarr; <kbd>שיפור AI</kbd>.</li>
+    <li>הפעל את האפשרות.</li>
+    <li>התאם את <strong>סף הרזולוציה</strong> &mdash; עמודים מתחת לרוחב פיקסלים זה ישודרגו (ברירת מחדל: 1500 פיקסל).</li>
+    <li>הגדר את <strong>חלון טעינה מראש</strong> כדי לקבוע כמה עמודים קרובים יעובדו מראש ברקע.</li>
+    <li>בחר <strong>רמת הפחתת רעש</strong> (אוטומטי הוא בדרך כלל הטוב ביותר).</li>
+  </ol>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4BE;</span> מטמון ואחסון</h3>
+  <p>תמונות משודרגות נשמרות במטמון כדי שלא יצטרכו עיבוד מחדש. בחר כמה זמן לשמור את המטמון (7&ndash;90 ימים או ללא תפוגה), ומחק אותו בכל עת מההגדרות.</p>
+  <div class="tip"><strong>טיפ:</strong> סמן קטן מופיע על עמודים משודרגים. אפשר לבטל אותו בהגדרות אם מעדיפים.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; חזרה למעלה</a>
+
+<!-- HIDDEN MODE -->
+<h2 id="hidden">ספרים מוסתרים</h2>
+<p class="section-desc">שמור על פרטיות ספרים מסוימים.<span class="badge badge-premium">Premium</span></p>
+
+<div class="card">
+  <h3><span class="icon icon-indigo">&#x1F441;</span> הסתרת ספרים</h3>
+  <ol class="steps">
+    <li>פתח את דף הפרטים של ספר והקש על התפריט (&hellip;).</li>
+    <li>בחר <kbd>הסתר ספר</kbd>.</li>
+    <li>הספר נעלם מתצוגת הספרייה הרגילה.</li>
+  </ol>
+  <p>כדי להסתיר ספרים רבים בבת אחת, השתמש במצב בחירה.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F513;</span> צפייה בספרים מוסתרים</h3>
+  <p>משוך למטה בספרייה כדי להפעיל את <strong>מצב מוסתר</strong>. כל הספרים שלך &mdash; מוסתרים וגלויים &mdash; מוצגים כעת. משוך שוב או עזוב את האפליקציה כדי לצאת ממצב מוסתר.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F512;</span> אפשרויות פרטיות</h3>
+  <p>כשמצב מוסתר פעיל, עבור אל <kbd>הגדרות</kbd> &rarr; <kbd>מצב מוסתר</kbd> כדי לבחור מה קורה כשעוזבים את האפליקציה:</p>
+  <ul>
+    <li><strong>יציאה אוטומטית</strong> (ברירת מחדל) &mdash; מצב מוסתר נכבה אוטומטית. מהיר ופשוט.</li>
+    <li><strong>דרוש Face ID / Touch ID</strong> &mdash; מצב מוסתר נשאר פעיל, אך דורש אימות ביומטרי כשחוזרים. מאובטח יותר.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x21A9;</span> ביטול הסתרת ספרים</h3>
+  <p>במצב מוסתר, פתח את דף הפרטים של ספר מוסתר ובחר <kbd>בטל הסתרה</kbd>, או השתמש במצב בחירה כדי לבטל הסתרה בכמות.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x2601;</span> סנכרון ספרים מוסתרים</h3>
+  <p>במצב מוסתר, עבור אל <kbd>הגדרות</kbd> &rarr; <kbd>מצב מוסתר</kbd> והפעל את <kbd>סנכרן ספרים מוסתרים עם iCloud</kbd>:</p>
+  <ul>
+    <li><strong>כבוי</strong> (ברירת מחדל) &mdash; ספרים מוסתרים נשארים רק במכשיר זה. הסתרת ספר גם מסירה אותו מ-iCloud.</li>
+    <li><strong>פעיל</strong> &mdash; ספרים מוסתרים מסונכרנים דרך iCloud אך נשארים מוסתרים בכל מכשיר שאתה מחובר אליו.</li>
+  </ul>
+  <p>כיבוי המתג כשכבר יש לך ספרים מוסתרים ב-iCloud שואל מה לעשות איתם:</p>
+  <ul>
+    <li><strong>השאר בכל המכשירים</strong> &mdash; המכשירים האחרים שלך שומרים את העותקים המסונכרנים שלהם; מכשיר זה שומר עותק פרטי מקומי בלבד.</li>
+    <li><strong>הסר לחלוטין מ-iCloud</strong> &mdash; מסיר את הספרים מ-iCloud; כל מכשיר אחר שומר עותק פרטי משלו בספרייה המוסתרת שלו.</li>
+  </ul>
+  <div class="tip"><strong>הערה:</strong> אם אחד המכשירים האחרים שלך מסיר ספר מוסתר מ-iCloud, מכשיר זה שומר אוטומטית עותק פרטי משלו בספרייה המוסתרת &mdash; כל עוד קובץ הספר כבר הורד אליו.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F5D1;</span> מחק ספרים מוסתרים לצמיתות</h3>
+  <p>במצב מוסתר, עבור אל <kbd>הגדרות</kbd> &rarr; <kbd>מצב מוסתר</kbd> ובחר <kbd>מחק ספרים מוסתרים לצמיתות</kbd> כדי להסיר כל ספר מוסתר מהמכשיר הזה, מ-iCloud, ומהמכשירים האחרים שלך. הקלד <kbd>DELETE</kbd> לאישור.</p>
+  <div class="tip"><strong>אזהרה:</strong> לא ניתן לבטל פעולה זו. מכשירים שאינם מחוברים לרשת באותו רגע ישמרו את העותקים המקומיים שלהם עד לסנכרון הבא.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; חזרה למעלה</a>
+
+<!-- BOOKMARKS, HIGHLIGHTS, TAGS -->
+<h2 id="bookmarks">סימניות, הדגשות ותגיות</h2>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F516;</span> סימניות</h3>
+  <p>הקש על סמל הסימנייה בסרגל הכלים של הקורא כדי לסמן את העמוד הנוכחי. הוסף הערה אופציונלית. צפה בכל הסימניות של ספר מדף הפרטים שלו.</p>
+  <div class="tip"><strong>הערה:</strong> רק סימניות שיצרת ידנית מופיעות כאן. מיקומים שהאפליקציה שומרת אוטומטית כשאתה סוגר ספר נשמרים בנפרד ב<a href="#history">היסטוריית קריאה</a> כדי שלא ידחקו את הסימניות שלך.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F58D;</span> הדגשות<span class="badge badge-premium">Premium</span></h3>
+  <p>ב-EPUB, בחר טקסט כדי להדגיש אותו. בחר מבין חמישה צבעים (צהוב, ורוד, ירוק, כחול, כתום) והוסף הערות. כל ההדגשות מופיעות בדף הפרטים של הספר.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F3F7;</span> תגיות</h3>
+  <p>הוסף תגיות לכל ספר מדף הפרטים שלו. התגיות ניתנות לחיפוש ואפשר להשתמש בהן כמסננים בספרייה. נהל את כל התגיות מ-<kbd>הגדרות</kbd> &rarr; <kbd>תגיות</kbd>.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; חזרה למעלה</a>
+
+<!-- READING HISTORY -->
+<h2 id="history">היסטוריית קריאה</h2>
+<p class="section-desc">חזור לכל מיקום שהיית בו לאחרונה.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F552;</span> שמירות אוטומטיות</h3>
+  <p>בכל פעם שאתה סוגר ספר או שולח את האפליקציה לרקע, המיקום הנוכחי שלך נשמר כפריט היסטוריה &mdash; אין צורך לזכור לסמן. זה עובד בכל קורא: EPUB, PDF, TXT/RTF וקומיקס.</p>
+  <ul>
+    <li>נשמרים עד <strong>50</strong> מיקומים אחרונים לכל ספר. פריטים ישנים יותר מוסרים אוטומטית כאשר חדשים מגיעים.</li>
+    <li>סגירת הספר שוב באותו מקום בתוך מספר דקות מעדכנת את הפריט הקיים במקום ליצור כפילות.</li>
+    <li>מיקומים שנשמרו אוטומטית נשמרים בנפרד מרשימת הסימניות הידנית שלך כדי שלא יתערבבו עם אלה שהגדרת בכוונה.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4D6;</span> היסטוריה בתוך ספר</h3>
+  <p>תוך כדי קריאה, הקש על תפריט ההצפה (&hellip;) בפינה הימנית-עליונה ובחר <kbd>היסטוריית קריאה</kbd>. תראה רשימה של המיקומים האחרונים שלך בספר זה, החדש ביותר ראשון, עם שם הפרק או העמוד וכמה זמן עבר מאז כל אחד נרשם.</p>
+  <ul>
+    <li>הקש על כל פריט כדי לקפוץ ישירות לאותו מקום.</li>
+    <li>החלק שמאלה על פריט כדי להסיר אותו.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F4DA;</span> היסטוריה ברחבי הספרייה שלך</h3>
+  <p>מהספרייה, הקש על תפריט ההצפה (&hellip;) בסרגל הכלים העליון ובחר <kbd>היסטוריית קריאה</kbd> כדי לראות כל ספר שפתחת לאחרונה, מקובץ לפי יום. הקש על שורה כדי לפתוח את הספר בדיוק במקום שבו הפסקת.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; חזרה למעלה</a>
+
+<!-- AUTHOR & TAG BROWSING -->
+<h2 id="search">עיון לפי מחבר ותגית</h2>
+<p class="section-desc">מצא ספרים לפי מחבר או תגית מכל מקום באפליקציה.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F464;</span> מחברים</h3>
+  <p>עבור אל <kbd>הגדרות</kbd> &rarr; <kbd>מחברים</kbd> כדי לראות את כל המחברים בספרייה שלך יחד עם מספר הספרים. הקש על מחבר כדי לחפש בספרייה את כל ספריו.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F3F7;</span> חיפוש תגיות</h3>
+  <p>ב<kbd>הגדרות</kbd> &rarr; <kbd>תגיות</kbd>, הקש על תגית כלשהי כדי לחפש בספרייה ספרים עם אותה תגית. לחיצה ארוכה לשינוי שם או למחיקה.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F50D;</span> חיפוש מהיר מתוך ההקשר</h3>
+  <ul>
+    <li>לחיצה ארוכה על ספר בספרייה &rarr; <kbd>מצא ספרים מאת [מחבר]</kbd></li>
+    <li>בדף הפרטים של ספר, לחץ לחיצה ארוכה על שם המחבר או על תגית כלשהי כדי לחפש</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; חזרה למעלה</a>
+
+<!-- METADATA -->
+<h2 id="metadata">מטא-נתונים ו-ComicInfo.xml</h2>
+<p class="section-desc">הצג וערוך את המטא-נתונים של הספר.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x270F;</span> עורך המטא-נתונים</h3>
+  <p>מדף הפרטים של ספר, הקש על התפריט (&hellip;) ובחר <kbd>ערוך מטא-נתונים</kbd> כדי לשנות את הכותרת, המחבר, הסדרה, התיאור ושדות נוספים. תוכל גם לחלץ מחדש את המטא-נתונים מהקובץ המקורי.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4CB;</span> ComicInfo.xml</h3>
+  <p>מארכיוני קומיקס (CBZ, CBR, CB7) שמכילים קובץ <code>ComicInfo.xml</code> יחולצו המטא-נתונים אוטומטית בעת הייבוא &mdash; כולל כותרת, כותב, סדרה, מספר גיליון, תקציר, מוציא לאור, ז'אנר ותגיות.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; חזרה למעלה</a>
+
+<!-- ICLOUD -->
+<h2 id="icloud">סנכרון iCloud</h2>
+<p class="section-desc">שמור על הספרייה שלך מסונכרנת בין מכשירים.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x2601;</span> הפעלת סנכרון</h3>
+  <ol class="steps">
+    <li>עבור אל <kbd>הגדרות</kbd> &rarr; <kbd>סנכרון iCloud</kbd>.</li>
+    <li>הפעל את <kbd>סנכרן ספרייה עם iCloud</kbd>.</li>
+    <li>הסנכרון ייכנס לתוקף בהפעלה הבאה של האפליקציה.</li>
+  </ol>
+  <p>המטא-נתונים, התקדמות הקריאה, הסימניות, ההדגשות והמדפים שלך מסונכרנים בכל המכשירים המחוברים לאותו חשבון iCloud.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F4CA;</span> סטטוס סנכרון</h3>
+  <p><kbd>הגדרות</kbd> &rarr; <kbd>סנכרון iCloud</kbd> מציג כרטיס סטטוס עבור קובצי הספרים שלך:</p>
+  <ul>
+    <li>כותרת &mdash; <strong>מעודכן</strong>, <strong>מסתנכרן&hellip;</strong> (עם מספר) או <strong>לא מחובר</strong>.</li>
+    <li>סרגל המראה כמה מהקבצים בספרייה שלך נמצאים ב-iCloud.</li>
+    <li>פירוט &mdash; <strong>מסונכרן</strong> (עם הגודל הכולל), <strong>ב-iCloud בלבד</strong> (עדיין לא הורד למכשיר זה), ו<strong>בתהליך</strong>.</li>
+  </ul>
+  <div class="tip"><strong>הערה:</strong> כרטיס זה עוקב אחרי <em>קובצי</em> הספרים בלבד. התקדמות הקריאה, הסימניות, ההדגשות והמדפים מסונכרנים בנפרד ואוטומטית, ללא קשר לסטטוס הקובץ.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x2601;</span> תגי כריכה</h3>
+  <p>כריכות הספרים מציגות סמל ענן קטן בפינה הימנית התחתונה כדי לציין את מצב הסנכרון של הקובץ:</p>
+  <ul>
+    <li><strong>סמל ענן</strong> &mdash; הקובץ נמצא רק ב-iCloud. פתח את דף הספר כדי להוריד אותו.</li>
+    <li><strong>חיצי מעלה/מטה</strong> &mdash; הקובץ נמצא כרגע בהעלאה או בהורדה.</li>
+    <li><strong>ללא סמל</strong> &mdash; הקובץ כבר נמצא במכשיר זה.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4E5;</span> הורדה אוטומטית</h3>
+  <p>בחר את גודל הקובץ המרבי להורדות אוטומטיות. ספרים גדולים יותר נשארים בענן עד שפותחים אותם. התאם את המגבלה בהגדרות iCloud.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; חזרה למעלה</a>
+
+<!-- STATS -->
+<h2 id="stats">סטטיסטיקות קריאה</h2>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F4CA;</span> פעילות הקריאה שלך</h3>
+  <p>פתח <kbd>הגדרות</kbd> &rarr; <kbd>סטטיסטיקות ספרייה</kbd> כדי לראות:</p>
+  <ul>
+    <li>סה"כ ספרים, עמודים שנקראו וזמן קריאה.</li>
+    <li>תרשים פעילות קריאה יומי.</li>
+    <li>ספרים לפי פורמט ומצב קריאה.</li>
+    <li>פירוט פעילות לכל ספר.</li>
+  </ul>
+  <div class="tip"><strong>הערה:</strong> הסטטיסטיקות מכבדות את מצב ההסתרה &mdash; כשמצב מוסתר כבוי, סטטיסטיקות של ספרים מוסתרים אינן נכללות.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; חזרה למעלה</a>
+
+<!-- WEBDAV & OPDS -->
+<h2 id="webdav">WebDAV ו-OPDS</h2>
+<p class="section-desc">עיין והורד משרתים מרוחקים וקטלוגים.</p>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F5C4;</span> WebDAV</h3>
+  <p>התחבר ל-NAS, Nextcloud, או שרת Calibre כדי לעיין בתיקיות ולהוריד ספרים.</p>
+  <ol class="steps">
+    <li>עבור אל <kbd>הגדרות</kbd> &rarr; <kbd>ייבוא ספרים</kbd> &rarr; <kbd>WebDAV</kbd>.</li>
+    <li>הקש על <kbd>הוסף שרת</kbd> והזן את הכתובת.</li>
+    <li>הוסף שם משתמש וסיסמה אם נדרש.</li>
+    <li>הקש על <kbd>בדוק חיבור</kbd>, ואז שמור.</li>
+  </ol>
+  <div class="tip"><strong>תעודות עצמיות:</strong> אם השרת שלך משתמש בתעודה עצמית, תוכל להפעיל את <kbd>אפשר תעודות לא מהימנות</kbd>. האפליקציה תבקש ממך לאשר תחילה &mdash; פעולה זו משביתה את אימות ה-TLS, כך שכל אחד ברשת שלך יכול להתחזות לשרת. הפעל זאת רק עבור שרת שבשליטתך.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4DA;</span> קטלוגי OPDS</h3>
+  <p>OPDS הוא תקן פתוח לקטלוגי ספרים. הוסף קטלוגים ציבוריים (Project Gutenberg, Standard Ebooks, ועוד) או שרת פרטי משלך.</p>
+  <ol class="steps">
+    <li>עבור אל <kbd>הגדרות</kbd> &rarr; <kbd>ייבוא ספרים</kbd> &rarr; <kbd>OPDS</kbd>.</li>
+    <li>הקש על <kbd>הוסף קטלוג</kbd> והזן את כתובת הפיד.</li>
+    <li>עיין בקטגוריות והורד ספרים לספרייה שלך.</li>
+  </ol>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; חזרה למעלה</a>
+
+<!-- RESUME -->
+<h2 id="resume">המשך בעת הפעלה</h2>
+<p class="section-desc">חזור אוטומטית למקום שבו הפסקת.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x25B6;</span> הגדרה</h3>
+  <p>עבור אל <kbd>הגדרות</kbd> &rarr; <kbd>כללי</kbd> והפעל את <kbd>המשך את הספר האחרון בעת ההפעלה</kbd>. בפעם הבאה שתפתח את האפליקציה, היא תעבור ישירות לספר ולעמוד שקראת לאחרונה.</p>
+  <div class="tip"><strong>ספרים מוסתרים:</strong> אם הספר האחרון שקראת מוסתר, האפליקציה תבקש Face ID / Touch ID לפני ההמשך. הפעל את <kbd>המשך ספר מוסתר לאחר אימות</kbd> בהגדרות מצב מוסתר כדי לאפשר זאת.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; חזרה למעלה</a>
+
+<!-- FORMATS -->
+<h2 id="formats">פורמטים נתמכים</h2>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4D6;</span> ספרים</h3>
+  <div class="formats-grid">
+    <div class="format-tag">EPUB</div>
+    <div class="format-tag">PDF</div>
+    <div class="format-tag">TXT</div>
+    <div class="format-tag">RTF</div>
+  </div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4F1;</span> קומיקס</h3>
+  <div class="formats-grid">
+    <div class="format-tag">CBZ</div>
+    <div class="format-tag">CBR</div>
+    <div class="format-tag">CB7</div>
+  </div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; חזרה למעלה</a>
+
+</body>
+</html>

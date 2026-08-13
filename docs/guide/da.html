@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Brugervejledning</title>
+<link rel="stylesheet" href="UserGuideStyle.css">
+<!-- USER-GUIDE-NAV-STYLE:START -->
+<style>
+.guide-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 14px;
+  padding: 10px 14px;
+  margin: 0 0 16px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  font-size: 13px;
+}
+.guide-nav-home {
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.guide-nav-arrow {
+  display: inline-block;
+}
+[dir="rtl"] .guide-nav-arrow {
+  transform: scaleX(-1);
+}
+.guide-nav-langs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 10px;
+  color: var(--secondary);
+}
+.guide-nav-globe {
+  font-size: 13px;
+}
+.guide-nav-langs a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.guide-nav-langs a:hover,
+.guide-nav-langs a:focus-visible {
+  text-decoration: underline;
+}
+.guide-nav-current {
+  font-weight: 700;
+  color: var(--text);
+}
+</style>
+<!-- USER-GUIDE-NAV-STYLE:END -->
+</head>
+<body id="top">
+<!-- USER-GUIDE-NAV:START -->
+<nav class="guide-nav" aria-label="User Guide language switcher">
+  <a class="guide-nav-home" href="../index.html"><span class="guide-nav-arrow" aria-hidden="true">&larr;</span> Idyllic</a>
+  <span class="guide-nav-langs">
+    <span class="guide-nav-globe" aria-hidden="true">&#x1F310;</span>
+      <a href="index.html">English</a>
+      <a href="ar.html">العربية</a>
+      <a href="cs.html">Čeština</a>
+      <span class="guide-nav-current">Dansk</span>
+      <a href="de.html">Deutsch</a>
+      <a href="es.html">Español</a>
+      <a href="fi.html">Suomi</a>
+      <a href="fr.html">Français</a>
+      <a href="he.html">עברית</a>
+      <a href="hi.html">हिन्दी</a>
+      <a href="id.html">Indonesia</a>
+      <a href="it.html">Italiano</a>
+      <a href="ja.html">日本語</a>
+      <a href="ko.html">한국어</a>
+      <a href="ms.html">Bahasa Melayu</a>
+      <a href="nb.html">Norsk bokmål</a>
+      <a href="nl.html">Nederlands</a>
+      <a href="pl.html">Polski</a>
+      <a href="pt-BR.html">Português (Brasil)</a>
+      <a href="ru.html">Русский</a>
+      <a href="sv.html">Svenska</a>
+      <a href="th.html">ไทย</a>
+      <a href="tr.html">Türkçe</a>
+      <a href="uk.html">Українська</a>
+      <a href="vi.html">Tiếng Việt</a>
+      <a href="zh-Hans.html">简体中文</a>
+      <a href="zh-Hant.html">繁體中文</a>
+  </span>
+</nav>
+<!-- USER-GUIDE-NAV:END -->
+
+<h1>Brugervejledning</h1>
+<p class="subtitle">Alt du har brug for til at få mest muligt ud af din læseoplevelse.</p>
+
+<!-- TABLE OF CONTENTS -->
+<div class="card toc">
+  <a href="#importing">Import af bøger</a>
+  <a href="#wifi">WiFi-overførsel</a>
+  <a href="#library">Bibliotek og organisering</a>
+  <a href="#shelves">Hylder og mapper</a>
+  <a href="#reading-books">Læsning af bøger</a>
+  <a href="#fixed-layout">Bøger med fast layout</a>
+  <a href="#in-book-search">Søg i bog</a>
+  <a href="#image-gallery">Billedgalleri</a>
+  <a href="#fonts">Læseskrifttyper</a>
+  <a href="#reading-direction">Læseretning</a>
+  <a href="#vertical-writing">Lodret skrift</a>
+  <a href="#reading-comics">Læsning af tegneserier</a>
+  <a href="#comic-zoom">Zoom af tegneseriesider</a>
+  <a href="#tts">Tekst-til-tale og CarPlay</a>
+  <a href="#upscaling">AI-opskalering af tegneserier</a>
+  <a href="#hidden">Skjulte bøger</a>
+  <a href="#bookmarks">Bogmærker, fremhævninger og tags</a>
+  <a href="#history">Læsehistorik</a>
+  <a href="#search">Gennemse forfatter og tags</a>
+  <a href="#metadata">Metadata &amp; ComicInfo.xml</a>
+  <a href="#icloud">iCloud-synkronisering</a>
+  <a href="#stats">Læsestatistik</a>
+  <a href="#webdav">WebDAV og OPDS</a>
+  <a href="#resume">Genoptag ved start</a>
+  <a href="#formats">Understøttede formater</a>
+</div>
+
+<!-- IMPORTING -->
+<h2 id="importing">Import af bøger</h2>
+<p class="section-desc">Flere måder at tilføje bøger til dit bibliotek.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4C1;</span> Fra appen Filer</h3>
+  <p>Tryk på <kbd>Indstillinger</kbd> &rarr; <kbd>Importér bøger</kbd>, og vælg filer fra din enhed, iCloud Drive eller en tilsluttet skytjeneste. Du kan også bruge træk-og-slip på iPad.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F310;</span> WiFi-overførsel</h3>
+  <p>Upload bøger fra en computer eller telefon på dit WiFi-netværk. Se det dedikerede afsnit nedenfor for detaljer.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F5C2;</span> WebDAV og OPDS</h3>
+  <p>Opret forbindelse til en NAS, Calibre-server eller et offentligt bogkatalog for at gennemse og downloade bøger direkte. Se nedenfor.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Tilbage til toppen</a>
+
+<!-- WIFI TRANSFER -->
+<h2 id="wifi">WiFi-overførsel</h2>
+<p class="section-desc">Upload bøger fra enhver enhed på dit lokale netværk.</p>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F4F6;</span> Sådan fungerer det</h3>
+  <p>Appen kører en lille webserver på din enhed. Enhver computer eller telefon på det samme WiFi-netværk kan åbne uploadsiden i en browser.</p>
+  <ol class="steps">
+    <li>Gå til <kbd>Indstillinger</kbd> &rarr; <kbd>Importér bøger</kbd> &rarr; <kbd>WiFi-overførsel</kbd>.</li>
+    <li>Tryk på <kbd>Start server</kbd>. En adresse som <kbd>http://192.168.1.42:8080</kbd> vises.</li>
+    <li>Åbn adressen i en webbrowser på det samme netværk.</li>
+    <li>Træk filer til siden, eller klik for at gennemse &mdash; vælg eventuelt en destinationsmappe.</li>
+    <li>Importerede bøger vises straks i dit bibliotek.</li>
+    <li>Tryk på <kbd>Stop server</kbd>, når du er færdig.</li>
+  </ol>
+  <div class="tip"><strong>Tip:</strong> Din enhed forbliver vågen, mens serveren kører, så overførsler ikke afbrydes.</div>
+  <div class="tip"><strong>Upload mislykkedes?</strong> For hver fil, der mislykkedes, vises årsagen direkte i rækken. Hvis WiFi-forbindelsen afbrydes, skal du trykke på <kbd>&#x21BB; Prøv igen</kbd> i rækken for at sende den igen. Permanente problemer (såsom et ikke-understøttet filformat) viser ikke en Prøv igen-knap.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Tilbage til toppen</a>
+
+<!-- LIBRARY -->
+<h2 id="library">Bibliotek og organisering</h2>
+<p class="section-desc">Find, sortér og organisér dine bøger.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F50D;</span> Søgning</h3>
+  <p>Tryk på <kbd>Search</kbd>-pillen nederst i biblioteket for at udvide et søgefelt, og tryk derefter på <kbd>Færdig</kbd> for at lukke det. Det søger på tværs af titel, forfatter, tags, serie, forlag og beskrivelse. Søgning efter forfatter eller tag fra en bogs genvejsmenu (se <a href="#search">Gennemse forfatter og tags</a>) udfylder den samme søgning.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x2195;</span> Sortering og filtrering</h3>
+  <p>Tryk på visningsknappen (øverst til højre) for at vælge:</p>
+  <ul>
+    <li><strong>Layout</strong> &mdash; Gitter, Detaljeret, Kompakt, Minimalistisk, Tabel eller Magasin</li>
+    <li><strong>Sortering</strong> &mdash; Titel, Forfatter, Sidst læst, Tilføjelsesdato, Fremskridt, Filstørrelse, Serie</li>
+    <li><strong>Visning</strong> &mdash; Sæt igangværende bøger først og færdige bøger sidst</li>
+    <li><strong>Filter</strong> &mdash; Efter format, tag eller forfatter</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x2714;</span> Valgmodus</h3>
+  <p>Hold en bog nede, eller tryk på <kbd>Vælg</kbd> for at gå i valgmodus. Herefter kan du flytte, slette, skjule eller vise flere bøger på én gang.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4CB;</span> Ryd op i dubletter</h3>
+  <p>Gå til <strong>Indstillinger &gt; Bibliotek &gt; Biblioteksvedligeholdelse &gt; Ryd op i dubletter</strong> for at finde bøger med samme titel, forfatter og format. For hver dubletgruppe:</p>
+  <ul>
+    <li>Den <strong>nyeste version</strong> er markeret med et grønt KEEP-mærke</li>
+    <li>Vælg ældre kopier ved hjælp af afkrydsningsfelter (eller <strong>Vælg alle</strong>)</li>
+    <li><strong>Slet</strong> &mdash; fjerner de valgte ældre kopier</li>
+    <li><strong>Kopiér data og slet</strong> &mdash; overfører bogmærker, fremhævninger, mærker, læseforløb og hyldeplacering til den nyeste version før sletning</li>
+    <li>Aktivér <strong>"Flyt ny bog til den gamle bogs hylde og skjulte status"</strong> for at beholde den nye version på samme sted i biblioteket</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Tilbage til toppen</a>
+
+<!-- SHELVES -->
+<h2 id="shelves">Hylder og mapper</h2>
+<p class="section-desc">Organisér bøger i indlejrede mapper.</p>
+
+<div class="card">
+  <h3><span class="icon icon-indigo">&#x1F4C2;</span> Opret hylder</h3>
+  <ol class="steps">
+    <li>Tryk på <kbd>Ny hylde</kbd> øverst i dit bibliotek.</li>
+    <li>Indtast et navn, og vælg et ikon og en farve.</li>
+    <li>Vælg eventuelt en overordnet hylde for at oprette en undermappe.</li>
+  </ol>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x21C4;</span> Flytning af bøger</h3>
+  <p>Fra en bogs detaljeside trykker du på menuen (&hellip;) og vælger <kbd>Flyt til hylde</kbd>. I valgmodus kan du flytte mange bøger på én gang.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Tilbage til toppen</a>
+
+<!-- READING BOOKS -->
+<h2 id="reading-books">Læsning af bøger</h2>
+<p class="section-desc">Læsetilstande for EPUB, PDF, TXT og RTF.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4D6;</span> EPUB</h3>
+  <p>EPUB-filer åbnes i en fuldt udstyret læser drevet af Readium. Tryk på venstre eller højre kant for at bladre, eller stryg.</p>
+  <ul>
+    <li><strong>Sideopdelt</strong> &mdash; traditionel side-for-side-læsning.</li>
+    <li><strong>Fortløbende rulning</strong><span class="badge badge-premium">Premium</span> &mdash; rul naturligt gennem teksten uden sideskift.</li>
+    <li><strong>Læseretning</strong> &mdash; følg bogen automatisk, eller vælg selv venstre-til-højre eller højre-til-venstre. Se <a href="#reading-direction">Læseretning</a>.</li>
+    <li><strong>Fast layout</strong> &mdash; tegneserier, billedbøger og andre side-for-side EPUB'er åbner i en læser bygget til dem. Se <a href="#fixed-layout">Bøger med fast layout</a>.</li>
+    <li><strong>Søg i bog</strong><span class="badge badge-premium">Premium</span> &mdash; søg i hele bogen efter et hvilket som helst ord eller en sætning. Se <a href="#in-book-search">Søg i bog</a>.</li>
+    <li><strong>Billedgalleri</strong><span class="badge badge-premium">Premium</span> &mdash; gennemse alle billeder i EPUB-en fra bogens detaljeside. Se <a href="#image-gallery">Billedgalleri</a>.</li>
+  </ul>
+  <div class="tip"><strong>Tip:</strong> Justér skriftstørrelse, linjeafstand og temafarver i <kbd>Indstillinger</kbd> &rarr; <kbd>Læsepræferencer</kbd> &rarr; <kbd>Bøger</kbd>.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F4C4;</span> PDF</h3>
+  <p>PDF-filer gengives nativt. Knib for at zoome, stryg for at bladre. Appen kan huske adgangskoder til beskyttede PDF-filer.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x1F4DD;</span> TXT og RTF</h3>
+  <p>Ren tekst og RTF-filer åbnes i en enkel tekstlæser med justerbar formatering.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Tilbage til toppen</a>
+
+<!-- FIXED LAYOUT -->
+<h2 id="fixed-layout">Bøger med fast layout</h2>
+<p class="section-desc">EPUB-bøger, hvor hver side er et fast layout &mdash; tegneserier, billedbøger og stærkt illustrerede titler.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4D0;</span> Hvad det er</h3>
+  <p>Nogle EPUB-bøger er opsat side for side i stedet for som flydende tekst: hver side er en fast placering af tekst og illustrationer. Appen genkender selv disse bøger og åbner dem i en læser, der er bygget til dem &mdash; hver side skaleres til at passe på skærmen og centreres, mens pladsen omkring udfyldes med baggrundsfarven fra dit læsetema.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F44B;</span> Læsning og zoom</h3>
+  <ul>
+    <li>Tryk til venstre eller højre på skærmen for at bladre, eller stryg. Tryk midt på skærmen for at vise eller skjule værktøjslinjerne.</li>
+    <li>Knib for at zoome ind &mdash; op til tre gange den tilpassede størrelse &mdash; og træk for at bevæge dig rundt på siden.</li>
+    <li>Dobbelttryk for at zoome ind på det sted; dobbelttryk igen for at tilpasse siden til skærmen igen.</li>
+    <li>Bøger, der er udgivet til at læses højre-til-venstre, bladrer automatisk den vej.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4D6;</span> Tosiders opslag</h3>
+  <p>Drej enheden til liggende retning, så vises modstående sider side om side. Appen følger opslagsangivelserne inde i selve bogen, så et omslag eller en helsides illustration stadig får sin egen side. Drej tilbage til stående retning for at se én side ad gangen.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x2139;</span> Hvad der er tilgængeligt</h3>
+  <p>Indholdsfortegnelsen, bogmærker, fremskridtsskyderen, læsehistorik og genoptagelse, hvor du slap, fungerer alt sammen som normalt.</p>
+  <p>Fordi hver side er et fast layout og ikke tekst, som appen kan omformatere, mangler nogle funktioner for disse bøger: Fortløbende rulning og automatisk rulning, skrift- og udseendeindstillinger, tekst-til-tale, søgning i bogen samt markering eller fremhævning af tekst.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Tilbage til toppen</a>
+
+<!-- IN-BOOK SEARCH -->
+<h2 id="in-book-search">Søg i bog</h2>
+<p class="section-desc">Find ethvert ord eller enhver sætning i den bog, du læser.<span class="badge badge-premium">Premium</span></p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F50D;</span> Start en søgning</h3>
+  <ol class="steps">
+    <li>Tryk midt på siden for at vise værktøjslinjerne.</li>
+    <li>Tryk på forstørrelsesglasset yderst til højre i den nederste linje.</li>
+    <li>Skriv mindst to tegn, og tryk på <kbd>Søg</kbd> på tastaturet.</li>
+  </ol>
+  <p>Hele bogen gennemsøges &mdash; alle kapitler, ikke kun det på skærmen &mdash; og der skelnes ikke mellem store og små bogstaver. Søgning er tilgængelig i EPUB- og TXT/RTF-læseren.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4C4;</span> Gennemse resultater</h3>
+  <p>Resultaterne vises under søgefeltet, grupperet efter kapitel. Hver række viser fundet med fed skrift i et uddrag af den omgivende tekst. Tryk på et resultat for at hoppe direkte til stedet &mdash; alle fund fremhæves med gult i bogen, og det aktuelle med en kraftigere ravgul farve.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x2195;</span> Hop mellem fund</h3>
+  <p>Når du vælger et resultat, klapper søgefeltet sammen til en kompakt bjælke med en tæller, der viser, hvor du er blandt fundene.</p>
+  <ul>
+    <li>Brug op/ned-pilene til at gå til forrige eller næste fund.</li>
+    <li>Tryk på listeknappen for at åbne den fulde resultatliste igen.</li>
+    <li>Tryk på <kbd>&times;</kbd> for at afslutte søgningen &mdash; alle fremhævninger fjernes.</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Tilbage til toppen</a>
+
+<!-- IMAGE GALLERY -->
+<h2 id="image-gallery">Billedgalleri</h2>
+<p class="section-desc">Gennemse alle illustrationer i en EPUB som et galleri, du kan stryge igennem.<span class="badge badge-premium">Premium</span></p>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F5BC;</span> Åbn galleriet</h3>
+  <p>Åbn en EPUB-bogs detaljeside, og tryk på <span class="icon">&#x1F5BC;</span>-fotostakknappen i værktøjslinjen øverst til højre. Appen udtrækker alle billeder fra bogen og viser imens en statuslinje &mdash; tryk på <kbd>&times;</kbd>-knappen øverst til venstre for at trække dig tilbage når som helst. Galleriet er kun tilgængeligt for EPUB-bøger.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4DA;</span> Hvad du får at se</h3>
+  <p>Billederne vises ét pr. side i læserækkefølge &mdash; den rækkefølge, de optræder i bogens kapitler &mdash; inklusive omslaget. Bittesmå billeder som ikoner og dekorationer springes over: alt, der er mindre end minimumsstørrelsen (100&nbsp;px som standard), udelades. Justér tærsklen i <kbd>Indstillinger</kbd> &rarr; <kbd>Læsepræferencer</kbd> &rarr; <kbd>Bøger</kbd> &rarr; <kbd>EPUB-galleri</kbd>. Hvis intet billede opfylder kravene, fortæller galleriet dig, at det ikke fandt nogen.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F446;</span> Se og gem billeder</h3>
+  <ul>
+    <li>Stryg for at skifte mellem billeder, eller brug sideskyderen i bunden til at hoppe hurtigt.</li>
+    <li>Knib eller dobbelttryk for at zoome, og træk derefter for at bevæge dig rundt &mdash; galleriet bruger tegneserielæseren, så det zoomer på præcis samme måde. Se <a href="#comic-zoom">Zoom af tegneseriesider</a>.</li>
+    <li>Tryk midt på skærmen for at vise eller skjule betjeningselementerne.</li>
+    <li>Hold en finger på et billede for at vælge <kbd>Vis fuld opløsning</kbd> &mdash; som åbner det i original størrelse for et nærmere kig &mdash; eller for at vælge <kbd>Gem i Fotos</kbd>, <kbd>Gem i Filer</kbd> eller <kbd>Kopiér billede</kbd>.</li>
+    <li>Galleriet følger din læseretning for tegneserier &mdash; inklusive lodret rulning i webtoon-stil.</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Tilbage til toppen</a>
+
+<!-- READING FONTS -->
+<h2 id="fonts">Læseskrifttyper</h2>
+<p class="section-desc">Vælg en læseskrifttype, tilføj dine egne, eller download sprogpakker.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F524;</span> Vælg en skrifttype</h3>
+  <p>Åbn <kbd>Indstillinger</kbd> &rarr; <kbd>Læsepræferencer</kbd> &rarr; <kbd>Bøger</kbd> &rarr; <kbd>Egne skrifttyper</kbd> for at komme til skærmen <strong>Skrifttyper</strong>. Flere læseskrifttyper er indbygget, med <strong>Literata</strong> som standard. Den skrifttype, du vælger, anvendes i EPUB- og tekstlæseren.</p>
+  <div class="tip"><strong>Tip:</strong> Justér skriftstørrelse og linjeafstand i <kbd>Indstillinger</kbd> &rarr; <kbd>Læsepræferencer</kbd> &rarr; <kbd>Bøger</kbd>.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F453;</span> Tilgængelighedsskrifttyper</h3>
+  <p>To skrifttyper, der er designet til lettere læsning, følger med og er altid tilgængelige: <strong>Atkinson Hyperlegible</strong>, som skærper forskellene mellem ens bogstaver, og <strong>OpenDyslexic</strong>, som er gjort tungere for at reducere ombytning af bogstaver.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F4C2;</span> Egne skrifttyper</h3>
+  <p>Importér dine egne <kbd>.ttf</kbd>- eller <kbd>.otf</kbd>-skrifttypefiler fra skærmen Skrifttyper, og brug dem i EPUB-læseren. Importerede skrifttyper forbliver på din enhed.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F4E5;</span> Download skrifttyper &amp; sprogpakker</h3>
+  <p>Under <strong>Download skrifttyper</strong> er ekstra læseskrifttyper og sprogpakker tilgængelige efter behov til skriftsystemer, som appen ikke leveres med &mdash; kinesisk, japansk &amp; koreansk (CJK), arabisk, devanagari og thai. Pakkerne er store (omkring 41&nbsp;MB stykket), så størrelsen vises, før du downloader. Når de er installeret, fungerer de præcis som importerede skrifttyper.</p>
+  <div class="tip"><strong>Tip:</strong> Hvis en bogs tegn vises som tomme felter, kan du downloade den tilsvarende sprogpakke for at vise dem.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x1F4DC;</span> Skrifttypelicenser</h3>
+  <p>De medfølgende og downloadbare skrifttyper leveres under <strong>SIL Open Font License</strong>. Du kan læse den fulde licens for hver af dem fra dens række på skærmen Skrifttyper.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Tilbage til toppen</a>
+
+<!-- READING DIRECTION -->
+<h2 id="reading-direction">Læseretning</h2>
+<p class="section-desc">Venstre-til-højre, højre-til-venstre, eller den retning, bogen selv er udgivet i.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x21C4;</span> Vælg en retning</h3>
+  <p>Åbn <kbd>Indstillinger</kbd> &rarr; <kbd>Læsepræferencer</kbd> &rarr; <kbd>Bøger</kbd>, og brug indstillingen <strong>Læseretning</strong> under <strong>Læsetilstand</strong>:</p>
+  <ul>
+    <li><strong>Automatisk</strong> (standard) &mdash; følger den retning, bogen selv angiver. Manga og bøger udgivet til at læses højre-til-venstre åbner den rigtige vej rundt, uden at du skal indstille noget.</li>
+    <li><strong>Venstre mod højre</strong> &mdash; standard for de fleste vestlige bøger.</li>
+    <li><strong>Højre mod venstre</strong> &mdash; brug højre-til-venstre for alle bøger.</li>
+  </ul>
+  <p>Du kan også ændre det uden at forlade bogen: tryk midt på siden for at vise værktøjslinjerne, og tryk derefter på <kbd>Aa</kbd>-knappen i den nederste linje. Ændringen træder i kraft med det samme på den side, du læser.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F44B;</span> Hvad der følger retningen</h3>
+  <ul>
+    <li>Hvilken side der bringer dig fremad &mdash; i en bog med højre-til-venstre-læsning bladrer du til næste side ved at trykke eller stryge mod venstre.</li>
+    <li>Sideskiftanimationen, som vender fra den rigtige side.</li>
+    <li>Tekstens layout på siden.</li>
+  </ul>
+  <div class="tip"><strong>Bemærk:</strong> Fremskridtsskyderen fyldes altid fra venstre, fordi den viser, hvor langt du er nået i bogen, og ikke hvor på skærmen siden befinder sig.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x2139;</span> Hvor det gælder</h3>
+  <p>Denne indstilling gælder for EPUB-bøger i sideopdelt tilstand &mdash; den er skjult, mens Fortløbende rulning er slået til. Tegneserier har deres egen indstilling for læserækkefølge (se <a href="#reading-comics">Læsning af tegneserier</a>), og <a href="#fixed-layout">bøger med fast layout</a> følger altid den retning, der er angivet i bogen.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Tilbage til toppen</a>
+
+<!-- VERTICAL WRITING -->
+<h2 id="vertical-writing">Lodret skrift</h2>
+<p class="section-desc">Japanske og kinesiske bøger sat i lodrette spalter.</p>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x2B07;</span> Bøger med lodret skrift</h3>
+  <p>Bøger sat lodret &mdash; japansk tategaki (&#x7E26;&#x66F8;&#x304D;) og traditionel kinesisk (&#x76F4;&#x6392;) &mdash; vises, som de er sat: teksten løber fra top til bund i spalter, der fyldes fra højre mod venstre, og siderne vendes mod venstre, ligesom i manga.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x2699;</span> Skriveretning</h3>
+  <p>Åbn <kbd>Indstillinger</kbd> &rarr; <kbd>Læsepræferencer</kbd> &rarr; <kbd>Bøger</kbd>, og brug indstillingen <strong>Skriveretning</strong>:</p>
+  <ul>
+    <li><strong>Automatisk</strong> (standard) &mdash; følger den enkelte bogs eget layout. En bog, der er sat lodret, vises lodret; alle andre bøger påvirkes ikke.</li>
+    <li><strong>Vandret</strong> &mdash; vis alle bøger vandret, også dem, der er sat lodret.</li>
+    <li><strong>Lodret</strong> &mdash; vis alle bøger i lodrette spalter.</li>
+  </ul>
+  <p>Den samme indstilling findes i læserens egne indstillinger under <kbd>Aa</kbd>-knappen.</p>
+  <div class="tip"><strong>Bemærk:</strong> Ændringer træder i kraft, næste gang du åbner en bog &mdash; bogen, der allerede er åben, beholder det layout, den blev åbnet med.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x2139;</span> Godt at vide</h3>
+  <ul>
+    <li>Bøger med lodret skrift bruger altid sideopdelt tilstand, så Fortløbende rulning og automatisk rulning er ikke tilgængelige for dem.</li>
+    <li>Glideanimationen for sideskift bruges ikke til bøger med lodret skrift &mdash; de bladres i stedet med vendeanimationen.</li>
+    <li>Bogmærker, fremhævninger, indholdsfortegnelsen, søgning i bogen og tekst-til-tale fungerer alt sammen som normalt.</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Tilbage til toppen</a>
+
+<!-- READING COMICS -->
+<h2 id="reading-comics">Læsning af tegneserier</h2>
+<p class="section-desc">Læsning af CBZ, CBR og CB7.</p>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4F1;</span> Læsetilstande</h3>
+  <ul>
+    <li><strong>Venstre-til-højre</strong> &mdash; Standard vestlig siderækkefølge.</li>
+    <li><strong>Højre-til-venstre</strong> &mdash; Manga-læserækkefølge.</li>
+    <li><strong>Webtoon / Lodret rulning</strong> &mdash; Jævn lodret rulning til langstribede tegneserier.</li>
+  </ul>
+  <p>Indstil den globale standard i <kbd>Indstillinger</kbd> &rarr; <kbd>Læsepræferencer</kbd> &rarr; <kbd>Tegneserier</kbd>, eller tilsidesæt per bog fra dens detaljeside.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F50E;</span> Sideskalering</h3>
+  <ul>
+    <li><strong>Tilpas til skærm</strong> &mdash; Hele siden synlig.</li>
+    <li><strong>Tilpas til bredde</strong> &mdash; Fylder bredden, rul lodret om nødvendigt.</li>
+    <li><strong>Tilpas til højde</strong> &mdash; Fylder højden.</li>
+    <li><strong>Original størrelse</strong> &mdash; 1:1 pixelvisning.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F44B;</span> Bevægelser</h3>
+  <ul>
+    <li>Stryg til venstre/højre for at bladre (sideopdelte tilstande).</li>
+    <li>Knib eller dobbelttryk for at zoome, og træk derefter for at bevæge dig rundt. Se <a href="#comic-zoom">Zoom af tegneseriesider</a>.</li>
+    <li>Tryk midt på siden for at vise eller skjule værktøjslinjen.</li>
+    <li>Brug sideskyderen i bunden til hurtigt at springe.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x26A0;</span> Advarsel om mistænkeligt arkiv</h3>
+  <p>Når du åbner et tegneseriearkiv (CBZ, CBR eller CB7), hvis indhold ser usædvanligt stort eller aggressivt komprimeret ud &mdash; det mønster, &ldquo;zip bomb&rdquo;-filer beregnet til at overbelaste hukommelsen bruger &mdash; viser appen en advarsel om <strong>mistænkeligt arkiv</strong>, før noget pakkes ud.</p>
+  <ul>
+    <li>Tryk på <kbd>Annullér</kbd> for at lade filen være uåbnet. Det er det sikre valg for arkiver fra ukendte kilder.</li>
+    <li>Tryk på <kbd>Åbn alligevel</kbd>, hvis du har tillid til filen &mdash; appen springer sikkerhedskontrollen over og indlæser siderne.</li>
+  </ul>
+  <p>EPUB-filer beskyttes lydløst på samme måde under import.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Tilbage til toppen</a>
+
+<!-- COMIC ZOOM -->
+<h2 id="comic-zoom">Zoom af tegneseriesider</h2>
+<p class="section-desc">Kom tættere på illustrationerne &mdash; både i sidevisning og webtoon-rulning.</p>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F50D;</span> Sidevisning</h3>
+  <ul>
+    <li>Knib for at zoome ind, op til tre gange den tilpassede størrelse. Illustrationen følger dine fingre, mens du kniber.</li>
+    <li>Dobbelttryk for at springe til dobbelt størrelse på det sted; dobbelttryk igen for at tilpasse siden til skærmen igen.</li>
+    <li>Træk med én finger for at bevæge dig rundt, mens du er zoomet ind.</li>
+    <li>Kniber du næsten helt ud igen, springer siden pænt tilbage til at passe.</li>
+  </ul>
+  <p>Zoom virker med skaleringsindstillingerne <strong>Tilpas til skærm</strong> og <strong>Tilpas til højde</strong> samt med tosiders opslag. <strong>Tilpas til bredde</strong> og <strong>Original størrelse</strong> viser allerede siden større end skærmen og bruger rulning i stedet &mdash; brug <strong>Vis fuld opløsning</strong> nedenfor for at komme tættere på der.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4F1;</span> Webtoon-rulning</h3>
+  <ul>
+    <li>Knib eller dobbelttryk for at zoome hele stribens visning, op til tre gange den normale størrelse.</li>
+    <li>Rulning virker stadig, mens du er zoomet ind &mdash; træk bare op og ned som normalt.</li>
+    <li>Træk sidelæns for at bevæge dig hen over en zoomet side.</li>
+    <li>Zoomniveauet holdes fast, mens du fortsætter med at rulle, så du kan læse et helt kapitel forstørret. Drej enheden for at vende tilbage til normal størrelse.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x2728;</span> Vis fuld opløsning</h3>
+  <p>Zoom forstørrer siden i den størrelse, den blev klargjort til din skærm. For det skarpeste mulige billede af én side skal du holde den nede og vælge <kbd>Vis fuld opløsning</kbd> &mdash; den side afkodes i arkivets oprindelige opløsning, og du kan knibe langt tættere ind. Dobbelttryk skifter mellem at tilpasse til skærmen og dobbelt størrelse; stryg ned eller tryk på luk-knappen for at gå tilbage.</p>
+  <div class="tip"><strong>Bemærk:</strong> Zoom gemmes ikke. Lukker du bogen, vender den altid tilbage til normal tilpasning.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Tilbage til toppen</a>
+
+<!-- TTS -->
+<h2 id="tts">Tekst-til-tale og CarPlay</h2>
+<p class="section-desc">Lyt til dine bøger læst højt.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F50A;</span> Brug af tekst-til-tale</h3>
+  <p>Åbn en EPUB-, PDF- eller TXT-bog, og tryk på afspilningsknappen i værktøjslinjen. Systemet læser én sætning ad gangen og fremhæver det aktuelle ord.</p>
+  <ul>
+    <li><strong>Hastighed</strong> &mdash; 0,5&times; til 2&times; i betjeningspanelet.</li>
+    <li><strong>Stemme</strong> &mdash; Vælg blandt 100+ systemstemmer i <kbd>Indstillinger</kbd> &rarr; <kbd>Læsepræferencer</kbd> &rarr; <kbd>Tekst-til-tale</kbd>.</li>
+    <li><strong>Spring over</strong> &mdash; Tryk på næste/forrige for at springe sætning eller kapitel.</li>
+  </ul>
+  <div class="tip"><strong>Bemærk:</strong> <a href="#fixed-layout">Bøger med fast layout</a> &mdash; tegneserier og billedbøger, hvor hver side er et fast layout &mdash; har ingen tekst, som appen kan læse højt, så afspilningsknappen vises ikke for dem.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F697;</span> CarPlay</h3>
+  <p>Når du er forbundet til et CarPlay-kompatibelt køretøj, vises appen på bilens skærm med forenklede afspilningskontroller. Afspilning fortsætter i baggrunden &mdash; du behøver ikke holde skærmen tændt.</p>
+  <div class="tip"><strong>Tip:</strong> Aktivér <kbd>Baggrundslyd</kbd><span class="badge badge-premium">Premium</span> i tekst-til-tale-indstillingerne for at fortsætte afspilning, når appen er i baggrunden, selv uden CarPlay.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Tilbage til toppen</a>
+
+<!-- AI UPSCALING -->
+<h2 id="upscaling">AI-opskalering af tegneserier</h2>
+<p class="section-desc">Forbedr tegneseriesider med lav opløsning direkte på enheden.<span class="badge badge-premium">Premium</span></p>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x2728;</span> Hvad det gør</h3>
+  <p>Bruger en maskinlæringsmodel på enheden til at opskalere tegneseriesider under en opløsningstærskel. Resultatet er skarpere linjer og færre synlige kompressionsartefakter &mdash; særligt nyttigt til ældre eller lavkvalitetsscans.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x2699;</span> Opsætning</h3>
+  <ol class="steps">
+    <li>Gå til <kbd>Indstillinger</kbd> &rarr; <kbd>Læsepræferencer</kbd> &rarr; <kbd>Tegneserier</kbd> &rarr; <kbd>AI-opskalering</kbd>.</li>
+    <li>Slå det til.</li>
+    <li>Justér <strong>Opløsningstærskel</strong> &mdash; sider under denne pixelbredde opskaleres (standard: 1500 px).</li>
+    <li>Indstil <strong>Forhåndsindlæsningsvindue</strong> for at styre, hvor mange kommende sider der behandles i baggrunden.</li>
+    <li>Vælg et <strong>Støjreduktionsniveau</strong> (Automatisk er normalt bedst).</li>
+  </ol>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4BE;</span> Cache og lagring</h3>
+  <p>Opskalerede billeder caches, så de ikke skal behandles igen. Vælg, hvor længe cachen beholdes (7&ndash;90 dage eller aldrig udløber), og ryd den når som helst fra indstillingerne.</p>
+  <div class="tip"><strong>Tip:</strong> Et lille indikator-badge vises på opskalerede sider. Du kan slå det fra i indstillingerne, hvis du foretrækker det.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Tilbage til toppen</a>
+
+<!-- HIDDEN MODE -->
+<h2 id="hidden">Skjulte bøger</h2>
+<p class="section-desc">Hold visse bøger private.<span class="badge badge-premium">Premium</span></p>
+
+<div class="card">
+  <h3><span class="icon icon-indigo">&#x1F441;</span> Skjul bøger</h3>
+  <ol class="steps">
+    <li>Åbn en bogs detaljeside, og tryk på menuen (&hellip;).</li>
+    <li>Vælg <kbd>Skjul bog</kbd>.</li>
+    <li>Bogen forsvinder fra den normale biblioteksvisning.</li>
+  </ol>
+  <p>For at skjule mange bøger på én gang, brug valgmodus.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F513;</span> Vis skjulte bøger</h3>
+  <p>Træk ned i biblioteket for at aktivere <strong>Skjult tilstand</strong>. Alle dine bøger &mdash; både skjulte og synlige &mdash; vises nu. Træk igen eller forlad appen for at afslutte skjult tilstand.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F512;</span> Privatlivsindstillinger</h3>
+  <p>Når skjult tilstand er aktiv, gå til <kbd>Indstillinger</kbd> &rarr; <kbd>Skjult tilstand</kbd> for at vælge, hvad der sker, når du forlader appen:</p>
+  <ul>
+    <li><strong>Automatisk afslutning</strong> (standard) &mdash; Skjult tilstand slås automatisk fra. Hurtigt og enkelt.</li>
+    <li><strong>Kræv Face ID / Touch ID</strong> &mdash; Skjult tilstand forbliver aktiv, men kræver biometrisk godkendelse, når du vender tilbage. Mere sikkert.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x21A9;</span> Vis bøger igen</h3>
+  <p>I skjult tilstand kan du åbne en skjult bogs detaljer og vælge <kbd>Vis bog</kbd>, eller bruge valgmodus til at vise flere på én gang.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x2601;</span> Synkronisering af skjulte bøger</h3>
+  <p>I skjult tilstand, gå til <kbd>Indstillinger</kbd> &rarr; <kbd>Skjult tilstand</kbd> og slå <kbd>Synkronisér skjulte bøger med iCloud</kbd> til:</p>
+  <ul>
+    <li><strong>Fra</strong> (standard) &mdash; skjulte bøger forbliver kun på denne enhed. Skjules en bog, fjernes den også fra iCloud.</li>
+    <li><strong>Til</strong> &mdash; skjulte bøger synkroniseres via iCloud, men forbliver skjulte på alle enheder, du er logget ind på.</li>
+  </ul>
+  <p>Slår du kontakten fra, mens du allerede har skjulte bøger i iCloud, bliver du spurgt, hvad der skal ske med dem:</p>
+  <ul>
+    <li><strong>Behold på alle enheder</strong> &mdash; dine andre enheder beholder deres synkroniserede kopier; denne enhed beholder en privat kopi kun lokalt.</li>
+    <li><strong>Fjern helt fra iCloud</strong> &mdash; fjerner bøgerne fra iCloud; hver anden enhed beholder sin egen private kopi i sit skjulte bibliotek.</li>
+  </ul>
+  <div class="tip"><strong>Bemærk:</strong> Hvis en af dine andre enheder fjerner en skjult bog fra iCloud, beholder denne enhed automatisk sin egen private kopi i det skjulte bibliotek &mdash; så længe bogens fil allerede var downloadet der.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F5D1;</span> Slet skjulte bøger permanent</h3>
+  <p>I skjult tilstand, gå til <kbd>Indstillinger</kbd> &rarr; <kbd>Skjult tilstand</kbd> og vælg <kbd>Slet skjulte bøger permanent</kbd> for at fjerne alle skjulte bøger fra denne enhed, fra iCloud og fra dine andre enheder. Skriv <kbd>DELETE</kbd> for at bekræfte.</p>
+  <div class="tip"><strong>Advarsel:</strong> Dette kan ikke fortrydes. Enheder, der er offline på det tidspunkt, beholder deres lokale kopier, indtil de synkroniserer næste gang.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Tilbage til toppen</a>
+
+<!-- BOOKMARKS, HIGHLIGHTS, TAGS -->
+<h2 id="bookmarks">Bogmærker, fremhævninger og tags</h2>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F516;</span> Bogmærker</h3>
+  <p>Tryk på bogmærkeikonet i læserens værktøjslinje for at bogmærke den aktuelle side. Tilføj en valgfri note. Se alle bogmærker for en bog fra dens detaljeside.</p>
+  <div class="tip"><strong>Bemærk:</strong> Kun bogmærker, du opretter manuelt, vises her. Positioner, som appen gemmer automatisk, når du lukker en bog, holdes adskilt i <a href="#history">Læsehistorik</a>, så de ikke trænger dine egne bogmærker væk.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F58D;</span> Fremhævninger<span class="badge badge-premium">Premium</span></h3>
+  <p>I EPUB-filer kan du markere tekst for at fremhæve den. Vælg mellem fem farver (gul, pink, grøn, blå, orange), og tilføj noter. Alle fremhævninger er listet på bogens detaljeside.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F3F7;</span> Tags</h3>
+  <p>Tilføj tags til enhver bog fra dens detaljeside. Tags er søgbare og kan bruges som filtre i biblioteket. Administrér alle tags fra <kbd>Indstillinger</kbd> &rarr; <kbd>Tags</kbd>.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Tilbage til toppen</a>
+
+<!-- READING HISTORY -->
+<h2 id="history">Læsehistorik</h2>
+<p class="section-desc">Spring tilbage til enhver position, du for nylig har været.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F552;</span> Automatiske lagringer</h3>
+  <p>Hver gang du lukker en bog eller sender appen i baggrunden, gemmes din aktuelle position som en historikpost &mdash; ingen grund til at huske at bogmærke. Dette virker i alle læsere: EPUB, PDF, TXT/RTF og tegneserier.</p>
+  <ul>
+    <li>Op til <strong>50</strong> nylige positioner gemmes pr. bog. Ældre poster fjernes automatisk, når nye kommer ind.</li>
+    <li>Hvis du lukker bogen igen samme sted inden for nogle få minutter, opdateres den eksisterende post i stedet for at oprette en dublet.</li>
+    <li>Automatisk gemte positioner holdes adskilt fra din liste over manuelle bogmærker, så de ikke blandes med dem, du har sat med vilje.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4D6;</span> Historik inde i en bog</h3>
+  <p>Mens du læser, tryk på menuen (&hellip;) øverst til højre og vælg <kbd>Læsehistorik</kbd>. Du ser en liste over dine nylige positioner i den bog, nyeste først, med kapitel- eller sidenavn og hvor lang tid siden hver enkelt blev registreret.</p>
+  <ul>
+    <li>Tryk på en post for at hoppe direkte til det sted.</li>
+    <li>Stryg til venstre på en post for at fjerne den.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F4DA;</span> Historik på tværs af biblioteket</h3>
+  <p>Fra biblioteket trykker du på menuen (&hellip;) i den øverste værktøjslinje og vælger <kbd>Læsehistorik</kbd> for at se alle bøger, du for nylig har åbnet, grupperet efter dag. Tryk på en række for at åbne bogen lige der, hvor du slap.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Tilbage til toppen</a>
+
+<!-- AUTHOR & TAG BROWSING -->
+<h2 id="search">Gennemse forfatter og tags</h2>
+<p class="section-desc">Find bøger efter forfatter eller tag fra hvor som helst i appen.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F464;</span> Forfattere</h3>
+  <p>Gå til <kbd>Indstillinger</kbd> &rarr; <kbd>Forfattere</kbd> for at se alle forfattere i dit bibliotek med antal bøger. Tryk på en forfatter for at søge i biblioteket efter alle deres bøger.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F3F7;</span> Tagsøgning</h3>
+  <p>Under <kbd>Indstillinger</kbd> &rarr; <kbd>Tags</kbd> trykker du på et tag for at søge i biblioteket efter bøger med det tag. Hold nede for at omdøbe eller slette.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F50D;</span> Hurtig søgning fra sammenhængen</h3>
+  <ul>
+    <li>Hold en bog nede i biblioteket &rarr; <kbd>Find bøger af [Forfatter]</kbd></li>
+    <li>På en bogs detaljeside kan du holde forfatternavnet eller et tag nede for at søge</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Tilbage til toppen</a>
+
+<!-- METADATA -->
+<h2 id="metadata">Metadata &amp; ComicInfo.xml</h2>
+<p class="section-desc">Se og rediger metadata for bøger.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x270F;</span> Metadata-editor</h3>
+  <p>Fra en bogs detaljeside trykker du på menuen (&hellip;) og vælger <kbd>Rediger metadata</kbd> for at ændre titel, forfatter, serie, beskrivelse og andre felter. Du kan også udtrække metadata fra den oprindelige fil igen.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4CB;</span> ComicInfo.xml</h3>
+  <p>Tegneseriearkiver (CBZ, CBR, CB7), der indeholder en <code>ComicInfo.xml</code>-fil, får deres metadata udtrukket automatisk ved import &mdash; herunder titel, forfatter, serie, nummer, resumé, forlag, genre og tags.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Tilbage til toppen</a>
+
+<!-- ICLOUD -->
+<h2 id="icloud">iCloud-synkronisering</h2>
+<p class="section-desc">Hold dit bibliotek synkroniseret på tværs af enheder.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x2601;</span> Aktivér synkronisering</h3>
+  <ol class="steps">
+    <li>Gå til <kbd>Indstillinger</kbd> &rarr; <kbd>iCloud-synkronisering</kbd>.</li>
+    <li>Slå <kbd>Synkronisér bibliotek med iCloud</kbd> til.</li>
+    <li>Synkroniseringen træder i kraft ved næste app-start.</li>
+  </ol>
+  <p>Metadata, læsefremskridt, bogmærker, fremhævninger og hylder synkroniseres på tværs af alle enheder logget ind med den samme iCloud-konto.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F4CA;</span> Synkroniseringsstatus</h3>
+  <p><kbd>Indstillinger</kbd> &rarr; <kbd>iCloud-synkronisering</kbd> viser et statuskort for dine bogfiler:</p>
+  <ul>
+    <li>En overskrift &mdash; <strong>Opdateret</strong>, <strong>Synkroniserer&hellip;</strong> (med et antal) eller <strong>Ikke logget ind</strong>.</li>
+    <li>En bjælke, der viser, hvor stor en del af dit biblioteks filer der er i iCloud.</li>
+    <li>En opdeling &mdash; <strong>Synkroniseret</strong> (med den samlede størrelse), <strong>Kun i iCloud</strong> (endnu ikke downloadet til denne enhed) og <strong>I gang</strong>.</li>
+  </ul>
+  <div class="tip"><strong>Bemærk:</strong> Dette kort sporer kun bog<em>filer</em>. Læsefremskridt, bogmærker, fremhævninger og hylder synkroniseres separat og automatisk, uanset filstatus.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x2601;</span> Cover-badges</h3>
+  <p>Bogomslag viser et lille sky-ikon i nederste højre hjørne for at angive filens synkroniseringsstatus:</p>
+  <ul>
+    <li><strong>Sky-ikon</strong> &mdash; filen findes kun i iCloud. Åbn bogens side for at downloade den.</li>
+    <li><strong>Op-/ned-pile</strong> &mdash; filen uploades eller downloades i øjeblikket.</li>
+    <li><strong>Intet ikon</strong> &mdash; filen findes allerede på denne enhed.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4E5;</span> Automatisk download</h3>
+  <p>Vælg den maksimale filstørrelse for automatiske downloads. Større bøger forbliver i skyen, indtil du åbner dem. Justér grænsen i iCloud-indstillingerne.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Tilbage til toppen</a>
+
+<!-- STATS -->
+<h2 id="stats">Læsestatistik</h2>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F4CA;</span> Din læseaktivitet</h3>
+  <p>Åbn <kbd>Indstillinger</kbd> &rarr; <kbd>Biblioteksstatistik</kbd> for at se:</p>
+  <ul>
+    <li>Samlet antal bøger, læste sider og læsetid.</li>
+    <li>Diagram over daglig læseaktivitet.</li>
+    <li>Bøger efter format og læsestatus.</li>
+    <li>Aktivitetsopdeling per bog.</li>
+  </ul>
+  <div class="tip"><strong>Bemærk:</strong> Statistikken respekterer skjult tilstand &mdash; når skjult tilstand er slået fra, udelukkes statistik for skjulte bøger.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Tilbage til toppen</a>
+
+<!-- WEBDAV & OPDS -->
+<h2 id="webdav">WebDAV og OPDS</h2>
+<p class="section-desc">Gennemse og download fra fjernservere og kataloger.</p>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F5C4;</span> WebDAV</h3>
+  <p>Opret forbindelse til en NAS, Nextcloud eller Calibre-server for at gennemse mapper og downloade bøger.</p>
+  <ol class="steps">
+    <li>Gå til <kbd>Indstillinger</kbd> &rarr; <kbd>Importér bøger</kbd> &rarr; <kbd>WebDAV</kbd>.</li>
+    <li>Tryk på <kbd>Tilføj server</kbd>, og indtast URL'en.</li>
+    <li>Tilføj brugernavn og adgangskode, hvis påkrævet.</li>
+    <li>Tryk på <kbd>Test forbindelse</kbd>, og gem.</li>
+  </ol>
+  <div class="tip"><strong>Selv-signerede certifikater:</strong> Hvis din server bruger et selv-signeret certifikat, kan du slå <kbd>Tillad utroværdige certifikater</kbd> til. Appen beder dig først bekræfte &mdash; dette deaktiverer TLS-validering, så alle på dit netværk kan udgive sig for at være serveren. Slå det kun til for en server, du selv har kontrol over.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4DA;</span> OPDS-kataloger</h3>
+  <p>OPDS er en åben standard for bogkataloger. Tilføj offentlige kataloger (Project Gutenberg, Standard Ebooks m.m.) eller din egen private server.</p>
+  <ol class="steps">
+    <li>Gå til <kbd>Indstillinger</kbd> &rarr; <kbd>Importér bøger</kbd> &rarr; <kbd>OPDS</kbd>.</li>
+    <li>Tryk på <kbd>Tilføj katalog</kbd>, og indtast feed-URL'en.</li>
+    <li>Gennemse kategorier, og download bøger til dit bibliotek.</li>
+  </ol>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Tilbage til toppen</a>
+
+<!-- RESUME -->
+<h2 id="resume">Genoptag ved start</h2>
+<p class="section-desc">Fortsæt automatisk, hvor du slap.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x25B6;</span> Opsætning</h3>
+  <p>Gå til <kbd>Indstillinger</kbd> &rarr; <kbd>Generelt</kbd>, og slå <kbd>Genoptag seneste bog ved start</kbd> til. Næste gang du åbner appen, springer den direkte til den bog og side, du sidst læste.</p>
+  <div class="tip"><strong>Skjulte bøger:</strong> Hvis den sidst læste bog er skjult, beder appen om Face ID / Touch ID, inden den genoptager. Aktivér <kbd>Genoptag skjult bog efter godkendelse</kbd> i indstillingerne for skjult tilstand for at tillade dette.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Tilbage til toppen</a>
+
+<!-- FORMATS -->
+<h2 id="formats">Understøttede formater</h2>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4D6;</span> Bøger</h3>
+  <div class="formats-grid">
+    <div class="format-tag">EPUB</div>
+    <div class="format-tag">PDF</div>
+    <div class="format-tag">TXT</div>
+    <div class="format-tag">RTF</div>
+  </div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4F1;</span> Tegneserier</h3>
+  <div class="formats-grid">
+    <div class="format-tag">CBZ</div>
+    <div class="format-tag">CBR</div>
+    <div class="format-tag">CB7</div>
+  </div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Tilbage til toppen</a>
+
+</body>
+</html>

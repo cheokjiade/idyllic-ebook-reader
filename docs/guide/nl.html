@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Gebruikershandleiding</title>
+<link rel="stylesheet" href="UserGuideStyle.css">
+<!-- USER-GUIDE-NAV-STYLE:START -->
+<style>
+.guide-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 14px;
+  padding: 10px 14px;
+  margin: 0 0 16px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  font-size: 13px;
+}
+.guide-nav-home {
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.guide-nav-arrow {
+  display: inline-block;
+}
+[dir="rtl"] .guide-nav-arrow {
+  transform: scaleX(-1);
+}
+.guide-nav-langs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 10px;
+  color: var(--secondary);
+}
+.guide-nav-globe {
+  font-size: 13px;
+}
+.guide-nav-langs a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.guide-nav-langs a:hover,
+.guide-nav-langs a:focus-visible {
+  text-decoration: underline;
+}
+.guide-nav-current {
+  font-weight: 700;
+  color: var(--text);
+}
+</style>
+<!-- USER-GUIDE-NAV-STYLE:END -->
+</head>
+<body id="top">
+<!-- USER-GUIDE-NAV:START -->
+<nav class="guide-nav" aria-label="User Guide language switcher">
+  <a class="guide-nav-home" href="../index.html"><span class="guide-nav-arrow" aria-hidden="true">&larr;</span> Idyllic</a>
+  <span class="guide-nav-langs">
+    <span class="guide-nav-globe" aria-hidden="true">&#x1F310;</span>
+      <a href="index.html">English</a>
+      <a href="ar.html">العربية</a>
+      <a href="cs.html">Čeština</a>
+      <a href="da.html">Dansk</a>
+      <a href="de.html">Deutsch</a>
+      <a href="es.html">Español</a>
+      <a href="fi.html">Suomi</a>
+      <a href="fr.html">Français</a>
+      <a href="he.html">עברית</a>
+      <a href="hi.html">हिन्दी</a>
+      <a href="id.html">Indonesia</a>
+      <a href="it.html">Italiano</a>
+      <a href="ja.html">日本語</a>
+      <a href="ko.html">한국어</a>
+      <a href="ms.html">Bahasa Melayu</a>
+      <a href="nb.html">Norsk bokmål</a>
+      <span class="guide-nav-current">Nederlands</span>
+      <a href="pl.html">Polski</a>
+      <a href="pt-BR.html">Português (Brasil)</a>
+      <a href="ru.html">Русский</a>
+      <a href="sv.html">Svenska</a>
+      <a href="th.html">ไทย</a>
+      <a href="tr.html">Türkçe</a>
+      <a href="uk.html">Українська</a>
+      <a href="vi.html">Tiếng Việt</a>
+      <a href="zh-Hans.html">简体中文</a>
+      <a href="zh-Hant.html">繁體中文</a>
+  </span>
+</nav>
+<!-- USER-GUIDE-NAV:END -->
+
+<h1>Gebruikershandleiding</h1>
+<p class="subtitle">Alles wat je nodig hebt om het meeste uit je leeservaring te halen.</p>
+
+<!-- TABLE OF CONTENTS -->
+<div class="card toc">
+  <a href="#importing">Boeken importeren</a>
+  <a href="#wifi">WiFi-overdracht</a>
+  <a href="#library">Bibliotheek &amp; organisatie</a>
+  <a href="#shelves">Planken &amp; mappen</a>
+  <a href="#reading-books">Boeken lezen</a>
+  <a href="#fixed-layout">Boeken met vaste lay-out</a>
+  <a href="#in-book-search">Zoeken in het boek</a>
+  <a href="#image-gallery">Afbeeldingengalerij</a>
+  <a href="#fonts">Leeslettertypen</a>
+  <a href="#reading-direction">Leesrichting</a>
+  <a href="#vertical-writing">Verticaal schrijven</a>
+  <a href="#reading-comics">Strips lezen</a>
+  <a href="#comic-zoom">Strippagina's zoomen</a>
+  <a href="#tts">Tekst-naar-spraak &amp; CarPlay</a>
+  <a href="#upscaling">AI-stripopschaling</a>
+  <a href="#hidden">Verborgen boeken</a>
+  <a href="#bookmarks">Bladwijzers, markeringen &amp; tags</a>
+  <a href="#history">Leesgeschiedenis</a>
+  <a href="#search">Auteur- &amp; Tagoverzicht</a>
+  <a href="#metadata">Metadata &amp; ComicInfo.xml</a>
+  <a href="#icloud">iCloud-synchronisatie</a>
+  <a href="#stats">Leesstatistieken</a>
+  <a href="#webdav">WebDAV &amp; OPDS</a>
+  <a href="#resume">Hervatten bij opstart</a>
+  <a href="#formats">Ondersteunde formaten</a>
+</div>
+
+<!-- IMPORTING -->
+<h2 id="importing">Boeken importeren</h2>
+<p class="section-desc">Verschillende manieren om boeken aan je bibliotheek toe te voegen.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4C1;</span> Vanuit de Bestanden-app</h3>
+  <p>Tik op <kbd>Instellingen</kbd> &rarr; <kbd>Boeken importeren</kbd> en selecteer bestanden van je apparaat, iCloud Drive of een gekoppelde clouddienst. Je kunt ook slepen en neerzetten gebruiken op iPad.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F310;</span> WiFi-overdracht</h3>
+  <p>Upload boeken vanaf elke computer of telefoon op je WiFi-netwerk. Zie het speciale gedeelte hieronder voor meer informatie.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F5C2;</span> WebDAV &amp; OPDS</h3>
+  <p>Maak verbinding met een NAS, Calibre-server of openbare boekcatalogus om direct boeken te bladeren en te downloaden. Zie hieronder.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Terug naar boven</a>
+
+<!-- WIFI TRANSFER -->
+<h2 id="wifi">WiFi-overdracht</h2>
+<p class="section-desc">Upload boeken vanaf elk apparaat op je lokale netwerk.</p>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F4F6;</span> Hoe het werkt</h3>
+  <p>De app draait een kleine webserver op je apparaat. Elke computer of telefoon op hetzelfde WiFi-netwerk kan de uploadpagina openen in een browser.</p>
+  <ol class="steps">
+    <li>Ga naar <kbd>Instellingen</kbd> &rarr; <kbd>Boeken importeren</kbd> &rarr; <kbd>WiFi-overdracht</kbd>.</li>
+    <li>Tik op <kbd>Server starten</kbd>. Een adres zoals <kbd>http://192.168.1.42:8080</kbd> verschijnt.</li>
+    <li>Open dat adres in een willekeurige webbrowser op hetzelfde netwerk.</li>
+    <li>Sleep bestanden naar de pagina of klik om te bladeren &mdash; kies eventueel een doelmap.</li>
+    <li>Ge&iuml;mporteerde boeken verschijnen direct in je bibliotheek.</li>
+    <li>Tik op <kbd>Server stoppen</kbd> als je klaar bent.</li>
+  </ol>
+  <div class="tip"><strong>Tip:</strong> Je apparaat blijft wakker zolang de server draait, zodat overdrachten niet worden onderbroken.</div>
+  <div class="tip"><strong>Upload mislukt?</strong> Bij elk mislukt bestand staat de reden direct in de rij. Als de WiFi-verbinding wegvalt, tik je in de rij op <kbd>&#x21BB; Opnieuw proberen</kbd> om het bestand opnieuw te versturen. Bij blijvende problemen (zoals een niet-ondersteund bestandsformaat) wordt geen knop Opnieuw proberen getoond.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Terug naar boven</a>
+
+<!-- LIBRARY -->
+<h2 id="library">Bibliotheek &amp; organisatie</h2>
+<p class="section-desc">Vind, sorteer en organiseer je boeken.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F50D;</span> Zoeken</h3>
+  <p>Tik op de <kbd>Zoeken</kbd>-pil onderaan de bibliotheek om een zoekveld uit te klappen, en tik daarna op <kbd>Gereed</kbd> om het te sluiten. Er wordt gezocht op titel, auteur, tags, reeks, uitgever en beschrijving. Zoeken op auteur of tag via het contextmenu van een boek (zie <a href="#search">Auteur- &amp; Tagoverzicht</a>) vult hetzelfde zoekveld in.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x2195;</span> Sorteren &amp; filteren</h3>
+  <p>Tik op de weergaveopties-knop (rechtsboven) om te kiezen:</p>
+  <ul>
+    <li><strong>Weergave</strong> &mdash; Raster, Gedetailleerd, Compact, Minimalistisch, Tabel of Tijdschrift</li>
+    <li><strong>Sorteren</strong> &mdash; Titel, Auteur, Laatst gelezen, Datum toegevoegd, Voortgang, Bestandsgrootte, Reeks</li>
+    <li><strong>Weergave-opties</strong> &mdash; Zet boeken in uitvoering bovenaan en voltooide boeken onderaan</li>
+    <li><strong>Filter</strong> &mdash; Op formaat, tag of auteur</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x2714;</span> Selectiemodus</h3>
+  <p>Houd een boek ingedrukt of tik op <kbd>Selecteren</kbd> om de selectiemodus te openen. Je kunt dan meerdere boeken tegelijk verplaatsen, verwijderen, verbergen of zichtbaar maken.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4CB;</span> Duplicaten opschonen</h3>
+  <p>Ga naar <strong>Instellingen &gt; Bibliotheek &gt; Bibliotheekonderhoud &gt; Duplicaten opschonen</strong> om boeken met dezelfde titel, auteur en formaat te vinden. Voor elke duplicaatgroep:</p>
+  <ul>
+    <li>De <strong>nieuwste versie</strong> is gemarkeerd met een groene KEEP-badge</li>
+    <li>Selecteer oudere exemplaren met de selectievakjes (of <strong>Alles selecteren</strong>)</li>
+    <li><strong>Verwijderen</strong> &mdash; verwijdert de geselecteerde oudere exemplaren</li>
+    <li><strong>Gegevens kopiëren &amp; verwijderen</strong> &mdash; verplaatst bladwijzers, markeringen, tags, leesvoortgang en planktoewijzing naar de nieuwste versie voordat ze worden verwijderd</li>
+    <li>Schakel <strong>"Nieuw boek naar de plank &amp; verborgen status van het oude boek verplaatsen"</strong> in om de nieuwe versie op dezelfde locatie in de bibliotheek te houden</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Terug naar boven</a>
+
+<!-- SHELVES -->
+<h2 id="shelves">Planken &amp; mappen</h2>
+<p class="section-desc">Organiseer boeken in geneste mappen.</p>
+
+<div class="card">
+  <h3><span class="icon icon-indigo">&#x1F4C2;</span> Planken aanmaken</h3>
+  <ol class="steps">
+    <li>Tik op <kbd>Nieuwe plank</kbd> bovenaan je bibliotheek.</li>
+    <li>Voer een naam in en kies een pictogram en kleur.</li>
+    <li>Kies optioneel een bovenliggende plank om een submap aan te maken.</li>
+  </ol>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x21C4;</span> Boeken verplaatsen</h3>
+  <p>Tik op de detailpagina van een boek op het menu (&hellip;) en kies <kbd>Verplaats naar plank</kbd>. In de selectiemodus kun je veel boeken tegelijk verplaatsen.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Terug naar boven</a>
+
+<!-- READING BOOKS -->
+<h2 id="reading-books">Boeken lezen</h2>
+<p class="section-desc">Leesmodi voor EPUB, PDF, TXT en RTF.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4D6;</span> EPUB</h3>
+  <p>EPUB-bestanden openen in een volwaardige lezer aangedreven door Readium. Tik op de linker- of rechterrand om pagina's om te slaan, of veeg.</p>
+  <ul>
+    <li><strong>Gepagineerd</strong> &mdash; traditioneel pagina voor pagina lezen.</li>
+    <li><strong>Doorlopend scrollen</strong><span class="badge badge-premium">Premium</span> &mdash; scroll natuurlijk door de tekst, zonder pagina-einden.</li>
+    <li><strong>Leesrichting</strong> &mdash; volg het boek automatisch, of stel zelf van links naar rechts of van rechts naar links in. Zie <a href="#reading-direction">Leesrichting</a>.</li>
+    <li><strong>Boeken met vaste lay-out</strong> &mdash; strips, prentenboeken en andere pagina-voor-pagina EPUB's openen in een lezer die daarvoor is gebouwd. Zie <a href="#fixed-layout">Boeken met vaste lay-out</a>.</li>
+    <li><strong>Zoeken in het boek</strong><span class="badge badge-premium">Premium</span> &mdash; doorzoek het hele boek op elk woord of elke zin. Zie <a href="#in-book-search">Zoeken in het boek</a>.</li>
+    <li><strong>Afbeeldingengalerij</strong><span class="badge badge-premium">Premium</span> &mdash; blader vanaf de detailpagina van het boek door alle afbeeldingen in de EPUB. Zie <a href="#image-gallery">Afbeeldingengalerij</a>.</li>
+  </ul>
+  <div class="tip"><strong>Tip:</strong> Pas lettergrootte, regelafstand en themakleuren aan in <kbd>Instellingen</kbd> &rarr; <kbd>Leesvoorkeuren</kbd> &rarr; <kbd>Boeken</kbd>.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F4C4;</span> PDF</h3>
+  <p>PDF's worden native weergegeven. Knijp om te zoomen, veeg om pagina's om te slaan. De app kan wachtwoorden onthouden voor beveiligde PDF's.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x1F4DD;</span> TXT &amp; RTF</h3>
+  <p>Platte tekst- en RTF-bestanden openen in een eenvoudige tekstlezer met aanpasbare opmaak.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Terug naar boven</a>
+
+<!-- FIXED LAYOUT -->
+<h2 id="fixed-layout">Boeken met vaste lay-out</h2>
+<p class="section-desc">EPUB's waarvan de pagina's een vast ontwerp hebben &mdash; strips, prentenboeken en sterk geïllustreerde titels.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4D0;</span> Wat het is</h3>
+  <p>Sommige EPUB's zijn pagina voor pagina opgemaakt in plaats van als doorlopende tekst: elke pagina is een vaste rangschikking van woorden en illustraties. De app herkent deze boeken zelf en opent ze in een lezer die daarvoor is gebouwd &mdash; elke pagina wordt geschaald om op je scherm te passen en gecentreerd, met de ruimte eromheen gevuld met de achtergrondkleur van je leesthema.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F44B;</span> Lezen &amp; zoomen</h3>
+  <ul>
+    <li>Tik op de linker- of rechterkant van het scherm om pagina's om te slaan, of veeg. Tik in het midden om de werkbalken te tonen of te verbergen.</li>
+    <li>Knijp om in te zoomen &mdash; tot drie keer de passende grootte &mdash; en sleep om over de pagina te bewegen.</li>
+    <li>Dubbeltik om op die plek in te zoomen; dubbeltik opnieuw om de pagina weer op het scherm te laten passen.</li>
+    <li>Boeken die zijn uitgegeven om van rechts naar links te lezen, slaan pagina's automatisch op die manier om.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4D6;</span> Dubbele pagina's</h3>
+  <p>Draai het apparaat naar liggend en tegenoverliggende pagina's verschijnen naast elkaar. De app volgt de spreidingshints in het boek zelf, zodat een omslag of een pagina-vullende illustratie toch een eigen pagina krijgt. Draai terug naar staand voor &eacute;&eacute;n pagina tegelijk.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x2139;</span> Wat beschikbaar is</h3>
+  <p>De inhoudsopgave, bladwijzers, de voortgangsschuif, leesgeschiedenis en verdergaan waar je gebleven was werken allemaal zoals gebruikelijk.</p>
+  <p>Omdat elke pagina een vast ontwerp is in plaats van tekst die de app opnieuw kan laten meestromen, ontbreken enkele bedieningselementen voor deze boeken: doorlopend scrollen en automatisch scrollen, de lettertype- en weergave-instellingen, tekst-naar-spraak, zoeken in het boek, en tekstselectie of markeren.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Terug naar boven</a>
+
+<!-- IN-BOOK SEARCH -->
+<h2 id="in-book-search">Zoeken in het boek</h2>
+<p class="section-desc">Vind elk woord of elke zin in het boek dat je leest.<span class="badge badge-premium">Premium</span></p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F50D;</span> Een zoekopdracht starten</h3>
+  <ol class="steps">
+    <li>Tik op het midden van de pagina om de werkbalken te tonen.</li>
+    <li>Tik op het vergrootglas rechts in de onderste balk.</li>
+    <li>Typ minstens twee tekens en druk op <kbd>Zoeken</kbd> op het toetsenbord.</li>
+  </ol>
+  <p>Het hele boek wordt doorzocht &mdash; elk hoofdstuk, niet alleen het hoofdstuk op het scherm &mdash; en er wordt geen onderscheid gemaakt tussen hoofdletters en kleine letters. Zoeken is beschikbaar in de EPUB- en TXT/RTF-lezer.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4C4;</span> Resultaten bekijken</h3>
+  <p>Resultaten verschijnen onder de zoekbalk, gegroepeerd per hoofdstuk. Elke rij toont de overeenkomst vetgedrukt in een fragment van de omringende tekst. Tik op een resultaat om er direct naartoe te springen &mdash; elke overeenkomst wordt in het boek geel gemarkeerd, en de huidige in een sterker amber.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x2195;</span> Tussen overeenkomsten springen</h3>
+  <p>Zodra je een resultaat kiest, klapt de zoekbalk in tot een compacte strook met een teller die toont waar je bent tussen de overeenkomsten.</p>
+  <ul>
+    <li>Gebruik de omhoog/omlaag-pijlen om naar de vorige of volgende overeenkomst te gaan.</li>
+    <li>Tik op de lijstknop om de volledige resultatenlijst opnieuw te openen.</li>
+    <li>Tik op <kbd>&times;</kbd> om het zoeken te be&euml;indigen &mdash; alle markeringen worden verwijderd.</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Terug naar boven</a>
+
+<!-- IMAGE GALLERY -->
+<h2 id="image-gallery">Afbeeldingengalerij</h2>
+<p class="section-desc">Blader door alle illustraties in een EPUB in een galerij waar je doorheen kunt vegen.<span class="badge badge-premium">Premium</span></p>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F5BC;</span> De galerij openen</h3>
+  <p>Open de detailpagina van een EPUB-boek en tik op de fotostapel-knop <span class="icon">&#x1F5BC;</span> in de werkbalk rechtsboven. De app haalt alle afbeeldingen uit het boek en toont daarbij een voortgangsbalk &mdash; tik op de <kbd>&times;</kbd>-knop linksboven om op elk moment terug te gaan. De galerij is alleen beschikbaar voor EPUB-boeken.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4DA;</span> Wat je te zien krijgt</h3>
+  <p>Afbeeldingen verschijnen &eacute;&eacute;n per pagina in leesvolgorde &mdash; de volgorde waarin ze in de hoofdstukken van het boek voorkomen &mdash; inclusief het omslag. Kleine afbeeldingen zoals pictogrammen en decoraties worden overgeslagen: alles wat kleiner is dan de minimumgrootte (standaard 100&nbsp;px) blijft weg. Pas de drempel aan in <kbd>Instellingen</kbd> &rarr; <kbd>Leesvoorkeuren</kbd> &rarr; <kbd>Boeken</kbd> &rarr; <kbd>EPUB-galerij</kbd>. Als geen enkele afbeelding in aanmerking komt, meldt de galerij dat er geen zijn gevonden.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F446;</span> Afbeeldingen bekijken &amp; opslaan</h3>
+  <ul>
+    <li>Veeg om tussen afbeeldingen te wisselen, of gebruik de paginaschuif onderaan om snel te springen.</li>
+    <li>Knijp of dubbeltik om te zoomen, sleep dan om rond te bewegen &mdash; de galerij gebruikt de striplezer, dus zoomt op precies dezelfde manier. Zie <a href="#comic-zoom">Strippagina's zoomen</a>.</li>
+    <li>Tik op het midden van het scherm om de bedieningselementen te tonen of te verbergen.</li>
+    <li>Houd een afbeelding ingedrukt voor <kbd>Toon volledige resolutie</kbd> &mdash; dat opent de afbeelding op ware grootte voor een nadere blik &mdash; of om <kbd>Opslaan in Foto's</kbd>, <kbd>Opslaan in Bestanden</kbd> of <kbd>Afbeelding kopi&euml;ren</kbd> te kiezen.</li>
+    <li>De galerij volgt je leesrichting voor strips &mdash; inclusief verticaal scrollen in webtoon-stijl.</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Terug naar boven</a>
+
+<!-- READING FONTS -->
+<h2 id="fonts">Leeslettertypen</h2>
+<p class="section-desc">Kies een leeslettertype, voeg je eigen toe of download taalpakketten.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F524;</span> Een lettertype kiezen</h3>
+  <p>Open <kbd>Instellingen</kbd> &rarr; <kbd>Leesvoorkeuren</kbd> &rarr; <kbd>Boeken</kbd> &rarr; <kbd>Eigen lettertypen</kbd> om het scherm <strong>Lettertypen</strong> te openen. Er zijn verschillende leeslettertypen ingebouwd, met <strong>Literata</strong> als standaard. Het lettertype dat je kiest, wordt toegepast op de EPUB- en tekstlezer.</p>
+  <div class="tip"><strong>Tip:</strong> Pas lettergrootte en regelafstand aan in <kbd>Instellingen</kbd> &rarr; <kbd>Leesvoorkeuren</kbd> &rarr; <kbd>Boeken</kbd>.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F453;</span> Toegankelijkheidslettertypen</h3>
+  <p>Twee lettertypen die zijn ontworpen om het lezen te vergemakkelijken, zijn meegeleverd en altijd beschikbaar: <strong>Atkinson Hyperlegible</strong>, dat de verschillen tussen gelijkende letters aanscherpt, en <strong>OpenDyslexic</strong>, dat zwaarder is gemaakt om het verwisselen van letters te verminderen.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F4C2;</span> Eigen lettertypen</h3>
+  <p>Importeer je eigen <kbd>.ttf</kbd>- of <kbd>.otf</kbd>-lettertypebestanden vanaf het scherm Lettertypen en gebruik ze in de EPUB-lezer. Ge&iuml;mporteerde lettertypen blijven op je apparaat.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F4E5;</span> Lettertypen &amp; taalpakketten downloaden</h3>
+  <p>Onder <strong>Lettertypen downloaden</strong> zijn extra leeslettertypen en taalpakketten op aanvraag beschikbaar voor schriften die de app niet standaard bevat &mdash; Chinees, Japans &amp; Koreaans (CJK), Arabisch, Devanagari en Thais. Pakketten zijn groot (ongeveer 41&nbsp;MB per stuk), dus de grootte wordt getoond voordat je downloadt. Eenmaal ge&iuml;nstalleerd werken ze precies zoals ge&iuml;mporteerde lettertypen.</p>
+  <div class="tip"><strong>Tip:</strong> Als de tekens van een boek als lege vakjes worden weergegeven, download dan het bijbehorende taalpakket om ze weer te geven.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x1F4DC;</span> Lettertypelicenties</h3>
+  <p>De meegeleverde en downloadbare lettertypen worden geleverd onder de <strong>SIL Open Font License</strong>. Je kunt de volledige licentie voor elk lettertype lezen vanaf zijn rij op het scherm Lettertypen.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Terug naar boven</a>
+
+<!-- READING DIRECTION -->
+<h2 id="reading-direction">Leesrichting</h2>
+<p class="section-desc">Van links naar rechts, van rechts naar links, of zoals het boek is uitgegeven.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x21C4;</span> Een richting kiezen</h3>
+  <p>Open <kbd>Instellingen</kbd> &rarr; <kbd>Leesvoorkeuren</kbd> &rarr; <kbd>Boeken</kbd> en gebruik de instelling <strong>Leesrichting</strong> onder <strong>Leesmodus</strong>:</p>
+  <ul>
+    <li><strong>Automatisch</strong> (standaard) &mdash; volgt de richting die het boek zelf aangeeft. Manga en boeken die zijn uitgegeven om van rechts naar links te lezen, openen meteen op de juiste manier, zonder dat je iets hoeft in te stellen.</li>
+    <li><strong>Van links naar rechts</strong> &mdash; standaard voor de meeste westerse boeken.</li>
+    <li><strong>Rechts naar links</strong> &mdash; gebruik rechts-naar-links voor elk boek.</li>
+  </ul>
+  <p>Je kunt dit ook wijzigen zonder het boek te verlaten: tik op het midden van de pagina om de werkbalken te tonen, tik daarna op de knop <kbd>Aa</kbd> in de onderste balk. De wijziging is direct van toepassing op de pagina die je aan het lezen bent.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F44B;</span> Wat de richting volgt</h3>
+  <ul>
+    <li>Welke kant je vooruit brengt &mdash; in een boek dat van rechts naar links wordt gelezen, breng je een tik of veeg naar links naar de volgende pagina.</li>
+    <li>De pagina-omslaganimatie, die vanaf de juiste kant omslaat.</li>
+    <li>De opmaak van de tekst op de pagina.</li>
+  </ul>
+  <div class="tip"><strong>Let op:</strong> De voortgangsschuif vult altijd van links, omdat deze laat zien hoe ver je in het boek bent, niet waar de pagina zich op het scherm bevindt.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x2139;</span> Waar dit van toepassing is</h3>
+  <p>Deze instelling geldt voor EPUB's in de gepagineerde modus &mdash; ze is verborgen zolang Doorlopend scrollen actief is. Strips hebben hun eigen leesvolgorde-instelling (zie <a href="#reading-comics">Strips lezen</a>), en <a href="#fixed-layout">boeken met vaste lay-out</a> volgen altijd de richting die in het boek is aangegeven.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Terug naar boven</a>
+
+<!-- VERTICAL WRITING -->
+<h2 id="vertical-writing">Verticaal schrijven</h2>
+<p class="section-desc">Japanse en Chinese boeken gezet in verticale kolommen.</p>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x2B07;</span> Verticale boeken</h3>
+  <p>Boeken die verticaal zijn gezet &mdash; Japans tategaki (&#x7E26;&#x66F8;&#x304D;) en traditioneel Chinees (&#x76F4;&#x6392;) &mdash; worden getoond zoals ze zijn gezet: de tekst loopt van boven naar beneden in kolommen die van rechts naar links vullen, en pagina's slaan naar links om, net zoals bij manga.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x2699;</span> Schrijfrichting</h3>
+  <p>Open <kbd>Instellingen</kbd> &rarr; <kbd>Leesvoorkeuren</kbd> &rarr; <kbd>Boeken</kbd> en gebruik de instelling <strong>Schrijfrichting</strong>:</p>
+  <ul>
+    <li><strong>Automatisch</strong> (standaard) &mdash; volgt de eigen lay-out van elk boek. Een boek dat verticaal is gezet, wordt verticaal getoond; elk ander boek blijft ongewijzigd.</li>
+    <li><strong>Horizontaal</strong> &mdash; toon elk boek horizontaal, ook een boek dat verticaal is gezet.</li>
+    <li><strong>Verticaal</strong> &mdash; toon elk boek in verticale kolommen.</li>
+  </ul>
+  <p>Dezelfde instelling staat ook in de instellingen in de lezer, onder de knop <kbd>Aa</kbd>.</p>
+  <div class="tip"><strong>Let op:</strong> Wijzigingen worden toegepast de volgende keer dat je een boek opent &mdash; het boek dat al op het scherm staat, behoudt de lay-out waarmee het is geopend.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x2139;</span> Goed om te weten</h3>
+  <ul>
+    <li>Verticale boeken gebruiken altijd de gepagineerde modus, dus Doorlopend scrollen en automatisch scrollen zijn niet beschikbaar voor deze boeken.</li>
+    <li>De schuifanimatie wordt niet gebruikt voor verticale boeken &mdash; ze slaan in plaats daarvan om met de omslaganimatie.</li>
+    <li>Bladwijzers, markeringen, de inhoudsopgave, zoeken in het boek en tekst-naar-spraak werken allemaal zoals gebruikelijk.</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Terug naar boven</a>
+
+<!-- READING COMICS -->
+<h2 id="reading-comics">Strips lezen</h2>
+<p class="section-desc">CBZ, CBR en CB7 strips lezen.</p>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4F1;</span> Leesmodi</h3>
+  <ul>
+    <li><strong>Links-naar-rechts</strong> &mdash; Standaard westerse stripvolgorde.</li>
+    <li><strong>Rechts-naar-links</strong> &mdash; Manga-leesvolgorde.</li>
+    <li><strong>Webtoon / Verticaal scrollen</strong> &mdash; Soepel verticaal scrollen voor lange strips.</li>
+  </ul>
+  <p>Stel de standaard in via <kbd>Instellingen</kbd> &rarr; <kbd>Leesvoorkeuren</kbd> &rarr; <kbd>Strips</kbd>, of overschrijf per boek vanaf de detailpagina.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F50E;</span> Paginaschaling</h3>
+  <ul>
+    <li><strong>Passend op scherm</strong> &mdash; Volledige pagina zichtbaar.</li>
+    <li><strong>Passend op breedte</strong> &mdash; Vult de breedte, scroll verticaal indien nodig.</li>
+    <li><strong>Passend op hoogte</strong> &mdash; Vult de hoogte.</li>
+    <li><strong>Origineel formaat</strong> &mdash; 1:1 pixelweergave.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F44B;</span> Gebaren</h3>
+  <ul>
+    <li>Veeg links/rechts om pagina's om te slaan (gepagineerde modi).</li>
+    <li>Knijp of dubbeltik om te zoomen, sleep vervolgens om rond te bewegen. Zie <a href="#comic-zoom">Strippagina's zoomen</a>.</li>
+    <li>Tik in het midden van de pagina om de werkbalk te tonen of te verbergen.</li>
+    <li>Gebruik de paginaschuifbalk onderaan om snel te bladeren.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x26A0;</span> Melding verdacht archief</h3>
+  <p>Wanneer je een stripbestand (CBZ, CBR of CB7) opent waarvan de inhoud ongewoon groot of agressief gecomprimeerd lijkt &mdash; het typische patroon van &ldquo;zip bomb&rdquo;-bestanden die zijn ontworpen om het geheugen te overbelasten &mdash; toont de app een waarschuwing <strong>Verdacht archief</strong> voordat er iets wordt uitgepakt.</p>
+  <ul>
+    <li>Tik op <kbd>Annuleer</kbd> om het bestand niet te openen. Dit is de veilige keuze voor archieven van onbekende herkomst.</li>
+    <li>Tik op <kbd>Toch openen</kbd> als je het bestand vertrouwt &mdash; de app slaat dan de veiligheidscontrole over en laadt de pagina's.</li>
+  </ul>
+  <p>EPUB-bestanden gebruiken dezelfde bescherming stilzwijgend tijdens het importeren.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Terug naar boven</a>
+
+<!-- COMIC ZOOM -->
+<h2 id="comic-zoom">Strippagina's zoomen</h2>
+<p class="section-desc">Kom dichter bij de illustraties &mdash; zowel in paginamodus als bij webtoon-scrollen.</p>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F50D;</span> Paginamodi</h3>
+  <ul>
+    <li>Knijp om in te zoomen, tot drie keer de passende grootte. De illustratie blijft onder je vingers terwijl je knijpt.</li>
+    <li>Dubbeltik om op die plek naar dubbele grootte te springen; dubbeltik opnieuw om de pagina weer op het scherm te laten passen.</li>
+    <li>Sleep met &eacute;&eacute;n vinger om rond te bewegen terwijl je bent ingezoomd.</li>
+    <li>Bijna helemaal terug knijpen laat de pagina netjes weer passend worden.</li>
+  </ul>
+  <p>Zoomen werkt met de schaalopties <strong>Passend op scherm</strong> en <strong>Passend op hoogte</strong>, en met dubbele pagina's. <strong>Passend op breedte</strong> en <strong>Origineel formaat</strong> tonen de pagina al groter dan het scherm en scrollen in plaats daarvan &mdash; gebruik hiervoor <strong>Toon volledige resolutie</strong> hieronder voor een nadere blik.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4F1;</span> Webtoon-scrollen</h3>
+  <ul>
+    <li>Knijp of dubbeltik om de hele strook te zoomen, tot drie keer de normale grootte.</li>
+    <li>Scrollen blijft werken terwijl je bent ingezoomd &mdash; sleep gewoon omhoog en omlaag zoals gebruikelijk.</li>
+    <li>Sleep zijwaarts om over een ingezoomde pagina te bewegen.</li>
+    <li>Het zoomniveau blijft behouden terwijl je blijft scrollen, zodat je een heel hoofdstuk vergroot kunt lezen. Het apparaat draaien zet het terug naar normale grootte.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x2728;</span> Toon volledige resolutie</h3>
+  <p>Zoomen vergroot de pagina op de grootte die voor je scherm is voorbereid. Voor de scherpst mogelijke weergave van &eacute;&eacute;n pagina, houd deze ingedrukt en kies <kbd>Toon volledige resolutie</kbd> &mdash; die pagina wordt gedecodeerd op de oorspronkelijke resolutie van het archief, en je kunt veel verder inzoomen. Dubbeltikken schakelt tussen passend op het scherm en dubbele grootte; veeg omlaag of tik op de sluitknop om terug te gaan.</p>
+  <div class="tip"><strong>Let op:</strong> Zoom wordt niet opgeslagen. Het boek sluiten keert altijd terug naar de normale passende weergave.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Terug naar boven</a>
+
+<!-- TTS -->
+<h2 id="tts">Tekst-naar-spraak &amp; CarPlay</h2>
+<p class="section-desc">Luister naar je boeken die worden voorgelezen.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F50A;</span> Tekst-naar-spraak gebruiken</h3>
+  <p>Open een EPUB-, PDF- of TXT-boek en tik op de afspeelknop in de werkbalk. TTS leest &eacute;&eacute;n zin tegelijk voor en markeert het huidige woord.</p>
+  <ul>
+    <li><strong>Snelheid</strong> &mdash; 0,5&times; tot 2&times; in de TTS-bediening.</li>
+    <li><strong>Stem</strong> &mdash; Kies uit meer dan 100 systeemsstemmen in <kbd>Instellingen</kbd> &rarr; <kbd>Leesvoorkeuren</kbd> &rarr; <kbd>Tekst-naar-spraak</kbd>.</li>
+    <li><strong>Overslaan</strong> &mdash; Tik op volgende/vorige om per zin of per hoofdstuk te springen.</li>
+  </ul>
+  <div class="tip"><strong>Let op:</strong> <a href="#fixed-layout">Boeken met vaste lay-out</a> &mdash; strips en prentenboeken waarvan de pagina's een vast ontwerp hebben &mdash; bevatten geen tekst die de app kan voorlezen, dus voor deze boeken wordt de afspeelknop niet getoond.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F697;</span> CarPlay</h3>
+  <p>Wanneer je verbonden bent met een CarPlay-compatibel voertuig, verschijnt de app op het scherm van je auto met vereenvoudigde afspeelbediening. TTS blijft op de achtergrond spelen &mdash; je hoeft het scherm niet aan te laten.</p>
+  <div class="tip"><strong>Tip:</strong> Schakel <kbd>Achtergrondaudio</kbd><span class="badge badge-premium">Premium</span> in bij de TTS-instellingen om het afspelen door te laten gaan wanneer de app op de achtergrond staat, ook zonder CarPlay.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Terug naar boven</a>
+
+<!-- AI UPSCALING -->
+<h2 id="upscaling">AI-stripopschaling</h2>
+<p class="section-desc">Verbeter strippagina's met lage resolutie op het apparaat.<span class="badge badge-premium">Premium</span></p>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x2728;</span> Wat het doet</h3>
+  <p>Gebruikt een machine learning-model op het apparaat om strippagina's onder een resolutiedrempel op te schalen. Het resultaat is scherpere lijnen en minder zichtbare compressie-artefacten &mdash; vooral handig voor oudere of lage-kwaliteitsscans.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x2699;</span> Instellen</h3>
+  <ol class="steps">
+    <li>Ga naar <kbd>Instellingen</kbd> &rarr; <kbd>Leesvoorkeuren</kbd> &rarr; <kbd>Strips</kbd> &rarr; <kbd>AI-opschaling</kbd>.</li>
+    <li>Schakel het in.</li>
+    <li>Pas de <strong>Resolutiedrempel</strong> aan &mdash; pagina's onder deze pixelbreedte worden opgeschaald (standaard: 1500 px).</li>
+    <li>Stel het <strong>Vooruitlaadvenster</strong> in om te bepalen hoeveel volgende pagina's op de achtergrond worden voorbewerkt.</li>
+    <li>Kies een <strong>Ruisonderdrukkingsniveau</strong> (Auto is meestal het beste).</li>
+  </ol>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4BE;</span> Cache &amp; opslag</h3>
+  <p>Opgeschaalde afbeeldingen worden gecachet zodat ze niet opnieuw verwerkt hoeven te worden. Kies hoe lang de cache bewaard moet worden (7&ndash;90 dagen of nooit verlopen), en wis deze op elk moment vanuit de instellingen.</p>
+  <div class="tip"><strong>Tip:</strong> Een kleine indicatorbadge verschijnt op opgeschaalde pagina's. Je kunt dit uitschakelen in de instellingen als je dat liever hebt.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Terug naar boven</a>
+
+<!-- HIDDEN MODE -->
+<h2 id="hidden">Verborgen boeken</h2>
+<p class="section-desc">Houd bepaalde boeken priv&eacute;.<span class="badge badge-premium">Premium</span></p>
+
+<div class="card">
+  <h3><span class="icon icon-indigo">&#x1F441;</span> Boeken verbergen</h3>
+  <ol class="steps">
+    <li>Open de detailpagina van een boek en tik op het menu (&hellip;).</li>
+    <li>Kies <kbd>Boek verbergen</kbd>.</li>
+    <li>Het boek verdwijnt uit de normale bibliotheekweergave.</li>
+  </ol>
+  <p>Om veel boeken tegelijk te verbergen, gebruik de Selectiemodus.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F513;</span> Verborgen boeken bekijken</h3>
+  <p>Trek omlaag in de bibliotheek om de <strong>Verborgen modus</strong> te activeren. Al je boeken &mdash; zowel verborgen als zichtbaar &mdash; worden nu getoond. Trek opnieuw of verlaat de app om de verborgen modus te verlaten.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F512;</span> Privacyopties</h3>
+  <p>Wanneer de verborgen modus actief is, ga naar <kbd>Instellingen</kbd> &rarr; <kbd>Verborgen modus</kbd> om te kiezen wat er gebeurt als je de app verlaat:</p>
+  <ul>
+    <li><strong>Automatisch afsluiten</strong> (standaard) &mdash; Verborgen modus wordt automatisch uitgeschakeld. Snel en eenvoudig.</li>
+    <li><strong>Face ID / Touch ID vereisen</strong> &mdash; Verborgen modus blijft aan, maar vereist biometrische verificatie wanneer je terugkeert. Veiliger.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x21A9;</span> Boeken zichtbaar maken</h3>
+  <p>Terwijl je in de verborgen modus bent, open de details van een verborgen boek en kies <kbd>Boek zichtbaar maken</kbd>, of gebruik de Selectiemodus om meerdere tegelijk zichtbaar te maken.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x2601;</span> Verborgen boeken synchroniseren</h3>
+  <p>Ga in de verborgen modus naar <kbd>Instellingen</kbd> &rarr; <kbd>Verborgen modus</kbd> en schakel <kbd>Verborgen boeken synchroniseren met iCloud</kbd> in:</p>
+  <ul>
+    <li><strong>Uit</strong> (standaard) &mdash; verborgen boeken blijven alleen op dit apparaat. Een boek verbergen verwijdert het ook uit iCloud.</li>
+    <li><strong>Aan</strong> &mdash; verborgen boeken synchroniseren via iCloud, maar blijven verborgen op elk apparaat waarop je bent ingelogd.</li>
+  </ul>
+  <p>Als je de schakelaar uitzet terwijl je al verborgen boeken in iCloud hebt, wordt gevraagd wat daarmee moet gebeuren:</p>
+  <ul>
+    <li><strong>Behouden op alle apparaten</strong> &mdash; je andere apparaten behouden hun gesynchroniseerde kopieën; dit apparaat behoudt een privé, alleen-lokale kopie.</li>
+    <li><strong>Volledig uit iCloud verwijderen</strong> &mdash; verwijdert de boeken uit iCloud; elk ander apparaat behoudt zijn eigen privékopie in zijn verborgen bibliotheek.</li>
+  </ul>
+  <div class="tip"><strong>Let op:</strong> Als een van je andere apparaten een verborgen boek uit iCloud verwijdert, behoudt dit apparaat automatisch zijn eigen privékopie in de verborgen bibliotheek &mdash; zolang het bestand van het boek daar al was gedownload.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F5D1;</span> Verborgen boeken permanent verwijderen</h3>
+  <p>Ga in de verborgen modus naar <kbd>Instellingen</kbd> &rarr; <kbd>Verborgen modus</kbd> en kies <kbd>Verborgen boeken permanent verwijderen</kbd> om elk verborgen boek te verwijderen van dit apparaat, uit iCloud en van je andere apparaten. Typ <kbd>DELETE</kbd> om te bevestigen.</p>
+  <div class="tip"><strong>Waarschuwing:</strong> Dit kan niet ongedaan worden gemaakt. Apparaten die op dat moment offline zijn, behouden hun lokale kopieën tot ze de volgende keer synchroniseren.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Terug naar boven</a>
+
+<!-- BOOKMARKS, HIGHLIGHTS, TAGS -->
+<h2 id="bookmarks">Bladwijzers, markeringen &amp; tags</h2>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F516;</span> Bladwijzers</h3>
+  <p>Tik op het bladwijzerpictogram in de werkbalk van de lezer om de huidige pagina te markeren. Voeg een optionele notitie toe. Bekijk alle bladwijzers voor een boek vanaf de detailpagina.</p>
+  <div class="tip"><strong>Let op:</strong> Alleen bladwijzers die je handmatig aanmaakt verschijnen hier. Posities die de app automatisch opslaat wanneer je een boek sluit, worden apart bewaard in <a href="#history">Leesgeschiedenis</a> zodat ze je eigen bladwijzers niet verdringen.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F58D;</span> Markeringen<span class="badge badge-premium">Premium</span></h3>
+  <p>In EPUB's kun je tekst selecteren om te markeren. Kies uit vijf kleuren (geel, roze, groen, blauw, oranje) en voeg notities toe. Alle markeringen staan op de detailpagina van het boek.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F3F7;</span> Tags</h3>
+  <p>Voeg tags toe aan elk boek vanaf de detailpagina. Tags zijn doorzoekbaar en kunnen worden gebruikt als bibliotheekfilters. Beheer alle tags via <kbd>Instellingen</kbd> &rarr; <kbd>Tags</kbd>.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Terug naar boven</a>
+
+<!-- READING HISTORY -->
+<h2 id="history">Leesgeschiedenis</h2>
+<p class="section-desc">Spring terug naar elke positie waar je onlangs bent geweest.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F552;</span> Automatisch opslaan</h3>
+  <p>Telkens wanneer je een boek sluit of de app naar de achtergrond stuurt, wordt je huidige positie opgeslagen als een geschiedenis-item &mdash; je hoeft niet aan een bladwijzer te denken. Dit werkt in elke lezer: EPUB, PDF, TXT/RTF en strips.</p>
+  <ul>
+    <li>Tot <strong>50</strong> recente posities worden per boek bewaard. Oudere items worden automatisch verwijderd wanneer er nieuwe bijkomen.</li>
+    <li>Het boek binnen enkele minuten opnieuw sluiten op dezelfde plek werkt het bestaande item bij in plaats van een duplicaat aan te maken.</li>
+    <li>Automatisch opgeslagen posities worden gescheiden gehouden van je lijst met handmatige bladwijzers, zodat ze niet vermengd raken met die je bewust hebt ingesteld.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4D6;</span> Geschiedenis binnen een boek</h3>
+  <p>Tik tijdens het lezen op het menu (&hellip;) rechtsboven en kies <kbd>Leesgeschiedenis</kbd>. Je ziet een lijst met je recente posities in dat boek, nieuwste eerst, met de naam van het hoofdstuk of de pagina en hoe lang geleden elk item is vastgelegd.</p>
+  <ul>
+    <li>Tik op een item om er direct naartoe te springen.</li>
+    <li>Veeg een item naar links om het te verwijderen.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F4DA;</span> Geschiedenis in je hele bibliotheek</h3>
+  <p>Tik in de bibliotheek op het menu (&hellip;) in de bovenste werkbalk en kies <kbd>Leesgeschiedenis</kbd> om elk boek te zien dat je onlangs hebt geopend, gegroepeerd per dag. Tik op een rij om het boek precies te openen waar je was gebleven.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Terug naar boven</a>
+
+<!-- AUTHOR & TAG BROWSING -->
+<h2 id="search">Auteur- &amp; Tagoverzicht</h2>
+<p class="section-desc">Vind boeken op auteur of tag vanaf elke plek in de app.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F464;</span> Auteurs</h3>
+  <p>Ga naar <kbd>Instellingen</kbd> &rarr; <kbd>Auteurs</kbd> om alle auteurs in je bibliotheek te zien, met het aantal boeken. Tik op een auteur om de bibliotheek te doorzoeken op al hun boeken.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F3F7;</span> Zoeken op tag</h3>
+  <p>Tik in <kbd>Instellingen</kbd> &rarr; <kbd>Tags</kbd> op een tag om de bibliotheek te doorzoeken op boeken met die tag. Houd ingedrukt om te hernoemen of te verwijderen.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F50D;</span> Snel zoeken vanuit de context</h3>
+  <ul>
+    <li>Houd een boek in de bibliotheek ingedrukt &rarr; <kbd>Boeken van [Auteur] zoeken</kbd></li>
+    <li>Houd op de detailpagina van een boek de auteursnaam of een tag ingedrukt om te zoeken</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Terug naar boven</a>
+
+<!-- METADATA -->
+<h2 id="metadata">Metadata &amp; ComicInfo.xml</h2>
+<p class="section-desc">Metadata van boeken bekijken en bewerken.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x270F;</span> Metadata-editor</h3>
+  <p>Tik op de detailpagina van een boek op het menu (&hellip;) en kies <kbd>Metadata bewerken</kbd> om de titel, auteur, reeks, beschrijving en andere velden te wijzigen. Je kunt de metadata ook opnieuw uit het oorspronkelijke bestand laten uitlezen.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4CB;</span> ComicInfo.xml</h3>
+  <p>Bij striparchieven (CBZ, CBR, CB7) die een <code>ComicInfo.xml</code>-bestand bevatten, wordt de metadata bij het importeren automatisch uitgelezen &mdash; inclusief titel, schrijver, reeks, nummer, samenvatting, uitgever, genre en tags.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Terug naar boven</a>
+
+<!-- ICLOUD -->
+<h2 id="icloud">iCloud-synchronisatie</h2>
+<p class="section-desc">Houd je bibliotheek gesynchroniseerd op al je apparaten.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x2601;</span> Synchronisatie inschakelen</h3>
+  <ol class="steps">
+    <li>Ga naar <kbd>Instellingen</kbd> &rarr; <kbd>iCloud-synchronisatie</kbd>.</li>
+    <li>Schakel <kbd>Bibliotheek synchroniseren met iCloud</kbd> in.</li>
+    <li>Synchronisatie wordt actief bij de volgende keer dat de app wordt gestart.</li>
+  </ol>
+  <p>Je metadata, leesvoortgang, bladwijzers, markeringen en planken worden gesynchroniseerd op alle apparaten die zijn ingelogd met hetzelfde iCloud-account.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F4CA;</span> Synchronisatiestatus</h3>
+  <p><kbd>Instellingen</kbd> &rarr; <kbd>iCloud-synchronisatie</kbd> toont een statuskaart voor je boekbestanden:</p>
+  <ul>
+    <li>Een kop &mdash; <strong>Up-to-date</strong>, <strong>Synchroniseren&hellip;</strong> (met een aantal), of <strong>Niet ingelogd</strong>.</li>
+    <li>Een balk die laat zien hoeveel van de bestanden in je bibliotheek in iCloud staan.</li>
+    <li>Een uitsplitsing &mdash; <strong>Gesynchroniseerd</strong> (met totale grootte), <strong>Alleen in iCloud</strong> (nog niet gedownload naar dit apparaat), en <strong>Bezig</strong>.</li>
+  </ul>
+  <div class="tip"><strong>Let op:</strong> Deze kaart houdt alleen boek<em>bestanden</em> bij. Leesvoortgang, bladwijzers, markeringen en planken synchroniseren apart en automatisch, ongeacht de bestandsstatus.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x2601;</span> Cloudpictogrammen op omslagen</h3>
+  <p>Boekomslagen tonen een klein wolkje in de rechteronderhoek om de synchronisatiestatus van het bestand aan te geven:</p>
+  <ul>
+    <li><strong>Cloudpictogram</strong> &mdash; het bestand staat alleen in iCloud. Open de boekpagina om het te downloaden.</li>
+    <li><strong>Pijlen omhoog/omlaag</strong> &mdash; het bestand wordt op dit moment ge&uuml;pload of gedownload.</li>
+    <li><strong>Geen pictogram</strong> &mdash; het bestand staat al op dit apparaat.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4E5;</span> Automatisch downloaden</h3>
+  <p>Kies de maximale bestandsgrootte voor automatische downloads. Grotere boeken blijven in de cloud tot je ze opent. Pas de limiet aan in de iCloud-instellingen.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Terug naar boven</a>
+
+<!-- STATS -->
+<h2 id="stats">Leesstatistieken</h2>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F4CA;</span> Je leesactiviteit</h3>
+  <p>Open <kbd>Instellingen</kbd> &rarr; <kbd>Bibliotheekstatistieken</kbd> om te zien:</p>
+  <ul>
+    <li>Totaal aantal boeken, gelezen pagina's en leestijd.</li>
+    <li>Dagelijkse leesactiviteitsgrafiek.</li>
+    <li>Boeken per formaat en leesstatus.</li>
+    <li>Activiteitsoverzicht per boek.</li>
+  </ul>
+  <div class="tip"><strong>Let op:</strong> Statistieken respecteren de verborgen modus &mdash; wanneer de verborgen modus is uitgeschakeld, worden statistieken voor verborgen boeken uitgesloten.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Terug naar boven</a>
+
+<!-- WEBDAV & OPDS -->
+<h2 id="webdav">WebDAV &amp; OPDS</h2>
+<p class="section-desc">Blader en download van externe servers en catalogi.</p>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F5C4;</span> WebDAV</h3>
+  <p>Maak verbinding met een NAS, Nextcloud of Calibre-server om door mappen te bladeren en boeken te downloaden.</p>
+  <ol class="steps">
+    <li>Ga naar <kbd>Instellingen</kbd> &rarr; <kbd>Boeken importeren</kbd> &rarr; <kbd>WebDAV</kbd>.</li>
+    <li>Tik op <kbd>Server toevoegen</kbd> en voer de URL in.</li>
+    <li>Voeg een gebruikersnaam en wachtwoord toe indien nodig.</li>
+    <li>Tik op <kbd>Verbinding testen</kbd> en sla op.</li>
+  </ol>
+  <div class="tip"><strong>Zelfondertekende certificaten:</strong> Als je server een zelfondertekend certificaat gebruikt, kun je <kbd>Niet-vertrouwde certificaten toestaan</kbd> inschakelen. De app vraagt je eerst om bevestiging &mdash; dit schakelt TLS-validatie uit, waardoor iedereen op je netwerk zich als de server kan voordoen. Schakel dit alleen in voor een server die je zelf beheert.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4DA;</span> OPDS-catalogi</h3>
+  <p>OPDS is een open standaard voor boekcatalogi. Voeg openbare catalogi toe (Project Gutenberg, Standard Ebooks, enz.) of je eigen priv&eacute;server.</p>
+  <ol class="steps">
+    <li>Ga naar <kbd>Instellingen</kbd> &rarr; <kbd>Boeken importeren</kbd> &rarr; <kbd>OPDS</kbd>.</li>
+    <li>Tik op <kbd>Catalogus toevoegen</kbd> en voer de feed-URL in.</li>
+    <li>Blader door categorie&euml;n en download boeken naar je bibliotheek.</li>
+  </ol>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Terug naar boven</a>
+
+<!-- RESUME -->
+<h2 id="resume">Hervatten bij opstart</h2>
+<p class="section-desc">Ga automatisch verder waar je gebleven was.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x25B6;</span> Instellen</h3>
+  <p>Ga naar <kbd>Instellingen</kbd> &rarr; <kbd>Algemeen</kbd> en schakel <kbd>Laatste boek hervatten bij opstarten</kbd> in. De volgende keer dat je de app opent, springt deze direct naar het boek en de pagina waar je gebleven was.</p>
+  <div class="tip"><strong>Verborgen boeken:</strong> Als het laatst gelezen boek verborgen is, vraagt de app om Face ID / Touch ID voordat het wordt hervat. Schakel <kbd>Verborgen boek hervatten na verificatie</kbd> in bij de instellingen voor Verborgen modus om dit toe te staan.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Terug naar boven</a>
+
+<!-- FORMATS -->
+<h2 id="formats">Ondersteunde formaten</h2>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4D6;</span> Boeken</h3>
+  <div class="formats-grid">
+    <div class="format-tag">EPUB</div>
+    <div class="format-tag">PDF</div>
+    <div class="format-tag">TXT</div>
+    <div class="format-tag">RTF</div>
+  </div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4F1;</span> Strips</h3>
+  <div class="formats-grid">
+    <div class="format-tag">CBZ</div>
+    <div class="format-tag">CBR</div>
+    <div class="format-tag">CB7</div>
+  </div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Terug naar boven</a>
+
+</body>
+</html>

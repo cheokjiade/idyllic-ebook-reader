@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>دليل المستخدم</title>
+<link rel="stylesheet" href="UserGuideStyle.css">
+<style>
+.steps li { padding-left: 0; padding-right: 32px; }
+.steps li::before { left: auto; right: 0; }
+.tip { border-left: none; border-right: 3px solid var(--accent); border-radius: 8px 0 0 8px; }
+</style>
+<!-- USER-GUIDE-NAV-STYLE:START -->
+<style>
+.guide-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 14px;
+  padding: 10px 14px;
+  margin: 0 0 16px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  font-size: 13px;
+}
+.guide-nav-home {
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.guide-nav-arrow {
+  display: inline-block;
+}
+[dir="rtl"] .guide-nav-arrow {
+  transform: scaleX(-1);
+}
+.guide-nav-langs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 10px;
+  color: var(--secondary);
+}
+.guide-nav-globe {
+  font-size: 13px;
+}
+.guide-nav-langs a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.guide-nav-langs a:hover,
+.guide-nav-langs a:focus-visible {
+  text-decoration: underline;
+}
+.guide-nav-current {
+  font-weight: 700;
+  color: var(--text);
+}
+</style>
+<!-- USER-GUIDE-NAV-STYLE:END -->
+</head>
+<body id="top">
+<!-- USER-GUIDE-NAV:START -->
+<nav class="guide-nav" aria-label="User Guide language switcher">
+  <a class="guide-nav-home" href="../index.html"><span class="guide-nav-arrow" aria-hidden="true">&larr;</span> Idyllic</a>
+  <span class="guide-nav-langs">
+    <span class="guide-nav-globe" aria-hidden="true">&#x1F310;</span>
+      <a href="index.html">English</a>
+      <span class="guide-nav-current">العربية</span>
+      <a href="cs.html">Čeština</a>
+      <a href="da.html">Dansk</a>
+      <a href="de.html">Deutsch</a>
+      <a href="es.html">Español</a>
+      <a href="fi.html">Suomi</a>
+      <a href="fr.html">Français</a>
+      <a href="he.html">עברית</a>
+      <a href="hi.html">हिन्दी</a>
+      <a href="id.html">Indonesia</a>
+      <a href="it.html">Italiano</a>
+      <a href="ja.html">日本語</a>
+      <a href="ko.html">한국어</a>
+      <a href="ms.html">Bahasa Melayu</a>
+      <a href="nb.html">Norsk bokmål</a>
+      <a href="nl.html">Nederlands</a>
+      <a href="pl.html">Polski</a>
+      <a href="pt-BR.html">Português (Brasil)</a>
+      <a href="ru.html">Русский</a>
+      <a href="sv.html">Svenska</a>
+      <a href="th.html">ไทย</a>
+      <a href="tr.html">Türkçe</a>
+      <a href="uk.html">Українська</a>
+      <a href="vi.html">Tiếng Việt</a>
+      <a href="zh-Hans.html">简体中文</a>
+      <a href="zh-Hant.html">繁體中文</a>
+  </span>
+</nav>
+<!-- USER-GUIDE-NAV:END -->
+
+<h1>دليل المستخدم</h1>
+<p class="subtitle">كل ما تحتاجه للاستفادة القصوى من تجربة القراءة.</p>
+
+<!-- TABLE OF CONTENTS -->
+<div class="card toc">
+  <a href="#importing">استيراد الكتب</a>
+  <a href="#wifi">WiFi نقل عبر</a>
+  <a href="#library">المكتبة والتنظيم</a>
+  <a href="#shelves">الأرفف والمجلدات</a>
+  <a href="#reading-books">قراءة الكتب</a>
+  <a href="#fixed-layout">الكتب ذات التخطيط الثابت</a>
+  <a href="#in-book-search">البحث داخل الكتاب</a>
+  <a href="#image-gallery">معرض الصور</a>
+  <a href="#fonts">خطوط القراءة</a>
+  <a href="#reading-direction">اتجاه القراءة</a>
+  <a href="#vertical-writing">الكتابة العمودية</a>
+  <a href="#reading-comics">قراءة القصص المصورة</a>
+  <a href="#comic-zoom">تكبير صفحات القصص المصورة</a>
+  <a href="#tts">تحويل النص إلى كلام و CarPlay</a>
+  <a href="#upscaling">تحسين القصص المصورة بالذكاء الاصطناعي</a>
+  <a href="#hidden">الكتب المخفية</a>
+  <a href="#bookmarks">الإشارات المرجعية والتمييزات والوسوم</a>
+  <a href="#history">سجل القراءة</a>
+  <a href="#search">تصفح المؤلف والوسوم</a>
+  <a href="#metadata">البيانات الوصفية و ComicInfo.xml</a>
+  <a href="#icloud">مزامنة iCloud</a>
+  <a href="#stats">إحصائيات القراءة</a>
+  <a href="#webdav">WebDAV و OPDS</a>
+  <a href="#resume">الاستئناف عند التشغيل</a>
+  <a href="#formats">الصيغ المدعومة</a>
+</div>
+
+<!-- IMPORTING -->
+<h2 id="importing">استيراد الكتب</h2>
+<p class="section-desc">عدة طرق لإضافة الكتب إلى مكتبتك.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4C1;</span> من تطبيق الملفات</h3>
+  <p>انقر على <kbd>الإعدادات</kbd> &rarr; <kbd>استيراد الكتب</kbd>، ثم اختر الملفات من جهازك أو iCloud Drive أو أي خدمة سحابية متصلة. يمكنك أيضًا استخدام السحب والإفلات على iPad.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F310;</span> نقل عبر WiFi</h3>
+  <p>ارفع الكتب من أي جهاز كمبيوتر أو هاتف على شبكة WiFi الخاصة بك. راجع القسم المخصص أدناه للتفاصيل.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F5C2;</span> WebDAV و OPDS</h3>
+  <p>اتصل بخادم NAS أو Calibre أو فهرس كتب عام لتصفح الكتب وتحميلها مباشرة. راجع أدناه.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; العودة للأعلى</a>
+
+<!-- WIFI TRANSFER -->
+<h2 id="wifi">نقل عبر WiFi</h2>
+<p class="section-desc">ارفع الكتب من أي جهاز على شبكتك المحلية.</p>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F4F6;</span> كيف يعمل</h3>
+  <p>يشغّل التطبيق خادم ويب صغيرًا على جهازك. يمكن لأي جهاز كمبيوتر أو هاتف على نفس شبكة WiFi فتح صفحة الرفع في المتصفح.</p>
+  <ol class="steps">
+    <li>انتقل إلى <kbd>الإعدادات</kbd> &rarr; <kbd>استيراد الكتب</kbd> &rarr; <kbd>نقل WiFi</kbd>.</li>
+    <li>انقر على <kbd>بدء الخادم</kbd>. سيظهر عنوان مثل <kbd>http://192.168.1.42:8080</kbd>.</li>
+    <li>افتح هذا العنوان في أي متصفح ويب على نفس الشبكة.</li>
+    <li>اسحب الملفات إلى الصفحة أو انقر للتصفح &mdash; واختر مجلد الوجهة إن أردت.</li>
+    <li>تظهر الكتب المستوردة في مكتبتك فورًا.</li>
+    <li>انقر على <kbd>إيقاف الخادم</kbd> عند الانتهاء.</li>
+  </ol>
+  <div class="tip"><strong>نصيحة:</strong> سيبقى جهازك مستيقظًا أثناء تشغيل الخادم حتى لا تنقطع عمليات النقل.</div>
+  <div class="tip"><strong>فشل الرفع؟</strong> يعرض كل ملف فشل رفعه سبب الفشل بجواره. إذا انقطع اتصال WiFi، فانقر على <kbd>&#x21BB; إعادة المحاولة</kbd> في الصف لإرساله مرة أخرى. المشاكل الدائمة (مثل تنسيق ملف غير مدعوم) لن تُظهر زر إعادة المحاولة.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; العودة للأعلى</a>
+
+<!-- LIBRARY -->
+<h2 id="library">المكتبة والتنظيم</h2>
+<p class="section-desc">ابحث ورتّب ونظّم كتبك.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F50D;</span> البحث</h3>
+  <p>انقر على شارة <kbd>Search</kbd> أسفل المكتبة لفتح حقل بحث، ثم انقر على <kbd>تم</kbd> لإغلاقه. يبحث عبر العنوان والمؤلف والوسوم والسلسلة والناشر والوصف. البحث بالمؤلف أو بالوسم من القائمة السياقية للكتاب (راجع <a href="#search">تصفح المؤلف والوسوم</a>) يملأ حقل البحث نفسه.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x2195;</span> الترتيب والتصفية</h3>
+  <p>انقر على زر خيارات العرض (أعلى اليسار) للاختيار:</p>
+  <ul>
+    <li><strong>التخطيط</strong> &mdash; شبكة، مفصّل، مدمج، بسيط، جدول، أو مجلة</li>
+    <li><strong>الترتيب</strong> &mdash; العنوان، المؤلف، آخر قراءة، تاريخ الإضافة، التقدم، حجم الملف، السلسلة</li>
+    <li><strong>العرض</strong> &mdash; وضع الكتب قيد القراءة أولًا والمكتملة أخيرًا</li>
+    <li><strong>التصفية</strong> &mdash; حسب الصيغة أو الوسم أو المؤلف</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x2714;</span> وضع التحديد</h3>
+  <p>اضغط مطولًا على كتاب أو انقر على <kbd>تحديد</kbd> للدخول في وضع التحديد. يمكنك بعدها نقل أو حذف أو إخفاء أو إظهار عدة كتب دفعة واحدة.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4CB;</span> تنظيف المكررات</h3>
+  <p>انتقل إلى <strong>الإعدادات &gt; المكتبة &gt; صيانة المكتبة &gt; تنظيف المكررات</strong> للعثور على الكتب التي تحمل نفس العنوان والمؤلف والصيغة. لكل مجموعة مكررة:</p>
+  <ul>
+    <li>يُميَّز <strong>الإصدار الأحدث</strong> بشارة KEEP خضراء</li>
+    <li>اختر النسخ الأقدم باستخدام مربعات الاختيار (أو <strong>تحديد الكل</strong>)</li>
+    <li><strong>حذف</strong> &mdash; يزيل النسخ الأقدم المحددة</li>
+    <li><strong>نسخ البيانات وحذف</strong> &mdash; ينقل الإشارات المرجعية والتظليلات والوسوم وتقدم القراءة والرف المعيَّن إلى الإصدار الأحدث قبل الحذف</li>
+    <li>فعّل خيار <strong>"نقل الكتاب الجديد إلى رف الكتاب القديم وحالة إخفائه"</strong> للحفاظ على الإصدار الجديد في نفس موقع المكتبة</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; العودة للأعلى</a>
+
+<!-- SHELVES -->
+<h2 id="shelves">الأرفف والمجلدات</h2>
+<p class="section-desc">نظّم الكتب في مجلدات متداخلة.</p>
+
+<div class="card">
+  <h3><span class="icon icon-indigo">&#x1F4C2;</span> إنشاء الأرفف</h3>
+  <ol class="steps">
+    <li>انقر على <kbd>رف جديد</kbd> في أعلى المكتبة.</li>
+    <li>أدخل اسمًا، ثم اختر أيقونة ولونًا.</li>
+    <li>اختياريًا، حدد رفًا أصليًا لإنشاء مجلد فرعي.</li>
+  </ol>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x21C4;</span> نقل الكتب</h3>
+  <p>من صفحة تفاصيل الكتاب، انقر على القائمة (&hellip;) واختر <kbd>نقل إلى رف</kbd>. في وضع التحديد يمكنك نقل عدة كتب دفعة واحدة.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; العودة للأعلى</a>
+
+<!-- READING BOOKS -->
+<h2 id="reading-books">قراءة الكتب</h2>
+<p class="section-desc">أوضاع قراءة EPUB و PDF و TXT و RTF.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4D6;</span> EPUB</h3>
+  <p>تُفتح ملفات EPUB في قارئ متكامل مدعوم بـ Readium. انقر على الحواف اليمنى أو اليسرى لتقليب الصفحات، أو اسحب.</p>
+  <ul>
+    <li><strong>مقسّم لصفحات</strong> &mdash; قراءة تقليدية صفحة بصفحة.</li>
+    <li><strong>التمرير المستمر</strong><span class="badge badge-premium">Premium</span> &mdash; مرّر بسلاسة عبر النص، بدون فواصل صفحات.</li>
+    <li><strong>اتجاه القراءة</strong> &mdash; اتّبع الكتاب تلقائيًا، أو حدّد الاتجاه من اليسار إلى اليمين أو من اليمين إلى اليسار بنفسك. انظر <a href="#reading-direction">اتجاه القراءة</a>.</li>
+    <li><strong>التخطيط الثابت</strong> &mdash; تُفتح القصص المصورة والكتب المصورة وملفات EPUB الأخرى ذات الصفحات الثابتة في قارئ مصمم خصيصًا لها. انظر <a href="#fixed-layout">الكتب ذات التخطيط الثابت</a>.</li>
+    <li><strong>البحث داخل الكتاب</strong><span class="badge badge-premium">Premium</span> &mdash; ابحث في الكتاب كاملًا عن أي كلمة أو عبارة. انظر <a href="#in-book-search">البحث داخل الكتاب</a>.</li>
+    <li><strong>معرض الصور</strong><span class="badge badge-premium">Premium</span> &mdash; تصفح جميع الصور في ملف EPUB من صفحة تفاصيله. انظر <a href="#image-gallery">معرض الصور</a>.</li>
+  </ul>
+  <div class="tip"><strong>نصيحة:</strong> عدّل حجم الخط وتباعد الأسطر وألوان السمة في <kbd>الإعدادات</kbd> &rarr; <kbd>تفضيلات القراءة</kbd> &rarr; <kbd>الكتب</kbd>.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F4C4;</span> PDF</h3>
+  <p>تُعرض ملفات PDF أصليًا. قارب بين إصبعيك للتكبير، واسحب لتقليب الصفحات. يمكن للتطبيق تذكر كلمات المرور لملفات PDF المحمية.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x1F4DD;</span> TXT و RTF</h3>
+  <p>تُفتح ملفات النص العادي و RTF في قارئ نصي بسيط مع تنسيق قابل للتعديل.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; العودة للأعلى</a>
+
+<!-- FIXED LAYOUT -->
+<h2 id="fixed-layout">الكتب ذات التخطيط الثابت</h2>
+<p class="section-desc">ملفات EPUB ذات صفحات بتصميم ثابت &mdash; القصص المصورة والكتب المصورة والعناوين الغنية بالرسوم.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4D0;</span> ما هي؟</h3>
+  <p>بعض ملفات EPUB مُصمَّمة صفحة بصفحة بدلًا من نص متدفق: كل صفحة عبارة عن ترتيب ثابت للكلمات والرسوم. يتعرّف التطبيق على هذه الكتب تلقائيًا ويفتحها في قارئ مصمم خصيصًا لها &mdash; تُحجَّم كل صفحة لتناسب شاشتك وتُوضع في المنتصف، مع تعبئة المساحة المحيطة بها بلون خلفية سمة القراءة لديك.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F44B;</span> القراءة والتكبير</h3>
+  <ul>
+    <li>انقر على الجانب الأيسر أو الأيمن من الشاشة لتقليب الصفحات، أو اسحب. انقر على المنتصف لإظهار أشرطة الأدوات أو إخفائها.</li>
+    <li>قارب بين إصبعيك للتكبير &mdash; حتى ثلاثة أضعاف الحجم المُلائم &mdash; واسحب للتنقل في الصفحة.</li>
+    <li>انقر نقرًا مزدوجًا للتكبير على تلك النقطة؛ وانقر نقرًا مزدوجًا مجددًا لإعادة ملاءمة الصفحة مع الشاشة.</li>
+    <li>الكتب المنشورة للقراءة من اليمين إلى اليسار تُقلِّب صفحاتها بهذا الاتجاه تلقائيًا.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4D6;</span> الصفحات المزدوجة</h3>
+  <p>أدر الجهاز إلى الوضع الأفقي لتظهر الصفحات المتقابلة جنبًا إلى جنب. يتّبع التطبيق تلميحات الصفحات المزدوجة الموجودة داخل الكتاب نفسه، لذا يحصل الغلاف أو الرسم بملء الصفحة على صفحة خاصة به. أدر الجهاز مجددًا إلى الوضع الرأسي لعرض صفحة واحدة في كل مرة.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x2139;</span> ما المتاح؟</h3>
+  <p>تعمل قائمة المحتويات والإشارات المرجعية وشريط تقدم القراءة وسجل القراءة والاستئناف من حيث توقفت كلها كالمعتاد.</p>
+  <p>بما أن كل صفحة تصميم ثابت وليست نصًا يمكن للتطبيق إعادة تدفقه، لا تظهر بعض عناصر التحكم في هذه الكتب: التمرير المستمر والتمرير التلقائي، وإعدادات الخط والمظهر، وتحويل النص إلى كلام، والبحث داخل الكتاب، وتحديد النص أو تمييزه.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; العودة للأعلى</a>
+
+<!-- IN-BOOK SEARCH -->
+<h2 id="in-book-search">البحث داخل الكتاب</h2>
+<p class="section-desc">اعثر على أي كلمة أو عبارة داخل الكتاب الذي تقرأه.<span class="badge badge-premium">Premium</span></p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F50D;</span> بدء البحث</h3>
+  <ol class="steps">
+    <li>انقر على منتصف الصفحة لإظهار أشرطة الأدوات.</li>
+    <li>انقر على عدسة التكبير في الطرف الأيمن من الشريط السفلي.</li>
+    <li>اكتب حرفين على الأقل واضغط <kbd>بحث</kbd> على لوحة المفاتيح.</li>
+  </ol>
+  <p>يشمل البحث الكتاب كاملًا &mdash; كل الفصول، وليس الفصل المعروض فقط &mdash; ولا تفرّق المطابقة بين الأحرف الكبيرة والصغيرة. يتوفر البحث في قارئ EPUB وقارئ TXT/RTF.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4C4;</span> تصفح النتائج</h3>
+  <p>تظهر النتائج أسفل شريط البحث مجمّعة حسب الفصل. يعرض كل صف المطابقة بخط عريض داخل مقتطف من النص المحيط بها. انقر على نتيجة للانتقال مباشرة إلى موضعها &mdash; تُميَّز كل المطابقات باللون الأصفر في الكتاب، والمطابقة الحالية بلون كهرماني أقوى.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x2195;</span> التنقل بين المطابقات</h3>
+  <p>بعد اختيار نتيجة، ينكمش شريط البحث إلى شريط مدمج مع عدّاد يعرض موضعك بين المطابقات.</p>
+  <ul>
+    <li>استخدم سهمي الأعلى والأسفل للانتقال إلى المطابقة السابقة أو التالية.</li>
+    <li>انقر على زر القائمة لإعادة فتح قائمة النتائج الكاملة.</li>
+    <li>انقر على <kbd>&times;</kbd> لإنهاء البحث &mdash; تُزال كل التمييزات.</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; العودة للأعلى</a>
+
+<!-- IMAGE GALLERY -->
+<h2 id="image-gallery">معرض الصور</h2>
+<p class="section-desc">تصفح جميع الرسوم التوضيحية في ملف EPUB كمعرض قابل للتمرير.<span class="badge badge-premium">Premium</span></p>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F5BC;</span> فتح المعرض</h3>
+  <p>افتح صفحة تفاصيل كتاب EPUB وانقر على زر مكدس الصور <span class="icon">&#x1F5BC;</span> في شريط الأدوات أعلى اليمين. يستخرج التطبيق كل صورة من الكتاب، ويعرض شريط تقدم أثناء العمل &mdash; انقر على زر <kbd>&times;</kbd> في أعلى اليسار للخروج في أي وقت. يتوفر المعرض لكتب EPUB فقط.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4DA;</span> ما الذي ستراه</h3>
+  <p>تظهر الصور صورة واحدة في كل صفحة بترتيب القراءة &mdash; الترتيب الذي ترد به في فصول الكتاب &mdash; بما في ذلك الغلاف. تُتجاهل الصور الصغيرة جدًا مثل الأيقونات والزخارف: يُستبعد أي شيء أصغر من الحد الأدنى للحجم (100&nbsp;px افتراضيًا). عدّل هذا الحد في <kbd>الإعدادات</kbd> &rarr; <kbd>تفضيلات القراءة</kbd> &rarr; <kbd>الكتب</kbd> &rarr; <kbd>معرض EPUB</kbd>. إذا لم تكن هناك صورة مؤهلة، يخبرك المعرض بأنه لم يعثر على أي صورة.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F446;</span> عرض الصور وحفظها</h3>
+  <ul>
+    <li>اسحب للتنقل بين الصور، أو استخدم شريط تمرير الصفحات في الأسفل للانتقال سريعًا.</li>
+    <li>قارب بين إصبعيك أو انقر نقرًا مزدوجًا للتكبير، ثم اسحب للتنقل &mdash; يستخدم المعرض قارئ القصص المصورة، لذا فهو يُكبِّر بالطريقة نفسها تمامًا. انظر <a href="#comic-zoom">تكبير صفحات القصص المصورة</a>.</li>
+    <li>انقر على منتصف الشاشة لإظهار عناصر التحكم أو إخفائها.</li>
+    <li>اضغط مطولًا على صورة لاختيار <kbd>عرض الدقة الكاملة</kbd> &mdash; الذي يفتحها بحجمها الأصلي لرؤية أقرب &mdash; أو <kbd>حفظ في الصور</kbd> أو <kbd>حفظ في الملفات</kbd> أو <kbd>نسخ الصورة</kbd>.</li>
+    <li>يتبع المعرض اتجاه قراءة القصص المصورة لديك &mdash; بما في ذلك التمرير العمودي بأسلوب الويبتون.</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; العودة للأعلى</a>
+
+<!-- READING FONTS -->
+<h2 id="fonts">خطوط القراءة</h2>
+<p class="section-desc">اختر خط قراءة، أو أضف خطك الخاص، أو نزّل حزم اللغات.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F524;</span> اختيار خط</h3>
+  <p>افتح <kbd>الإعدادات</kbd> &rarr; <kbd>تفضيلات القراءة</kbd> &rarr; <kbd>الكتب</kbd> &rarr; <kbd>خطوط مخصصة</kbd> للوصول إلى شاشة <strong>الخطوط</strong>. تتضمن عدة خطوط قراءة مدمجة، مع <strong>Literata</strong> كخط افتراضي. ينطبق الخط الذي تختاره على قارئ EPUB وقارئ النصوص.</p>
+  <div class="tip"><strong>نصيحة:</strong> عدّل حجم الخط وتباعد الأسطر في <kbd>الإعدادات</kbd> &rarr; <kbd>تفضيلات القراءة</kbd> &rarr; <kbd>الكتب</kbd>.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F453;</span> خطوط إمكانية الوصول</h3>
+  <p>يتوفر دائمًا خطان مصممان لتسهيل القراءة ومضمّنان في التطبيق: <strong>Atkinson Hyperlegible</strong>، الذي يُبرز الفروق بين الحروف المتشابهة، و<strong>OpenDyslexic</strong>، المُثقَّل لتقليل تبديل الحروف.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F4C2;</span> خطوط مخصصة</h3>
+  <p>استورد ملفات خطوط <kbd>.ttf</kbd> أو <kbd>.otf</kbd> الخاصة بك من شاشة الخطوط واستخدمها في قارئ EPUB. تبقى الخطوط المستوردة على جهازك.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F4E5;</span> تنزيل الخطوط &amp; حزم اللغات</h3>
+  <p>ضمن <strong>تنزيل الخطوط</strong>، تتوفر خطوط قراءة إضافية وحزم لغات عند الطلب للكتابات التي لا يشملها التطبيق &mdash; الصينية واليابانية &amp; الكورية (CJK) والعربية والديفاناغارية والتايلاندية. الحزم كبيرة (نحو 41&nbsp;MB لكل منها)، لذا يظهر الحجم قبل التنزيل. بعد التثبيت، تعمل تمامًا مثل الخطوط المستوردة.</p>
+  <div class="tip"><strong>نصيحة:</strong> إذا ظهرت أحرف كتاب على هيئة مربعات فارغة، فنزّل حزمة اللغة المطابقة لعرضها.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x1F4DC;</span> تراخيص الخطوط</h3>
+  <p>تُقدَّم الخطوط المدمجة والقابلة للتنزيل بموجب <strong>SIL Open Font License</strong>. يمكنك قراءة الترخيص الكامل لأي منها من صفّه في شاشة الخطوط.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; العودة للأعلى</a>
+
+<!-- READING DIRECTION -->
+<h2 id="reading-direction">اتجاه القراءة</h2>
+<p class="section-desc">من اليسار إلى اليمين، أو من اليمين إلى اليسار، أو حسب اتجاه نشر الكتاب.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x21C4;</span> اختيار الاتجاه</h3>
+  <p>افتح <kbd>الإعدادات</kbd> &rarr; <kbd>تفضيلات القراءة</kbd> &rarr; <kbd>الكتب</kbd> واستخدم عنصر التحكم <strong>اتجاه القراءة</strong> ضمن <strong>وضع القراءة</strong>:</p>
+  <ul>
+    <li><strong>تلقائي</strong> (الافتراضي) &mdash; يتبع الاتجاه الذي يُعلنه الكتاب نفسه. تُفتح المانغا والكتب المنشورة للقراءة من اليمين إلى اليسار بالاتجاه الصحيح دون أي إعداد.</li>
+    <li><strong>من اليسار إلى اليمين</strong> &mdash; المعتاد لمعظم الكتب الغربية.</li>
+    <li><strong>من اليمين إلى اليسار</strong> &mdash; استخدم هذا الاتجاه لكل الكتب.</li>
+  </ul>
+  <p>يمكنك أيضًا تغييره دون مغادرة الكتاب: انقر على منتصف الصفحة لإظهار أشرطة الأدوات، ثم انقر على زر <kbd>Aa</kbd> في الشريط السفلي. يسري التغيير على الصفحة التي تقرأها فورًا.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F44B;</span> ما يتبع الاتجاه</h3>
+  <ul>
+    <li>الجانب الذي يدفعك للأمام &mdash; في كتاب من اليمين إلى اليسار، يؤدي النقر أو السحب نحو اليسار إلى الانتقال إلى الصفحة التالية.</li>
+    <li>حركة تقليب الصفحة، التي تُقلِّب من الجانب الصحيح.</li>
+    <li>تخطيط النص على الصفحة.</li>
+  </ul>
+  <div class="tip"><strong>ملاحظة:</strong> يمتلئ شريط التقدم دائمًا من اليسار، لأنه يوضح مدى تقدمك في الكتاب وليس موضع الصفحة على الشاشة.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x2139;</span> أين يُطبَّق</h3>
+  <p>هذا الإعداد لملفات EPUB في وضع تقليب الصفحات &mdash; ويُخفى أثناء تفعيل التمرير المستمر. للقصص المصورة إعداد ترتيب قراءة خاص بها (انظر <a href="#reading-comics">قراءة القصص المصورة</a>)، وتتبع <a href="#fixed-layout">الكتب ذات التخطيط الثابت</a> دائمًا الاتجاه المُعلَن في الكتاب.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; العودة للأعلى</a>
+
+<!-- VERTICAL WRITING -->
+<h2 id="vertical-writing">الكتابة العمودية</h2>
+<p class="section-desc">الكتب اليابانية والصينية المُنضَّدة في أعمدة عمودية.</p>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x2B07;</span> الكتب العمودية</h3>
+  <p>تُعرض الكتب المُنضَّدة عموديًا &mdash; اليابانية بأسلوب تاتيغاكي (&#x7E26;&#x66F8;&#x304D;) والصينية التقليدية (&#x76F4;&#x6392;) &mdash; بالشكل الذي نُضِّدت به: يسري النص من الأعلى إلى الأسفل في أعمدة تمتلئ من اليمين إلى اليسار، وتُقلَّب الصفحات نحو اليسار، بنفس طريقة قراءة المانغا.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x2699;</span> اتجاه الكتابة</h3>
+  <p>افتح <kbd>الإعدادات</kbd> &rarr; <kbd>تفضيلات القراءة</kbd> &rarr; <kbd>الكتب</kbd> واستخدم عنصر التحكم <strong>اتجاه الكتابة</strong>:</p>
+  <ul>
+    <li><strong>تلقائي</strong> (الافتراضي) &mdash; يتبع تخطيط كل كتاب كما هو. الكتاب الذي نُضِّد عموديًا يُعرض عموديًا؛ ولا يتأثر أي كتاب آخر.</li>
+    <li><strong>أفقي</strong> &mdash; اعرض كل كتاب أفقيًا، حتى الكتب المُنضَّدة عموديًا.</li>
+    <li><strong>عمودي</strong> &mdash; اعرض كل كتاب في أعمدة عمودية.</li>
+  </ul>
+  <p>يتوفر عنصر التحكم نفسه في إعدادات القارئ، ضمن زر <kbd>Aa</kbd>.</p>
+  <div class="tip"><strong>ملاحظة:</strong> تُطبَّق التغييرات في المرة التالية لفتح كتاب &mdash; يحتفظ الكتاب المفتوح حاليًا على الشاشة بالتخطيط الذي فُتح به.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x2139;</span> معلومة مفيدة</h3>
+  <ul>
+    <li>تستخدم الكتب العمودية دائمًا وضع تقليب الصفحات، لذا لا يتوفر لها التمرير المستمر ولا التمرير التلقائي.</li>
+    <li>لا تُستخدم حركة الانزلاق بين الصفحات مع الكتب العمودية &mdash; بل تُقلَّب بحركة القلب بدلًا منها.</li>
+    <li>تعمل الإشارات المرجعية والتمييزات وقائمة المحتويات والبحث داخل الكتاب وتحويل النص إلى كلام كلها كالمعتاد.</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; العودة للأعلى</a>
+
+<!-- READING COMICS -->
+<h2 id="reading-comics">قراءة القصص المصورة</h2>
+<p class="section-desc">قراءة CBZ و CBR و CB7.</p>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4F1;</span> أوضاع القراءة</h3>
+  <ul>
+    <li><strong>من اليسار لليمين</strong> &mdash; ترتيب الصفحات الغربي القياسي.</li>
+    <li><strong>من اليمين لليسار</strong> &mdash; ترتيب قراءة المانغا.</li>
+    <li><strong>ويبتون / تمرير عمودي</strong> &mdash; تمرير عمودي سلس للقصص المصورة الطويلة.</li>
+  </ul>
+  <p>عيّن الافتراضي العام في <kbd>الإعدادات</kbd> &rarr; <kbd>تفضيلات القراءة</kbd> &rarr; <kbd>القصص المصورة</kbd>، أو غيّره لكل كتاب من صفحة تفاصيله.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F50E;</span> تحجيم الصفحة</h3>
+  <ul>
+    <li><strong>ملاءمة الشاشة</strong> &mdash; الصفحة كاملة مرئية.</li>
+    <li><strong>ملاءمة العرض</strong> &mdash; يملأ العرض، مع تمرير عمودي عند الحاجة.</li>
+    <li><strong>ملاءمة الارتفاع</strong> &mdash; يملأ الارتفاع.</li>
+    <li><strong>الحجم الأصلي</strong> &mdash; عرض بكسل بنسبة 1:1.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F44B;</span> الإيماءات</h3>
+  <ul>
+    <li>اسحب يسارًا/يمينًا لتقليب الصفحات (الأوضاع المقسّمة).</li>
+    <li>قارب بين إصبعيك أو انقر نقرًا مزدوجًا للتكبير، ثم اسحب للتنقل. انظر <a href="#comic-zoom">تكبير صفحات القصص المصورة</a>.</li>
+    <li>انقر على وسط الصفحة لإظهار أو إخفاء شريط الأدوات.</li>
+    <li>استخدم شريط تمرير الصفحات في الأسفل للانتقال بسرعة.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x26A0;</span> تنبيه أرشيف مشبوه</h3>
+  <p>عند فتح أرشيف قصص مصورة (CBZ أو CBR أو CB7) تبدو محتوياته كبيرة بشكل غير عادي أو مضغوطة بقوة مفرطة &mdash; وهو النمط الذي تستخدمه ملفات &ldquo;القنبلة المضغوطة&rdquo; المصممة لإرهاق الذاكرة &mdash; يعرض التطبيق تنبيه <strong>أرشيف مشبوه</strong> قبل استخراج أي شيء.</p>
+  <ul>
+    <li>انقر على <kbd>إلغاء</kbd> لترك الملف دون فتحه. هذا هو الخيار الآمن للأرشيفات من مصادر غير معروفة.</li>
+    <li>انقر على <kbd>افتح على أي حال</kbd> إن كنت تثق في الملف &mdash; سيتجاوز التطبيق فحص الأمان ويحمّل الصفحات.</li>
+  </ul>
+  <p>تستخدم ملفات EPUB الحماية نفسها بصمت أثناء الاستيراد.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; العودة للأعلى</a>
+
+<!-- COMIC ZOOM -->
+<h2 id="comic-zoom">تكبير صفحات القصص المصورة</h2>
+<p class="section-desc">اقترب أكثر من الرسوم &mdash; في أوضاع الصفحات وفي التمرير بأسلوب الويبتون على حدٍّ سواء.</p>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F50D;</span> أوضاع الصفحات</h3>
+  <ul>
+    <li>قارب بين إصبعيك للتكبير، حتى ثلاثة أضعاف الحجم المُلائم. يبقى الرسم تحت أصابعك أثناء التقريب.</li>
+    <li>انقر نقرًا مزدوجًا للانتقال إلى ضعف الحجم عند تلك النقطة؛ وانقر نقرًا مزدوجًا مجددًا لإعادة ملاءمة الصفحة مع الشاشة.</li>
+    <li>اسحب بإصبع واحدة للتنقل أثناء التكبير.</li>
+    <li>تقريب إصبعيك للخلف بالكامل تقريبًا يُعيد الصفحة بدقّة إلى وضع الملاءمة.</li>
+  </ul>
+  <p>يعمل التكبير مع خياري تحجيم <strong>ملاءمة الشاشة</strong> و<strong>ملاءمة الارتفاع</strong>، ومع الصفحات المزدوجة. أما <strong>ملاءمة العرض</strong> و<strong>الحجم الأصلي</strong> فيعرضان الصفحة أكبر من الشاشة أصلًا ويتم التمرير بدلًا من ذلك &mdash; استخدم <kbd>عرض الدقة الكاملة</kbd> أدناه لرؤية أقرب هناك.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4F1;</span> التمرير بأسلوب الويبتون</h3>
+  <ul>
+    <li>قارب بين إصبعيك أو انقر نقرًا مزدوجًا لتكبير الشريط بالكامل، حتى ثلاثة أضعاف حجمه الطبيعي.</li>
+    <li>يستمر التمرير في العمل أثناء التكبير &mdash; فقط اسحب لأعلى ولأسفل كالمعتاد.</li>
+    <li>اسحب جانبيًا للتنقل عبر صفحة مُكبَّرة.</li>
+    <li>يبقى مستوى التكبير كما هو أثناء استمرار التمرير، بحيث يمكنك قراءة فصل كامل مُكبَّرًا. يعيد تدوير الجهاز الحجم إلى وضعه الطبيعي.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x2728;</span> عرض الدقة الكاملة</h3>
+  <p>يعرض التكبير العادي الصفحة مُكبَّرة بالحجم الذي أُعِدَّت به لشاشتك. للحصول على أوضح رؤية ممكنة لصفحة واحدة، اضغط عليها مطولًا واختر <kbd>عرض الدقة الكاملة</kbd> &mdash; تُفكَّك تلك الصفحة بدقة الأرشيف الأصلية، ويمكنك التقريب إليها أكثر بكثير. ينقل النقر المزدوج بين ملاءمة الشاشة وضعف الحجم؛ اسحب لأسفل أو انقر على زر الإغلاق للعودة.</p>
+  <div class="tip"><strong>ملاحظة:</strong> لا يُحفظ مستوى التكبير. يعود إغلاق الكتاب دائمًا إلى الملاءمة العادية.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; العودة للأعلى</a>
+
+<!-- TTS -->
+<h2 id="tts">تحويل النص إلى كلام و CarPlay</h2>
+<p class="section-desc">استمع إلى كتبك مقروءة بصوت عالٍ.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F50A;</span> استخدام تحويل النص إلى كلام</h3>
+  <p>افتح أي كتاب EPUB أو PDF أو TXT وانقر على زر التشغيل في شريط الأدوات. يقرأ النظام جملة واحدة في كل مرة ويميّز الكلمة الحالية.</p>
+  <ul>
+    <li><strong>السرعة</strong> &mdash; من 0.5&times; إلى 2&times; في عناصر التحكم.</li>
+    <li><strong>الصوت</strong> &mdash; اختر من أكثر من 100 صوت نظام في <kbd>الإعدادات</kbd> &rarr; <kbd>تفضيلات القراءة</kbd> &rarr; <kbd>تحويل النص إلى كلام</kbd>.</li>
+    <li><strong>التخطي</strong> &mdash; انقر على التالي/السابق للتنقل بين الجمل أو الفصول.</li>
+  </ul>
+  <div class="tip"><strong>ملاحظة:</strong> <a href="#fixed-layout">الكتب ذات التخطيط الثابت</a> &mdash; القصص المصورة والكتب المصورة التي صفحاتها تصاميم ثابتة &mdash; لا تحتوي على نص يمكن للتطبيق قراءته بصوت عالٍ، لذا لا يظهر زر التشغيل لها.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F697;</span> CarPlay</h3>
+  <p>عند الاتصال بمركبة متوافقة مع CarPlay، يظهر التطبيق على شاشة سيارتك مع عناصر تحكم مبسطة. يستمر التشغيل في الخلفية &mdash; لا حاجة لإبقاء الشاشة مضاءة.</p>
+  <div class="tip"><strong>نصيحة:</strong> فعّل <kbd>الصوت في الخلفية</kbd><span class="badge badge-premium">Premium</span> في إعدادات تحويل النص إلى كلام لمواصلة التشغيل عندما يكون التطبيق في الخلفية، حتى بدون CarPlay.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; العودة للأعلى</a>
+
+<!-- AI UPSCALING -->
+<h2 id="upscaling">تحسين القصص المصورة بالذكاء الاصطناعي</h2>
+<p class="section-desc">حسّن صفحات القصص المصورة منخفضة الدقة على الجهاز.<span class="badge badge-premium">Premium</span></p>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x2728;</span> ماذا يفعل</h3>
+  <p>يستخدم نموذج تعلم آلي على الجهاز لتحسين صفحات القصص المصورة التي تقل دقتها عن حد معين. النتيجة هي خطوط أوضح وعيوب ضغط أقل ظهورًا &mdash; مفيد بشكل خاص للمسح القديم أو منخفض الجودة.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x2699;</span> الإعداد</h3>
+  <ol class="steps">
+    <li>انتقل إلى <kbd>الإعدادات</kbd> &rarr; <kbd>تفضيلات القراءة</kbd> &rarr; <kbd>القصص المصورة</kbd> &rarr; <kbd>التحسين بالذكاء الاصطناعي</kbd>.</li>
+    <li>فعّله.</li>
+    <li>عدّل <strong>حد الدقة</strong> &mdash; الصفحات التي يقل عرضها بالبكسل عن هذا الحد يتم تحسينها (الافتراضي: 1500 بكسل).</li>
+    <li>عيّن <strong>نافذة الجلب المسبق</strong> للتحكم في عدد الصفحات القادمة التي تتم معالجتها مسبقًا في الخلفية.</li>
+    <li>اختر <strong>مستوى إزالة الضوضاء</strong> (تلقائي هو الأفضل عادة).</li>
+  </ol>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4BE;</span> ذاكرة التخزين المؤقت والمساحة</h3>
+  <p>تُخزَّن الصور المحسّنة مؤقتًا حتى لا تحتاج لإعادة المعالجة. اختر مدة الاحتفاظ بالذاكرة المؤقتة (7&ndash;90 يومًا أو بدون انتهاء)، وامسحها في أي وقت من الإعدادات.</p>
+  <div class="tip"><strong>نصيحة:</strong> تظهر شارة مؤشر صغيرة على الصفحات المحسّنة. يمكنك إيقافها من الإعدادات إن أردت.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; العودة للأعلى</a>
+
+<!-- HIDDEN MODE -->
+<h2 id="hidden">الكتب المخفية</h2>
+<p class="section-desc">حافظ على خصوصية بعض الكتب.<span class="badge badge-premium">Premium</span></p>
+
+<div class="card">
+  <h3><span class="icon icon-indigo">&#x1F441;</span> إخفاء الكتب</h3>
+  <ol class="steps">
+    <li>افتح صفحة تفاصيل الكتاب وانقر على القائمة (&hellip;).</li>
+    <li>اختر <kbd>إخفاء الكتاب</kbd>.</li>
+    <li>يختفي الكتاب من عرض المكتبة العادي.</li>
+  </ol>
+  <p>لإخفاء عدة كتب دفعة واحدة، استخدم وضع التحديد.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F513;</span> عرض الكتب المخفية</h3>
+  <p>اسحب للأسفل في المكتبة لتفعيل <strong>الوضع المخفي</strong>. تظهر جميع كتبك &mdash; المخفية والمرئية &mdash; الآن. اسحب مرة أخرى أو غادر التطبيق للخروج من الوضع المخفي.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F512;</span> خيارات الخصوصية</h3>
+  <p>عندما يكون الوضع المخفي نشطًا، انتقل إلى <kbd>الإعدادات</kbd> &rarr; <kbd>الوضع المخفي</kbd> لاختيار ما يحدث عند مغادرة التطبيق:</p>
+  <ul>
+    <li><strong>خروج تلقائي</strong> (افتراضي) &mdash; يُغلق الوضع المخفي تلقائيًا. سريع وبسيط.</li>
+    <li><strong>طلب Face ID / Touch ID</strong> &mdash; يبقى الوضع المخفي نشطًا، لكن يتطلب مصادقة بيومترية عند العودة. أكثر أمانًا.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x21A9;</span> إظهار الكتب</h3>
+  <p>أثناء الوضع المخفي، افتح تفاصيل كتاب مخفي واختر <kbd>إظهار الكتاب</kbd>، أو استخدم وضع التحديد لإظهار عدة كتب دفعة واحدة.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x2601;</span> مزامنة الكتب المخفية</h3>
+  <p>في الوضع المخفي، انتقل إلى <kbd>الإعدادات</kbd> &rarr; <kbd>الوضع المخفي</kbd> وفعّل <kbd>مزامنة الكتب المخفية مع iCloud</kbd>:</p>
+  <ul>
+    <li><strong>إيقاف</strong> (الافتراضي) &mdash; تبقى الكتب المخفية على هذا الجهاز فقط. إخفاء كتاب يزيله أيضًا من iCloud.</li>
+    <li><strong>تفعيل</strong> &mdash; تتم مزامنة الكتب المخفية عبر iCloud لكنها تبقى مخفية على كل جهاز مسجّل الدخول فيه.</li>
+  </ul>
+  <p>إيقاف المفتاح أثناء وجود كتب مخفية بالفعل في iCloud يسألك عمّا تريد فعله بها:</p>
+  <ul>
+    <li><strong>الاحتفاظ بها على جميع الأجهزة</strong> &mdash; تحتفظ أجهزتك الأخرى بنسخها المتزامنة؛ ويحتفظ هذا الجهاز بنسخة خاصة محلية فقط.</li>
+    <li><strong>الإزالة من iCloud نهائيًا</strong> &mdash; يزيل الكتب من iCloud؛ ويحتفظ كل جهاز آخر بنسخته الخاصة في مكتبته المخفية.</li>
+  </ul>
+  <div class="tip"><strong>ملاحظة:</strong> إذا أزال أحد أجهزتك الأخرى كتابًا مخفيًا من iCloud، يحتفظ هذا الجهاز تلقائيًا بنسخته الخاصة في المكتبة المخفية &mdash; طالما كان ملف الكتاب قد نُزِّل عليه بالفعل.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F5D1;</span> حذف الكتب المخفية نهائيًا</h3>
+  <p>في الوضع المخفي، انتقل إلى <kbd>الإعدادات</kbd> &rarr; <kbd>الوضع المخفي</kbd> واختر <kbd>حذف الكتب المخفية نهائيًا</kbd> لإزالة كل كتاب مخفي من هذا الجهاز، ومن iCloud، ومن أجهزتك الأخرى. اكتب <kbd>DELETE</kbd> للتأكيد.</p>
+  <div class="tip"><strong>تحذير:</strong> لا يمكن التراجع عن هذا الإجراء. الأجهزة غير المتصلة بالإنترنت في ذلك الوقت تحتفظ بنسخها المحلية حتى تتم مزامنتها في المرة التالية.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; العودة للأعلى</a>
+
+<!-- BOOKMARKS, HIGHLIGHTS, TAGS -->
+<h2 id="bookmarks">الإشارات المرجعية والتمييزات والوسوم</h2>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F516;</span> الإشارات المرجعية</h3>
+  <p>انقر على أيقونة الإشارة المرجعية في شريط أدوات القارئ لحفظ الصفحة الحالية. أضف ملاحظة اختيارية. اعرض جميع الإشارات المرجعية لكتاب من صفحة تفاصيله.</p>
+  <div class="tip"><strong>ملاحظة:</strong> لا تظهر هنا سوى الإشارات المرجعية التي أنشأتها يدويًا. أما المواضع التي يحفظها التطبيق تلقائيًا عند إغلاق كتاب فتُحفظ بشكل منفصل في <a href="#history">سجل القراءة</a> حتى لا تزاحم إشاراتك الخاصة.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F58D;</span> التمييزات<span class="badge badge-premium">Premium</span></h3>
+  <p>في ملفات EPUB، حدد نصًا لتمييزه. اختر من خمسة ألوان (أصفر، وردي، أخضر، أزرق، برتقالي) وأضف ملاحظات. جميع التمييزات مُدرجة في صفحة تفاصيل الكتاب.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F3F7;</span> الوسوم</h3>
+  <p>أضف وسومًا لأي كتاب من صفحة تفاصيله. الوسوم قابلة للبحث ويمكن استخدامها كمرشحات في المكتبة. أدِر جميع الوسوم من <kbd>الإعدادات</kbd> &rarr; <kbd>الوسوم</kbd>.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; العودة للأعلى</a>
+
+<!-- READING HISTORY -->
+<h2 id="history">سجل القراءة</h2>
+<p class="section-desc">ارجع إلى أي موضع كنت فيه مؤخرًا.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F552;</span> الحفظ التلقائي</h3>
+  <p>في كل مرة تُغلق فيها كتابًا أو ترسل التطبيق إلى الخلفية، يُحفظ موضعك الحالي كإدخال في السجل &mdash; لا حاجة لتذكّر وضع إشارة مرجعية. يعمل ذلك في جميع القرّاء: EPUB و PDF و TXT/RTF والقصص المصورة.</p>
+  <ul>
+    <li>يُحتفظ بـ <strong>50</strong> موضعًا حديثًا كحد أقصى لكل كتاب. تُزال الإدخالات الأقدم تلقائيًا عند وصول إدخالات جديدة.</li>
+    <li>إغلاق الكتاب مرة أخرى عند الموضع نفسه خلال دقائق قليلة يحدّث الإدخال الموجود بدلًا من إنشاء نسخة مكررة.</li>
+    <li>تُحفظ المواضع المحفوظة تلقائيًا منفصلة عن قائمة إشاراتك المرجعية اليدوية حتى لا تختلط بتلك التي تضعها عمدًا.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4D6;</span> السجل داخل الكتاب</h3>
+  <p>أثناء القراءة، انقر على قائمة المزيد (&hellip;) في أعلى اليمين واختر <kbd>سجل القراءة</kbd>. ستظهر قائمة بمواضعك الحديثة في ذلك الكتاب، الأحدث أولًا، مع اسم الفصل أو الصفحة ومنذ متى سُجِّل كل منها.</p>
+  <ul>
+    <li>انقر على أي إدخال للانتقال مباشرة إلى ذلك الموضع.</li>
+    <li>اسحب يسارًا على إدخال لإزالته.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F4DA;</span> السجل عبر مكتبتك</h3>
+  <p>من المكتبة، انقر على قائمة المزيد (&hellip;) في شريط الأدوات العلوي واختر <kbd>سجل القراءة</kbd> لعرض كل كتاب فتحته مؤخرًا، مجمَّعًا حسب اليوم. انقر على صف لفتح الكتاب من حيث توقفت.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; العودة للأعلى</a>
+
+<!-- AUTHOR & TAG BROWSING -->
+<h2 id="search">تصفح المؤلف والوسوم</h2>
+<p class="section-desc">اعثر على الكتب حسب المؤلف أو الوسم من أي مكان في التطبيق.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F464;</span> المؤلفون</h3>
+  <p>انتقل إلى <kbd>الإعدادات</kbd> &rarr; <kbd>المؤلفون</kbd> لعرض جميع المؤلفين في مكتبتك مع عدد كتب كل منهم. انقر على مؤلف للبحث في المكتبة عن جميع كتبه.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F3F7;</span> البحث بالوسوم</h3>
+  <p>في <kbd>الإعدادات</kbd> &rarr; <kbd>الوسوم</kbd>، انقر على أي وسم للبحث في المكتبة عن الكتب التي تحمله. اضغط مطولًا لإعادة التسمية أو الحذف.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F50D;</span> بحث سريع من السياق</h3>
+  <ul>
+    <li>اضغط مطولًا على كتاب في المكتبة &rarr; <kbd>البحث عن كتب [المؤلف]</kbd></li>
+    <li>في صفحة تفاصيل الكتاب، اضغط مطولًا على اسم المؤلف أو أي وسم للبحث</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; العودة للأعلى</a>
+
+<!-- METADATA -->
+<h2 id="metadata">البيانات الوصفية و ComicInfo.xml</h2>
+<p class="section-desc">اعرض البيانات الوصفية للكتاب وعدّلها.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x270F;</span> محرّر البيانات الوصفية</h3>
+  <p>من صفحة تفاصيل الكتاب، انقر على القائمة (&hellip;) واختر <kbd>تعديل البيانات الوصفية</kbd> لتغيير العنوان والمؤلف والسلسلة والوصف وحقول أخرى. يمكنك أيضًا إعادة استخراج البيانات الوصفية من الملف الأصلي.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4CB;</span> ComicInfo.xml</h3>
+  <p>أرشيفات القصص المصورة (CBZ و CBR و CB7) التي تحتوي على ملف <code>ComicInfo.xml</code> تُستخرج بياناتها الوصفية تلقائيًا عند الاستيراد &mdash; بما في ذلك العنوان والكاتب والسلسلة ورقم العدد والملخص والناشر والنوع والوسوم.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; العودة للأعلى</a>
+
+<!-- ICLOUD -->
+<h2 id="icloud">مزامنة iCloud</h2>
+<p class="section-desc">حافظ على مزامنة مكتبتك عبر الأجهزة.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x2601;</span> تفعيل المزامنة</h3>
+  <ol class="steps">
+    <li>انتقل إلى <kbd>الإعدادات</kbd> &rarr; <kbd>مزامنة iCloud</kbd>.</li>
+    <li>فعّل <kbd>مزامنة المكتبة مع iCloud</kbd>.</li>
+    <li>تسري المزامنة عند التشغيل التالي للتطبيق.</li>
+  </ol>
+  <p>تتم مزامنة البيانات الوصفية وتقدم القراءة والإشارات المرجعية والتمييزات والأرفف عبر جميع الأجهزة المسجلة في نفس حساب iCloud.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F4CA;</span> حالة المزامنة</h3>
+  <p><kbd>الإعدادات</kbd> &rarr; <kbd>مزامنة iCloud</kbd> تعرض بطاقة حالة لملفات كتبك:</p>
+  <ul>
+    <li>عنوان رئيسي &mdash; <strong>محدّث</strong>، أو <strong>جارٍ المزامنة&hellip;</strong> (مع عدد)، أو <strong>غير مسجّل الدخول</strong>.</li>
+    <li>شريط يُظهر مقدار ملفات مكتبتك الموجودة في iCloud.</li>
+    <li>تفصيل &mdash; <strong>متزامن</strong> (مع الحجم الإجمالي)، و<strong>على iCloud فقط</strong> (لم يُنزَّل بعد على هذا الجهاز)، و<strong>قيد التقدم</strong>.</li>
+  </ul>
+  <div class="tip"><strong>ملاحظة:</strong> تتعقب هذه البطاقة <em>ملفات</em> الكتب فقط. تقدم القراءة والإشارات المرجعية والتمييزات والأرفف تتزامن بشكل منفصل وتلقائي، بغض النظر عن حالة الملف.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x2601;</span> شارات الأغلفة</h3>
+  <p>تُظهر أغلفة الكتب رمز سحابة صغير في الزاوية السفلية لتوضيح حالة مزامنة الملف:</p>
+  <ul>
+    <li><strong>أيقونة السحابة</strong> &mdash; الملف موجود على iCloud فقط. افتح صفحة الكتاب لتنزيله.</li>
+    <li><strong>أسهم لأعلى/أسفل</strong> &mdash; الملف قيد الرفع أو التنزيل حاليًا.</li>
+    <li><strong>بدون رمز</strong> &mdash; الملف موجود بالفعل على هذا الجهاز.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4E5;</span> التحميل التلقائي</h3>
+  <p>اختر الحد الأقصى لحجم الملف للتحميل التلقائي. تبقى الكتب الأكبر في السحابة حتى تفتحها. عدّل الحد في إعدادات iCloud.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; العودة للأعلى</a>
+
+<!-- STATS -->
+<h2 id="stats">إحصائيات القراءة</h2>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F4CA;</span> نشاط القراءة الخاص بك</h3>
+  <p>افتح <kbd>الإعدادات</kbd> &rarr; <kbd>إحصائيات المكتبة</kbd> لعرض:</p>
+  <ul>
+    <li>إجمالي الكتب والصفحات المقروءة ووقت القراءة.</li>
+    <li>رسم بياني لنشاط القراءة اليومي.</li>
+    <li>الكتب حسب الصيغة وحالة القراءة.</li>
+    <li>تفصيل النشاط لكل كتاب.</li>
+  </ul>
+  <div class="tip"><strong>ملاحظة:</strong> تحترم الإحصائيات الوضع المخفي &mdash; عندما يكون الوضع المخفي معطلًا، تُستبعد إحصائيات الكتب المخفية.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; العودة للأعلى</a>
+
+<!-- WEBDAV & OPDS -->
+<h2 id="webdav">WebDAV و OPDS</h2>
+<p class="section-desc">تصفّح وحمّل من الخوادم البعيدة والفهارس.</p>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F5C4;</span> WebDAV</h3>
+  <p>اتصل بخادم NAS أو Nextcloud أو Calibre لتصفح المجلدات وتحميل الكتب.</p>
+  <ol class="steps">
+    <li>انتقل إلى <kbd>الإعدادات</kbd> &rarr; <kbd>استيراد الكتب</kbd> &rarr; <kbd>WebDAV</kbd>.</li>
+    <li>انقر على <kbd>إضافة خادم</kbd> وأدخل عنوان URL.</li>
+    <li>أضف اسم المستخدم وكلمة المرور إن لزم الأمر.</li>
+    <li>انقر على <kbd>اختبار الاتصال</kbd>، ثم احفظ.</li>
+  </ol>
+  <div class="tip"><strong>الشهادات الموقّعة ذاتيًا:</strong> إذا كان خادمك يستخدم شهادة موقّعة ذاتيًا، فيمكنك تفعيل <kbd>السماح بالشهادات غير الموثوقة</kbd>. سيطلب منك التطبيق التأكيد أولًا &mdash; يؤدي هذا إلى تعطيل التحقق من TLS، لذا يمكن لأي شخص على شبكتك انتحال هوية الخادم. لا تفعّله إلا لخادم تتحكم به.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4DA;</span> فهارس OPDS</h3>
+  <p>OPDS هو معيار مفتوح لفهارس الكتب. أضف فهارس عامة (Project Gutenberg، Standard Ebooks، إلخ) أو خادمك الخاص.</p>
+  <ol class="steps">
+    <li>انتقل إلى <kbd>الإعدادات</kbd> &rarr; <kbd>استيراد الكتب</kbd> &rarr; <kbd>OPDS</kbd>.</li>
+    <li>انقر على <kbd>إضافة فهرس</kbd> وأدخل عنوان URL للتغذية.</li>
+    <li>تصفّح الفئات وحمّل الكتب إلى مكتبتك.</li>
+  </ol>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; العودة للأعلى</a>
+
+<!-- RESUME -->
+<h2 id="resume">الاستئناف عند التشغيل</h2>
+<p class="section-desc">تابع من حيث توقفت تلقائيًا.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x25B6;</span> الإعداد</h3>
+  <p>انتقل إلى <kbd>الإعدادات</kbd> &rarr; <kbd>عام</kbd> وفعّل <kbd>استئناف آخر كتاب عند بدء التشغيل</kbd>. في المرة التالية التي تفتح فيها التطبيق، سينتقل مباشرة إلى الكتاب والصفحة التي كنت تقرأها آخر مرة.</p>
+  <div class="tip"><strong>الكتب المخفية:</strong> إذا كان آخر كتاب قرأته مخفيًا، سيطلب التطبيق Face ID / Touch ID قبل الاستئناف. فعّل <kbd>استئناف الكتاب المخفي بعد المصادقة</kbd> في إعدادات الوضع المخفي للسماح بذلك.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; العودة للأعلى</a>
+
+<!-- FORMATS -->
+<h2 id="formats">الصيغ المدعومة</h2>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4D6;</span> الكتب</h3>
+  <div class="formats-grid">
+    <div class="format-tag">EPUB</div>
+    <div class="format-tag">PDF</div>
+    <div class="format-tag">TXT</div>
+    <div class="format-tag">RTF</div>
+  </div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4F1;</span> القصص المصورة</h3>
+  <div class="formats-grid">
+    <div class="format-tag">CBZ</div>
+    <div class="format-tag">CBR</div>
+    <div class="format-tag">CB7</div>
+  </div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; العودة للأعلى</a>
+
+</body>
+</html>

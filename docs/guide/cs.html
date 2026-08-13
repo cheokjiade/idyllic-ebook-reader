@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Uživatelská příručka</title>
+<link rel="stylesheet" href="UserGuideStyle.css">
+<!-- USER-GUIDE-NAV-STYLE:START -->
+<style>
+.guide-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 14px;
+  padding: 10px 14px;
+  margin: 0 0 16px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  font-size: 13px;
+}
+.guide-nav-home {
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.guide-nav-arrow {
+  display: inline-block;
+}
+[dir="rtl"] .guide-nav-arrow {
+  transform: scaleX(-1);
+}
+.guide-nav-langs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 10px;
+  color: var(--secondary);
+}
+.guide-nav-globe {
+  font-size: 13px;
+}
+.guide-nav-langs a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.guide-nav-langs a:hover,
+.guide-nav-langs a:focus-visible {
+  text-decoration: underline;
+}
+.guide-nav-current {
+  font-weight: 700;
+  color: var(--text);
+}
+</style>
+<!-- USER-GUIDE-NAV-STYLE:END -->
+</head>
+<body id="top">
+<!-- USER-GUIDE-NAV:START -->
+<nav class="guide-nav" aria-label="User Guide language switcher">
+  <a class="guide-nav-home" href="../index.html"><span class="guide-nav-arrow" aria-hidden="true">&larr;</span> Idyllic</a>
+  <span class="guide-nav-langs">
+    <span class="guide-nav-globe" aria-hidden="true">&#x1F310;</span>
+      <a href="index.html">English</a>
+      <a href="ar.html">العربية</a>
+      <span class="guide-nav-current">Čeština</span>
+      <a href="da.html">Dansk</a>
+      <a href="de.html">Deutsch</a>
+      <a href="es.html">Español</a>
+      <a href="fi.html">Suomi</a>
+      <a href="fr.html">Français</a>
+      <a href="he.html">עברית</a>
+      <a href="hi.html">हिन्दी</a>
+      <a href="id.html">Indonesia</a>
+      <a href="it.html">Italiano</a>
+      <a href="ja.html">日本語</a>
+      <a href="ko.html">한국어</a>
+      <a href="ms.html">Bahasa Melayu</a>
+      <a href="nb.html">Norsk bokmål</a>
+      <a href="nl.html">Nederlands</a>
+      <a href="pl.html">Polski</a>
+      <a href="pt-BR.html">Português (Brasil)</a>
+      <a href="ru.html">Русский</a>
+      <a href="sv.html">Svenska</a>
+      <a href="th.html">ไทย</a>
+      <a href="tr.html">Türkçe</a>
+      <a href="uk.html">Українська</a>
+      <a href="vi.html">Tiếng Việt</a>
+      <a href="zh-Hans.html">简体中文</a>
+      <a href="zh-Hant.html">繁體中文</a>
+  </span>
+</nav>
+<!-- USER-GUIDE-NAV:END -->
+
+<h1>Uživatelská příručka</h1>
+<p class="subtitle">Vše, co potřebujete k tomu, abyste ze čtení vytěžili maximum.</p>
+
+<!-- TABLE OF CONTENTS -->
+<div class="card toc">
+  <a href="#importing">Import knih</a>
+  <a href="#wifi">WiFi přenos</a>
+  <a href="#library">Knihovna a organizace</a>
+  <a href="#shelves">Police a složky</a>
+  <a href="#reading-books">Čtení knih</a>
+  <a href="#fixed-layout">Knihy s pevným rozvržením</a>
+  <a href="#in-book-search">Hledání v knize</a>
+  <a href="#image-gallery">Galerie obrázků</a>
+  <a href="#fonts">Písma pro čtení</a>
+  <a href="#reading-direction">Směr čtení</a>
+  <a href="#vertical-writing">Svislé psaní</a>
+  <a href="#reading-comics">Čtení komiksů</a>
+  <a href="#comic-zoom">Přibližování komiksových stránek</a>
+  <a href="#tts">Převod textu na řeč a CarPlay</a>
+  <a href="#upscaling">AI zvětšování komiksů</a>
+  <a href="#hidden">Skryté knihy</a>
+  <a href="#bookmarks">Záložky, zvýraznění a štítky</a>
+  <a href="#history">Historie čtení</a>
+  <a href="#search">Procházení podle autora a štítků</a>
+  <a href="#metadata">Metadata a ComicInfo.xml</a>
+  <a href="#icloud">Synchronizace iCloud</a>
+  <a href="#stats">Statistiky čtení</a>
+  <a href="#webdav">WebDAV a OPDS</a>
+  <a href="#resume">Pokračování při spuštění</a>
+  <a href="#formats">Podporované formáty</a>
+</div>
+
+<!-- IMPORTING -->
+<h2 id="importing">Import knih</h2>
+<p class="section-desc">Několik způsobů, jak přidat knihy do knihovny.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4C1;</span> Z aplikace Soubory</h3>
+  <p>Klepněte na <kbd>Nastavení</kbd> &rarr; <kbd>Import knih</kbd> a vyberte soubory ze zařízení, iCloud Drive nebo jakékoli připojené cloudové služby. Na iPadu můžete také použít přetažení.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F310;</span> WiFi přenos</h3>
+  <p>Nahrajte knihy z libovolného počítače nebo telefonu ve vaší WiFi síti. Podrobnosti najdete v příslušné sekci níže.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F5C2;</span> WebDAV a OPDS</h3>
+  <p>Připojte se k NAS, serveru Calibre nebo veřejnému katalogu knih a procházejte a stahujte knihy přímo. Viz níže.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Zpět nahoru</a>
+
+<!-- WIFI TRANSFER -->
+<h2 id="wifi">WiFi přenos</h2>
+<p class="section-desc">Nahrajte knihy z libovolného zařízení ve vaší místní síti.</p>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F4F6;</span> Jak to funguje</h3>
+  <p>Aplikace spustí na vašem zařízení malý webový server. Jakýkoli počítač nebo telefon ve stejné WiFi síti může otevřít stránku pro nahrávání v prohlížeči.</p>
+  <ol class="steps">
+    <li>Přejděte do <kbd>Nastavení</kbd> &rarr; <kbd>Import knih</kbd> &rarr; <kbd>WiFi přenos</kbd>.</li>
+    <li>Klepněte na <kbd>Spustit server</kbd>. Zobrazí se adresa jako <kbd>http://192.168.1.42:8080</kbd>.</li>
+    <li>Otevřete tuto adresu v libovolném webovém prohlížeči ve stejné síti.</li>
+    <li>Přetáhněte soubory na stránku nebo klikněte pro procházení &mdash; případně vyberte cílovou složku.</li>
+    <li>Importované knihy se okamžitě objeví ve vaší knihovně.</li>
+    <li>Po dokončení klepněte na <kbd>Zastavit server</kbd>.</li>
+  </ol>
+  <div class="tip"><strong>Tip:</strong> Vaše zařízení zůstane vzhůru, dokud server běží, aby nebyly přenosy přerušeny.</div>
+  <div class="tip"><strong>Nahrávání selhalo?</strong> U každého souboru, který se nepodařilo nahrát, je důvod uveden přímo na řádku. Pokud dojde k přerušení připojení WiFi, klepněte na <kbd>&#x21BB; Zkusit znovu</kbd> v řádku a soubor odešlete znovu. U trvalých problémů (například nepodporovaný formát souboru) se tlačítko Zkusit znovu nezobrazí.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Zpět nahoru</a>
+
+<!-- LIBRARY -->
+<h2 id="library">Knihovna a organizace</h2>
+<p class="section-desc">Hledejte, řaďte a organizujte své knihy.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F50D;</span> Vyhledávání</h3>
+  <p>Klepněte na tlačítko <kbd>Search</kbd> ve spodní části knihovny, čímž rozbalíte vyhledávací pole, a klepnutím na <kbd>Hotovo</kbd> ho zavřete. Prohledává název, autora, štítky, sérii, nakladatele a popis. Vyhledávání podle autora nebo štítku z kontextové nabídky knihy (viz <a href="#search">Procházení podle autora a štítků</a>) vyplní stejné vyhledávání.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x2195;</span> Řazení a filtrování</h3>
+  <p>Klepněte na tlačítko možností zobrazení (vpravo nahoře) pro výběr:</p>
+  <ul>
+    <li><strong>Rozložení</strong> &mdash; Mřížka, Podrobné, Kompaktní, Minimalistické, Tabulka nebo Magazín</li>
+    <li><strong>Řazení</strong> &mdash; Název, Autor, Naposledy čteno, Datum přidání, Průběh, Velikost souboru, Série</li>
+    <li><strong>Zobrazení</strong> &mdash; Rozpracované knihy na začátku a dokončené na konci</li>
+    <li><strong>Filtr</strong> &mdash; Podle formátu, štítku nebo autora</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x2714;</span> Režim výběru</h3>
+  <p>Dlouze stiskněte knihu nebo klepněte na <kbd>Vybrat</kbd> pro vstup do režimu výběru. Poté můžete přesouvat, mazat, skrývat nebo odkrývat více knih najednou.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4CB;</span> Vyčistit duplicity</h3>
+  <p>Přejděte do <strong>Nastavení &gt; Knihovna &gt; Údržba knihovny &gt; Vyčistit duplicity</strong> a vyhledejte knihy se stejným názvem, autorem a formátem. Pro každou skupinu duplikátů:</p>
+  <ul>
+    <li><strong>Nejnovější verze</strong> je označena zeleným odznakem KEEP</li>
+    <li>Vyberte starší kopie pomocí zaškrtávacích políček (nebo <strong>Vybrat vše</strong>)</li>
+    <li><strong>Smazat</strong> &mdash; odstraní vybrané starší kopie</li>
+    <li><strong>Zkopírovat data a smazat</strong> &mdash; před smazáním přenese záložky, zvýraznění, štítky, postup ve čtení a přiřazení k poličce do nejnovější verze</li>
+    <li>Zapněte volbu <strong>„Přesunout novou knihu na poličku a stav skrytí staré knihy“</strong>, aby nová verze zůstala na stejném místě v knihovně</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Zpět nahoru</a>
+
+<!-- SHELVES -->
+<h2 id="shelves">Police a složky</h2>
+<p class="section-desc">Organizujte knihy do vnořených složek.</p>
+
+<div class="card">
+  <h3><span class="icon icon-indigo">&#x1F4C2;</span> Vytváření polic</h3>
+  <ol class="steps">
+    <li>Klepněte na <kbd>Nová police</kbd> v horní části knihovny.</li>
+    <li>Zadejte název a vyberte ikonu a barvu.</li>
+    <li>Volitelně zvolte nadřazenou polici pro vytvoření podsložky.</li>
+  </ol>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x21C4;</span> Přesouvání knih</h3>
+  <p>Na stránce s podrobnostmi o knize klepněte na nabídku (&hellip;) a zvolte <kbd>Přesunout na polici</kbd>. V režimu výběru můžete přesouvat více knih najednou.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Zpět nahoru</a>
+
+<!-- READING BOOKS -->
+<h2 id="reading-books">Čtení knih</h2>
+<p class="section-desc">Režimy čtení EPUB, PDF, TXT a RTF.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4D6;</span> EPUB</h3>
+  <p>Soubory EPUB se otevírají v plnohodnotné čtečce poháněné Readium. Klepněte na levý nebo pravý okraj pro otáčení stránek nebo přejeďte prstem.</p>
+  <ul>
+    <li><strong>Stránkování</strong> &mdash; tradiční čtení stránku po stránce.</li>
+    <li><strong>Plynulé posouvání</strong><span class="badge badge-premium">Premium</span> &mdash; přirozeně posouvejte textem bez zalomení stránek.</li>
+    <li><strong>Směr čtení</strong> &mdash; kniha se řídí automaticky, nebo si sami nastavte zleva doprava či zprava doleva. Viz <a href="#reading-direction">Směr čtení</a>.</li>
+    <li><strong>Pevné rozvržení</strong> &mdash; komiksy, obrázkové knihy a další stránkové EPUB knihy se otevírají ve čtečce určené právě pro ně. Viz <a href="#fixed-layout">Knihy s pevným rozvržením</a>.</li>
+    <li><strong>Hledání v knize</strong><span class="badge badge-premium">Premium</span> &mdash; prohledejte celou knihu a najděte libovolné slovo nebo frázi. Viz <a href="#in-book-search">Hledání v knize</a>.</li>
+    <li><strong>Galerie obrázků</strong><span class="badge badge-premium">Premium</span> &mdash; procházejte všechny obrázky v EPUB ze stránky s podrobnostmi knihy. Viz <a href="#image-gallery">Galerie obrázků</a>.</li>
+  </ul>
+  <div class="tip"><strong>Tip:</strong> Upravte velikost písma, řádkování a barvy motivu v <kbd>Nastavení</kbd> &rarr; <kbd>Předvolby čtení</kbd> &rarr; <kbd>Knihy</kbd>.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F4C4;</span> PDF</h3>
+  <p>PDF se vykreslují nativně. Přiblížení sevřením prstů, přejetím otáčíte stránky. Aplikace si umí zapamatovat hesla k chráněným PDF.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x1F4DD;</span> TXT a RTF</h3>
+  <p>Soubory s prostým textem a RTF se otevírají v jednoduché čtečce s nastavitelným formátováním.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Zpět nahoru</a>
+
+<!-- FIXED LAYOUT -->
+<h2 id="fixed-layout">Knihy s pevným rozvržením</h2>
+<p class="section-desc">EPUB, jejichž stránky mají pevně dané rozvržení &mdash; komiksy, obrázkové knihy a silně ilustrované tituly.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4D0;</span> Co to je</h3>
+  <p>Některé EPUB knihy nejsou rozvrženy jako plynoucí text, ale stránku po stránce: každá stránka je pevné uspořádání textu a ilustrací. Aplikace tyto knihy rozpozná sama a otevře je ve čtečce určené právě pro ně &mdash; každá stránka je zvětšena tak, aby se vešla na obrazovku, vystředěna, a prostor kolem ní je vyplněn barvou pozadí vašeho motivu čtení.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F44B;</span> Čtení a přibližování</h3>
+  <ul>
+    <li>Klepnutím na levou nebo pravou stranu obrazovky otáčíte stránky, nebo přejeďte prstem. Klepnutím na střed zobrazíte nebo skryjete panely nástrojů.</li>
+    <li>Sevřením prstů přiblížíte &mdash; až na trojnásobek přizpůsobené velikosti &mdash; a tažením se po stránce pohybujete.</li>
+    <li>Dvojitým klepnutím přiblížíte dané místo; dalším dvojitým klepnutím stránku opět přizpůsobíte obrazovce.</li>
+    <li>Knihy vydané pro čtení zprava doleva otáčejí stránky automaticky tímto směrem.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4D6;</span> Dvoustránkové zobrazení</h3>
+  <p>Otočte zařízení na šířku a protilehlé stránky se zobrazí vedle sebe. Aplikace se řídí nápovědami k rozložení stránek uvnitř samotné knihy, takže obálka nebo ilustrace na celou stránku vždy dostane svou vlastní stránku. Otočením zpět na výšku se vrátíte k zobrazení jedné stránky.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x2139;</span> Co je k dispozici</h3>
+  <p>Obsah, záložky, posuvník průběhu, historie čtení a pokračování tam, kde jste přestali, fungují jako obvykle.</p>
+  <p>Protože je každá stránka pevný návrh, a ne text, který by aplikace mohla přetékat, u těchto knih se nezobrazuje několik ovládacích prvků: Plynulé posouvání a automatické posouvání, nastavení písma a vzhledu, převod textu na řeč, hledání v knize a výběr nebo zvýrazňování textu.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Zpět nahoru</a>
+
+<!-- IN-BOOK SEARCH -->
+<h2 id="in-book-search">Hledání v knize</h2>
+<p class="section-desc">Najděte libovolné slovo nebo frázi v knize, kterou právě čtete.<span class="badge badge-premium">Premium</span></p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F50D;</span> Zahájení hledání</h3>
+  <ol class="steps">
+    <li>Klepněte na střed stránky pro zobrazení panelů nástrojů.</li>
+    <li>Klepněte na lupu na pravém konci spodního panelu.</li>
+    <li>Zadejte alespoň dva znaky a stiskněte <kbd>Hledat</kbd> na klávesnici.</li>
+  </ol>
+  <p>Prohledává se celá kniha &mdash; každá kapitola, nejen ta na obrazovce &mdash; a při porovnávání se nerozlišují velká a malá písmena. Hledání je dostupné ve čtečkách EPUB a TXT/RTF.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4C4;</span> Procházení výsledků</h3>
+  <p>Výsledky se zobrazují pod vyhledávacím polem, seskupené podle kapitol. Každý řádek ukazuje shodu tučně uvnitř úryvku okolního textu. Klepnutím na výsledek přejdete přímo na dané místo &mdash; každá shoda je v knize zvýrazněna žlutě, aktuální sytější jantarovou.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x2195;</span> Přeskakování mezi shodami</h3>
+  <p>Jakmile vyberete výsledek, vyhledávací pole se sbalí do kompaktního proužku s počítadlem, které ukazuje, kde mezi shodami se právě nacházíte.</p>
+  <ul>
+    <li>Šipkami nahoru/dolů přejdete na předchozí nebo další shodu.</li>
+    <li>Klepnutím na tlačítko seznamu znovu otevřete úplný seznam výsledků.</li>
+    <li>Klepnutím na <kbd>&times;</kbd> hledání ukončíte &mdash; všechna zvýraznění se odstraní.</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Zpět nahoru</a>
+
+<!-- IMAGE GALLERY -->
+<h2 id="image-gallery">Galerie obrázků</h2>
+<p class="section-desc">Procházejte všechny ilustrace v EPUB jako galerii listovanou přejetím prstem.<span class="badge badge-premium">Premium</span></p>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F5BC;</span> Otevření galerie</h3>
+  <p>Otevřete stránku s podrobnostmi knihy EPUB a klepněte na tlačítko stohu fotografií <span class="icon">&#x1F5BC;</span> v panelu nástrojů vpravo nahoře. Aplikace extrahuje všechny obrázky z knihy a mezitím zobrazuje ukazatel průběhu &mdash; klepnutím na tlačítko <kbd>&times;</kbd> vlevo nahoře se můžete kdykoli vrátit. Galerie je dostupná pouze pro knihy EPUB.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4DA;</span> Co uvidíte</h3>
+  <p>Obrázky se zobrazují po jednom na stránku v pořadí čtení &mdash; tak, jak se vyskytují v kapitolách knihy &mdash; včetně obálky. Drobné obrázky, jako jsou ikony a ozdoby, se přeskakují: cokoli menšího než minimální velikost (výchozí 100&nbsp;px) se vynechá. Práh upravíte v <kbd>Nastavení</kbd> &rarr; <kbd>Předvolby čtení</kbd> &rarr; <kbd>Knihy</kbd> &rarr; <kbd>Galerie EPUB</kbd>. Pokud nevyhovuje žádný obrázek, galerie vám sdělí, že žádný nenašla.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F446;</span> Prohlížení a ukládání obrázků</h3>
+  <ul>
+    <li>Přejetím prstem přecházejte mezi obrázky, nebo použijte posuvník stránek dole pro rychlý skok.</li>
+    <li>Přibližujte sevřením prstů nebo dvojitým klepnutím a tažením se pohybujete &mdash; galerie používá čtečku komiksů, takže se přibližuje úplně stejným způsobem. Viz <a href="#comic-zoom">Přibližování komiksových stránek</a>.</li>
+    <li>Klepnutím na střed obrazovky zobrazíte nebo skryjete ovládací prvky.</li>
+    <li>Podržením prstu na obrázku vyvoláte <kbd>Zobrazit v plném rozlišení</kbd> &mdash; otevře jej v původní velikosti pro bližší pohled &mdash; nebo <kbd>Uložit do Fotek</kbd>, <kbd>Uložit do Souborů</kbd> či <kbd>Kopírovat obrázek</kbd>.</li>
+    <li>Galerie se řídí vaším směrem čtení komiksů &mdash; včetně svislého posouvání ve stylu webtoon.</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Zpět nahoru</a>
+
+<!-- READING FONTS -->
+<h2 id="fonts">Písma pro čtení</h2>
+<p class="section-desc">Vyberte si písmo pro čtení, přidejte vlastní nebo si stáhněte jazykové balíčky.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F524;</span> Výběr písma</h3>
+  <p>Otevřete <kbd>Nastavení</kbd> &rarr; <kbd>Předvolby čtení</kbd> &rarr; <kbd>Knihy</kbd> &rarr; <kbd>Vlastní písma</kbd> a přejděte na obrazovku <strong>Písma</strong>. Několik písem pro čtení je vestavěných, výchozím je <strong>Literata</strong>. Vybrané písmo se použije ve čtečkách EPUB a textu.</p>
+  <div class="tip"><strong>Tip:</strong> Velikost písma a řádkování upravíte v <kbd>Nastavení</kbd> &rarr; <kbd>Předvolby čtení</kbd> &rarr; <kbd>Knihy</kbd>.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F453;</span> Písma pro snadnější čtení</h3>
+  <p>Dvě písma navržená pro snadnější čtení jsou součástí aplikace a vždy dostupná: <strong>Atkinson Hyperlegible</strong>, které zvýrazňuje rozdíly mezi podobnými písmeny, a <strong>OpenDyslexic</strong> se zesílenými spodními částmi, aby se omezovala záměna písmen.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F4C2;</span> Vlastní písma</h3>
+  <p>Naimportujte vlastní soubory písem <kbd>.ttf</kbd> nebo <kbd>.otf</kbd> z obrazovky Písma a používejte je ve čtečce EPUB. Naimportovaná písma zůstávají ve vašem zařízení.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F4E5;</span> Stahování písem &amp; jazykových balíčků</h3>
+  <p>V části <strong>Stahování písem</strong> jsou na vyžádání dostupná další písma pro čtení a jazykové balíčky pro písma, která aplikace neobsahuje &mdash; čínštinu, japonštinu &amp; korejštinu (CJK), arabštinu, dévanágarí a thajštinu. Balíčky jsou velké (přibližně 41&nbsp;MB každý), proto se před stažením zobrazí jejich velikost. Po instalaci fungují úplně stejně jako naimportovaná písma.</p>
+  <div class="tip"><strong>Tip:</strong> Pokud se znaky v knize zobrazují jako prázdné čtverečky, stáhněte odpovídající jazykový balíček, aby se zobrazily.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x1F4DC;</span> Licence písem</h3>
+  <p>Vestavěná i stažitelná písma jsou poskytována pod licencí <strong>SIL Open Font License</strong>. Úplnou licenci kteréhokoli z nich si můžete přečíst z jeho řádku na obrazovce Písma.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Zpět nahoru</a>
+
+<!-- READING DIRECTION -->
+<h2 id="reading-direction">Směr čtení</h2>
+<p class="section-desc">Zleva doprava, zprava doleva, nebo tak, jak byla kniha vydána.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x21C4;</span> Volba směru</h3>
+  <p>Otevřete <kbd>Nastavení</kbd> &rarr; <kbd>Předvolby čtení</kbd> &rarr; <kbd>Knihy</kbd> a použijte ovládací prvek <strong>Směr čtení</strong> v části <strong>Režim čtení</strong>:</p>
+  <ul>
+    <li><strong>Automaticky</strong> (výchozí) &mdash; řídí se směrem, který kniha sama deklaruje. Manga a knihy vydané pro čtení zprava doleva se otevřou správným směrem bez nutnosti čehokoli nastavovat.</li>
+    <li><strong>Zleva doprava</strong> &mdash; standardní pro většinu západních knih.</li>
+    <li><strong>Zprava doleva</strong> &mdash; použije směr zprava doleva pro každou knihu.</li>
+  </ul>
+  <p>Můžete jej změnit i bez opuštění knihy: klepnutím na střed stránky zobrazte panely nástrojů a poté klepněte na tlačítko <kbd>Aa</kbd> ve spodním panelu. Změna se projeví okamžitě na stránce, kterou právě čtete.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F44B;</span> Co se řídí směrem</h3>
+  <ul>
+    <li>Kterým směrem postupujete dál &mdash; v knize se směrem zprava doleva otočí na další stránku klepnutí nebo přejetí doleva.</li>
+    <li>Animace otáčení stránky, která se otáčí ze správné strany.</li>
+    <li>Rozvržení textu na stránce.</li>
+  </ul>
+  <div class="tip"><strong>Poznámka:</strong> Posuvník průběhu se vždy vyplňuje zleva, protože ukazuje, jak daleko jste v knize, a ne to, kde se stránka nachází na obrazovce.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x2139;</span> Kde se uplatňuje</h3>
+  <p>Toto nastavení platí pro EPUB ve stránkovaném režimu &mdash; je skryté, když je zapnuté Plynulé posouvání. Komiksy mají vlastní nastavení pořadí čtení (viz <a href="#reading-comics">Čtení komiksů</a>) a <a href="#fixed-layout">knihy s pevným rozvržením</a> se vždy řídí směrem deklarovaným v knize.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Zpět nahoru</a>
+
+<!-- VERTICAL WRITING -->
+<h2 id="vertical-writing">Svislé psaní</h2>
+<p class="section-desc">Japonské a čínské knihy sázené ve svislých sloupcích.</p>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x2B07;</span> Svislé knihy</h3>
+  <p>Knihy sázené svisle &mdash; japonské tategaki (縦書き) a tradiční čínština (直排) &mdash; se zobrazují tak, jak byly sazeny: text plyne shora dolů ve sloupcích, které se řadí zprava doleva, a stránky se otáčejí doleva, stejně jako u mangy.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x2699;</span> Směr psaní</h3>
+  <p>Otevřete <kbd>Nastavení</kbd> &rarr; <kbd>Předvolby čtení</kbd> &rarr; <kbd>Knihy</kbd> a použijte ovládací prvek <strong>Směr psaní</strong>:</p>
+  <ul>
+    <li><strong>Automaticky</strong> (výchozí) &mdash; řídí se vlastním rozvržením každé knihy. Kniha sazená svisle se zobrazí svisle; všechny ostatní knihy zůstanou beze změny.</li>
+    <li><strong>Vodorovně</strong> &mdash; zobrazí všechny knihy vodorovně, včetně těch sazených svisle.</li>
+    <li><strong>Svisle</strong> &mdash; zobrazí všechny knihy ve svislých sloupcích.</li>
+  </ul>
+  <p>Stejný ovládací prvek najdete i v nastavení uvnitř čtečky pod tlačítkem <kbd>Aa</kbd>.</p>
+  <div class="tip"><strong>Poznámka:</strong> Změny se projeví při příštím otevření knihy &mdash; kniha již otevřená na obrazovce si ponechá rozvržení, se kterým byla otevřena.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x2139;</span> Dobré vědět</h3>
+  <ul>
+    <li>Svislé knihy vždy používají stránkovaný režim, takže pro ně nejsou dostupné Plynulé posouvání ani automatické posouvání.</li>
+    <li>U svislých knih se nepoužívá animace stránky Posun &mdash; místo ní se otáčejí animací Listování.</li>
+    <li>Záložky, zvýraznění, obsah, hledání v knize a převod textu na řeč fungují jako obvykle.</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Zpět nahoru</a>
+
+<!-- READING COMICS -->
+<h2 id="reading-comics">Čtení komiksů</h2>
+<p class="section-desc">Čtení komiksů CBZ, CBR a CB7.</p>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4F1;</span> Režimy čtení</h3>
+  <ul>
+    <li><strong>Zleva doprava</strong> &mdash; Standardní západní pořadí stránek.</li>
+    <li><strong>Zprava doleva</strong> &mdash; Pořadí čtení mangy.</li>
+    <li><strong>Webtoon / Svislé posouvání</strong> &mdash; Plynulé svislé posouvání pro dlouhé komiksové pásy.</li>
+  </ul>
+  <p>Nastavte globální výchozí hodnotu v <kbd>Nastavení</kbd> &rarr; <kbd>Předvolby čtení</kbd> &rarr; <kbd>Komiksy</kbd>, nebo přepište pro jednotlivou knihu na její stránce s podrobnostmi.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F50E;</span> Změna měřítka stránky</h3>
+  <ul>
+    <li><strong>Přizpůsobit obrazovce</strong> &mdash; Celá stránka viditelná.</li>
+    <li><strong>Přizpůsobit šířce</strong> &mdash; Vyplní šířku, v případě potřeby svisle posouvejte.</li>
+    <li><strong>Přizpůsobit výšce</strong> &mdash; Vyplní výšku.</li>
+    <li><strong>Původní velikost</strong> &mdash; Zobrazení pixelů 1:1.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F44B;</span> Gesta</h3>
+  <ul>
+    <li>Přejetím doleva/doprava otáčíte stránky (stránkované režimy).</li>
+    <li>Sevřením prstů nebo dvojitým klepnutím přiblížíte a tažením se pohybujete. Viz <a href="#comic-zoom">Přibližování komiksových stránek</a>.</li>
+    <li>Klepněte na střed stránky pro zobrazení nebo skrytí panelu nástrojů.</li>
+    <li>Použijte posuvník stránek ve spodní části pro rychlý přesun.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x26A0;</span> Upozornění na podezřelý archiv</h3>
+  <p>Když otevřete komiksový archiv (CBZ, CBR nebo CB7), jehož obsah vypadá nezvykle velký nebo agresivně komprimovaný &mdash; vzor používaný soubory typu &ldquo;zip bomba&rdquo;, které mají přetížit paměť &mdash; aplikace před jakoukoli extrakcí zobrazí upozornění <strong>Podezřelý archiv</strong>.</p>
+  <ul>
+    <li>Klepnutím na <kbd>Zrušit</kbd> soubor neotevřete. Toto je bezpečná volba pro archivy z neznámých zdrojů.</li>
+    <li>Klepnutím na <kbd>Přesto otevřít</kbd>, pokud souboru důvěřujete &mdash; aplikace přeskočí bezpečnostní kontrolu a načte stránky.</li>
+  </ul>
+  <p>Soubory EPUB používají stejnou ochranu tiše během importu.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Zpět nahoru</a>
+
+<!-- COMIC ZOOM -->
+<h2 id="comic-zoom">Přibližování komiksových stránek</h2>
+<p class="section-desc">Přibližte se k ilustracím &mdash; ve stránkových režimech i při posouvání webtoonu.</p>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F50D;</span> Stránkové režimy</h3>
+  <ul>
+    <li>Sevřením prstů přiblížíte, až na trojnásobek přizpůsobené velikosti. Ilustrace zůstává pod vašimi prsty po celou dobu sevírání.</li>
+    <li>Dvojitým klepnutím přiblížíte dané místo na dvojnásobnou velikost; dalším dvojitým klepnutím stránku opět přizpůsobíte obrazovce.</li>
+    <li>Tažením jedním prstem se pohybujete po přiblížené stránce.</li>
+    <li>Téměř úplným roztažením prstů zpět se stránka úhledně přizpůsobí zpět.</li>
+  </ul>
+  <p>Přibližování funguje s možnostmi měřítka <strong>Přizpůsobit obrazovce</strong> a <strong>Přizpůsobit výšce</strong> a s dvoustránkovým zobrazením. <strong>Přizpůsobit šířce</strong> a <strong>Původní velikost</strong> již zobrazují stránku větší než obrazovku a místo toho se posouvají &mdash; pro bližší pohled tam použijte níže uvedené <strong>Zobrazit v plném rozlišení</strong>.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4F1;</span> Posouvání webtoonu</h3>
+  <ul>
+    <li>Sevřením prstů nebo dvojitým klepnutím přiblížíte celý pás, až na trojnásobek běžné velikosti.</li>
+    <li>Posouvání funguje i při přiblížení &mdash; jen táhněte nahoru a dolů jako obvykle.</li>
+    <li>Tažením do strany se pohybujete po přiblížené stránce.</li>
+    <li>Úroveň přiblížení zůstává zachována i při dalším posouvání, takže si můžete přečíst celou kapitolu zvětšenou. Otočení zařízení vrátí normální velikost.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x2728;</span> Zobrazit v plném rozlišení</h3>
+  <p>Přiblížení zvětší stránku ve velikosti, v jaké byla připravena pro vaši obrazovku. Pro co nejostřejší pohled na jednu stránku ji podržte a zvolte <kbd>Zobrazit v plném rozlišení</kbd> &mdash; tato stránka se dekóduje v původním rozlišení archivu, takže se dá přiblížit mnohem více. Dvojité klepnutí přepíná mezi přizpůsobením obrazovce a dvojnásobnou velikostí; sjetím dolů nebo klepnutím na tlačítko zavření se vrátíte zpět.</p>
+  <div class="tip"><strong>Poznámka:</strong> Přiblížení se neukládá. Zavřením knihy se vždy vrátíte k normálnímu přizpůsobení.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Zpět nahoru</a>
+
+<!-- TTS -->
+<h2 id="tts">Převod textu na řeč a CarPlay</h2>
+<p class="section-desc">Poslouchejte své knihy čtené nahlas.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F50A;</span> Použití převodu textu na řeč</h3>
+  <p>Otevřete libovolnou knihu EPUB, PDF nebo TXT a klepněte na tlačítko přehrávání v panelu nástrojů. Systém čte jednu větu najednou a zvýrazňuje aktuální slovo.</p>
+  <ul>
+    <li><strong>Rychlost</strong> &mdash; 0,5&times; až 2&times; v ovládacích prvcích.</li>
+    <li><strong>Hlas</strong> &mdash; Vybírejte z více než 100 systémových hlasů v <kbd>Nastavení</kbd> &rarr; <kbd>Předvolby čtení</kbd> &rarr; <kbd>Převod textu na řeč</kbd>.</li>
+    <li><strong>Přeskočení</strong> &mdash; Klepněte na další/předchozí pro přesun po větách nebo kapitolách.</li>
+  </ul>
+  <div class="tip"><strong>Poznámka:</strong> <a href="#fixed-layout">Knihy s pevným rozvržením</a> &mdash; komiksy a obrázkové knihy, jejichž stránky mají pevně dané rozvržení &mdash; neobsahují text, který by aplikace mohla přečíst nahlas, proto se pro ně tlačítko přehrávání nezobrazuje.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F697;</span> CarPlay</h3>
+  <p>Po připojení k vozidlu kompatibilnímu s CarPlay se aplikace zobrazí na displeji auta se zjednodušeným ovládáním přehrávání. Přehrávání pokračuje na pozadí &mdash; není třeba nechat zapnutou obrazovku.</p>
+  <div class="tip"><strong>Tip:</strong> Povolte <kbd>Zvuk na pozadí</kbd><span class="badge badge-premium">Premium</span> v nastavení převodu textu na řeč, aby přehrávání pokračovalo i když je aplikace na pozadí, i bez CarPlay.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Zpět nahoru</a>
+
+<!-- AI UPSCALING -->
+<h2 id="upscaling">AI zvětšování komiksů</h2>
+<p class="section-desc">Vylepšete stránky komiksů s nízkým rozlišením přímo na zařízení.<span class="badge badge-premium">Premium</span></p>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x2728;</span> Co to dělá</h3>
+  <p>Využívá model strojového učení na zařízení k zvětšení stránek komiksů, které jsou pod prahem rozlišení. Výsledkem jsou ostřejší linie a méně viditelné kompresní artefakty &mdash; zvláště užitečné u starších nebo nekvalitních skenů.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x2699;</span> Nastavení</h3>
+  <ol class="steps">
+    <li>Přejděte do <kbd>Nastavení</kbd> &rarr; <kbd>Předvolby čtení</kbd> &rarr; <kbd>Komiksy</kbd> &rarr; <kbd>AI zvětšování</kbd>.</li>
+    <li>Zapněte funkci.</li>
+    <li>Upravte <strong>Práh rozlišení</strong> &mdash; stránky pod touto šířkou v pixelech se zvětší (výchozí: 1500 px).</li>
+    <li>Nastavte <strong>Okno předběžného načítání</strong> pro určení počtu nadcházejících stránek zpracovávaných na pozadí.</li>
+    <li>Zvolte <strong>Úroveň odšumění</strong> (Automatická je obvykle nejlepší).</li>
+  </ol>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4BE;</span> Mezipaměť a úložiště</h3>
+  <p>Zvětšené obrázky se ukládají do mezipaměti, aby nemusely být znovu zpracovány. Zvolte, jak dlouho mezipaměť uchovávat (7&ndash;90 dní nebo bez expirace), a kdykoli ji vymažte v nastavení.</p>
+  <div class="tip"><strong>Tip:</strong> Na zvětšených stránkách se zobrazí malý indikátor. Pokud chcete, můžete ho vypnout v nastavení.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Zpět nahoru</a>
+
+<!-- HIDDEN MODE -->
+<h2 id="hidden">Skryté knihy</h2>
+<p class="section-desc">Udržte určité knihy v soukromí.<span class="badge badge-premium">Premium</span></p>
+
+<div class="card">
+  <h3><span class="icon icon-indigo">&#x1F441;</span> Skrývání knih</h3>
+  <ol class="steps">
+    <li>Otevřete stránku s podrobnostmi o knize a klepněte na nabídku (&hellip;).</li>
+    <li>Zvolte <kbd>Skrýt knihu</kbd>.</li>
+    <li>Kniha zmizí z běžného zobrazení knihovny.</li>
+  </ol>
+  <p>Pro skrytí více knih najednou použijte režim výběru.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F513;</span> Zobrazení skrytých knih</h3>
+  <p>Potáhněte dolů v knihovně pro aktivaci <strong>Skrytého režimu</strong>. Zobrazí se všechny vaše knihy &mdash; skryté i viditelné. Potáhněte znovu nebo opusťte aplikaci pro ukončení skrytého režimu.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F512;</span> Možnosti ochrany soukromí</h3>
+  <p>Když je skrytý režim aktivní, přejděte do <kbd>Nastavení</kbd> &rarr; <kbd>Skrytý režim</kbd> a zvolte, co se stane, když opustíte aplikaci:</p>
+  <ul>
+    <li><strong>Automatický odchod</strong> (výchozí) &mdash; Skrytý režim se automaticky vypne. Rychlé a jednoduché.</li>
+    <li><strong>Vyžadovat Face ID / Touch ID</strong> &mdash; Skrytý režim zůstane zapnutý, ale při návratu vyžaduje biometrické ověření. Bezpečnější.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x21A9;</span> Odkrytí knih</h3>
+  <p>Ve skrytém režimu otevřete podrobnosti skryté knihy a zvolte <kbd>Odkrýt knihu</kbd>, nebo použijte režim výběru pro hromadné odkrytí.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x2601;</span> Synchronizace skrytých knih</h3>
+  <p>V skrytém režimu přejděte do <kbd>Nastavení</kbd> &rarr; <kbd>Skrytý režim</kbd> a zapněte <kbd>Synchronizovat skryté knihy s iCloud</kbd>:</p>
+  <ul>
+    <li><strong>Vypnuto</strong> (výchozí) &mdash; skryté knihy zůstávají jen na tomto zařízení. Skrytí knihy ji zároveň odstraní z iCloud.</li>
+    <li><strong>Zapnuto</strong> &mdash; skryté knihy se synchronizují přes iCloud, ale zůstávají skryté na každém zařízení, na kterém jste přihlášeni.</li>
+  </ul>
+  <p>Vypnutí přepínače, když již máte skryté knihy v iCloud, se vás zeptá, co s nimi udělat:</p>
+  <ul>
+    <li><strong>Ponechat na všech zařízeních</strong> &mdash; ostatní zařízení si ponechají své synchronizované kopie; toto zařízení si ponechá soukromou kopii pouze lokálně.</li>
+    <li><strong>Zcela odstranit z iCloud</strong> &mdash; odstraní knihy z iCloud; každé další zařízení si ponechá svou vlastní soukromou kopii ve své skryté knihovně.</li>
+  </ul>
+  <div class="tip"><strong>Poznámka:</strong> Pokud některé z vašich dalších zařízení odstraní skrytou knihu z iCloud, toto zařízení si automaticky ponechá vlastní soukromou kopii ve skryté knihovně &mdash; pokud už zde byl soubor knihy stažen.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F5D1;</span> Trvale odstranit skryté knihy</h3>
+  <p>V skrytém režimu přejděte do <kbd>Nastavení</kbd> &rarr; <kbd>Skrytý režim</kbd> a zvolte <kbd>Trvale odstranit skryté knihy</kbd> pro odstranění všech skrytých knih z tohoto zařízení, z iCloud i z vašich dalších zařízení. Zadejte <kbd>DELETE</kbd> pro potvrzení.</p>
+  <div class="tip"><strong>Varování:</strong> Tuto akci nelze vrátit zpět. Zařízení, která jsou v danou chvíli offline, si ponechají své lokální kopie až do další synchronizace.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Zpět nahoru</a>
+
+<!-- BOOKMARKS, HIGHLIGHTS, TAGS -->
+<h2 id="bookmarks">Záložky, zvýraznění a štítky</h2>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F516;</span> Záložky</h3>
+  <p>Klepněte na ikonu záložky v panelu nástrojů čtečky pro uložení aktuální stránky. Přidejte volitelnou poznámku. Všechny záložky knihy zobrazíte na její stránce s podrobnostmi.</p>
+  <div class="tip"><strong>Poznámka:</strong> Zde se zobrazují pouze záložky, které jste vytvořili ručně. Pozice, které aplikace ukládá automaticky při zavření knihy, jsou uchovávány samostatně v sekci <a href="#history">Historie čtení</a>, aby nezatlačovaly vaše vlastní záložky.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F58D;</span> Zvýraznění<span class="badge badge-premium">Premium</span></h3>
+  <p>V souborech EPUB vyberte text pro zvýraznění. Vybírejte z pěti barev (žlutá, růžová, zelená, modrá, oranžová) a přidávejte poznámky. Všechna zvýraznění jsou uvedena na stránce s podrobnostmi o knize.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F3F7;</span> Štítky</h3>
+  <p>Přidejte štítky k libovolné knize z její stránky s podrobnostmi. Štítky jsou vyhledatelné a lze je použít jako filtry v knihovně. Všechny štítky spravujte v <kbd>Nastavení</kbd> &rarr; <kbd>Štítky</kbd>.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Zpět nahoru</a>
+
+<!-- READING HISTORY -->
+<h2 id="history">Historie čtení</h2>
+<p class="section-desc">Skočte zpět na jakoukoli pozici, na které jste nedávno byli.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F552;</span> Automatické ukládání</h3>
+  <p>Pokaždé, když zavřete knihu nebo přepnete aplikaci do pozadí, je vaše aktuální pozice uložena jako záznam historie &mdash; nemusíte si pamatovat na vytvoření záložky. Funguje to ve všech čtečkách: EPUB, PDF, TXT/RTF i komiksy.</p>
+  <ul>
+    <li>Pro každou knihu se uchovává až <strong>50</strong> posledních pozic. Starší záznamy jsou automaticky odstraněny, jakmile přibudou nové.</li>
+    <li>Pokud knihu znovu zavřete na stejném místě během několika minut, existující záznam se aktualizuje místo vytvoření duplikátu.</li>
+    <li>Automaticky uložené pozice jsou odděleny od seznamu vašich ručních záložek, aby se nemíchaly s těmi, které jste nastavili záměrně.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4D6;</span> Historie uvnitř knihy</h3>
+  <p>Během čtení klepněte na nabídku (&hellip;) v pravém horním rohu a zvolte <kbd>Historie čtení</kbd>. Zobrazí se seznam vašich posledních pozic v této knize, od nejnovějších, s názvem kapitoly nebo stránky a dobou, kdy byl každý záznam zaznamenán.</p>
+  <ul>
+    <li>Klepnutím na libovolný záznam přejdete přímo na dané místo.</li>
+    <li>Přejetím záznamu doleva jej odstraníte.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F4DA;</span> Historie napříč knihovnou</h3>
+  <p>V knihovně klepněte na nabídku (&hellip;) na horním panelu nástrojů a zvolte <kbd>Historie čtení</kbd> pro zobrazení všech knih, které jste nedávno otevřeli, seskupených podle dne. Klepnutím na řádek otevřete knihu přesně tam, kde jste skončili.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Zpět nahoru</a>
+
+<!-- AUTHOR & TAG BROWSING -->
+<h2 id="search">Procházení podle autora a štítků</h2>
+<p class="section-desc">Najděte knihy podle autora nebo štítku odkudkoli v aplikaci.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F464;</span> Autoři</h3>
+  <p>Přejděte do <kbd>Nastavení</kbd> &rarr; <kbd>Autoři</kbd> a zobrazte všechny autory ve své knihovně spolu s počtem knih. Klepnutím na autora prohledáte knihovnu a najdete všechny jeho knihy.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F3F7;</span> Vyhledávání štítků</h3>
+  <p>V části <kbd>Nastavení</kbd> &rarr; <kbd>Štítky</kbd> klepněte na libovolný štítek a prohledejte knihovnu na knihy s tímto štítkem. Dlouhým stisknutím jej přejmenujete nebo odstraníte.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F50D;</span> Rychlé hledání z kontextové nabídky</h3>
+  <ul>
+    <li>Dlouze stiskněte knihu v knihovně &rarr; <kbd>Najít knihy od [Autor]</kbd></li>
+    <li>Na stránce s podrobnostmi knihy dlouze stiskněte jméno autora nebo libovolný štítek a spusťte vyhledávání</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Zpět nahoru</a>
+
+<!-- METADATA -->
+<h2 id="metadata">Metadata a ComicInfo.xml</h2>
+<p class="section-desc">Zobrazte a upravte metadata knihy.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x270F;</span> Editor metadat</h3>
+  <p>Na stránce s podrobnostmi knihy klepněte na nabídku (&hellip;) a zvolte <kbd>Upravit metadata</kbd> pro změnu názvu, autora, série, popisu a dalších polí. Metadata můžete také znovu načíst z původního souboru.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4CB;</span> ComicInfo.xml</h3>
+  <p>U komiksových archivů (CBZ, CBR, CB7), které obsahují soubor <code>ComicInfo.xml</code>, se metadata při importu automaticky extrahují &mdash; včetně názvu, scenáristy, série, čísla sešitu, shrnutí, nakladatele, žánru a štítků.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Zpět nahoru</a>
+
+<!-- ICLOUD -->
+<h2 id="icloud">Synchronizace iCloud</h2>
+<p class="section-desc">Udržujte knihovnu synchronizovanou napříč zařízeními.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x2601;</span> Povolení synchronizace</h3>
+  <ol class="steps">
+    <li>Přejděte do <kbd>Nastavení</kbd> &rarr; <kbd>Synchronizace iCloud</kbd>.</li>
+    <li>Zapněte <kbd>Synchronizovat knihovnu s iCloud</kbd>.</li>
+    <li>Synchronizace se projeví při dalším spuštění aplikace.</li>
+  </ol>
+  <p>Metadata, průběh čtení, záložky, zvýraznění a police se synchronizují napříč všemi zařízeními přihlášenými ke stejnému účtu iCloud.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F4CA;</span> Stav synchronizace</h3>
+  <p><kbd>Nastavení</kbd> &rarr; <kbd>Synchronizace iCloud</kbd> zobrazuje kartu se stavem vašich souborů knih:</p>
+  <ul>
+    <li>Nadpis &mdash; <strong>Aktuální</strong>, <strong>Synchronizace&hellip;</strong> (s počtem) nebo <strong>Nepřihlášeno</strong>.</li>
+    <li>Lišta ukazující, kolik souborů vaší knihovny je v iCloud.</li>
+    <li>Rozpis &mdash; <strong>Synchronizováno</strong> (s celkovou velikostí), <strong>Pouze v iCloud</strong> (ještě nestaženo na toto zařízení) a <strong>Probíhá</strong>.</li>
+  </ul>
+  <div class="tip"><strong>Poznámka:</strong> Tato karta sleduje pouze <em>soubory</em> knih. Průběh čtení, záložky, zvýraznění a police se synchronizují samostatně a automaticky, bez ohledu na stav souboru.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x2601;</span> Odznaky na obálkách</h3>
+  <p>Obálky knih zobrazují malý symbol cloudu v pravém dolním rohu, který ukazuje stav synchronizace souboru:</p>
+  <ul>
+    <li><strong>Ikona cloudu</strong> &mdash; soubor je pouze v iCloud. Otevřete stránku knihy a stáhněte ho.</li>
+    <li><strong>Šipky nahoru/dolů</strong> &mdash; soubor se právě nahrává nebo stahuje.</li>
+    <li><strong>Bez symbolu</strong> &mdash; soubor je již na tomto zařízení.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4E5;</span> Automatické stahování</h3>
+  <p>Zvolte maximální velikost souboru pro automatické stahování. Větší knihy zůstanou v cloudu, dokud je neotevřete. Limit upravte v nastavení iCloud.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Zpět nahoru</a>
+
+<!-- STATS -->
+<h2 id="stats">Statistiky čtení</h2>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F4CA;</span> Vaše čtenářská aktivita</h3>
+  <p>Otevřete <kbd>Nastavení</kbd> &rarr; <kbd>Statistiky knihovny</kbd> pro zobrazení:</p>
+  <ul>
+    <li>Celkový počet knih, přečtených stránek a čas čtení.</li>
+    <li>Graf denní čtenářské aktivity.</li>
+    <li>Knihy podle formátu a stavu čtení.</li>
+    <li>Rozpis aktivity po jednotlivých knihách.</li>
+  </ul>
+  <div class="tip"><strong>Poznámka:</strong> Statistiky respektují skrytý režim &mdash; když je skrytý režim vypnutý, statistiky skrytých knih jsou vyloučeny.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Zpět nahoru</a>
+
+<!-- WEBDAV & OPDS -->
+<h2 id="webdav">WebDAV a OPDS</h2>
+<p class="section-desc">Procházejte a stahujte ze vzdálených serverů a katalogů.</p>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F5C4;</span> WebDAV</h3>
+  <p>Připojte se k NAS, Nextcloud nebo serveru Calibre pro procházení složek a stahování knih.</p>
+  <ol class="steps">
+    <li>Přejděte do <kbd>Nastavení</kbd> &rarr; <kbd>Import knih</kbd> &rarr; <kbd>WebDAV</kbd>.</li>
+    <li>Klepněte na <kbd>Přidat server</kbd> a zadejte URL.</li>
+    <li>V případě potřeby přidejte uživatelské jméno a heslo.</li>
+    <li>Klepněte na <kbd>Test připojení</kbd> a poté uložte.</li>
+  </ol>
+  <div class="tip"><strong>Samopodepsané certifikáty:</strong> Pokud váš server používá samopodepsaný certifikát, můžete zapnout <kbd>Povolit nedůvěryhodné certifikáty</kbd>. Aplikace vás nejprve požádá o potvrzení &mdash; tím se vypne ověřování TLS, takže kdokoli ve vaší síti by se mohl vydávat za server. Zapínejte to pouze pro server, který sami ovládáte.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4DA;</span> Katalogy OPDS</h3>
+  <p>OPDS je otevřený standard pro katalogy knih. Přidejte veřejné katalogy (Project Gutenberg, Standard Ebooks atd.) nebo vlastní soukromý server.</p>
+  <ol class="steps">
+    <li>Přejděte do <kbd>Nastavení</kbd> &rarr; <kbd>Import knih</kbd> &rarr; <kbd>OPDS</kbd>.</li>
+    <li>Klepněte na <kbd>Přidat katalog</kbd> a zadejte URL zdroje.</li>
+    <li>Procházejte kategorie a stahujte knihy do knihovny.</li>
+  </ol>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Zpět nahoru</a>
+
+<!-- RESUME -->
+<h2 id="resume">Pokračování při spuštění</h2>
+<p class="section-desc">Automaticky navažte tam, kde jste přestali.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x25B6;</span> Nastavení</h3>
+  <p>Přejděte do <kbd>Nastavení</kbd> &rarr; <kbd>Obecné</kbd> a zapněte <kbd>Obnovit poslední knihu při spuštění</kbd>. Při příštím otevření aplikace přejde rovnou na knihu a stránku, kterou jste naposledy četli.</p>
+  <div class="tip"><strong>Skryté knihy:</strong> Pokud byla poslední čtená kniha skrytá, aplikace požádá o Face ID / Touch ID před pokračováním. Povolte <kbd>Pokračovat ve skryté knize po ověření</kbd> v nastavení skrytého režimu.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Zpět nahoru</a>
+
+<!-- FORMATS -->
+<h2 id="formats">Podporované formáty</h2>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4D6;</span> Knihy</h3>
+  <div class="formats-grid">
+    <div class="format-tag">EPUB</div>
+    <div class="format-tag">PDF</div>
+    <div class="format-tag">TXT</div>
+    <div class="format-tag">RTF</div>
+  </div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4F1;</span> Komiksy</h3>
+  <div class="formats-grid">
+    <div class="format-tag">CBZ</div>
+    <div class="format-tag">CBR</div>
+    <div class="format-tag">CB7</div>
+  </div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Zpět nahoru</a>
+
+</body>
+</html>

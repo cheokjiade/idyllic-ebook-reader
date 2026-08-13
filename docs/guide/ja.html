@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>ユーザーガイド</title>
+<link rel="stylesheet" href="UserGuideStyle.css">
+<!-- USER-GUIDE-NAV-STYLE:START -->
+<style>
+.guide-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 14px;
+  padding: 10px 14px;
+  margin: 0 0 16px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  font-size: 13px;
+}
+.guide-nav-home {
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.guide-nav-arrow {
+  display: inline-block;
+}
+[dir="rtl"] .guide-nav-arrow {
+  transform: scaleX(-1);
+}
+.guide-nav-langs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 10px;
+  color: var(--secondary);
+}
+.guide-nav-globe {
+  font-size: 13px;
+}
+.guide-nav-langs a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.guide-nav-langs a:hover,
+.guide-nav-langs a:focus-visible {
+  text-decoration: underline;
+}
+.guide-nav-current {
+  font-weight: 700;
+  color: var(--text);
+}
+</style>
+<!-- USER-GUIDE-NAV-STYLE:END -->
+</head>
+<body id="top">
+<!-- USER-GUIDE-NAV:START -->
+<nav class="guide-nav" aria-label="User Guide language switcher">
+  <a class="guide-nav-home" href="../index.html"><span class="guide-nav-arrow" aria-hidden="true">&larr;</span> Idyllic</a>
+  <span class="guide-nav-langs">
+    <span class="guide-nav-globe" aria-hidden="true">&#x1F310;</span>
+      <a href="index.html">English</a>
+      <a href="ar.html">العربية</a>
+      <a href="cs.html">Čeština</a>
+      <a href="da.html">Dansk</a>
+      <a href="de.html">Deutsch</a>
+      <a href="es.html">Español</a>
+      <a href="fi.html">Suomi</a>
+      <a href="fr.html">Français</a>
+      <a href="he.html">עברית</a>
+      <a href="hi.html">हिन्दी</a>
+      <a href="id.html">Indonesia</a>
+      <a href="it.html">Italiano</a>
+      <span class="guide-nav-current">日本語</span>
+      <a href="ko.html">한국어</a>
+      <a href="ms.html">Bahasa Melayu</a>
+      <a href="nb.html">Norsk bokmål</a>
+      <a href="nl.html">Nederlands</a>
+      <a href="pl.html">Polski</a>
+      <a href="pt-BR.html">Português (Brasil)</a>
+      <a href="ru.html">Русский</a>
+      <a href="sv.html">Svenska</a>
+      <a href="th.html">ไทย</a>
+      <a href="tr.html">Türkçe</a>
+      <a href="uk.html">Українська</a>
+      <a href="vi.html">Tiếng Việt</a>
+      <a href="zh-Hans.html">简体中文</a>
+      <a href="zh-Hant.html">繁體中文</a>
+  </span>
+</nav>
+<!-- USER-GUIDE-NAV:END -->
+
+<h1>ユーザーガイド</h1>
+<p class="subtitle">読書体験を最大限に活用するために必要なすべてのこと。</p>
+
+<!-- TABLE OF CONTENTS -->
+<div class="card toc">
+  <a href="#importing">本のインポート</a>
+  <a href="#wifi">WiFi転送</a>
+  <a href="#library">ライブラリと整理</a>
+  <a href="#shelves">シェルフとフォルダ</a>
+  <a href="#reading-books">本を読む</a>
+  <a href="#fixed-layout">固定レイアウトの本</a>
+  <a href="#in-book-search">本文内検索</a>
+  <a href="#image-gallery">画像ギャラリー</a>
+  <a href="#fonts">読書フォント</a>
+  <a href="#reading-direction">読み方向</a>
+  <a href="#vertical-writing">縦書き</a>
+  <a href="#reading-comics">コミックを読む</a>
+  <a href="#comic-zoom">コミックページのズーム</a>
+  <a href="#tts">テキスト読み上げとCarPlay</a>
+  <a href="#upscaling">AIコミックアップスケーリング</a>
+  <a href="#hidden">非表示の本</a>
+  <a href="#bookmarks">ブックマーク、ハイライト、タグ</a>
+  <a href="#history">読書履歴</a>
+  <a href="#search">著者・タグ別に閲覧</a>
+  <a href="#metadata">メタデータとComicInfo.xml</a>
+  <a href="#icloud">iCloud同期</a>
+  <a href="#stats">読書統計</a>
+  <a href="#webdav">WebDAVとOPDS</a>
+  <a href="#resume">起動時に再開</a>
+  <a href="#formats">対応フォーマット</a>
+</div>
+
+<!-- IMPORTING -->
+<h2 id="importing">本のインポート</h2>
+<p class="section-desc">ライブラリに本を追加するいくつかの方法。</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4C1;</span> ファイルアプリから</h3>
+  <p><kbd>設定</kbd> &rarr; <kbd>本をインポート</kbd>をタップし、デバイス、iCloud Drive、または接続済みのクラウドサービスからファイルを選択してください。iPadではドラッグ＆ドロップも使えます。</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F310;</span> WiFi転送</h3>
+  <p>WiFiネットワーク上のどのパソコンやスマートフォンからでも本をアップロードできます。詳しくは下の専用セクションをご覧ください。</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F5C2;</span> WebDAVとOPDS</h3>
+  <p>NAS、Calibreサーバー、または公開ブックカタログに接続して、直接閲覧およびダウンロードできます。下記をご覧ください。</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; トップに戻る</a>
+
+<!-- WIFI TRANSFER -->
+<h2 id="wifi">WiFi転送</h2>
+<p class="section-desc">ローカルネットワーク上のどのデバイスからでも本をアップロードできます。</p>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F4F6;</span> 仕組み</h3>
+  <p>アプリはデバイス上で小さなウェブサーバーを起動します。同じWiFiネットワーク上のどのパソコンやスマートフォンからでも、ブラウザでアップロードページを開けます。</p>
+  <ol class="steps">
+    <li><kbd>設定</kbd> &rarr; <kbd>本をインポート</kbd> &rarr; <kbd>WiFi転送</kbd>に進みます。</li>
+    <li><kbd>サーバーを開始</kbd>をタップします。<kbd>http://192.168.1.42:8080</kbd>のようなアドレスが表示されます。</li>
+    <li>同じネットワーク上のウェブブラウザでそのアドレスを開きます。</li>
+    <li>ファイルをページにドラッグするか、クリックして選択します。必要に応じて保存先フォルダを選べます。</li>
+    <li>インポートされた本はすぐにライブラリに表示されます。</li>
+    <li>完了したら<kbd>サーバーを停止</kbd>をタップします。</li>
+  </ol>
+  <div class="tip"><strong>ヒント：</strong>サーバーが動作中はデバイスがスリープしないため、転送が中断されません。</div>
+  <div class="tip"><strong>アップロードに失敗しましたか？</strong>失敗した各ファイルにはその行に理由が表示されます。WiFi接続が切れた場合は、行の<kbd>&#x21BB; 再試行</kbd>をタップするともう一度送信できます。サポートされていないファイル形式など、恒久的な問題の場合は再試行ボタンは表示されません。</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; トップに戻る</a>
+
+<!-- LIBRARY -->
+<h2 id="library">ライブラリと整理</h2>
+<p class="section-desc">本を検索、並べ替え、整理できます。</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F50D;</span> 検索</h3>
+  <p>ライブラリ下部の<kbd>Search</kbd>ピルをタップして検索フィールドを開き、<kbd>完了</kbd>をタップして閉じます。タイトル、著者、タグ、シリーズ、出版社、説明を横断的に検索します。本のコンテキストメニューから著者やタグで検索すると（<a href="#search">著者・タグ別に閲覧</a>を参照）、同じ検索欄が入力されます。</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x2195;</span> 並べ替えとフィルター</h3>
+  <p>表示オプションボタン（右上）をタップして選択：</p>
+  <ul>
+    <li><strong>レイアウト</strong> &mdash; グリッド、詳細、コンパクト、ミニマリスト、テーブル、マガジン</li>
+    <li><strong>並べ替え</strong> &mdash; タイトル、著者、最終読書日、追加日、進捗、ファイルサイズ、シリーズ</li>
+    <li><strong>表示</strong> &mdash; 読書中の本を先頭に、読了済みの本を末尾に配置</li>
+    <li><strong>フィルター</strong> &mdash; フォーマット、タグ、または著者で絞り込み</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x2714;</span> 選択モード</h3>
+  <p>本を長押しするか、<kbd>選択</kbd>をタップして選択モードに入ります。複数の本をまとめて移動、削除、非表示、または再表示できます。</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4CB;</span> 重複を整理</h3>
+  <p><strong>設定 &gt; ライブラリ &gt; ライブラリのメンテナンス &gt; 重複を整理</strong> に移動すると、タイトル・著者・形式が同じ本を検索できます。各重複グループでは：</p>
+  <ul>
+    <li><strong>最新バージョン</strong>には緑の KEEP バッジが付きます</li>
+    <li>チェックボックスで古いコピーを選択します（または <strong>すべて選択</strong>）</li>
+    <li><strong>削除</strong> &mdash; 選択した古いコピーを削除します</li>
+    <li><strong>データをコピーして削除</strong> &mdash; ブックマーク、ハイライト、タグ、読書の進捗、棚の割り当てを最新バージョンに引き継いでから削除します</li>
+    <li><strong>「新しい本を古い本の棚と非表示状態に移動」</strong>を有効にすると、新しいバージョンを同じライブラリ内の場所に保持できます</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; トップに戻る</a>
+
+<!-- SHELVES -->
+<h2 id="shelves">シェルフとフォルダ</h2>
+<p class="section-desc">本をネストされたフォルダに整理できます。</p>
+
+<div class="card">
+  <h3><span class="icon icon-indigo">&#x1F4C2;</span> シェルフの作成</h3>
+  <ol class="steps">
+    <li>ライブラリの上部にある<kbd>新しいシェルフ</kbd>をタップします。</li>
+    <li>名前を入力し、アイコンと色を選びます。</li>
+    <li>サブフォルダを作成するには、親シェルフを選択します（任意）。</li>
+  </ol>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x21C4;</span> 本の移動</h3>
+  <p>本の詳細ページからメニュー（&hellip;）をタップし、<kbd>シェルフに移動</kbd>を選択します。選択モードでは複数の本をまとめて移動できます。</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; トップに戻る</a>
+
+<!-- READING BOOKS -->
+<h2 id="reading-books">本を読む</h2>
+<p class="section-desc">EPUB、PDF、TXT、RTFの閲覧モード。</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4D6;</span> EPUB</h3>
+  <p>EPUBはReadiumを搭載した高機能リーダーで開きます。左右の端をタップするか、スワイプしてページをめくれます。</p>
+  <ul>
+    <li><strong>ページめくり</strong> &mdash; 従来のページ送り形式での閲覧。</li>
+    <li><strong>連続スクロール</strong><span class="badge badge-premium">Premium</span> &mdash; テキストを自然にスクロールでき、ページ区切りがありません。</li>
+    <li><strong>読み方向</strong> &mdash; 本の指定に自動的に従うか、左から右・右から左を自分で設定できます。詳しくは<a href="#reading-direction">読み方向</a>をご覧ください。</li>
+    <li><strong>固定レイアウト</strong> &mdash; マンガや絵本など、ページ単位で構成されたEPUBは専用のリーダーで開きます。詳しくは<a href="#fixed-layout">固定レイアウトの本</a>をご覧ください。</li>
+    <li><strong>本文内検索</strong><span class="badge badge-premium">Premium</span> &mdash; 本全体から任意の語句を検索できます。詳しくは<a href="#in-book-search">本文内検索</a>をご覧ください。</li>
+    <li><strong>画像ギャラリー</strong><span class="badge badge-premium">Premium</span> &mdash; 本の詳細ページからEPUB内のすべての画像を閲覧できます。詳しくは<a href="#image-gallery">画像ギャラリー</a>をご覧ください。</li>
+  </ul>
+  <div class="tip"><strong>ヒント：</strong>フォントサイズ、行間、テーマカラーは<kbd>設定</kbd> &rarr; <kbd>読書設定</kbd> &rarr; <kbd>本</kbd>で調整できます。</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F4C4;</span> PDF</h3>
+  <p>PDFはネイティブで表示されます。ピンチでズーム、スワイプでページめくりができます。パスワード保護されたPDFのパスワードを記憶できます。</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x1F4DD;</span> TXTとRTF</h3>
+  <p>テキストファイルとRTFファイルは、書式を調整できるシンプルなテキストリーダーで開きます。</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; トップに戻る</a>
+
+<!-- FIXED LAYOUT -->
+<h2 id="fixed-layout">固定レイアウトの本</h2>
+<p class="section-desc">ページが固定デザインになっているEPUB &mdash; マンガ、絵本、挿絵の多い本など。</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4D0;</span> 固定レイアウトとは</h3>
+  <p>一部のEPUBは、流れるテキストではなくページ単位でレイアウトされています。各ページは文字とイラストが固定配置されたデザインです。アプリはこうした本を自動的に認識し、それ専用のリーダーで開きます &mdash; 各ページは画面に合わせて拡大縮小され中央に配置され、余白は読書テーマの背景色で塗りつぶされます。</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F44B;</span> 読み方とズーム</h3>
+  <ul>
+    <li>画面の左右をタップするか、スワイプしてページをめくります。中央をタップするとツールバーの表示・非表示が切り替わります。</li>
+    <li>ピンチでズームイン &mdash; 最大でフィットサイズの3倍まで &mdash; し、ドラッグしてページ内を移動できます。</li>
+    <li>ダブルタップでその位置を拡大します。もう一度ダブルタップすると画面に合わせて戻ります。</li>
+    <li>右から左に読むよう出版された本は、自動的にその向きでページがめくられます。</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4D6;</span> 見開き表示</h3>
+  <p>デバイスを横向きにすると、向かい合うページが並んで表示されます。アプリは本自体に含まれる見開きのヒントに従うため、表紙やページ全面のイラストにも単独のページが割り当てられます。縦向きに戻すと1ページずつの表示に戻ります。</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x2139;</span> 利用できる機能</h3>
+  <p>目次、ブックマーク、進捗スライダー、読書履歴、続きから再開はすべて通常どおり動作します。</p>
+  <p>各ページはアプリが再構成できるテキストではなく固定デザインのため、これらの本では一部の機能が表示されません &mdash; 連続スクロールと自動スクロール、フォントと外観の設定、テキスト読み上げ、本文内検索、テキストの選択やハイライトです。</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; トップに戻る</a>
+
+<!-- IN-BOOK SEARCH -->
+<h2 id="in-book-search">本文内検索</h2>
+<p class="section-desc">読んでいる本の中から任意の語句を見つけられます。<span class="badge badge-premium">Premium</span></p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F50D;</span> 検索を始める</h3>
+  <ol class="steps">
+    <li>ページ中央をタップしてツールバーを表示します。</li>
+    <li>下部バーの右端にある虫眼鏡をタップします。</li>
+    <li>2文字以上入力し、キーボードの<kbd>検索</kbd>を押します。</li>
+  </ol>
+  <p>検索対象は本全体です &mdash; 画面に表示中の章だけでなく、すべての章が検索されます &mdash; また、大文字と小文字は区別されません。検索はEPUBとTXT/RTFのリーダーで利用できます。</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4C4;</span> 検索結果を見る</h3>
+  <p>結果は検索バーの下に章ごとにまとめて表示されます。各行には、前後の文脈の抜粋の中に一致箇所が太字で表示されます。結果をタップするとその位置に直接ジャンプします &mdash; 本文中のすべての一致箇所が黄色でハイライトされ、現在の一致箇所はより濃いアンバー色で表示されます。</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x2195;</span> 一致箇所間の移動</h3>
+  <p>結果を選ぶと、検索バーはコンパクトな帯に折りたたまれ、現在何番目の一致箇所にいるかを示すカウンターが表示されます。</p>
+  <ul>
+    <li>上下の矢印で前後の一致箇所に移動できます。</li>
+    <li>リストボタンをタップすると結果一覧を再表示できます。</li>
+    <li><kbd>&times;</kbd>をタップすると検索を終了し、すべてのハイライトが解除されます。</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; トップに戻る</a>
+
+<!-- IMAGE GALLERY -->
+<h2 id="image-gallery">画像ギャラリー</h2>
+<p class="section-desc">EPUB内のすべての挿絵をスワイプで閲覧できるギャラリー。<span class="badge badge-premium">Premium</span></p>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F5BC;</span> ギャラリーを開く</h3>
+  <p>EPUBの本の詳細ページを開き、右上のツールバーにある写真スタックボタン<span class="icon">&#x1F5BC;</span>をタップします。アプリが本からすべての画像を抽出し、処理中は進行状況バーが表示されます &mdash; 左上の<kbd>&times;</kbd>ボタンでいつでも中断して戻れます。ギャラリーはEPUBの本でのみ利用できます。</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4DA;</span> 表示される内容</h3>
+  <p>画像は読書順 &mdash; 本の章に登場する順序 &mdash; に1ページ1枚で表示され、表紙も含まれます。アイコンや装飾などの小さな画像はスキップされます。最小サイズ（既定では100&nbsp;px）より小さいものは除外されます。しきい値は<kbd>設定</kbd> &rarr; <kbd>読書設定</kbd> &rarr; <kbd>本</kbd> &rarr; <kbd>EPUBギャラリー</kbd>で調整できます。条件を満たす画像がない場合は、画像が見つからなかったことが表示されます。</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F446;</span> 画像の表示と保存</h3>
+  <ul>
+    <li>スワイプで画像を切り替えるか、下部のページスライダーですばやくジャンプできます。</li>
+    <li>ピンチまたはダブルタップでズームし、ドラッグして移動できます &mdash; ギャラリーはコミックリーダーを使用しているため、ズームの操作方法もまったく同じです。詳しくは<a href="#comic-zoom">コミックページのズーム</a>をご覧ください。</li>
+    <li>画面中央をタップするとコントロールの表示・非表示が切り替わります。</li>
+    <li>画像を長押しすると<kbd>フル解像度で表示</kbd>を選べます &mdash; 元のサイズで細部までじっくり確認できます &mdash; ほかに<kbd>"写真"に保存</kbd>、<kbd>"ファイル"に保存</kbd>、<kbd>画像をコピー</kbd>もできます。</li>
+    <li>ギャラリーはコミックの読み進める方向に従います &mdash; Webtoon形式の縦スクロールにも対応します。</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; トップに戻る</a>
+
+<!-- READING FONTS -->
+<h2 id="fonts">読書フォント</h2>
+<p class="section-desc">読書用のフォントを選んだり、自分のフォントを追加したり、言語パックをダウンロードできます。</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F524;</span> フォントを選ぶ</h3>
+  <p><kbd>設定</kbd> &rarr; <kbd>読書設定</kbd> &rarr; <kbd>本</kbd> &rarr; <kbd>カスタムフォント</kbd>を開くと<strong>フォント</strong>画面が表示されます。いくつかの読書用フォントが標準で搭載されており、<strong>Literata</strong>が既定のフォントです。選んだフォントはEPUBリーダーとテキストリーダーに適用されます。</p>
+  <div class="tip"><strong>ヒント：</strong>フォントサイズと行間は<kbd>設定</kbd> &rarr; <kbd>読書設定</kbd> &rarr; <kbd>本</kbd>で調整できます。</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F453;</span> アクセシビリティフォント</h3>
+  <p>読みやすさを重視して設計された2つのフォントが標準で搭載されており、いつでも利用できます。似た文字の違いをはっきりさせる<strong>Atkinson Hyperlegible</strong>と、文字の取り違えを減らすよう下部を重くした<strong>OpenDyslexic</strong>です。</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F4C2;</span> カスタムフォント</h3>
+  <p>フォント画面から自分の<kbd>.ttf</kbd>または<kbd>.otf</kbd>フォントファイルを読み込んで、EPUBリーダーで使用できます。読み込んだフォントはデバイス内にとどまります。</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F4E5;</span> フォントと言語パックのダウンロード</h3>
+  <p><strong>フォントをダウンロード</strong>では、アプリに同梱されていない文字体系向けに、追加の読書用フォントや言語パックを必要に応じて入手できます &mdash; 中国語、日本語、韓国語（CJK）、アラビア語、デーバナーガリー、タイ語です。パックは容量が大きい（それぞれ約41&nbsp;MB）ため、ダウンロード前にサイズが表示されます。インストールすると、読み込んだフォントとまったく同じように使えます。</p>
+  <div class="tip"><strong>ヒント：</strong>本の文字が空の四角として表示される場合は、対応する言語パックをダウンロードすると表示できます。</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x1F4DC;</span> フォントライセンス</h3>
+  <p>同梱およびダウンロード可能なフォントは<strong>SIL Open Font License</strong>のもとで提供されています。フォント画面の各行から、それぞれの全文ライセンスを読むことができます。</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; トップに戻る</a>
+
+<!-- READING DIRECTION -->
+<h2 id="reading-direction">読み方向</h2>
+<p class="section-desc">左から右、右から左、または本が出版された向きにそのまま従います。</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x21C4;</span> 方向を選ぶ</h3>
+  <p><kbd>設定</kbd> &rarr; <kbd>読書設定</kbd> &rarr; <kbd>本</kbd>を開き、<strong>読書モード</strong>内の<strong>読み方向</strong>コントロールを使用します。</p>
+  <ul>
+    <li><strong>自動</strong>（既定）&mdash; 本自体が指定する方向に従います。マンガや右から左に読むよう出版された本は、設定なしで正しい向きに開きます。</li>
+    <li><strong>左から右</strong> &mdash; ほとんどの欧米書籍で標準的な方向です。</li>
+    <li><strong>右から左</strong> &mdash; すべての本を右から左で表示します。</li>
+  </ul>
+  <p>本を開いたまま変更することもできます &mdash; ページ中央をタップしてツールバーを表示し、下部バーの<kbd>Aa</kbd>ボタンをタップします。変更は今読んでいるページにすぐ反映されます。</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F44B;</span> 読み方向が影響する範囲</h3>
+  <ul>
+    <li>どちら側をタップ・スワイプすると先に進むか &mdash; 右から左の本では、左方向へのタップやスワイプが次のページに進みます。</li>
+    <li>ページめくりのアニメーション。正しい側からめくれます。</li>
+    <li>ページ内のテキストのレイアウト。</li>
+  </ul>
+  <div class="tip"><strong>注意：</strong>進捗スライダーは常に左から埋まります。本の中でどれだけ進んだかを示すもので、ページが画面上のどちら側にあるかを示すものではないためです。</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x2139;</span> 適用される範囲</h3>
+  <p>この設定はページめくりモードのEPUB向けです &mdash; 連続スクロールがオンのときは表示されません。コミックには独自の読み順設定があります（<a href="#reading-comics">コミックを読む</a>を参照）。また<a href="#fixed-layout">固定レイアウトの本</a>は、常に本の中で指定された方向に従います。</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; トップに戻る</a>
+
+<!-- VERTICAL WRITING -->
+<h2 id="vertical-writing">縦書き</h2>
+<p class="section-desc">日本語や中国語の本を縦組みで表示します。</p>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x2B07;</span> 縦組みの本</h3>
+  <p>縦組みで組版された本 &mdash; 日本語の縦書きや中国語の直排 &mdash; は、組まれたとおりに表示されます。テキストは上から下へ、行は右から左へ並び、マンガと同じように左方向へページがめくれます。</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x2699;</span> 組方向</h3>
+  <p><kbd>設定</kbd> &rarr; <kbd>読書設定</kbd> &rarr; <kbd>本</kbd>を開き、<strong>組方向</strong>コントロールを使用します。</p>
+  <ul>
+    <li><strong>自動</strong>（既定）&mdash; 各本自体のレイアウトに従います。縦組みで組版された本は縦書きで表示され、それ以外の本には影響しません。</li>
+    <li><strong>横書き</strong> &mdash; 縦組みの本を含め、すべての本を横書きで表示します。</li>
+    <li><strong>縦書き</strong> &mdash; すべての本を縦書きの段組みで表示します。</li>
+  </ul>
+  <p>同じコントロールはリーダー内設定の<kbd>Aa</kbd>ボタンからも利用できます。</p>
+  <div class="tip"><strong>注意：</strong>変更は次に本を開いたときに適用されます &mdash; 表示中の本は開いたときのレイアウトのまま変わりません。</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x2139;</span> 知っておきたいこと</h3>
+  <ul>
+    <li>縦書きの本は常にページめくりモードを使用するため、連続スクロールと自動スクロールは利用できません。</li>
+    <li>縦書きの本にはスライドのページアニメーションは使われません &mdash; 代わりにフリップアニメーションでめくられます。</li>
+    <li>ブックマーク、ハイライト、目次、本文内検索、テキスト読み上げはすべて通常どおり動作します。</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; トップに戻る</a>
+
+<!-- READING COMICS -->
+<h2 id="reading-comics">コミックを読む</h2>
+<p class="section-desc">CBZ、CBR、CB7のコミック閲覧。</p>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4F1;</span> 閲覧モード</h3>
+  <ul>
+    <li><strong>左から右</strong> &mdash; 標準的な欧米コミックのページ順。</li>
+    <li><strong>右から左</strong> &mdash; マンガの読み順。</li>
+    <li><strong>Webtoon / 縦スクロール</strong> &mdash; 縦長コミック向けのスムーズな縦スクロール。</li>
+  </ul>
+  <p><kbd>設定</kbd> &rarr; <kbd>読書設定</kbd> &rarr; <kbd>コミック</kbd>でグローバルデフォルトを設定するか、各本の詳細ページから個別に変更できます。</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F50E;</span> ページスケーリング</h3>
+  <ul>
+    <li><strong>画面にフィット</strong> &mdash; ページ全体が表示されます。</li>
+    <li><strong>幅にフィット</strong> &mdash; 幅いっぱいに表示し、必要に応じて縦スクロールします。</li>
+    <li><strong>高さにフィット</strong> &mdash; 高さいっぱいに表示します。</li>
+    <li><strong>オリジナルサイズ</strong> &mdash; 1:1ピクセル表示。</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F44B;</span> ジェスチャー</h3>
+  <ul>
+    <li>左右にスワイプしてページをめくります（ページ送りモード）。</li>
+    <li>ピンチまたはダブルタップでズームし、ドラッグして移動できます。詳しくは<a href="#comic-zoom">コミックページのズーム</a>をご覧ください。</li>
+    <li>ページ中央をタップするとツールバーの表示・非表示が切り替わります。</li>
+    <li>下部のページスライダーですばやくジャンプできます。</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x26A0;</span> 不審なアーカイブの警告</h3>
+  <p>コミックアーカイブ（CBZ、CBR、CB7）を開いたとき、その内容が異常に大きい、または極端に圧縮されている &mdash; メモリを圧迫するように設計された「zip bomb」ファイルに見られるパターン &mdash; 場合、アプリは展開する前に<strong>不審なアーカイブ</strong>のアラートを表示します。</p>
+  <ul>
+    <li><kbd>キャンセル</kbd>をタップするとファイルは開かれません。出所が不明なアーカイブには、こちらが安全な選択です。</li>
+    <li>ファイルを信頼できる場合は<kbd>そのまま開く</kbd>をタップしてください &mdash; アプリは安全チェックをスキップしてページを読み込みます。</li>
+  </ul>
+  <p>EPUBファイルもインポート時に同じ保護機能を内部的に使用しています。</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; トップに戻る</a>
+
+<!-- COMIC ZOOM -->
+<h2 id="comic-zoom">コミックページのズーム</h2>
+<p class="section-desc">ページ表示モードでもWebtoonスクロールでも、アートワークをもっと近くで見られます。</p>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F50D;</span> ページ表示モード</h3>
+  <ul>
+    <li>ピンチでズームイン &mdash; 最大でフィットサイズの3倍まで。ピンチしている指の下にアートワークが追従します。</li>
+    <li>ダブルタップでその位置を2倍サイズにジャンプします。もう一度ダブルタップすると画面に合わせて戻ります。</li>
+    <li>ズーム中は1本指でドラッグして移動できます。</li>
+    <li>ほぼ元のサイズまでピンチで戻すと、ページはきれいにフィットサイズへスナップします。</li>
+  </ul>
+  <p>ズームは<strong>画面にフィット</strong>と<strong>高さにフィット</strong>のスケーリングオプション、および見開き表示で使用できます。<strong>幅にフィット</strong>と<strong>オリジナルサイズ</strong>はすでに画面より大きくページを表示してスクロールする形式のため、こちらではより近くで見るために下記の<strong>フル解像度で表示</strong>を使用してください。</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4F1;</span> Webtoonスクロール</h3>
+  <ul>
+    <li>ピンチまたはダブルタップでストリップ全体をズームします &mdash; 最大で通常サイズの3倍まで。</li>
+    <li>ズーム中もスクロールは通常どおり続けられます &mdash; そのまま上下にドラッグするだけです。</li>
+    <li>横方向にドラッグすると、ズームしたページ内を移動できます。</li>
+    <li>スクロールを続けてもズームレベルは維持されるため、章全体を拡大したまま読み進められます。デバイスを回転すると通常サイズに戻ります。</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x2728;</span> フル解像度で表示</h3>
+  <p>ズームは画面用に用意されたサイズでページを拡大します。1ページを最も鮮明に見たい場合は、そのページを長押しして<kbd>フル解像度で表示</kbd>を選んでください &mdash; そのページはアーカイブの元の解像度でデコードされ、さらに大きくピンチインできます。ダブルタップで画面にフィットと2倍サイズを切り替えられます。下にスワイプするか閉じるボタンをタップすると元に戻ります。</p>
+  <div class="tip"><strong>注意：</strong>ズームは保存されません。本を閉じると常に通常のフィット表示に戻ります。</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; トップに戻る</a>
+
+<!-- TTS -->
+<h2 id="tts">テキスト読み上げとCarPlay</h2>
+<p class="section-desc">本を音声で聞きましょう。</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F50A;</span> テキスト読み上げの使い方</h3>
+  <p>EPUB、PDF、またはTXTの本を開き、ツールバーの再生ボタンをタップします。TTSは一文ずつ読み上げ、現在の単語をハイライト表示します。</p>
+  <ul>
+    <li><strong>速度</strong> &mdash; TTSコントロールで0.5倍から2倍まで。</li>
+    <li><strong>音声</strong> &mdash; <kbd>設定</kbd> &rarr; <kbd>読書設定</kbd> &rarr; <kbd>テキスト読み上げ</kbd>で100以上のシステム音声から選択。</li>
+    <li><strong>スキップ</strong> &mdash; 次/前をタップして文単位またはチャプター単位でジャンプ。</li>
+  </ul>
+  <div class="tip"><strong>注意：</strong><a href="#fixed-layout">固定レイアウトの本</a> &mdash; ページが固定デザインになっているマンガや絵本 &mdash; には読み上げるテキストがないため、これらの本では再生ボタンが表示されません。</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F697;</span> CarPlay</h3>
+  <p>CarPlay対応車両に接続すると、シンプルな再生コントロールで車のディスプレイにアプリが表示されます。TTSはバックグラウンドで再生を続けるため、画面をオンにしておく必要はありません。</p>
+  <div class="tip"><strong>ヒント：</strong>TTS設定で<kbd>バックグラウンドオーディオ</kbd><span class="badge badge-premium">Premium</span>を有効にすると、CarPlayなしでもアプリがバックグラウンドにあるときに再生を続けられます。</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; トップに戻る</a>
+
+<!-- AI UPSCALING -->
+<h2 id="upscaling">AIコミックアップスケーリング</h2>
+<p class="section-desc">デバイス上で低解像度のコミックページを高画質化します。<span class="badge badge-premium">Premium</span></p>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x2728;</span> 機能説明</h3>
+  <p>デバイス上の機械学習モデルを使用して、解像度のしきい値を下回るコミックページをアップスケールします。より鮮明な線と圧縮アーティファクトの軽減が得られ、古いスキャンや低品質のスキャンに特に有効です。</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x2699;</span> セットアップ</h3>
+  <ol class="steps">
+    <li><kbd>設定</kbd> &rarr; <kbd>読書設定</kbd> &rarr; <kbd>コミック</kbd> &rarr; <kbd>AIアップスケーリング</kbd>に進みます。</li>
+    <li>オンにします。</li>
+    <li><strong>解像度しきい値</strong>を調整します。このピクセル幅以下のページがアップスケールされます（デフォルト：1500 px）。</li>
+    <li><strong>プリフェッチウィンドウ</strong>を設定して、バックグラウンドで事前処理する先読みページ数を制御します。</li>
+    <li><strong>ノイズ除去レベル</strong>を選択します（自動が最適な場合がほとんどです）。</li>
+  </ol>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4BE;</span> キャッシュとストレージ</h3>
+  <p>アップスケール済みの画像はキャッシュされるため、再処理の必要がありません。キャッシュの保持期間（7〜90日または無期限）を選び、設定からいつでもクリアできます。</p>
+  <div class="tip"><strong>ヒント：</strong>アップスケールされたページには小さなインジケーターバッジが表示されます。不要な場合は設定でオフにできます。</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; トップに戻る</a>
+
+<!-- HIDDEN MODE -->
+<h2 id="hidden">非表示の本</h2>
+<p class="section-desc">特定の本をプライベートに保ちます。<span class="badge badge-premium">Premium</span></p>
+
+<div class="card">
+  <h3><span class="icon icon-indigo">&#x1F441;</span> 本を非表示にする</h3>
+  <ol class="steps">
+    <li>本の詳細ページを開き、メニュー（&hellip;）をタップします。</li>
+    <li><kbd>本を非表示</kbd>を選択します。</li>
+    <li>本が通常のライブラリ表示から消えます。</li>
+  </ol>
+  <p>複数の本を一括で非表示にするには、選択モードを使用してください。</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F513;</span> 非表示の本を見る</h3>
+  <p>ライブラリを下にスクロールすると<strong>非表示モード</strong>が有効になります。すべての本（非表示と表示の両方）が表示されます。もう一度スクロールするか、アプリを閉じると非表示モードが解除されます。</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F512;</span> プライバシーオプション</h3>
+  <p>非表示モードが有効な場合、<kbd>設定</kbd> &rarr; <kbd>非表示モード</kbd>でアプリを離れたときの動作を選択できます：</p>
+  <ul>
+    <li><strong>自動終了</strong>（デフォルト） &mdash; 非表示モードが自動的にオフになります。シンプルで手軽です。</li>
+    <li><strong>Face ID / Touch IDを要求</strong> &mdash; 非表示モードはオンのままですが、再開時に生体認証が必要です。より安全です。</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x21A9;</span> 本の再表示</h3>
+  <p>非表示モード中に、非表示の本の詳細を開いて<kbd>本を再表示</kbd>を選択するか、選択モードで一括再表示できます。</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x2601;</span> 非表示の本を同期</h3>
+  <p>非表示モードで<kbd>設定</kbd> &rarr; <kbd>非表示モード</kbd>に進み、<kbd>非表示の本をiCloudと同期</kbd>を切り替えます：</p>
+  <ul>
+    <li><strong>オフ</strong>（デフォルト） &mdash; 非表示の本はこのデバイスにのみ保存されます。本を非表示にすると、iCloudからも削除されます。</li>
+    <li><strong>オン</strong> &mdash; 非表示の本はiCloud経由で同期されますが、サインインしているすべてのデバイスで非表示のままです。</li>
+  </ul>
+  <p>すでにiCloudに非表示の本がある状態でこの切り替えをオフにすると、それらをどうするか確認されます：</p>
+  <ul>
+    <li><strong>すべてのデバイスに残す</strong> &mdash; 他のデバイスは同期されたコピーを保持し、このデバイスはローカルのみのプライベートコピーを保持します。</li>
+    <li><strong>iCloudから完全に削除</strong> &mdash; iCloudから本を削除します。他の各デバイスは、非表示ライブラリに独自のプライベートコピーを保持します。</li>
+  </ul>
+  <div class="tip"><strong>注意：</strong>他のデバイスがiCloudから非表示の本を削除した場合、その本のファイルがすでにダウンロード済みであれば、このデバイスは非表示ライブラリに自動的に独自のプライベートコピーを保持します。</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F5D1;</span> 非表示の本を完全に削除</h3>
+  <p>非表示モードで<kbd>設定</kbd> &rarr; <kbd>非表示モード</kbd>に進み、<kbd>非表示の本を完全に削除</kbd>を選択すると、すべての非表示の本がこのデバイス、iCloud、他のデバイスから削除されます。確認のため<kbd>DELETE</kbd>と入力してください。</p>
+  <div class="tip"><strong>警告：</strong>この操作は取り消せません。その時点でオフラインのデバイスは、次回同期するまでローカルコピーを保持します。</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; トップに戻る</a>
+
+<!-- BOOKMARKS, HIGHLIGHTS, TAGS -->
+<h2 id="bookmarks">ブックマーク、ハイライト、タグ</h2>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F516;</span> ブックマーク</h3>
+  <p>リーダーのツールバーにあるブックマークアイコンをタップして現在のページをブックマークします。メモを追加することもできます。本のすべてのブックマークは詳細ページから確認できます。</p>
+  <div class="tip"><strong>注意：</strong>ここに表示されるのは手動で作成したブックマークだけです。本を閉じたときにアプリが自動的に保存する位置は、自分のブックマークが埋もれないように<a href="#history">読書履歴</a>に別に保管されます。</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F58D;</span> ハイライト<span class="badge badge-premium">Premium</span></h3>
+  <p>EPUBでテキストを選択してハイライトします。5色（黄色、ピンク、緑、青、オレンジ）から選び、メモを追加できます。すべてのハイライトは本の詳細ページに一覧表示されます。</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F3F7;</span> タグ</h3>
+  <p>本の詳細ページからタグを追加できます。タグは検索可能で、ライブラリのフィルターとしても使えます。すべてのタグは<kbd>設定</kbd> &rarr; <kbd>タグ</kbd>から管理できます。</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; トップに戻る</a>
+
+<!-- READING HISTORY -->
+<h2 id="history">読書履歴</h2>
+<p class="section-desc">最近開いていた位置にすぐに戻れます。</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F552;</span> 自動保存</h3>
+  <p>本を閉じたり、アプリをバックグラウンドに移動したりするたびに、現在の位置が履歴エントリーとして保存されます &mdash; ブックマークを付けるのを覚えておく必要はありません。EPUB、PDF、TXT/RTF、コミックなど、すべてのリーダーで動作します。</p>
+  <ul>
+    <li>本ごとに最新の<strong>50</strong>件の位置が保持されます。新しいエントリーが追加されると、古いものは自動的に削除されます。</li>
+    <li>数分以内に同じ場所で本を再度閉じた場合、重複を作成する代わりに既存のエントリーが更新されます。</li>
+    <li>自動保存された位置は、手動で意図的に設定したブックマークと混ざらないように、手動ブックマークのリストとは分けて保管されます。</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4D6;</span> 本の中の履歴</h3>
+  <p>読書中に右上のオーバーフローメニュー（&hellip;）をタップし、<kbd>読書履歴</kbd>を選択します。その本における最近の位置が新しい順にリスト表示され、章またはページ名と、各エントリーが記録されてからの時間が表示されます。</p>
+  <ul>
+    <li>任意のエントリーをタップするとその位置に直接ジャンプします。</li>
+    <li>エントリーを左にスワイプすると削除できます。</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F4DA;</span> ライブラリ全体の履歴</h3>
+  <p>ライブラリで上部ツールバーのオーバーフローメニュー（&hellip;）をタップし、<kbd>読書履歴</kbd>を選択すると、最近開いたすべての本が日付ごとにグループ化されて表示されます。行をタップすると、前回中断した場所から本を開けます。</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; トップに戻る</a>
+
+<!-- AUTHOR & TAG BROWSING -->
+<h2 id="search">著者・タグ別に閲覧</h2>
+<p class="section-desc">アプリのどこからでも著者やタグで本を見つけられます。</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F464;</span> 著者</h3>
+  <p><kbd>設定</kbd> &rarr; <kbd>著者</kbd>に進むと、ライブラリ内のすべての著者が冊数付きで表示されます。著者をタップすると、その著者のすべての本をライブラリから検索します。</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F3F7;</span> タグ検索</h3>
+  <p><kbd>設定</kbd> &rarr; <kbd>タグ</kbd>で任意のタグをタップすると、そのタグが付いた本をライブラリから検索します。長押しすると名前の変更や削除ができます。</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F50D;</span> コンテキストからのクイック検索</h3>
+  <ul>
+    <li>ライブラリで本を長押し &rarr; <kbd>[著者]の本を探す</kbd></li>
+    <li>本の詳細ページで著者名または任意のタグを長押しすると検索できます</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; トップに戻る</a>
+
+<!-- METADATA -->
+<h2 id="metadata">メタデータとComicInfo.xml</h2>
+<p class="section-desc">本のメタデータを表示・編集します。</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x270F;</span> メタデータエディター</h3>
+  <p>本の詳細ページでメニュー（&hellip;）をタップし、<kbd>メタデータを編集</kbd>を選択すると、タイトル、著者、シリーズ、説明などの項目を変更できます。元のファイルからメタデータを再抽出することもできます。</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4CB;</span> ComicInfo.xml</h3>
+  <p><code>ComicInfo.xml</code>ファイルを含むコミックアーカイブ（CBZ、CBR、CB7）は、読み込み時にメタデータが自動的に抽出されます &mdash; タイトル、作者、シリーズ、巻号、あらすじ、出版社、ジャンル、タグを含みます。</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; トップに戻る</a>
+
+<!-- ICLOUD -->
+<h2 id="icloud">iCloud同期</h2>
+<p class="section-desc">デバイス間でライブラリを同期します。</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x2601;</span> 同期の有効化</h3>
+  <ol class="steps">
+    <li><kbd>設定</kbd> &rarr; <kbd>iCloud同期</kbd>に進みます。</li>
+    <li><kbd>ライブラリをiCloudと同期</kbd>をオンにします。</li>
+    <li>同期は次のアプリ起動時に反映されます。</li>
+  </ol>
+  <p>メタデータ、読書の進捗、ブックマーク、ハイライト、シェルフが同じiCloudアカウントにサインインしたすべてのデバイス間で同期されます。</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F4CA;</span> 同期ステータス</h3>
+  <p><kbd>設定</kbd> &rarr; <kbd>iCloud同期</kbd>で、本のファイルのステータスカードが表示されます：</p>
+  <ul>
+    <li>見出し &mdash; <strong>最新</strong>、<strong>同期中&hellip;</strong>（件数付き）、または<strong>サインインしていません</strong>。</li>
+    <li>ライブラリのファイルのうちどれだけがiCloudにあるかを示すバー。</li>
+    <li>内訳 &mdash; <strong>同期済み</strong>（合計サイズ付き）、<strong>iCloudのみ</strong>（このデバイスにまだダウンロードされていない）、<strong>処理中</strong>。</li>
+  </ul>
+  <div class="tip"><strong>注意：</strong>このカードは本の<em>ファイル</em>のみを追跡します。読書の進捗、ブックマーク、ハイライト、シェルフはファイルの状態に関係なく、別途自動的に同期されます。</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x2601;</span> 表紙バッジ</h3>
+  <p>本の表紙の右下に、ファイルの同期状態を示す小さな雲のアイコンが表示されます：</p>
+  <ul>
+    <li><strong>雲のアイコン</strong> &mdash; ファイルはiCloudにのみ存在します。本のページを開いてダウンロードしてください。</li>
+    <li><strong>上下の矢印</strong> &mdash; ファイルは現在アップロードまたはダウンロード中です。</li>
+    <li><strong>アイコンなし</strong> &mdash; ファイルはすでにこのデバイスにあります。</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4E5;</span> 自動ダウンロード</h3>
+  <p>自動ダウンロードの最大ファイルサイズを選択します。それより大きな本は開くまでクラウドに保持されます。iCloud設定で上限を調整できます。</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; トップに戻る</a>
+
+<!-- STATS -->
+<h2 id="stats">読書統計</h2>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F4CA;</span> 読書アクティビティ</h3>
+  <p><kbd>設定</kbd> &rarr; <kbd>ライブラリ統計</kbd>を開くと以下が確認できます：</p>
+  <ul>
+    <li>合計冊数、読んだページ数、読書時間。</li>
+    <li>日別読書アクティビティチャート。</li>
+    <li>フォーマット別・読書ステータス別の本。</li>
+    <li>本ごとのアクティビティ内訳。</li>
+  </ul>
+  <div class="tip"><strong>注意：</strong>統計は非表示モードに連動します。非表示モードがオフのとき、非表示の本の統計は含まれません。</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; トップに戻る</a>
+
+<!-- WEBDAV & OPDS -->
+<h2 id="webdav">WebDAVとOPDS</h2>
+<p class="section-desc">リモートサーバーやカタログから閲覧・ダウンロードできます。</p>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F5C4;</span> WebDAV</h3>
+  <p>NAS、Nextcloud、またはCalibreサーバーに接続してフォルダを閲覧し、本をダウンロードします。</p>
+  <ol class="steps">
+    <li><kbd>設定</kbd> &rarr; <kbd>本をインポート</kbd> &rarr; <kbd>WebDAV</kbd>に進みます。</li>
+    <li><kbd>サーバーを追加</kbd>をタップし、URLを入力します。</li>
+    <li>必要に応じてユーザー名とパスワードを追加します。</li>
+    <li><kbd>接続テスト</kbd>をタップし、保存します。</li>
+  </ol>
+  <div class="tip"><strong>自己署名証明書：</strong>サーバーが自己署名証明書を使用している場合は<kbd>信頼されていない証明書を許可</kbd>をオンにできます。アプリはまず確認を求めます &mdash; これはTLS検証を無効にするため、同じネットワーク上の第三者がサーバーになりすます恐れがあります。自分が管理するサーバーに対してのみ有効にしてください。</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4DA;</span> OPDSカタログ</h3>
+  <p>OPDSはブックカタログのオープンスタンダードです。公開カタログ（Project Gutenberg、Standard Ebooksなど）またはプライベートサーバーを追加できます。</p>
+  <ol class="steps">
+    <li><kbd>設定</kbd> &rarr; <kbd>本をインポート</kbd> &rarr; <kbd>OPDS</kbd>に進みます。</li>
+    <li><kbd>カタログを追加</kbd>をタップし、フィードURLを入力します。</li>
+    <li>カテゴリを閲覧し、ライブラリに本をダウンロードします。</li>
+  </ol>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; トップに戻る</a>
+
+<!-- RESUME -->
+<h2 id="resume">起動時に再開</h2>
+<p class="section-desc">前回の続きから自動的に再開します。</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x25B6;</span> セットアップ</h3>
+  <p><kbd>設定</kbd> &rarr; <kbd>一般</kbd>に進み、<kbd>起動時に最後の本を再開</kbd>をオンにします。次にアプリを開くと、最後に読んでいた本とページに直接ジャンプします。</p>
+  <div class="tip"><strong>非表示の本：</strong>最後に読んだ本が非表示の場合、アプリは再開前にFace ID / Touch IDを要求します。非表示モードの設定で<kbd>認証後に非表示の本を再開</kbd>を有効にすると、この機能を使用できます。</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; トップに戻る</a>
+
+<!-- FORMATS -->
+<h2 id="formats">対応フォーマット</h2>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4D6;</span> 本</h3>
+  <div class="formats-grid">
+    <div class="format-tag">EPUB</div>
+    <div class="format-tag">PDF</div>
+    <div class="format-tag">TXT</div>
+    <div class="format-tag">RTF</div>
+  </div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4F1;</span> コミック</h3>
+  <div class="formats-grid">
+    <div class="format-tag">CBZ</div>
+    <div class="format-tag">CBR</div>
+    <div class="format-tag">CB7</div>
+  </div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; トップに戻る</a>
+
+</body>
+</html>

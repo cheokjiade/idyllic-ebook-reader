@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Przewodnik u&#380;ytkownika</title>
+<link rel="stylesheet" href="UserGuideStyle.css">
+<!-- USER-GUIDE-NAV-STYLE:START -->
+<style>
+.guide-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 14px;
+  padding: 10px 14px;
+  margin: 0 0 16px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  font-size: 13px;
+}
+.guide-nav-home {
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.guide-nav-arrow {
+  display: inline-block;
+}
+[dir="rtl"] .guide-nav-arrow {
+  transform: scaleX(-1);
+}
+.guide-nav-langs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 10px;
+  color: var(--secondary);
+}
+.guide-nav-globe {
+  font-size: 13px;
+}
+.guide-nav-langs a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.guide-nav-langs a:hover,
+.guide-nav-langs a:focus-visible {
+  text-decoration: underline;
+}
+.guide-nav-current {
+  font-weight: 700;
+  color: var(--text);
+}
+</style>
+<!-- USER-GUIDE-NAV-STYLE:END -->
+</head>
+<body id="top">
+<!-- USER-GUIDE-NAV:START -->
+<nav class="guide-nav" aria-label="User Guide language switcher">
+  <a class="guide-nav-home" href="../index.html"><span class="guide-nav-arrow" aria-hidden="true">&larr;</span> Idyllic</a>
+  <span class="guide-nav-langs">
+    <span class="guide-nav-globe" aria-hidden="true">&#x1F310;</span>
+      <a href="index.html">English</a>
+      <a href="ar.html">العربية</a>
+      <a href="cs.html">Čeština</a>
+      <a href="da.html">Dansk</a>
+      <a href="de.html">Deutsch</a>
+      <a href="es.html">Español</a>
+      <a href="fi.html">Suomi</a>
+      <a href="fr.html">Français</a>
+      <a href="he.html">עברית</a>
+      <a href="hi.html">हिन्दी</a>
+      <a href="id.html">Indonesia</a>
+      <a href="it.html">Italiano</a>
+      <a href="ja.html">日本語</a>
+      <a href="ko.html">한국어</a>
+      <a href="ms.html">Bahasa Melayu</a>
+      <a href="nb.html">Norsk bokmål</a>
+      <a href="nl.html">Nederlands</a>
+      <span class="guide-nav-current">Polski</span>
+      <a href="pt-BR.html">Português (Brasil)</a>
+      <a href="ru.html">Русский</a>
+      <a href="sv.html">Svenska</a>
+      <a href="th.html">ไทย</a>
+      <a href="tr.html">Türkçe</a>
+      <a href="uk.html">Українська</a>
+      <a href="vi.html">Tiếng Việt</a>
+      <a href="zh-Hans.html">简体中文</a>
+      <a href="zh-Hant.html">繁體中文</a>
+  </span>
+</nav>
+<!-- USER-GUIDE-NAV:END -->
+
+<h1>Przewodnik u&#380;ytkownika</h1>
+<p class="subtitle">Wszystko, czego potrzebujesz, aby w pe&#322;ni wykorzysta&#263; swoje do&#347;wiadczenie czytelnicze.</p>
+
+<!-- TABLE OF CONTENTS -->
+<div class="card toc">
+  <a href="#importing">Importowanie ksi&#261;&#380;ek</a>
+  <a href="#wifi">Transfer WiFi</a>
+  <a href="#library">Biblioteka i organizacja</a>
+  <a href="#shelves">P&oacute;&#322;ki i foldery</a>
+  <a href="#reading-books">Czytanie ksi&#261;&#380;ek</a>
+  <a href="#fixed-layout">Ksi&#261;&#380;ki o sta&#322;ym uk&#322;adzie</a>
+  <a href="#in-book-search">Wyszukiwanie w ksi&#261;&#380;ce</a>
+  <a href="#image-gallery">Galeria obraz&oacute;w</a>
+  <a href="#fonts">Czcionki do czytania</a>
+  <a href="#reading-direction">Kierunek czytania</a>
+  <a href="#vertical-writing">Pismo pionowe</a>
+  <a href="#reading-comics">Czytanie komiks&oacute;w</a>
+  <a href="#comic-zoom">Powi&#281;kszanie stron komiksu</a>
+  <a href="#tts">Tekst na mow&#281; i CarPlay</a>
+  <a href="#upscaling">Skalowanie komiks&oacute;w AI</a>
+  <a href="#hidden">Ukryte ksi&#261;&#380;ki</a>
+  <a href="#bookmarks">Zak&#322;adki, wyr&oacute;&#380;nienia i tagi</a>
+  <a href="#history">Historia czytania</a>
+  <a href="#search">Przegl&#261;danie wed&#322;ug autora i tagu</a>
+  <a href="#metadata">Metadane i ComicInfo.xml</a>
+  <a href="#icloud">Synchronizacja iCloud</a>
+  <a href="#stats">Statystyki czytania</a>
+  <a href="#webdav">WebDAV i OPDS</a>
+  <a href="#resume">Wznawianie przy uruchomieniu</a>
+  <a href="#formats">Obs&#322;ugiwane formaty</a>
+</div>
+
+<!-- IMPORTING -->
+<h2 id="importing">Importowanie ksi&#261;&#380;ek</h2>
+<p class="section-desc">Kilka sposob&oacute;w na dodanie ksi&#261;&#380;ek do biblioteki.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4C1;</span> Z aplikacji Pliki</h3>
+  <p>Stuknij <kbd>Ustawienia</kbd> &rarr; <kbd>Importuj ksi&#261;&#380;ki</kbd>, a nast&#281;pnie wybierz pliki z urz&#261;dzenia, iCloud Drive lub dowolnej po&#322;&#261;czonej us&#322;ugi chmurowej. Na iPadzie mo&#380;esz r&oacute;wnie&#380; u&#380;y&#263; przeci&#261;gania i upuszczania.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F310;</span> Transfer WiFi</h3>
+  <p>Prze&#347;lij ksi&#261;&#380;ki z dowolnego komputera lub telefonu w sieci WiFi. Szczeg&oacute;&#322;y znajdziesz w dedykowanej sekcji poni&#380;ej.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F5C2;</span> WebDAV i OPDS</h3>
+  <p>Po&#322;&#261;cz si&#281; z serwerem NAS, Calibre lub publicznym katalogiem ksi&#261;&#380;ek, aby przegl&#261;da&#263; i pobiera&#263; ksi&#261;&#380;ki bezpo&#347;rednio. Zobacz poni&#380;ej.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Powr&oacute;t na g&oacute;r&#281;</a>
+
+<!-- WIFI TRANSFER -->
+<h2 id="wifi">Transfer WiFi</h2>
+<p class="section-desc">Prze&#347;lij ksi&#261;&#380;ki z dowolnego urz&#261;dzenia w sieci lokalnej.</p>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F4F6;</span> Jak to dzia&#322;a</h3>
+  <p>Aplikacja uruchamia ma&#322;y serwer WWW na Twoim urz&#261;dzeniu. Dowolny komputer lub telefon w tej samej sieci WiFi mo&#380;e otworzy&#263; stron&#281; przesy&#322;ania w przegl&#261;darce.</p>
+  <ol class="steps">
+    <li>Przejd&#378; do <kbd>Ustawienia</kbd> &rarr; <kbd>Importuj ksi&#261;&#380;ki</kbd> &rarr; <kbd>Transfer WiFi</kbd>.</li>
+    <li>Stuknij <kbd>Uruchom serwer</kbd>. Pojawi si&#281; adres, np. <kbd>http://192.168.1.42:8080</kbd>.</li>
+    <li>Otw&oacute;rz ten adres w dowolnej przegl&#261;darce internetowej w tej samej sieci.</li>
+    <li>Przeci&#261;gnij pliki na stron&#281; lub kliknij, aby przegl&#261;da&#263; &mdash; wybierz folder docelowy, je&#347;li chcesz.</li>
+    <li>Zaimportowane ksi&#261;&#380;ki pojawi&#261; si&#281; natychmiast w Twojej bibliotece.</li>
+    <li>Stuknij <kbd>Zatrzymaj serwer</kbd>, gdy sko&#324;czysz.</li>
+  </ol>
+  <div class="tip"><strong>Wskaz&oacute;wka:</strong> Urz&#261;dzenie pozostanie aktywne, gdy serwer jest uruchomiony, aby transfery nie by&#322;y przerywane.</div>
+  <div class="tip"><strong>Przesy&#322;anie nie powiod&#322;o si&#281;?</strong> Przy ka&#380;dym pliku, kt&oacute;rego nie uda&#322;o si&#281; przes&#322;a&#263;, w wierszu wy&#347;wietlany jest pow&oacute;d. Je&#347;li po&#322;&#261;czenie WiFi zostanie przerwane, stuknij w wierszu <kbd>&#x21BB; Pon&oacute;w</kbd>, aby wys&#322;a&#263; plik ponownie. W przypadku trwa&#322;ych problem&oacute;w (np. nieobs&#322;ugiwanego formatu pliku) przycisk Pon&oacute;w nie pojawi si&#281;.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Powr&oacute;t na g&oacute;r&#281;</a>
+
+<!-- LIBRARY -->
+<h2 id="library">Biblioteka i organizacja</h2>
+<p class="section-desc">Znajd&#378;, sortuj i organizuj swoje ksi&#261;&#380;ki.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F50D;</span> Wyszukiwanie</h3>
+  <p>Stuknij pigu&#322;k&#281; <kbd>Wyszukiwanie</kbd> na dole biblioteki, aby rozwin&#261;&#263; pole wyszukiwania, a nast&#281;pnie stuknij <kbd>Gotowe</kbd>, aby je zamkn&#261;&#263;. Wyszukuje wed&#322;ug tytu&#322;u, autora, tag&oacute;w, serii, wydawcy i opisu. Wyszukiwanie wed&#322;ug autora lub tagu z menu kontekstowego ksi&#261;&#380;ki (zobacz <a href="#search">Przegl&#261;danie wed&#322;ug autora i tagu</a>) wype&#322;nia to samo pole wyszukiwania.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x2195;</span> Sortowanie i filtrowanie</h3>
+  <p>Stuknij przycisk opcji widoku (prawy g&oacute;rny r&oacute;g), aby wybra&#263;:</p>
+  <ul>
+    <li><strong>Uk&#322;ad</strong> &mdash; Siatka, Szczeg&oacute;&#322;owy, Kompaktowy, Minimalistyczny, Tabela lub Magazyn</li>
+    <li><strong>Sortowanie</strong> &mdash; Tytu&#322;, Autor, Ostatnio czytane, Data dodania, Post&#281;p, Rozmiar pliku, Seria</li>
+    <li><strong>Wy&#347;wietlanie</strong> &mdash; Umie&#347;&#263; czytane ksi&#261;&#380;ki na pocz&#261;tku, a uko&#324;czone na ko&#324;cu</li>
+    <li><strong>Filtr</strong> &mdash; Wed&#322;ug formatu, tagu lub autora</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x2714;</span> Tryb zaznaczania</h3>
+  <p>Przytrzymaj ksi&#261;&#380;k&#281; lub stuknij <kbd>Zaznacz</kbd>, aby wej&#347;&#263; w tryb zaznaczania. Mo&#380;esz wtedy przenosi&#263;, usuwa&#263;, ukrywa&#263; lub odkrywa&#263; wiele ksi&#261;&#380;ek naraz.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4CB;</span> Wyczy&#347;&#263; duplikaty</h3>
+  <p>Przejd&#378; do <strong>Ustawienia &gt; Biblioteka &gt; Konserwacja biblioteki &gt; Wyczy&#347;&#263; duplikaty</strong>, aby znale&#378;&#263; ksi&#261;&#380;ki o tym samym tytule, autorze i formacie. Dla ka&#380;dej grupy duplikat&oacute;w:</p>
+  <ul>
+    <li><strong>Najnowsza wersja</strong> jest oznaczona zielon&#261; odznak&#261; KEEP</li>
+    <li>Wybierz starsze kopie za pomoc&#261; p&oacute;l wyboru (lub <strong>Zaznacz wszystko</strong>)</li>
+    <li><strong>Usu&#324;</strong> &mdash; usuwa wybrane starsze kopie</li>
+    <li><strong>Skopiuj dane i usu&#324;</strong> &mdash; przenosi zak&#322;adki, pod&#347;wietlenia, tagi, post&#281;p czytania i przypisanie p&oacute;&#322;ki do najnowszej wersji przed usuni&#281;ciem</li>
+    <li>W&#322;&#261;cz opcj&#281; <strong>"Przenie&#347; now&#261; ksi&#261;&#380;k&#281; na p&oacute;&#322;k&#281; i status ukrycia starej ksi&#261;&#380;ki"</strong>, aby zachowa&#263; now&#261; wersj&#281; w tym samym miejscu w bibliotece</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Powr&oacute;t na g&oacute;r&#281;</a>
+
+<!-- SHELVES -->
+<h2 id="shelves">P&oacute;&#322;ki i foldery</h2>
+<p class="section-desc">Organizuj ksi&#261;&#380;ki w zagnie&#380;d&#380;onych folderach.</p>
+
+<div class="card">
+  <h3><span class="icon icon-indigo">&#x1F4C2;</span> Tworzenie p&oacute;&#322;ek</h3>
+  <ol class="steps">
+    <li>Stuknij <kbd>Nowa p&oacute;&#322;ka</kbd> u g&oacute;ry biblioteki.</li>
+    <li>Wpisz nazw&#281;, a nast&#281;pnie wybierz ikon&#281; i kolor.</li>
+    <li>Opcjonalnie wybierz p&oacute;&#322;k&#281; nadrz&#281;dn&#261;, aby utworzy&#263; podfolder.</li>
+  </ol>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x21C4;</span> Przenoszenie ksi&#261;&#380;ek</h3>
+  <p>Na stronie szczeg&oacute;&#322;&oacute;w ksi&#261;&#380;ki stuknij menu (&hellip;) i wybierz <kbd>Przenie&#347; na p&oacute;&#322;k&#281;</kbd>. W trybie zaznaczania mo&#380;esz przenie&#347;&#263; wiele ksi&#261;&#380;ek naraz.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Powr&oacute;t na g&oacute;r&#281;</a>
+
+<!-- READING BOOKS -->
+<h2 id="reading-books">Czytanie ksi&#261;&#380;ek</h2>
+<p class="section-desc">Tryby czytania EPUB, PDF, TXT i RTF.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4D6;</span> EPUB</h3>
+  <p>Pliki EPUB otwieraj&#261; si&#281; w pe&#322;nofunkcyjnym czytniku opartym na Readium. Stuknij lew&#261; lub praw&#261; kraw&#281;d&#378;, aby przewraca&#263; strony, lub przesu&#324;.</p>
+  <ul>
+    <li><strong>Stronicowany</strong> &mdash; tradycyjne czytanie strona po stronie.</li>
+    <li><strong>Ci&#261;g&#322;e przewijanie</strong><span class="badge badge-premium">Premium</span> &mdash; przewijaj naturalnie przez tekst, bez podzia&#322;u na strony.</li>
+    <li><strong>Kierunek czytania</strong> &mdash; pod&#261;&#380;a za ksi&#261;&#380;k&#261; automatycznie, lub ustaw samodzielnie od lewej do prawej albo od prawej do lewej. Zobacz <a href="#reading-direction">Kierunek czytania</a>.</li>
+    <li><strong>Sta&#322;y uk&#322;ad</strong> &mdash; komiksy, ksi&#261;&#380;ki obrazkowe i inne pliki EPUB czytane strona po stronie otwieraj&#261; si&#281; w czytniku stworzonym z my&#347;l&#261; o nich. Zobacz <a href="#fixed-layout">Ksi&#261;&#380;ki o sta&#322;ym uk&#322;adzie</a>.</li>
+    <li><strong>Wyszukiwanie w ksi&#261;&#380;ce</strong><span class="badge badge-premium">Premium</span> &mdash; przeszukaj ca&#322;&#261; ksi&#261;&#380;k&#281; pod k&#261;tem dowolnego s&#322;owa lub frazy. Zobacz <a href="#in-book-search">Wyszukiwanie w ksi&#261;&#380;ce</a>.</li>
+    <li><strong>Galeria obraz&oacute;w</strong><span class="badge badge-premium">Premium</span> &mdash; przegl&#261;daj wszystkie obrazy w EPUB ze strony szczeg&oacute;&#322;&oacute;w ksi&#261;&#380;ki. Zobacz <a href="#image-gallery">Galeria obraz&oacute;w</a>.</li>
+  </ul>
+  <div class="tip"><strong>Wskaz&oacute;wka:</strong> Dostosuj rozmiar czcionki, interlinii&#281; i kolory motywu w <kbd>Ustawienia</kbd> &rarr; <kbd>Preferencje czytania</kbd> &rarr; <kbd>Ksi&#261;&#380;ki</kbd>.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F4C4;</span> PDF</h3>
+  <p>Pliki PDF s&#261; renderowane natywnie. U&#347;ci&#347;nij, aby powi&#281;kszy&#263;, przesu&#324;, aby zmieni&#263; stron&#281;. Aplikacja mo&#380;e zapami&#281;tywa&#263; has&#322;a do chronionych plik&oacute;w PDF.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x1F4DD;</span> TXT i RTF</h3>
+  <p>Pliki tekstowe i RTF otwieraj&#261; si&#281; w prostym czytniku tekstu z regulowalnym formatowaniem.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Powr&oacute;t na g&oacute;r&#281;</a>
+
+<!-- FIXED LAYOUT -->
+<h2 id="fixed-layout">Ksi&#261;&#380;ki o sta&#322;ym uk&#322;adzie</h2>
+<p class="section-desc">Pliki EPUB, kt&oacute;rych strony maj&#261; sta&#322;y wygl&#261;d &mdash; komiksy, ksi&#261;&#380;ki obrazkowe i mocno ilustrowane tytu&#322;y.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4D0;</span> Czym s&#261;</h3>
+  <p>Niekt&oacute;re pliki EPUB s&#261; u&#322;o&#380;one strona po stronie, a nie jako p&#322;yn&#261;cy tekst: ka&#380;da strona to sta&#322;y uk&#322;ad s&#322;&oacute;w i grafiki. Aplikacja sama rozpoznaje takie ksi&#261;&#380;ki i otwiera je w czytniku stworzonym z my&#347;l&#261; o nich &mdash; ka&#380;da strona jest skalowana, aby zmie&#347;ci&#263; si&#281; na ekranie, i wy&#347;rodkowana, a przestrze&#324; wok&oacute;&#322; niej wype&#322;nia kolor t&#322;a Twojego motywu czytania.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F44B;</span> Czytanie i powi&#281;kszanie</h3>
+  <ul>
+    <li>Stuknij lew&#261; lub praw&#261; stron&#281; ekranu, aby przewr&oacute;ci&#263; stron&#281;, lub przesu&#324;. Stuknij &#347;rodek, aby pokaza&#263; lub ukry&#263; paski narz&#281;dzi.</li>
+    <li>U&#347;ci&#347;nij, aby powi&#281;kszy&#263; &mdash; do trzech razy rozmiaru dopasowanego &mdash; i przeci&#261;gnij, aby przesuwa&#263; si&#281; po stronie.</li>
+    <li>Stuknij dwukrotnie, aby przybli&#380;y&#263; wybrane miejsce; stuknij dwukrotnie ponownie, aby dopasowa&#263; stron&#281; z powrotem do ekranu.</li>
+    <li>Ksi&#261;&#380;ki wydane do czytania od prawej do lewej automatycznie przewracaj&#261; strony w tym kierunku.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4D6;</span> Rozk&#322;ad&oacute;wki</h3>
+  <p>Obr&oacute;&#263; urz&#261;dzenie do orientacji poziomej, a s&#261;siaduj&#261;ce strony pojawi&#261; si&#281; obok siebie. Aplikacja pod&#261;&#380;a za wskaz&oacute;wkami dotycz&#261;cymi rozk&#322;ad&oacute;wek zawartymi w samej ksi&#261;&#380;ce, wi&#281;c ok&#322;adka lub ilustracja na ca&#322;&#261; stron&#281; wci&#261;&#380; dostaje w&#322;asn&#261; stron&#281;. Obr&oacute;&#263; z powrotem do orientacji pionowej, aby wr&oacute;ci&#263; do jednej strony naraz.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x2139;</span> Co jest dost&#281;pne</h3>
+  <p>Spis tre&#347;ci, zak&#322;adki, suwak post&#281;pu, historia czytania i wznawianie w miejscu, w kt&oacute;rym sko&#324;czy&#322;e&#347;, dzia&#322;aj&#261; jak zwykle.</p>
+  <p>Poniewa&#380; ka&#380;da strona to sta&#322;y uk&#322;ad, a nie tekst, kt&oacute;ry aplikacja mo&#380;e przep&#322;yn&#261;&#263;, kilka element&oacute;w steruj&#261;cych nie pojawia si&#281; dla tych ksi&#261;&#380;ek: Ci&#261;g&#322;e przewijanie i automatyczne przewijanie, ustawienia czcionki i wygl&#261;du, tekst na mow&#281;, wyszukiwanie w ksi&#261;&#380;ce oraz zaznaczanie lub pod&#347;wietlanie tekstu.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Powr&oacute;t na g&oacute;r&#281;</a>
+
+<!-- IN-BOOK SEARCH -->
+<h2 id="in-book-search">Wyszukiwanie w ksi&#261;&#380;ce</h2>
+<p class="section-desc">Znajd&#378; dowolne s&#322;owo lub fraz&#281; w czytanej ksi&#261;&#380;ce.<span class="badge badge-premium">Premium</span></p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F50D;</span> Rozpoczynanie wyszukiwania</h3>
+  <ol class="steps">
+    <li>Stuknij &#347;rodek strony, aby wy&#347;wietli&#263; paski narz&#281;dzi.</li>
+    <li>Stuknij lupk&#281; na prawym ko&#324;cu dolnego paska.</li>
+    <li>Wpisz co najmniej dwa znaki i naci&#347;nij <kbd>Szukaj</kbd> na klawiaturze.</li>
+  </ol>
+  <p>Przeszukiwana jest ca&#322;a ksi&#261;&#380;ka &mdash; ka&#380;dy rozdzia&#322;, nie tylko ten na ekranie &mdash; a dopasowanie ignoruje wielko&#347;&#263; liter. Wyszukiwanie jest dost&#281;pne w czytnikach EPUB oraz TXT/RTF.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4C4;</span> Przegl&#261;danie wynik&oacute;w</h3>
+  <p>Wyniki pojawiaj&#261; si&#281; pod paskiem wyszukiwania, pogrupowane wed&#322;ug rozdzia&#322;&oacute;w. Ka&#380;dy wiersz pokazuje pogrubione trafienie wewn&#261;trz fragmentu otaczaj&#261;cego tekstu. Stuknij wynik, aby przej&#347;&#263; prosto do tego miejsca &mdash; ka&#380;de trafienie jest wyr&oacute;&#380;nione w ksi&#261;&#380;ce na &#380;&oacute;&#322;to, a bie&#380;&#261;ce mocniejszym bursztynowym kolorem.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x2195;</span> Przeskakiwanie mi&#281;dzy trafieniami</h3>
+  <p>Po wybraniu wyniku pasek wyszukiwania zwija si&#281; do kompaktowego paska z licznikiem pokazuj&#261;cym, w kt&oacute;rym miejscu w&#347;r&oacute;d trafie&#324; jeste&#347;.</p>
+  <ul>
+    <li>U&#380;yj strza&#322;ek g&oacute;ra/d&oacute;&#322;, aby przej&#347;&#263; do poprzedniego lub nast&#281;pnego trafienia.</li>
+    <li>Stuknij przycisk listy, aby ponownie otworzy&#263; pe&#322;n&#261; list&#281; wynik&oacute;w.</li>
+    <li>Stuknij <kbd>&times;</kbd>, aby zako&#324;czy&#263; wyszukiwanie &mdash; wszystkie wyr&oacute;&#380;nienia zostan&#261; usuni&#281;te.</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Powr&oacute;t na g&oacute;r&#281;</a>
+
+<!-- IMAGE GALLERY -->
+<h2 id="image-gallery">Galeria obraz&oacute;w</h2>
+<p class="section-desc">Przegl&#261;daj wszystkie ilustracje w EPUB jako galeri&#281; przesuwan&#261; gestami.<span class="badge badge-premium">Premium</span></p>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F5BC;</span> Otwieranie galerii</h3>
+  <p>Otw&oacute;rz stron&#281; szczeg&oacute;&#322;&oacute;w ksi&#261;&#380;ki EPUB i stuknij przycisk stosu zdj&#281;&#263; <span class="icon">&#x1F5BC;</span> na pasku narz&#281;dzi w prawym g&oacute;rnym rogu. Aplikacja wyodr&#281;bnia wszystkie obrazy z ksi&#261;&#380;ki, pokazuj&#261;c w tym czasie pasek post&#281;pu &mdash; stuknij przycisk <kbd>&times;</kbd> w lewym g&oacute;rnym rogu, aby wycofa&#263; si&#281; w dowolnym momencie. Galeria jest dost&#281;pna tylko dla ksi&#261;&#380;ek EPUB.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4DA;</span> Co zobaczysz</h3>
+  <p>Obrazy pojawiaj&#261; si&#281; po jednym na stron&#281; w kolejno&#347;ci czytania &mdash; w takiej, w jakiej wyst&#281;puj&#261; w rozdzia&#322;ach ksi&#261;&#380;ki &mdash; wraz z ok&#322;adk&#261;. Malutkie obrazy, takie jak ikony i ozdobniki, s&#261; pomijane: wszystko mniejsze ni&#380; minimalny rozmiar (domy&#347;lnie 100&nbsp;px) nie jest uwzgl&#281;dniane. Dostosuj pr&oacute;g w <kbd>Ustawienia</kbd> &rarr; <kbd>Preferencje czytania</kbd> &rarr; <kbd>Ksi&#261;&#380;ki</kbd> &rarr; <kbd>Galeria EPUB</kbd>. Je&#347;li &#380;aden obraz nie spe&#322;nia warunk&oacute;w, galeria poinformuje, &#380;e niczego nie znaleziono.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F446;</span> Wy&#347;wietlanie i zapisywanie obraz&oacute;w</h3>
+  <ul>
+    <li>Przesuwaj, aby przechodzi&#263; mi&#281;dzy obrazami, lub u&#380;yj suwaka stron na dole, aby szybko przeskoczy&#263;.</li>
+    <li>U&#347;ci&#347;nij lub stuknij dwukrotnie, aby powi&#281;kszy&#263;, a nast&#281;pnie przeci&#261;gnij, aby przesuwa&#263; si&#281; po obrazie &mdash; galeria korzysta z czytnika komiks&oacute;w, wi&#281;c powi&#281;ksza dok&#322;adnie w ten sam spos&oacute;b. Zobacz <a href="#comic-zoom">Powi&#281;kszanie stron komiksu</a>.</li>
+    <li>Stuknij &#347;rodek ekranu, aby pokaza&#263; lub ukry&#263; elementy sterowania.</li>
+    <li>Przytrzymaj obraz, aby wybra&#263; <kbd>Poka&#380; w pe&#322;nej rozdzielczo&#347;ci</kbd> &mdash; co otwiera go w oryginalnym rozmiarze do bli&#380;szego przyjrzenia si&#281; &mdash; lub <kbd>Zapisz w Zdj&#281;ciach</kbd>, <kbd>Zapisz w Plikach</kbd> albo <kbd>Kopiuj obraz</kbd>.</li>
+    <li>Galeria pod&#261;&#380;a za Twoim kierunkiem czytania komiks&oacute;w &mdash; w tym za pionowym przewijaniem w stylu webtoon.</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Powr&oacute;t na g&oacute;r&#281;</a>
+
+<!-- READING FONTS -->
+<h2 id="fonts">Czcionki do czytania</h2>
+<p class="section-desc">Wybierz czcionk&#281; do czytania, dodaj w&#322;asn&#261; lub pobierz pakiety j&#281;zykowe.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F524;</span> Wyb&oacute;r czcionki</h3>
+  <p>Otw&oacute;rz <kbd>Ustawienia</kbd> &rarr; <kbd>Preferencje czytania</kbd> &rarr; <kbd>Ksi&#261;&#380;ki</kbd> &rarr; <kbd>Czcionki niestandardowe</kbd>, aby przej&#347;&#263; do ekranu <strong>Czcionki</strong>. Kilka czcionek do czytania jest wbudowanych, a domy&#347;ln&#261; jest <strong>Literata</strong>. Wybrana czcionka dotyczy czytnik&oacute;w EPUB i tekstu.</p>
+  <div class="tip"><strong>Wskaz&oacute;wka:</strong> Dostosuj rozmiar czcionki i interlini&#281; w <kbd>Ustawienia</kbd> &rarr; <kbd>Preferencje czytania</kbd> &rarr; <kbd>Ksi&#261;&#380;ki</kbd>.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F453;</span> Czcionki u&#322;atwiaj&#261;ce czytanie</h3>
+  <p>Dwie czcionki zaprojektowane z my&#347;l&#261; o &#322;atwiejszym czytaniu s&#261; do&#322;&#261;czone i zawsze dost&#281;pne: <strong>Atkinson Hyperlegible</strong>, kt&oacute;ra wyostrza r&oacute;&#380;nice mi&#281;dzy podobnymi literami, oraz <strong>OpenDyslexic</strong>, doci&#261;&#380;ona u do&#322;u, aby ogranicza&#263; mylenie liter.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F4C2;</span> Czcionki niestandardowe</h3>
+  <p>Zaimportuj w&#322;asne pliki czcionek <kbd>.ttf</kbd> lub <kbd>.otf</kbd> z ekranu Czcionki i u&#380;ywaj ich w czytniku EPUB. Zaimportowane czcionki pozostaj&#261; na Twoim urz&#261;dzeniu.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F4E5;</span> Pobieranie czcionek &amp; pakiet&oacute;w j&#281;zykowych</h3>
+  <p>W sekcji <strong>Pobieranie czcionek</strong> dodatkowe czcionki do czytania i pakiety j&#281;zykowe s&#261; dost&#281;pne na &#380;&#261;danie dla pism, kt&oacute;rych aplikacja nie zawiera &mdash; chi&#324;skiego, japo&#324;skiego &amp; korea&#324;skiego (CJK), arabskiego, dewanagari i tajskiego. Pakiety s&#261; du&#380;e (oko&#322;o 41&nbsp;MB ka&#380;dy), dlatego przed pobraniem wy&#347;wietlany jest ich rozmiar. Po zainstalowaniu dzia&#322;aj&#261; dok&#322;adnie tak jak zaimportowane czcionki.</p>
+  <div class="tip"><strong>Wskaz&oacute;wka:</strong> Je&#347;li znaki w ksi&#261;&#380;ce wy&#347;wietlaj&#261; si&#281; jako puste prostok&#261;ty, pobierz odpowiedni pakiet j&#281;zykowy, aby je wy&#347;wietli&#263;.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x1F4DC;</span> Licencje czcionek</h3>
+  <p>Do&#322;&#261;czone i mo&#380;liwe do pobrania czcionki s&#261; udost&#281;pniane na warunkach <strong>SIL Open Font License</strong>. Pe&#322;n&#261; licencj&#281; ka&#380;dej z nich mo&#380;esz przeczyta&#263; z jej wiersza na ekranie Czcionki.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Powr&oacute;t na g&oacute;r&#281;</a>
+
+<!-- READING DIRECTION -->
+<h2 id="reading-direction">Kierunek czytania</h2>
+<p class="section-desc">Od lewej do prawej, od prawej do lewej lub tak, jak wydano ksi&#261;&#380;k&#281;.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x21C4;</span> Wyb&oacute;r kierunku</h3>
+  <p>Otw&oacute;rz <kbd>Ustawienia</kbd> &rarr; <kbd>Preferencje czytania</kbd> &rarr; <kbd>Ksi&#261;&#380;ki</kbd> i u&#380;yj kontrolki <strong>Kierunek czytania</strong> w sekcji <strong>Tryb czytania</strong>:</p>
+  <ul>
+    <li><strong>Automatyczny</strong> (domy&#347;lnie) &mdash; pod&#261;&#380;a za kierunkiem zadeklarowanym przez sam&#261; ksi&#261;&#380;k&#281;. Manga i ksi&#261;&#380;ki wydane do czytania od prawej do lewej otwieraj&#261; si&#281; we w&#322;a&#347;ciwym kierunku bez &#380;adnej konfiguracji.</li>
+    <li><strong>Od lewej do prawej</strong> &mdash; standard dla wi&#281;kszo&#347;ci zachodnich ksi&#261;&#380;ek.</li>
+    <li><strong>Od prawej do lewej</strong> &mdash; u&#380;yj tego kierunku dla ka&#380;dej ksi&#261;&#380;ki.</li>
+  </ul>
+  <p>Mo&#380;esz te&#380; zmieni&#263; go bez opuszczania ksi&#261;&#380;ki: stuknij &#347;rodek strony, aby pokaza&#263; paski narz&#281;dzi, a nast&#281;pnie stuknij przycisk <kbd>Aa</kbd> na dolnym pasku. Zmiana zaczyna obowi&#261;zywa&#263; od razu na czytanej stronie.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F44B;</span> Co zale&#380;y od kierunku</h3>
+  <ul>
+    <li>Kt&oacute;ra strona przenosi Ci&#281; do przodu &mdash; w ksi&#261;&#380;ce czytanej od prawej do lewej stukni&#281;cie lub przesuni&#281;cie w lewo przewraca stron&#281; do przodu.</li>
+    <li>Animacja przewracania stron, kt&oacute;ra obraca si&#281; od w&#322;a&#347;ciwej strony.</li>
+    <li>Uk&#322;ad tekstu na stronie.</li>
+  </ul>
+  <div class="tip"><strong>Uwaga:</strong> Suwak post&#281;pu zawsze wype&#322;nia si&#281; od lewej, poniewa&#380; pokazuje, jak daleko jeste&#347; w ksi&#261;&#380;ce, a nie gdzie strona znajduje si&#281; na ekranie.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x2139;</span> Gdzie to obowi&#261;zuje</h3>
+  <p>To ustawienie dotyczy plik&oacute;w EPUB w trybie stronicowanym &mdash; jest ukryte, gdy w&#322;&#261;czone jest Ci&#261;g&#322;e przewijanie. Komiksy maj&#261; w&#322;asne ustawienie kolejno&#347;ci czytania (zobacz <a href="#reading-comics">Czytanie komiks&oacute;w</a>), a <a href="#fixed-layout">ksi&#261;&#380;ki o sta&#322;ym uk&#322;adzie</a> zawsze pod&#261;&#380;aj&#261; za kierunkiem zadeklarowanym w ksi&#261;&#380;ce.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Powr&oacute;t na g&oacute;r&#281;</a>
+
+<!-- VERTICAL WRITING -->
+<h2 id="vertical-writing">Pismo pionowe</h2>
+<p class="section-desc">Japo&#324;skie i chi&#324;skie ksi&#261;&#380;ki z&#322;o&#380;one w pionowych kolumnach.</p>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x2B07;</span> Ksi&#261;&#380;ki pionowe</h3>
+  <p>Ksi&#261;&#380;ki z&#322;o&#380;one pionowo &mdash; japo&#324;skie tategaki (&#x7E26;&#x66F8;&#x304D;) i tradycyjne pismo chi&#324;skie (&#x76F4;&#x6392;) &mdash; s&#261; wy&#347;wietlane tak, jak zosta&#322;y z&#322;o&#380;one: tekst biegnie od g&oacute;ry do do&#322;u w kolumnach wype&#322;niaj&#261;cych si&#281; od prawej do lewej, a strony przewracaj&#261; si&#281; w lewo, tak samo jak w mandze.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x2699;</span> Kierunek pisania</h3>
+  <p>Otw&oacute;rz <kbd>Ustawienia</kbd> &rarr; <kbd>Preferencje czytania</kbd> &rarr; <kbd>Ksi&#261;&#380;ki</kbd> i u&#380;yj kontrolki <strong>Kierunek pisania</strong>:</p>
+  <ul>
+    <li><strong>Automatyczny</strong> (domy&#347;lnie) &mdash; pod&#261;&#380;a za w&#322;asnym uk&#322;adem ka&#380;dej ksi&#261;&#380;ki. Ksi&#261;&#380;ka z&#322;o&#380;ona pionowo jest wy&#347;wietlana pionowo; ka&#380;da inna ksi&#261;&#380;ka pozostaje bez zmian.</li>
+    <li><strong>Poziomy</strong> &mdash; wy&#347;wietla ka&#380;d&#261; ksi&#261;&#380;k&#281; poziomo, tak&#380;e t&#281; z&#322;o&#380;on&#261; pionowo.</li>
+    <li><strong>Pionowy</strong> &mdash; wy&#347;wietla ka&#380;d&#261; ksi&#261;&#380;k&#281; w pionowych kolumnach.</li>
+  </ul>
+  <p>Ta sama kontrolka znajduje si&#281; w ustawieniach czytnika, pod przyciskiem <kbd>Aa</kbd>.</p>
+  <div class="tip"><strong>Uwaga:</strong> Zmiany zaczynaj&#261; obowi&#261;zywa&#263; przy nast&#281;pnym otwarciu ksi&#261;&#380;ki &mdash; ksi&#261;&#380;ka ju&#380; otwarta na ekranie zachowuje uk&#322;ad, z jakim zosta&#322;a otwarta.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x2139;</span> Warto wiedzie&#263;</h3>
+  <ul>
+    <li>Ksi&#261;&#380;ki pionowe zawsze u&#380;ywaj&#261; trybu stronicowanego, wi&#281;c Ci&#261;g&#322;e przewijanie i automatyczne przewijanie nie s&#261; dla nich dost&#281;pne.</li>
+    <li>Strony ksi&#261;&#380;ek pionowych nie u&#380;ywaj&#261; animacji <strong>Przesuwanie</strong> &mdash; zamiast tego przewracaj&#261; si&#281; animacj&#261; <strong>Przewijanie kartek</strong>.</li>
+    <li>Zak&#322;adki, wyr&oacute;&#380;nienia, spis tre&#347;ci, wyszukiwanie w ksi&#261;&#380;ce i tekst na mow&#281; dzia&#322;aj&#261; jak zwykle.</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Powr&oacute;t na g&oacute;r&#281;</a>
+
+<!-- READING COMICS -->
+<h2 id="reading-comics">Czytanie komiks&oacute;w</h2>
+<p class="section-desc">Czytanie komiks&oacute;w CBZ, CBR i CB7.</p>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4F1;</span> Tryby czytania</h3>
+  <ul>
+    <li><strong>Od lewej do prawej</strong> &mdash; Standardowa zachodnia kolejno&#347;&#263; stron komiksu.</li>
+    <li><strong>Od prawej do lewej</strong> &mdash; Kolejno&#347;&#263; czytania mangi.</li>
+    <li><strong>Webtoon / Przewijanie pionowe</strong> &mdash; P&#322;ynne przewijanie pionowe dla d&#322;ugich komiks&oacute;w paskowych.</li>
+  </ul>
+  <p>Ustaw domy&#347;ln&#261; warto&#347;&#263; globaln&#261; w <kbd>Ustawienia</kbd> &rarr; <kbd>Preferencje czytania</kbd> &rarr; <kbd>Komiksy</kbd> lub nadpisz j&#261; dla poszczeg&oacute;lnych ksi&#261;&#380;ek na stronie szczeg&oacute;&#322;&oacute;w.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F50E;</span> Skalowanie stron</h3>
+  <ul>
+    <li><strong>Dopasuj do ekranu</strong> &mdash; Ca&#322;a strona widoczna.</li>
+    <li><strong>Dopasuj do szeroko&#347;ci</strong> &mdash; Wype&#322;nia szeroko&#347;&#263;, przewijanie pionowe w razie potrzeby.</li>
+    <li><strong>Dopasuj do wysoko&#347;ci</strong> &mdash; Wype&#322;nia wysoko&#347;&#263;.</li>
+    <li><strong>Oryginalny rozmiar</strong> &mdash; Wy&#347;wietlanie 1:1 piksel.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F44B;</span> Gesty</h3>
+  <ul>
+    <li>Przesu&#324; w lewo/prawo, aby zmieni&#263; stron&#281; (tryby stronicowane).</li>
+    <li>U&#347;ci&#347;nij lub stuknij dwukrotnie, aby powi&#281;kszy&#263;, a nast&#281;pnie przeci&#261;gnij, aby przesuwa&#263; si&#281; po stronie. Zobacz <a href="#comic-zoom">Powi&#281;kszanie stron komiksu</a>.</li>
+    <li>Stuknij &#347;rodek strony, aby pokaza&#263; lub ukry&#263; pasek narz&#281;dzi.</li>
+    <li>U&#380;yj suwaka stron na dole, aby szybko przeskakiwa&#263;.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x26A0;</span> Ostrze&#380;enie o podejrzanym archiwum</h3>
+  <p>Gdy otwierasz archiwum komiksu (CBZ, CBR lub CB7), kt&oacute;rego zawarto&#347;&#263; wygl&#261;da na nietypowo du&#380;&#261; lub agresywnie skompresowan&#261; &mdash; to wzorzec u&#380;ywany przez pliki typu &ldquo;zip bomb&rdquo;, kt&oacute;re maj&#261; przeci&#261;&#380;y&#263; pami&#281;&#263; &mdash; aplikacja wy&#347;wietli alert <strong>Podejrzane archiwum</strong> przed wypakowaniem czegokolwiek.</p>
+  <ul>
+    <li>Stuknij <kbd>Anuluj</kbd>, aby pozostawi&#263; plik nieotwartym. To bezpieczny wyb&oacute;r dla archiw&oacute;w z nieznanych &#378;r&oacute;de&#322;.</li>
+    <li>Stuknij <kbd>Otw&oacute;rz mimo to</kbd>, je&#347;li ufasz plikowi &mdash; aplikacja pominie kontrol&#281; bezpiecze&#324;stwa i wczyta strony.</li>
+  </ul>
+  <p>Pliki EPUB korzystaj&#261; z tej samej ochrony po cichu podczas importowania.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Powr&oacute;t na g&oacute;r&#281;</a>
+
+<!-- COMIC ZOOM -->
+<h2 id="comic-zoom">Powi&#281;kszanie stron komiksu</h2>
+<p class="section-desc">Zbli&#380; si&#281; do grafiki &mdash; zar&oacute;wno w trybach stronicowanych, jak i przy przewijaniu webtoon.</p>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F50D;</span> Tryby stronicowane</h3>
+  <ul>
+    <li>U&#347;ci&#347;nij, aby powi&#281;kszy&#263; &mdash; do trzech razy rozmiaru dopasowanego. Grafika pozostaje pod Twoimi palcami podczas uszczypni&#281;cia.</li>
+    <li>Stuknij dwukrotnie, aby przeskoczy&#263; do podw&oacute;jnego rozmiaru w danym miejscu; stuknij dwukrotnie ponownie, aby dopasowa&#263; stron&#281; z powrotem do ekranu.</li>
+    <li>Przeci&#261;gnij jednym palcem, aby przesuwa&#263; si&#281; po powi&#281;kszonej stronie.</li>
+    <li>Prawie ca&#322;kowite rozsuni&#281;cie palc&oacute;w z powrotem sprawia, &#380;e strona wraca dok&#322;adnie do dopasowanego rozmiaru.</li>
+  </ul>
+  <p>Powi&#281;kszanie dzia&#322;a z opcjami skalowania <strong>Dopasuj do ekranu</strong> i <strong>Dopasuj do wysoko&#347;ci</strong> oraz z rozk&#322;ad&oacute;wkami. Opcje <strong>Dopasuj do szeroko&#347;ci</strong> i <strong>Oryginalny rozmiar</strong> pokazuj&#261; stron&#281; wi&#281;ksz&#261; ni&#380; ekran i zamiast tego przewijaj&#261; &mdash; u&#380;yj <kbd>Poka&#380; w pe&#322;nej rozdzielczo&#347;ci</kbd> poni&#380;ej, aby przyjrze&#263; si&#281; jej bli&#380;ej.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4F1;</span> Przewijanie webtoon</h3>
+  <ul>
+    <li>U&#347;ci&#347;nij lub stuknij dwukrotnie, aby powi&#281;kszy&#263; ca&#322;y pasek, do trzech razy jego normalnego rozmiaru.</li>
+    <li>Przewijanie dzia&#322;a nadal, gdy jeste&#347; powi&#281;kszony &mdash; po prostu przeci&#261;gaj w g&oacute;r&#281; i w d&oacute;&#322; jak zwykle.</li>
+    <li>Przeci&#261;gnij w bok, aby przesuwa&#263; si&#281; po powi&#281;kszonej stronie.</li>
+    <li>Poziom powi&#281;kszenia pozostaje niezmieniony podczas dalszego przewijania, wi&#281;c mo&#380;esz przeczyta&#263; ca&#322;y rozdzia&#322; w powi&#281;kszeniu. Obr&oacute;cenie urz&#261;dzenia przywraca normalny rozmiar.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x2728;</span> Poka&#380; w pe&#322;nej rozdzielczo&#347;ci</h3>
+  <p>Powi&#281;kszanie zwi&#281;ksza stron&#281; w rozmiarze, w jakim zosta&#322;a przygotowana dla Twojego ekranu. Aby zobaczy&#263; jedn&#261; stron&#281; tak ostro, jak to mo&#380;liwe, przytrzymaj j&#261; i wybierz <kbd>Poka&#380; w pe&#322;nej rozdzielczo&#347;ci</kbd> &mdash; ta strona jest dekodowana w oryginalnej rozdzielczo&#347;ci archiwum, dzi&#281;ki czemu mo&#380;esz powi&#281;kszy&#263; j&#261; znacznie bardziej. Podw&oacute;jne stukni&#281;cie prze&#322;&#261;cza mi&#281;dzy dopasowaniem do ekranu a podw&oacute;jnym rozmiarem; przesu&#324; w d&oacute;&#322; lub stuknij przycisk zamkni&#281;cia, aby wr&oacute;ci&#263;.</p>
+  <div class="tip"><strong>Uwaga:</strong> Powi&#281;kszenie nie jest zapisywane. Zamkni&#281;cie ksi&#261;&#380;ki zawsze przywraca normalne dopasowanie.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Powr&oacute;t na g&oacute;r&#281;</a>
+
+<!-- TTS -->
+<h2 id="tts">Tekst na mow&#281; i CarPlay</h2>
+<p class="section-desc">S&#322;uchaj swoich ksi&#261;&#380;ek czytanych na g&#322;os.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F50A;</span> Korzystanie z tekstu na mow&#281;</h3>
+  <p>Otw&oacute;rz dowoln&#261; ksi&#261;&#380;k&#281; EPUB, PDF lub TXT i stuknij przycisk odtwarzania na pasku narz&#281;dzi. TTS czyta jedno zdanie na raz i pod&#347;wietla bie&#380;&#261;ce s&#322;owo.</p>
+  <ul>
+    <li><strong>Szybko&#347;&#263;</strong> &mdash; 0,5&times; do 2&times; w kontrolkach TTS.</li>
+    <li><strong>G&#322;os</strong> &mdash; Wybierz spo&#347;r&oacute;d ponad 100 g&#322;os&oacute;w systemowych w <kbd>Ustawienia</kbd> &rarr; <kbd>Preferencje czytania</kbd> &rarr; <kbd>Tekst na mow&#281;</kbd>.</li>
+    <li><strong>Pomijanie</strong> &mdash; Stuknij nast&#281;pny/poprzedni, aby przeskakiwa&#263; po zdaniach lub rozdzia&#322;ach.</li>
+  </ul>
+  <div class="tip"><strong>Uwaga:</strong> <a href="#fixed-layout">Ksi&#261;&#380;ki o sta&#322;ym uk&#322;adzie</a> &mdash; komiksy i ksi&#261;&#380;ki obrazkowe, kt&oacute;rych strony maj&#261; sta&#322;y wygl&#261;d &mdash; nie maj&#261; tekstu, kt&oacute;ry aplikacja mog&#322;aby przeczyta&#263; na g&#322;os, dlatego przycisk odtwarzania nie jest dla nich wy&#347;wietlany.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F697;</span> CarPlay</h3>
+  <p>Po po&#322;&#261;czeniu z pojazdem kompatybilnym z CarPlay aplikacja pojawia si&#281; na wy&#347;wietlaczu samochodu z uproszczonymi kontrolkami odtwarzania. TTS gra dalej w tle &mdash; nie trzeba utrzymywa&#263; w&#322;&#261;czonego ekranu.</p>
+  <div class="tip"><strong>Wskaz&oacute;wka:</strong> W&#322;&#261;cz <kbd>D&#378;wi&#281;k w tle</kbd><span class="badge badge-premium">Premium</span> w ustawieniach TTS, aby odtwarzanie kontynuowa&#322;o si&#281;, gdy aplikacja jest w tle, nawet bez CarPlay.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Powr&oacute;t na g&oacute;r&#281;</a>
+
+<!-- AI UPSCALING -->
+<h2 id="upscaling">Skalowanie komiks&oacute;w AI</h2>
+<p class="section-desc">Popraw jako&#347;&#263; stron komiks&oacute;w o niskiej rozdzielczo&#347;ci na urz&#261;dzeniu.<span class="badge badge-premium">Premium</span></p>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x2728;</span> Co robi</h3>
+  <p>U&#380;ywa modelu uczenia maszynowego na urz&#261;dzeniu do skalowania stron komiks&oacute;w poni&#380;ej progu rozdzielczo&#347;ci. Efektem s&#261; ostrzejsze linie i mniej widoczne artefakty kompresji &mdash; szczeg&oacute;lnie przydatne dla starszych lub niskiej jako&#347;ci skan&oacute;w.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x2699;</span> Konfiguracja</h3>
+  <ol class="steps">
+    <li>Przejd&#378; do <kbd>Ustawienia</kbd> &rarr; <kbd>Preferencje czytania</kbd> &rarr; <kbd>Komiksy</kbd> &rarr; <kbd>Skalowanie AI</kbd>.</li>
+    <li>W&#322;&#261;cz t&#281; opcj&#281;.</li>
+    <li>Dostosuj <strong>Pr&oacute;g rozdzielczo&#347;ci</strong> &mdash; strony poni&#380;ej tej szeroko&#347;ci w pikselach zostan&#261; przeskalowane (domy&#347;lnie: 1500 px).</li>
+    <li>Ustaw <strong>Okno wst&#281;pnego pobierania</strong>, aby kontrolowa&#263;, ile kolejnych stron jest przetwarzanych w tle.</li>
+    <li>Wybierz <strong>Poziom redukcji szum&oacute;w</strong> (Auto jest zwykle najlepszy).</li>
+  </ol>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4BE;</span> Pami&#281;&#263; podr&#281;czna i magazyn</h3>
+  <p>Przeskalowane obrazy s&#261; buforowane, aby nie trzeba by&#322;o ich ponownie przetwarza&#263;. Wybierz, jak d&#322;ugo przechowywa&#263; bufor (7&ndash;90 dni lub bez wyga&#347;ni&#281;cia) i wyczy&#347;&#263; go w dowolnym momencie z ustawie&#324;.</p>
+  <div class="tip"><strong>Wskaz&oacute;wka:</strong> Ma&#322;a plakietka wska&#378;nika pojawia si&#281; na przeskalowanych stronach. Mo&#380;esz to wy&#322;&#261;czy&#263; w ustawieniach, je&#347;li wolisz.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Powr&oacute;t na g&oacute;r&#281;</a>
+
+<!-- HIDDEN MODE -->
+<h2 id="hidden">Ukryte ksi&#261;&#380;ki</h2>
+<p class="section-desc">Zachowaj prywatno&#347;&#263; wybranych ksi&#261;&#380;ek.<span class="badge badge-premium">Premium</span></p>
+
+<div class="card">
+  <h3><span class="icon icon-indigo">&#x1F441;</span> Ukrywanie ksi&#261;&#380;ek</h3>
+  <ol class="steps">
+    <li>Otw&oacute;rz stron&#281; szczeg&oacute;&#322;&oacute;w ksi&#261;&#380;ki i stuknij menu (&hellip;).</li>
+    <li>Wybierz <kbd>Ukryj ksi&#261;&#380;k&#281;</kbd>.</li>
+    <li>Ksi&#261;&#380;ka znika z normalnego widoku biblioteki.</li>
+  </ol>
+  <p>Aby ukry&#263; wiele ksi&#261;&#380;ek naraz, u&#380;yj trybu zaznaczania.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F513;</span> Przegl&#261;danie ukrytych ksi&#261;&#380;ek</h3>
+  <p>Przeci&#261;gnij w d&oacute;&#322; w bibliotece, aby aktywowa&#263; <strong>Tryb ukryty</strong>. Wszystkie Twoje ksi&#261;&#380;ki &mdash; zar&oacute;wno ukryte, jak i widoczne &mdash; s&#261; teraz wy&#347;wietlane. Przeci&#261;gnij ponownie lub opu&#347;&#263; aplikacj&#281;, aby wyj&#347;&#263; z trybu ukrytego.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F512;</span> Opcje prywatno&#347;ci</h3>
+  <p>Gdy tryb ukryty jest aktywny, przejd&#378; do <kbd>Ustawienia</kbd> &rarr; <kbd>Tryb ukryty</kbd>, aby wybra&#263;, co si&#281; stanie, gdy opu&#347;cisz aplikacj&#281;:</p>
+  <ul>
+    <li><strong>Automatyczne wyj&#347;cie</strong> (domy&#347;lnie) &mdash; Tryb ukryty wy&#322;&#261;cza si&#281; automatycznie. Szybko i prosto.</li>
+    <li><strong>Wymagaj Face ID / Touch ID</strong> &mdash; Tryb ukryty pozostaje w&#322;&#261;czony, ale wymaga uwierzytelnienia biometrycznego po powrocie. Bezpieczniejsze.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x21A9;</span> Odkrywanie ksi&#261;&#380;ek</h3>
+  <p>B&#281;d&#261;c w trybie ukrytym, otw&oacute;rz szczeg&oacute;&#322;y ukrytej ksi&#261;&#380;ki i wybierz <kbd>Odkryj ksi&#261;&#380;k&#281;</kbd>, lub u&#380;yj trybu zaznaczania, aby odkry&#263; wiele naraz.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x2601;</span> Synchronizacja ukrytych ksi&#261;&#380;ek</h3>
+  <p>W trybie ukrytym przejd&#378; do <kbd>Ustawienia</kbd> &rarr; <kbd>Tryb ukryty</kbd> i w&#322;&#261;cz <kbd>Synchronizuj ukryte ksi&#261;&#380;ki z iCloud</kbd>:</p>
+  <ul>
+    <li><strong>Wy&#322;&#261;czone</strong> (domy&#347;lnie) &mdash; ukryte ksi&#261;&#380;ki pozostaj&#261; tylko na tym urz&#261;dzeniu. Ukrycie ksi&#261;&#380;ki usuwa j&#261; r&oacute;wnie&#380; z iCloud.</li>
+    <li><strong>W&#322;&#261;czone</strong> &mdash; ukryte ksi&#261;&#380;ki synchronizuj&#261; si&#281; przez iCloud, ale pozostaj&#261; ukryte na ka&#380;dym urz&#261;dzeniu, na kt&oacute;rym jeste&#347; zalogowany.</li>
+  </ul>
+  <p>Wy&#322;&#261;czenie prze&#322;&#261;cznika, gdy masz ju&#380; ukryte ksi&#261;&#380;ki w iCloud, spowoduje pytanie, co z nimi zrobi&#263;:</p>
+  <ul>
+    <li><strong>Zachowaj na wszystkich urz&#261;dzeniach</strong> &mdash; Twoje inne urz&#261;dzenia zachowuj&#261; swoje zsynchronizowane kopie; to urz&#261;dzenie zachowuje prywatn&#261; kopi&#281; tylko lokaln&#261;.</li>
+    <li><strong>Usu&#324; ca&#322;kowicie z iCloud</strong> &mdash; usuwa ksi&#261;&#380;ki z iCloud; ka&#380;de inne urz&#261;dzenie zachowuje swoj&#261; w&#322;asn&#261; prywatn&#261; kopi&#281; w swojej ukrytej bibliotece.</li>
+  </ul>
+  <div class="tip"><strong>Uwaga:</strong> Je&#347;li jedno z Twoich innych urz&#261;dze&#324; usunie ukryt&#261; ksi&#261;&#380;k&#281; z iCloud, to urz&#261;dzenie automatycznie zachowa w&#322;asn&#261; prywatn&#261; kopi&#281; w ukrytej bibliotece &mdash; o ile plik ksi&#261;&#380;ki zosta&#322; ju&#380; tam pobrany.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F5D1;</span> Trwa&#322;e usuwanie ukrytych ksi&#261;&#380;ek</h3>
+  <p>W trybie ukrytym przejd&#378; do <kbd>Ustawienia</kbd> &rarr; <kbd>Tryb ukryty</kbd> i wybierz <kbd>Trwale usu&#324; ukryte ksi&#261;&#380;ki</kbd>, aby usun&#261;&#263; wszystkie ukryte ksi&#261;&#380;ki z tego urz&#261;dzenia, z iCloud i z pozosta&#322;ych urz&#261;dze&#324;. Wpisz <kbd>DELETE</kbd>, aby potwierdzi&#263;.</p>
+  <div class="tip"><strong>Ostrze&#380;enie:</strong> Tej czynno&#347;ci nie mo&#380;na cofn&#261;&#263;. Urz&#261;dzenia, kt&oacute;re s&#261; wtedy offline, zachowuj&#261; swoje lokalne kopie do nast&#281;pnej synchronizacji.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Powr&oacute;t na g&oacute;r&#281;</a>
+
+<!-- BOOKMARKS, HIGHLIGHTS, TAGS -->
+<h2 id="bookmarks">Zak&#322;adki, wyr&oacute;&#380;nienia i tagi</h2>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F516;</span> Zak&#322;adki</h3>
+  <p>Stuknij ikon&#281; zak&#322;adki na pasku narz&#281;dzi czytnika, aby doda&#263; zak&#322;adk&#281; do bie&#380;&#261;cej strony. Dodaj opcjonaln&#261; notatk&#281;. Wy&#347;wietl wszystkie zak&#322;adki ksi&#261;&#380;ki na stronie jej szczeg&oacute;&#322;&oacute;w.</p>
+  <div class="tip"><strong>Uwaga:</strong> Tylko zak&#322;adki utworzone r&#281;cznie pojawiaj&#261; si&#281; tutaj. Pozycje, kt&oacute;re aplikacja zapisuje automatycznie po zamkni&#281;ciu ksi&#261;&#380;ki, s&#261; przechowywane oddzielnie w sekcji <a href="#history">Historia czytania</a>, aby nie wypiera&#322;y Twoich w&#322;asnych zak&#322;adek.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F58D;</span> Wyr&oacute;&#380;nienia<span class="badge badge-premium">Premium</span></h3>
+  <p>W plikach EPUB zaznacz tekst, aby go wyr&oacute;&#380;ni&#263;. Wybierz spo&#347;r&oacute;d pi&#281;ciu kolor&oacute;w (&#380;&oacute;&#322;ty, r&oacute;&#380;owy, zielony, niebieski, pomara&#324;czowy) i dodaj notatki. Wszystkie wyr&oacute;&#380;nienia s&#261; wymienione na stronie szczeg&oacute;&#322;&oacute;w ksi&#261;&#380;ki.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F3F7;</span> Tagi</h3>
+  <p>Dodaj tagi do dowolnej ksi&#261;&#380;ki ze strony jej szczeg&oacute;&#322;&oacute;w. Tagi s&#261; wyszukiwalne i mog&#261; by&#263; u&#380;ywane jako filtry biblioteki. Zarz&#261;dzaj wszystkimi tagami z <kbd>Ustawienia</kbd> &rarr; <kbd>Tagi</kbd>.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Powr&oacute;t na g&oacute;r&#281;</a>
+
+<!-- READING HISTORY -->
+<h2 id="history">Historia czytania</h2>
+<p class="section-desc">Wr&oacute;&#263; do dowolnej pozycji, w kt&oacute;rej ostatnio by&#322;e&#347;.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F552;</span> Automatyczne zapisy</h3>
+  <p>Za ka&#380;dym razem, gdy zamykasz ksi&#261;&#380;k&#281; lub wysy&#322;asz aplikacj&#281; w t&#322;o, Twoja bie&#380;&#261;ca pozycja jest zapisywana jako wpis historii &mdash; nie musisz pami&#281;ta&#263; o dodaniu zak&#322;adki. Dzia&#322;a to w ka&#380;dym czytniku: EPUB, PDF, TXT/RTF i komiksach.</p>
+  <ul>
+    <li>Dla ka&#380;dej ksi&#261;&#380;ki przechowywanych jest do <strong>50</strong> ostatnich pozycji. Starsze wpisy s&#261; usuwane automatycznie w miar&#281; pojawiania si&#281; nowych.</li>
+    <li>Ponowne zamkni&#281;cie ksi&#261;&#380;ki w tym samym miejscu w ci&#261;gu kilku minut aktualizuje istniej&#261;cy wpis, zamiast tworzy&#263; duplikat.</li>
+    <li>Automatycznie zapisywane pozycje s&#261; oddzielone od listy r&#281;cznych zak&#322;adek, aby nie miesza&#322;y si&#281; z tymi, kt&oacute;re ustawiasz celowo.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4D6;</span> Historia w ksi&#261;&#380;ce</h3>
+  <p>Podczas czytania stuknij menu (&hellip;) w prawym g&oacute;rnym rogu i wybierz <kbd>Historia czytania</kbd>. Zobaczysz list&#281; ostatnich pozycji w tej ksi&#261;&#380;ce, od najnowszych, z nazw&#261; rozdzia&#322;u lub strony oraz informacj&#261;, jak dawno temu ka&#380;da z nich zosta&#322;a zapisana.</p>
+  <ul>
+    <li>Stuknij dowolny wpis, aby przej&#347;&#263; bezpo&#347;rednio do tego miejsca.</li>
+    <li>Przesu&#324; wpis w lewo, aby go usun&#261;&#263;.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F4DA;</span> Historia w ca&#322;ej bibliotece</h3>
+  <p>W bibliotece stuknij menu (&hellip;) na g&oacute;rnym pasku narz&#281;dzi i wybierz <kbd>Historia czytania</kbd>, aby zobaczy&#263; wszystkie ksi&#261;&#380;ki, kt&oacute;re ostatnio otwiera&#322;e&#347;, pogrupowane wed&#322;ug dni. Stuknij wiersz, aby otworzy&#263; ksi&#261;&#380;k&#281; dok&#322;adnie tam, gdzie sko&#324;czy&#322;e&#347;.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Powr&oacute;t na g&oacute;r&#281;</a>
+
+<!-- AUTHOR & TAG BROWSING -->
+<h2 id="search">Przegl&#261;danie wed&#322;ug autora i tagu</h2>
+<p class="section-desc">Znajd&#378; ksi&#261;&#380;ki wed&#322;ug autora lub tagu z dowolnego miejsca w aplikacji.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F464;</span> Autorzy</h3>
+  <p>Przejd&#378; do <kbd>Ustawienia</kbd> &rarr; <kbd>Autorzy</kbd>, aby zobaczy&#263; wszystkich autor&oacute;w w Twojej bibliotece wraz z liczb&#261; ksi&#261;&#380;ek. Stuknij autora, aby wyszuka&#263; w bibliotece wszystkie jego ksi&#261;&#380;ki.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F3F7;</span> Wyszukiwanie tag&oacute;w</h3>
+  <p>W sekcji <kbd>Ustawienia</kbd> &rarr; <kbd>Tagi</kbd> stuknij dowolny tag, aby wyszuka&#263; w bibliotece ksi&#261;&#380;ki z tym tagiem. Naci&#347;nij i przytrzymaj, aby zmieni&#263; nazw&#281; lub usun&#261;&#263;.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F50D;</span> Szybkie wyszukiwanie z menu kontekstowego</h3>
+  <ul>
+    <li>Naci&#347;nij i przytrzymaj ksi&#261;&#380;k&#281; w bibliotece &rarr; <kbd>Znajd&#378; ksi&#261;&#380;ki wed&#322;ug [Autor]</kbd></li>
+    <li>Na stronie szczeg&oacute;&#322;&oacute;w ksi&#261;&#380;ki naci&#347;nij i przytrzymaj nazwisko autora lub dowolny tag, aby wyszuka&#263;</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Powr&oacute;t na g&oacute;r&#281;</a>
+
+<!-- METADATA -->
+<h2 id="metadata">Metadane i ComicInfo.xml</h2>
+<p class="section-desc">Przegl&#261;daj i edytuj metadane ksi&#261;&#380;ki.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x270F;</span> Edytor metadanych</h3>
+  <p>Na stronie szczeg&oacute;&#322;&oacute;w ksi&#261;&#380;ki stuknij menu (&hellip;) i wybierz <kbd>Edytuj metadane</kbd>, aby zmieni&#263; tytu&#322;, autora, seri&#281;, opis i inne pola. Mo&#380;esz te&#380; ponownie wyodr&#281;bni&#263; metadane z oryginalnego pliku.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4CB;</span> ComicInfo.xml</h3>
+  <p>Archiwa komiks&oacute;w (CBZ, CBR, CB7) zawieraj&#261;ce plik <code>ComicInfo.xml</code> b&#281;d&#261; mia&#322;y metadane wyodr&#281;bnione automatycznie podczas importu &mdash; w tym tytu&#322;, scenarzyst&#281;, seri&#281;, numer zeszytu, streszczenie, wydawc&#281;, gatunek i tagi.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Powr&oacute;t na g&oacute;r&#281;</a>
+
+<!-- ICLOUD -->
+<h2 id="icloud">Synchronizacja iCloud</h2>
+<p class="section-desc">Synchronizuj bibliotek&#281; na wszystkich urz&#261;dzeniach.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x2601;</span> W&#322;&#261;czanie synchronizacji</h3>
+  <ol class="steps">
+    <li>Przejd&#378; do <kbd>Ustawienia</kbd> &rarr; <kbd>Synchronizacja iCloud</kbd>.</li>
+    <li>W&#322;&#261;cz <kbd>Synchronizuj bibliotek&#281; z iCloud</kbd>.</li>
+    <li>Synchronizacja zacznie dzia&#322;a&#263; przy nast&#281;pnym uruchomieniu aplikacji.</li>
+  </ol>
+  <p>Metadane, post&#281;p czytania, zak&#322;adki, wyr&oacute;&#380;nienia i p&oacute;&#322;ki s&#261; synchronizowane na wszystkich urz&#261;dzeniach zalogowanych na to samo konto iCloud.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F4CA;</span> Status synchronizacji</h3>
+  <p><kbd>Ustawienia</kbd> &rarr; <kbd>Synchronizacja iCloud</kbd> pokazuje kart&#281; statusu dla plik&oacute;w Twoich ksi&#261;&#380;ek:</p>
+  <ul>
+    <li>Nag&#322;&#243;wek &mdash; <strong>Aktualne</strong>, <strong>Synchronizowanie&hellip;</strong> (z liczb&#261;) lub <strong>Niezalogowano</strong>.</li>
+    <li>Pasek pokazuj&#261;cy, jaka cz&#281;&#347;&#263; plik&oacute;w Twojej biblioteki znajduje si&#281; w iCloud.</li>
+    <li>Podzia&#322; &mdash; <strong>Zsynchronizowane</strong> (z &#322;&#261;cznym rozmiarem), <strong>Tylko w iCloud</strong> (jeszcze niepobrane na to urz&#261;dzenie) oraz <strong>W trakcie</strong>.</li>
+  </ul>
+  <div class="tip"><strong>Uwaga:</strong> Ta karta &#347;ledzi wy&#322;&#261;cznie <em>pliki</em> ksi&#261;&#380;ek. Post&#281;p czytania, zak&#322;adki, wyr&oacute;&#380;nienia i p&oacute;&#322;ki synchronizuj&#261; si&#281; osobno i automatycznie, niezale&#380;nie od statusu pliku.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x2601;</span> Odznaki na ok&#322;adkach</h3>
+  <p>Ok&#322;adki ksi&#261;&#380;ek pokazuj&#261; ma&#322;y symbol chmury w prawym dolnym rogu, wskazuj&#261;cy stan synchronizacji pliku:</p>
+  <ul>
+    <li><strong>Ikona chmury</strong> &mdash; plik znajduje si&#281; tylko w iCloud. Otw&oacute;rz stron&#281; ksi&#261;&#380;ki, aby go pobra&#263;.</li>
+    <li><strong>Strza&#322;ki w g&oacute;r&#281;/w d&oacute;&#322;</strong> &mdash; plik jest w trakcie przesy&#322;ania lub pobierania.</li>
+    <li><strong>Brak symbolu</strong> &mdash; plik znajduje si&#281; ju&#380; na tym urz&#261;dzeniu.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4E5;</span> Automatyczne pobieranie</h3>
+  <p>Wybierz maksymalny rozmiar pliku do automatycznego pobierania. Wi&#281;ksze ksi&#261;&#380;ki pozostaj&#261; w chmurze, a&#380; je otworzysz. Dostosuj limit w ustawieniach iCloud.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Powr&oacute;t na g&oacute;r&#281;</a>
+
+<!-- STATS -->
+<h2 id="stats">Statystyki czytania</h2>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F4CA;</span> Twoja aktywno&#347;&#263; czytelnicza</h3>
+  <p>Otw&oacute;rz <kbd>Ustawienia</kbd> &rarr; <kbd>Statystyki biblioteki</kbd>, aby zobaczy&#263;:</p>
+  <ul>
+    <li>&#321;&#261;czn&#261; liczb&#281; ksi&#261;&#380;ek, przeczytanych stron i czas czytania.</li>
+    <li>Wykres dziennej aktywno&#347;ci czytelniczej.</li>
+    <li>Ksi&#261;&#380;ki wed&#322;ug formatu i statusu czytania.</li>
+    <li>Podzia&#322; aktywno&#347;ci na poszczeg&oacute;lne ksi&#261;&#380;ki.</li>
+  </ul>
+  <div class="tip"><strong>Uwaga:</strong> Statystyki respektuj&#261; tryb ukryty &mdash; gdy tryb ukryty jest wy&#322;&#261;czony, statystyki ukrytych ksi&#261;&#380;ek s&#261; pomijane.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Powr&oacute;t na g&oacute;r&#281;</a>
+
+<!-- WEBDAV & OPDS -->
+<h2 id="webdav">WebDAV i OPDS</h2>
+<p class="section-desc">Przegl&#261;daj i pobieraj ze zdalnych serwer&oacute;w i katalog&oacute;w.</p>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F5C4;</span> WebDAV</h3>
+  <p>Po&#322;&#261;cz si&#281; z serwerem NAS, Nextcloud lub Calibre, aby przegl&#261;da&#263; foldery i pobiera&#263; ksi&#261;&#380;ki.</p>
+  <ol class="steps">
+    <li>Przejd&#378; do <kbd>Ustawienia</kbd> &rarr; <kbd>Importuj ksi&#261;&#380;ki</kbd> &rarr; <kbd>WebDAV</kbd>.</li>
+    <li>Stuknij <kbd>Dodaj serwer</kbd> i wpisz URL.</li>
+    <li>Dodaj nazw&#281; u&#380;ytkownika i has&#322;o, je&#347;li jest to wymagane.</li>
+    <li>Stuknij <kbd>Testuj po&#322;&#261;czenie</kbd>, a nast&#281;pnie zapisz.</li>
+  </ol>
+  <div class="tip"><strong>Certyfikaty samopodpisane:</strong> Je&#347;li Tw&oacute;j serwer u&#380;ywa certyfikatu samopodpisanego, mo&#380;esz w&#322;&#261;czy&#263; <kbd>Zezwalaj na niezaufane certyfikaty</kbd>. Aplikacja najpierw poprosi o potwierdzenie &mdash; wy&#322;&#261;cza to weryfikacj&#281; TLS, wi&#281;c ktokolwiek w Twojej sieci m&oacute;g&#322;by podszy&#263; si&#281; pod serwer. W&#322;&#261;czaj j&#261; tylko dla serwera, kt&oacute;ry kontrolujesz.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4DA;</span> Katalogi OPDS</h3>
+  <p>OPDS to otwarty standard katalog&oacute;w ksi&#261;&#380;ek. Dodaj publiczne katalogi (Project Gutenberg, Standard Ebooks itp.) lub w&#322;asny prywatny serwer.</p>
+  <ol class="steps">
+    <li>Przejd&#378; do <kbd>Ustawienia</kbd> &rarr; <kbd>Importuj ksi&#261;&#380;ki</kbd> &rarr; <kbd>OPDS</kbd>.</li>
+    <li>Stuknij <kbd>Dodaj katalog</kbd> i wpisz URL kana&#322;u.</li>
+    <li>Przegl&#261;daj kategorie i pobieraj ksi&#261;&#380;ki do swojej biblioteki.</li>
+  </ol>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Powr&oacute;t na g&oacute;r&#281;</a>
+
+<!-- RESUME -->
+<h2 id="resume">Wznawianie przy uruchomieniu</h2>
+<p class="section-desc">Automatycznie wr&oacute;&#263; tam, gdzie sko&#324;czy&#322;e&#347;.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x25B6;</span> Konfiguracja</h3>
+  <p>Przejd&#378; do <kbd>Ustawienia</kbd> &rarr; <kbd>Og&oacute;lne</kbd> i w&#322;&#261;cz <kbd>Wzn&oacute;w ostatni&#261; ksi&#261;&#380;k&#281; przy uruchomieniu</kbd>. Nast&#281;pnym razem, gdy otworzysz aplikacj&#281;, przejdzie ona od razu do ksi&#261;&#380;ki i strony, kt&oacute;r&#261; ostatnio czyta&#322;e&#347;.</p>
+  <div class="tip"><strong>Ukryte ksi&#261;&#380;ki:</strong> Je&#347;li ostatnia czytana ksi&#261;&#380;ka jest ukryta, aplikacja poprosi o Face ID / Touch ID przed wznowieniem. W&#322;&#261;cz <kbd>Wzn&oacute;w ukryt&#261; ksi&#261;&#380;k&#281; po uwierzytelnieniu</kbd> w ustawieniach trybu ukrytego, aby to umo&#380;liwi&#263;.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Powr&oacute;t na g&oacute;r&#281;</a>
+
+<!-- FORMATS -->
+<h2 id="formats">Obs&#322;ugiwane formaty</h2>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4D6;</span> Ksi&#261;&#380;ki</h3>
+  <div class="formats-grid">
+    <div class="format-tag">EPUB</div>
+    <div class="format-tag">PDF</div>
+    <div class="format-tag">TXT</div>
+    <div class="format-tag">RTF</div>
+  </div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4F1;</span> Komiksy</h3>
+  <div class="formats-grid">
+    <div class="format-tag">CBZ</div>
+    <div class="format-tag">CBR</div>
+    <div class="format-tag">CB7</div>
+  </div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Powr&oacute;t na g&oacute;r&#281;</a>
+
+</body>
+</html>

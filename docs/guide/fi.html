@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Käyttöopas</title>
+<link rel="stylesheet" href="UserGuideStyle.css">
+<!-- USER-GUIDE-NAV-STYLE:START -->
+<style>
+.guide-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 14px;
+  padding: 10px 14px;
+  margin: 0 0 16px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  font-size: 13px;
+}
+.guide-nav-home {
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.guide-nav-arrow {
+  display: inline-block;
+}
+[dir="rtl"] .guide-nav-arrow {
+  transform: scaleX(-1);
+}
+.guide-nav-langs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 10px;
+  color: var(--secondary);
+}
+.guide-nav-globe {
+  font-size: 13px;
+}
+.guide-nav-langs a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.guide-nav-langs a:hover,
+.guide-nav-langs a:focus-visible {
+  text-decoration: underline;
+}
+.guide-nav-current {
+  font-weight: 700;
+  color: var(--text);
+}
+</style>
+<!-- USER-GUIDE-NAV-STYLE:END -->
+</head>
+<body id="top">
+<!-- USER-GUIDE-NAV:START -->
+<nav class="guide-nav" aria-label="User Guide language switcher">
+  <a class="guide-nav-home" href="../index.html"><span class="guide-nav-arrow" aria-hidden="true">&larr;</span> Idyllic</a>
+  <span class="guide-nav-langs">
+    <span class="guide-nav-globe" aria-hidden="true">&#x1F310;</span>
+      <a href="index.html">English</a>
+      <a href="ar.html">العربية</a>
+      <a href="cs.html">Čeština</a>
+      <a href="da.html">Dansk</a>
+      <a href="de.html">Deutsch</a>
+      <a href="es.html">Español</a>
+      <span class="guide-nav-current">Suomi</span>
+      <a href="fr.html">Français</a>
+      <a href="he.html">עברית</a>
+      <a href="hi.html">हिन्दी</a>
+      <a href="id.html">Indonesia</a>
+      <a href="it.html">Italiano</a>
+      <a href="ja.html">日本語</a>
+      <a href="ko.html">한국어</a>
+      <a href="ms.html">Bahasa Melayu</a>
+      <a href="nb.html">Norsk bokmål</a>
+      <a href="nl.html">Nederlands</a>
+      <a href="pl.html">Polski</a>
+      <a href="pt-BR.html">Português (Brasil)</a>
+      <a href="ru.html">Русский</a>
+      <a href="sv.html">Svenska</a>
+      <a href="th.html">ไทย</a>
+      <a href="tr.html">Türkçe</a>
+      <a href="uk.html">Українська</a>
+      <a href="vi.html">Tiếng Việt</a>
+      <a href="zh-Hans.html">简体中文</a>
+      <a href="zh-Hant.html">繁體中文</a>
+  </span>
+</nav>
+<!-- USER-GUIDE-NAV:END -->
+
+<h1>Käyttöopas</h1>
+<p class="subtitle">Kaikki mitä tarvitset saadaksesi parhaan lukukokemuksen.</p>
+
+<!-- TABLE OF CONTENTS -->
+<div class="card toc">
+  <a href="#importing">Kirjojen tuonti</a>
+  <a href="#wifi">WiFi-siirto</a>
+  <a href="#library">Kirjasto ja järjestely</a>
+  <a href="#shelves">Hyllyt ja kansiot</a>
+  <a href="#reading-books">Kirjojen lukeminen</a>
+  <a href="#fixed-layout">Kiinteän asettelun kirjat</a>
+  <a href="#in-book-search">Haku kirjasta</a>
+  <a href="#image-gallery">Kuvagalleria</a>
+  <a href="#fonts">Lukufontit</a>
+  <a href="#reading-direction">Lukusuunta</a>
+  <a href="#vertical-writing">Pystykirjoitus</a>
+  <a href="#reading-comics">Sarjakuvien lukeminen</a>
+  <a href="#comic-zoom">Sarjakuvasivujen zoomaus</a>
+  <a href="#tts">Tekstistä puheeksi ja CarPlay</a>
+  <a href="#upscaling">Tekoälypohjainen sarjakuvien skaalaus</a>
+  <a href="#hidden">Piilotetut kirjat</a>
+  <a href="#bookmarks">Kirjanmerkit, korostukset ja tunnisteet</a>
+  <a href="#history">Lukuhistoria</a>
+  <a href="#search">Selaa tekijän ja tunnisteen mukaan</a>
+  <a href="#metadata">Metatiedot ja ComicInfo.xml</a>
+  <a href="#icloud">iCloud-synkronointi</a>
+  <a href="#stats">Lukutilastot</a>
+  <a href="#webdav">WebDAV ja OPDS</a>
+  <a href="#resume">Jatka käynnistyksessä</a>
+  <a href="#formats">Tuetut tiedostomuodot</a>
+</div>
+
+<!-- IMPORTING -->
+<h2 id="importing">Kirjojen tuonti</h2>
+<p class="section-desc">Useita tapoja lisätä kirjoja kirjastoosi.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4C1;</span> Tiedostot-sovelluksesta</h3>
+  <p>Napauta <kbd>Asetukset</kbd> &rarr; <kbd>Tuo kirjoja</kbd> ja valitse tiedostoja laitteeltasi, iCloud Drivesta tai mistä tahansa yhdistetystä pilvipalvelusta. Voit myös käyttää vedä ja pudota -toimintoa iPadilla.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F310;</span> WiFi-siirto</h3>
+  <p>Lataa kirjoja mistä tahansa tietokoneesta tai puhelimesta WiFi-verkossasi. Katso lisätiedot alla olevasta osiosta.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F5C2;</span> WebDAV ja OPDS</h3>
+  <p>Yhdistä NAS-palvelimeen, Calibre-palvelimeen tai julkiseen kirjaluetteloon selataksesi ja ladataksesi kirjoja suoraan. Katso alla.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Takaisin ylös</a>
+
+<!-- WIFI TRANSFER -->
+<h2 id="wifi">WiFi-siirto</h2>
+<p class="section-desc">Lataa kirjoja mistä tahansa laitteesta lähiverkossasi.</p>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F4F6;</span> Näin se toimii</h3>
+  <p>Sovellus käynnistää pienen verkkopalvelimen laitteellasi. Mikä tahansa tietokone tai puhelin samassa WiFi-verkossa voi avata lataussivun selaimessa.</p>
+  <ol class="steps">
+    <li>Siirry kohtaan <kbd>Asetukset</kbd> &rarr; <kbd>Tuo kirjoja</kbd> &rarr; <kbd>WiFi-siirto</kbd>.</li>
+    <li>Napauta <kbd>Käynnistä palvelin</kbd>. Näkyviin tulee osoite kuten <kbd>http://192.168.1.42:8080</kbd>.</li>
+    <li>Avaa kyseinen osoite missä tahansa selaimessa samassa verkossa.</li>
+    <li>Vedä tiedostot sivulle tai napsauta selataksesi &mdash; valitse halutessasi kohdekansio.</li>
+    <li>Tuodut kirjat ilmestyvät kirjastoosi välittömästi.</li>
+    <li>Napauta <kbd>Pysäytä palvelin</kbd>, kun olet valmis.</li>
+  </ol>
+  <div class="tip"><strong>Vinkki:</strong> Laitteesi pysyy hereillä palvelimen ollessa käynnissä, jotta siirrot eivät keskeydy.</div>
+  <div class="tip"><strong>Lähetys epäonnistui?</strong> Kunkin epäonnistuneen tiedoston syy näkyy suoraan sen rivillä. Jos WiFi-yhteys katkeaa, napauta rivillä <kbd>&#x21BB; Yritä uudelleen</kbd> lähettääksesi sen uudelleen. Pysyvissä ongelmissa (kuten ei-tuetussa tiedostomuodossa) Yritä uudelleen -painiketta ei näytetä.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Takaisin ylös</a>
+
+<!-- LIBRARY -->
+<h2 id="library">Kirjasto ja järjestely</h2>
+<p class="section-desc">Etsi, lajittele ja järjestele kirjasi.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F50D;</span> Haku</h3>
+  <p>Napauta kirjaston alareunassa olevaa <kbd>Search</kbd>-pilleriä avataksesi hakukentän, ja napauta sitten <kbd>Valmis</kbd> sulkeaksesi sen. Se etsii otsikon, tekijän, tunnisteiden, sarjan, kustantajan ja kuvauksen perusteella. Tekijän tai tunnisteen mukaan hakeminen kirjan pikavalikosta (katso <a href="#search">Selaa tekijän ja tunnisteen mukaan</a>) täyttää saman haun.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x2195;</span> Lajittelu ja suodatus</h3>
+  <p>Napauta näkymäasetuspainiketta (oikeassa yläkulmassa) valitaksesi:</p>
+  <ul>
+    <li><strong>Asettelu</strong> &mdash; Ruudukko, Yksityiskohtainen, Tiivis, Minimalistinen, Taulukko tai Lehti</li>
+    <li><strong>Lajittelu</strong> &mdash; Otsikko, Tekijä, Viimeksi luettu, Lisäyspäivä, Edistyminen, Tiedostokoko, Sarja</li>
+    <li><strong>Näyttö</strong> &mdash; Kesken olevat kirjat ensin ja valmiit viimeisenä</li>
+    <li><strong>Suodatin</strong> &mdash; Tiedostomuodon, tunnisteen tai tekijän mukaan</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x2714;</span> Valintatila</h3>
+  <p>Paina kirjaa pitkään tai napauta <kbd>Valitse</kbd> siirtyäksesi valintatilaan. Tämän jälkeen voit siirtää, poistaa, piilottaa tai näyttää useita kirjoja kerralla.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4CB;</span> Poista kaksoiskappaleet</h3>
+  <p>Siirry kohtaan <strong>Asetukset &gt; Kirjasto &gt; Kirjaston ylläpito &gt; Poista kaksoiskappaleet</strong> löytääksesi kirjat, joilla on sama nimi, tekijä ja muoto. Jokaisesta kaksoiskappaleryhmästä:</p>
+  <ul>
+    <li><strong>Uusin versio</strong> on merkitty vihreällä KEEP-merkillä</li>
+    <li>Valitse vanhemmat kopiot valintaruuduilla (tai <strong>Valitse kaikki</strong>)</li>
+    <li><strong>Poista</strong> &mdash; poistaa valitut vanhemmat kopiot</li>
+    <li><strong>Kopioi tiedot ja poista</strong> &mdash; siirtää kirjanmerkit, korostukset, tunnisteet, lukutilanteen ja hyllysijoittelun uusimpaan versioon ennen poistamista</li>
+    <li>Ota käyttöön <strong>"Siirrä uusi kirja vanhan kirjan hyllyyn ja piilotustilaan"</strong>, jotta uusi versio pysyy samassa paikassa kirjastossa</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Takaisin ylös</a>
+
+<!-- SHELVES -->
+<h2 id="shelves">Hyllyt ja kansiot</h2>
+<p class="section-desc">Järjestele kirjat sisäkkäisiin kansioihin.</p>
+
+<div class="card">
+  <h3><span class="icon icon-indigo">&#x1F4C2;</span> Hyllyjen luominen</h3>
+  <ol class="steps">
+    <li>Napauta <kbd>Uusi hylly</kbd> kirjaston yläosassa.</li>
+    <li>Syötä nimi ja valitse kuvake ja väri.</li>
+    <li>Valitse halutessasi ylähylly luodaksesi alikansion.</li>
+  </ol>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x21C4;</span> Kirjojen siirtäminen</h3>
+  <p>Napauta kirjan tietosivulla valikkoa (&hellip;) ja valitse <kbd>Siirrä hyllyyn</kbd>. Valintatilassa voit siirtää useita kirjoja kerralla.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Takaisin ylös</a>
+
+<!-- READING BOOKS -->
+<h2 id="reading-books">Kirjojen lukeminen</h2>
+<p class="section-desc">EPUB-, PDF-, TXT- ja RTF-lukutilat.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4D6;</span> EPUB</h3>
+  <p>EPUB-tiedostot avautuvat monipuolisessa Readium-pohjaisessa lukijassa. Napauta vasenta tai oikeaa reunaa kääntääksesi sivua tai pyyhkäise.</p>
+  <ul>
+    <li><strong>Sivutettu</strong> &mdash; perinteinen sivu sivulta -lukeminen.</li>
+    <li><strong>Jatkuva vieritys</strong><span class="badge badge-premium">Premium</span> &mdash; vieritä tekstiä luonnollisesti ilman sivunvaihtoja.</li>
+    <li><strong>Lukusuunta</strong> &mdash; seuraa kirjaa automaattisesti tai aseta itse vasemmalta oikealle tai oikealta vasemmalle. Katso <a href="#reading-direction">Lukusuunta</a>.</li>
+    <li><strong>Kiinteä asettelu</strong> &mdash; sarjakuvat, kuvakirjat ja muut sivu sivulta -EPUB-tiedostot avautuvat niitä varten rakennetussa lukijassa. Katso <a href="#fixed-layout">Kiinteän asettelun kirjat</a>.</li>
+    <li><strong>Haku kirjasta</strong><span class="badge badge-premium">Premium</span> &mdash; hae koko kirjasta mitä tahansa sanaa tai ilmausta. Katso <a href="#in-book-search">Haku kirjasta</a>.</li>
+    <li><strong>Kuvagalleria</strong><span class="badge badge-premium">Premium</span> &mdash; selaa kaikkia EPUB-tiedoston kuvia kirjan tietosivulta. Katso <a href="#image-gallery">Kuvagalleria</a>.</li>
+  </ul>
+  <div class="tip"><strong>Vinkki:</strong> Säädä fonttikokoa, riviväliä ja teemavärejä kohdassa <kbd>Asetukset</kbd> &rarr; <kbd>Lukuasetukset</kbd> &rarr; <kbd>Kirjat</kbd>.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F4C4;</span> PDF</h3>
+  <p>PDF-tiedostot näytetään natiivisti. Nipistä zoomataksesi, pyyhkäise kääntääksesi sivuja. Sovellus voi muistaa suojattujen PDF-tiedostojen salasanat.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x1F4DD;</span> TXT ja RTF</h3>
+  <p>Tekstitiedostot ja RTF-tiedostot avautuvat yksinkertaisessa tekstilukijassa säädettävällä muotoilulla.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Takaisin ylös</a>
+
+<!-- FIXED LAYOUT -->
+<h2 id="fixed-layout">Kiinteän asettelun kirjat</h2>
+<p class="section-desc">EPUB-tiedostot, joiden sivut ovat kiinteitä asetteluja &mdash; sarjakuvat, kuvakirjat ja runsaasti kuvitetut teokset.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4D0;</span> Mitä ne ovat</h3>
+  <p>Osa EPUB-tiedostoista on aseteltu sivu kerrallaan virtaavan tekstin sijaan: jokainen sivu on kiinteä tekstin ja kuvituksen järjestely. Sovellus tunnistaa tällaiset kirjat itsestään ja avaa ne niitä varten rakennetussa lukijassa &mdash; jokainen sivu skaalataan näyttöösi sopivaksi ja keskitetään, ja sen ympärille jäävä tila täytetään lukuteemasi taustavärillä.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F44B;</span> Lukeminen ja zoomaus</h3>
+  <ul>
+    <li>Napauta näytön vasenta tai oikeaa reunaa kääntääksesi sivua, tai pyyhkäise. Napauta keskeltä näyttääksesi tai piilottaaksesi työkalupalkit.</li>
+    <li>Nipistä zoomataksesi &mdash; jopa kolminkertaiseksi sovitettuun kokoon nähden &mdash; ja vedä liikkuaksesi sivulla.</li>
+    <li>Kaksoisnapauta lähentääksesi kyseistä kohtaa; kaksoisnapauta uudelleen sovittaaksesi sivun takaisin näyttöön.</li>
+    <li>Oikealta vasemmalle luettavaksi julkaistut kirjat kääntävät sivuja automaattisesti siihen suuntaan.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4D6;</span> Aukeamat</h3>
+  <p>Käännä laite vaakasuuntaan, niin vastakkaiset sivut näkyvät rinnakkain. Sovellus noudattaa kirjan omia aukeamavihjeitä, joten kansi tai kokosivun kuvitus saa silti oman sivunsa. Käännä takaisin pystysuuntaan nähdäksesi yhden sivun kerrallaan.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x2139;</span> Mitä on käytettävissä</h3>
+  <p>Sisällysluettelo, kirjanmerkit, edistymisen liukusäädin, lukuhistoria ja lukemisen jatkaminen siitä, mihin jäit, toimivat kaikki normaalisti.</p>
+  <p>Koska jokainen sivu on kiinteä asettelu eikä tekstiä, jonka sovellus voisi virrata uudelleen, muutama säädin puuttuu näiltä kirjoilta: jatkuva vieritys ja automaattinen vieritys, fontti- ja ulkoasuasetukset, tekstistä puheeksi -toiminto, haku kirjasta sekä tekstin valinta ja korostaminen.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Takaisin ylös</a>
+
+<!-- IN-BOOK SEARCH -->
+<h2 id="in-book-search">Haku kirjasta</h2>
+<p class="section-desc">Löydä mikä tahansa sana tai ilmaus lukemastasi kirjasta.<span class="badge badge-premium">Premium</span></p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F50D;</span> Haun aloittaminen</h3>
+  <ol class="steps">
+    <li>Napauta sivun keskikohtaa näyttääksesi työkalupalkit.</li>
+    <li>Napauta suurennuslasia alapalkin oikeassa reunassa.</li>
+    <li>Kirjoita vähintään kaksi merkkiä ja paina näppäimistön <kbd>Haku</kbd>-painiketta.</li>
+  </ol>
+  <p>Haku kattaa koko kirjan &mdash; jokaisen luvun, ei vain näytöllä olevaa &mdash; eikä se erottele isoja ja pieniä kirjaimia. Haku on käytettävissä EPUB- ja TXT/RTF-lukijoissa.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4C4;</span> Tulosten selaaminen</h3>
+  <p>Tulokset näkyvät hakukentän alla lukujen mukaan ryhmiteltyinä. Jokainen rivi näyttää osuman lihavoituna ympäröivän tekstin katkelmassa. Napauta tulosta hypätäksesi suoraan kyseiseen kohtaan &mdash; jokainen osuma korostetaan kirjassa keltaisella, ja nykyinen voimakkaammalla meripihkan värillä.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x2195;</span> Osumien välillä siirtyminen</h3>
+  <p>Kun valitset tuloksen, hakukenttä supistuu kapeaksi palkiksi, jonka laskuri näyttää, missä kohtaa osumia olet.</p>
+  <ul>
+    <li>Käytä ylä-/alanuolia siirtyäksesi edelliseen tai seuraavaan osumaan.</li>
+    <li>Napauta luettelopainiketta avataksesi koko tulosluettelon uudelleen.</li>
+    <li>Napauta <kbd>&times;</kbd> lopettaaksesi haun &mdash; kaikki korostukset poistetaan.</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Takaisin ylös</a>
+
+<!-- IMAGE GALLERY -->
+<h2 id="image-gallery">Kuvagalleria</h2>
+<p class="section-desc">Selaa kaikkia EPUB-tiedoston kuvituksia pyyhkäistävänä galleriana.<span class="badge badge-premium">Premium</span></p>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F5BC;</span> Gallerian avaaminen</h3>
+  <p>Avaa EPUB-kirjan tietosivu ja napauta <span class="icon">&#x1F5BC;</span>-valokuvapinopainiketta oikean yläkulman työkalupalkissa. Sovellus poimii kirjasta kaikki kuvat ja näyttää sillä välin edistymispalkin &mdash; napauta vasemman yläkulman <kbd>&times;</kbd>-painiketta peruuttaaksesi milloin tahansa. Galleria on käytettävissä vain EPUB-kirjoille.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4DA;</span> Mitä näet</h3>
+  <p>Kuvat näkyvät yksi sivua kohden lukemisjärjestyksessä &mdash; siinä järjestyksessä kuin ne esiintyvät kirjan luvuissa &mdash; kansi mukaan lukien. Pienet kuvat, kuten kuvakkeet ja koristeet, ohitetaan: kaikki vähimmäiskokoa (oletuksena 100&nbsp;px) pienempi jätetään pois. Säädä rajaa kohdassa <kbd>Asetukset</kbd> &rarr; <kbd>Lukuasetukset</kbd> &rarr; <kbd>Kirjat</kbd> &rarr; <kbd>EPUB-galleria</kbd>. Jos yksikään kuva ei täytä ehtoja, galleria kertoo, ettei kuvia löytynyt.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F446;</span> Kuvien katselu ja tallennus</h3>
+  <ul>
+    <li>Pyyhkäise siirtyäksesi kuvien välillä tai käytä alareunan sivuliukusäädintä hypätäksesi nopeasti.</li>
+    <li>Nipistä tai kaksoisnapauta zoomataksesi, ja vedä liikkuaksesi &mdash; galleria käyttää sarjakuvalukijaa, joten se zoomaa täsmälleen samalla tavalla. Katso <a href="#comic-zoom">Sarjakuvasivujen zoomaus</a>.</li>
+    <li>Napauta näytön keskikohtaa näyttääksesi tai piilottaaksesi säätimet.</li>
+    <li>Paina kuvaa pitkään valitaksesi <kbd>Näytä täysi resoluutio</kbd> &mdash; joka avaa kuvan sen alkuperäisessä koossa lähempää tarkastelua varten &mdash; tai <kbd>Tallenna Kuviin</kbd>, <kbd>Tallenna Tiedostoihin</kbd> tai <kbd>Kopioi kuva</kbd>.</li>
+    <li>Galleria noudattaa sarjakuvien lukusuuntaasi &mdash; myös webtoon-tyylistä pystyvieritystä.</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Takaisin ylös</a>
+
+<!-- READING FONTS -->
+<h2 id="fonts">Lukufontit</h2>
+<p class="section-desc">Valitse lukufontti, lisää omia tai lataa kielipaketteja.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F524;</span> Fontin valitseminen</h3>
+  <p>Avaa <kbd>Asetukset</kbd> &rarr; <kbd>Lukuasetukset</kbd> &rarr; <kbd>Kirjat</kbd> &rarr; <kbd>Omat fontit</kbd> päästäksesi <strong>Fontit</strong>-näkymään. Useita lukufontteja on sisäänrakennettuna, ja <strong>Literata</strong> on oletus. Valitsemasi fontti koskee EPUB- ja tekstilukijaa.</p>
+  <div class="tip"><strong>Vinkki:</strong> Säädä fonttikokoa ja riviväliä kohdassa <kbd>Asetukset</kbd> &rarr; <kbd>Lukuasetukset</kbd> &rarr; <kbd>Kirjat</kbd>.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F453;</span> Saavutettavuusfontit</h3>
+  <p>Kaksi helpompaan lukemiseen suunniteltua fonttia on mukana ja aina käytettävissä: <strong>Atkinson Hyperlegible</strong>, joka terävöittää samankaltaisten kirjainten välisiä eroja, ja <strong>OpenDyslexic</strong>, joka on painotettu vähentämään kirjainten sekoittumista.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F4C2;</span> Omat fontit</h3>
+  <p>Tuo omat <kbd>.ttf</kbd>- tai <kbd>.otf</kbd>-fonttitiedostosi Fontit-näkymästä ja käytä niitä EPUB-lukijassa. Tuodut fontit pysyvät laitteellasi.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F4E5;</span> Fonttien &amp; kielipakettien lataaminen</h3>
+  <p>Kohdassa <strong>Lataa fontteja</strong> lisää lukufontteja ja kielipaketteja on saatavilla tarpeen mukaan kirjoitusjärjestelmille, joita sovellus ei toimita mukanaan &mdash; kiina, japani &amp; korea (CJK), arabia, devanagari ja thai. Paketit ovat suuria (noin 41&nbsp;MB kukin), joten koko näytetään ennen lataamista. Kun ne on asennettu, ne toimivat aivan kuten tuodut fontit.</p>
+  <div class="tip"><strong>Vinkki:</strong> Jos kirjan merkit näkyvät tyhjinä laatikoina, lataa vastaava kielipaketti niiden näyttämiseksi.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x1F4DC;</span> Fonttien lisenssit</h3>
+  <p>Mukana toimitettavat ja ladattavat fontit tarjotaan <strong>SIL Open Font License</strong> -lisenssin alaisina. Voit lukea kunkin täyden lisenssin sen riviltä Fontit-näkymässä.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Takaisin ylös</a>
+
+<!-- READING DIRECTION -->
+<h2 id="reading-direction">Lukusuunta</h2>
+<p class="section-desc">Vasemmalta oikealle, oikealta vasemmalle tai sen mukaan, miten kirja on julkaistu.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x21C4;</span> Suunnan valitseminen</h3>
+  <p>Avaa <kbd>Asetukset</kbd> &rarr; <kbd>Lukuasetukset</kbd> &rarr; <kbd>Kirjat</kbd> ja käytä <strong>Lukusuunta</strong>-säädintä kohdassa <strong>Lukutila</strong>:</p>
+  <ul>
+    <li><strong>Automaattinen</strong> (oletus) &mdash; noudattaa kirjan itsensä ilmoittamaa suuntaa. Manga ja oikealta vasemmalle luettavaksi julkaistut kirjat avautuvat oikein päin ilman, että sinun tarvitsee säätää mitään.</li>
+    <li><strong>Vasemmalta oikealle</strong> &mdash; vakiovalinta useimmille länsimaisille kirjoille.</li>
+    <li><strong>Oikealta vasemmalle</strong> &mdash; käytä oikealta vasemmalle -suuntaa jokaiselle kirjalle.</li>
+  </ul>
+  <p>Voit vaihtaa suunnan myös poistumatta kirjasta: napauta sivun keskikohtaa näyttääksesi työkalupalkit ja napauta sitten alapalkin <kbd>Aa</kbd>-painiketta. Muutos tulee heti voimaan sivulla, jota luet.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F44B;</span> Mihin suunta vaikuttaa</h3>
+  <ul>
+    <li>Kumpi puoli vie sinut eteenpäin &mdash; oikealta vasemmalle luettavassa kirjassa napautus tai pyyhkäisy vasemmalle kääntää seuraavalle sivulle.</li>
+    <li>Sivunkääntöanimaatio, joka kääntyy oikealta puolelta.</li>
+    <li>Tekstin asettelu sivulla.</li>
+  </ul>
+  <div class="tip"><strong>Huomautus:</strong> Edistymisen liukusäädin täyttyy aina vasemmalta, koska se näyttää, kuinka pitkällä olet kirjassa, ei sitä, missä kohtaa sivu on näytöllä.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x2139;</span> Missä sitä käytetään</h3>
+  <p>Tämä asetus koskee EPUB-tiedostoja sivutetussa tilassa &mdash; se on piilotettu, kun jatkuva vieritys on käytössä. Sarjakuvilla on oma lukujärjestysasetuksensa (katso <a href="#reading-comics">Sarjakuvien lukeminen</a>), ja <a href="#fixed-layout">kiinteän asettelun kirjat</a> noudattavat aina kirjassa ilmoitettua suuntaa.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Takaisin ylös</a>
+
+<!-- VERTICAL WRITING -->
+<h2 id="vertical-writing">Pystykirjoitus</h2>
+<p class="section-desc">Japanilaiset ja kiinalaiset kirjat, jotka on ladottu pystysuoriin sarakkeisiin.</p>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x2B07;</span> Pystysuoraan ladotut kirjat</h3>
+  <p>Pystysuoraan ladotut kirjat &mdash; japanilainen tategaki (&#x7E26;&#x66F8;&#x304D;) ja perinteinen kiina (&#x76F4;&#x6392;) &mdash; näytetään sellaisina kuin ne on ladottu: teksti kulkee ylhäältä alas sarakkeissa, jotka täyttyvät oikealta vasemmalle, ja sivut kääntyvät vasemmalle, samaan tapaan kuin mangassa.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x2699;</span> Kirjoitussuunta</h3>
+  <p>Avaa <kbd>Asetukset</kbd> &rarr; <kbd>Lukuasetukset</kbd> &rarr; <kbd>Kirjat</kbd> ja käytä <strong>Kirjoitussuunta</strong>-säädintä:</p>
+  <ul>
+    <li><strong>Automaattinen</strong> (oletus) &mdash; noudattaa kunkin kirjan omaa asettelua. Pystysuoraan ladottu kirja näytetään pystysuorana; kaikki muut kirjat pysyvät ennallaan.</li>
+    <li><strong>Vaakasuora</strong> &mdash; asettele jokainen kirja vaakasuoraan, myös pystysuoraan ladotut.</li>
+    <li><strong>Pystysuora</strong> &mdash; asettele jokainen kirja pystysuoriin sarakkeisiin.</li>
+  </ul>
+  <p>Sama säädin löytyy myös lukijan sisäisistä asetuksista <kbd>Aa</kbd>-painikkeen alta.</p>
+  <div class="tip"><strong>Huomautus:</strong> Muutokset tulevat voimaan seuraavalla kerralla, kun avaat kirjan &mdash; jo näytöllä oleva kirja säilyttää asettelun, jolla se avattiin.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-gray">&#x2139;</span> Hyvä tietää</h3>
+  <ul>
+    <li>Pystysuorat kirjat käyttävät aina sivutettua tilaa, joten jatkuva vieritys ja automaattinen vieritys eivät ole niille käytettävissä.</li>
+    <li>Liuku-sivuanimaatiota ei käytetä pystysuorille kirjoille &mdash; ne kääntyvät sen sijaan käännä-animaatiolla.</li>
+    <li>Kirjanmerkit, korostukset, sisällysluettelo, haku kirjasta ja tekstistä puheeksi -toiminto toimivat kaikki normaalisti.</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Takaisin ylös</a>
+
+<!-- READING COMICS -->
+<h2 id="reading-comics">Sarjakuvien lukeminen</h2>
+<p class="section-desc">CBZ-, CBR- ja CB7-sarjakuvien lukeminen.</p>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4F1;</span> Lukutilat</h3>
+  <ul>
+    <li><strong>Vasemmalta oikealle</strong> &mdash; Tavallinen länsimainen sivujärjestys.</li>
+    <li><strong>Oikealta vasemmalle</strong> &mdash; Mangan lukujärjestys.</li>
+    <li><strong>Webtoon / Pystyvieritys</strong> &mdash; Sujuva pystyvieritys pitkille sarjakuvanauhoille.</li>
+  </ul>
+  <p>Aseta yleinen oletus kohdassa <kbd>Asetukset</kbd> &rarr; <kbd>Lukuasetukset</kbd> &rarr; <kbd>Sarjakuvat</kbd> tai vaihda kirjakohtaisesti sen tietosivulta.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F50E;</span> Sivun skaalaus</h3>
+  <ul>
+    <li><strong>Sovita näyttöön</strong> &mdash; Koko sivu näkyvissä.</li>
+    <li><strong>Sovita leveyteen</strong> &mdash; Täyttää leveyden, vieritä pystysuunnassa tarvittaessa.</li>
+    <li><strong>Sovita korkeuteen</strong> &mdash; Täyttää korkeuden.</li>
+    <li><strong>Alkuperäinen koko</strong> &mdash; 1:1-pikselinäyttö.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F44B;</span> Eleet</h3>
+  <ul>
+    <li>Pyyhkäise vasemmalle/oikealle kääntääksesi sivuja (sivutetuissa tiloissa).</li>
+    <li>Nipistä tai kaksoisnapauta zoomataksesi, ja vedä liikkuaksesi. Katso <a href="#comic-zoom">Sarjakuvasivujen zoomaus</a>.</li>
+    <li>Napauta sivun keskelle näyttääksesi tai piilottaaksesi työkalupalkin.</li>
+    <li>Käytä sivuliukusäädintä alareunassa siirtyäksesi nopeasti.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x26A0;</span> Epäilyttävän arkiston varoitus</h3>
+  <p>Kun avaat sarjakuva-arkiston (CBZ, CBR tai CB7), jonka sisältö näyttää epätavallisen suurelta tai aggressiivisesti pakatulta &mdash; samaa kaavaa käyttävät &ldquo;zip-pommi&rdquo;-tiedostot, jotka on suunniteltu ylikuormittamaan muistia &mdash; sovellus näyttää <strong>Epäilyttävä arkisto</strong> -ilmoituksen ennen mitään purkamista.</p>
+  <ul>
+    <li>Napauta <kbd>Peruuta</kbd> jättääksesi tiedoston avaamatta. Tämä on turvallinen valinta tuntemattomista lähteistä peräisin oleville arkistoille.</li>
+    <li>Napauta <kbd>Avaa silti</kbd>, jos luotat tiedostoon &mdash; sovellus ohittaa turvatarkistuksen ja lataa sivut.</li>
+  </ul>
+  <p>EPUB-tiedostot käyttävät samaa suojausta hiljaisesti tuonnin aikana.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Takaisin ylös</a>
+
+<!-- COMIC ZOOM -->
+<h2 id="comic-zoom">Sarjakuvasivujen zoomaus</h2>
+<p class="section-desc">Pääse lähemmäs kuvitusta &mdash; sekä sivutiloissa että webtoon-vierityksessä.</p>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F50D;</span> Sivutilat</h3>
+  <ul>
+    <li>Nipistä zoomataksesi sisään, jopa kolminkertaiseksi sovitettuun kokoon nähden. Kuvitus pysyy sormiesi alla nipistäessäsi.</li>
+    <li>Kaksoisnapauta hypätäksesi kaksinkertaiseen kokoon kyseisessä kohdassa; kaksoisnapauta uudelleen sovittaaksesi sivun takaisin näyttöön.</li>
+    <li>Vedä yhdellä sormella liikkuaksesi lähennettynä.</li>
+    <li>Nipistämällä lähes kokonaan takaisin ulos sivu napsahtaa siististi sovitettuun kokoon.</li>
+  </ul>
+  <p>Zoomaus toimii <strong>Sovita näyttöön</strong>- ja <strong>Sovita korkeuteen</strong> -skaalausvaihtoehtojen kanssa sekä kaksoisaukeamien kanssa. <strong>Sovita leveyteen</strong> ja <strong>Alkuperäinen koko</strong> näyttävät sivun jo näyttöä suurempana ja vierittävät sen sijaan &mdash; käytä alla olevaa <strong>Näytä täysi resoluutio</strong> -toimintoa lähempää tarkastelua varten näissä tiloissa.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4F1;</span> Webtoon-vieritys</h3>
+  <ul>
+    <li>Nipistä tai kaksoisnapauta zoomataksesi koko nauhaa, jopa kolminkertaiseksi normaaliin kokoon nähden.</li>
+    <li>Vieritys toimii edelleen, kun olet zoomannut &mdash; vedä vain ylös ja alas kuten tavallisesti.</li>
+    <li>Vedä sivusuunnassa liikkuaksesi zoomatulla sivulla.</li>
+    <li>Zoomaustaso pysyy paikallaan, kun jatkat vierittämistä, joten voit lukea koko luvun suurennettuna. Laitteen kääntäminen palauttaa normaalin koon.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x2728;</span> Näytä täysi resoluutio</h3>
+  <p>Zoomaus suurentaa sivun kokoon, joka on valmisteltu näyttöäsi varten. Terävimmän mahdollisen näkymän saamiseksi yhdestä sivusta paina sitä pitkään ja valitse <kbd>Näytä täysi resoluutio</kbd> &mdash; kyseinen sivu puretaan arkiston alkuperäisessä resoluutiossa, ja voit nipistää paljon pidemmälle. Kaksoisnapautus vaihtaa näytön sovittamisen ja kaksinkertaisen koon välillä; pyyhkäise alas tai napauta sulkemispainiketta palataksesi takaisin.</p>
+  <div class="tip"><strong>Huomautus:</strong> Zoomausta ei tallenneta. Kirjan sulkeminen palauttaa aina normaalin sovituksen.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Takaisin ylös</a>
+
+<!-- TTS -->
+<h2 id="tts">Tekstistä puheeksi ja CarPlay</h2>
+<p class="section-desc">Kuuntele kirjojasi ääneen luettuna.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F50A;</span> Tekstistä puheeksi -toiminnon käyttö</h3>
+  <p>Avaa mikä tahansa EPUB-, PDF- tai TXT-kirja ja napauta toistopainiketta työkalupalkissa. Järjestelmä lukee yhden lauseen kerrallaan ja korostaa nykyisen sanan.</p>
+  <ul>
+    <li><strong>Nopeus</strong> &mdash; 0,5&times;&ndash;2&times; ohjaimissa.</li>
+    <li><strong>Ääni</strong> &mdash; Valitse yli 100 järjestelmä&auml;&auml;nestä kohdassa <kbd>Asetukset</kbd> &rarr; <kbd>Lukuasetukset</kbd> &rarr; <kbd>Tekstistä puheeksi</kbd>.</li>
+    <li><strong>Ohitus</strong> &mdash; Napauta seuraava/edellinen siirtyäksesi lauseittain tai luvuittain.</li>
+  </ul>
+  <div class="tip"><strong>Huomautus:</strong> <a href="#fixed-layout">Kiinteän asettelun kirjoissa</a> &mdash; sarjakuvissa ja kuvakirjoissa, joiden sivut ovat kiinteitä asetteluja &mdash; ei ole tekstiä, jonka sovellus voisi lukea ääneen, joten niille ei näytetä toistopainiketta.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F697;</span> CarPlay</h3>
+  <p>Kun olet yhdistettynä CarPlay-yhteensopivaan ajoneuvoon, sovellus näkyy auton näytöllä yksinkertaistetuilla toisto-ohjaimilla. Toisto jatkuu taustalla &mdash; näyttöä ei tarvitse pitää päällä.</p>
+  <div class="tip"><strong>Vinkki:</strong> Ota käyttöön <kbd>Taustaääni</kbd><span class="badge badge-premium">Premium</span> tekstistä puheeksi -asetuksissa pitääksesi toiston käynnissä sovelluksen ollessa taustalla, jopa ilman CarPlaytä.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Takaisin ylös</a>
+
+<!-- AI UPSCALING -->
+<h2 id="upscaling">Tekoälypohjainen sarjakuvien skaalaus</h2>
+<p class="section-desc">Paranna matalaresoluutioisia sarjakuvasivuja laitteella.<span class="badge badge-premium">Premium</span></p>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x2728;</span> Mitä se tekee</h3>
+  <p>Käyttää laitteella toimivaa koneoppimismallia skaalaakseen sarjakuvasivuja, jotka ovat resoluutiokynnyksen alapuolella. Tuloksena on terävämmät viivat ja vähemmän näkyviä pakkausartefakteja &mdash; erityisen hyödyllistä vanhoille tai huonolaatuisille skannauksille.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x2699;</span> Asennus</h3>
+  <ol class="steps">
+    <li>Siirry kohtaan <kbd>Asetukset</kbd> &rarr; <kbd>Lukuasetukset</kbd> &rarr; <kbd>Sarjakuvat</kbd> &rarr; <kbd>Tekoälyskaalaus</kbd>.</li>
+    <li>Ota se käyttöön.</li>
+    <li>Säädä <strong>Resoluutiokynnys</strong> &mdash; tätä pikselileveyttä pienemmät sivut skaalataan (oletus: 1500 px).</li>
+    <li>Aseta <strong>Esilatausikkuna</strong> hallitaksesi, kuinka monta tulevaa sivua esikäsitellään taustalla.</li>
+    <li>Valitse <strong>Kohinanpoistotaso</strong> (Automaattinen on yleensä paras).</li>
+  </ol>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4BE;</span> Välimuisti ja tallennustila</h3>
+  <p>Skaalatut kuvat tallennetaan välimuistiin, jotta niitä ei tarvitse käsitellä uudelleen. Valitse, kuinka kauan välimuistia säilytetään (7&ndash;90 päivää tai ei koskaan vanhene), ja tyhjennä se milloin tahansa asetuksista.</p>
+  <div class="tip"><strong>Vinkki:</strong> Pieni merkki näkyy skaalattujen sivujen päällä. Voit poistaa sen käytöstä asetuksista halutessasi.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Takaisin ylös</a>
+
+<!-- HIDDEN MODE -->
+<h2 id="hidden">Piilotetut kirjat</h2>
+<p class="section-desc">Pidä tietyt kirjat yksityisinä.<span class="badge badge-premium">Premium</span></p>
+
+<div class="card">
+  <h3><span class="icon icon-indigo">&#x1F441;</span> Kirjojen piilottaminen</h3>
+  <ol class="steps">
+    <li>Avaa kirjan tietosivu ja napauta valikkoa (&hellip;).</li>
+    <li>Valitse <kbd>Piilota kirja</kbd>.</li>
+    <li>Kirja katoaa normaalista kirjastonäkymästä.</li>
+  </ol>
+  <p>Voit piilottaa useita kirjoja kerralla valintatilassa.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F513;</span> Piilotettujen kirjojen näyttäminen</h3>
+  <p>Vedä kirjastossa alaspäin aktivoidaksesi <strong>Piilotetun tilan</strong>. Kaikki kirjasi &mdash; sekä piilotetut että näkyvät &mdash; näytetään nyt. Vedä uudelleen tai poistu sovelluksesta lopettaaksesi piilotetun tilan.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F512;</span> Yksityisyysasetukset</h3>
+  <p>Kun piilotettu tila on aktiivinen, siirry kohtaan <kbd>Asetukset</kbd> &rarr; <kbd>Piilotettu tila</kbd> valitaksesi, mitä tapahtuu poistuessasi sovelluksesta:</p>
+  <ul>
+    <li><strong>Automaattinen poistuminen</strong> (oletus) &mdash; Piilotettu tila sammuu automaattisesti. Nopea ja yksinkertainen.</li>
+    <li><strong>Vaadi Face ID / Touch ID</strong> &mdash; Piilotettu tila pysyy päällä, mutta vaatii biometrisen tunnistautumisen palatessasi. Turvallisempi.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x21A9;</span> Kirjojen näyttäminen</h3>
+  <p>Piilotetussa tilassa avaa piilotetun kirjan tiedot ja valitse <kbd>Näytä kirja</kbd>, tai käytä valintatilaa näyttääksesi useita kerralla.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x2601;</span> Piilotettujen kirjojen synkronointi</h3>
+  <p>Siirry piilotetussa tilassa kohtaan <kbd>Asetukset</kbd> &rarr; <kbd>Piilotettu tila</kbd> ja ota käyttöön <kbd>Synkronoi piilotetut kirjat iCloudin kanssa</kbd>:</p>
+  <ul>
+    <li><strong>Pois</strong> (oletus) &mdash; piilotetut kirjat pysyvät vain tällä laitteella. Kirjan piilottaminen poistaa sen myös iCloudista.</li>
+    <li><strong>Päällä</strong> &mdash; piilotetut kirjat synkronoituvat iCloudin kautta, mutta pysyvät piilotettuina jokaisella laitteella, jolle olet kirjautunut.</li>
+  </ul>
+  <p>Kytkimen sammuttaminen, kun sinulla on jo piilotettuja kirjoja iCloudissa, kysyy, mitä niille tehdään:</p>
+  <ul>
+    <li><strong>Säilytä kaikilla laitteilla</strong> &mdash; muut laitteesi säilyttävät synkronoidut kopionsa; tämä laite säilyttää yksityisen, vain paikallisen kopion.</li>
+    <li><strong>Poista kokonaan iCloudista</strong> &mdash; poistaa kirjat iCloudista; jokainen muu laite säilyttää oman yksityisen kopionsa piilotetussa kirjastossaan.</li>
+  </ul>
+  <div class="tip"><strong>Huomautus:</strong> Jos joku muu laitteesi poistaa piilotetun kirjan iCloudista, tämä laite säilyttää automaattisesti oman yksityisen kopionsa piilotetussa kirjastossa &mdash; kunhan kirjan tiedosto oli jo ladattu sinne.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F5D1;</span> Poista piilotetut kirjat pysyvästi</h3>
+  <p>Siirry piilotetussa tilassa kohtaan <kbd>Asetukset</kbd> &rarr; <kbd>Piilotettu tila</kbd> ja valitse <kbd>Poista piilotetut kirjat pysyvästi</kbd> poistaaksesi jokaisen piilotetun kirjan tältä laitteelta, iCloudista ja muilta laitteiltasi. Kirjoita <kbd>DELETE</kbd> vahvistaaksesi.</p>
+  <div class="tip"><strong>Varoitus:</strong> Tätä ei voi perua. Laitteet, jotka ovat tällä hetkellä offline-tilassa, säilyttävät paikalliset kopionsa seuraavaan synkronointiin asti.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Takaisin ylös</a>
+
+<!-- BOOKMARKS, HIGHLIGHTS, TAGS -->
+<h2 id="bookmarks">Kirjanmerkit, korostukset ja tunnisteet</h2>
+
+<div class="card">
+  <h3><span class="icon icon-red">&#x1F516;</span> Kirjanmerkit</h3>
+  <p>Napauta kirjanmerkkikuvaketta lukijan työkalupalkissa merkitäksesi nykyisen sivun. Lisää valinnainen muistiinpano. Näet kaikki kirjan kirjanmerkit sen tietosivulta.</p>
+  <div class="tip"><strong>Huomautus:</strong> Vain manuaalisesti luomasi kirjanmerkit näkyvät täällä. Sijainnit, jotka sovellus tallentaa automaattisesti kirjan sulkemisen yhteydessä, säilytetään erikseen kohdassa <a href="#history">Lukuhistoria</a>, jotta ne eivät syrjäytä omia kirjanmerkkejäsi.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F58D;</span> Korostukset<span class="badge badge-premium">Premium</span></h3>
+  <p>EPUB-tiedostoissa valitse teksti korostaaksesi sen. Valitse viidestä väristä (keltainen, vaaleanpunainen, vihreä, sininen, oranssi) ja lisää muistiinpanoja. Kaikki korostukset löytyvät kirjan tietosivulta.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F3F7;</span> Tunnisteet</h3>
+  <p>Lisää tunnisteita mihin tahansa kirjaan sen tietosivulta. Tunnisteet ovat haettavissa ja niitä voidaan käyttää kirjastosuodattimina. Hallitse kaikkia tunnisteita kohdassa <kbd>Asetukset</kbd> &rarr; <kbd>Tunnisteet</kbd>.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Takaisin ylös</a>
+
+<!-- READING HISTORY -->
+<h2 id="history">Lukuhistoria</h2>
+<p class="section-desc">Palaa mihin tahansa sijaintiin, jossa olet hiljattain ollut.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F552;</span> Automaattiset tallennukset</h3>
+  <p>Aina kun suljet kirjan tai siirrät sovelluksen taustalle, nykyinen sijaintisi tallennetaan historiamerkintänä &mdash; sinun ei tarvitse muistaa merkitä kirjanmerkkiä. Tämä toimii kaikissa lukijoissa: EPUB, PDF, TXT/RTF ja sarjakuvat.</p>
+  <ul>
+    <li>Kutakin kirjaa kohden säilytetään enintään <strong>50</strong> viimeisintä sijaintia. Vanhemmat merkinnät poistetaan automaattisesti uusien tullessa.</li>
+    <li>Jos suljet kirjan uudelleen samassa kohdassa muutaman minuutin sisällä, olemassa oleva merkintä päivitetään sen sijaan, että luotaisiin kaksoiskappale.</li>
+    <li>Automaattisesti tallennetut sijainnit pidetään erillään manuaalisten kirjanmerkkien luettelosta, jotta ne eivät sekoitu tarkoituksella asettamiisi.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4D6;</span> Historia kirjan sisällä</h3>
+  <p>Napauta lukiessasi oikeassa yläkulmassa olevaa valikkoa (&hellip;) ja valitse <kbd>Lukuhistoria</kbd>. Näet luettelon viimeisimmistä sijainneistasi kyseisessä kirjassa, uusin ensin, luvun tai sivun nimellä ja sillä, kuinka kauan sitten kukin tallennettiin.</p>
+  <ul>
+    <li>Napauta merkintää hypätäksesi suoraan kyseiseen kohtaan.</li>
+    <li>Pyyhkäise merkintää vasemmalle poistaaksesi sen.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F4DA;</span> Historia koko kirjastossa</h3>
+  <p>Napauta kirjastosta yläpalkin valikkoa (&hellip;) ja valitse <kbd>Lukuhistoria</kbd> nähdäksesi kaikki kirjat, jotka olet hiljattain avannut, päivän mukaan ryhmiteltynä. Napauta riviä avataksesi kirjan juuri siitä, mihin jäit.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Takaisin ylös</a>
+
+<!-- AUTHOR & TAG BROWSING -->
+<h2 id="search">Selaa tekijän ja tunnisteen mukaan</h2>
+<p class="section-desc">Löydä kirjoja tekijän tai tunnisteen perusteella mistä tahansa kohtaa sovellusta.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F464;</span> Kirjailijat</h3>
+  <p>Siirry kohtaan <kbd>Asetukset</kbd> &rarr; <kbd>Kirjailijat</kbd> nähdäksesi kaikki kirjastosi tekijät kirjamäärineen. Napauta tekijää hakeaksesi kirjastosta kaikki hänen kirjansa.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F3F7;</span> Tunnistehaku</h3>
+  <p>Napauta kohdassa <kbd>Asetukset</kbd> &rarr; <kbd>Tunnisteet</kbd> mitä tahansa tunnistetta hakeaksesi kirjastosta kirjat, joilla on kyseinen tunniste. Paina pitkään nimetäksesi sen uudelleen tai poistaaksesi sen.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F50D;</span> Pikahaku pikavalikosta</h3>
+  <ul>
+    <li>Paina kirjastossa kirjaa pitkään &rarr; <kbd>Etsi kirjoja tekijältä [Tekijä]</kbd></li>
+    <li>Paina kirjan tietosivulla pitkään tekijän nimeä tai mitä tahansa tunnistetta hakeaksesi</li>
+  </ul>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Takaisin ylös</a>
+
+<!-- METADATA -->
+<h2 id="metadata">Metatiedot ja ComicInfo.xml</h2>
+<p class="section-desc">Tarkastele ja muokkaa kirjan metatietoja.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x270F;</span> Metatietojen muokkaus</h3>
+  <p>Napauta kirjan tietosivulla valikkoa (&hellip;) ja valitse <kbd>Muokkaa metatietoja</kbd> muuttaaksesi otsikkoa, tekijää, sarjaa, kuvausta ja muita kenttiä. Voit myös purkaa metatiedot uudelleen alkuperäisestä tiedostosta.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4CB;</span> ComicInfo.xml</h3>
+  <p>Sarjakuva-arkistoista (CBZ, CBR, CB7), jotka sisältävät <code>ComicInfo.xml</code>-tiedoston, metatiedot puretaan automaattisesti tuonnin yhteydessä &mdash; mukaan lukien otsikko, käsikirjoittaja, sarja, numero, tiivistelmä, kustantaja, genre ja tunnisteet.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Takaisin ylös</a>
+
+<!-- ICLOUD -->
+<h2 id="icloud">iCloud-synkronointi</h2>
+<p class="section-desc">Pidä kirjastosi synkronoituna laitteiden välillä.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x2601;</span> Synkronoinnin käyttöönotto</h3>
+  <ol class="steps">
+    <li>Siirry kohtaan <kbd>Asetukset</kbd> &rarr; <kbd>iCloud-synkronointi</kbd>.</li>
+    <li>Ota käyttöön <kbd>Synkronoi kirjasto iCloudin kanssa</kbd>.</li>
+    <li>Synkronointi astuu voimaan seuraavalla sovelluksen käynnistyksellä.</li>
+  </ol>
+  <p>Metatiedot, lukuedistyminen, kirjanmerkit, korostukset ja hyllyt synkronoituvat kaikissa laitteissa, jotka on kirjautunut samaan iCloud-tiliin.</p>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F4CA;</span> Synkronoinnin tila</h3>
+  <p><kbd>Asetukset</kbd> &rarr; <kbd>iCloud-synkronointi</kbd> näyttää tilakortin kirjatiedostoillesi:</p>
+  <ul>
+    <li>Otsikko &mdash; <strong>Ajan tasalla</strong>, <strong>Synkronoidaan&hellip;</strong> (määrän kanssa) tai <strong>Ei kirjautunut sisään</strong>.</li>
+    <li>Palkki, joka näyttää, kuinka suuri osa kirjastosi tiedostoista on iCloudissa.</li>
+    <li>Erittely &mdash; <strong>Synkronoitu</strong> (kokonaiskoon kanssa), <strong>Vain iCloudissa</strong> (ei vielä ladattu tälle laitteelle) ja <strong>Käynnissä</strong>.</li>
+  </ul>
+  <div class="tip"><strong>Huomautus:</strong> Tämä kortti seuraa vain kirjojen <em>tiedostoja</em>. Lukuedistyminen, kirjanmerkit, korostukset ja hyllyt synkronoituvat erikseen ja automaattisesti tiedoston tilasta riippumatta.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x2601;</span> Kansikuvien merkit</h3>
+  <p>Kirjojen kansikuvat näyttävät pienen pilvikuvakkeen oikeassa alakulmassa osoittamaan tiedoston synkronointitilan:</p>
+  <ul>
+    <li><strong>Pilvikuvake</strong> &mdash; tiedosto on vain iCloudissa. Avaa kirjan sivu ladataksesi sen.</li>
+    <li><strong>Ylös-/alas-nuolet</strong> &mdash; tiedostoa ladataan parhaillaan ylös tai alas.</li>
+    <li><strong>Ei kuvaketta</strong> &mdash; tiedosto on jo tällä laitteella.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4E5;</span> Automaattinen lataus</h3>
+  <p>Valitse automaattisten latausten enimmäistiedostokoko. Suuremmat kirjat pysyvät pilvessä, kunnes avaat ne. Säädä rajaa iCloud-asetuksissa.</p>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Takaisin ylös</a>
+
+<!-- STATS -->
+<h2 id="stats">Lukutilastot</h2>
+
+<div class="card">
+  <h3><span class="icon icon-green">&#x1F4CA;</span> Lukuaktiivisuutesi</h3>
+  <p>Avaa <kbd>Asetukset</kbd> &rarr; <kbd>Kirjastotilastot</kbd> nähdäksesi:</p>
+  <ul>
+    <li>Kirjat yhteensä, luetut sivut ja lukuaika.</li>
+    <li>Päivittäisen lukuaktiivisuuden kaavio.</li>
+    <li>Kirjat tiedostomuodon ja lukutilan mukaan.</li>
+    <li>Kirjakohtainen aktiivisuuserittely.</li>
+  </ul>
+  <div class="tip"><strong>Huomautus:</strong> Tilastot noudattavat piilotettua tilaa &mdash; kun piilotettu tila on pois päältä, piilotettujen kirjojen tilastot jätetään pois.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Takaisin ylös</a>
+
+<!-- WEBDAV & OPDS -->
+<h2 id="webdav">WebDAV ja OPDS</h2>
+<p class="section-desc">Selaa ja lataa etäpalvelimilta ja luetteloista.</p>
+
+<div class="card">
+  <h3><span class="icon icon-purple">&#x1F5C4;</span> WebDAV</h3>
+  <p>Yhdistä NAS-palvelimeen, Nextcloudiin tai Calibre-palvelimeen selataksesi kansioita ja ladataksesi kirjoja.</p>
+  <ol class="steps">
+    <li>Siirry kohtaan <kbd>Asetukset</kbd> &rarr; <kbd>Tuo kirjoja</kbd> &rarr; <kbd>WebDAV</kbd>.</li>
+    <li>Napauta <kbd>Lisää palvelin</kbd> ja syötä URL.</li>
+    <li>Lisää käyttäjänimi ja salasana tarvittaessa.</li>
+    <li>Napauta <kbd>Testaa yhteyttä</kbd> ja tallenna.</li>
+  </ol>
+  <div class="tip"><strong>Itse allekirjoitetut varmenteet:</strong> Jos palvelimesi käyttää itse allekirjoitettua varmennetta, voit ottaa käyttöön <kbd>Salli epäluotettavat varmenteet</kbd>. Sovellus pyytää sinua ensin vahvistamaan &mdash; tämä poistaa TLS-vahvistuksen käytöstä, joten kuka tahansa verkossasi voi tekeytyä palvelimeksi. Ota se käyttöön vain hallinnassasi olevalle palvelimelle.</div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-teal">&#x1F4DA;</span> OPDS-luettelot</h3>
+  <p>OPDS on avoin standardi kirjaluetteloille. Lisää julkisia luetteloita (Project Gutenberg, Standard Ebooks jne.) tai oma yksityinen palvelimesi.</p>
+  <ol class="steps">
+    <li>Siirry kohtaan <kbd>Asetukset</kbd> &rarr; <kbd>Tuo kirjoja</kbd> &rarr; <kbd>OPDS</kbd>.</li>
+    <li>Napauta <kbd>Lisää luettelo</kbd> ja syötä syötteen URL.</li>
+    <li>Selaa luokkia ja lataa kirjoja kirjastoosi.</li>
+  </ol>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Takaisin ylös</a>
+
+<!-- RESUME -->
+<h2 id="resume">Jatka käynnistyksessä</h2>
+<p class="section-desc">Jatka automaattisesti siitä, mihin jäit.</p>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x25B6;</span> Asennus</h3>
+  <p>Siirry kohtaan <kbd>Asetukset</kbd> &rarr; <kbd>Yleiset</kbd> ja ota käyttöön <kbd>Jatka viimeisintä kirjaa käynnistyksessä</kbd>. Seuraavan kerran kun avaat sovelluksen, se siirtyy suoraan kirjaan ja sivulle, jota viimeksi luit.</p>
+  <div class="tip"><strong>Piilotetut kirjat:</strong> Jos viimeksi lukemasi kirja on piilotettu, sovellus pyytää Face ID / Touch ID -tunnistautumista ennen jatkamista. Ota käyttöön <kbd>Jatka piilotettua kirjaa tunnistautumisen jälkeen</kbd> piilotetun tilan asetuksissa salliaksesi tämän.</div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Takaisin ylös</a>
+
+<!-- FORMATS -->
+<h2 id="formats">Tuetut tiedostomuodot</h2>
+
+<div class="card">
+  <h3><span class="icon icon-blue">&#x1F4D6;</span> Kirjat</h3>
+  <div class="formats-grid">
+    <div class="format-tag">EPUB</div>
+    <div class="format-tag">PDF</div>
+    <div class="format-tag">TXT</div>
+    <div class="format-tag">RTF</div>
+  </div>
+</div>
+
+<div class="card">
+  <h3><span class="icon icon-orange">&#x1F4F1;</span> Sarjakuvat</h3>
+  <div class="formats-grid">
+    <div class="format-tag">CBZ</div>
+    <div class="format-tag">CBR</div>
+    <div class="format-tag">CB7</div>
+  </div>
+</div>
+
+<a href="#top" class="back-to-top">&uarr; Takaisin ylös</a>
+
+</body>
+</html>
