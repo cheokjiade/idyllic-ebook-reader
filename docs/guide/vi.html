@@ -25,6 +25,15 @@
   text-decoration: none;
   white-space: nowrap;
 }
+.guide-nav-store {
+  color: var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.guide-nav-store:hover,
+.guide-nav-store:focus-visible {
+  text-decoration: underline;
+}
 .guide-nav-arrow {
   display: inline-block;
 }
@@ -60,6 +69,7 @@
 <!-- USER-GUIDE-NAV:START -->
 <nav class="guide-nav" aria-label="User Guide language switcher">
   <a class="guide-nav-home" href="../index.html"><span class="guide-nav-arrow" aria-hidden="true">&larr;</span> Idyllic</a>
+  <a class="guide-nav-store" href="https://apps.apple.com/app/idyllic-reader/id6769253311">App Store</a>
   <span class="guide-nav-langs">
     <span class="guide-nav-globe" aria-hidden="true">&#x1F310;</span>
       <a href="index.html">English</a>
@@ -101,7 +111,7 @@
   <a href="#importing">Nhập sách</a>
   <a href="#wifi">Truyền qua WiFi</a>
   <a href="#library">Thư viện &amp; tổ chức</a>
-  <a href="#shelves">Kệ sách &amp; thư mục</a>
+  <a href="#shelves">Thư mục</a>
   <a href="#reading-books">Đọc sách</a>
   <a href="#fixed-layout">Sách bố cục cố định</a>
   <a href="#in-book-search">Tìm kiếm trong sách</a>
@@ -205,29 +215,29 @@
     <li><strong>Phiên bản mới nhất</strong> được đánh dấu bằng huy hiệu KEEP màu xanh lá</li>
     <li>Chọn các bản sao cũ bằng các ô đánh dấu (hoặc <strong>Chọn tất cả</strong>)</li>
     <li><strong>Xóa</strong> &mdash; loại bỏ các bản sao cũ đã chọn</li>
-    <li><strong>Sao chép dữ liệu &amp; Xóa</strong> &mdash; chuyển dấu trang, làm nổi bật, thẻ, tiến độ đọc và phân bổ kệ sang phiên bản mới nhất trước khi xóa</li>
-    <li>Bật <strong>"Chuyển sách mới sang kệ &amp; trạng thái ẩn của sách cũ"</strong> để giữ phiên bản mới ở cùng vị trí trong thư viện</li>
+    <li><strong>Sao chép dữ liệu &amp; Xóa</strong> &mdash; chuyển dấu trang, làm nổi bật, thẻ, tiến độ đọc và phân bổ thư mục sang phiên bản mới nhất trước khi xóa</li>
+    <li>Bật <strong>"Di chuyển sách mới vào thư mục và trạng thái ẩn của sách cũ"</strong> để giữ phiên bản mới ở cùng vị trí trong thư viện</li>
   </ul>
 </div>
 
 <a href="#top" class="back-to-top">&uarr; Về đầu trang</a>
 
 <!-- SHELVES -->
-<h2 id="shelves">Kệ sách &amp; thư mục</h2>
+<h2 id="shelves">Thư mục</h2>
 <p class="section-desc">Tổ chức sách vào các thư mục lồng nhau.</p>
 
 <div class="card">
-  <h3><span class="icon icon-indigo">&#x1F4C2;</span> Tạo kệ sách</h3>
+  <h3><span class="icon icon-indigo">&#x1F4C2;</span> Tạo thư mục</h3>
   <ol class="steps">
-    <li>Chạm <kbd>Kệ mới</kbd> ở đầu thư viện.</li>
-    <li>Nhập tên, sau đó chọn biểu tượng và màu sắc.</li>
-    <li>Tùy chọn chọn kệ cha để tạo thư mục con.</li>
+    <li>Chạm menu (&hellip;) ở đầu thư viện và chọn <kbd>Thư Mục Mới</kbd>.</li>
+    <li>Nhập tên, sau đó chọn biểu tượng.</li>
+    <li>Để tạo thư mục con, hãy mở một thư mục trước rồi tạo thư mục mới bên trong.</li>
   </ol>
 </div>
 
 <div class="card">
   <h3><span class="icon icon-blue">&#x21C4;</span> Di chuyển sách</h3>
-  <p>Từ trang chi tiết sách, chạm menu (&hellip;) và chọn <kbd>Di chuyển đến kệ</kbd>. Trong chế độ chọn, bạn có thể di chuyển nhiều sách cùng lúc.</p>
+  <p>Từ trang chi tiết sách, chạm menu (&hellip;) và chọn <kbd>Chuyển Đến...</kbd>. Trong thư viện, bạn cũng có thể nhấn giữ một cuốn sách và chọn <kbd>Chuyển Đến Thư Mục</kbd>. Trong chế độ chọn, chạm <kbd>Di Chuyển</kbd> để di chuyển nhiều sách cùng lúc.</p>
 </div>
 
 <a href="#top" class="back-to-top">&uarr; Về đầu trang</a>
@@ -288,8 +298,8 @@
 
 <div class="card">
   <h3><span class="icon icon-gray">&#x2139;</span> Những gì khả dụng</h3>
-  <p>Mục lục, đánh dấu, thanh trượt tiến độ, lịch sử đọc và việc tiếp tục từ nơi bạn dừng lại đều hoạt động như bình thường.</p>
-  <p>Vì mỗi trang là một thiết kế cố định thay vì văn bản mà ứng dụng có thể dàn lại, một số điều khiển sẽ không xuất hiện với những cuốn sách này: Cuộn liên tục và tự động cuộn, cài đặt phông chữ và giao diện, đọc thành tiếng, tìm kiếm trong sách, và việc chọn hoặc tô sáng văn bản.</p>
+  <p>Mục lục, đánh dấu, thanh trượt tiến độ, lịch sử đọc, việc tiếp tục từ nơi bạn dừng lại, đọc thành tiếng, tìm kiếm trong sách và tô sáng đều hoạt động như bình thường.</p>
+  <p>Vì mỗi trang là một thiết kế cố định thay vì văn bản mà ứng dụng có thể dàn lại, một số điều khiển sẽ không xuất hiện với những cuốn sách này: Cuộn liên tục và tự động cuộn, cùng cài đặt phông chữ và giao diện.</p>
 </div>
 
 <a href="#top" class="back-to-top">&uarr; Về đầu trang</a>
@@ -534,13 +544,13 @@
 
 <div class="card">
   <h3><span class="icon icon-blue">&#x1F50A;</span> Sử dụng đọc thành tiếng</h3>
-  <p>Mở bất kỳ sách EPUB, PDF hoặc TXT nào và chạm nút phát trên thanh công cụ. Chức năng đọc thành tiếng đọc từng câu một và tô sáng từ hiện tại.</p>
+  <p>Mở bất kỳ sách EPUB, PDF, TXT hoặc RTF nào và chạm nút tai nghe trên thanh công cụ. Chức năng đọc thành tiếng đọc từng câu một và tô sáng từ hiện tại.</p>
   <ul>
-    <li><strong>Tốc độ</strong> &mdash; 0,5&times; đến 2&times; trong bộ điều khiển TTS.</li>
+    <li><strong>Tốc độ</strong> &mdash; 0,5&times; đến 3&times; trong bộ điều khiển TTS.</li>
     <li><strong>Giọng đọc</strong> &mdash; Chọn từ hơn 100 giọng hệ thống trong <kbd>Cài đặt</kbd> &rarr; <kbd>Tùy chọn đọc</kbd> &rarr; <kbd>Đọc thành tiếng</kbd>.</li>
     <li><strong>Bỏ qua</strong> &mdash; Chạm tiếp theo/trước để nhảy theo câu hoặc theo chương.</li>
   </ul>
-  <div class="tip"><strong>Lưu ý:</strong> <a href="#fixed-layout">Sách bố cục cố định</a> &mdash; truyện tranh và sách tranh có các trang là thiết kế cố định &mdash; không có văn bản để ứng dụng đọc to, vì vậy nút phát không hiển thị cho những cuốn sách này.</div>
+  <div class="tip"><strong>Lưu ý:</strong> Tệp PDF gồm các ảnh quét trang không có văn bản để ứng dụng đọc to; khi bạn chạm nút tai nghe, ứng dụng sẽ báo cho bạn biết.</div>
 </div>
 
 <div class="card">
@@ -640,13 +650,13 @@
 
 <div class="card">
   <h3><span class="icon icon-red">&#x1F516;</span> Đánh dấu trang</h3>
-  <p>Chạm biểu tượng đánh dấu trên thanh công cụ trình đọc để đánh dấu trang hiện tại. Thêm ghi chú tùy chọn. Xem tất cả đánh dấu của sách từ trang chi tiết.</p>
+  <p>Chạm biểu tượng đánh dấu trên thanh công cụ trình đọc để đánh dấu trang hiện tại. Để thêm ghi chú, chạm và giữ một dấu trang trong danh sách dấu trang của sách rồi chọn <kbd>Sửa ghi chú</kbd>. Xem tất cả đánh dấu của sách từ <kbd>Dấu trang</kbd> trên trang chi tiết (<kbd>Dấu trang &amp; đánh dấu</kbd> với sách EPUB).</p>
   <div class="tip"><strong>Lưu ý:</strong> Chỉ những đánh dấu bạn tạo thủ công mới xuất hiện ở đây. Các vị trí mà ứng dụng tự động lưu khi bạn đóng sách được giữ riêng trong <a href="#history">Lịch sử đọc</a> để không lấn át các đánh dấu của bạn.</div>
 </div>
 
 <div class="card">
   <h3><span class="icon icon-orange">&#x1F58D;</span> Tô sáng<span class="badge badge-premium">Premium</span></h3>
-  <p>Trong tệp EPUB, chọn văn bản để tô sáng. Chọn từ năm màu (vàng, hồng, xanh lá, xanh dương, cam) và thêm ghi chú. Tất cả phần tô sáng được liệt kê trên trang chi tiết sách.</p>
+  <p>Trong tệp EPUB, chọn văn bản để tô sáng. Chọn từ năm màu (vàng, hồng, xanh lá, xanh dương, cam) và thêm ghi chú. Tất cả phần tô sáng cùng ghi chú được liệt kê trong <kbd>Dấu trang &amp; đánh dấu</kbd> trên trang chi tiết sách.</p>
 </div>
 
 <div class="card">
@@ -737,7 +747,7 @@
     <li>Bật <kbd>Đồng bộ thư viện với iCloud</kbd>.</li>
     <li>Đồng bộ sẽ có hiệu lực vào lần mở ứng dụng tiếp theo.</li>
   </ol>
-  <p>Siêu dữ liệu, tiến độ đọc, đánh dấu, tô sáng và kệ sách đồng bộ trên tất cả thiết bị đăng nhập cùng tài khoản iCloud.</p>
+  <p>Siêu dữ liệu, tiến độ đọc, đánh dấu, tô sáng và thư mục đồng bộ trên tất cả thiết bị đăng nhập cùng tài khoản iCloud.</p>
 </div>
 
 <div class="card">
@@ -748,7 +758,7 @@
     <li>Một thanh cho biết bao nhiêu phần tệp trong thư viện của bạn đang ở trên iCloud.</li>
     <li>Chi tiết &mdash; <strong>Đã đồng bộ</strong> (kèm tổng dung lượng), <strong>Chỉ trên iCloud</strong> (chưa tải xuống thiết bị này), và <strong>Đang xử lý</strong>.</li>
   </ul>
-  <div class="tip"><strong>Lưu ý:</strong> Thẻ này chỉ theo dõi <em>tệp</em> sách. Tiến độ đọc, đánh dấu, tô sáng và kệ sách đồng bộ riêng và tự động, bất kể trạng thái tệp.</div>
+  <div class="tip"><strong>Lưu ý:</strong> Thẻ này chỉ theo dõi <em>tệp</em> sách. Tiến độ đọc, đánh dấu, tô sáng và thư mục đồng bộ riêng và tự động, bất kể trạng thái tệp.</div>
 </div>
 
 <div class="card">

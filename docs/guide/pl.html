@@ -25,6 +25,15 @@
   text-decoration: none;
   white-space: nowrap;
 }
+.guide-nav-store {
+  color: var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.guide-nav-store:hover,
+.guide-nav-store:focus-visible {
+  text-decoration: underline;
+}
 .guide-nav-arrow {
   display: inline-block;
 }
@@ -60,6 +69,7 @@
 <!-- USER-GUIDE-NAV:START -->
 <nav class="guide-nav" aria-label="User Guide language switcher">
   <a class="guide-nav-home" href="../index.html"><span class="guide-nav-arrow" aria-hidden="true">&larr;</span> Idyllic</a>
+  <a class="guide-nav-store" href="https://apps.apple.com/app/idyllic-reader/id6769253311">App Store</a>
   <span class="guide-nav-langs">
     <span class="guide-nav-globe" aria-hidden="true">&#x1F310;</span>
       <a href="index.html">English</a>
@@ -101,7 +111,7 @@
   <a href="#importing">Importowanie ksi&#261;&#380;ek</a>
   <a href="#wifi">Transfer WiFi</a>
   <a href="#library">Biblioteka i organizacja</a>
-  <a href="#shelves">P&oacute;&#322;ki i foldery</a>
+  <a href="#shelves">Foldery</a>
   <a href="#reading-books">Czytanie ksi&#261;&#380;ek</a>
   <a href="#fixed-layout">Ksi&#261;&#380;ki o sta&#322;ym uk&#322;adzie</a>
   <a href="#in-book-search">Wyszukiwanie w ksi&#261;&#380;ce</a>
@@ -205,29 +215,29 @@
     <li><strong>Najnowsza wersja</strong> jest oznaczona zielon&#261; odznak&#261; KEEP</li>
     <li>Wybierz starsze kopie za pomoc&#261; p&oacute;l wyboru (lub <strong>Zaznacz wszystko</strong>)</li>
     <li><strong>Usu&#324;</strong> &mdash; usuwa wybrane starsze kopie</li>
-    <li><strong>Skopiuj dane i usu&#324;</strong> &mdash; przenosi zak&#322;adki, pod&#347;wietlenia, tagi, post&#281;p czytania i przypisanie p&oacute;&#322;ki do najnowszej wersji przed usuni&#281;ciem</li>
-    <li>W&#322;&#261;cz opcj&#281; <strong>"Przenie&#347; now&#261; ksi&#261;&#380;k&#281; na p&oacute;&#322;k&#281; i status ukrycia starej ksi&#261;&#380;ki"</strong>, aby zachowa&#263; now&#261; wersj&#281; w tym samym miejscu w bibliotece</li>
+    <li><strong>Skopiuj dane i usu&#324;</strong> &mdash; przenosi zak&#322;adki, pod&#347;wietlenia, tagi, post&#281;p czytania i przypisanie folderu do najnowszej wersji przed usuni&#281;ciem</li>
+    <li>W&#322;&#261;cz opcj&#281; <strong>"Przenie&#347; now&#261; ksi&#261;&#380;k&#281; do folderu i statusu ukrycia starej ksi&#261;&#380;ki"</strong>, aby zachowa&#263; now&#261; wersj&#281; w tym samym miejscu w bibliotece</li>
   </ul>
 </div>
 
 <a href="#top" class="back-to-top">&uarr; Powr&oacute;t na g&oacute;r&#281;</a>
 
 <!-- SHELVES -->
-<h2 id="shelves">P&oacute;&#322;ki i foldery</h2>
+<h2 id="shelves">Foldery</h2>
 <p class="section-desc">Organizuj ksi&#261;&#380;ki w zagnie&#380;d&#380;onych folderach.</p>
 
 <div class="card">
-  <h3><span class="icon icon-indigo">&#x1F4C2;</span> Tworzenie p&oacute;&#322;ek</h3>
+  <h3><span class="icon icon-indigo">&#x1F4C2;</span> Tworzenie folder&oacute;w</h3>
   <ol class="steps">
-    <li>Stuknij <kbd>Nowa p&oacute;&#322;ka</kbd> u g&oacute;ry biblioteki.</li>
-    <li>Wpisz nazw&#281;, a nast&#281;pnie wybierz ikon&#281; i kolor.</li>
-    <li>Opcjonalnie wybierz p&oacute;&#322;k&#281; nadrz&#281;dn&#261;, aby utworzy&#263; podfolder.</li>
+    <li>Stuknij menu (&hellip;) u g&oacute;ry biblioteki i wybierz <kbd>Nowy folder</kbd>.</li>
+    <li>Wpisz nazw&#281;, a nast&#281;pnie wybierz ikon&#281;.</li>
+    <li>Aby utworzy&#263; podfolder, najpierw otw&oacute;rz folder i utw&oacute;rz w nim nowy.</li>
   </ol>
 </div>
 
 <div class="card">
   <h3><span class="icon icon-blue">&#x21C4;</span> Przenoszenie ksi&#261;&#380;ek</h3>
-  <p>Na stronie szczeg&oacute;&#322;&oacute;w ksi&#261;&#380;ki stuknij menu (&hellip;) i wybierz <kbd>Przenie&#347; na p&oacute;&#322;k&#281;</kbd>. W trybie zaznaczania mo&#380;esz przenie&#347;&#263; wiele ksi&#261;&#380;ek naraz.</p>
+  <p>Na stronie szczeg&oacute;&#322;&oacute;w ksi&#261;&#380;ki stuknij menu (&hellip;) i wybierz <kbd>Przenie&#347; do...</kbd>. W bibliotece mo&#380;esz te&#380; przytrzyma&#263; ksi&#261;&#380;k&#281; i wybra&#263; <kbd>Przenie&#347; do folderu</kbd>. W trybie zaznaczania stuknij <kbd>Przenie&#347;</kbd>, aby przenie&#347;&#263; wiele ksi&#261;&#380;ek naraz.</p>
 </div>
 
 <a href="#top" class="back-to-top">&uarr; Powr&oacute;t na g&oacute;r&#281;</a>
@@ -288,8 +298,8 @@
 
 <div class="card">
   <h3><span class="icon icon-gray">&#x2139;</span> Co jest dost&#281;pne</h3>
-  <p>Spis tre&#347;ci, zak&#322;adki, suwak post&#281;pu, historia czytania i wznawianie w miejscu, w kt&oacute;rym sko&#324;czy&#322;e&#347;, dzia&#322;aj&#261; jak zwykle.</p>
-  <p>Poniewa&#380; ka&#380;da strona to sta&#322;y uk&#322;ad, a nie tekst, kt&oacute;ry aplikacja mo&#380;e przep&#322;yn&#261;&#263;, kilka element&oacute;w steruj&#261;cych nie pojawia si&#281; dla tych ksi&#261;&#380;ek: Ci&#261;g&#322;e przewijanie i automatyczne przewijanie, ustawienia czcionki i wygl&#261;du, tekst na mow&#281;, wyszukiwanie w ksi&#261;&#380;ce oraz zaznaczanie lub pod&#347;wietlanie tekstu.</p>
+  <p>Spis tre&#347;ci, zak&#322;adki, suwak post&#281;pu, historia czytania, wznawianie w miejscu, w kt&#243;rym sko&#324;czy&#322;e&#347;, tekst na mow&#281;, wyszukiwanie w ksi&#261;&#380;ce i wyr&#243;&#380;nianie dzia&#322;aj&#261; jak zwykle.</p>
+  <p>Poniewa&#380; ka&#380;da strona to sta&#322;y uk&#322;ad, a nie tekst, kt&#243;ry aplikacja mo&#380;e przep&#322;yn&#261;&#263;, kilka element&#243;w steruj&#261;cych nie pojawia si&#281; dla tych ksi&#261;&#380;ek: Ci&#261;g&#322;e przewijanie i automatyczne przewijanie oraz ustawienia czcionki i wygl&#261;du.</p>
 </div>
 
 <a href="#top" class="back-to-top">&uarr; Powr&oacute;t na g&oacute;r&#281;</a>
@@ -534,13 +544,13 @@
 
 <div class="card">
   <h3><span class="icon icon-blue">&#x1F50A;</span> Korzystanie z tekstu na mow&#281;</h3>
-  <p>Otw&oacute;rz dowoln&#261; ksi&#261;&#380;k&#281; EPUB, PDF lub TXT i stuknij przycisk odtwarzania na pasku narz&#281;dzi. TTS czyta jedno zdanie na raz i pod&#347;wietla bie&#380;&#261;ce s&#322;owo.</p>
+  <p>Otw&#243;rz dowoln&#261; ksi&#261;&#380;k&#281; EPUB, PDF, TXT lub RTF i stuknij przycisk ze s&#322;uchawkami na pasku narz&#281;dzi. TTS czyta jedno zdanie na raz i pod&#347;wietla bie&#380;&#261;ce s&#322;owo.</p>
   <ul>
-    <li><strong>Szybko&#347;&#263;</strong> &mdash; 0,5&times; do 2&times; w kontrolkach TTS.</li>
+    <li><strong>Szybko&#347;&#263;</strong> &mdash; 0,5&times; do 3&times; w kontrolkach TTS.</li>
     <li><strong>G&#322;os</strong> &mdash; Wybierz spo&#347;r&oacute;d ponad 100 g&#322;os&oacute;w systemowych w <kbd>Ustawienia</kbd> &rarr; <kbd>Preferencje czytania</kbd> &rarr; <kbd>Tekst na mow&#281;</kbd>.</li>
     <li><strong>Pomijanie</strong> &mdash; Stuknij nast&#281;pny/poprzedni, aby przeskakiwa&#263; po zdaniach lub rozdzia&#322;ach.</li>
   </ul>
-  <div class="tip"><strong>Uwaga:</strong> <a href="#fixed-layout">Ksi&#261;&#380;ki o sta&#322;ym uk&#322;adzie</a> &mdash; komiksy i ksi&#261;&#380;ki obrazkowe, kt&oacute;rych strony maj&#261; sta&#322;y wygl&#261;d &mdash; nie maj&#261; tekstu, kt&oacute;ry aplikacja mog&#322;aby przeczyta&#263; na g&#322;os, dlatego przycisk odtwarzania nie jest dla nich wy&#347;wietlany.</div>
+  <div class="tip"><strong>Uwaga:</strong> PDF z&#322;o&#380;ony ze zeskanowanych obraz&#243;w stron nie zawiera tekstu, kt&#243;ry aplikacja mog&#322;aby przeczyta&#263; na g&#322;os; po stukni&#281;ciu przycisku ze s&#322;uchawkami aplikacja o tym poinformuje.</div>
 </div>
 
 <div class="card">
@@ -640,13 +650,13 @@
 
 <div class="card">
   <h3><span class="icon icon-red">&#x1F516;</span> Zak&#322;adki</h3>
-  <p>Stuknij ikon&#281; zak&#322;adki na pasku narz&#281;dzi czytnika, aby doda&#263; zak&#322;adk&#281; do bie&#380;&#261;cej strony. Dodaj opcjonaln&#261; notatk&#281;. Wy&#347;wietl wszystkie zak&#322;adki ksi&#261;&#380;ki na stronie jej szczeg&oacute;&#322;&oacute;w.</p>
+  <p>Stuknij ikon&#281; zak&#322;adki na pasku narz&#281;dzi czytnika, aby doda&#263; zak&#322;adk&#281; do bie&#380;&#261;cej strony. Aby doda&#263; notatk&#281;, przytrzymaj zak&#322;adk&#281; na li&#347;cie zak&#322;adek ksi&#261;&#380;ki i wybierz <kbd>Edytuj notatk&#281;</kbd>. Wy&#347;wietl wszystkie zak&#322;adki ksi&#261;&#380;ki w sekcji <kbd>Zak&#322;adki</kbd> na stronie jej szczeg&#243;&#322;&#243;w (<kbd>Zak&#322;adki i wyr&#243;&#380;nienia</kbd> w przypadku ksi&#261;&#380;ki EPUB).</p>
   <div class="tip"><strong>Uwaga:</strong> Tylko zak&#322;adki utworzone r&#281;cznie pojawiaj&#261; si&#281; tutaj. Pozycje, kt&oacute;re aplikacja zapisuje automatycznie po zamkni&#281;ciu ksi&#261;&#380;ki, s&#261; przechowywane oddzielnie w sekcji <a href="#history">Historia czytania</a>, aby nie wypiera&#322;y Twoich w&#322;asnych zak&#322;adek.</div>
 </div>
 
 <div class="card">
   <h3><span class="icon icon-orange">&#x1F58D;</span> Wyr&oacute;&#380;nienia<span class="badge badge-premium">Premium</span></h3>
-  <p>W plikach EPUB zaznacz tekst, aby go wyr&oacute;&#380;ni&#263;. Wybierz spo&#347;r&oacute;d pi&#281;ciu kolor&oacute;w (&#380;&oacute;&#322;ty, r&oacute;&#380;owy, zielony, niebieski, pomara&#324;czowy) i dodaj notatki. Wszystkie wyr&oacute;&#380;nienia s&#261; wymienione na stronie szczeg&oacute;&#322;&oacute;w ksi&#261;&#380;ki.</p>
+  <p>W plikach EPUB zaznacz tekst, aby go wyr&#243;&#380;ni&#263;. Wybierz spo&#347;r&#243;d pi&#281;ciu kolor&#243;w (&#380;&#243;&#322;ty, r&#243;&#380;owy, zielony, niebieski, pomara&#324;czowy) i dodaj notatki. Wszystkie wyr&#243;&#380;nienia wraz z notatkami s&#261; wymienione w sekcji <kbd>Zak&#322;adki i wyr&#243;&#380;nienia</kbd> na stronie szczeg&#243;&#322;&#243;w ksi&#261;&#380;ki.</p>
 </div>
 
 <div class="card">
@@ -737,7 +747,7 @@
     <li>W&#322;&#261;cz <kbd>Synchronizuj bibliotek&#281; z iCloud</kbd>.</li>
     <li>Synchronizacja zacznie dzia&#322;a&#263; przy nast&#281;pnym uruchomieniu aplikacji.</li>
   </ol>
-  <p>Metadane, post&#281;p czytania, zak&#322;adki, wyr&oacute;&#380;nienia i p&oacute;&#322;ki s&#261; synchronizowane na wszystkich urz&#261;dzeniach zalogowanych na to samo konto iCloud.</p>
+  <p>Metadane, post&#281;p czytania, zak&#322;adki, wyr&oacute;&#380;nienia i foldery s&#261; synchronizowane na wszystkich urz&#261;dzeniach zalogowanych na to samo konto iCloud.</p>
 </div>
 
 <div class="card">
@@ -748,7 +758,7 @@
     <li>Pasek pokazuj&#261;cy, jaka cz&#281;&#347;&#263; plik&oacute;w Twojej biblioteki znajduje si&#281; w iCloud.</li>
     <li>Podzia&#322; &mdash; <strong>Zsynchronizowane</strong> (z &#322;&#261;cznym rozmiarem), <strong>Tylko w iCloud</strong> (jeszcze niepobrane na to urz&#261;dzenie) oraz <strong>W trakcie</strong>.</li>
   </ul>
-  <div class="tip"><strong>Uwaga:</strong> Ta karta &#347;ledzi wy&#322;&#261;cznie <em>pliki</em> ksi&#261;&#380;ek. Post&#281;p czytania, zak&#322;adki, wyr&oacute;&#380;nienia i p&oacute;&#322;ki synchronizuj&#261; si&#281; osobno i automatycznie, niezale&#380;nie od statusu pliku.</div>
+  <div class="tip"><strong>Uwaga:</strong> Ta karta &#347;ledzi wy&#322;&#261;cznie <em>pliki</em> ksi&#261;&#380;ek. Post&#281;p czytania, zak&#322;adki, wyr&oacute;&#380;nienia i foldery synchronizuj&#261; si&#281; osobno i automatycznie, niezale&#380;nie od statusu pliku.</div>
 </div>
 
 <div class="card">

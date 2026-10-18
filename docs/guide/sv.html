@@ -25,6 +25,15 @@
   text-decoration: none;
   white-space: nowrap;
 }
+.guide-nav-store {
+  color: var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.guide-nav-store:hover,
+.guide-nav-store:focus-visible {
+  text-decoration: underline;
+}
 .guide-nav-arrow {
   display: inline-block;
 }
@@ -60,6 +69,7 @@
 <!-- USER-GUIDE-NAV:START -->
 <nav class="guide-nav" aria-label="User Guide language switcher">
   <a class="guide-nav-home" href="../index.html"><span class="guide-nav-arrow" aria-hidden="true">&larr;</span> Idyllic</a>
+  <a class="guide-nav-store" href="https://apps.apple.com/app/idyllic-reader/id6769253311">App Store</a>
   <span class="guide-nav-langs">
     <span class="guide-nav-globe" aria-hidden="true">&#x1F310;</span>
       <a href="index.html">English</a>
@@ -101,7 +111,7 @@
   <a href="#importing">Importera b&#246;cker</a>
   <a href="#wifi">WiFi-&#246;verf&#246;ring</a>
   <a href="#library">Bibliotek &amp; organisering</a>
-  <a href="#shelves">Hyllor &amp; mappar</a>
+  <a href="#shelves">Mappar</a>
   <a href="#reading-books">L&#228;sa b&#246;cker</a>
   <a href="#fixed-layout">B&#246;cker med fast layout</a>
   <a href="#in-book-search">S&#246;k i bok</a>
@@ -205,29 +215,29 @@
     <li>Den <strong>nyaste versionen</strong> markeras med en gr&#246;n KEEP-bricka</li>
     <li>V&#228;lj &#228;ldre kopior med kryssrutorna (eller <strong>V&#228;lj alla</strong>)</li>
     <li><strong>Radera</strong> &mdash; tar bort de valda &#228;ldre kopiorna</li>
-    <li><strong>Kopiera data och radera</strong> &mdash; flyttar bokm&#228;rken, markeringar, taggar, l&#228;sframsteg och hyllplacering till den nyaste versionen innan den raderas</li>
-    <li>Aktivera <strong>"Flytta ny bok till den gamla bokens hylla &amp; dolda status"</strong> f&#246;r att beh&#229;lla den nya versionen p&#229; samma plats i biblioteket</li>
+    <li><strong>Kopiera data och radera</strong> &mdash; flyttar bokm&#228;rken, markeringar, taggar, l&#228;sframsteg och placering i mapp till den nyaste versionen innan den raderas</li>
+    <li>Aktivera <strong>"Flytta ny bok till gamla bokens mapp och dolda status"</strong> f&#246;r att beh&#229;lla den nya versionen p&#229; samma plats i biblioteket</li>
   </ul>
 </div>
 
 <a href="#top" class="back-to-top">&uarr; Tillbaka till toppen</a>
 
 <!-- SHELVES -->
-<h2 id="shelves">Hyllor &amp; mappar</h2>
+<h2 id="shelves">Mappar</h2>
 <p class="section-desc">Organisera b&#246;cker i kapslade mappar.</p>
 
 <div class="card">
-  <h3><span class="icon icon-indigo">&#x1F4C2;</span> Skapa hyllor</h3>
+  <h3><span class="icon icon-indigo">&#x1F4C2;</span> Skapa mappar</h3>
   <ol class="steps">
-    <li>Tryck p&#229; <kbd>Ny hylla</kbd> l&#228;ngst upp i ditt bibliotek.</li>
-    <li>Ange ett namn och v&#228;lj en ikon och f&#228;rg.</li>
-    <li>V&#228;lj valfritt en &#246;verordnad hylla f&#246;r att skapa en undermapp.</li>
+    <li>Tryck p&#229; menyn (&hellip;) l&#228;ngst upp i ditt bibliotek och v&#228;lj <kbd>Ny mapp</kbd>.</li>
+    <li>Ange ett namn och v&#228;lj en ikon.</li>
+    <li>Om du vill skapa en undermapp &#246;ppnar du f&#246;rst en mapp och skapar den nya i den.</li>
   </ol>
 </div>
 
 <div class="card">
   <h3><span class="icon icon-blue">&#x21C4;</span> Flytta b&#246;cker</h3>
-  <p>Fr&#229;n en boks detaljsida, tryck p&#229; menyn (&hellip;) och v&#228;lj <kbd>Flytta till hylla</kbd>. I markeringsl&#228;ge kan du flytta m&#229;nga b&#246;cker samtidigt.</p>
+  <p>Fr&#229;n en boks detaljsida, tryck p&#229; menyn (&hellip;) och v&#228;lj <kbd>Flytta till...</kbd>. I biblioteket kan du ocks&#229; h&#229;lla fingret p&#229; en bok och v&#228;lja <kbd>Flytta till mapp</kbd>. I markeringsl&#228;ge trycker du p&#229; <kbd>Flytta</kbd> f&#246;r att flytta m&#229;nga b&#246;cker samtidigt.</p>
 </div>
 
 <a href="#top" class="back-to-top">&uarr; Tillbaka till toppen</a>
@@ -288,8 +298,8 @@
 
 <div class="card">
   <h3><span class="icon icon-gray">&#x2139;</span> Vad som &#228;r tillg&#228;ngligt</h3>
-  <p>Inneh&#229;llsf&#246;rteckningen, bokm&#228;rken, f&#246;rloppsreglaget, l&#228;shistoriken och att forts&#228;tta d&#228;r du slutade fungerar alla som vanligt.</p>
-  <p>Eftersom varje sida &#228;r en fast layout snarare &#228;n text som appen kan fl&#246;da om, visas inte n&#229;gra kontroller f&#246;r de h&#228;r b&#246;ckerna: Kontinuerlig rullning och autorullning, typsnitts- och utseendeinst&#228;llningarna, text-till-tal, s&#246;k i bok samt textmarkering eller &#246;verstrykning.</p>
+  <p>Inneh&#229;llsf&#246;rteckningen, bokm&#228;rken, f&#246;rloppsreglaget, l&#228;shistoriken, att forts&#228;tta d&#228;r du slutade, text-till-tal, s&#246;k i bok och strykmarkering fungerar alla som vanligt.</p>
+  <p>Eftersom varje sida &#228;r en fast layout snarare &#228;n text som appen kan fl&#246;da om, visas inte n&#229;gra kontroller f&#246;r de h&#228;r b&#246;ckerna: Kontinuerlig rullning och autorullning samt typsnitts- och utseendeinst&#228;llningarna.</p>
 </div>
 
 <a href="#top" class="back-to-top">&uarr; Tillbaka till toppen</a>
@@ -534,13 +544,13 @@
 
 <div class="card">
   <h3><span class="icon icon-blue">&#x1F50A;</span> Anv&#228;nda text-till-tal</h3>
-  <p>&#214;ppna valfri EPUB, PDF eller TXT-bok och tryck p&#229; uppspelningsknappen i verktygsf&#228;ltet. TTS l&#228;ser en mening i taget och markerar det aktuella ordet.</p>
+  <p>&#214;ppna valfri EPUB, PDF, TXT eller RTF-bok och tryck p&#229; h&#246;rlursknappen i verktygsf&#228;ltet. TTS l&#228;ser en mening i taget och markerar det aktuella ordet.</p>
   <ul>
-    <li><strong>Hastighet</strong> &mdash; 0,5&times; till 2&times; i TTS-kontrollerna.</li>
+    <li><strong>Hastighet</strong> &mdash; 0,5&times; till 3&times; i TTS-kontrollerna.</li>
     <li><strong>R&#246;st</strong> &mdash; V&#228;lj bland 100+ systemr&#246;ster under <kbd>Inst&#228;llningar</kbd> &rarr; <kbd>L&#228;sinst&#228;llningar</kbd> &rarr; <kbd>Text-till-tal</kbd>.</li>
     <li><strong>Hoppa</strong> &mdash; Tryck p&#229; n&#228;sta/f&#246;reg&#229;ende f&#246;r att hoppa per mening eller per kapitel.</li>
   </ul>
-  <div class="tip"><strong>Obs:</strong> <a href="#fixed-layout">B&#246;cker med fast layout</a> &mdash; serier och bilderb&#246;cker vars sidor &#228;r fast utformade &mdash; har ingen text f&#246;r appen att l&#228;sa upp, s&#229; uppspelningsknappen visas inte f&#246;r dem.</div>
+  <div class="tip"><strong>Obs:</strong> En PDF som best&#229;r av skannade sidbilder har ingen text f&#246;r appen att l&#228;sa upp; n&#228;r du trycker p&#229; h&#246;rlursknappen talar appen om det.</div>
 </div>
 
 <div class="card">
@@ -640,13 +650,13 @@
 
 <div class="card">
   <h3><span class="icon icon-red">&#x1F516;</span> Bokm&#228;rken</h3>
-  <p>Tryck p&#229; bokm&#228;rkesikonen i l&#228;sarens verktygsf&#228;lt f&#246;r att bokm&#228;rka aktuell sida. L&#228;gg till en valfri anteckning. Visa alla bokm&#228;rken f&#246;r en bok fr&#229;n dess detaljsida.</p>
+  <p>Tryck p&#229; bokm&#228;rkesikonen i l&#228;sarens verktygsf&#228;lt f&#246;r att bokm&#228;rka aktuell sida. Om du vill l&#228;gga till en anteckning h&#229;ller du fingret p&#229; ett bokm&#228;rke i bokens bokm&#228;rkeslista och v&#228;ljer <kbd>Redigera anteckning</kbd>. Visa alla bokm&#228;rken f&#246;r en bok fr&#229;n <kbd>Bokm&#228;rken</kbd> p&#229; dess detaljsida (<kbd>Bokm&#228;rken och markeringar</kbd> f&#246;r en EPUB).</p>
   <div class="tip"><strong>Obs:</strong> Endast bokm&#228;rken som du skapar manuellt visas h&#228;r. Positioner som appen sparar automatiskt n&#228;r du st&#228;nger en bok h&#229;lls separat i <a href="#history">L&#228;shistorik</a> s&#229; att de inte tr&#228;nger undan dina egna bokm&#228;rken.</div>
 </div>
 
 <div class="card">
   <h3><span class="icon icon-orange">&#x1F58D;</span> Markeringar<span class="badge badge-premium">Premium</span></h3>
-  <p>I EPUB-filer, markera text f&#246;r att str&#228;ckmarkera den. V&#228;lj bland fem f&#228;rger (gul, rosa, gr&#246;n, bl&#229;, orange) och l&#228;gg till anteckningar. Alla markeringar listas p&#229; bokens detaljsida.</p>
+  <p>I EPUB-filer, markera text f&#246;r att strykmarkera den. V&#228;lj bland fem f&#228;rger (gul, rosa, gr&#246;n, bl&#229;, orange) och l&#228;gg till anteckningar. Alla markeringar och deras anteckningar listas under <kbd>Bokm&#228;rken och markeringar</kbd> p&#229; bokens detaljsida.</p>
 </div>
 
 <div class="card">
@@ -737,7 +747,7 @@
     <li>Aktivera <kbd>Synka bibliotek med iCloud</kbd>.</li>
     <li>Synkroniseringen aktiveras vid n&#228;sta appstart.</li>
   </ol>
-  <p>Din metadata, l&#228;sframsteg, bokm&#228;rken, markeringar och hyllor synkas mellan alla enheter som &#228;r inloggade p&#229; samma iCloud-konto.</p>
+  <p>Din metadata, l&#228;sframsteg, bokm&#228;rken, markeringar och mappar synkas mellan alla enheter som &#228;r inloggade p&#229; samma iCloud-konto.</p>
 </div>
 
 <div class="card">
@@ -748,7 +758,7 @@
     <li>En rad som visar hur stor del av bibliotekets filer som finns i iCloud.</li>
     <li>En uppdelning &mdash; <strong>Synkad</strong> (med total storlek), <strong>Endast i iCloud</strong> (inte nedladdad till den h&#228;r enheten &#228;n), och <strong>P&#229;g&#229;r</strong>.</li>
   </ul>
-  <div class="tip"><strong>Obs:</strong> Det h&#228;r kortet sp&#229;rar bara bok<em>filer</em>. L&#228;sframsteg, bokm&#228;rken, markeringar och hyllor synkas separat och automatiskt, oavsett filstatus.</div>
+  <div class="tip"><strong>Obs:</strong> Det h&#228;r kortet sp&#229;rar bara bok<em>filer</em>. L&#228;sframsteg, bokm&#228;rken, markeringar och mappar synkas separat och automatiskt, oavsett filstatus.</div>
 </div>
 
 <div class="card">

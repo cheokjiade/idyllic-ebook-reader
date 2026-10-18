@@ -25,6 +25,15 @@
   text-decoration: none;
   white-space: nowrap;
 }
+.guide-nav-store {
+  color: var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.guide-nav-store:hover,
+.guide-nav-store:focus-visible {
+  text-decoration: underline;
+}
 .guide-nav-arrow {
   display: inline-block;
 }
@@ -60,6 +69,7 @@
 <!-- USER-GUIDE-NAV:START -->
 <nav class="guide-nav" aria-label="User Guide language switcher">
   <a class="guide-nav-home" href="../index.html"><span class="guide-nav-arrow" aria-hidden="true">&larr;</span> Idyllic</a>
+  <a class="guide-nav-store" href="https://apps.apple.com/app/idyllic-reader/id6769253311">App Store</a>
   <span class="guide-nav-langs">
     <span class="guide-nav-globe" aria-hidden="true">&#x1F310;</span>
       <a href="index.html">English</a>
@@ -101,7 +111,7 @@
   <a href="#importing">Kirjojen tuonti</a>
   <a href="#wifi">WiFi-siirto</a>
   <a href="#library">Kirjasto ja järjestely</a>
-  <a href="#shelves">Hyllyt ja kansiot</a>
+  <a href="#shelves">Kansiot</a>
   <a href="#reading-books">Kirjojen lukeminen</a>
   <a href="#fixed-layout">Kiinteän asettelun kirjat</a>
   <a href="#in-book-search">Haku kirjasta</a>
@@ -205,29 +215,29 @@
     <li><strong>Uusin versio</strong> on merkitty vihreällä KEEP-merkillä</li>
     <li>Valitse vanhemmat kopiot valintaruuduilla (tai <strong>Valitse kaikki</strong>)</li>
     <li><strong>Poista</strong> &mdash; poistaa valitut vanhemmat kopiot</li>
-    <li><strong>Kopioi tiedot ja poista</strong> &mdash; siirtää kirjanmerkit, korostukset, tunnisteet, lukutilanteen ja hyllysijoittelun uusimpaan versioon ennen poistamista</li>
-    <li>Ota käyttöön <strong>"Siirrä uusi kirja vanhan kirjan hyllyyn ja piilotustilaan"</strong>, jotta uusi versio pysyy samassa paikassa kirjastossa</li>
+    <li><strong>Kopioi tiedot ja poista</strong> &mdash; siirtää kirjanmerkit, korostukset, tunnisteet, lukutilanteen ja kansiosijoittelun uusimpaan versioon ennen poistamista</li>
+    <li>Ota käyttöön <strong>"Siirrä uusi kirja vanhan kirjan kansioon ja piilotustilaan"</strong>, jotta uusi versio pysyy samassa paikassa kirjastossa</li>
   </ul>
 </div>
 
 <a href="#top" class="back-to-top">&uarr; Takaisin ylös</a>
 
 <!-- SHELVES -->
-<h2 id="shelves">Hyllyt ja kansiot</h2>
+<h2 id="shelves">Kansiot</h2>
 <p class="section-desc">Järjestele kirjat sisäkkäisiin kansioihin.</p>
 
 <div class="card">
-  <h3><span class="icon icon-indigo">&#x1F4C2;</span> Hyllyjen luominen</h3>
+  <h3><span class="icon icon-indigo">&#x1F4C2;</span> Kansioiden luominen</h3>
   <ol class="steps">
-    <li>Napauta <kbd>Uusi hylly</kbd> kirjaston yläosassa.</li>
-    <li>Syötä nimi ja valitse kuvake ja väri.</li>
-    <li>Valitse halutessasi ylähylly luodaksesi alikansion.</li>
+    <li>Napauta kirjaston yläosassa valikkoa (&hellip;) ja valitse <kbd>Uusi kansio</kbd>.</li>
+    <li>Syötä nimi ja valitse kuvake.</li>
+    <li>Jos haluat luoda alikansion, avaa ensin kansio ja luo uusi kansio sen sisään.</li>
   </ol>
 </div>
 
 <div class="card">
   <h3><span class="icon icon-blue">&#x21C4;</span> Kirjojen siirtäminen</h3>
-  <p>Napauta kirjan tietosivulla valikkoa (&hellip;) ja valitse <kbd>Siirrä hyllyyn</kbd>. Valintatilassa voit siirtää useita kirjoja kerralla.</p>
+  <p>Napauta kirjan tietosivulla valikkoa (&hellip;) ja valitse <kbd>Siirrä...</kbd>. Kirjastossa voit myös painaa kirjaa pitkään ja valita <kbd>Siirrä kansioon</kbd>. Valintatilassa voit siirtää useita kirjoja kerralla napauttamalla <kbd>Siirrä</kbd>.</p>
 </div>
 
 <a href="#top" class="back-to-top">&uarr; Takaisin ylös</a>
@@ -288,8 +298,8 @@
 
 <div class="card">
   <h3><span class="icon icon-gray">&#x2139;</span> Mitä on käytettävissä</h3>
-  <p>Sisällysluettelo, kirjanmerkit, edistymisen liukusäädin, lukuhistoria ja lukemisen jatkaminen siitä, mihin jäit, toimivat kaikki normaalisti.</p>
-  <p>Koska jokainen sivu on kiinteä asettelu eikä tekstiä, jonka sovellus voisi virrata uudelleen, muutama säädin puuttuu näiltä kirjoilta: jatkuva vieritys ja automaattinen vieritys, fontti- ja ulkoasuasetukset, tekstistä puheeksi -toiminto, haku kirjasta sekä tekstin valinta ja korostaminen.</p>
+  <p>Sisällysluettelo, kirjanmerkit, edistymisen liukusäädin, lukuhistoria, lukemisen jatkaminen siitä, mihin jäit, tekstistä puheeksi -toiminto, haku kirjasta ja korostaminen toimivat kaikki normaalisti.</p>
+  <p>Koska jokainen sivu on kiinteä asettelu eikä tekstiä, jonka sovellus voisi virrata uudelleen, muutama säädin puuttuu näiltä kirjoilta: jatkuva vieritys ja automaattinen vieritys sekä fontti- ja ulkoasuasetukset.</p>
 </div>
 
 <a href="#top" class="back-to-top">&uarr; Takaisin ylös</a>
@@ -534,13 +544,13 @@
 
 <div class="card">
   <h3><span class="icon icon-blue">&#x1F50A;</span> Tekstistä puheeksi -toiminnon käyttö</h3>
-  <p>Avaa mikä tahansa EPUB-, PDF- tai TXT-kirja ja napauta toistopainiketta työkalupalkissa. Järjestelmä lukee yhden lauseen kerrallaan ja korostaa nykyisen sanan.</p>
+  <p>Avaa mikä tahansa EPUB-, PDF-, TXT- tai RTF-kirja ja napauta kuulokepainiketta työkalupalkissa. Järjestelmä lukee yhden lauseen kerrallaan ja korostaa nykyisen sanan.</p>
   <ul>
-    <li><strong>Nopeus</strong> &mdash; 0,5&times;&ndash;2&times; ohjaimissa.</li>
+    <li><strong>Nopeus</strong> &mdash; 0,5&times;&ndash;3&times; ohjaimissa.</li>
     <li><strong>Ääni</strong> &mdash; Valitse yli 100 järjestelmä&auml;&auml;nestä kohdassa <kbd>Asetukset</kbd> &rarr; <kbd>Lukuasetukset</kbd> &rarr; <kbd>Tekstistä puheeksi</kbd>.</li>
     <li><strong>Ohitus</strong> &mdash; Napauta seuraava/edellinen siirtyäksesi lauseittain tai luvuittain.</li>
   </ul>
-  <div class="tip"><strong>Huomautus:</strong> <a href="#fixed-layout">Kiinteän asettelun kirjoissa</a> &mdash; sarjakuvissa ja kuvakirjoissa, joiden sivut ovat kiinteitä asetteluja &mdash; ei ole tekstiä, jonka sovellus voisi lukea ääneen, joten niille ei näytetä toistopainiketta.</div>
+  <div class="tip"><strong>Huomautus:</strong> Skannatuista sivukuvista koostuvassa PDF:ssä ei ole tekstiä, jonka sovellus voisi lukea ääneen; kun napautat kuulokepainiketta, sovellus kertoo siitä.</div>
 </div>
 
 <div class="card">
@@ -640,13 +650,13 @@
 
 <div class="card">
   <h3><span class="icon icon-red">&#x1F516;</span> Kirjanmerkit</h3>
-  <p>Napauta kirjanmerkkikuvaketta lukijan työkalupalkissa merkitäksesi nykyisen sivun. Lisää valinnainen muistiinpano. Näet kaikki kirjan kirjanmerkit sen tietosivulta.</p>
+  <p>Napauta kirjanmerkkikuvaketta lukijan työkalupalkissa merkitäksesi nykyisen sivun. Lisää muistiinpano painamalla pitkään kirjanmerkkiä kirjan kirjanmerkkiluettelossa ja valitsemalla <kbd>Muokkaa muistiinpanoa</kbd>. Näet kaikki kirjan kirjanmerkit sen tietosivun kohdasta <kbd>Kirjanmerkit</kbd> (EPUB-kirjassa <kbd>Kirjanmerkit ja korostukset</kbd>).</p>
   <div class="tip"><strong>Huomautus:</strong> Vain manuaalisesti luomasi kirjanmerkit näkyvät täällä. Sijainnit, jotka sovellus tallentaa automaattisesti kirjan sulkemisen yhteydessä, säilytetään erikseen kohdassa <a href="#history">Lukuhistoria</a>, jotta ne eivät syrjäytä omia kirjanmerkkejäsi.</div>
 </div>
 
 <div class="card">
   <h3><span class="icon icon-orange">&#x1F58D;</span> Korostukset<span class="badge badge-premium">Premium</span></h3>
-  <p>EPUB-tiedostoissa valitse teksti korostaaksesi sen. Valitse viidestä väristä (keltainen, vaaleanpunainen, vihreä, sininen, oranssi) ja lisää muistiinpanoja. Kaikki korostukset löytyvät kirjan tietosivulta.</p>
+  <p>EPUB-tiedostoissa valitse teksti korostaaksesi sen. Valitse viidestä väristä (keltainen, vaaleanpunainen, vihreä, sininen, oranssi) ja lisää muistiinpanoja. Kaikki korostukset muistiinpanoineen löytyvät kirjan tietosivun kohdasta <kbd>Kirjanmerkit ja korostukset</kbd>.</p>
 </div>
 
 <div class="card">
@@ -737,7 +747,7 @@
     <li>Ota käyttöön <kbd>Synkronoi kirjasto iCloudin kanssa</kbd>.</li>
     <li>Synkronointi astuu voimaan seuraavalla sovelluksen käynnistyksellä.</li>
   </ol>
-  <p>Metatiedot, lukuedistyminen, kirjanmerkit, korostukset ja hyllyt synkronoituvat kaikissa laitteissa, jotka on kirjautunut samaan iCloud-tiliin.</p>
+  <p>Metatiedot, lukuedistyminen, kirjanmerkit, korostukset ja kansiot synkronoituvat kaikissa laitteissa, jotka on kirjautunut samaan iCloud-tiliin.</p>
 </div>
 
 <div class="card">
@@ -748,7 +758,7 @@
     <li>Palkki, joka näyttää, kuinka suuri osa kirjastosi tiedostoista on iCloudissa.</li>
     <li>Erittely &mdash; <strong>Synkronoitu</strong> (kokonaiskoon kanssa), <strong>Vain iCloudissa</strong> (ei vielä ladattu tälle laitteelle) ja <strong>Käynnissä</strong>.</li>
   </ul>
-  <div class="tip"><strong>Huomautus:</strong> Tämä kortti seuraa vain kirjojen <em>tiedostoja</em>. Lukuedistyminen, kirjanmerkit, korostukset ja hyllyt synkronoituvat erikseen ja automaattisesti tiedoston tilasta riippumatta.</div>
+  <div class="tip"><strong>Huomautus:</strong> Tämä kortti seuraa vain kirjojen <em>tiedostoja</em>. Lukuedistyminen, kirjanmerkit, korostukset ja kansiot synkronoituvat erikseen ja automaattisesti tiedoston tilasta riippumatta.</div>
 </div>
 
 <div class="card">

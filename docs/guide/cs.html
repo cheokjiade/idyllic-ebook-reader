@@ -25,6 +25,15 @@
   text-decoration: none;
   white-space: nowrap;
 }
+.guide-nav-store {
+  color: var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.guide-nav-store:hover,
+.guide-nav-store:focus-visible {
+  text-decoration: underline;
+}
 .guide-nav-arrow {
   display: inline-block;
 }
@@ -60,6 +69,7 @@
 <!-- USER-GUIDE-NAV:START -->
 <nav class="guide-nav" aria-label="User Guide language switcher">
   <a class="guide-nav-home" href="../index.html"><span class="guide-nav-arrow" aria-hidden="true">&larr;</span> Idyllic</a>
+  <a class="guide-nav-store" href="https://apps.apple.com/app/idyllic-reader/id6769253311">App Store</a>
   <span class="guide-nav-langs">
     <span class="guide-nav-globe" aria-hidden="true">&#x1F310;</span>
       <a href="index.html">English</a>
@@ -101,7 +111,7 @@
   <a href="#importing">Import knih</a>
   <a href="#wifi">WiFi přenos</a>
   <a href="#library">Knihovna a organizace</a>
-  <a href="#shelves">Police a složky</a>
+  <a href="#shelves">Složky</a>
   <a href="#reading-books">Čtení knih</a>
   <a href="#fixed-layout">Knihy s pevným rozvržením</a>
   <a href="#in-book-search">Hledání v knize</a>
@@ -205,29 +215,29 @@
     <li><strong>Nejnovější verze</strong> je označena zeleným odznakem KEEP</li>
     <li>Vyberte starší kopie pomocí zaškrtávacích políček (nebo <strong>Vybrat vše</strong>)</li>
     <li><strong>Smazat</strong> &mdash; odstraní vybrané starší kopie</li>
-    <li><strong>Zkopírovat data a smazat</strong> &mdash; před smazáním přenese záložky, zvýraznění, štítky, postup ve čtení a přiřazení k poličce do nejnovější verze</li>
-    <li>Zapněte volbu <strong>„Přesunout novou knihu na poličku a stav skrytí staré knihy“</strong>, aby nová verze zůstala na stejném místě v knihovně</li>
+    <li><strong>Zkopírovat data a smazat</strong> &mdash; před smazáním přenese záložky, zvýraznění, štítky, postup ve čtení a přiřazení ke složce do nejnovější verze</li>
+    <li>Zapněte volbu <strong>„Přesunout novou knihu do složky a stavu skrytí staré knihy“</strong>, aby nová verze zůstala na stejném místě v knihovně</li>
   </ul>
 </div>
 
 <a href="#top" class="back-to-top">&uarr; Zpět nahoru</a>
 
 <!-- SHELVES -->
-<h2 id="shelves">Police a složky</h2>
+<h2 id="shelves">Složky</h2>
 <p class="section-desc">Organizujte knihy do vnořených složek.</p>
 
 <div class="card">
-  <h3><span class="icon icon-indigo">&#x1F4C2;</span> Vytváření polic</h3>
+  <h3><span class="icon icon-indigo">&#x1F4C2;</span> Vytváření složek</h3>
   <ol class="steps">
-    <li>Klepněte na <kbd>Nová police</kbd> v horní části knihovny.</li>
-    <li>Zadejte název a vyberte ikonu a barvu.</li>
-    <li>Volitelně zvolte nadřazenou polici pro vytvoření podsložky.</li>
+    <li>Klepněte na nabídku (&hellip;) v horní části knihovny a zvolte <kbd>Nová složka</kbd>.</li>
+    <li>Zadejte název a vyberte ikonu.</li>
+    <li>Chcete-li vytvořit podsložku, nejprve otevřete složku a novou vytvořte v ní.</li>
   </ol>
 </div>
 
 <div class="card">
   <h3><span class="icon icon-blue">&#x21C4;</span> Přesouvání knih</h3>
-  <p>Na stránce s podrobnostmi o knize klepněte na nabídku (&hellip;) a zvolte <kbd>Přesunout na polici</kbd>. V režimu výběru můžete přesouvat více knih najednou.</p>
+  <p>Na stránce s podrobnostmi o knize klepněte na nabídku (&hellip;) a zvolte <kbd>Přesunout do...</kbd>. V knihovně můžete také na knize podržet prst a zvolit <kbd>Přesunout do složky</kbd>. V režimu výběru klepněte na <kbd>Přesunout</kbd> a přesuňte více knih najednou.</p>
 </div>
 
 <a href="#top" class="back-to-top">&uarr; Zpět nahoru</a>
@@ -288,8 +298,8 @@
 
 <div class="card">
   <h3><span class="icon icon-gray">&#x2139;</span> Co je k dispozici</h3>
-  <p>Obsah, záložky, posuvník průběhu, historie čtení a pokračování tam, kde jste přestali, fungují jako obvykle.</p>
-  <p>Protože je každá stránka pevný návrh, a ne text, který by aplikace mohla přetékat, u těchto knih se nezobrazuje několik ovládacích prvků: Plynulé posouvání a automatické posouvání, nastavení písma a vzhledu, převod textu na řeč, hledání v knize a výběr nebo zvýrazňování textu.</p>
+  <p>Obsah, záložky, posuvník průběhu, historie čtení, pokračování tam, kde jste přestali, převod textu na řeč, hledání v knize a zvýrazňování fungují jako obvykle.</p>
+  <p>Protože je každá stránka pevný návrh, a ne text, který by aplikace mohla přetékat, u těchto knih se nezobrazuje několik ovládacích prvků: Plynulé posouvání a automatické posouvání a nastavení písma a vzhledu.</p>
 </div>
 
 <a href="#top" class="back-to-top">&uarr; Zpět nahoru</a>
@@ -534,13 +544,13 @@
 
 <div class="card">
   <h3><span class="icon icon-blue">&#x1F50A;</span> Použití převodu textu na řeč</h3>
-  <p>Otevřete libovolnou knihu EPUB, PDF nebo TXT a klepněte na tlačítko přehrávání v panelu nástrojů. Systém čte jednu větu najednou a zvýrazňuje aktuální slovo.</p>
+  <p>Otevřete libovolnou knihu EPUB, PDF, TXT nebo RTF a klepněte na tlačítko se sluchátky v panelu nástrojů. Systém čte jednu větu najednou a zvýrazňuje aktuální slovo.</p>
   <ul>
-    <li><strong>Rychlost</strong> &mdash; 0,5&times; až 2&times; v ovládacích prvcích.</li>
+    <li><strong>Rychlost</strong> &mdash; 0,5&times; až 3&times; v ovládacích prvcích.</li>
     <li><strong>Hlas</strong> &mdash; Vybírejte z více než 100 systémových hlasů v <kbd>Nastavení</kbd> &rarr; <kbd>Předvolby čtení</kbd> &rarr; <kbd>Převod textu na řeč</kbd>.</li>
     <li><strong>Přeskočení</strong> &mdash; Klepněte na další/předchozí pro přesun po větách nebo kapitolách.</li>
   </ul>
-  <div class="tip"><strong>Poznámka:</strong> <a href="#fixed-layout">Knihy s pevným rozvržením</a> &mdash; komiksy a obrázkové knihy, jejichž stránky mají pevně dané rozvržení &mdash; neobsahují text, který by aplikace mohla přečíst nahlas, proto se pro ně tlačítko přehrávání nezobrazuje.</div>
+  <div class="tip"><strong>Poznámka:</strong> PDF složené z naskenovaných obrázků stránek neobsahuje text, který by aplikace mohla přečíst nahlas; po klepnutí na tlačítko se sluchátky vás na to aplikace upozorní.</div>
 </div>
 
 <div class="card">
@@ -640,13 +650,13 @@
 
 <div class="card">
   <h3><span class="icon icon-red">&#x1F516;</span> Záložky</h3>
-  <p>Klepněte na ikonu záložky v panelu nástrojů čtečky pro uložení aktuální stránky. Přidejte volitelnou poznámku. Všechny záložky knihy zobrazíte na její stránce s podrobnostmi.</p>
+  <p>Klepněte na ikonu záložky v panelu nástrojů čtečky pro uložení aktuální stránky. Chcete-li přidat poznámku, podržte prst na záložce v seznamu záložek knihy a zvolte <kbd>Upravit poznámku</kbd>. Všechny záložky knihy zobrazíte přes <kbd>Záložky</kbd> na její stránce s podrobnostmi (u knihy EPUB <kbd>Záložky a zvýraznění</kbd>).</p>
   <div class="tip"><strong>Poznámka:</strong> Zde se zobrazují pouze záložky, které jste vytvořili ručně. Pozice, které aplikace ukládá automaticky při zavření knihy, jsou uchovávány samostatně v sekci <a href="#history">Historie čtení</a>, aby nezatlačovaly vaše vlastní záložky.</div>
 </div>
 
 <div class="card">
   <h3><span class="icon icon-orange">&#x1F58D;</span> Zvýraznění<span class="badge badge-premium">Premium</span></h3>
-  <p>V souborech EPUB vyberte text pro zvýraznění. Vybírejte z pěti barev (žlutá, růžová, zelená, modrá, oranžová) a přidávejte poznámky. Všechna zvýraznění jsou uvedena na stránce s podrobnostmi o knize.</p>
+  <p>V souborech EPUB vyberte text pro zvýraznění. Vybírejte z pěti barev (žlutá, růžová, zelená, modrá, oranžová) a přidávejte poznámky. Všechna zvýraznění i jejich poznámky jsou uvedena v části <kbd>Záložky a zvýraznění</kbd> na stránce s podrobnostmi o knize.</p>
 </div>
 
 <div class="card">
@@ -737,7 +747,7 @@
     <li>Zapněte <kbd>Synchronizovat knihovnu s iCloud</kbd>.</li>
     <li>Synchronizace se projeví při dalším spuštění aplikace.</li>
   </ol>
-  <p>Metadata, průběh čtení, záložky, zvýraznění a police se synchronizují napříč všemi zařízeními přihlášenými ke stejnému účtu iCloud.</p>
+  <p>Metadata, průběh čtení, záložky, zvýraznění a složky se synchronizují napříč všemi zařízeními přihlášenými ke stejnému účtu iCloud.</p>
 </div>
 
 <div class="card">
@@ -748,7 +758,7 @@
     <li>Lišta ukazující, kolik souborů vaší knihovny je v iCloud.</li>
     <li>Rozpis &mdash; <strong>Synchronizováno</strong> (s celkovou velikostí), <strong>Pouze v iCloud</strong> (ještě nestaženo na toto zařízení) a <strong>Probíhá</strong>.</li>
   </ul>
-  <div class="tip"><strong>Poznámka:</strong> Tato karta sleduje pouze <em>soubory</em> knih. Průběh čtení, záložky, zvýraznění a police se synchronizují samostatně a automaticky, bez ohledu na stav souboru.</div>
+  <div class="tip"><strong>Poznámka:</strong> Tato karta sleduje pouze <em>soubory</em> knih. Průběh čtení, záložky, zvýraznění a složky se synchronizují samostatně a automaticky, bez ohledu na stav souboru.</div>
 </div>
 
 <div class="card">

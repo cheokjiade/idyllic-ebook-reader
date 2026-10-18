@@ -25,6 +25,15 @@
   text-decoration: none;
   white-space: nowrap;
 }
+.guide-nav-store {
+  color: var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.guide-nav-store:hover,
+.guide-nav-store:focus-visible {
+  text-decoration: underline;
+}
 .guide-nav-arrow {
   display: inline-block;
 }
@@ -60,6 +69,7 @@
 <!-- USER-GUIDE-NAV:START -->
 <nav class="guide-nav" aria-label="User Guide language switcher">
   <a class="guide-nav-home" href="../index.html"><span class="guide-nav-arrow" aria-hidden="true">&larr;</span> Idyllic</a>
+  <a class="guide-nav-store" href="https://apps.apple.com/app/idyllic-reader/id6769253311">App Store</a>
   <span class="guide-nav-langs">
     <span class="guide-nav-globe" aria-hidden="true">&#x1F310;</span>
       <a href="index.html">English</a>
@@ -101,7 +111,7 @@
   <a href="#importing">Importar livros</a>
   <a href="#wifi">Transfer&ecirc;ncia WiFi</a>
   <a href="#library">Biblioteca e organiza&ccedil;&atilde;o</a>
-  <a href="#shelves">Prateleiras e pastas</a>
+  <a href="#shelves">Pastas</a>
   <a href="#reading-books">Ler livros</a>
   <a href="#fixed-layout">Livros de layout fixo</a>
   <a href="#in-book-search">Busca no livro</a>
@@ -205,29 +215,29 @@
     <li>A <strong>vers&atilde;o mais recente</strong> &eacute; marcada com um selo verde KEEP</li>
     <li>Selecione c&oacute;pias antigas usando as caixas de sele&ccedil;&atilde;o (ou <strong>Selecionar tudo</strong>)</li>
     <li><strong>Excluir</strong> &mdash; remove as c&oacute;pias antigas selecionadas</li>
-    <li><strong>Copiar dados e excluir</strong> &mdash; transfere marcadores, destaques, etiquetas, progresso de leitura e atribui&ccedil;&atilde;o de estante para a vers&atilde;o mais recente antes de excluir</li>
-    <li>Ative <strong>"Mover novo livro para a estante e estado oculto do livro antigo"</strong> para manter a nova vers&atilde;o no mesmo local da biblioteca</li>
+    <li><strong>Copiar dados e excluir</strong> &mdash; transfere marcadores, destaques, etiquetas, progresso de leitura e atribui&ccedil;&atilde;o de pasta para a vers&atilde;o mais recente antes de excluir</li>
+    <li>Ative <strong>"Mover novo livro para a pasta e status oculto do livro antigo"</strong> para manter a nova vers&atilde;o no mesmo local da biblioteca</li>
   </ul>
 </div>
 
 <a href="#top" class="back-to-top">&uarr; Voltar ao topo</a>
 
 <!-- SHELVES -->
-<h2 id="shelves">Prateleiras e pastas</h2>
+<h2 id="shelves">Pastas</h2>
 <p class="section-desc">Organize livros em pastas aninhadas.</p>
 
 <div class="card">
-  <h3><span class="icon icon-indigo">&#x1F4C2;</span> Criar prateleiras</h3>
+  <h3><span class="icon icon-indigo">&#x1F4C2;</span> Criar pastas</h3>
   <ol class="steps">
-    <li>Toque em <kbd>Nova prateleira</kbd> no topo da sua biblioteca.</li>
-    <li>Digite um nome e escolha um &iacute;cone e uma cor.</li>
-    <li>Opcionalmente, escolha uma prateleira pai para criar uma subpasta.</li>
+    <li>Toque no menu (&hellip;) no topo da sua biblioteca e escolha <kbd>Nova Pasta</kbd>.</li>
+    <li>Digite um nome e escolha um &iacute;cone.</li>
+    <li>Para criar uma subpasta, abra primeiro uma pasta e crie a nova dentro dela.</li>
   </ol>
 </div>
 
 <div class="card">
   <h3><span class="icon icon-blue">&#x21C4;</span> Mover livros</h3>
-  <p>Na p&aacute;gina de detalhes de um livro, toque no menu (&hellip;) e escolha <kbd>Mover para prateleira</kbd>. No modo de sele&ccedil;&atilde;o, voc&ecirc; pode mover muitos livros de uma vez.</p>
+  <p>Na p&aacute;gina de detalhes de um livro, toque no menu (&hellip;) e escolha <kbd>Mover Para...</kbd>. Na sua biblioteca, voc&ecirc; tamb&eacute;m pode tocar e segurar um livro e escolher <kbd>Mover para Pasta</kbd>. No modo de sele&ccedil;&atilde;o, toque em <kbd>Mover</kbd> para mover muitos livros de uma vez.</p>
 </div>
 
 <a href="#top" class="back-to-top">&uarr; Voltar ao topo</a>
@@ -288,8 +298,8 @@
 
 <div class="card">
   <h3><span class="icon icon-gray">&#x2139;</span> O que está disponível</h3>
-  <p>O sumário, os marcadores, o controle deslizante de progresso, o histórico de leitura e a retomada de onde você parou funcionam normalmente.</p>
-  <p>Como cada página é um design fixo em vez de texto que o app pode refluir, alguns controles não aparecem nesses livros: Rolagem contínua e rolagem automática, as configurações de fonte e aparência, texto para fala, busca no livro, e seleção ou destaque de texto.</p>
+  <p>O sumário, os marcadores, o controle deslizante de progresso, o histórico de leitura, a retomada de onde você parou, o texto para fala, a busca no livro e o destaque funcionam normalmente.</p>
+  <p>Como cada página é um design fixo em vez de texto que o app pode refluir, alguns controles não aparecem nesses livros: Rolagem contínua e rolagem automática, e as configurações de fonte e aparência.</p>
 </div>
 
 <a href="#top" class="back-to-top">&uarr; Voltar ao topo</a>
@@ -534,13 +544,13 @@
 
 <div class="card">
   <h3><span class="icon icon-blue">&#x1F50A;</span> Usando texto para fala</h3>
-  <p>Abra qualquer livro EPUB, PDF ou TXT e toque no bot&atilde;o de reprodu&ccedil;&atilde;o na barra de ferramentas. O TTS l&ecirc; uma frase de cada vez e destaca a palavra atual.</p>
+  <p>Abra qualquer livro EPUB, PDF, TXT ou RTF e toque no bot&atilde;o de fones de ouvido na barra de ferramentas. O TTS l&ecirc; uma frase de cada vez e destaca a palavra atual.</p>
   <ul>
-    <li><strong>Velocidade</strong> &mdash; 0,5&times; a 2&times; nos controles de TTS.</li>
+    <li><strong>Velocidade</strong> &mdash; 0,5&times; a 3&times; nos controles de TTS.</li>
     <li><strong>Voz</strong> &mdash; Escolha entre mais de 100 vozes do sistema em <kbd>Ajustes</kbd> &rarr; <kbd>Prefer&ecirc;ncias de leitura</kbd> &rarr; <kbd>Texto para fala</kbd>.</li>
     <li><strong>Pular</strong> &mdash; Toque em pr&oacute;ximo/anterior para pular por frase ou por cap&iacute;tulo.</li>
   </ul>
-  <div class="tip"><strong>Observação:</strong> <a href="#fixed-layout">Livros de layout fixo</a> &mdash; quadrinhos e livros ilustrados cujas páginas são designs fixos &mdash; não têm texto para o app ler em voz alta, então o botão de reprodução não aparece para eles.</div>
+  <div class="tip"><strong>Observação:</strong> Um PDF feito de imagens de páginas digitalizadas não tem texto para o app ler em voz alta; ao tocar no botão de fones de ouvido, o app avisa você.</div>
 </div>
 
 <div class="card">
@@ -640,13 +650,13 @@
 
 <div class="card">
   <h3><span class="icon icon-red">&#x1F516;</span> Marcadores</h3>
-  <p>Toque no &iacute;cone de marcador na barra de ferramentas do leitor para marcar a p&aacute;gina atual. Adicione uma nota opcional. Veja todos os marcadores de um livro na p&aacute;gina de detalhes.</p>
+  <p>Toque no &iacute;cone de marcador na barra de ferramentas do leitor para marcar a p&aacute;gina atual. Para adicionar uma nota, toque e segure um marcador na lista de marcadores do livro e escolha <kbd>Editar nota</kbd>. Veja todos os marcadores de um livro em <kbd>Marcadores</kbd> na p&aacute;gina de detalhes (<kbd>Marcadores e destaques</kbd> em um EPUB).</p>
   <div class="tip"><strong>Observa&ccedil;&atilde;o:</strong> Apenas os marcadores criados manualmente aparecem aqui. As posi&ccedil;&otilde;es que o app salva automaticamente ao fechar um livro ficam separadas no <a href="#history">Hist&oacute;rico de leitura</a> para n&atilde;o se misturarem com os seus pr&oacute;prios marcadores.</div>
 </div>
 
 <div class="card">
   <h3><span class="icon icon-orange">&#x1F58D;</span> Destaques<span class="badge badge-premium">Premium</span></h3>
-  <p>Em EPUBs, selecione texto para destac&aacute;-lo. Escolha entre cinco cores (amarelo, rosa, verde, azul, laranja) e adicione notas. Todos os destaques est&atilde;o listados na p&aacute;gina de detalhes do livro.</p>
+  <p>Em EPUBs, selecione texto para destac&aacute;-lo. Escolha entre cinco cores (amarelo, rosa, verde, azul, laranja) e adicione notas. Todos os destaques e suas notas est&atilde;o listados em <kbd>Marcadores e destaques</kbd> na p&aacute;gina de detalhes do livro.</p>
 </div>
 
 <div class="card">
@@ -737,7 +747,7 @@
     <li>Ative <kbd>Sincronizar biblioteca com iCloud</kbd>.</li>
     <li>A sincroniza&ccedil;&atilde;o entra em vigor na pr&oacute;xima abertura do app.</li>
   </ol>
-  <p>Seus metadados, progresso de leitura, marcadores, destaques e prateleiras s&atilde;o sincronizados em todos os dispositivos conectados &agrave; mesma conta iCloud.</p>
+  <p>Seus metadados, progresso de leitura, marcadores, destaques e pastas s&atilde;o sincronizados em todos os dispositivos conectados &agrave; mesma conta iCloud.</p>
 </div>
 
 <div class="card">
@@ -748,7 +758,7 @@
     <li>Uma barra mostrando quanto dos arquivos da sua biblioteca est&atilde;o no iCloud.</li>
     <li>Um detalhamento &mdash; <strong>Sincronizado</strong> (com tamanho total), <strong>Somente no iCloud</strong> (ainda n&atilde;o baixado para este dispositivo), e <strong>Em andamento</strong>.</li>
   </ul>
-  <div class="tip"><strong>Observa&ccedil;&atilde;o:</strong> Este cart&atilde;o rastreia apenas os <em>arquivos</em> dos livros. Progresso de leitura, marcadores, destaques e prateleiras sincronizam separadamente e automaticamente, independentemente do status do arquivo.</div>
+  <div class="tip"><strong>Observa&ccedil;&atilde;o:</strong> Este cart&atilde;o rastreia apenas os <em>arquivos</em> dos livros. Progresso de leitura, marcadores, destaques e pastas sincronizam separadamente e automaticamente, independentemente do status do arquivo.</div>
 </div>
 
 <div class="card">

@@ -25,6 +25,15 @@
   text-decoration: none;
   white-space: nowrap;
 }
+.guide-nav-store {
+  color: var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.guide-nav-store:hover,
+.guide-nav-store:focus-visible {
+  text-decoration: underline;
+}
 .guide-nav-arrow {
   display: inline-block;
 }
@@ -60,6 +69,7 @@
 <!-- USER-GUIDE-NAV:START -->
 <nav class="guide-nav" aria-label="User Guide language switcher">
   <a class="guide-nav-home" href="../index.html"><span class="guide-nav-arrow" aria-hidden="true">&larr;</span> Idyllic</a>
+  <a class="guide-nav-store" href="https://apps.apple.com/app/idyllic-reader/id6769253311">App Store</a>
   <span class="guide-nav-langs">
     <span class="guide-nav-globe" aria-hidden="true">&#x1F310;</span>
       <a href="index.html">English</a>
@@ -101,7 +111,7 @@
   <a href="#importing">Importazione libri</a>
   <a href="#wifi">Trasferimento WiFi</a>
   <a href="#library">Libreria e organizzazione</a>
-  <a href="#shelves">Scaffali e cartelle</a>
+  <a href="#shelves">Cartelle</a>
   <a href="#reading-books">Lettura libri</a>
   <a href="#fixed-layout">Libri a impaginazione fissa</a>
   <a href="#in-book-search">Ricerca nel libro</a>
@@ -205,29 +215,29 @@
     <li>La <strong>versione pi&ugrave; recente</strong> &egrave; contrassegnata da un badge verde KEEP</li>
     <li>Seleziona le copie pi&ugrave; vecchie con le caselle (o <strong>Seleziona tutto</strong>)</li>
     <li><strong>Elimina</strong> &mdash; rimuove le copie pi&ugrave; vecchie selezionate</li>
-    <li><strong>Copia dati ed elimina</strong> &mdash; trasferisce segnalibri, evidenziazioni, tag, avanzamento di lettura e scaffale alla versione pi&ugrave; recente prima dell&rsquo;eliminazione</li>
-    <li>Attiva <strong>"Sposta il nuovo libro nello scaffale e nello stato nascosto del vecchio libro"</strong> per mantenere la nuova versione nella stessa posizione in libreria</li>
+    <li><strong>Copia dati ed elimina</strong> &mdash; trasferisce segnalibri, evidenziazioni, tag, avanzamento di lettura e cartella alla versione pi&ugrave; recente prima dell&rsquo;eliminazione</li>
+    <li>Attiva <strong>"Sposta il nuovo libro nella cartella e nello stato nascosto del libro precedente"</strong> per mantenere la nuova versione nella stessa posizione in libreria</li>
   </ul>
 </div>
 
 <a href="#top" class="back-to-top">&uarr; Torna in cima</a>
 
 <!-- SHELVES -->
-<h2 id="shelves">Scaffali e cartelle</h2>
+<h2 id="shelves">Cartelle</h2>
 <p class="section-desc">Organizza i libri in cartelle annidate.</p>
 
 <div class="card">
-  <h3><span class="icon icon-indigo">&#x1F4C2;</span> Creare scaffali</h3>
+  <h3><span class="icon icon-indigo">&#x1F4C2;</span> Creare cartelle</h3>
   <ol class="steps">
-    <li>Tocca <kbd>Nuovo scaffale</kbd> nella parte superiore della libreria.</li>
-    <li>Inserisci un nome, quindi scegli un&rsquo;icona e un colore.</li>
-    <li>Facoltativamente, scegli uno scaffale principale per creare una sottocartella.</li>
+    <li>Tocca il menu (&hellip;) nella parte superiore della libreria e scegli <kbd>Nuova cartella</kbd>.</li>
+    <li>Inserisci un nome, quindi scegli un&rsquo;icona.</li>
+    <li>Per creare una sottocartella, apri prima una cartella e crea quella nuova al suo interno.</li>
   </ol>
 </div>
 
 <div class="card">
   <h3><span class="icon icon-blue">&#x21C4;</span> Spostare i libri</h3>
-  <p>Dalla pagina dei dettagli di un libro, tocca il menu (&hellip;) e scegli <kbd>Sposta nello scaffale</kbd>. Nella modalit&agrave; selezione puoi spostare molti libri contemporaneamente.</p>
+  <p>Dalla pagina dei dettagli di un libro, tocca il menu (&hellip;) e scegli <kbd>Sposta in...</kbd>. Nella libreria puoi anche tenere premuto su un libro e scegliere <kbd>Sposta nella cartella</kbd>. Nella modalit&agrave; selezione, tocca <kbd>Sposta</kbd> per spostare molti libri contemporaneamente.</p>
 </div>
 
 <a href="#top" class="back-to-top">&uarr; Torna in cima</a>
@@ -288,8 +298,8 @@
 
 <div class="card">
   <h3><span class="icon icon-gray">&#x2139;</span> Cosa &egrave; disponibile</h3>
-  <p>L&rsquo;indice, i segnalibri, il cursore di avanzamento, la cronologia di lettura e la ripresa da dove hai interrotto funzionano tutti normalmente.</p>
-  <p>Poich&eacute; ogni pagina &egrave; un progetto fisso anzich&eacute; testo che l&rsquo;app pu&ograve; ridisporre, alcuni controlli non compaiono per questi libri: scorrimento continuo e scorrimento automatico, le impostazioni di carattere e aspetto, la sintesi vocale, la ricerca nel libro, e la selezione o evidenziazione del testo.</p>
+  <p>L&rsquo;indice, i segnalibri, il cursore di avanzamento, la cronologia di lettura, la ripresa da dove hai interrotto, la sintesi vocale, la ricerca nel libro e l&rsquo;evidenziazione funzionano tutti normalmente.</p>
+  <p>Poich&eacute; ogni pagina &egrave; un progetto fisso anzich&eacute; testo che l&rsquo;app pu&ograve; ridisporre, alcuni controlli non compaiono per questi libri: scorrimento continuo e scorrimento automatico, e le impostazioni di carattere e aspetto.</p>
 </div>
 
 <a href="#top" class="back-to-top">&uarr; Torna in cima</a>
@@ -534,13 +544,13 @@
 
 <div class="card">
   <h3><span class="icon icon-blue">&#x1F50A;</span> Usare la sintesi vocale</h3>
-  <p>Apri qualsiasi libro EPUB, PDF o TXT e tocca il pulsante di riproduzione nella barra degli strumenti. La sintesi vocale legge una frase alla volta ed evidenzia la parola corrente.</p>
+  <p>Apri qualsiasi libro EPUB, PDF, TXT o RTF e tocca il pulsante con le cuffie nella barra degli strumenti. La sintesi vocale legge una frase alla volta ed evidenzia la parola corrente.</p>
   <ul>
-    <li><strong>Velocit&agrave;</strong> &mdash; Da 0,5&times; a 2&times; nei controlli TTS.</li>
+    <li><strong>Velocit&agrave;</strong> &mdash; Da 0,5&times; a 3&times; nei controlli TTS.</li>
     <li><strong>Voce</strong> &mdash; Scegli tra oltre 100 voci di sistema in <kbd>Impostazioni</kbd> &rarr; <kbd>Preferenze di lettura</kbd> &rarr; <kbd>Sintesi vocale</kbd>.</li>
     <li><strong>Salta</strong> &mdash; Tocca avanti/indietro per saltare per frase o per capitolo.</li>
   </ul>
-  <div class="tip"><strong>Nota:</strong> I <a href="#fixed-layout">libri a impaginazione fissa</a> &mdash; fumetti e libri illustrati le cui pagine sono progetti fissi &mdash; non hanno testo che l&rsquo;app possa leggere ad alta voce, quindi per loro il pulsante di riproduzione non viene mostrato.</div>
+  <div class="tip"><strong>Nota:</strong> Un PDF composto da immagini di pagine scansionate non ha testo che l&rsquo;app possa leggere ad alta voce; se tocchi il pulsante con le cuffie, l&rsquo;app te lo segnala.</div>
 </div>
 
 <div class="card">
@@ -640,13 +650,13 @@
 
 <div class="card">
   <h3><span class="icon icon-red">&#x1F516;</span> Segnalibri</h3>
-  <p>Tocca l&rsquo;icona del segnalibro nella barra degli strumenti del lettore per aggiungere un segnalibro alla pagina corrente. Aggiungi una nota facoltativa. Visualizza tutti i segnalibri di un libro dalla sua pagina dei dettagli.</p>
+  <p>Tocca l&rsquo;icona del segnalibro nella barra degli strumenti del lettore per aggiungere un segnalibro alla pagina corrente. Per aggiungere una nota, tieni premuto un segnalibro nell&rsquo;elenco dei segnalibri del libro e scegli <kbd>Modifica nota</kbd>. Visualizza tutti i segnalibri di un libro da <kbd>Segnalibri</kbd> nella sua pagina dei dettagli (<kbd>Segnalibri ed evidenziazioni</kbd> per un EPUB).</p>
   <div class="tip"><strong>Nota:</strong> Qui compaiono solo i segnalibri che crei manualmente. Le posizioni che l&rsquo;app salva automaticamente quando chiudi un libro vengono conservate separatamente nella <a href="#history">Cronologia di lettura</a> per non confondersi con i segnalibri che imposti di proposito.</div>
 </div>
 
 <div class="card">
   <h3><span class="icon icon-orange">&#x1F58D;</span> Evidenziazioni<span class="badge badge-premium">Premium</span></h3>
-  <p>Negli EPUB, seleziona il testo per evidenziarlo. Scegli tra cinque colori (giallo, rosa, verde, blu, arancione) e aggiungi note. Tutte le evidenziazioni sono elencate nella pagina dei dettagli del libro.</p>
+  <p>Negli EPUB, seleziona il testo per evidenziarlo. Scegli tra cinque colori (giallo, rosa, verde, blu, arancione) e aggiungi note. Tutte le evidenziazioni e le relative note sono elencate in <kbd>Segnalibri ed evidenziazioni</kbd> nella pagina dei dettagli del libro.</p>
 </div>
 
 <div class="card">
@@ -737,7 +747,7 @@
     <li>Attiva <kbd>Sincronizza libreria con iCloud</kbd>.</li>
     <li>La sincronizzazione ha effetto al prossimo avvio dell&rsquo;app.</li>
   </ol>
-  <p>I tuoi metadati, il progresso di lettura, i segnalibri, le evidenziazioni e gli scaffali si sincronizzano su tutti i dispositivi connessi allo stesso account iCloud.</p>
+  <p>I tuoi metadati, il progresso di lettura, i segnalibri, le evidenziazioni e le cartelle si sincronizzano su tutti i dispositivi connessi allo stesso account iCloud.</p>
 </div>
 
 <div class="card">
@@ -748,7 +758,7 @@
     <li>Una barra che mostra quanti file della tua libreria sono in iCloud.</li>
     <li>Un riepilogo &mdash; <strong>Sincronizzato</strong> (con la dimensione totale), <strong>Solo su iCloud</strong> (non ancora scaricato su questo dispositivo), e <strong>In corso</strong>.</li>
   </ul>
-  <div class="tip"><strong>Nota:</strong> Questa scheda monitora solo i <em>file</em> dei libri. Il progresso di lettura, i segnalibri, le evidenziazioni e gli scaffali si sincronizzano separatamente e automaticamente, indipendentemente dallo stato del file.</div>
+  <div class="tip"><strong>Nota:</strong> Questa scheda monitora solo i <em>file</em> dei libri. Il progresso di lettura, i segnalibri, le evidenziazioni e le cartelle si sincronizzano separatamente e automaticamente, indipendentemente dallo stato del file.</div>
 </div>
 
 <div class="card">

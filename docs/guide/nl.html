@@ -25,6 +25,15 @@
   text-decoration: none;
   white-space: nowrap;
 }
+.guide-nav-store {
+  color: var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.guide-nav-store:hover,
+.guide-nav-store:focus-visible {
+  text-decoration: underline;
+}
 .guide-nav-arrow {
   display: inline-block;
 }
@@ -60,6 +69,7 @@
 <!-- USER-GUIDE-NAV:START -->
 <nav class="guide-nav" aria-label="User Guide language switcher">
   <a class="guide-nav-home" href="../index.html"><span class="guide-nav-arrow" aria-hidden="true">&larr;</span> Idyllic</a>
+  <a class="guide-nav-store" href="https://apps.apple.com/app/idyllic-reader/id6769253311">App Store</a>
   <span class="guide-nav-langs">
     <span class="guide-nav-globe" aria-hidden="true">&#x1F310;</span>
       <a href="index.html">English</a>
@@ -101,7 +111,7 @@
   <a href="#importing">Boeken importeren</a>
   <a href="#wifi">WiFi-overdracht</a>
   <a href="#library">Bibliotheek &amp; organisatie</a>
-  <a href="#shelves">Planken &amp; mappen</a>
+  <a href="#shelves">Mappen</a>
   <a href="#reading-books">Boeken lezen</a>
   <a href="#fixed-layout">Boeken met vaste lay-out</a>
   <a href="#in-book-search">Zoeken in het boek</a>
@@ -205,29 +215,29 @@
     <li>De <strong>nieuwste versie</strong> is gemarkeerd met een groene KEEP-badge</li>
     <li>Selecteer oudere exemplaren met de selectievakjes (of <strong>Alles selecteren</strong>)</li>
     <li><strong>Verwijderen</strong> &mdash; verwijdert de geselecteerde oudere exemplaren</li>
-    <li><strong>Gegevens kopiëren &amp; verwijderen</strong> &mdash; verplaatst bladwijzers, markeringen, tags, leesvoortgang en planktoewijzing naar de nieuwste versie voordat ze worden verwijderd</li>
-    <li>Schakel <strong>"Nieuw boek naar de plank &amp; verborgen status van het oude boek verplaatsen"</strong> in om de nieuwe versie op dezelfde locatie in de bibliotheek te houden</li>
+    <li><strong>Gegevens kopiëren &amp; verwijderen</strong> &mdash; verplaatst bladwijzers, markeringen, tags, leesvoortgang en maptoewijzing naar de nieuwste versie voordat ze worden verwijderd</li>
+    <li>Schakel <strong>"Verplaats nieuw boek naar map en verborgen status van oud boek"</strong> in om de nieuwe versie op dezelfde locatie in de bibliotheek te houden</li>
   </ul>
 </div>
 
 <a href="#top" class="back-to-top">&uarr; Terug naar boven</a>
 
 <!-- SHELVES -->
-<h2 id="shelves">Planken &amp; mappen</h2>
+<h2 id="shelves">Mappen</h2>
 <p class="section-desc">Organiseer boeken in geneste mappen.</p>
 
 <div class="card">
-  <h3><span class="icon icon-indigo">&#x1F4C2;</span> Planken aanmaken</h3>
+  <h3><span class="icon icon-indigo">&#x1F4C2;</span> Mappen aanmaken</h3>
   <ol class="steps">
-    <li>Tik op <kbd>Nieuwe plank</kbd> bovenaan je bibliotheek.</li>
-    <li>Voer een naam in en kies een pictogram en kleur.</li>
-    <li>Kies optioneel een bovenliggende plank om een submap aan te maken.</li>
+    <li>Tik bovenaan je bibliotheek op het menu (&hellip;) en kies <kbd>Nieuwe map</kbd>.</li>
+    <li>Voer een naam in en kies een pictogram.</li>
+    <li>Om een submap te maken, open je eerst een map en maak je de nieuwe daarin aan.</li>
   </ol>
 </div>
 
 <div class="card">
   <h3><span class="icon icon-blue">&#x21C4;</span> Boeken verplaatsen</h3>
-  <p>Tik op de detailpagina van een boek op het menu (&hellip;) en kies <kbd>Verplaats naar plank</kbd>. In de selectiemodus kun je veel boeken tegelijk verplaatsen.</p>
+  <p>Tik op de detailpagina van een boek op het menu (&hellip;) en kies <kbd>Verplaatsen naar...</kbd>. In je bibliotheek kun je ook een boek lang ingedrukt houden en <kbd>Verplaatsen naar map</kbd> kiezen. Tik in de selectiemodus op <kbd>Verplaatsen</kbd> om veel boeken tegelijk te verplaatsen.</p>
 </div>
 
 <a href="#top" class="back-to-top">&uarr; Terug naar boven</a>
@@ -288,8 +298,8 @@
 
 <div class="card">
   <h3><span class="icon icon-gray">&#x2139;</span> Wat beschikbaar is</h3>
-  <p>De inhoudsopgave, bladwijzers, de voortgangsschuif, leesgeschiedenis en verdergaan waar je gebleven was werken allemaal zoals gebruikelijk.</p>
-  <p>Omdat elke pagina een vast ontwerp is in plaats van tekst die de app opnieuw kan laten meestromen, ontbreken enkele bedieningselementen voor deze boeken: doorlopend scrollen en automatisch scrollen, de lettertype- en weergave-instellingen, tekst-naar-spraak, zoeken in het boek, en tekstselectie of markeren.</p>
+  <p>De inhoudsopgave, bladwijzers, de voortgangsschuif, leesgeschiedenis, verdergaan waar je gebleven was, tekst-naar-spraak, zoeken in het boek en markeren werken allemaal zoals gebruikelijk.</p>
+  <p>Omdat elke pagina een vast ontwerp is in plaats van tekst die de app opnieuw kan laten meestromen, ontbreken enkele bedieningselementen voor deze boeken: doorlopend scrollen en automatisch scrollen, en de lettertype- en weergave-instellingen.</p>
 </div>
 
 <a href="#top" class="back-to-top">&uarr; Terug naar boven</a>
@@ -534,13 +544,13 @@
 
 <div class="card">
   <h3><span class="icon icon-blue">&#x1F50A;</span> Tekst-naar-spraak gebruiken</h3>
-  <p>Open een EPUB-, PDF- of TXT-boek en tik op de afspeelknop in de werkbalk. TTS leest &eacute;&eacute;n zin tegelijk voor en markeert het huidige woord.</p>
+  <p>Open een EPUB-, PDF-, TXT- of RTF-boek en tik op de koptelefoonknop in de werkbalk. TTS leest &eacute;&eacute;n zin tegelijk voor en markeert het huidige woord.</p>
   <ul>
-    <li><strong>Snelheid</strong> &mdash; 0,5&times; tot 2&times; in de TTS-bediening.</li>
+    <li><strong>Snelheid</strong> &mdash; 0,5&times; tot 3&times; in de TTS-bediening.</li>
     <li><strong>Stem</strong> &mdash; Kies uit meer dan 100 systeemsstemmen in <kbd>Instellingen</kbd> &rarr; <kbd>Leesvoorkeuren</kbd> &rarr; <kbd>Tekst-naar-spraak</kbd>.</li>
     <li><strong>Overslaan</strong> &mdash; Tik op volgende/vorige om per zin of per hoofdstuk te springen.</li>
   </ul>
-  <div class="tip"><strong>Let op:</strong> <a href="#fixed-layout">Boeken met vaste lay-out</a> &mdash; strips en prentenboeken waarvan de pagina's een vast ontwerp hebben &mdash; bevatten geen tekst die de app kan voorlezen, dus voor deze boeken wordt de afspeelknop niet getoond.</div>
+  <div class="tip"><strong>Let op:</strong> Een PDF die uit gescande pagina-afbeeldingen bestaat, bevat geen tekst die de app kan voorlezen; als je op de koptelefoonknop tikt, meldt de app dat.</div>
 </div>
 
 <div class="card">
@@ -640,13 +650,13 @@
 
 <div class="card">
   <h3><span class="icon icon-red">&#x1F516;</span> Bladwijzers</h3>
-  <p>Tik op het bladwijzerpictogram in de werkbalk van de lezer om de huidige pagina te markeren. Voeg een optionele notitie toe. Bekijk alle bladwijzers voor een boek vanaf de detailpagina.</p>
+  <p>Tik op het bladwijzerpictogram in de werkbalk van de lezer om de huidige pagina te markeren. Om een notitie toe te voegen, houd je een bladwijzer in de bladwijzerlijst van het boek ingedrukt en kies je <kbd>Notitie wijzigen</kbd>. Bekijk alle bladwijzers voor een boek via <kbd>Bladwijzers</kbd> op de detailpagina (<kbd>Bladwijzers en markeringen</kbd> bij een EPUB).</p>
   <div class="tip"><strong>Let op:</strong> Alleen bladwijzers die je handmatig aanmaakt verschijnen hier. Posities die de app automatisch opslaat wanneer je een boek sluit, worden apart bewaard in <a href="#history">Leesgeschiedenis</a> zodat ze je eigen bladwijzers niet verdringen.</div>
 </div>
 
 <div class="card">
   <h3><span class="icon icon-orange">&#x1F58D;</span> Markeringen<span class="badge badge-premium">Premium</span></h3>
-  <p>In EPUB's kun je tekst selecteren om te markeren. Kies uit vijf kleuren (geel, roze, groen, blauw, oranje) en voeg notities toe. Alle markeringen staan op de detailpagina van het boek.</p>
+  <p>In EPUB's kun je tekst selecteren om te markeren. Kies uit vijf kleuren (geel, roze, groen, blauw, oranje) en voeg notities toe. Alle markeringen en hun notities staan onder <kbd>Bladwijzers en markeringen</kbd> op de detailpagina van het boek.</p>
 </div>
 
 <div class="card">
@@ -737,7 +747,7 @@
     <li>Schakel <kbd>Bibliotheek synchroniseren met iCloud</kbd> in.</li>
     <li>Synchronisatie wordt actief bij de volgende keer dat de app wordt gestart.</li>
   </ol>
-  <p>Je metadata, leesvoortgang, bladwijzers, markeringen en planken worden gesynchroniseerd op alle apparaten die zijn ingelogd met hetzelfde iCloud-account.</p>
+  <p>Je metadata, leesvoortgang, bladwijzers, markeringen en mappen worden gesynchroniseerd op alle apparaten die zijn ingelogd met hetzelfde iCloud-account.</p>
 </div>
 
 <div class="card">
@@ -748,7 +758,7 @@
     <li>Een balk die laat zien hoeveel van de bestanden in je bibliotheek in iCloud staan.</li>
     <li>Een uitsplitsing &mdash; <strong>Gesynchroniseerd</strong> (met totale grootte), <strong>Alleen in iCloud</strong> (nog niet gedownload naar dit apparaat), en <strong>Bezig</strong>.</li>
   </ul>
-  <div class="tip"><strong>Let op:</strong> Deze kaart houdt alleen boek<em>bestanden</em> bij. Leesvoortgang, bladwijzers, markeringen en planken synchroniseren apart en automatisch, ongeacht de bestandsstatus.</div>
+  <div class="tip"><strong>Let op:</strong> Deze kaart houdt alleen boek<em>bestanden</em> bij. Leesvoortgang, bladwijzers, markeringen en mappen synchroniseren apart en automatisch, ongeacht de bestandsstatus.</div>
 </div>
 
 <div class="card">

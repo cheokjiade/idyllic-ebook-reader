@@ -25,6 +25,15 @@
   text-decoration: none;
   white-space: nowrap;
 }
+.guide-nav-store {
+  color: var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.guide-nav-store:hover,
+.guide-nav-store:focus-visible {
+  text-decoration: underline;
+}
 .guide-nav-arrow {
   display: inline-block;
 }
@@ -60,6 +69,7 @@
 <!-- USER-GUIDE-NAV:START -->
 <nav class="guide-nav" aria-label="User Guide language switcher">
   <a class="guide-nav-home" href="../index.html"><span class="guide-nav-arrow" aria-hidden="true">&larr;</span> Idyllic</a>
+  <a class="guide-nav-store" href="https://apps.apple.com/app/idyllic-reader/id6769253311">App Store</a>
   <span class="guide-nav-langs">
     <span class="guide-nav-globe" aria-hidden="true">&#x1F310;</span>
       <a href="index.html">English</a>
@@ -101,7 +111,7 @@
   <a href="#importing">Kitap &#304;&#231;e Aktarma</a>
   <a href="#wifi">WiFi Aktar&#305;m&#305;</a>
   <a href="#library">K&#252;t&#252;phane &amp; D&#252;zenleme</a>
-  <a href="#shelves">Raflar &amp; Klas&#246;rler</a>
+  <a href="#shelves">Klas&#246;rler</a>
   <a href="#reading-books">Kitap Okuma</a>
   <a href="#fixed-layout">Sabit D&#252;zenli Kitaplar</a>
   <a href="#in-book-search">Kitap &#304;&#231;i Arama</a>
@@ -205,29 +215,29 @@
     <li><strong>En yeni s&#252;r&#252;m</strong> ye&#351;il KEEP rozetiyle i&#351;aretlenir</li>
     <li>Onay kutular&#305;n&#305; kullanarak eski kopyalar&#305; se&#231;in (veya <strong>T&#252;m&#252;n&#252; Se&#231;</strong>)</li>
     <li><strong>Sil</strong> &mdash; se&#231;ilen eski kopyalar&#305; kald&#305;r&#305;r</li>
-    <li><strong>Verileri Kopyala ve Sil</strong> &mdash; silmeden &#246;nce yer imlerini, vurgular&#305;, etiketleri, okuma ilerlemesini ve raf atamas&#305;n&#305; en yeni s&#252;r&#252;me aktar&#305;r</li>
-    <li>Yeni s&#252;r&#252;m&#252; k&#252;t&#252;phanedeki ayn&#305; konumda tutmak i&#231;in <strong>"Yeni kitab&#305; eski kitab&#305;n raf&#305; ve gizli durumuna ta&#351;&#305;"</strong> se&#231;ene&#287;ini etkinle&#351;tirin</li>
+    <li><strong>Verileri Kopyala ve Sil</strong> &mdash; silmeden &#246;nce yer imlerini, vurgular&#305;, etiketleri, okuma ilerlemesini ve klas&#246;r atamas&#305;n&#305; en yeni s&#252;r&#252;me aktar&#305;r</li>
+    <li>Yeni s&#252;r&#252;m&#252; k&#252;t&#252;phanedeki ayn&#305; konumda tutmak i&#231;in <strong>"Yeni kitab&#305; eski kitab&#305;n klas&#246;r&#252;ne ve gizlilik durumuna ta&#351;&#305;"</strong> se&#231;ene&#287;ini etkinle&#351;tirin</li>
   </ul>
 </div>
 
 <a href="#top" class="back-to-top">&uarr; Ba&#351;a d&#246;n</a>
 
 <!-- SHELVES -->
-<h2 id="shelves">Raflar &amp; Klas&#246;rler</h2>
+<h2 id="shelves">Klas&#246;rler</h2>
 <p class="section-desc">Kitaplar&#305; i&#231; i&#231;e klas&#246;rlerde d&#252;zenleyin.</p>
 
 <div class="card">
-  <h3><span class="icon icon-indigo">&#x1F4C2;</span> Raf Olu&#351;turma</h3>
+  <h3><span class="icon icon-indigo">&#x1F4C2;</span> Klas&#246;r Olu&#351;turma</h3>
   <ol class="steps">
-    <li>K&#252;t&#252;phanenizin &#252;st&#252;ndeki <kbd>Yeni Raf</kbd> &#246;&#287;esine dokunun.</li>
-    <li>Bir ad girin, ard&#305;ndan bir simge ve renk se&#231;in.</li>
-    <li>&#304;ste&#287;e ba&#287;l&#305; olarak bir alt klas&#246;r olu&#351;turmak i&#231;in &#252;st raf se&#231;in.</li>
+    <li>K&#252;t&#252;phanenizin &#252;st&#252;ndeki men&#252;ye (&hellip;) dokunun ve <kbd>Yeni Klas&#246;r</kbd> &#246;&#287;esini se&#231;in.</li>
+    <li>Bir ad girin, ard&#305;ndan bir simge se&#231;in.</li>
+    <li>Alt klas&#246;r olu&#351;turmak i&#231;in &#246;nce bir klas&#246;r&#252; a&#231;&#305;n ve yenisini onun i&#231;inde olu&#351;turun.</li>
   </ol>
 </div>
 
 <div class="card">
   <h3><span class="icon icon-blue">&#x21C4;</span> Kitaplar&#305; Ta&#351;&#305;ma</h3>
-  <p>Bir kitab&#305;n ayr&#305;nt&#305; sayfas&#305;ndan men&#252;ye (&hellip;) dokunun ve <kbd>Rafa Ta&#351;&#305;</kbd> se&#231;ene&#287;ini se&#231;in. Se&#231;im modunda birden fazla kitab&#305; ayn&#305; anda ta&#351;&#305;yabilirsiniz.</p>
+  <p>Bir kitab&#305;n ayr&#305;nt&#305; sayfas&#305;ndan men&#252;ye (&hellip;) dokunun ve <kbd>Ta&#351;&#305;...</kbd> se&#231;ene&#287;ini se&#231;in. K&#252;t&#252;phanenizde bir kitaba uzun bas&#305;p <kbd>Klas&#246;re Ta&#351;&#305;</kbd> se&#231;ene&#287;ini de se&#231;ebilirsiniz. Se&#231;im modunda birden fazla kitab&#305; ayn&#305; anda ta&#351;&#305;mak i&#231;in <kbd>Ta&#351;&#305;</kbd> &#246;&#287;esine dokunun.</p>
 </div>
 
 <a href="#top" class="back-to-top">&uarr; Ba&#351;a d&#246;n</a>
@@ -288,8 +298,8 @@
 
 <div class="card">
   <h3><span class="icon icon-gray">&#x2139;</span> Neler Kullan&#305;labilir</h3>
-  <p>&#304;&#231;indekiler tablosu, yer imleri, ilerleme kayd&#305;r&#305;c&#305;s&#305;, okuma ge&#231;mi&#351;i ve kald&#305;&#287;&#305;n&#305;z yerden devam etme hepsi her zamanki gibi &#231;al&#305;&#351;&#305;r.</p>
-  <p>Her sayfa, uygulaman&#305;n yeniden ak&#305;tabilece&#287;i bir metin yerine sabit bir tasar&#305;m oldu&#287;undan, bu kitaplar i&#231;in birka&#231; kontrol g&#246;r&#252;nmez: S&#252;rekli Kayd&#305;rma ve otomatik kayd&#305;rma, yaz&#305; tipi ve g&#246;r&#252;n&#252;m ayarlar&#305;, sesli okuma, kitap i&#231;i arama ve metin se&#231;imi veya vurgulama.</p>
+  <p>&#304;&#231;indekiler tablosu, yer imleri, ilerleme kayd&#305;r&#305;c&#305;s&#305;, okuma ge&#231;mi&#351;i, kald&#305;&#287;&#305;n&#305;z yerden devam etme, sesli okuma, kitap i&#231;i arama ve vurgulama hepsi her zamanki gibi &#231;al&#305;&#351;&#305;r.</p>
+  <p>Her sayfa, uygulaman&#305;n yeniden ak&#305;tabilece&#287;i bir metin yerine sabit bir tasar&#305;m oldu&#287;undan, bu kitaplar i&#231;in birka&#231; kontrol g&#246;r&#252;nmez: S&#252;rekli Kayd&#305;rma ve otomatik kayd&#305;rma ile yaz&#305; tipi ve g&#246;r&#252;n&#252;m ayarlar&#305;.</p>
 </div>
 
 <a href="#top" class="back-to-top">&uarr; Ba&#351;a d&#246;n</a>
@@ -534,13 +544,13 @@
 
 <div class="card">
   <h3><span class="icon icon-blue">&#x1F50A;</span> Sesli Okumay&#305; Kullanma</h3>
-  <p>Herhangi bir EPUB, PDF veya TXT kitab&#305;n&#305; a&#231;&#305;n ve ara&#231; &#231;ubu&#287;undaki oynat d&#252;&#287;mesine dokunun. Sesli okuma her seferinde bir c&#252;mle okur ve o anki kelimeyi vurgular.</p>
+  <p>Herhangi bir EPUB, PDF, TXT veya RTF kitab&#305;n&#305; a&#231;&#305;n ve ara&#231; &#231;ubu&#287;undaki kulakl&#305;k d&#252;&#287;mesine dokunun. Sesli okuma her seferinde bir c&#252;mle okur ve o anki kelimeyi vurgular.</p>
   <ul>
-    <li><strong>H&#305;z</strong> &mdash; TTS kontollerinde 0,5&times; ile 2&times; aras&#305;.</li>
+    <li><strong>H&#305;z</strong> &mdash; TTS kontollerinde 0,5&times; ile 3&times; aras&#305;.</li>
     <li><strong>Ses</strong> &mdash; <kbd>Ayarlar</kbd> &rarr; <kbd>Okuma Tercihleri</kbd> &rarr; <kbd>Sesli Okuma</kbd> b&#246;l&#252;m&#252;nden 100&rsquo;den fazla sistem sesi aras&#305;ndan se&#231;in.</li>
     <li><strong>Atla</strong> &mdash; C&#252;mle veya b&#246;l&#252;m atlama i&#231;in ileri/geri d&#252;&#287;mesine dokunun.</li>
   </ul>
-  <div class="tip"><strong>Not:</strong> <a href="#fixed-layout">Sabit d&#252;zenli kitaplar&#305;n</a> &mdash; sayfalar&#305; sabit tasar&#305;mlar olan &#231;izgi romanlar ve resimli kitaplar&#305;n &mdash; uygulaman&#305;n sesli okuyabilece&#287;i bir metni yoktur, bu y&#252;zden bunlar i&#231;in oynat d&#252;&#287;mesi g&#246;sterilmez.</div>
+  <div class="tip"><strong>Not:</strong> Taranm&#305;&#351; sayfa g&#246;r&#252;nt&#252;lerinden olu&#351;an bir PDF&rsquo;te uygulaman&#305;n sesli okuyabilece&#287;i bir metin yoktur; kulakl&#305;k d&#252;&#287;mesine dokundu&#287;unuzda uygulama bunu size bildirir.</div>
 </div>
 
 <div class="card">
@@ -640,13 +650,13 @@
 
 <div class="card">
   <h3><span class="icon icon-red">&#x1F516;</span> Yer &#304;mleri</h3>
-  <p>Ge&#231;erli sayfay&#305; yer imlerine eklemek i&#231;in okuyucu ara&#231; &#231;ubu&#287;undaki yer imi simgesine dokunun. &#304;ste&#287;e ba&#287;l&#305; not ekleyin. Bir kitab&#305;n t&#252;m yer imlerini ayr&#305;nt&#305; sayfas&#305;ndan g&#246;r&#252;nt&#252;leyin.</p>
+  <p>Ge&#231;erli sayfay&#305; yer imlerine eklemek i&#231;in okuyucu ara&#231; &#231;ubu&#287;undaki yer imi simgesine dokunun. Not eklemek i&#231;in kitab&#305;n yer imi listesindeki bir yer imine uzun bas&#305;n ve <kbd>Notu D&#252;zenle</kbd> se&#231;ene&#287;ini se&#231;in. Bir kitab&#305;n t&#252;m yer imlerini ayr&#305;nt&#305; sayfas&#305;ndaki <kbd>Yer &#304;mleri</kbd> b&#246;l&#252;m&#252;nden g&#246;r&#252;nt&#252;leyin (EPUB i&#231;in <kbd>Yer &#304;mleri ve Vurgular</kbd>).</p>
   <div class="tip"><strong>Not:</strong> Burada yaln&#305;zca elle olu&#351;turdu&#287;unuz yer imleri g&#246;r&#252;n&#252;r. Uygulaman&#305;n bir kitab&#305; kapatt&#305;&#287;&#305;n&#305;zda otomatik olarak kaydetti&#287;i konumlar, kendi yer imlerinizin &#252;zerine binmemesi i&#231;in <a href="#history">Okuma Ge&#231;mi&#351;i</a>&rsquo;nde ayr&#305; tutulur.</div>
 </div>
 
 <div class="card">
   <h3><span class="icon icon-orange">&#x1F58D;</span> Vurgular<span class="badge badge-premium">Premium</span></h3>
-  <p>EPUB dosyalar&#305;nda vurgulamak i&#231;in metin se&#231;in. Be&#351; renk aras&#305;ndan se&#231;in (sar&#305;, pembe, ye&#351;il, mavi, turuncu) ve notlar ekleyin. T&#252;m vurgular kitab&#305;n ayr&#305;nt&#305; sayfas&#305;nda listelenir.</p>
+  <p>EPUB dosyalar&#305;nda vurgulamak i&#231;in metin se&#231;in. Be&#351; renk aras&#305;ndan se&#231;in (sar&#305;, pembe, ye&#351;il, mavi, turuncu) ve notlar ekleyin. T&#252;m vurgular ve notlar&#305;, kitab&#305;n ayr&#305;nt&#305; sayfas&#305;ndaki <kbd>Yer &#304;mleri ve Vurgular</kbd> b&#246;l&#252;m&#252;nde listelenir.</p>
 </div>
 
 <div class="card">
@@ -737,7 +747,7 @@
     <li><kbd>K&#252;t&#252;phaneyi iCloud ile Senkronize Et</kbd> se&#231;ene&#287;ini a&#231;&#305;n.</li>
     <li>Senkronizasyon bir sonraki uygulama a&#231;&#305;l&#305;&#351;&#305;nda ger&#231;ekle&#351;ir.</li>
   </ol>
-  <p>Meta verileriniz, okuma ilerlemeniz, yer imleriniz, vurgular&#305;n&#305;z ve raflar&#305;n&#305;z ayn&#305; iCloud hesab&#305;na giri&#351; yapm&#305;&#351; t&#252;m cihazlarda senkronize edilir.</p>
+  <p>Meta verileriniz, okuma ilerlemeniz, yer imleriniz, vurgular&#305;n&#305;z ve klas&#246;rleriniz ayn&#305; iCloud hesab&#305;na giri&#351; yapm&#305;&#351; t&#252;m cihazlarda senkronize edilir.</p>
 </div>
 
 <div class="card">
@@ -748,7 +758,7 @@
     <li>K&#252;t&#252;phanenizin dosyalar&#305;n&#305;n ne kadar&#305;n&#305;n iCloud&rsquo;da oldu&#287;unu g&#246;steren bir &#231;ubuk.</li>
     <li>Bir d&#246;k&#252;m &mdash; <strong>Senkronize edildi</strong> (toplam boyutla birlikte), <strong>Yaln&#305;zca iCloud&rsquo;da</strong> (bu cihaza hen&#252;z indirilmedi) ve <strong>Devam ediyor</strong>.</li>
   </ul>
-  <div class="tip"><strong>Not:</strong> Bu kart yaln&#305;zca kitap <em>dosyalar&#305;n&#305;</em> izler. Okuma ilerlemeniz, yer imleriniz, vurgular&#305;n&#305;z ve raflar&#305;n&#305;z, dosya durumundan ba&#287;&#305;ms&#305;z olarak ayr&#305; ve otomatik olarak senkronize edilir.</div>
+  <div class="tip"><strong>Not:</strong> Bu kart yaln&#305;zca kitap <em>dosyalar&#305;n&#305;</em> izler. Okuma ilerlemeniz, yer imleriniz, vurgular&#305;n&#305;z ve klas&#246;rleriniz, dosya durumundan ba&#287;&#305;ms&#305;z olarak ayr&#305; ve otomatik olarak senkronize edilir.</div>
 </div>
 
 <div class="card">

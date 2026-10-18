@@ -25,6 +25,15 @@
   text-decoration: none;
   white-space: nowrap;
 }
+.guide-nav-store {
+  color: var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.guide-nav-store:hover,
+.guide-nav-store:focus-visible {
+  text-decoration: underline;
+}
 .guide-nav-arrow {
   display: inline-block;
 }
@@ -60,6 +69,7 @@
 <!-- USER-GUIDE-NAV:START -->
 <nav class="guide-nav" aria-label="User Guide language switcher">
   <a class="guide-nav-home" href="../index.html"><span class="guide-nav-arrow" aria-hidden="true">&larr;</span> Idyllic</a>
+  <a class="guide-nav-store" href="https://apps.apple.com/app/idyllic-reader/id6769253311">App Store</a>
   <span class="guide-nav-langs">
     <span class="guide-nav-globe" aria-hidden="true">&#x1F310;</span>
       <a href="index.html">English</a>
@@ -101,7 +111,7 @@
   <a href="#importing">Bücher importieren</a>
   <a href="#wifi">WiFi-Übertragung</a>
   <a href="#library">Bibliothek und Organisation</a>
-  <a href="#shelves">Regale und Ordner</a>
+  <a href="#shelves">Ordner</a>
   <a href="#reading-books">Bücher lesen</a>
   <a href="#fixed-layout">Bücher mit festem Layout</a>
   <a href="#in-book-search">Suche im Buch</a>
@@ -205,29 +215,29 @@
     <li>Die <strong>neueste Version</strong> ist mit einem grünen KEEP-Abzeichen gekennzeichnet</li>
     <li>Wähle ältere Kopien über Kontrollkästchen aus (oder <strong>Alle auswählen</strong>)</li>
     <li><strong>Löschen</strong> &mdash; entfernt die ausgewählten älteren Kopien</li>
-    <li><strong>Daten kopieren &amp; löschen</strong> &mdash; überträgt Lesezeichen, Markierungen, Tags, Lesefortschritt und Regalzuweisung vor dem Löschen in die neueste Version</li>
-    <li>Aktiviere <strong>„Neues Buch in Regal &amp; Sichtbarkeit des alten Buches verschieben“</strong>, um die neue Version am selben Ort in der Bibliothek zu behalten</li>
+    <li><strong>Daten kopieren &amp; löschen</strong> &mdash; überträgt Lesezeichen, Markierungen, Tags, Lesefortschritt und Ordnerzuweisung vor dem Löschen in die neueste Version</li>
+    <li>Aktiviere <strong>„Neues Buch in den Ordner und den Verbergen-Status des alten Buchs verschieben“</strong>, um die neue Version am selben Ort in der Bibliothek zu behalten</li>
   </ul>
 </div>
 
 <a href="#top" class="back-to-top">&uarr; Nach oben</a>
 
 <!-- SHELVES -->
-<h2 id="shelves">Regale und Ordner</h2>
+<h2 id="shelves">Ordner</h2>
 <p class="section-desc">Organisiere Bücher in verschachtelten Ordnern.</p>
 
 <div class="card">
-  <h3><span class="icon icon-indigo">&#x1F4C2;</span> Regale erstellen</h3>
+  <h3><span class="icon icon-indigo">&#x1F4C2;</span> Ordner erstellen</h3>
   <ol class="steps">
-    <li>Tippe oben in deiner Bibliothek auf <kbd>Neues Regal</kbd>.</li>
-    <li>Gib einen Namen ein und wähle ein Symbol und eine Farbe.</li>
-    <li>Wähle optional ein übergeordnetes Regal, um einen Unterordner zu erstellen.</li>
+    <li>Tippe oben in deiner Bibliothek auf das Menü (&hellip;) und wähle <kbd>Neuer Ordner</kbd>.</li>
+    <li>Gib einen Namen ein und wähle ein Symbol.</li>
+    <li>Um einen Unterordner anzulegen, öffne zuerst einen Ordner und erstelle den neuen darin.</li>
   </ol>
 </div>
 
 <div class="card">
   <h3><span class="icon icon-blue">&#x21C4;</span> Bücher verschieben</h3>
-  <p>Tippe auf der Detailseite eines Buches auf das Menü (&hellip;) und wähle <kbd>In Regal verschieben</kbd>. Im Auswahlmodus kannst du viele Bücher gleichzeitig verschieben.</p>
+  <p>Tippe auf der Detailseite eines Buches auf das Menü (&hellip;) und wähle <kbd>Verschieben nach...</kbd>. In deiner Bibliothek kannst du auch lange auf ein Buch drücken und <kbd>In Ordner verschieben</kbd> wählen. Tippe im Auswahlmodus auf <kbd>Verschieben</kbd>, um viele Bücher gleichzeitig zu verschieben.</p>
 </div>
 
 <a href="#top" class="back-to-top">&uarr; Nach oben</a>
@@ -288,8 +298,8 @@
 
 <div class="card">
   <h3><span class="icon icon-gray">&#x2139;</span> Was verfügbar ist</h3>
-  <p>Inhaltsverzeichnis, Lesezeichen, der Fortschrittsregler, der Leseverlauf und das Fortsetzen an der zuletzt gelesenen Stelle funktionieren wie gewohnt.</p>
-  <p>Weil jede Seite ein festes Design ist statt fließenden Text, den die App neu anordnen kann, fehlen bei diesen Büchern einige Steuerelemente: Fortlaufendes Scrollen und automatisches Scrollen, die Schrift- und Erscheinungsbild-Einstellungen, Text-zu-Sprache, die Suche im Buch sowie Textauswahl und Hervorhebungen.</p>
+  <p>Inhaltsverzeichnis, Lesezeichen, der Fortschrittsregler, der Leseverlauf, das Fortsetzen an der zuletzt gelesenen Stelle, Text-zu-Sprache, die Suche im Buch und Hervorhebungen funktionieren wie gewohnt.</p>
+  <p>Weil jede Seite ein festes Design ist statt fließenden Text, den die App neu anordnen kann, fehlen bei diesen Büchern einige Steuerelemente: Fortlaufendes Scrollen und automatisches Scrollen sowie die Schrift- und Erscheinungsbild-Einstellungen.</p>
 </div>
 
 <a href="#top" class="back-to-top">&uarr; Nach oben</a>
@@ -534,13 +544,13 @@
 
 <div class="card">
   <h3><span class="icon icon-blue">&#x1F50A;</span> Text-zu-Sprache verwenden</h3>
-  <p>Öffne ein EPUB-, PDF- oder TXT-Buch und tippe auf die Wiedergabetaste in der Symbolleiste. Das System liest Satz für Satz und hebt das aktuelle Wort hervor.</p>
+  <p>Öffne ein EPUB-, PDF-, TXT- oder RTF-Buch und tippe auf die Kopfhörertaste in der Symbolleiste. Das System liest Satz für Satz und hebt das aktuelle Wort hervor.</p>
   <ul>
-    <li><strong>Geschwindigkeit</strong> &mdash; 0,5&times; bis 2&times; in den Steuerelementen.</li>
+    <li><strong>Geschwindigkeit</strong> &mdash; 0,5&times; bis 3&times; in den Steuerelementen.</li>
     <li><strong>Stimme</strong> &mdash; Wähle aus über 100 Systemstimmen unter <kbd>Einstellungen</kbd> &rarr; <kbd>Leseeinstellungen</kbd> &rarr; <kbd>Text-zu-Sprache</kbd>.</li>
     <li><strong>Überspringen</strong> &mdash; Tippe auf Vor/Zurück, um satz- oder kapitelweise zu springen.</li>
   </ul>
-  <div class="tip"><strong>Hinweis:</strong> <a href="#fixed-layout">Bücher mit festem Layout</a> &mdash; Comics und Bilderbücher, deren Seiten fest gestaltet sind &mdash; enthalten keinen Text zum Vorlesen, daher wird die Wiedergabetaste für sie nicht angezeigt.</div>
+  <div class="tip"><strong>Hinweis:</strong> Ein PDF aus eingescannten Seitenbildern enthält keinen Text zum Vorlesen; tippst du auf die Kopfhörertaste, weist die App darauf hin.</div>
 </div>
 
 <div class="card">
@@ -640,13 +650,13 @@
 
 <div class="card">
   <h3><span class="icon icon-red">&#x1F516;</span> Lesezeichen</h3>
-  <p>Tippe auf das Lesezeichen-Symbol in der Reader-Symbolleiste, um die aktuelle Seite als Lesezeichen zu speichern. Füge optional eine Notiz hinzu. Alle Lesezeichen eines Buches findest du auf dessen Detailseite.</p>
+  <p>Tippe auf das Lesezeichen-Symbol in der Reader-Symbolleiste, um die aktuelle Seite als Lesezeichen zu speichern. Um eine Notiz hinzuzufügen, halte ein Lesezeichen in der Lesezeichenliste des Buches gedrückt und wähle <kbd>Notiz bearbeiten</kbd>. Alle Lesezeichen eines Buches findest du unter <kbd>Lesezeichen</kbd> auf dessen Detailseite (bei einem EPUB <kbd>Lesezeichen &amp; Markierungen</kbd>).</p>
   <div class="tip"><strong>Hinweis:</strong> Hier erscheinen nur Lesezeichen, die du selbst manuell anlegst. Positionen, die die App beim Schließen eines Buches automatisch speichert, werden separat unter <a href="#history">Leseverlauf</a> aufbewahrt, damit sie deine eigenen Lesezeichen nicht überlagern.</div>
 </div>
 
 <div class="card">
   <h3><span class="icon icon-orange">&#x1F58D;</span> Hervorhebungen<span class="badge badge-premium">Premium</span></h3>
-  <p>Markiere in EPUBs Text zum Hervorheben. Wähle aus fünf Farben (Gelb, Rosa, Grün, Blau, Orange) und füge Notizen hinzu. Alle Hervorhebungen werden auf der Detailseite des Buches aufgelistet.</p>
+  <p>Markiere in EPUBs Text zum Hervorheben. Wähle aus fünf Farben (Gelb, Rosa, Grün, Blau, Orange) und füge Notizen hinzu. Alle Hervorhebungen und ihre Notizen werden unter <kbd>Lesezeichen &amp; Markierungen</kbd> auf der Detailseite des Buches aufgelistet.</p>
 </div>
 
 <div class="card">
@@ -737,7 +747,7 @@
     <li>Schalte <kbd>Bibliothek mit iCloud synchronisieren</kbd> ein.</li>
     <li>Die Synchronisierung wird beim nächsten App-Start wirksam.</li>
   </ol>
-  <p>Metadaten, Lesefortschritt, Lesezeichen, Hervorhebungen und Regale werden über alle Geräte synchronisiert, die mit demselben iCloud-Konto angemeldet sind.</p>
+  <p>Metadaten, Lesefortschritt, Lesezeichen, Hervorhebungen und Ordner werden über alle Geräte synchronisiert, die mit demselben iCloud-Konto angemeldet sind.</p>
 </div>
 
 <div class="card">
@@ -748,7 +758,7 @@
     <li>Ein Balken, der zeigt, wie viel der Dateien deiner Bibliothek in iCloud sind.</li>
     <li>Eine Aufschlüsselung &mdash; <strong>Synchronisiert</strong> (mit Gesamtgröße), <strong>Nur in iCloud</strong> (noch nicht auf dieses Gerät heruntergeladen) und <strong>In Bearbeitung</strong>.</li>
   </ul>
-  <div class="tip"><strong>Hinweis:</strong> Diese Karte verfolgt nur Buch<em>dateien</em>. Lesefortschritt, Lesezeichen, Hervorhebungen und Regale werden separat und automatisch synchronisiert, unabhängig vom Dateistatus.</div>
+  <div class="tip"><strong>Hinweis:</strong> Diese Karte verfolgt nur Buch<em>dateien</em>. Lesefortschritt, Lesezeichen, Hervorhebungen und Ordner werden separat und automatisch synchronisiert, unabhängig vom Dateistatus.</div>
 </div>
 
 <div class="card">

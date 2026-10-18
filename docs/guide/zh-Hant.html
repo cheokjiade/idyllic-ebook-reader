@@ -25,6 +25,15 @@
   text-decoration: none;
   white-space: nowrap;
 }
+.guide-nav-store {
+  color: var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.guide-nav-store:hover,
+.guide-nav-store:focus-visible {
+  text-decoration: underline;
+}
 .guide-nav-arrow {
   display: inline-block;
 }
@@ -60,6 +69,7 @@
 <!-- USER-GUIDE-NAV:START -->
 <nav class="guide-nav" aria-label="User Guide language switcher">
   <a class="guide-nav-home" href="../index.html"><span class="guide-nav-arrow" aria-hidden="true">&larr;</span> Idyllic</a>
+  <a class="guide-nav-store" href="https://apps.apple.com/app/idyllic-reader/id6769253311">App Store</a>
   <span class="guide-nav-langs">
     <span class="guide-nav-globe" aria-hidden="true">&#x1F310;</span>
       <a href="index.html">English</a>
@@ -101,7 +111,7 @@
   <a href="#importing">匯入書籍</a>
   <a href="#wifi">WiFi 傳輸</a>
   <a href="#library">書庫 &amp; 整理</a>
-  <a href="#shelves">書架 &amp; 資料夾</a>
+  <a href="#shelves">資料夾</a>
   <a href="#reading-books">閱讀書籍</a>
   <a href="#fixed-layout">固定版面書籍</a>
   <a href="#in-book-search">書內搜尋</a>
@@ -205,29 +215,29 @@
     <li><strong>最新版本</strong>會標示綠色的 KEEP 徽章</li>
     <li>使用核取方塊選擇較舊的副本（或 <strong>全選</strong>）</li>
     <li><strong>刪除</strong> &mdash; 移除所選的較舊副本</li>
-    <li><strong>複製資料並刪除</strong> &mdash; 在刪除之前將書籤、標示、標籤、閱讀進度和書架歸屬轉移到最新版本</li>
-    <li>啟用 <strong>「將新書移動到舊書的書架與隱藏狀態」</strong>，以將新版本保留在書庫中的同一位置</li>
+    <li><strong>複製資料並刪除</strong> &mdash; 在刪除之前將書籤、標示、標籤、閱讀進度和資料夾歸屬轉移到最新版本</li>
+    <li>啟用 <strong>「將新書移動到舊書的資料夾與隱藏狀態」</strong>，以將新版本保留在書庫中的同一位置</li>
   </ul>
 </div>
 
 <a href="#top" class="back-to-top">&uarr; 返回頂端</a>
 
 <!-- SHELVES -->
-<h2 id="shelves">書架 &amp; 資料夾</h2>
+<h2 id="shelves">資料夾</h2>
 <p class="section-desc">將書籍整理到巢狀資料夾中。</p>
 
 <div class="card">
-  <h3><span class="icon icon-indigo">&#x1F4C2;</span> 建立書架</h3>
+  <h3><span class="icon icon-indigo">&#x1F4C2;</span> 建立資料夾</h3>
   <ol class="steps">
-    <li>點選書庫頂端的 <kbd>新建書架</kbd>。</li>
-    <li>輸入名稱，然後選擇圖示和顏色。</li>
-    <li>可選擇上層書架來建立子資料夾。</li>
+    <li>點選書庫頂端的選單（&hellip;），然後選擇 <kbd>新增資料夾</kbd>。</li>
+    <li>輸入名稱，然後選擇圖示。</li>
+    <li>若要建立子資料夾，請先開啟一個資料夾，然後在其中新增。</li>
   </ol>
 </div>
 
 <div class="card">
   <h3><span class="icon icon-blue">&#x21C4;</span> 移動書籍</h3>
-  <p>在書籍詳情頁，點選選單（&hellip;）並選擇 <kbd>移到書架</kbd>。在選擇模式下可以一次移動多本書。</p>
+  <p>在書籍詳情頁，點選選單（&hellip;）並選擇 <kbd>移動到…</kbd>。在書庫中也可以長按一本書並選擇 <kbd>移動到資料夾</kbd>。在選擇模式下，點選 <kbd>移動</kbd> 即可一次移動多本書。</p>
 </div>
 
 <a href="#top" class="back-to-top">&uarr; 返回頂端</a>
@@ -288,8 +298,8 @@
 
 <div class="card">
   <h3><span class="icon icon-gray">&#x2139;</span> 可用功能</h3>
-  <p>目錄、書籤、頁面滑桿、閱讀歷史，以及從上次停下之處繼續閱讀，這些功能都照常運作。</p>
-  <p>由於每一頁都是固定設計，而非 App 可重排的文字，這類書籍不會顯示部分控制項：連續捲動與自動捲動、字型與外觀設定、文字轉語音、書內搜尋，以及文字選取或標註。</p>
+  <p>目錄、書籤、頁面滑桿、閱讀歷史、從上次停下之處繼續閱讀、文字轉語音、書內搜尋以及標註，這些功能都照常運作。</p>
+  <p>由於每一頁都是固定設計，而非 App 可重排的文字，這類書籍不會顯示部分控制項：連續捲動與自動捲動，以及字型與外觀設定。</p>
 </div>
 
 <a href="#top" class="back-to-top">&uarr; 返回頂端</a>
@@ -534,13 +544,13 @@
 
 <div class="card">
   <h3><span class="icon icon-blue">&#x1F50A;</span> 使用文字轉語音</h3>
-  <p>開啟任意 EPUB、PDF 或 TXT 書籍，點選工具列中的播放按鈕。文字轉語音逐句朗讀並標註目前的單字。</p>
+  <p>開啟任意 EPUB、PDF、TXT 或 RTF 書籍，點選工具列中的耳機按鈕。文字轉語音逐句朗讀並標註目前的單字。</p>
   <ul>
-    <li><strong>速度</strong> &mdash; 在 TTS 控制項中選擇 0.5&times; 到 2&times;。</li>
+    <li><strong>速度</strong> &mdash; 在 TTS 控制項中選擇 0.5&times; 到 3&times;。</li>
     <li><strong>語音</strong> &mdash; 在 <kbd>設定</kbd> &rarr; <kbd>閱讀偏好</kbd> &rarr; <kbd>文字轉語音</kbd> 中從 100 多種系統語音中選擇。</li>
     <li><strong>跳過</strong> &mdash; 點選下一句/上一句按鈕按句或按章跳轉。</li>
   </ul>
-  <div class="tip"><strong>注意：</strong><a href="#fixed-layout">固定版面書籍</a> &mdash; 也就是頁面採固定設計的漫畫與繪本 &mdash; 沒有可供 App 朗讀的文字，因此不會顯示播放按鈕。</div>
+  <div class="tip"><strong>注意：</strong>由掃描頁面影像構成的 PDF 沒有可供 App 朗讀的文字；點選耳機按鈕時，App 會告訴你。</div>
 </div>
 
 <div class="card">
@@ -640,13 +650,13 @@
 
 <div class="card">
   <h3><span class="icon icon-red">&#x1F516;</span> 書籤</h3>
-  <p>點選閱讀器工具列中的書籤圖示，為目前頁面加入書籤。可新增備註。在書籍詳情頁檢視所有書籤。</p>
+  <p>點選閱讀器工具列中的書籤圖示，為目前頁面加入書籤。若要新增備註，請在書籍的書籤列表中長按書籤，然後選擇<kbd>編輯筆記</kbd>。在書籍詳情頁的<kbd>書籤</kbd>中檢視所有書籤（EPUB 書籍為<kbd>書籤與標示</kbd>）。</p>
   <div class="tip"><strong>注意：</strong>這裡只會顯示您手動建立的書籤。應用程式在您關閉書籍時自動儲存的位置會另外保存在<a href="#history">閱讀歷史</a>中，以免擠掉您自己的書籤。</div>
 </div>
 
 <div class="card">
   <h3><span class="icon icon-orange">&#x1F58D;</span> 標註<span class="badge badge-premium">Premium</span></h3>
-  <p>在 EPUB 中選取文字即可標註。從五種顏色中選擇（黃色、粉紅色、綠色、藍色、橙色）並新增筆記。所有標註都列在書籍詳情頁上。</p>
+  <p>在 EPUB 中選取文字即可標註。從五種顏色中選擇（黃色、粉紅色、綠色、藍色、橙色）並新增筆記。所有標註及其筆記都列在書籍詳情頁的<kbd>書籤與標示</kbd>中。</p>
 </div>
 
 <div class="card">
@@ -737,7 +747,7 @@
     <li>開啟 <kbd>將書庫與 iCloud 同步</kbd>。</li>
     <li>同步將在下次啟動 App 時生效。</li>
   </ol>
-  <p>您的中繼資料、閱讀進度、書籤、標註和書架會在登入同一 iCloud 帳號的所有裝置間同步。</p>
+  <p>您的中繼資料、閱讀進度、書籤、標註和資料夾會在登入同一 iCloud 帳號的所有裝置間同步。</p>
 </div>
 
 <div class="card">
@@ -748,7 +758,7 @@
     <li>一條進度列，顯示您書庫中有多少檔案已在 iCloud 中。</li>
     <li>明細 &mdash; <strong>已同步</strong>（附帶總大小）、<strong>僅在 iCloud</strong>（尚未下載到此裝置）和 <strong>進行中</strong>。</li>
   </ul>
-  <div class="tip"><strong>注意：</strong>此卡片僅追蹤書籍<em>檔案</em>。閱讀進度、書籤、標註和書架會單獨自動同步，與檔案狀態無關。</div>
+  <div class="tip"><strong>注意：</strong>此卡片僅追蹤書籍<em>檔案</em>。閱讀進度、書籤、標註和資料夾會單獨自動同步，與檔案狀態無關。</div>
 </div>
 
 <div class="card">

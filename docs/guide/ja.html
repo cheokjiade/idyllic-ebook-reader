@@ -25,6 +25,15 @@
   text-decoration: none;
   white-space: nowrap;
 }
+.guide-nav-store {
+  color: var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.guide-nav-store:hover,
+.guide-nav-store:focus-visible {
+  text-decoration: underline;
+}
 .guide-nav-arrow {
   display: inline-block;
 }
@@ -60,6 +69,7 @@
 <!-- USER-GUIDE-NAV:START -->
 <nav class="guide-nav" aria-label="User Guide language switcher">
   <a class="guide-nav-home" href="../index.html"><span class="guide-nav-arrow" aria-hidden="true">&larr;</span> Idyllic</a>
+  <a class="guide-nav-store" href="https://apps.apple.com/app/idyllic-reader/id6769253311">App Store</a>
   <span class="guide-nav-langs">
     <span class="guide-nav-globe" aria-hidden="true">&#x1F310;</span>
       <a href="index.html">English</a>
@@ -101,7 +111,7 @@
   <a href="#importing">本のインポート</a>
   <a href="#wifi">WiFi転送</a>
   <a href="#library">ライブラリと整理</a>
-  <a href="#shelves">シェルフとフォルダ</a>
+  <a href="#shelves">フォルダ</a>
   <a href="#reading-books">本を読む</a>
   <a href="#fixed-layout">固定レイアウトの本</a>
   <a href="#in-book-search">本文内検索</a>
@@ -205,29 +215,29 @@
     <li><strong>最新バージョン</strong>には緑の KEEP バッジが付きます</li>
     <li>チェックボックスで古いコピーを選択します（または <strong>すべて選択</strong>）</li>
     <li><strong>削除</strong> &mdash; 選択した古いコピーを削除します</li>
-    <li><strong>データをコピーして削除</strong> &mdash; ブックマーク、ハイライト、タグ、読書の進捗、棚の割り当てを最新バージョンに引き継いでから削除します</li>
-    <li><strong>「新しい本を古い本の棚と非表示状態に移動」</strong>を有効にすると、新しいバージョンを同じライブラリ内の場所に保持できます</li>
+    <li><strong>データをコピーして削除</strong> &mdash; ブックマーク、ハイライト、タグ、読書の進捗、フォルダの割り当てを最新バージョンに引き継いでから削除します</li>
+    <li><strong>「新しい本を古い本のフォルダと非表示状態に移動」</strong>を有効にすると、新しいバージョンを同じライブラリ内の場所に保持できます</li>
   </ul>
 </div>
 
 <a href="#top" class="back-to-top">&uarr; トップに戻る</a>
 
 <!-- SHELVES -->
-<h2 id="shelves">シェルフとフォルダ</h2>
+<h2 id="shelves">フォルダ</h2>
 <p class="section-desc">本をネストされたフォルダに整理できます。</p>
 
 <div class="card">
-  <h3><span class="icon icon-indigo">&#x1F4C2;</span> シェルフの作成</h3>
+  <h3><span class="icon icon-indigo">&#x1F4C2;</span> フォルダの作成</h3>
   <ol class="steps">
-    <li>ライブラリの上部にある<kbd>新しいシェルフ</kbd>をタップします。</li>
-    <li>名前を入力し、アイコンと色を選びます。</li>
-    <li>サブフォルダを作成するには、親シェルフを選択します（任意）。</li>
+    <li>ライブラリの上部にあるメニュー（&hellip;）をタップし、<kbd>新規フォルダ</kbd>を選択します。</li>
+    <li>名前を入力し、アイコンを選びます。</li>
+    <li>サブフォルダを作成するには、先にフォルダを開き、その中に新しいフォルダを作成します。</li>
   </ol>
 </div>
 
 <div class="card">
   <h3><span class="icon icon-blue">&#x21C4;</span> 本の移動</h3>
-  <p>本の詳細ページからメニュー（&hellip;）をタップし、<kbd>シェルフに移動</kbd>を選択します。選択モードでは複数の本をまとめて移動できます。</p>
+  <p>本の詳細ページからメニュー（&hellip;）をタップし、<kbd>移動先...</kbd>を選択します。ライブラリで本を長押しして<kbd>フォルダに移動</kbd>を選ぶこともできます。選択モードでは<kbd>移動</kbd>をタップすると複数の本をまとめて移動できます。</p>
 </div>
 
 <a href="#top" class="back-to-top">&uarr; トップに戻る</a>
@@ -288,8 +298,8 @@
 
 <div class="card">
   <h3><span class="icon icon-gray">&#x2139;</span> 利用できる機能</h3>
-  <p>目次、ブックマーク、進捗スライダー、読書履歴、続きから再開はすべて通常どおり動作します。</p>
-  <p>各ページはアプリが再構成できるテキストではなく固定デザインのため、これらの本では一部の機能が表示されません &mdash; 連続スクロールと自動スクロール、フォントと外観の設定、テキスト読み上げ、本文内検索、テキストの選択やハイライトです。</p>
+  <p>目次、ブックマーク、進捗スライダー、読書履歴、続きから再開、テキスト読み上げ、本文内検索、ハイライトはすべて通常どおり動作します。</p>
+  <p>各ページはアプリが再構成できるテキストではなく固定デザインのため、これらの本では一部の機能が表示されません &mdash; 連続スクロールと自動スクロール、フォントと外観の設定です。</p>
 </div>
 
 <a href="#top" class="back-to-top">&uarr; トップに戻る</a>
@@ -534,13 +544,13 @@
 
 <div class="card">
   <h3><span class="icon icon-blue">&#x1F50A;</span> テキスト読み上げの使い方</h3>
-  <p>EPUB、PDF、またはTXTの本を開き、ツールバーの再生ボタンをタップします。TTSは一文ずつ読み上げ、現在の単語をハイライト表示します。</p>
+  <p>EPUB、PDF、TXT、またはRTFの本を開き、ツールバーのヘッドフォンボタンをタップします。TTSは一文ずつ読み上げ、現在の単語をハイライト表示します。</p>
   <ul>
-    <li><strong>速度</strong> &mdash; TTSコントロールで0.5倍から2倍まで。</li>
+    <li><strong>速度</strong> &mdash; TTSコントロールで0.5倍から3倍まで。</li>
     <li><strong>音声</strong> &mdash; <kbd>設定</kbd> &rarr; <kbd>読書設定</kbd> &rarr; <kbd>テキスト読み上げ</kbd>で100以上のシステム音声から選択。</li>
     <li><strong>スキップ</strong> &mdash; 次/前をタップして文単位またはチャプター単位でジャンプ。</li>
   </ul>
-  <div class="tip"><strong>注意：</strong><a href="#fixed-layout">固定レイアウトの本</a> &mdash; ページが固定デザインになっているマンガや絵本 &mdash; には読み上げるテキストがないため、これらの本では再生ボタンが表示されません。</div>
+  <div class="tip"><strong>注意：</strong>スキャンしたページ画像でできたPDFには、アプリが読み上げるテキストがありません。ヘッドフォンボタンをタップすると、その旨が表示されます。</div>
 </div>
 
 <div class="card">
@@ -640,13 +650,13 @@
 
 <div class="card">
   <h3><span class="icon icon-red">&#x1F516;</span> ブックマーク</h3>
-  <p>リーダーのツールバーにあるブックマークアイコンをタップして現在のページをブックマークします。メモを追加することもできます。本のすべてのブックマークは詳細ページから確認できます。</p>
+  <p>リーダーのツールバーにあるブックマークアイコンをタップして現在のページをブックマークします。メモを追加するには、本のブックマーク一覧でブックマークを長押しし、<kbd>ノートを編集</kbd>を選びます。本のすべてのブックマークは詳細ページの<kbd>ブックマーク</kbd>から確認できます（EPUBでは<kbd>ブックマークとハイライト</kbd>）。</p>
   <div class="tip"><strong>注意：</strong>ここに表示されるのは手動で作成したブックマークだけです。本を閉じたときにアプリが自動的に保存する位置は、自分のブックマークが埋もれないように<a href="#history">読書履歴</a>に別に保管されます。</div>
 </div>
 
 <div class="card">
   <h3><span class="icon icon-orange">&#x1F58D;</span> ハイライト<span class="badge badge-premium">Premium</span></h3>
-  <p>EPUBでテキストを選択してハイライトします。5色（黄色、ピンク、緑、青、オレンジ）から選び、メモを追加できます。すべてのハイライトは本の詳細ページに一覧表示されます。</p>
+  <p>EPUBでテキストを選択してハイライトします。5色（黄色、ピンク、緑、青、オレンジ）から選び、メモを追加できます。すべてのハイライトとそのメモは、本の詳細ページの<kbd>ブックマークとハイライト</kbd>に一覧表示されます。</p>
 </div>
 
 <div class="card">
@@ -737,7 +747,7 @@
     <li><kbd>ライブラリをiCloudと同期</kbd>をオンにします。</li>
     <li>同期は次のアプリ起動時に反映されます。</li>
   </ol>
-  <p>メタデータ、読書の進捗、ブックマーク、ハイライト、シェルフが同じiCloudアカウントにサインインしたすべてのデバイス間で同期されます。</p>
+  <p>メタデータ、読書の進捗、ブックマーク、ハイライト、フォルダが同じiCloudアカウントにサインインしたすべてのデバイス間で同期されます。</p>
 </div>
 
 <div class="card">
@@ -748,7 +758,7 @@
     <li>ライブラリのファイルのうちどれだけがiCloudにあるかを示すバー。</li>
     <li>内訳 &mdash; <strong>同期済み</strong>（合計サイズ付き）、<strong>iCloudのみ</strong>（このデバイスにまだダウンロードされていない）、<strong>処理中</strong>。</li>
   </ul>
-  <div class="tip"><strong>注意：</strong>このカードは本の<em>ファイル</em>のみを追跡します。読書の進捗、ブックマーク、ハイライト、シェルフはファイルの状態に関係なく、別途自動的に同期されます。</div>
+  <div class="tip"><strong>注意：</strong>このカードは本の<em>ファイル</em>のみを追跡します。読書の進捗、ブックマーク、ハイライト、フォルダはファイルの状態に関係なく、別途自動的に同期されます。</div>
 </div>
 
 <div class="card">

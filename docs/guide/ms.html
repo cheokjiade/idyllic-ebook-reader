@@ -25,6 +25,15 @@
   text-decoration: none;
   white-space: nowrap;
 }
+.guide-nav-store {
+  color: var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.guide-nav-store:hover,
+.guide-nav-store:focus-visible {
+  text-decoration: underline;
+}
 .guide-nav-arrow {
   display: inline-block;
 }
@@ -60,6 +69,7 @@
 <!-- USER-GUIDE-NAV:START -->
 <nav class="guide-nav" aria-label="User Guide language switcher">
   <a class="guide-nav-home" href="../index.html"><span class="guide-nav-arrow" aria-hidden="true">&larr;</span> Idyllic</a>
+  <a class="guide-nav-store" href="https://apps.apple.com/app/idyllic-reader/id6769253311">App Store</a>
   <span class="guide-nav-langs">
     <span class="guide-nav-globe" aria-hidden="true">&#x1F310;</span>
       <a href="index.html">English</a>
@@ -101,7 +111,7 @@
   <a href="#importing">Mengimport Buku</a>
   <a href="#wifi">Pemindahan WiFi</a>
   <a href="#library">Pustaka &amp; Organisasi</a>
-  <a href="#shelves">Rak &amp; Folder</a>
+  <a href="#shelves">Folder</a>
   <a href="#reading-books">Membaca Buku</a>
   <a href="#fixed-layout">Buku Susun Atur Tetap</a>
   <a href="#in-book-search">Carian Dalam Buku</a>
@@ -205,29 +215,29 @@
     <li><strong>Versi terbaru</strong> ditanda dengan lencana hijau KEEP</li>
     <li>Pilih salinan lama menggunakan kotak semak (atau <strong>Pilih Semua</strong>)</li>
     <li><strong>Padam</strong> &mdash; membuang salinan lama yang dipilih</li>
-    <li><strong>Salin Data &amp; Padam</strong> &mdash; memindahkan penanda buku, sorotan, tag, kemajuan bacaan, dan penetapan rak ke versi terbaru sebelum dipadam</li>
-    <li>Dayakan <strong>"Pindahkan buku baharu ke rak &amp; status tersembunyi buku lama"</strong> untuk mengekalkan versi baharu di lokasi pustaka yang sama</li>
+    <li><strong>Salin Data &amp; Padam</strong> &mdash; memindahkan penanda buku, sorotan, tag, kemajuan bacaan, dan penetapan folder ke versi terbaru sebelum dipadam</li>
+    <li>Dayakan <strong>"Alihkan buku baharu ke folder dan status tersembunyi buku lama"</strong> untuk mengekalkan versi baharu di lokasi pustaka yang sama</li>
   </ul>
 </div>
 
 <a href="#top" class="back-to-top">&uarr; Kembali ke atas</a>
 
 <!-- SHELVES -->
-<h2 id="shelves">Rak &amp; Folder</h2>
+<h2 id="shelves">Folder</h2>
 <p class="section-desc">Susun buku ke dalam folder bersarang.</p>
 
 <div class="card">
-  <h3><span class="icon icon-indigo">&#x1F4C2;</span> Mencipta Rak</h3>
+  <h3><span class="icon icon-indigo">&#x1F4C2;</span> Mencipta Folder</h3>
   <ol class="steps">
-    <li>Ketik <kbd>Rak Baharu</kbd> di bahagian atas pustaka anda.</li>
-    <li>Masukkan nama, kemudian pilih ikon dan warna.</li>
-    <li>Pilih rak induk secara pilihan untuk mencipta subfolder.</li>
+    <li>Ketik menu (&hellip;) di bahagian atas pustaka anda dan pilih <kbd>Folder Baharu</kbd>.</li>
+    <li>Masukkan nama, kemudian pilih ikon.</li>
+    <li>Untuk mencipta subfolder, buka folder dahulu dan cipta folder baharu di dalamnya.</li>
   </ol>
 </div>
 
 <div class="card">
   <h3><span class="icon icon-blue">&#x21C4;</span> Memindahkan Buku</h3>
-  <p>Dari halaman butiran buku, ketik menu (&hellip;) dan pilih <kbd>Pindah ke Rak</kbd>. Dalam mod pilihan anda boleh memindahkan banyak buku sekaligus.</p>
+  <p>Dari halaman butiran buku, ketik menu (&hellip;) dan pilih <kbd>Pindah ke...</kbd>. Dalam pustaka anda, anda juga boleh tekan lama pada buku dan pilih <kbd>Pindah ke Folder</kbd>. Dalam mod pilihan, ketik <kbd>Alih</kbd> untuk memindahkan banyak buku sekaligus.</p>
 </div>
 
 <a href="#top" class="back-to-top">&uarr; Kembali ke atas</a>
@@ -288,8 +298,8 @@
 
 <div class="card">
   <h3><span class="icon icon-gray">&#x2139;</span> Apa Yang Tersedia</h3>
-  <p>Kandungan buku, penanda buku, peluncur kemajuan, sejarah bacaan, dan menyambung semula dari tempat anda berhenti semuanya berfungsi seperti biasa.</p>
-  <p>Oleh sebab setiap halaman ialah reka bentuk tetap dan bukannya teks yang boleh disusun semula oleh aplikasi, beberapa kawalan tidak dipaparkan untuk buku ini: Tatal Berterusan dan tatal automatik, tetapan fon dan penampilan, teks-ke-ucapan, carian dalam buku, serta pemilihan atau penyerlahan teks.</p>
+  <p>Kandungan buku, penanda buku, peluncur kemajuan, sejarah bacaan, menyambung semula dari tempat anda berhenti, teks-ke-ucapan, carian dalam buku dan penyerlahan semuanya berfungsi seperti biasa.</p>
+  <p>Oleh sebab setiap halaman ialah reka bentuk tetap dan bukannya teks yang boleh disusun semula oleh aplikasi, beberapa kawalan tidak dipaparkan untuk buku ini: Tatal Berterusan dan tatal automatik, serta tetapan fon dan penampilan.</p>
 </div>
 
 <a href="#top" class="back-to-top">&uarr; Kembali ke atas</a>
@@ -534,13 +544,13 @@
 
 <div class="card">
   <h3><span class="icon icon-blue">&#x1F50A;</span> Menggunakan Teks-ke-Ucapan</h3>
-  <p>Buka mana-mana buku EPUB, PDF, atau TXT dan ketik butang main dalam bar alat. TTS membaca satu ayat pada satu masa dan menyorot perkataan semasa.</p>
+  <p>Buka mana-mana buku EPUB, PDF, TXT, atau RTF dan ketik butang fon kepala dalam bar alat. TTS membaca satu ayat pada satu masa dan menyorot perkataan semasa.</p>
   <ul>
-    <li><strong>Kelajuan</strong> &mdash; 0.5&times; hingga 2&times; dalam kawalan TTS.</li>
+    <li><strong>Kelajuan</strong> &mdash; 0.5&times; hingga 3&times; dalam kawalan TTS.</li>
     <li><strong>Suara</strong> &mdash; Pilih daripada 100+ suara sistem dalam <kbd>Tetapan</kbd> &rarr; <kbd>Keutamaan Bacaan</kbd> &rarr; <kbd>Teks-ke-Ucapan</kbd>.</li>
     <li><strong>Langkau</strong> &mdash; Ketik seterusnya/sebelumnya untuk melompat mengikut ayat, atau mengikut bab.</li>
   </ul>
-  <div class="tip"><strong>Nota:</strong> <a href="#fixed-layout">Buku susun atur tetap</a> &mdash; komik dan buku bergambar yang halamannya mempunyai reka bentuk tetap &mdash; tiada teks untuk dibacakan oleh aplikasi, jadi butang main tidak dipaparkan untuknya.</div>
+  <div class="tip"><strong>Nota:</strong> PDF yang terdiri daripada imej halaman yang diimbas tiada teks untuk dibacakan oleh aplikasi; apabila anda mengetik butang fon kepala, aplikasi akan memberitahu anda.</div>
 </div>
 
 <div class="card">
@@ -640,13 +650,13 @@
 
 <div class="card">
   <h3><span class="icon icon-red">&#x1F516;</span> Penanda Buku</h3>
-  <p>Ketik ikon penanda buku dalam bar alat pembaca untuk menanda halaman semasa. Tambah nota pilihan. Lihat semua penanda buku untuk sesebuah buku dari halaman butirannya.</p>
+  <p>Ketik ikon penanda buku dalam bar alat pembaca untuk menanda halaman semasa. Untuk menambah nota, tekan lama pada penanda buku dalam senarai penanda buku dan pilih <kbd>Edit Nota</kbd>. Lihat semua penanda buku untuk sesebuah buku dari <kbd>Penanda Buku</kbd> di halaman butirannya (<kbd>Penanda Buku &amp; Serlahan</kbd> untuk EPUB).</p>
   <div class="tip"><strong>Nota:</strong> Hanya penanda buku yang anda cipta secara manual muncul di sini. Kedudukan yang disimpan oleh aplikasi secara automatik apabila anda menutup buku disimpan secara berasingan dalam <a href="#history">Sejarah Bacaan</a> supaya tidak menggantikan penanda buku anda sendiri.</div>
 </div>
 
 <div class="card">
   <h3><span class="icon icon-orange">&#x1F58D;</span> Sorotan<span class="badge badge-premium">Premium</span></h3>
-  <p>Dalam EPUB, pilih teks untuk menyorotnya. Pilih daripada lima warna (kuning, merah jambu, hijau, biru, oren) dan tambah nota. Semua sorotan disenaraikan di halaman butiran buku.</p>
+  <p>Dalam EPUB, pilih teks untuk menyorotnya. Pilih daripada lima warna (kuning, merah jambu, hijau, biru, oren) dan tambah nota. Semua sorotan dan notanya disenaraikan di bawah <kbd>Penanda Buku &amp; Serlahan</kbd> di halaman butiran buku.</p>
 </div>
 
 <div class="card">
@@ -737,7 +747,7 @@
     <li>Togol <kbd>Segerakkan Pustaka dengan iCloud</kbd> untuk menghidupkannya.</li>
     <li>Penyegerakan berkuat kuasa pada pelancaran aplikasi seterusnya.</li>
   </ol>
-  <p>Metadata, kemajuan bacaan, penanda buku, sorotan, dan rak anda disegerakkan merentas semua peranti yang log masuk ke akaun iCloud yang sama.</p>
+  <p>Metadata, kemajuan bacaan, penanda buku, sorotan, dan folder anda disegerakkan merentas semua peranti yang log masuk ke akaun iCloud yang sama.</p>
 </div>
 
 <div class="card">
@@ -748,7 +758,7 @@
     <li>Bar yang menunjukkan berapa banyak fail pustaka anda berada dalam iCloud.</li>
     <li>Pecahan &mdash; <strong>Disegerakkan</strong> (dengan jumlah saiz), <strong>Hanya dalam iCloud</strong> (belum dimuat turun ke peranti ini), dan <strong>Sedang berjalan</strong>.</li>
   </ul>
-  <div class="tip"><strong>Nota:</strong> Kad ini menjejaki <em>fail</em> buku sahaja. Kemajuan bacaan, penanda buku, sorotan, dan rak disegerakkan secara berasingan dan automatik, tanpa mengira status fail.</div>
+  <div class="tip"><strong>Nota:</strong> Kad ini menjejaki <em>fail</em> buku sahaja. Kemajuan bacaan, penanda buku, sorotan, dan folder disegerakkan secara berasingan dan automatik, tanpa mengira status fail.</div>
 </div>
 
 <div class="card">
