@@ -25,6 +25,15 @@
   text-decoration: none;
   white-space: nowrap;
 }
+.guide-nav-store {
+  color: var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.guide-nav-store:hover,
+.guide-nav-store:focus-visible {
+  text-decoration: underline;
+}
 .guide-nav-arrow {
   display: inline-block;
 }
@@ -60,6 +69,7 @@
 <!-- USER-GUIDE-NAV:START -->
 <nav class="guide-nav" aria-label="User Guide language switcher">
   <a class="guide-nav-home" href="../index.html"><span class="guide-nav-arrow" aria-hidden="true">&larr;</span> Idyllic</a>
+  <a class="guide-nav-store" href="https://apps.apple.com/app/idyllic-reader/id6769253311">App Store</a>
   <span class="guide-nav-langs">
     <span class="guide-nav-globe" aria-hidden="true">&#x1F310;</span>
       <a href="index.html">English</a>
@@ -101,7 +111,7 @@
   <a href="#importing">Importer des livres</a>
   <a href="#wifi">Transfert WiFi</a>
   <a href="#library">Bibliothèque et organisation</a>
-  <a href="#shelves">Étagères et dossiers</a>
+  <a href="#shelves">Dossiers</a>
   <a href="#reading-books">Lire des livres</a>
   <a href="#fixed-layout">Livres à mise en page fixe</a>
   <a href="#in-book-search">Recherche dans le livre</a>
@@ -205,29 +215,29 @@
     <li>La <strong>version la plus récente</strong> est signalée par un badge vert KEEP</li>
     <li>Sélectionnez les copies plus anciennes à l&rsquo;aide des cases à cocher (ou <strong>Tout sélectionner</strong>)</li>
     <li><strong>Supprimer</strong> &mdash; retire les copies plus anciennes sélectionnées</li>
-    <li><strong>Copier les données et supprimer</strong> &mdash; transfère les signets, surlignages, étiquettes, progression de lecture et étagère vers la version la plus récente avant suppression</li>
-    <li>Activez <strong>«&nbsp;Déplacer le nouveau livre vers l&rsquo;étagère et le statut caché de l&rsquo;ancien livre&nbsp;»</strong> pour conserver la nouvelle version au même emplacement dans la bibliothèque</li>
+    <li><strong>Copier les données et supprimer</strong> &mdash; transfère les signets, surlignages, étiquettes, progression de lecture et dossier vers la version la plus récente avant suppression</li>
+    <li>Activez <strong>«&nbsp;Déplacer le nouveau livre vers le dossier et le statut masqué de l'ancien livre&nbsp;»</strong> pour conserver la nouvelle version au même emplacement dans la bibliothèque</li>
   </ul>
 </div>
 
 <a href="#top" class="back-to-top">&uarr; Retour en haut</a>
 
 <!-- SHELVES -->
-<h2 id="shelves">Étagères et dossiers</h2>
+<h2 id="shelves">Dossiers</h2>
 <p class="section-desc">Organisez vos livres dans des dossiers imbriqués.</p>
 
 <div class="card">
-  <h3><span class="icon icon-indigo">&#x1F4C2;</span> Créer des étagères</h3>
+  <h3><span class="icon icon-indigo">&#x1F4C2;</span> Créer des dossiers</h3>
   <ol class="steps">
-    <li>Touchez <kbd>Nouvelle étagère</kbd> en haut de votre bibliothèque.</li>
-    <li>Entrez un nom, puis choisissez une icône et une couleur.</li>
-    <li>Optionnellement, choisissez une étagère parente pour créer un sous-dossier.</li>
+    <li>Touchez le menu (&hellip;) en haut de votre bibliothèque et choisissez <kbd>Nouveau dossier</kbd>.</li>
+    <li>Entrez un nom, puis choisissez une icône.</li>
+    <li>Pour créer un sous-dossier, ouvrez d'abord un dossier et créez le nouveau à l'intérieur.</li>
   </ol>
 </div>
 
 <div class="card">
   <h3><span class="icon icon-blue">&#x21C4;</span> Déplacer des livres</h3>
-  <p>Depuis la page de détails d'un livre, touchez le menu (&hellip;) et choisissez <kbd>Déplacer vers l'étagère</kbd>. En mode sélection, vous pouvez déplacer plusieurs livres à la fois.</p>
+  <p>Depuis la page de détails d'un livre, touchez le menu (&hellip;) et choisissez <kbd>Déplacer vers...</kbd>. Dans votre bibliothèque, vous pouvez aussi appuyer longuement sur un livre et choisir <kbd>Déplacer vers un dossier</kbd>. En mode sélection, touchez <kbd>Déplacer</kbd> pour déplacer plusieurs livres à la fois.</p>
 </div>
 
 <a href="#top" class="back-to-top">&uarr; Retour en haut</a>
@@ -288,8 +298,8 @@
 
 <div class="card">
   <h3><span class="icon icon-gray">&#x2139;</span> Ce qui est disponible</h3>
-  <p>La table des matières, les signets, le curseur de progression, l&rsquo;historique de lecture et la reprise là où vous vous étiez arrêté fonctionnent tous normalement.</p>
-  <p>Comme chaque page est une mise en page fixe plutôt qu&rsquo;un texte que l&rsquo;app peut remettre en forme, certaines commandes n&rsquo;apparaissent pas pour ces livres&nbsp;: le défilement continu et le défilement automatique, les réglages de police et d&rsquo;apparence, la synthèse vocale, la recherche dans le livre, ainsi que la sélection ou le surlignage de texte.</p>
+  <p>La table des matières, les signets, le curseur de progression, l&rsquo;historique de lecture, la reprise là où vous vous étiez arrêté, la synthèse vocale, la recherche dans le livre et le surlignage fonctionnent tous normalement.</p>
+  <p>Comme chaque page est une mise en page fixe plutôt qu&rsquo;un texte que l&rsquo;app peut remettre en forme, certaines commandes n&rsquo;apparaissent pas pour ces livres&nbsp;: le défilement continu et le défilement automatique, ainsi que les réglages de police et d&rsquo;apparence.</p>
 </div>
 
 <a href="#top" class="back-to-top">&uarr; Retour en haut</a>
@@ -534,13 +544,13 @@
 
 <div class="card">
   <h3><span class="icon icon-blue">&#x1F50A;</span> Utiliser la synthèse vocale</h3>
-  <p>Ouvrez n'importe quel livre EPUB, PDF ou TXT et touchez le bouton de lecture dans la barre d'outils. Le système lit une phrase à la fois et met en évidence le mot en cours.</p>
+  <p>Ouvrez n'importe quel livre EPUB, PDF, TXT ou RTF et touchez le bouton en forme de casque dans la barre d'outils. Le système lit une phrase à la fois et met en évidence le mot en cours.</p>
   <ul>
-    <li><strong>Vitesse</strong> &mdash; de 0,5&times; à 2&times; dans les commandes.</li>
+    <li><strong>Vitesse</strong> &mdash; de 0,5&times; à 3&times; dans les commandes.</li>
     <li><strong>Voix</strong> &mdash; Choisissez parmi plus de 100 voix système dans <kbd>Réglages</kbd> &rarr; <kbd>Préférences de lecture</kbd> &rarr; <kbd>Synthèse vocale</kbd>.</li>
     <li><strong>Avancer</strong> &mdash; Touchez suivant/précédent pour passer d'une phrase ou d'un chapitre à l'autre.</li>
   </ul>
-  <div class="tip"><strong>Remarque&nbsp;:</strong> Les <a href="#fixed-layout">livres à mise en page fixe</a> &mdash; bandes dessinées et livres illustrés dont les pages sont des mises en page fixes &mdash; n&rsquo;ont pas de texte que l&rsquo;app puisse lire à voix haute, le bouton de lecture n&rsquo;apparaît donc pas pour eux.</div>
+  <div class="tip"><strong>Remarque&nbsp;:</strong> Un PDF composé d&rsquo;images de pages numérisées n&rsquo;a pas de texte que l&rsquo;app puisse lire à voix haute&nbsp;; si vous touchez le bouton en forme de casque, l&rsquo;app vous l&rsquo;indique.</div>
 </div>
 
 <div class="card">
@@ -640,13 +650,13 @@
 
 <div class="card">
   <h3><span class="icon icon-red">&#x1F516;</span> Signets</h3>
-  <p>Touchez l'icône de signet dans la barre d'outils du lecteur pour marquer la page en cours. Ajoutez une note optionnelle. Consultez tous les signets d'un livre depuis sa page de détails.</p>
+  <p>Touchez l'icône de signet dans la barre d'outils du lecteur pour marquer la page en cours. Pour ajouter une note, maintenez le doigt sur un signet dans la liste des signets du livre et choisissez <kbd>Modifier la note</kbd>. Consultez tous les signets d'un livre depuis <kbd>Signets</kbd> sur sa page de détails (<kbd>Signets et surlignages</kbd> pour un EPUB).</p>
   <div class="tip"><strong>Remarque&nbsp;:</strong> Seuls les signets que vous créez manuellement apparaissent ici. Les positions enregistrées automatiquement par l&rsquo;app lorsque vous fermez un livre sont conservées séparément dans l&rsquo;<a href="#history">Historique de lecture</a> afin de ne pas encombrer vos propres signets.</div>
 </div>
 
 <div class="card">
   <h3><span class="icon icon-orange">&#x1F58D;</span> Surlignages<span class="badge badge-premium">Premium</span></h3>
-  <p>Dans les EPUB, sélectionnez du texte pour le surligner. Choisissez parmi cinq couleurs (jaune, rose, vert, bleu, orange) et ajoutez des notes. Tous les surlignages sont listés sur la page de détails du livre.</p>
+  <p>Dans les EPUB, sélectionnez du texte pour le surligner. Choisissez parmi cinq couleurs (jaune, rose, vert, bleu, orange) et ajoutez des notes. Tous les surlignages et leurs notes sont listés dans <kbd>Signets et surlignages</kbd>, sur la page de détails du livre.</p>
 </div>
 
 <div class="card">
@@ -737,7 +747,7 @@
     <li>Activez <kbd>Synchroniser la bibliothèque avec iCloud</kbd>.</li>
     <li>La synchronisation prend effet au prochain lancement de l'app.</li>
   </ol>
-  <p>Vos métadonnées, votre progression de lecture, vos signets, surlignages et étagères se synchronisent sur tous les appareils connectés au même compte iCloud.</p>
+  <p>Vos métadonnées, votre progression de lecture, vos signets, surlignages et dossiers se synchronisent sur tous les appareils connectés au même compte iCloud.</p>
 </div>
 
 <div class="card">
@@ -748,7 +758,7 @@
     <li>Une barre indiquant la proportion des fichiers de votre bibliothèque présents dans iCloud.</li>
     <li>Une répartition &mdash; <strong>Synchronisé</strong> (avec la taille totale), <strong>Sur iCloud uniquement</strong> (pas encore téléchargé sur cet appareil) et <strong>En cours</strong>.</li>
   </ul>
-  <div class="tip"><strong>Remarque :</strong> Cette carte ne suit que les <em>fichiers</em> des livres. La progression de lecture, les signets, les surlignages et les étagères se synchronisent séparément et automatiquement, indépendamment de l'état du fichier.</div>
+  <div class="tip"><strong>Remarque :</strong> Cette carte ne suit que les <em>fichiers</em> des livres. La progression de lecture, les signets, les surlignages et les dossiers se synchronisent séparément et automatiquement, indépendamment de l'état du fichier.</div>
 </div>
 
 <div class="card">

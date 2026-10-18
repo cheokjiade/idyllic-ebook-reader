@@ -25,6 +25,15 @@
   text-decoration: none;
   white-space: nowrap;
 }
+.guide-nav-store {
+  color: var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.guide-nav-store:hover,
+.guide-nav-store:focus-visible {
+  text-decoration: underline;
+}
 .guide-nav-arrow {
   display: inline-block;
 }
@@ -60,6 +69,7 @@
 <!-- USER-GUIDE-NAV:START -->
 <nav class="guide-nav" aria-label="User Guide language switcher">
   <a class="guide-nav-home" href="../index.html"><span class="guide-nav-arrow" aria-hidden="true">&larr;</span> Idyllic</a>
+  <a class="guide-nav-store" href="https://apps.apple.com/app/idyllic-reader/id6769253311">App Store</a>
   <span class="guide-nav-langs">
     <span class="guide-nav-globe" aria-hidden="true">&#x1F310;</span>
       <span class="guide-nav-current">English</span>
@@ -101,7 +111,7 @@
   <a href="#importing">Importing Books</a>
   <a href="#wifi">WiFi Transfer</a>
   <a href="#library">Library &amp; Organization</a>
-  <a href="#shelves">Shelves &amp; Folders</a>
+  <a href="#shelves">Folders</a>
   <a href="#reading-books">Reading Books</a>
   <a href="#fixed-layout">Fixed-Layout Books</a>
   <a href="#in-book-search">In-Book Search</a>
@@ -205,29 +215,29 @@
     <li>The <strong>newest version</strong> is marked with a green KEEP badge</li>
     <li>Select older copies using checkboxes (or <strong>Select All</strong>)</li>
     <li><strong>Delete</strong> &mdash; removes the selected older copies</li>
-    <li><strong>Copy Data &amp; Delete</strong> &mdash; transfers bookmarks, highlights, tags, reading progress, and shelf assignment to the newest version before deleting</li>
-    <li>Enable <strong>"Move new book to old book's shelf &amp; hidden status"</strong> to keep the new version in the same library location</li>
+    <li><strong>Copy Data &amp; Delete</strong> &mdash; transfers bookmarks, highlights, tags, reading progress, and folder assignment to the newest version before deleting</li>
+    <li>Enable <strong>"Move new book to old book's folder &amp; hidden status"</strong> to keep the new version in the same library location</li>
   </ul>
 </div>
 
 <a href="#top" class="back-to-top">&uarr; Back to top</a>
 
 <!-- SHELVES -->
-<h2 id="shelves">Shelves &amp; Folders</h2>
+<h2 id="shelves">Folders</h2>
 <p class="section-desc">Organize books into nested folders.</p>
 
 <div class="card">
-  <h3><span class="icon icon-indigo">&#x1F4C2;</span> Creating Shelves</h3>
+  <h3><span class="icon icon-indigo">&#x1F4C2;</span> Creating Folders</h3>
   <ol class="steps">
-    <li>Tap <kbd>New Shelf</kbd> at the top of your library.</li>
-    <li>Enter a name, then pick an icon and color.</li>
-    <li>Optionally choose a parent shelf to create a subfolder.</li>
+    <li>Tap the menu (&hellip;) at the top of your library and choose <kbd>New Folder</kbd>.</li>
+    <li>Enter a name, then pick an icon.</li>
+    <li>To make a subfolder, open a folder first and create the new one inside it.</li>
   </ol>
 </div>
 
 <div class="card">
   <h3><span class="icon icon-blue">&#x21C4;</span> Moving Books</h3>
-  <p>From a book&rsquo;s detail page, tap the menu (&hellip;) and choose <kbd>Move to Shelf</kbd>. In selection mode you can move many books at once.</p>
+  <p>From a book&rsquo;s detail page, tap the menu (&hellip;) and choose <kbd>Move to...</kbd>. In your library you can also long-press a book and choose <kbd>Move to Folder</kbd>. In selection mode, tap <kbd>Move</kbd> to move many books at once.</p>
 </div>
 
 <a href="#top" class="back-to-top">&uarr; Back to top</a>
@@ -288,8 +298,8 @@
 
 <div class="card">
   <h3><span class="icon icon-gray">&#x2139;</span> What&rsquo;s Available</h3>
-  <p>The table of contents, bookmarks, the progress slider, reading history, and resuming where you left off all work as usual.</p>
-  <p>Because each page is a fixed design rather than text the app can reflow, a few controls don&rsquo;t appear for these books: Continuous Scroll and auto-scroll, the font and appearance settings, text-to-speech, in-book search, and text selection or highlighting.</p>
+  <p>The table of contents, bookmarks, the progress slider, reading history, resuming where you left off, text-to-speech, in-book search, and highlighting all work as usual.</p>
+  <p>Because each page is a fixed design rather than text the app can reflow, a few controls don&rsquo;t appear for these books: Continuous Scroll and auto-scroll, and the font and appearance settings.</p>
 </div>
 
 <a href="#top" class="back-to-top">&uarr; Back to top</a>
@@ -534,13 +544,13 @@
 
 <div class="card">
   <h3><span class="icon icon-blue">&#x1F50A;</span> Using Text-to-Speech</h3>
-  <p>Open any EPUB, PDF, or TXT book and tap the play button in the toolbar. TTS reads one sentence at a time and highlights the current word.</p>
+  <p>Open any EPUB, PDF, TXT, or RTF book and tap the headphones button in the toolbar. TTS reads one sentence at a time and highlights the current word.</p>
   <ul>
-    <li><strong>Speed</strong> &mdash; 0.5&times; to 2&times; in the TTS controls.</li>
+    <li><strong>Speed</strong> &mdash; 0.5&times; to 3&times; in the TTS controls.</li>
     <li><strong>Voice</strong> &mdash; Choose from 100+ system voices in <kbd>Settings</kbd> &rarr; <kbd>Reading Preferences</kbd> &rarr; <kbd>Text-to-Speech</kbd>.</li>
     <li><strong>Skip</strong> &mdash; Tap next/previous to jump by sentence, or by chapter.</li>
   </ul>
-  <div class="tip"><strong>Note:</strong> <a href="#fixed-layout">Fixed-layout books</a> &mdash; comics and picture books whose pages are fixed designs &mdash; have no text for the app to read aloud, so the play button isn&rsquo;t shown for them.</div>
+  <div class="tip"><strong>Note:</strong> A PDF made of scanned page images has no text for the app to read aloud; tapping the headphones button tells you so.</div>
 </div>
 
 <div class="card">
@@ -640,13 +650,13 @@
 
 <div class="card">
   <h3><span class="icon icon-red">&#x1F516;</span> Bookmarks</h3>
-  <p>Tap the bookmark icon in the reader toolbar to bookmark the current page. Add an optional note. View all bookmarks for a book from its detail page.</p>
+  <p>Tap the bookmark icon in the reader toolbar to bookmark the current page. To add a note, long-press a bookmark in the book&rsquo;s bookmark list and choose <kbd>Edit Note</kbd>. View all bookmarks for a book from <kbd>Bookmarks</kbd> on its detail page (<kbd>Bookmarks &amp; Highlights</kbd> for an EPUB).</p>
   <div class="tip"><strong>Note:</strong> Only bookmarks you create manually appear here. Positions the app saves automatically when you close a book are kept separately in <a href="#history">Reading History</a> so they don&rsquo;t crowd out your own bookmarks.</div>
 </div>
 
 <div class="card">
   <h3><span class="icon icon-orange">&#x1F58D;</span> Highlights<span class="badge badge-premium">Premium</span></h3>
-  <p>In EPUBs, select text to highlight it. Choose from five colors (yellow, pink, green, blue, orange) and add notes. All highlights are listed on the book&rsquo;s detail page.</p>
+  <p>In EPUBs, select text to highlight it. Choose from five colors (yellow, pink, green, blue, orange) and add notes. All highlights and their notes are listed under <kbd>Bookmarks &amp; Highlights</kbd> on the book&rsquo;s detail page.</p>
 </div>
 
 <div class="card">
@@ -737,7 +747,7 @@
     <li>Toggle <kbd>Sync Library with iCloud</kbd> on.</li>
     <li>Sync takes effect on the next app launch.</li>
   </ol>
-  <p>Your metadata, reading progress, bookmarks, highlights, and shelves sync across all devices signed into the same iCloud account.</p>
+  <p>Your metadata, reading progress, bookmarks, highlights, and folders sync across all devices signed into the same iCloud account.</p>
 </div>
 
 <div class="card">
@@ -748,7 +758,7 @@
     <li>A bar showing how much of your library&rsquo;s files are in iCloud.</li>
     <li>A breakdown &mdash; <strong>Synced</strong> (with total size), <strong>On iCloud only</strong> (not yet downloaded to this device), and <strong>In progress</strong>.</li>
   </ul>
-  <div class="tip"><strong>Note:</strong> This card tracks book <em>files</em> only. Reading progress, bookmarks, highlights, and shelves sync separately and automatically, regardless of file status.</div>
+  <div class="tip"><strong>Note:</strong> This card tracks book <em>files</em> only. Reading progress, bookmarks, highlights, and folders sync separately and automatically, regardless of file status.</div>
 </div>
 
 <div class="card">

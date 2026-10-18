@@ -25,6 +25,15 @@
   text-decoration: none;
   white-space: nowrap;
 }
+.guide-nav-store {
+  color: var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.guide-nav-store:hover,
+.guide-nav-store:focus-visible {
+  text-decoration: underline;
+}
 .guide-nav-arrow {
   display: inline-block;
 }
@@ -60,6 +69,7 @@
 <!-- USER-GUIDE-NAV:START -->
 <nav class="guide-nav" aria-label="User Guide language switcher">
   <a class="guide-nav-home" href="../index.html"><span class="guide-nav-arrow" aria-hidden="true">&larr;</span> Idyllic</a>
+  <a class="guide-nav-store" href="https://apps.apple.com/app/idyllic-reader/id6769253311">App Store</a>
   <span class="guide-nav-langs">
     <span class="guide-nav-globe" aria-hidden="true">&#x1F310;</span>
       <a href="index.html">English</a>
@@ -101,7 +111,7 @@
   <a href="#importing">책 가져오기</a>
   <a href="#wifi">WiFi 전송</a>
   <a href="#library">라이브러리 및 정리</a>
-  <a href="#shelves">서가 및 폴더</a>
+  <a href="#shelves">폴더</a>
   <a href="#reading-books">책 읽기</a>
   <a href="#fixed-layout">고정 레이아웃 책</a>
   <a href="#in-book-search">책 내 검색</a>
@@ -205,29 +215,29 @@
     <li><strong>최신 버전</strong>에는 녹색 KEEP 배지가 표시됩니다</li>
     <li>체크박스로 이전 사본을 선택하세요 (또는 <strong>모두 선택</strong>)</li>
     <li><strong>삭제</strong> &mdash; 선택한 이전 사본을 제거합니다</li>
-    <li><strong>데이터 복사 후 삭제</strong> &mdash; 삭제하기 전에 책갈피, 하이라이트, 태그, 읽기 진행도, 책장 배정을 최신 버전으로 옮깁니다</li>
-    <li><strong>"새 책을 옛 책의 책장 및 숨김 상태로 이동"</strong>을 활성화하면 새 버전을 라이브러리의 동일한 위치에 유지할 수 있습니다</li>
+    <li><strong>데이터 복사 후 삭제</strong> &mdash; 삭제하기 전에 책갈피, 하이라이트, 태그, 읽기 진행도, 폴더 배정을 최신 버전으로 옮깁니다</li>
+    <li><strong>"새 책을 기존 책의 폴더와 숨김 상태로 이동"</strong>을 활성화하면 새 버전을 라이브러리의 동일한 위치에 유지할 수 있습니다</li>
   </ul>
 </div>
 
 <a href="#top" class="back-to-top">&uarr; 맨 위로</a>
 
 <!-- SHELVES -->
-<h2 id="shelves">서가 및 폴더</h2>
+<h2 id="shelves">폴더</h2>
 <p class="section-desc">중첩 폴더로 책을 정리하세요.</p>
 
 <div class="card">
-  <h3><span class="icon icon-indigo">&#x1F4C2;</span> 서가 만들기</h3>
+  <h3><span class="icon icon-indigo">&#x1F4C2;</span> 폴더 만들기</h3>
   <ol class="steps">
-    <li>라이브러리 상단에서 <kbd>새 서가</kbd>를 탭합니다.</li>
-    <li>이름을 입력하고 아이콘과 색상을 선택합니다.</li>
-    <li>하위 폴더를 만들려면 상위 서가를 선택합니다(선택 사항).</li>
+    <li>라이브러리 상단에서 메뉴(&hellip;)를 탭하고 <kbd>새 폴더</kbd>를 선택합니다.</li>
+    <li>이름을 입력하고 아이콘을 선택합니다.</li>
+    <li>하위 폴더를 만들려면 먼저 폴더를 연 다음 그 안에서 새 폴더를 만듭니다.</li>
   </ol>
 </div>
 
 <div class="card">
   <h3><span class="icon icon-blue">&#x21C4;</span> 책 이동</h3>
-  <p>책의 상세 페이지에서 메뉴(&hellip;)를 탭하고 <kbd>서가로 이동</kbd>을 선택합니다. 선택 모드에서는 여러 책을 한 번에 이동할 수 있습니다.</p>
+  <p>책의 상세 페이지에서 메뉴(&hellip;)를 탭하고 <kbd>이동...</kbd>을 선택합니다. 라이브러리에서 책을 길게 누른 다음 <kbd>폴더로 이동</kbd>을 선택할 수도 있습니다. 선택 모드에서는 <kbd>이동</kbd>을 탭하여 여러 책을 한 번에 이동할 수 있습니다.</p>
 </div>
 
 <a href="#top" class="back-to-top">&uarr; 맨 위로</a>
@@ -288,8 +298,8 @@
 
 <div class="card">
   <h3><span class="icon icon-gray">&#x2139;</span> 사용 가능한 기능</h3>
-  <p>목차, 북마크, 진행률 슬라이더, 읽기 기록, 이어서 읽기는 모두 평소처럼 작동합니다.</p>
-  <p>각 페이지가 앱이 재배치할 수 있는 텍스트가 아니라 고정된 디자인이기 때문에, 이런 책에서는 일부 기능이 나타나지 않습니다: 연속 스크롤 및 자동 스크롤, 글꼴 및 화면 설정, 텍스트 음성 변환, 책 내 검색, 텍스트 선택 및 하이라이트.</p>
+  <p>목차, 북마크, 진행률 슬라이더, 읽기 기록, 이어서 읽기, 텍스트 음성 변환, 책 내 검색, 하이라이트는 모두 평소처럼 작동합니다.</p>
+  <p>각 페이지가 앱이 재배치할 수 있는 텍스트가 아니라 고정된 디자인이기 때문에, 이런 책에서는 일부 기능이 나타나지 않습니다: 연속 스크롤 및 자동 스크롤, 글꼴 및 화면 설정.</p>
 </div>
 
 <a href="#top" class="back-to-top">&uarr; 맨 위로</a>
@@ -534,13 +544,13 @@
 
 <div class="card">
   <h3><span class="icon icon-blue">&#x1F50A;</span> 텍스트 음성 변환 사용</h3>
-  <p>EPUB, PDF 또는 TXT 책을 열고 도구 모음의 재생 버튼을 탭하세요. TTS는 한 문장씩 읽으며 현재 단어를 하이라이트합니다.</p>
+  <p>EPUB, PDF, TXT 또는 RTF 책을 열고 도구 모음의 헤드폰 버튼을 탭하세요. TTS는 한 문장씩 읽으며 현재 단어를 하이라이트합니다.</p>
   <ul>
-    <li><strong>속도</strong> &mdash; TTS 컨트롤에서 0.5배속에서 2배속까지.</li>
+    <li><strong>속도</strong> &mdash; TTS 컨트롤에서 0.5배속에서 3배속까지.</li>
     <li><strong>음성</strong> &mdash; <kbd>설정</kbd> &rarr; <kbd>읽기 환경설정</kbd> &rarr; <kbd>텍스트 음성 변환</kbd>에서 100개 이상의 시스템 음성 중 선택.</li>
     <li><strong>건너뛰기</strong> &mdash; 다음/이전을 탭하여 문장 또는 챕터 단위로 이동.</li>
   </ul>
-  <div class="tip"><strong>참고:</strong> <a href="#fixed-layout">고정 레이아웃 책</a> &mdash; 페이지가 고정된 디자인으로 이루어진 만화와 그림책 &mdash; 은 앱이 소리 내어 읽을 텍스트가 없으므로 재생 버튼이 표시되지 않습니다.</div>
+  <div class="tip"><strong>참고:</strong> 스캔한 페이지 이미지로 이루어진 PDF에는 앱이 소리 내어 읽을 텍스트가 없습니다. 헤드폰 버튼을 탭하면 앱이 이를 알려 줍니다.</div>
 </div>
 
 <div class="card">
@@ -640,13 +650,13 @@
 
 <div class="card">
   <h3><span class="icon icon-red">&#x1F516;</span> 북마크</h3>
-  <p>리더 도구 모음의 북마크 아이콘을 탭하여 현재 페이지를 북마크합니다. 선택적으로 메모를 추가하세요. 책의 모든 북마크는 상세 페이지에서 확인할 수 있습니다.</p>
+  <p>리더 도구 모음의 북마크 아이콘을 탭하여 현재 페이지를 북마크합니다. 메모를 추가하려면 책의 북마크 목록에서 북마크를 길게 누르고 <kbd>메모 편집</kbd>을 선택하세요. 책의 모든 북마크는 상세 페이지의 <kbd>북마크</kbd>에서 확인할 수 있습니다(EPUB은 <kbd>북마크 및 하이라이트</kbd>).</p>
   <div class="tip"><strong>참고:</strong> 여기에는 직접 만든 북마크만 표시됩니다. 책을 닫을 때 앱이 자동으로 저장하는 위치는 사용자가 의도적으로 추가한 북마크를 가리지 않도록 <a href="#history">읽기 기록</a>에 별도로 보관됩니다.</div>
 </div>
 
 <div class="card">
   <h3><span class="icon icon-orange">&#x1F58D;</span> 하이라이트<span class="badge badge-premium">Premium</span></h3>
-  <p>EPUB에서 텍스트를 선택하여 하이라이트합니다. 5가지 색상(노랑, 분홍, 초록, 파랑, 주황) 중 선택하고 메모를 추가하세요. 모든 하이라이트는 책의 상세 페이지에 나열됩니다.</p>
+  <p>EPUB에서 텍스트를 선택하여 하이라이트합니다. 5가지 색상(노랑, 분홍, 초록, 파랑, 주황) 중 선택하고 메모를 추가하세요. 모든 하이라이트와 메모는 책 상세 페이지의 <kbd>북마크 및 하이라이트</kbd>에 나열됩니다.</p>
 </div>
 
 <div class="card">
@@ -737,7 +747,7 @@
     <li><kbd>라이브러리를 iCloud와 동기화</kbd>를 켭니다.</li>
     <li>동기화는 다음 앱 실행 시 적용됩니다.</li>
   </ol>
-  <p>메타데이터, 읽기 진행률, 북마크, 하이라이트, 서가가 같은 iCloud 계정에 로그인된 모든 기기에서 동기화됩니다.</p>
+  <p>메타데이터, 읽기 진행률, 북마크, 하이라이트, 폴더가 같은 iCloud 계정에 로그인된 모든 기기에서 동기화됩니다.</p>
 </div>
 
 <div class="card">
@@ -748,7 +758,7 @@
     <li>라이브러리 파일 중 얼마나 많은 부분이 iCloud에 있는지 보여주는 막대.</li>
     <li>세부 정보 &mdash; <strong>동기화됨</strong>(전체 크기 포함), <strong>iCloud에만 있음</strong>(아직 이 기기에 다운로드되지 않음), <strong>진행 중</strong>.</li>
   </ul>
-  <div class="tip"><strong>참고:</strong> 이 카드는 책 <em>파일</em>만 추적합니다. 읽기 진행률, 북마크, 하이라이트, 서가는 파일 상태와 관계없이 별도로 자동 동기화됩니다.</div>
+  <div class="tip"><strong>참고:</strong> 이 카드는 책 <em>파일</em>만 추적합니다. 읽기 진행률, 북마크, 하이라이트, 폴더는 파일 상태와 관계없이 별도로 자동 동기화됩니다.</div>
 </div>
 
 <div class="card">

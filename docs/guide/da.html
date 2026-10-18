@@ -25,6 +25,15 @@
   text-decoration: none;
   white-space: nowrap;
 }
+.guide-nav-store {
+  color: var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.guide-nav-store:hover,
+.guide-nav-store:focus-visible {
+  text-decoration: underline;
+}
 .guide-nav-arrow {
   display: inline-block;
 }
@@ -60,6 +69,7 @@
 <!-- USER-GUIDE-NAV:START -->
 <nav class="guide-nav" aria-label="User Guide language switcher">
   <a class="guide-nav-home" href="../index.html"><span class="guide-nav-arrow" aria-hidden="true">&larr;</span> Idyllic</a>
+  <a class="guide-nav-store" href="https://apps.apple.com/app/idyllic-reader/id6769253311">App Store</a>
   <span class="guide-nav-langs">
     <span class="guide-nav-globe" aria-hidden="true">&#x1F310;</span>
       <a href="index.html">English</a>
@@ -101,7 +111,7 @@
   <a href="#importing">Import af bøger</a>
   <a href="#wifi">WiFi-overførsel</a>
   <a href="#library">Bibliotek og organisering</a>
-  <a href="#shelves">Hylder og mapper</a>
+  <a href="#shelves">Mapper</a>
   <a href="#reading-books">Læsning af bøger</a>
   <a href="#fixed-layout">Bøger med fast layout</a>
   <a href="#in-book-search">Søg i bog</a>
@@ -205,29 +215,29 @@
     <li>Den <strong>nyeste version</strong> er markeret med et grønt KEEP-mærke</li>
     <li>Vælg ældre kopier ved hjælp af afkrydsningsfelter (eller <strong>Vælg alle</strong>)</li>
     <li><strong>Slet</strong> &mdash; fjerner de valgte ældre kopier</li>
-    <li><strong>Kopiér data og slet</strong> &mdash; overfører bogmærker, fremhævninger, mærker, læseforløb og hyldeplacering til den nyeste version før sletning</li>
-    <li>Aktivér <strong>"Flyt ny bog til den gamle bogs hylde og skjulte status"</strong> for at beholde den nye version på samme sted i biblioteket</li>
+    <li><strong>Kopiér data og slet</strong> &mdash; overfører bogmærker, fremhævninger, mærker, læseforløb og mappeplacering til den nyeste version før sletning</li>
+    <li>Aktivér <strong>"Flyt ny bog til gammel bogs mappe og skjult status"</strong> for at beholde den nye version på samme sted i biblioteket</li>
   </ul>
 </div>
 
 <a href="#top" class="back-to-top">&uarr; Tilbage til toppen</a>
 
 <!-- SHELVES -->
-<h2 id="shelves">Hylder og mapper</h2>
+<h2 id="shelves">Mapper</h2>
 <p class="section-desc">Organisér bøger i indlejrede mapper.</p>
 
 <div class="card">
-  <h3><span class="icon icon-indigo">&#x1F4C2;</span> Opret hylder</h3>
+  <h3><span class="icon icon-indigo">&#x1F4C2;</span> Opret mapper</h3>
   <ol class="steps">
-    <li>Tryk på <kbd>Ny hylde</kbd> øverst i dit bibliotek.</li>
-    <li>Indtast et navn, og vælg et ikon og en farve.</li>
-    <li>Vælg eventuelt en overordnet hylde for at oprette en undermappe.</li>
+    <li>Tryk på menuen (&hellip;) øverst i dit bibliotek, og vælg <kbd>Ny mappe</kbd>.</li>
+    <li>Indtast et navn, og vælg et ikon.</li>
+    <li>Hvis du vil oprette en undermappe, skal du først åbne en mappe og oprette den nye i den.</li>
   </ol>
 </div>
 
 <div class="card">
   <h3><span class="icon icon-blue">&#x21C4;</span> Flytning af bøger</h3>
-  <p>Fra en bogs detaljeside trykker du på menuen (&hellip;) og vælger <kbd>Flyt til hylde</kbd>. I valgmodus kan du flytte mange bøger på én gang.</p>
+  <p>Fra en bogs detaljeside trykker du på menuen (&hellip;) og vælger <kbd>Flyt til...</kbd>. I dit bibliotek kan du også holde fingeren på en bog og vælge <kbd>Flyt til mappe</kbd>. I valgmodus trykker du på <kbd>Flyt</kbd> for at flytte mange bøger på én gang.</p>
 </div>
 
 <a href="#top" class="back-to-top">&uarr; Tilbage til toppen</a>
@@ -288,8 +298,8 @@
 
 <div class="card">
   <h3><span class="icon icon-gray">&#x2139;</span> Hvad der er tilgængeligt</h3>
-  <p>Indholdsfortegnelsen, bogmærker, fremskridtsskyderen, læsehistorik og genoptagelse, hvor du slap, fungerer alt sammen som normalt.</p>
-  <p>Fordi hver side er et fast layout og ikke tekst, som appen kan omformatere, mangler nogle funktioner for disse bøger: Fortløbende rulning og automatisk rulning, skrift- og udseendeindstillinger, tekst-til-tale, søgning i bogen samt markering eller fremhævning af tekst.</p>
+  <p>Indholdsfortegnelsen, bogmærker, fremskridtsskyderen, læsehistorik, genoptagelse, hvor du slap, tekst-til-tale, søgning i bogen og fremhævning fungerer alt sammen som normalt.</p>
+  <p>Fordi hver side er et fast layout og ikke tekst, som appen kan omformatere, mangler nogle funktioner for disse bøger: Fortløbende rulning og automatisk rulning samt skrift- og udseendeindstillinger.</p>
 </div>
 
 <a href="#top" class="back-to-top">&uarr; Tilbage til toppen</a>
@@ -534,13 +544,13 @@
 
 <div class="card">
   <h3><span class="icon icon-blue">&#x1F50A;</span> Brug af tekst-til-tale</h3>
-  <p>Åbn en EPUB-, PDF- eller TXT-bog, og tryk på afspilningsknappen i værktøjslinjen. Systemet læser én sætning ad gangen og fremhæver det aktuelle ord.</p>
+  <p>Åbn en EPUB-, PDF-, TXT- eller RTF-bog, og tryk på hovedtelefonknappen i værktøjslinjen. Systemet læser én sætning ad gangen og fremhæver det aktuelle ord.</p>
   <ul>
-    <li><strong>Hastighed</strong> &mdash; 0,5&times; til 2&times; i betjeningspanelet.</li>
+    <li><strong>Hastighed</strong> &mdash; 0,5&times; til 3&times; i betjeningspanelet.</li>
     <li><strong>Stemme</strong> &mdash; Vælg blandt 100+ systemstemmer i <kbd>Indstillinger</kbd> &rarr; <kbd>Læsepræferencer</kbd> &rarr; <kbd>Tekst-til-tale</kbd>.</li>
     <li><strong>Spring over</strong> &mdash; Tryk på næste/forrige for at springe sætning eller kapitel.</li>
   </ul>
-  <div class="tip"><strong>Bemærk:</strong> <a href="#fixed-layout">Bøger med fast layout</a> &mdash; tegneserier og billedbøger, hvor hver side er et fast layout &mdash; har ingen tekst, som appen kan læse højt, så afspilningsknappen vises ikke for dem.</div>
+  <div class="tip"><strong>Bemærk:</strong> En PDF, der består af scannede sidebilleder, har ingen tekst, som appen kan læse højt; når du trykker på hovedtelefonknappen, får du besked om det.</div>
 </div>
 
 <div class="card">
@@ -640,13 +650,13 @@
 
 <div class="card">
   <h3><span class="icon icon-red">&#x1F516;</span> Bogmærker</h3>
-  <p>Tryk på bogmærkeikonet i læserens værktøjslinje for at bogmærke den aktuelle side. Tilføj en valgfri note. Se alle bogmærker for en bog fra dens detaljeside.</p>
+  <p>Tryk på bogmærkeikonet i læserens værktøjslinje for at bogmærke den aktuelle side. Hvis du vil tilføje en note, skal du holde fingeren på et bogmærke i bogens bogmærkeliste og vælge <kbd>Rediger note</kbd>. Se alle bogmærker for en bog under <kbd>Bogmærker</kbd> på dens detaljeside (<kbd>Bogmærker og fremhævninger</kbd> for en EPUB).</p>
   <div class="tip"><strong>Bemærk:</strong> Kun bogmærker, du opretter manuelt, vises her. Positioner, som appen gemmer automatisk, når du lukker en bog, holdes adskilt i <a href="#history">Læsehistorik</a>, så de ikke trænger dine egne bogmærker væk.</div>
 </div>
 
 <div class="card">
   <h3><span class="icon icon-orange">&#x1F58D;</span> Fremhævninger<span class="badge badge-premium">Premium</span></h3>
-  <p>I EPUB-filer kan du markere tekst for at fremhæve den. Vælg mellem fem farver (gul, pink, grøn, blå, orange), og tilføj noter. Alle fremhævninger er listet på bogens detaljeside.</p>
+  <p>I EPUB-filer kan du markere tekst for at fremhæve den. Vælg mellem fem farver (gul, pink, grøn, blå, orange), og tilføj noter. Alle fremhævninger og deres noter er listet under <kbd>Bogmærker og fremhævninger</kbd> på bogens detaljeside.</p>
 </div>
 
 <div class="card">
@@ -737,7 +747,7 @@
     <li>Slå <kbd>Synkronisér bibliotek med iCloud</kbd> til.</li>
     <li>Synkroniseringen træder i kraft ved næste app-start.</li>
   </ol>
-  <p>Metadata, læsefremskridt, bogmærker, fremhævninger og hylder synkroniseres på tværs af alle enheder logget ind med den samme iCloud-konto.</p>
+  <p>Metadata, læsefremskridt, bogmærker, fremhævninger og mapper synkroniseres på tværs af alle enheder logget ind med den samme iCloud-konto.</p>
 </div>
 
 <div class="card">
@@ -748,7 +758,7 @@
     <li>En bjælke, der viser, hvor stor en del af dit biblioteks filer der er i iCloud.</li>
     <li>En opdeling &mdash; <strong>Synkroniseret</strong> (med den samlede størrelse), <strong>Kun i iCloud</strong> (endnu ikke downloadet til denne enhed) og <strong>I gang</strong>.</li>
   </ul>
-  <div class="tip"><strong>Bemærk:</strong> Dette kort sporer kun bog<em>filer</em>. Læsefremskridt, bogmærker, fremhævninger og hylder synkroniseres separat og automatisk, uanset filstatus.</div>
+  <div class="tip"><strong>Bemærk:</strong> Dette kort sporer kun bog<em>filer</em>. Læsefremskridt, bogmærker, fremhævninger og mapper synkroniseres separat og automatisk, uanset filstatus.</div>
 </div>
 
 <div class="card">

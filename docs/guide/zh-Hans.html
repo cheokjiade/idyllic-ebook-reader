@@ -25,6 +25,15 @@
   text-decoration: none;
   white-space: nowrap;
 }
+.guide-nav-store {
+  color: var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.guide-nav-store:hover,
+.guide-nav-store:focus-visible {
+  text-decoration: underline;
+}
 .guide-nav-arrow {
   display: inline-block;
 }
@@ -60,6 +69,7 @@
 <!-- USER-GUIDE-NAV:START -->
 <nav class="guide-nav" aria-label="User Guide language switcher">
   <a class="guide-nav-home" href="../index.html"><span class="guide-nav-arrow" aria-hidden="true">&larr;</span> Idyllic</a>
+  <a class="guide-nav-store" href="https://apps.apple.com/app/idyllic-reader/id6769253311">App Store</a>
   <span class="guide-nav-langs">
     <span class="guide-nav-globe" aria-hidden="true">&#x1F310;</span>
       <a href="index.html">English</a>
@@ -101,7 +111,7 @@
   <a href="#importing">导入图书</a>
   <a href="#wifi">WiFi 传输</a>
   <a href="#library">书库 &amp; 整理</a>
-  <a href="#shelves">书架 &amp; 文件夹</a>
+  <a href="#shelves">文件夹</a>
   <a href="#reading-books">阅读图书</a>
   <a href="#fixed-layout">固定版式图书</a>
   <a href="#in-book-search">书内搜索</a>
@@ -205,29 +215,29 @@
     <li><strong>最新版本</strong>会标有绿色的 KEEP 徽章</li>
     <li>使用复选框选择较旧的副本（或 <strong>全选</strong>）</li>
     <li><strong>删除</strong> &mdash; 移除所选的较旧副本</li>
-    <li><strong>复制数据并删除</strong> &mdash; 在删除之前将书签、高亮、标签、阅读进度和书架归属转移到最新版本</li>
-    <li>启用 <strong>“将新书移动到旧书的书架和隐藏状态”</strong>，以将新版本保留在书库中的同一位置</li>
+    <li><strong>复制数据并删除</strong> &mdash; 在删除之前将书签、高亮、标签、阅读进度和文件夹归属转移到最新版本</li>
+    <li>启用 <strong>“将新书移动到旧书的文件夹和隐藏状态”</strong>，以将新版本保留在书库中的同一位置</li>
   </ul>
 </div>
 
 <a href="#top" class="back-to-top">&uarr; 返回顶部</a>
 
 <!-- SHELVES -->
-<h2 id="shelves">书架 &amp; 文件夹</h2>
+<h2 id="shelves">文件夹</h2>
 <p class="section-desc">将图书整理到嵌套文件夹中。</p>
 
 <div class="card">
-  <h3><span class="icon icon-indigo">&#x1F4C2;</span> 创建书架</h3>
+  <h3><span class="icon icon-indigo">&#x1F4C2;</span> 创建文件夹</h3>
   <ol class="steps">
-    <li>点击书库顶部的 <kbd>新建书架</kbd>。</li>
-    <li>输入名称，然后选择图标和颜色。</li>
-    <li>可选择上级书架来创建子文件夹。</li>
+    <li>点击书库顶部的菜单（&hellip;），然后选择 <kbd>新建文件夹</kbd>。</li>
+    <li>输入名称，然后选择图标。</li>
+    <li>要创建子文件夹，请先打开一个文件夹，然后在其中新建。</li>
   </ol>
 </div>
 
 <div class="card">
   <h3><span class="icon icon-blue">&#x21C4;</span> 移动图书</h3>
-  <p>在图书详情页，点击菜单（&hellip;）并选择 <kbd>移到书架</kbd>。在选择模式下可以一次移动多本书。</p>
+  <p>在图书详情页，点击菜单（&hellip;）并选择 <kbd>移动到…</kbd>。在书库中也可以长按一本书并选择 <kbd>移动到文件夹</kbd>。在选择模式下，点击 <kbd>移动</kbd> 即可一次移动多本书。</p>
 </div>
 
 <a href="#top" class="back-to-top">&uarr; 返回顶部</a>
@@ -288,8 +298,8 @@
 
 <div class="card">
   <h3><span class="icon icon-gray">&#x2139;</span> 支持的功能</h3>
-  <p>目录、书签、进度滑块、阅读历史，以及从上次位置继续阅读等功能均正常可用。</p>
-  <p>由于每一页都是固定设计，而非应用可以重排的文本，此类图书不提供以下几项功能：连续滚动和自动滚动、字体与外观设置、文字转语音、书内搜索，以及文本选择或高亮。</p>
+  <p>目录、书签、进度滑块、阅读历史、从上次位置继续阅读、文字转语音、书内搜索以及高亮等功能均正常可用。</p>
+  <p>由于每一页都是固定设计，而非应用可以重排的文本，此类图书不提供以下几项功能：连续滚动和自动滚动，以及字体与外观设置。</p>
 </div>
 
 <a href="#top" class="back-to-top">&uarr; 返回顶部</a>
@@ -534,13 +544,13 @@
 
 <div class="card">
   <h3><span class="icon icon-blue">&#x1F50A;</span> 使用文字转语音</h3>
-  <p>打开任意 EPUB、PDF 或 TXT 图书，点击工具栏中的播放按钮。文字转语音逐句朗读并高亮当前单词。</p>
+  <p>打开任意 EPUB、PDF、TXT 或 RTF 图书，点击工具栏中的耳机按钮。文字转语音逐句朗读并高亮当前单词。</p>
   <ul>
-    <li><strong>速度</strong> &mdash; 在 TTS 控件中选择 0.5&times; 到 2&times;。</li>
+    <li><strong>速度</strong> &mdash; 在 TTS 控件中选择 0.5&times; 到 3&times;。</li>
     <li><strong>语音</strong> &mdash; 在 <kbd>设置</kbd> &rarr; <kbd>阅读偏好</kbd> &rarr; <kbd>文字转语音</kbd> 中从 100 多种系统语音中选择。</li>
     <li><strong>跳过</strong> &mdash; 点击下一句/上一句按钮按句或按章跳转。</li>
   </ul>
-  <div class="tip"><strong>注意：</strong><a href="#fixed-layout">固定版式图书</a> &mdash; 页面为固定设计的漫画和绘本 &mdash; 没有可供应用朗读的文字，因此不会显示播放按钮。</div>
+  <div class="tip"><strong>注意：</strong>由扫描页面图像构成的 PDF 没有可供应用朗读的文字；点击耳机按钮时，应用会提示这一点。</div>
 </div>
 
 <div class="card">
@@ -640,13 +650,13 @@
 
 <div class="card">
   <h3><span class="icon icon-red">&#x1F516;</span> 书签</h3>
-  <p>点击阅读器工具栏中的书签图标，为当前页添加书签。可添加备注。在图书详情页查看所有书签。</p>
+  <p>点击阅读器工具栏中的书签图标，为当前页添加书签。要添加备注，请在图书的书签列表中长按某个书签，然后选择<kbd>编辑笔记</kbd>。在图书详情页的<kbd>书签</kbd>中查看所有书签（EPUB 图书为<kbd>书签和高亮</kbd>）。</p>
   <div class="tip"><strong>注意：</strong>这里只显示您手动创建的书签。应用在您关闭图书时自动保存的位置另行保存在<a href="#history">阅读历史</a>中，以免挤占您自己的书签。</div>
 </div>
 
 <div class="card">
   <h3><span class="icon icon-orange">&#x1F58D;</span> 高亮<span class="badge badge-premium">Premium</span></h3>
-  <p>在 EPUB 中选中文本即可高亮。从五种颜色中选择（黄色、粉色、绿色、蓝色、橙色）并添加笔记。所有高亮都列在图书详情页上。</p>
+  <p>在 EPUB 中选中文本即可高亮。从五种颜色中选择（黄色、粉色、绿色、蓝色、橙色）并添加笔记。所有高亮及其笔记都列在图书详情页的<kbd>书签和高亮</kbd>中。</p>
 </div>
 
 <div class="card">
@@ -737,7 +747,7 @@
     <li>开启 <kbd>将书库与 iCloud 同步</kbd>。</li>
     <li>同步将在下次启动应用时生效。</li>
   </ol>
-  <p>您的元数据、阅读进度、书签、高亮和书架会在登录同一 iCloud 账户的所有设备间同步。</p>
+  <p>您的元数据、阅读进度、书签、高亮和文件夹会在登录同一 iCloud 账户的所有设备间同步。</p>
 </div>
 
 <div class="card">
@@ -748,7 +758,7 @@
     <li>一条进度条，显示您书库中有多少文件已在 iCloud 中。</li>
     <li>明细 &mdash; <strong>已同步</strong>（附带总大小）、<strong>仅在 iCloud</strong>（尚未下载到此设备）和 <strong>进行中</strong>。</li>
   </ul>
-  <div class="tip"><strong>注意：</strong>此卡片仅追踪图书<em>文件</em>。阅读进度、书签、高亮和书架会单独自动同步，与文件状态无关。</div>
+  <div class="tip"><strong>注意：</strong>此卡片仅追踪图书<em>文件</em>。阅读进度、书签、高亮和文件夹会单独自动同步，与文件状态无关。</div>
 </div>
 
 <div class="card">

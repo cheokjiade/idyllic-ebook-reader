@@ -25,6 +25,15 @@
   text-decoration: none;
   white-space: nowrap;
 }
+.guide-nav-store {
+  color: var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.guide-nav-store:hover,
+.guide-nav-store:focus-visible {
+  text-decoration: underline;
+}
 .guide-nav-arrow {
   display: inline-block;
 }
@@ -60,6 +69,7 @@
 <!-- USER-GUIDE-NAV:START -->
 <nav class="guide-nav" aria-label="User Guide language switcher">
   <a class="guide-nav-home" href="../index.html"><span class="guide-nav-arrow" aria-hidden="true">&larr;</span> Idyllic</a>
+  <a class="guide-nav-store" href="https://apps.apple.com/app/idyllic-reader/id6769253311">App Store</a>
   <span class="guide-nav-langs">
     <span class="guide-nav-globe" aria-hidden="true">&#x1F310;</span>
       <a href="index.html">English</a>
@@ -101,7 +111,7 @@
   <a href="#importing">Importar libros</a>
   <a href="#wifi">Transferencia WiFi</a>
   <a href="#library">Biblioteca y organización</a>
-  <a href="#shelves">Estantes y carpetas</a>
+  <a href="#shelves">Carpetas</a>
   <a href="#reading-books">Leer libros</a>
   <a href="#fixed-layout">Libros de diseño fijo</a>
   <a href="#in-book-search">Búsqueda en el libro</a>
@@ -205,29 +215,29 @@
     <li>La <strong>versión más reciente</strong> se marca con una insignia verde KEEP</li>
     <li>Selecciona copias antiguas con las casillas (o <strong>Seleccionar todo</strong>)</li>
     <li><strong>Eliminar</strong> &mdash; quita las copias antiguas seleccionadas</li>
-    <li><strong>Copiar datos y eliminar</strong> &mdash; transfiere marcadores, resaltados, etiquetas, progreso de lectura y asignación de estante a la versión más reciente antes de eliminarlas</li>
-    <li>Activa <strong>"Mover el libro nuevo al estante y estado oculto del libro antiguo"</strong> para conservar la nueva versión en la misma ubicación de la biblioteca</li>
+    <li><strong>Copiar datos y eliminar</strong> &mdash; transfiere marcadores, resaltados, etiquetas, progreso de lectura y asignación de carpeta a la versión más reciente antes de eliminarlas</li>
+    <li>Activa <strong>"Mover el libro nuevo a la carpeta y estado oculto del libro anterior"</strong> para conservar la nueva versión en la misma ubicación de la biblioteca</li>
   </ul>
 </div>
 
 <a href="#top" class="back-to-top">&uarr; Volver arriba</a>
 
 <!-- SHELVES -->
-<h2 id="shelves">Estantes y carpetas</h2>
+<h2 id="shelves">Carpetas</h2>
 <p class="section-desc">Organiza libros en carpetas anidadas.</p>
 
 <div class="card">
-  <h3><span class="icon icon-indigo">&#x1F4C2;</span> Crear estantes</h3>
+  <h3><span class="icon icon-indigo">&#x1F4C2;</span> Crear carpetas</h3>
   <ol class="steps">
-    <li>Pulsa <kbd>Nuevo estante</kbd> en la parte superior de tu biblioteca.</li>
-    <li>Introduce un nombre, luego elige un icono y un color.</li>
-    <li>Opcionalmente, elige un estante superior para crear una subcarpeta.</li>
+    <li>Pulsa el menú (&hellip;) en la parte superior de tu biblioteca y elige <kbd>Nueva carpeta</kbd>.</li>
+    <li>Introduce un nombre y luego elige un icono.</li>
+    <li>Para crear una subcarpeta, abre primero una carpeta y crea la nueva dentro de ella.</li>
   </ol>
 </div>
 
 <div class="card">
   <h3><span class="icon icon-blue">&#x21C4;</span> Mover libros</h3>
-  <p>Desde la página de detalles de un libro, pulsa el menú (&hellip;) y elige <kbd>Mover a estante</kbd>. En el modo de selección puedes mover muchos libros a la vez.</p>
+  <p>Desde la página de detalles de un libro, pulsa el menú (&hellip;) y elige <kbd>Mover a...</kbd>. En tu biblioteca también puedes mantener pulsado un libro y elegir <kbd>Mover a carpeta</kbd>. En el modo de selección, pulsa <kbd>Mover</kbd> para mover muchos libros a la vez.</p>
 </div>
 
 <a href="#top" class="back-to-top">&uarr; Volver arriba</a>
@@ -288,8 +298,8 @@
 
 <div class="card">
   <h3><span class="icon icon-gray">&#x2139;</span> Qué está disponible</h3>
-  <p>La tabla de contenidos, los marcadores, el control deslizante de progreso, el historial de lectura y la reanudación en el punto donde lo dejaste funcionan con normalidad.</p>
-  <p>Como cada página es un diseño fijo en lugar de texto que la app pueda reajustar, algunos controles no aparecen en estos libros: el desplazamiento continuo y el desplazamiento automático, los ajustes de fuente y apariencia, el texto a voz, la búsqueda en el libro, y la selección o el subrayado de texto.</p>
+  <p>La tabla de contenidos, los marcadores, el control deslizante de progreso, el historial de lectura, la reanudación en el punto donde lo dejaste, el texto a voz, la búsqueda en el libro y el subrayado funcionan con normalidad.</p>
+  <p>Como cada página es un diseño fijo en lugar de texto que la app pueda reajustar, algunos controles no aparecen en estos libros: el desplazamiento continuo y el desplazamiento automático, y los ajustes de fuente y apariencia.</p>
 </div>
 
 <a href="#top" class="back-to-top">&uarr; Volver arriba</a>
@@ -534,13 +544,13 @@
 
 <div class="card">
   <h3><span class="icon icon-blue">&#x1F50A;</span> Usar texto a voz</h3>
-  <p>Abre cualquier libro EPUB, PDF o TXT y pulsa el botón de reproducción en la barra de herramientas. El sistema lee una frase a la vez y resalta la palabra actual.</p>
+  <p>Abre cualquier libro EPUB, PDF, TXT o RTF y pulsa el botón de auriculares en la barra de herramientas. El sistema lee una frase a la vez y resalta la palabra actual.</p>
   <ul>
-    <li><strong>Velocidad</strong> &mdash; de 0,5&times; a 2&times; en los controles.</li>
+    <li><strong>Velocidad</strong> &mdash; de 0,5&times; a 3&times; en los controles.</li>
     <li><strong>Voz</strong> &mdash; Elige entre más de 100 voces del sistema en <kbd>Ajustes</kbd> &rarr; <kbd>Preferencias de lectura</kbd> &rarr; <kbd>Texto a voz</kbd>.</li>
     <li><strong>Saltar</strong> &mdash; Pulsa siguiente/anterior para avanzar por frase o por capítulo.</li>
   </ul>
-  <div class="tip"><strong>Nota:</strong> Los <a href="#fixed-layout">libros de diseño fijo</a> &mdash; cómics y libros ilustrados cuyas páginas son diseños fijos &mdash; no tienen texto que la app pueda leer en voz alta, por lo que el botón de reproducción no aparece para ellos.</div>
+  <div class="tip"><strong>Nota:</strong> Un PDF formado por imágenes de páginas escaneadas no tiene texto que la app pueda leer en voz alta; al pulsar el botón de auriculares, la app te lo indica.</div>
 </div>
 
 <div class="card">
@@ -640,13 +650,13 @@
 
 <div class="card">
   <h3><span class="icon icon-red">&#x1F516;</span> Marcadores</h3>
-  <p>Pulsa el icono de marcador en la barra de herramientas del lector para marcar la página actual. Añade una nota opcional. Consulta todos los marcadores de un libro desde su página de detalles.</p>
+  <p>Pulsa el icono de marcador en la barra de herramientas del lector para marcar la página actual. Para añadir una nota, mantén pulsado un marcador en la lista de marcadores del libro y elige <kbd>Editar nota</kbd>. Consulta todos los marcadores de un libro desde <kbd>Marcadores</kbd> en su página de detalles (<kbd>Marcadores y subrayados</kbd> en un EPUB).</p>
   <div class="tip"><strong>Nota:</strong> Aquí solo aparecen los marcadores que creas manualmente. Las posiciones que la app guarda automáticamente al cerrar un libro se conservan por separado en el <a href="#history">Historial de lectura</a> para que no se mezclen con tus propios marcadores.</div>
 </div>
 
 <div class="card">
   <h3><span class="icon icon-orange">&#x1F58D;</span> Subrayados<span class="badge badge-premium">Premium</span></h3>
-  <p>En los EPUB, selecciona texto para subrayarlo. Elige entre cinco colores (amarillo, rosa, verde, azul, naranja) y añade notas. Todos los subrayados aparecen en la página de detalles del libro.</p>
+  <p>En los EPUB, selecciona texto para subrayarlo. Elige entre cinco colores (amarillo, rosa, verde, azul, naranja) y añade notas. Todos los subrayados y sus notas aparecen en <kbd>Marcadores y subrayados</kbd>, en la página de detalles del libro.</p>
 </div>
 
 <div class="card">
@@ -737,7 +747,7 @@
     <li>Activa <kbd>Sincronizar biblioteca con iCloud</kbd>.</li>
     <li>La sincronización se aplica en el siguiente inicio de la app.</li>
   </ol>
-  <p>Los metadatos, el progreso de lectura, los marcadores, los subrayados y los estantes se sincronizan en todos los dispositivos con la misma cuenta de iCloud.</p>
+  <p>Los metadatos, el progreso de lectura, los marcadores, los subrayados y las carpetas se sincronizan en todos los dispositivos con la misma cuenta de iCloud.</p>
 </div>
 
 <div class="card">
@@ -748,7 +758,7 @@
     <li>Una barra que muestra qué parte de los archivos de tu biblioteca está en iCloud.</li>
     <li>Un desglose &mdash; <strong>Sincronizado</strong> (con el tamaño total), <strong>Solo en iCloud</strong> (aún no descargado a este dispositivo) y <strong>En curso</strong>.</li>
   </ul>
-  <div class="tip"><strong>Nota:</strong> Esta tarjeta rastrea solo los <em>archivos</em> de los libros. El progreso de lectura, los marcadores, los subrayados y los estantes se sincronizan por separado y automáticamente, sin importar el estado del archivo.</div>
+  <div class="tip"><strong>Nota:</strong> Esta tarjeta rastrea solo los <em>archivos</em> de los libros. El progreso de lectura, los marcadores, los subrayados y las carpetas se sincronizan por separado y automáticamente, sin importar el estado del archivo.</div>
 </div>
 
 <div class="card">

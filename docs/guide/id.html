@@ -25,6 +25,15 @@
   text-decoration: none;
   white-space: nowrap;
 }
+.guide-nav-store {
+  color: var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.guide-nav-store:hover,
+.guide-nav-store:focus-visible {
+  text-decoration: underline;
+}
 .guide-nav-arrow {
   display: inline-block;
 }
@@ -60,6 +69,7 @@
 <!-- USER-GUIDE-NAV:START -->
 <nav class="guide-nav" aria-label="User Guide language switcher">
   <a class="guide-nav-home" href="../index.html"><span class="guide-nav-arrow" aria-hidden="true">&larr;</span> Idyllic</a>
+  <a class="guide-nav-store" href="https://apps.apple.com/app/idyllic-reader/id6769253311">App Store</a>
   <span class="guide-nav-langs">
     <span class="guide-nav-globe" aria-hidden="true">&#x1F310;</span>
       <a href="index.html">English</a>
@@ -101,7 +111,7 @@
   <a href="#importing">Mengimpor Buku</a>
   <a href="#wifi">Transfer WiFi</a>
   <a href="#library">Perpustakaan &amp; Organisasi</a>
-  <a href="#shelves">Rak &amp; Folder</a>
+  <a href="#shelves">Folder</a>
   <a href="#reading-books">Membaca Buku</a>
   <a href="#fixed-layout">Buku dengan Tata Letak Tetap</a>
   <a href="#in-book-search">Pencarian Dalam Buku</a>
@@ -205,29 +215,29 @@
     <li><strong>Versi terbaru</strong> ditandai dengan lencana KEEP hijau</li>
     <li>Pilih salinan lama menggunakan kotak centang (atau <strong>Pilih Semua</strong>)</li>
     <li><strong>Hapus</strong> &mdash; menghapus salinan lama yang dipilih</li>
-    <li><strong>Salin Data &amp; Hapus</strong> &mdash; memindahkan markah, sorotan, tag, kemajuan baca, dan penempatan rak ke versi terbaru sebelum menghapus</li>
-    <li>Aktifkan <strong>"Pindahkan buku baru ke rak &amp; status tersembunyi buku lama"</strong> agar versi baru tetap di lokasi perpustakaan yang sama</li>
+    <li><strong>Salin Data &amp; Hapus</strong> &mdash; memindahkan markah, sorotan, tag, kemajuan baca, dan penempatan folder ke versi terbaru sebelum menghapus</li>
+    <li>Aktifkan <strong>"Pindahkan buku baru ke folder dan status tersembunyi buku lama"</strong> agar versi baru tetap di lokasi perpustakaan yang sama</li>
   </ul>
 </div>
 
 <a href="#top" class="back-to-top">&uarr; Kembali ke atas</a>
 
 <!-- SHELVES -->
-<h2 id="shelves">Rak &amp; Folder</h2>
+<h2 id="shelves">Folder</h2>
 <p class="section-desc">Atur buku dalam folder berjenjang.</p>
 
 <div class="card">
-  <h3><span class="icon icon-indigo">&#x1F4C2;</span> Membuat Rak</h3>
+  <h3><span class="icon icon-indigo">&#x1F4C2;</span> Membuat Folder</h3>
   <ol class="steps">
-    <li>Ketuk <kbd>Rak Baru</kbd> di bagian atas perpustakaan Anda.</li>
-    <li>Masukkan nama, lalu pilih ikon dan warna.</li>
-    <li>Opsional, pilih rak induk untuk membuat subfolder.</li>
+    <li>Ketuk menu (&hellip;) di bagian atas perpustakaan Anda, lalu pilih <kbd>Folder Baru</kbd>.</li>
+    <li>Masukkan nama, lalu pilih ikon.</li>
+    <li>Untuk membuat subfolder, buka folder terlebih dahulu lalu buat folder baru di dalamnya.</li>
   </ol>
 </div>
 
 <div class="card">
   <h3><span class="icon icon-blue">&#x21C4;</span> Memindahkan Buku</h3>
-  <p>Dari halaman detail buku, ketuk menu (&hellip;) dan pilih <kbd>Pindahkan ke Rak</kbd>. Dalam mode seleksi, Anda dapat memindahkan banyak buku sekaligus.</p>
+  <p>Dari halaman detail buku, ketuk menu (&hellip;) dan pilih <kbd>Pindah ke...</kbd>. Di perpustakaan, Anda juga dapat menekan lama sebuah buku dan memilih <kbd>Pindahkan ke Folder</kbd>. Dalam mode seleksi, ketuk <kbd>Pindahkan</kbd> untuk memindahkan banyak buku sekaligus.</p>
 </div>
 
 <a href="#top" class="back-to-top">&uarr; Kembali ke atas</a>
@@ -288,8 +298,8 @@
 
 <div class="card">
   <h3><span class="icon icon-gray">&#x2139;</span> Apa yang Tersedia</h3>
-  <p>Daftar isi, penanda, slider kemajuan, riwayat membaca, dan melanjutkan dari tempat Anda berhenti semuanya berfungsi seperti biasa.</p>
-  <p>Karena setiap halaman adalah desain tetap, bukan teks yang dapat diatur ulang oleh aplikasi, beberapa kontrol tidak muncul untuk buku ini: Gulir Berkelanjutan dan gulir otomatis, pengaturan font dan tampilan, text-to-speech, pencarian dalam buku, serta pemilihan teks atau penyorotan.</p>
+  <p>Daftar isi, penanda, slider kemajuan, riwayat membaca, melanjutkan dari tempat Anda berhenti, text-to-speech, pencarian dalam buku, dan penyorotan semuanya berfungsi seperti biasa.</p>
+  <p>Karena setiap halaman adalah desain tetap, bukan teks yang dapat diatur ulang oleh aplikasi, beberapa kontrol tidak muncul untuk buku ini: Gulir Berkelanjutan dan gulir otomatis, serta pengaturan font dan tampilan.</p>
 </div>
 
 <a href="#top" class="back-to-top">&uarr; Kembali ke atas</a>
@@ -534,13 +544,13 @@
 
 <div class="card">
   <h3><span class="icon icon-blue">&#x1F50A;</span> Menggunakan Text-to-Speech</h3>
-  <p>Buka buku EPUB, PDF, atau TXT mana pun dan ketuk tombol putar di toolbar. TTS membaca satu kalimat pada satu waktu dan menyorot kata yang sedang dibaca.</p>
+  <p>Buka buku EPUB, PDF, TXT, atau RTF mana pun dan ketuk tombol headphone di toolbar. TTS membaca satu kalimat pada satu waktu dan menyorot kata yang sedang dibaca.</p>
   <ul>
-    <li><strong>Kecepatan</strong> &mdash; 0,5&times; hingga 2&times; di kontrol TTS.</li>
+    <li><strong>Kecepatan</strong> &mdash; 0,5&times; hingga 3&times; di kontrol TTS.</li>
     <li><strong>Suara</strong> &mdash; Pilih dari 100+ suara sistem di <kbd>Pengaturan</kbd> &rarr; <kbd>Preferensi Membaca</kbd> &rarr; <kbd>Text-to-Speech</kbd>.</li>
     <li><strong>Lewati</strong> &mdash; Ketuk berikutnya/sebelumnya untuk melompat per kalimat, atau per bab.</li>
   </ul>
-  <div class="tip"><strong>Catatan:</strong> <a href="#fixed-layout">Buku dengan tata letak tetap</a> &mdash; komik dan buku bergambar yang halamannya berupa desain tetap &mdash; tidak memiliki teks untuk dibacakan aplikasi, sehingga tombol putar tidak ditampilkan untuk buku tersebut.</div>
+  <div class="tip"><strong>Catatan:</strong> PDF yang terdiri dari gambar halaman hasil pindaian tidak memiliki teks untuk dibacakan aplikasi; saat Anda mengetuk tombol headphone, aplikasi akan memberi tahu Anda.</div>
 </div>
 
 <div class="card">
@@ -640,13 +650,13 @@
 
 <div class="card">
   <h3><span class="icon icon-red">&#x1F516;</span> Penanda</h3>
-  <p>Ketuk ikon penanda di toolbar pembaca untuk menandai halaman saat ini. Tambahkan catatan opsional. Lihat semua penanda untuk sebuah buku dari halaman detailnya.</p>
+  <p>Ketuk ikon penanda di toolbar pembaca untuk menandai halaman saat ini. Untuk menambahkan catatan, tekan lama sebuah penanda di daftar penanda buku dan pilih <kbd>Edit Catatan</kbd>. Lihat semua penanda untuk sebuah buku dari <kbd>Markah</kbd> di halaman detailnya (<kbd>Markah &amp; Sorotan</kbd> untuk EPUB).</p>
   <div class="tip"><strong>Catatan:</strong> Hanya penanda yang Anda buat secara manual yang muncul di sini. Posisi yang disimpan otomatis oleh aplikasi saat Anda menutup buku disimpan terpisah di <a href="#history">Riwayat Membaca</a> agar tidak menggeser penanda Anda sendiri.</div>
 </div>
 
 <div class="card">
   <h3><span class="icon icon-orange">&#x1F58D;</span> Sorotan<span class="badge badge-premium">Premium</span></h3>
-  <p>Di EPUB, pilih teks untuk menyorotnya. Pilih dari lima warna (kuning, merah muda, hijau, biru, oranye) dan tambahkan catatan. Semua sorotan tercantum di halaman detail buku.</p>
+  <p>Di EPUB, pilih teks untuk menyorotnya. Pilih dari lima warna (kuning, merah muda, hijau, biru, oranye) dan tambahkan catatan. Semua sorotan beserta catatannya tercantum di <kbd>Markah &amp; Sorotan</kbd> di halaman detail buku.</p>
 </div>
 
 <div class="card">
@@ -737,7 +747,7 @@
     <li>Nyalakan <kbd>Sinkronkan Perpustakaan dengan iCloud</kbd>.</li>
     <li>Sinkronisasi berlaku pada peluncuran aplikasi berikutnya.</li>
   </ol>
-  <p>Metadata, progres membaca, penanda, sorotan, dan rak Anda disinkronkan di semua perangkat yang masuk ke akun iCloud yang sama.</p>
+  <p>Metadata, progres membaca, penanda, sorotan, dan folder Anda disinkronkan di semua perangkat yang masuk ke akun iCloud yang sama.</p>
 </div>
 
 <div class="card">
@@ -748,7 +758,7 @@
     <li>Bilah yang menunjukkan seberapa banyak file perpustakaan Anda yang ada di iCloud.</li>
     <li>Rincian &mdash; <strong>Tersinkron</strong> (dengan ukuran total), <strong>Hanya di iCloud</strong> (belum diunduh ke perangkat ini), dan <strong>Sedang berlangsung</strong>.</li>
   </ul>
-  <div class="tip"><strong>Catatan:</strong> Kartu ini hanya melacak <em>file</em> buku. Progres membaca, penanda, sorotan, dan rak disinkronkan secara terpisah dan otomatis, apa pun status filenya.</div>
+  <div class="tip"><strong>Catatan:</strong> Kartu ini hanya melacak <em>file</em> buku. Progres membaca, penanda, sorotan, dan folder disinkronkan secara terpisah dan otomatis, apa pun status filenya.</div>
 </div>
 
 <div class="card">

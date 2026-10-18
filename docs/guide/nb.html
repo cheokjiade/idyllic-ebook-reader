@@ -25,6 +25,15 @@
   text-decoration: none;
   white-space: nowrap;
 }
+.guide-nav-store {
+  color: var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.guide-nav-store:hover,
+.guide-nav-store:focus-visible {
+  text-decoration: underline;
+}
 .guide-nav-arrow {
   display: inline-block;
 }
@@ -60,6 +69,7 @@
 <!-- USER-GUIDE-NAV:START -->
 <nav class="guide-nav" aria-label="User Guide language switcher">
   <a class="guide-nav-home" href="../index.html"><span class="guide-nav-arrow" aria-hidden="true">&larr;</span> Idyllic</a>
+  <a class="guide-nav-store" href="https://apps.apple.com/app/idyllic-reader/id6769253311">App Store</a>
   <span class="guide-nav-langs">
     <span class="guide-nav-globe" aria-hidden="true">&#x1F310;</span>
       <a href="index.html">English</a>
@@ -101,7 +111,7 @@
   <a href="#importing">Importere bøker</a>
   <a href="#wifi">WiFi-overføring</a>
   <a href="#library">Bibliotek og organisering</a>
-  <a href="#shelves">Hyller og mapper</a>
+  <a href="#shelves">Mapper</a>
   <a href="#reading-books">Lese bøker</a>
   <a href="#fixed-layout">Bøker med fast layout</a>
   <a href="#in-book-search">Søk i bok</a>
@@ -205,29 +215,29 @@
     <li>Den <strong>nyeste versjonen</strong> er merket med et grønt KEEP-merke</li>
     <li>Velg eldre kopier med avkrysningsboksene (eller <strong>Velg alle</strong>)</li>
     <li><strong>Slett</strong> &mdash; fjerner de valgte eldre kopiene</li>
-    <li><strong>Kopier data og slett</strong> &mdash; overfører bokmerker, uthevinger, merker, lesefremdrift og hyllevalg til den nyeste versjonen før sletting</li>
-    <li>Aktiver <strong>"Flytt ny bok til den gamle bokens hylle og skjult-status"</strong> for å beholde den nye versjonen på samme sted i biblioteket</li>
+    <li><strong>Kopier data og slett</strong> &mdash; overfører bokmerker, uthevinger, merker, lesefremdrift og mappevalg til den nyeste versjonen før sletting</li>
+    <li>Aktiver <strong>"Flytt ny bok til den gamle bokens mappe og skjulte status"</strong> for å beholde den nye versjonen på samme sted i biblioteket</li>
   </ul>
 </div>
 
 <a href="#top" class="back-to-top">&uarr; Tilbake til toppen</a>
 
 <!-- SHELVES -->
-<h2 id="shelves">Hyller og mapper</h2>
+<h2 id="shelves">Mapper</h2>
 <p class="section-desc">Organiser bøker i nestede mapper.</p>
 
 <div class="card">
-  <h3><span class="icon icon-indigo">&#x1F4C2;</span> Opprette hyller</h3>
+  <h3><span class="icon icon-indigo">&#x1F4C2;</span> Opprette mapper</h3>
   <ol class="steps">
-    <li>Trykk <kbd>Ny hylle</kbd> øverst i biblioteket ditt.</li>
-    <li>Skriv inn et navn, og velg et ikon og en farge.</li>
-    <li>Velg eventuelt en overordnet hylle for å opprette en undermappe.</li>
+    <li>Trykk på menyen (&hellip;) øverst i biblioteket ditt og velg <kbd>Ny mappe</kbd>.</li>
+    <li>Skriv inn et navn, og velg et ikon.</li>
+    <li>For å lage en undermappe åpner du først en mappe og oppretter den nye inni den.</li>
   </ol>
 </div>
 
 <div class="card">
   <h3><span class="icon icon-blue">&#x21C4;</span> Flytte bøker</h3>
-  <p>Fra en boks detaljside, trykk på menyen (&hellip;) og velg <kbd>Flytt til hylle</kbd>. I velgemodus kan du flytte mange bøker samtidig.</p>
+  <p>Fra en boks detaljside, trykk på menyen (&hellip;) og velg <kbd>Flytt til...</kbd>. I biblioteket kan du også trykke lenge på en bok og velge <kbd>Flytt til mappe</kbd>. I velgemodus trykker du på <kbd>Flytt</kbd> for å flytte mange bøker samtidig.</p>
 </div>
 
 <a href="#top" class="back-to-top">&uarr; Tilbake til toppen</a>
@@ -288,8 +298,8 @@
 
 <div class="card">
   <h3><span class="icon icon-gray">&#x2139;</span> Hva som er tilgjengelig</h3>
-  <p>Innholdsfortegnelsen, bokmerker, fremdriftsglidebryteren, lesehistorikken og det å fortsette der du slapp, fungerer alt som vanlig.</p>
-  <p>Fordi hver side er et fast design i stedet for tekst appen kan flyte om, mangler noen kontroller for disse bøkene: Kontinuerlig rulling og automatisk rulling, innstillingene for skrift og utseende, tekst-til-tale, søk i bok, samt tekstmarkering og uthevinger.</p>
+  <p>Innholdsfortegnelsen, bokmerker, fremdriftsglidebryteren, lesehistorikken, det å fortsette der du slapp, tekst-til-tale, søk i bok og uthevinger fungerer alt som vanlig.</p>
+  <p>Fordi hver side er et fast design i stedet for tekst appen kan flyte om, mangler noen kontroller for disse bøkene: Kontinuerlig rulling og automatisk rulling, samt innstillingene for skrift og utseende.</p>
 </div>
 
 <a href="#top" class="back-to-top">&uarr; Tilbake til toppen</a>
@@ -534,13 +544,13 @@
 
 <div class="card">
   <h3><span class="icon icon-blue">&#x1F50A;</span> Bruke tekst-til-tale</h3>
-  <p>Åpne en hvilken som helst EPUB-, PDF- eller TXT-bok og trykk på avspillingsknappen i verktøylinjen. TTS leser en setning om gangen og fremhever det nåværende ordet.</p>
+  <p>Åpne en hvilken som helst EPUB-, PDF-, TXT- eller RTF-bok og trykk på hodetelefonknappen i verktøylinjen. TTS leser en setning om gangen og fremhever det nåværende ordet.</p>
   <ul>
-    <li><strong>Hastighet</strong> &mdash; 0,5&times; til 2&times; i TTS-kontrollene.</li>
+    <li><strong>Hastighet</strong> &mdash; 0,5&times; til 3&times; i TTS-kontrollene.</li>
     <li><strong>Stemme</strong> &mdash; Velg fra 100+ systemstemmer i <kbd>Innstillinger</kbd> &rarr; <kbd>Lesepreferanser</kbd> &rarr; <kbd>Tekst-til-tale</kbd>.</li>
     <li><strong>Hopp</strong> &mdash; Trykk neste/forrige for å hoppe setningsvis, eller kapittelvis.</li>
   </ul>
-  <div class="tip"><strong>Merk:</strong> <a href="#fixed-layout">Bøker med fast layout</a> &mdash; tegneserier og bildebøker der sidene er faste design &mdash; har ingen tekst appen kan lese høyt, så avspillingsknappen vises ikke for dem.</div>
+  <div class="tip"><strong>Merk:</strong> En PDF som består av skannede sidebilder, har ingen tekst appen kan lese høyt; når du trykker på hodetelefonknappen, sier appen fra om det.</div>
 </div>
 
 <div class="card">
@@ -640,13 +650,13 @@
 
 <div class="card">
   <h3><span class="icon icon-red">&#x1F516;</span> Bokmerker</h3>
-  <p>Trykk på bokmerkeikonet i leserens verktøylinje for å bokmerke gjeldende side. Legg til et valgfritt notat. Se alle bokmerker for en bok fra detaljsiden.</p>
+  <p>Trykk på bokmerkeikonet i leserens verktøylinje for å bokmerke gjeldende side. For å legge til et notat, trykk og hold på et bokmerke i bokens bokmerkeliste og velg <kbd>Rediger notat</kbd>. Se alle bokmerker for en bok fra <kbd>Bokmerker</kbd> på detaljsiden (<kbd>Bokmerker og markeringer</kbd> for en EPUB).</p>
   <div class="tip"><strong>Merk:</strong> Bare bokmerker du oppretter manuelt vises her. Posisjoner appen lagrer automatisk når du lukker en bok holdes adskilt i <a href="#history">Lesehistorikk</a> slik at de ikke skyver bort dine egne bokmerker.</div>
 </div>
 
 <div class="card">
   <h3><span class="icon icon-orange">&#x1F58D;</span> Markeringer<span class="badge badge-premium">Premium</span></h3>
-  <p>I EPUB-er, velg tekst for å markere den. Velg fra fem farger (gul, rosa, grønn, blå, oransje) og legg til notater. Alle markeringer er listet på bokens detaljside.</p>
+  <p>I EPUB-er, velg tekst for å markere den. Velg fra fem farger (gul, rosa, grønn, blå, oransje) og legg til notater. Alle markeringer og notatene deres er listet under <kbd>Bokmerker og markeringer</kbd> på bokens detaljside.</p>
 </div>
 
 <div class="card">
@@ -737,7 +747,7 @@
     <li>Slå på <kbd>Synkroniser bibliotek med iCloud</kbd>.</li>
     <li>Synkroniseringen trer i kraft ved neste appstart.</li>
   </ol>
-  <p>Metadata, lesefremdrift, bokmerker, markeringer og hyller synkroniseres på tvers av alle enheter som er logget inn med den samme iCloud-kontoen.</p>
+  <p>Metadata, lesefremdrift, bokmerker, markeringer og mapper synkroniseres på tvers av alle enheter som er logget inn med den samme iCloud-kontoen.</p>
 </div>
 
 <div class="card">
@@ -748,7 +758,7 @@
     <li>En linje som viser hvor mye av bibliotekets filer som er i iCloud.</li>
     <li>En oversikt &mdash; <strong>Synkronisert</strong> (med total størrelse), <strong>Kun i iCloud</strong> (ikke lastet ned til denne enheten ennå), og <strong>Pågår</strong>.</li>
   </ul>
-  <div class="tip"><strong>Merk:</strong> Dette kortet sporer kun bok<em>filer</em>. Lesefremdrift, bokmerker, markeringer og hyller synkroniseres separat og automatisk, uansett filstatus.</div>
+  <div class="tip"><strong>Merk:</strong> Dette kortet sporer kun bok<em>filer</em>. Lesefremdrift, bokmerker, markeringer og mapper synkroniseres separat og automatisk, uansett filstatus.</div>
 </div>
 
 <div class="card">
